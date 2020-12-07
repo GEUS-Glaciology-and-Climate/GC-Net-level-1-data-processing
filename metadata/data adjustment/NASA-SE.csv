@@ -1,0 +1,10 @@
+t0,t1,variable,adjustement_function,adjustement_value,comment
+1998-04-24T19:59:00+00:00,,SnowHeight(m),add,-0.15,Not reported. Manual shift suggested by bav.
+2007-07-05T19:00:00+00:00,,SnowHeight(m),add,-13.06,Not reported. Manual shift suggested by bav.
+2009-01-01T00:00:00+00:00,,SnowHeight(m),add,-3.73,Not reported. Manual shift suggested by bav.
+2016-05-22T00:00:00+00:00,,SnowHeight(m),add,-8.0,Not reported. Manual shift suggested by bav.
+2007-07-05T19:00:00+00:00,,SurfaceHeight(m),add,-13.3,Not reported. Manual shift suggested by bav.
+2009-01-01T00:00:00+00:00,,SurfaceHeight(m),add,-1.5,Not reported. Manual shift suggested by bav.
+2010-04-30T23:00:00+00:00,,SurfaceHeight(m),add,-2.0,Not reported. Manual shift suggested by bav.
+2014-05-25T19:59:00+00:00,,SurfaceHeight(m),add,-5.05,Not reported. Manual shift suggested by bav.
+2016-05-22T00:00:00+00:00,,SurfaceHeight(m),add,-3.0,Not reported. Manual shift suggested by bav.

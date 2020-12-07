@@ -1,0 +1,3 @@
+t0,t1,variable,adjustement_function,adjustement_value,comment
+2010-05-29T00:00:00+00:00,,SnowHeight(m),add,1.72,Not reported. Manual shift suggested by bav.
+2010-05-29T00:00:00+00:00,,SurfaceHeight(m),add,2.62,Not reported. Manual shift suggested by bav.

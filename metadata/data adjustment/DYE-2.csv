@@ -1,0 +1,9 @@
+t0,t1,variable,adjustement_function,adjustement_value,comment
+1997-06-03T00:00:00+00:00,,SnowHeight(m),add,-1.0,Not reported. Manual shift suggested by bav.
+2001-06-15T13:00:00+00:00,,SnowHeight(m),add,-3.1,Reported visit. SR1 height before/after (m): 0.0/-3.1
+2003-05-09T00:00:00+00:00,,SnowHeight(m),add,-1.4,Reported visit. SR1 height before/after (m): 0.0/-1.4
+1997-06-03T00:00:00+00:00,,SurfaceHeight(m),add,-1.1,Not reported. Manual shift suggested by bav.
+2001-06-15T13:00:00+00:00,,SurfaceHeight(m),add,-3.59,Reported visit. SR1 height before/after (m): 0.0/-3.59
+2004-06-01T00:00:00+00:00,,SurfaceHeight(m),add,-0.75,Not reported. Manual shift suggested by bav.
+2014-05-25T16:00:00+00:00,,SurfaceHeight(m),add,-6.0,Not reported. Manual shift suggested by bav.
+2017-05-25T00:00:00+00:00,,SurfaceHeight(m),add,-2.0,Not reported. Manual shift suggested by bav.
