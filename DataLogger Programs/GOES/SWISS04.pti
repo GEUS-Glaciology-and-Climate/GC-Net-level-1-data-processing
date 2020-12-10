@@ -1,0 +1,164 @@
+Program Trace Information File for:  SWISS04.csi
+Date: 6/5/2004
+Time: 00:58:32
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|20 Set Port(s)                 11.3   11.3   11.3     11.3   11.3   11.3
+1|2|2 Volt (Diff)                   9.7   21.0   21.0      9.7   21.0   21.0
+1|3|86 Do                           0.3   21.3   21.3      0.3   21.3   21.3
+1|4|6 Full Bridge                  20.7   42.0   42.0     20.7   42.0   42.0
+1|5|59 BR Transform Rf[X/(1-X)]     1.6   43.6   43.6      1.6   43.6   43.6
+1|6|34 Z=X+F                        1.1   44.7   44.7      1.1   44.7   44.7
+1|7|30 Z=F x 10^n                   1.0   45.7   45.7      1.0   45.7   45.7
+1|8|38 Z=X/Y                        3.0   48.7   48.7      3.0   48.7   48.7
+1|9|87 Beginning of Loop            0.3   49.0   49.0      0.3   49.0   49.0
+ Execution times in the loop are calculated for one pass only.
+1|10|86 Do                          0.3   49.3   49.3      0.3   49.3   49.3
+1|11|86 Do                          0.3   49.6   49.6      0.3   49.6   49.6
+1|12|2 Volt (Diff)                  9.7   59.3   59.3      9.7   59.3   59.3
+1|13|95 End                         0.2   59.5   59.5      0.2   59.5   59.5
+1|14|86 Do                          0.3   59.8   59.8      0.3   59.8   59.8
+1|15|86 Do                          0.3   60.1   60.1      0.3   60.1   60.1
+1|16|14 Thermocouple Temp (DIFF)   34.9   95.0   95.0     34.9   95.0   95.0
+1|17|86 Do                          0.3   95.3   95.3      0.3   95.3   95.3
+1|18|86 Do                          0.3   95.6   95.6      0.3   95.6   95.6
+1|19|14 Thermocouple Temp (DIFF)   34.9  130.5  130.5     34.9  130.5  130.5
+1|20|86 Do                          0.3  130.8  130.8      0.3  130.8  130.8
+1|21|86 Do                          0.3  131.1  131.1      0.3  131.1  131.1
+1|22|86 Do                          0.3  131.4  131.4      0.3  131.4  131.4
+1|23|86 Do                          0.3  131.7  131.7      0.3  131.7  131.7
+1|24|2 Volt (Diff)                  9.7  141.4  141.4      9.7  141.4  141.4
+1|25|87 Beginning of Loop           0.3  141.7  141.7      0.3  141.7  141.7
+ Execution times in the loop are calculated for one pass only.
+1|26|86 Do                          0.3  142.0  142.0      0.3  142.0  142.0
+1|27|86 Do                          0.3  142.3  142.3      0.3  142.3  142.3
+1|28|14 Thermocouple Temp (DIFF)   18.0  160.3  160.3     18.0  160.3  160.3
+1|29|95 End                         0.2  160.5  160.5      0.2  160.5  160.5
+1|30|87 Beginning of Loop           0.3  160.8  160.8      0.3  160.8  160.8
+ Execution times in the loop are calculated for one pass only.
+1|31|86 Do                          0.3  161.1  161.1      0.3  161.1  161.1
+1|32|86 Do                          0.3  161.4  161.4      0.3  161.4  161.4
+1|33|14 Thermocouple Temp (DIFF)   18.0  179.4  179.4     18.0  179.4  179.4
+1|34|95 End                         0.2  179.6  179.6      0.2  179.6  179.6
+1|35|86 Do                          0.3  179.9  179.9      0.3  179.9  179.9
+1|36|3 Pulse                        3.1  183.0  183.0      3.1  183.0  183.0
+1|37|92 If time is                  0.7  183.7  183.7      0.7  183.7  183.7
+ Output Flag Set @ 137 for Array 11
+1|38|80 Set Active Storage Area     0.3  184.0  184.0      0.3  184.0  184.0
+1|39|77 Real Time                   0.2  184.2  184.2      3.8  187.8  187.8
+ Output Data 2 Values
+1|40|71 Average                     7.2  191.4  191.4     27.9  215.7  215.7
+ Output Data 6 Values
+1|41|82 Standard Deviation          5.5  196.9  196.9      7.1  222.8  222.8
+ Output Data 2 Values
+1|42|71 Average                     2.8  199.7  199.7     10.3  233.1  233.1
+ Output Data 2 Values
+1|43|71 Average                     2.8  202.5  202.5     10.3  243.4  243.4
+ Output Data 2 Values
+1|44|71 Average                     5.0  207.5  207.5     19.1  262.5  262.5
+ Output Data 4 Values
+1|45|71 Average                     2.8  210.3  210.3     10.3  272.8  272.8
+ Output Data 2 Values
+1|46|71 Average                     1.7  212.0  212.0      5.9  278.7  278.7
+ Output Data 1 Values
+1|47|71 Average                     2.8  214.8  214.8     10.3  289.0  289.0
+ Output Data 2 Values
+1|48|71 Average                    11.6  226.4  226.4     45.5  334.5  334.5
+ Output Data 10 Values
+1|49|71 Average                     5.0  231.4  231.4     19.1  353.6  353.6
+ Output Data 4 Values
+1|50|71 Average                     1.7  233.1  233.1      5.9  359.5  359.5
+ Output Data 1 Values
+1|51|71 Average                     1.7  234.8  234.8      5.9  365.4  365.4
+ Output Data 1 Values
+1|52|96 Serial Out                  0.5  235.3  235.3      0.5  365.9  365.9
+1|53|92 If time is                  0.7  236.0  236.0      0.7  366.6  366.6
+1|54|120 Data Transfer to TGT1   8000.0 8236.0 8236.0   8000.0 8366.6 8366.6
+1|55|95 End                         0.2 8236.2 8236.2      0.2 8366.8 8366.8
+1|56|92 If time is                  0.7 8236.9 8236.9      0.7 8367.5 8367.5
+1|57|92 If time is                  0.7 8237.6 8237.6      0.7 8368.2 8368.2
+1|58|92 If time is                  0.7 8238.3 8238.3      0.7 8368.9 8368.9
+1|59|30 Z=F x 10^n                  1.0 8239.3 8239.3      1.0 8369.9 8369.9
+1|60|95 End                         0.2 8239.5 8239.5      0.2 8370.1 8370.1
+1|61|92 If time is                  0.7 8240.2 8240.2      0.7 8370.8 8370.8
+1|62|30 Z=F x 10^n                  1.0 8241.2 8241.2      1.0 8371.8 8371.8
+1|63|95 End                         0.2 8241.4 8241.4      0.2 8372.0 8372.0
+1|64|89 If (X<=>F)                  0.6 8242.0 8242.0      0.6 8372.6 8372.6
+1|65|15 Port Serial I/O           400.0 8642.0 8642.0    400.0 8772.6 8772.6
+1|66|89 If (X<=>F)                  0.6 8642.6 8642.6      0.6 8773.2 8773.2
+1|67|89 If (X<=>F)                  0.6 8643.2 8643.2      0.6 8773.8 8773.8
+1|68|34 Z=X+F                       1.1 8644.3 8644.3      1.1 8774.9 8774.9
+1|69|37 Z=X*F                       1.2 8645.5 8645.5      1.2 8776.1 8776.1
+1|70|33 Z=X+Y                       1.2 8646.7 8646.7      1.2 8777.3 8777.3
+1|71|34 Z=X+F                       1.1 8647.8 8647.8      1.1 8778.4 8778.4
+1|72|34 Z=X+F                       1.1 8648.9 8648.9      1.1 8779.5 8779.5
+1|73|37 Z=X*F                       1.2 8650.1 8650.1      1.2 8780.7 8780.7
+1|74|33 Z=X+Y                       1.2 8651.3 8651.3      1.2 8781.9 8781.9
+1|75|34 Z=X+F                       1.1 8652.4 8652.4      1.1 8783.0 8783.0
+1|76|34 Z=X+F                       1.1 8653.5 8653.5      1.1 8784.1 8784.1
+1|77|37 Z=X*F                       1.2 8654.7 8654.7      1.2 8785.3 8785.3
+1|78|33 Z=X+Y                       1.2 8655.9 8655.9      1.2 8786.5 8786.5
+1|79|34 Z=X+F                       1.1 8657.0 8657.0      1.1 8787.6 8787.6
+1|80|89 If (X<=>F)                  0.6 8657.6 8657.6      0.6 8788.2 8788.2
+1|81|114 Set Real Time Clock      999.9 9657.5 9657.5    999.9 9788.1 9788.1
+1|82|30 Z=F x 10^n                  1.0 9658.5 9658.5      1.0 9789.1 9789.1
+1|83|86 Do                          0.3 9658.8 9658.8      0.3 9789.4 9789.4
+1|84|30 Z=F x 10^n                  1.0 9659.8 9659.8      1.0 9790.4 9790.4
+1|85|30 Z=F x 10^n                  1.0 9660.8 9660.8      1.0 9791.4 9791.4
+1|86|95 End                         0.2 9661.0 9661.0      0.2 9791.6 9791.6
+1|87|95 End                         0.2 9661.2 9661.2      0.2 9791.8 9791.8
+1|88|95 End                         0.2 9661.4 9661.4      0.2 9792.0 9792.0
+1|89|95 End                         0.2 9661.6 9661.6      0.2 9792.2 9792.2
+1|90|92 If time is                  0.7 9662.3 9662.3      0.7 9792.9 9792.9
+1|91|123 Automatic Setup of TGT1      * 9662.3 9662.3        * 9792.9 9792.9
+1|92|95 End                         0.2 9662.5 9662.5      0.2 9793.1 9793.1
+
+Program Table 1 Execution Interval   15.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec 9662.5 w/Output 9793.1
+
+Table 1 Estimated Total Final Storage Locations used per day 5760
+
+
+--------------- Table 2 ---------------
+2|1|86 Do                           0.3    0.3    0.3      0.3    0.3    0.3
+2|2|22 Excitation with Delay      100.5  100.8  100.8    100.5  100.8  100.8
+2|3|1 Volt (SE)                     7.6  108.4  108.4      7.6  108.4  108.4
+2|4|1 Volt (SE)                     7.6  116.0  116.0      7.6  116.0  116.0
+2|5|86 Do                           0.3  116.3  116.3      0.3  116.3  116.3
+2|6|4 Excite-Delay (SE)            48.1  164.4  164.4     48.1  164.4  164.4
+2|7|92 If time is                   0.7  165.1  165.1      0.7  165.1  165.1
+2|8|92 If time is                   0.7  165.8  165.8      0.7  165.8  165.8
+2|9|1 Volt (SE)                     4.8  170.6  170.6      4.8  170.6  170.6
+2|10|10 Batt Voltage                8.3  178.9  178.9      8.3  178.9  178.9
+2|11|86 Do                          0.3  179.2  179.2      0.3  179.2  179.2
+2|12|95 End                         0.2  179.4  179.4      0.2  179.4  179.4
+2|13|92 If time is                  0.7  180.1  180.1      0.7  180.1  180.1
+2|14|105 SDI-12 Recorder              *  180.1  180.1        *  180.1  180.1
+2|15|105 SDI-12 Recorder              *  180.1  180.1        *  180.1  180.1
+2|16|95 End                         0.2  180.3  180.3      0.2  180.3  180.3
+
+Program Table 2 Execution Interval   60.000 Seconds
+
+Table 2 Estimated Total Program Execution Time in msec  180.3 w/Output  180.3
+
+Table 2 Estimated Total Final Storage Locations used per day 0
+
+
+
+Estimated Total Final Storage Locations used per day 5760
+
+*Execution time is unknown.
