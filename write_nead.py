@@ -1,7 +1,7 @@
 from io import StringIO
 import configparser
 from pathlib import Path
-
+import nead
 
 def read_config(config_path: str):
     config_file = Path(config_path)
@@ -63,5 +63,8 @@ def write_nead(data_frame, nead_config, output_path):
             nead_header.write(row)
 
     # Append data to header, omit indices, omit dataframe header, and output columns in fields_list
-    with open(nead_output, 'a') as nead:
-        data_frame.to_csv(nead, index=False, header=False, columns=fields_list, line_terminator='\n')
+    with open(nead_output, 'a') as nead_file:
+        data_frame.to_csv(nead_file, index=False, header=False, columns=fields_list, line_terminator='\n')
+    
+    ds = nead.read(nead_output)
+    
