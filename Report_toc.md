@@ -20,6 +20,52 @@
   * [Adjusting data at Humboldt](#s6-2)
 * [6 Summit](#s7)
   * [Removing erroneous data at Summit](#s7-1)
+  * [Adjusting data at Summit](#s7-2)
+      * [Adjusting HS2](#s7-2-1)
+      * [Adjusting HS1](#s7-2-2)
+* [7 Tunu-N](#s8)
+  * [Removing erroneous data at Tunu-N](#s8-1)
+  * [Adjusting data at Tunu-N](#s8-2)
+      * [Adjusting HS2](#s8-2-1)
+      * [Adjusting HS1](#s8-2-2)
+* [8 DYE2](#s9)
+  * [Removing erroneous data at DYE2](#s9-1)
+  * [Adjusting data at DYE2](#s9-2)
+* [9 JAR1](#s10)
+  * [Removing erroneous data at JAR1](#s10-1)
+  * [Adjusting data at JAR1](#s10-2)
+* [10 Saddle](#s11)
+  * [Removing erroneous data at Saddle](#s11-1)
+  * [Adjusting data at Saddle](#s11-2)
+      * [Adjusting HS2](#s11-2-1)
+      * [Adjusting HS1](#s11-2-2)
+* [11 South Dome](#s12)
+  * [Removing erroneous data at South Dome](#s12-1)
+  * [Adjusting data at South Dome](#s12-2)
+* [12 NASA-E](#s13)
+  * [Removing erroneous data at NASA-E](#s13-1)
+  * [Adjusting data at NASA-E](#s13-2)
+      * [Adjusting HS2](#s13-2-1)
+      * [Adjusting HS1](#s13-2-2)
+* [13 CP2](#s14)
+* [14 NGRIP](#s15)
+* [15 NASA-SE](#s16)
+  * [Removing erroneous data at NASA-SE](#s16-1)
+  * [Adjusting data at NASA-SE](#s16-2)
+      * [Adjusting HS2](#s16-2-1)
+      * [Adjusting HS1](#s16-2-2)
+* [16 KAR](#s17)
+* [17 JAR 2](#s18)
+* [18 KULU](#s19)
+* [22 Petermann ELA](#s20)
+  * [Removing erroneous data at Petermann ELA](#s20-1)
+  * [Adjusting data at Petermann ELA](#s20-2)
+* [23 NEEM](#s21)
+  * [Removing erroneous data at NEEM](#s21-1)
+  * [Adjusting data at NEEM](#s21-2)
+* [24 E-GRIP](#s22)
+  * [Removing erroneous data at E-GRIP](#s22-1)
+  * [Adjusting data at E-GRIP](#s22-2)
 # <a id='s1' />0 Swiss Camp 10m
 ## <a id='s1-1' />Removing erroneous data at Swiss Camp 10m
 No erroneous data listed for Swiss Camp 10m
@@ -260,3 +306,197 @@ Warning: interpreting RelativeHumidity2Perc as RH2
 ![Erroneous data at Summit](figures/Summit_RH2_data_flagging.png)
  
 Warning: interpreting ShortwaveRadiationDownWm2 as ISWR
+|start time|end time|variable|
+|-|-|-|
+|2003-09-03 15:00:00+00:00|2003-11-18 00:00:00+00:00|ISWR|
+|2007-01-30 15:00:00+00:00|2007-03-15 00:00:00+00:00|ISWR|
+|2005-10-30 15:00:00+00:00|2006-03-30 00:00:00+00:00|ISWR|
+|2001-07-27 04:00:00+00:00|2001-08-08 00:00:00+00:00|ISWR|
+|2009-01-30 09:00:00+00:00|2009-04-10 00:00:00+00:00|ISWR|
+|2010-02-03 04:00:00+00:00|2010-04-11 00:00:00+00:00|ISWR|
+|2012-02-10 01:00:00+00:00|2012-04-04 00:00:00+00:00|ISWR|
+|2013-02-02 21:00:00+00:00|2013-04-02 00:00:00+00:00|ISWR|
+|2014-02-02 21:00:00+00:00|2014-04-02 00:00:00+00:00|ISWR|
+ 
+![Erroneous data at Summit](figures/Summit_ISWR_data_flagging.png)
+ 
+Warning: interpreting ShortwaveRadiationUpWm2 as OSWR
+|start time|end time|variable|
+|-|-|-|
+|2003-09-03 15:00:00+00:00|2003-11-18 00:00:00+00:00|OSWR|
+|2007-01-30 15:00:00+00:00|2007-03-15 00:00:00+00:00|OSWR|
+|2005-10-30 15:00:00+00:00|2006-03-30 00:00:00+00:00|OSWR|
+|2001-07-27 04:00:00+00:00|2001-08-08 00:00:00+00:00|OSWR|
+|2009-01-30 09:00:00+00:00|2009-04-10 00:00:00+00:00|OSWR|
+|2010-02-03 04:00:00+00:00|2010-04-11 00:00:00+00:00|OSWR|
+|2012-02-10 01:00:00+00:00|2012-04-04 00:00:00+00:00|OSWR|
+|2013-02-02 21:00:00+00:00|2013-04-02 00:00:00+00:00|OSWR|
+|2014-02-02 21:00:00+00:00|2014-04-02 00:00:00+00:00|OSWR|
+ 
+![Erroneous data at Summit](figures/Summit_OSWR_data_flagging.png)
+ 
+Warning: interpreting SnowHeight2m as NSWR
+|start time|end time|variable|
+|-|-|-|
+|2017-11-13 06:00:00+00:00|2017-12-31 00:00:00+00:00|NSWR|
+ 
+![Erroneous data at Summit](figures/Summit_NSWR_data_flagging.png)
+ 
+## <a id='s7-2' />Adjusting data at Summit
+Replacing SnowHeight(m) by HS2
+### <a id='s7-2-1' />Adjusting HS2
+|start time|end time|operation|value|
+|-|-|-|-|
+|2009-05-19T21:00:00+00:00|nan|add|-0.2|
+ 
+![Adjusted data at Summit](figures/Summit_adj_HS2.jpeg)
+ 
+Replacing SurfaceHeight(m) by HS1
+### <a id='s7-2-2' />Adjusting HS1
+|start time|end time|operation|value|
+|-|-|-|-|
+|1999-05-09T00:00:00+00:00|nan|add|-0.05|
+|2004-04-09T10:00:00+00:00|nan|add|0.3|
+|2005-05-26T14:00:00+00:00|nan|add|-0.1|
+ 
+![Adjusted data at Summit](figures/Summit_adj_HS1.jpeg)
+ 
+# <a id='s8' />7 Tunu-N
+## <a id='s8-1' />Removing erroneous data at Tunu-N
+No erroneous data listed for Tunu-N
+## <a id='s8-2' />Adjusting data at Tunu-N
+Replacing SnowHeight(m) by HS2
+### <a id='s8-2-1' />Adjusting HS2
+|start time|end time|operation|value|
+|-|-|-|-|
+|2003-06-02T19:30:00+00:00|nan|add|0.52|
+|2004-10-16T17:00:00+00:00|nan|add|-3.5|
+|2015-05-29T00:00:00+00:00|nan|add|-0.5|
+ 
+![Adjusted data at Tunu-N](figures/Tunu-N_adj_HS2.jpeg)
+ 
+Replacing SurfaceHeight(m) by HS1
+### <a id='s8-2-2' />Adjusting HS1
+|start time|end time|operation|value|
+|-|-|-|-|
+|2004-10-16T17:00:00+00:00|nan|add|-3.0|
+|2015-05-29T00:00:00+00:00|nan|add|-1.0|
+ 
+![Adjusted data at Tunu-N](figures/Tunu-N_adj_HS1.jpeg)
+ 
+# <a id='s9' />8 DYE2
+## <a id='s9-1' />Removing erroneous data at DYE2
+No erroneous data listed for DYE2
+## <a id='s9-2' />Adjusting data at DYE2
+No data to fix at DYE2
+# <a id='s10' />9 JAR1
+## <a id='s10-1' />Removing erroneous data at JAR1
+No erroneous data listed for JAR1
+## <a id='s10-2' />Adjusting data at JAR1
+No data to fix at JAR1
+# <a id='s11' />10 Saddle
+## <a id='s11-1' />Removing erroneous data at Saddle
+No erroneous data listed for Saddle
+## <a id='s11-2' />Adjusting data at Saddle
+Replacing SnowHeight(m) by HS2
+### <a id='s11-2-1' />Adjusting HS2
+|start time|end time|operation|value|
+|-|-|-|-|
+|2003-05-01T00:00:00+00:00|nan|add|-6.0|
+|2010-05-01T00:00:00+00:00|nan|add|-6.5|
+|2013-05-21T16:00:00+00:00|nan|add|-4.0|
+|2015-05-20T16:00:00+00:00|nan|add|-1.8|
+|2016-05-26T00:00:00+00:00|nan|add|-1.6|
+ 
+![Adjusted data at Saddle](figures/Saddle_adj_HS2.jpeg)
+ 
+Replacing SurfaceHeight(m) by HS1
+### <a id='s11-2-2' />Adjusting HS1
+|start time|end time|operation|value|
+|-|-|-|-|
+|2003-05-01T00:00:00+00:00|nan|add|-6.0|
+|2010-05-01T00:00:00+00:00|nan|add|-6.5|
+|2013-05-21T16:00:00+00:00|nan|add|-3.0|
+|2015-05-20T16:00:00+00:00|nan|add|-2.05|
+ 
+![Adjusted data at Saddle](figures/Saddle_adj_HS1.jpeg)
+ 
+# <a id='s12' />11 South Dome
+## <a id='s12-1' />Removing erroneous data at South Dome
+No erroneous data listed for South Dome
+## <a id='s12-2' />Adjusting data at South Dome
+No data to fix at South Dome
+# <a id='s13' />12 NASA-E
+## <a id='s13-1' />Removing erroneous data at NASA-E
+No erroneous data listed for NASA-E
+## <a id='s13-2' />Adjusting data at NASA-E
+Replacing SnowHeight(m) by HS2
+### <a id='s13-2-1' />Adjusting HS2
+|start time|end time|operation|value|
+|-|-|-|-|
+|2001-06-08T13:00:00+00:00|nan|add|0.2|
+|2009-10-01T15:00:00+00:00|nan|add|-4.7|
+|2010-05-01T15:00:00+00:00|nan|add|-0.5|
+ 
+![Adjusted data at NASA-E](figures/NASA-E_adj_HS2.jpeg)
+ 
+Replacing SurfaceHeight(m) by HS1
+### <a id='s13-2-2' />Adjusting HS1
+|start time|end time|operation|value|
+|-|-|-|-|
+|2009-10-01T15:00:00+00:00|nan|add|-4.5|
+|2015-05-15T15:00:00+00:00|nan|add|-0.5|
+ 
+![Adjusted data at NASA-E](figures/NASA-E_adj_HS1.jpeg)
+ 
+# <a id='s14' />13 CP2
+Warning: No file for station 13 CP2
+# <a id='s15' />14 NGRIP
+Warning: No file for station 14 NGRIP
+# <a id='s16' />15 NASA-SE
+## <a id='s16-1' />Removing erroneous data at NASA-SE
+No erroneous data listed for NASA-SE
+## <a id='s16-2' />Adjusting data at NASA-SE
+Replacing SnowHeight(m) by HS2
+### <a id='s16-2-1' />Adjusting HS2
+|start time|end time|operation|value|
+|-|-|-|-|
+|1998-04-24T19:59:00+00:00|nan|add|-0.15|
+|2007-07-05T19:00:00+00:00|nan|add|-13.06|
+|2009-01-01T00:00:00+00:00|nan|add|-3.73|
+|2016-05-22T00:00:00+00:00|nan|add|-8.0|
+ 
+![Adjusted data at NASA-SE](figures/NASA-SE_adj_HS2.jpeg)
+ 
+Replacing SurfaceHeight(m) by HS1
+### <a id='s16-2-2' />Adjusting HS1
+|start time|end time|operation|value|
+|-|-|-|-|
+|2007-07-05T19:00:00+00:00|nan|add|-13.3|
+|2009-01-01T00:00:00+00:00|nan|add|-1.5|
+|2010-04-30T23:00:00+00:00|nan|add|-2.0|
+|2014-05-25T19:59:00+00:00|nan|add|-5.05|
+|2016-05-22T00:00:00+00:00|nan|add|-3.0|
+ 
+![Adjusted data at NASA-SE](figures/NASA-SE_adj_HS1.jpeg)
+ 
+# <a id='s17' />16 KAR
+Warning: No file for station 16 KAR
+# <a id='s18' />17 JAR 2
+Warning: No file for station 17 JAR 2
+# <a id='s19' />18 KULU
+Warning: No file for station 18 KULU
+# <a id='s20' />22 Petermann ELA
+## <a id='s20-1' />Removing erroneous data at Petermann ELA
+No erroneous data listed for Petermann ELA
+## <a id='s20-2' />Adjusting data at Petermann ELA
+No data to fix at Petermann ELA
+# <a id='s21' />23 NEEM
+## <a id='s21-1' />Removing erroneous data at NEEM
+No erroneous data listed for NEEM
+## <a id='s21-2' />Adjusting data at NEEM
+# <a id='s22' />24 E-GRIP
+## <a id='s22-1' />Removing erroneous data at E-GRIP
+No erroneous data listed for E-GRIP
+## <a id='s22-2' />Adjusting data at E-GRIP
+No data to fix at E-GRIP
