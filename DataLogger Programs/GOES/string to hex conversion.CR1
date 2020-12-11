@@ -1,0 +1,46 @@
+''CR1000 Series Datalogger
+'Declare Public Variables
+Public PTemp, Batt_Volt
+Public TableString As String * 200
+Public HexString As String * 200
+Public RecLength
+Public Dec As String
+Public AsciiVal
+Public x
+'Define Data Tables
+DataTable (Test,1,1000)
+DataInterval (0,15,Sec,10)
+Minimum (1,Batt_Volt,FP2,0,False)
+Sample (1,PTemp,FP2)
+EndTable
+'Main Program
+BeginProg
+Scan (1,Sec,0,0)
+PanelTemp (PTemp,250)
+Battery (Batt_Volt)
+CallTable Test
+'If table written
+If Test.Output(1,1) Then
+HexString = ""
+GetRecord (TableString,Test,1)
+'Get length of string
+RecLength = Len(TableString) 
+'Trim the CR/LF off the end
+TableString = Left(TableString,RecLength-2) 
+'Get length new length of the string
+RecLength = Len(TableString)
+For x = 1 To RecLength
+' Get the Ascii valuse for the character
+AsciiVal = ASCII(TableString(1,1,x)) 
+' Convert to hex
+Dec = Hex(AsciiVal)
+'Add a zero to keep things neat if required
+If Len(Dec) = 1 Then Dec = "0" & Dec 
+' Create the hex string
+HexString = HexString + Dec + " " 
+Next x
+' Lop off the trailing space
+HexString = RTrim(HexString) 
+EndIf
+NextScan
+EndProg

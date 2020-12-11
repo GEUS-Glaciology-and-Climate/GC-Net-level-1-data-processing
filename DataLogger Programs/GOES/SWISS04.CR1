@@ -1,0 +1,279 @@
+'Program name: D:\Data1\GREENL\CLIMATE\GOES\Logger programs\SWISS04.CR1
+'Date written: 4/15/2009
+'Transform Version: 0.5
+'Transform file: C:\Program Files\Campbellsci\LoggerNet\CR10X.TRN Version: 1.0
+'
+'This program was converted from D:\Data1\GREENL\CLIMATE\GOES\Logger programs\SWISS04.CSI
+'using Campbell Scientific's Transformer application.
+'
+'CRBasic angle units are in Radians by default.
+'Switch to Degrees as CR10 used Degrees.
+ AngleDegrees
+'
+' Declare array of flags as the CR10 had.
+Public Flag(8) as boolean
+
+'{CR10X}
+'-------------------------------------------------------------
+' Program: awsgos96.csi (cr10x) for the Swiss Camp
+' to be loaded to Swiss Camp aws in 1999.
+' Program written by: Ted DeMaria; Jason Box; and Dan Anderson. 4-96
+' Modified by K. Steffen 5-21-97
+' Modified by K. Steffen 6-5-98 for THR
+' Modified by J. Box and N. Cullen 4-1-99
+' Modifies by K. Steffen 6-4-04: added T(surf) IR thermocouple
+' --------------------------------------------------------------
+
+'\\\\\\\\\\\\\\\\\\\\\\\\\ DECLARATIONS /////////////////////////
+
+public i1
+Public ref_temp
+Public sw_in(3)
+Public T_sur_TC
+Public L_in(2)
+Public tc_air1(2)
+Public tc1(14)
+Public tair_1(2)
+Public rh_1(2)
+Public U1(2)
+Public U_dir1(2)
+Public pressure
+Public SD_1
+Public SD_2
+Public BATTERY
+Public Antenna
+Public flag
+Public hour
+Public min
+Public sec
+Public in1
+Public in8
+Public in9
+Public in10
+Public in11
+Public in12
+Public in13
+Public in17
+Public in40
+Public alpha
+Public T_IR_inst(3)
+
+Alias L_in(2)=UV
+Alias tc1(11)=TC_snow1
+
+
+'\\\\\\\\\\\\\\\\\\\\\\\\ OUTPUT SECTION ////////////////////////
+
+DataTable(Table11,true,-1)
+  OpenInterval       
+  DataInterval(0,10,Min,10)                   
+  Average(3, sw_in, FP2, 0)
+  Average(3, T_sur_TC, FP2, 0)
+  StdDev(1,T_sur_TC,FP2,0)
+  Average(1, L_in, FP2, 0)
+  Average(1, tc_air1, FP2, 0)
+  Average(2, tair_1, FP2, 0)
+  Average(2, rh_1, FP2, 0)
+  Average(2, U1, FP2, 0)
+  Average(2, U_dir1, FP2, 0)
+  Average(1, pressure, FP2, 0)
+  Average(1, SD_1, FP2, 0)
+  Average(1, SD_2, FP2, 0)
+  Average(1, tc1, FP2, 0)
+  Average(4, tc1, FP2, 0)
+  Average(1, T_IR_inst, FP2, 0)
+  Average(1, BATTERY, FP2, 0)
+EndTable
+
+'\\\\\\\\\\\\\\\\\\\\\\\\\ SUBROUTINES //////////////////////////
+
+
+'\\\\\\\\\\\\\\\\\\\\\\\\\\\ PROGRAM ////////////////////////////
+
+BeginProg
+
+  Scan(15,Sec, 3, 0)
+    'P20 
+' Configure control ports so that 1 and 2 are
+' milisecond pulses
+    VoltDiff(UV, 1, mV25, 6, true, 0, 250, 1, 0) 
+' UV meas (DIFF)
+    PortSet(2, 1)              
+' send voltage from control port 2 to multiplexer
+' to turn on multiplexer
+    BRFull(ref_temp, 1, mV7_5, 1, VX1, 1, 300, true, true, 0, 250, -0.001, 0.0971)
+'Compute resistance.
+    ref_temp = 10.025*(ref_temp/(1.0-ref_temp))       
+'T = (Rs-1)/alpha
+    ref_temp = ref_temp + -1
+    alpha = 0.0039
+    ref_temp = ref_temp / alpha
+     For i1 = 1 to 3              
+      PulsePort(1,10000)              
+' send voltage from control port 1 to multiplexer
+      PulsePort(1,10000)              
+' same as above, must do 2 x to step forward one
+' multiplexer input channel.
+      VoltDiff(sw_in(i1), 1, mV25, 1, true, 0, 250, 1, 0) 
+' S_in, S_ref, Net Radiometer 
+    Next i1
+' end sw in, sw ref, and Kipp and Zonen net
+' Begin to measure the PRT (Precision Infrared Thermocouple) sensor
+    PulsePort(1,10000)              
+    PulsePort(1,10000)              
+    TCDiff(T_sur_TC,1,mV2_5C,1,TypeK,ref_temp,true,0,_60Hz,1,0)
+' Surface temperature from IR (uncorrected)
+    PulsePort(1,10000)              
+    PulsePort(1,10000)              
+    TCDiff(T_IR_inst,1,mV2_5C,1,TypeK,ref_temp,true,0,_60Hz,1,0)
+' Instrument temperature for IR TC
+    PulsePort(1,10000)              
+    PulsePort(1,10000)              
+' Empty channel on multiplexer
+    PulsePort(1,10000)              
+    PulsePort(1,10000)              
+    VoltDiff(L_in, 1, mV2_5, 1, true, 0, 250, 1, 0) 
+'L_in
+     For i1 = 1 to 2              
+' begin air temperature thermocouple multiplexer loop
+      PulsePort(1,10000)              
+      PulsePort(1,10000)              
+      TCDiff(tc_air1(i1),1,mV2_5C,1,TypeE,ref_temp,true,0,250,1,0)
+' 2 x air temperature mesurement
+    Next i1
+' end air temperature thermocouple multiplexer loop
+     For i1 = 1 to 14              
+' begin thermocople multiplexer measurement loop
+      PulsePort(1,10000)              
+' send voltage from control port 1 to multiplexer
+      PulsePort(1,10000)              
+' same as above, must do it twice
+      TCDiff(tc1(i1),1,mV2_5C,1,TypeT,ref_temp,true,0,250,1,0)
+' Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+' Snow TC (4x)
+    Next i1
+' end loop of 10, thermocouple measurement loop.
+    PortSet(2, 0)              
+' turns multiplexer off, the remaining measurements
+' will occur on the cr10 and not on the multiplexer.
+    PulseCount(U1, 2, 1, 1, 1, 0.098, 0)     
+    CallTable Table11 
+' send data to final storage each hour
+' xx parameters are to be measured and averaged,
+' xx + JD and time = xx, the maximum
+' number of parameters GOES will transmit.
+                'P96 
+    If  TimeInToInterval(58,60,Min) Then                             
+      'P120
+    EndIf
+' end transmission
+' ------------------------------------- begin code for GPS clock reset
+    If  TimeInToInterval(1410,1440,Min) Then PortSet(6, 1)       
+    If  TimeInToInterval(1430,1440,Min) Then PortSet(6, 0)       
+    If  TimeInToInterval(1425,1440,Min) Then                             
+      flag = 1
+    EndIf
+' set flag hi
+    If  TimeInToInterval(1430,1440,Min) Then                             
+      flag = 0
+    EndIf
+    If (flag = 1) Then                                  
+      'Control Port Serial I/O
+      If (in1 = 36) Then                                  
+        If (in40 = 49) Then                                  
+          hour = in8 + -48
+          hour = hour * 10
+          hour = hour + in9
+          hour = hour + -48
+' begin loop if GPS hour = 23.
+' minutes
+          min = in10 + -48
+          min = min * 10
+          min = min + in11
+          min = min + -48
+'seconds
+          sec = in12 + -48
+          sec = sec * 10
+          sec = sec + in13
+          sec = sec + -48
+' begin hour is 23 , set logger clk, and set flag low.
+' above comment only valid if 23 hour filter is added.
+' begin flag is definately 1
+          If (flag = 1) Then                                  
+            'P114
+            flag = 0
+            PortSet(6, 0)              
+            in1 = 0
+            in40 = 0
+' end loop if hour is 23.
+          EndIf
+' end flag is definately 1
+' end hour is 23 , set logger clk, and set flag low.
+        EndIf
+' status good
+      EndIf
+' dollar sign / gps-logger in sink
+    EndIf
+' end loop for flag hi
+    If  TimeInToInterval(0,1440,Min) Then                             
+' below, program TGT1 using freq code for Swiss Camp 80300118
+      'P123
+' 58 minutes into hour is specific to our 'swiss camp' site.
+' previously we had a 'frequency correlation' of 81, that may be the
+' 'Uplink Channel'
+    EndIf
+  NextScan
+
+SlowSequence
+
+
+  Scan(60,Sec, 3, 0)
+' end auto TGT1 configuration loop
+' ------------------------------------- end code for GPS clock reset
+    PortSet(3, 1)              
+' voltage control port 3, jumped to switched 12V
+' for the purpose of switching on 12V to cs500
+    Delay(0,100,MSEC)
+' this only makes a delay, there is no excitation
+    VoltSE(tair_1, 2, mV2500, 3, False, 0, 250, 0.1, -40) 
+' temperature cs500 probe x 2
+' this is a single ended measurement so it is InChan 3
+' removed 60 Hz rejection range since there is no 60 Hz
+' power tools creating electrical noise.
+    VoltSE(rh_1, 2, mV2500, 5, False, 0, 250, 0.1, 0) 
+' humidity cs500 probe x 2
+    PortSet(3, 0)              
+' Voltage control port 3 turned off, switched 12V
+' to the cs-500 is turned off.
+' Met One Wind Speed -> m/s
+    BRHalf(U_dir1, 2, mV2500, 7, VX3, 2, 2500, False, 20000, 250, 0.142, 0)
+' Met One wind direction measurement.
+' Following a loop of the barometer measurement that is
+' performed for the last minute of each hour.
+' The pressure sensor has a range from 600 - 1060 hPa,mb
+' -> multiplier = sensor range (460)/mV Excitation(2500)
+' = 0.184
+    If  TimeInToInterval(59,60,Min) Then PortSet(7, 1)       
+' The pressure sensor has a range from 600 - 1060 hPa,mb
+' -> multiplier = sensor range (460)/mV Excitation(2500)
+' = 0.184
+    If  TimeInToInterval(0,60,Min) Then                             
+      VoltSE(pressure, 1, mV2500, 9, False, 0, 250, 0.184, 200) 
+' CS105 Vaisala Barometer
+' another 400 has to be added to pressure value to yield
+' mb this can be done in post processing.
+      Battery(BATTERY)
+      PortSet(7, 0)              
+    EndIf
+' end cs105 pressure sensor measurement last minute of each hr
+' Following is the snow height measurement which
+' occurs each 10 minutes, nested in a 15 second
+' measurement interval.
+    If  TimeInToInterval(0,10,Min) Then                             
+      SDI12Recorder(SD_1, 3, "0", "M!", 1, 0)     
+' sonic snow height sensor 1
+      SDI12Recorder(SD_2, 5, "0", "M!", 1, 0)     
+' sonic snow height sensor 2
+    EndIf
+  NextScan
+EndProg
