@@ -59,6 +59,7 @@ def write_nead(data_frame, nead_config, output_path):
 
     # Write hash_lines into nead_header
     with open(nead_output, 'w', newline='\n') as nead_header:
+        nead_header.write('# NEAD 1.0 UTF-8\n')
         for row in hash_lines:
             nead_header.write(row)
 

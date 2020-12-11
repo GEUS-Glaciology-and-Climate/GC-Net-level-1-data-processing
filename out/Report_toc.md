@@ -33,14 +33,14 @@ Warning: interpreting RelativeHumidity1Perc as RH1
 |-|-|-|
 |2015-01-01 00:00:00+00:00|2017-01-01 00:00:00+00:00|RH1|
  
-![Erroneous data at Swiss Camp](figures/Swiss Camp_RH1_data_flagging.png)
+![Erroneous data at Swiss Camp](figures/Swiss_Camp_RH1_data_flagging.png)
  
 Warning: interpreting RelativeHumidity2Perc as RH2
 |start time|end time|variable|
 |-|-|-|
 |2015-01-01 00:00:00+00:00|2017-01-01 00:00:00+00:00|RH2|
  
-![Erroneous data at Swiss Camp](figures/Swiss Camp_RH2_data_flagging.png)
+![Erroneous data at Swiss Camp](figures/Swiss_Camp_RH2_data_flagging.png)
  
 Warning: interpreting ShortwaveRadiationDownWm2 as ISWR
 |start time|end time|variable|
@@ -48,14 +48,14 @@ Warning: interpreting ShortwaveRadiationDownWm2 as ISWR
 |1997-01-01 00:00:00+00:00|1999-01-01 00:00:00+00:00|ISWR|
 |1996-01-05 00:00:00+00:00|2019-01-01 00:00:00+00:00|ISWR|
  
-![Erroneous data at Swiss Camp](figures/Swiss Camp_ISWR_data_flagging.png)
+![Erroneous data at Swiss Camp](figures/Swiss_Camp_ISWR_data_flagging.png)
  
 Warning: interpreting ShortwaveRadiationUpWm2 as OSWR
 |start time|end time|variable|
 |-|-|-|
 |1997-01-01 00:00:00+00:00|1999-01-01 00:00:00+00:00|OSWR|
  
-![Erroneous data at Swiss Camp](figures/Swiss Camp_OSWR_data_flagging.png)
+![Erroneous data at Swiss Camp](figures/Swiss_Camp_OSWR_data_flagging.png)
  
 ## <a id='s2-2' />Adjusting data at Swiss Camp
 # <a id='s3' />2 Crawford Point 1

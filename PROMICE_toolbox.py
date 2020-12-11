@@ -156,9 +156,9 @@ def flag_data(df, site, var_list = ['all'], plot = True, remove_data = False):
             var_save=var_save.replace('%','Perc')
             plt.legend() 
             plt.title(site)
-            fig.savefig('figures/'+site+'_'+var_save+'_data_flagging.png',dpi=70)
+            fig.savefig('figures/'+site.replace(' ','_')+'_'+var_save+'_data_flagging.png',dpi=70)
             print(' ')
-            print('![Erroneous data at '+ site+'](figures/'+site+'_'+var_save+'_data_flagging.png)')
+            print('![Erroneous data at '+ site+'](figures/'+site.replace(' ','_')+'_'+var_save+'_data_flagging.png)')
             print(' ')
 
     return df_out
@@ -212,9 +212,9 @@ def adjust_data(df, site):
         plt.ylabel(var)
         plt.legend()
         plt.title(site)
-        fig.savefig('figures/'+site+'_adj_'+var+'.jpeg',dpi=120, bbox_inches='tight')
+        fig.savefig('figures/'+site.replace(' ','_')+'_adj_'+var+'.jpeg',dpi=120, bbox_inches='tight')
         print(' ')
-        print('![Adjusted data at '+ site+'](figures/'+site+'_adj_'+var+'.jpeg)')
+        print('![Adjusted data at '+ site +'](figures/'+site.replace(' ','_')+'_adj_'+var+'.jpeg)')
         print(' ')
 
     return df_out
