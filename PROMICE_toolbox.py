@@ -55,6 +55,32 @@ def name_alias(name_in):
         return gcnet_names[index]
     except:
         return None
+
+#%% 
+def field_info(fields):
+
+    field_list = 'timestamp,ISWR,ISWR_max,ISWR_std,OSWR,NSWR,NSWR_std,TA1,TA1_max,TA1_min,TA2,TA2_max,TA2_min,TA3,TA4,RH1,RH2,VW1,VW1_max,VW1_stdev,VW2,VW2_max,VW2_stdev,DW1,DW2,P,HS1,HS2,V,TA5'.split(',')
+
+    units = 'time,V,V,V,V,V,V,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,%/100,%/100,m/s,m/s,m/s,m/s,m/s,m/s,Degrees,Degrees,mbar,m,m,V,Degrees C'.split(',')
+
+    display_description = 'timestamp_iso,shortwave_incoming_radiation,shortwave_incoming_radiation_max,shortwave_incoming_radiation_stdev,shortwave_outgoing_radiation,net_radiation,net_radiation_stdev,air_temperature_1,air_temperature_1_max,air_temperature_1_min,air_temperature_2,air_temperature_2_max,air_temperature_2_min,air_temperature_cs500_air1,air_temperature_cs500_air2,relative_humidity_1,relative_humidity_2,wind_speed_1,wind_speed_u1_max,wind_speed_u1_stdev,wind_speed_2,wind_speed_u2_max,wind_speed_u2_stdev,wind_from_direction_1,wind_from_direction_2,air_pressure,snow_depth_1,snow_depth_2,battery_voltage,ref_temperature'.split(',')
+
+    database_fields = 'timestamp_iso,swin,swin_maximum,swout,swout_minimum,netrad,netrad_maximum,airtemp1,airtemp1_maximum,airtemp1_minimum,airtemp2,airtemp2_maximum,airtemp2_minimum,airtemp_cs500air1,airtemp_cs500air2,rh1,rh2,windspeed1,windspeed_u1_maximum,windspeed_u1_stdev,windspeed2,windspeed_u2_maximum,windspeed_u2_stdev,winddir1,winddir2,pressure,sh1,sh2,battvolt,reftemp'.split(',')
+
+    database_fields_data_types = 'timestamp,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real'.split(',')
+    
+    field_list = field_list + [s+'_qc' for s in field_list]
+    units = units + ['-' for s in units]
+    display_description = display_description + [s+'_quality_flag' for s in display_description]
+    database_fields = database_fields + [s+'_quality_flag' for s in database_fields]
+    database_fields_data_types = database_fields_data_types + ['int' for s in database_fields_data_types]
+
+    ind = [field_list.index(s) for s in fields]
+    
+    return[ units[i] for i in ind], \
+        [display_description[i] for i in ind], \
+        [database_fields[i] for i in ind], \
+        [database_fields_data_types[i] for i in ind]
             
 
 #%%      
