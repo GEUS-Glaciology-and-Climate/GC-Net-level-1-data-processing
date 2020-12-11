@@ -156,7 +156,7 @@ def flag_data(df, site, var_list = ['all'], plot = True, remove_data = False):
             var_save=var_save.replace('%','Perc')
             plt.legend() 
             plt.title(site)
-            fig.savefig('figures/'+site+'_'+var_save+'_data_removed.png',dpi=70)
+            fig.savefig('figures/'+site+'_'+var_save+'_data_flagging.png',dpi=70)
             print(' ')
             print('![Erroneous data at '+ site+'](figures/'+site+'_'+var_save+'_data_flagging.png)')
             print(' ')

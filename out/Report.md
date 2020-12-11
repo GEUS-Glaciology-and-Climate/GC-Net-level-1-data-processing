@@ -432,3 +432,4 @@ No erroneous data listed for NEEM
 No erroneous data listed for E-GRIP
 ## Adjusting data at E-GRIP
 No data to fix at E-GRIP
+                                                   figures and output folders already exist
