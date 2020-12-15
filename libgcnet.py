@@ -332,3 +332,40 @@ def nameLevel0col(dfm):
         print("Error changing tref_avg column")
     #return new dataframe
     return dfm
+
+### This functions takes the merged dataframe dfm and adds offset add_value
+### to each field in the string list fields
+### returns the modified dfm
+def calibrate_add_value(dfm,fields,add_value):
+    # loop through length-1 because we dont add to timestamp
+    for i in range(len(fields)-1):
+        i = i+1 #we don't want to add to timestamp so we start at index 1
+        dfm[fields[i]]=dfm[fields[i]]+add_value[i]
+    return dfm
+
+### This functions takes the merged dataframe dfm and multiples scale_factor
+### to positive values (>0) in each field in the string list fields
+### returns the modified dfm
+def calibrate_scale_factor(dfm,fields,scale_factor):
+    # loop through length-1 because we dont add to timestamp
+    for i in range(len(fields)-1):
+        i = i+1 #we don't want to add to timestamp so we start at index 1
+        #col = dfm[fields[i]]
+        #col[col>0]=col[col>0]*scale_factor[i]
+        #dfm[fields[i]]=col
+        #make multiplation in place for locations greater than 0
+        dfm.loc[dfm[fields[i]] > 0,fields[i]] *= scale_factor[i]
+    return dfm
+
+### This functions takes the merged dataframe dfm and multiples scale_factor_neg
+### to negative values (<0) in each field in the string list fields
+### returns the modified dfm
+def calibrate_scale_factor_neg(dfm,fields,scale_factor_neg):
+    # loop through length-1 because we dont add to timestamp
+    for i in range(len(fields)-1):
+        i = i+1 #we don't want to add to timestamp so we start at index 1
+        #col = dfm[fields[i]]
+        #col[col<0]=col[col<0]*scale_factor_neg[i]
+        #dfm[fields[i]]=col
+        dfm.loc[dfm[fields[i]] < 0,fields[i]] *= scale_factor_neg[i]
+    return dfm
