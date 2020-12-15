@@ -66,6 +66,20 @@ def write_nead(data_frame, nead_config, output_path):
     # Append data to header, omit indices, omit dataframe header, and output columns in fields_list
     with open(nead_output, 'a') as nead_file:
         data_frame.to_csv(nead_file, index=False, header=False, columns=fields_list, line_terminator='\n')
-    
+
     ds = nead.read(nead_output)
-    
+
+# get list of values from nead config [FIELDS] section
+# this is for getting the calibration parameters
+def get_config_list(nead_config, config_key):    # Read nead_config into conf
+    conf = read_config(Path(nead_config))    # Assign values from nead_config 'config_key', convert to list in values_list
+    values_string = conf.get('FIELDS', config_key)
+    values_list = values_string.split(',')
+    values_list_float = [float(item) for item in values_list]
+    return values_list_float
+
+def get_config_list_str(nead_config, config_key):    # Read nead_config into conf
+    conf = read_config(Path(nead_config))    # Assign values from nead_config 'config_key', convert to list in values_list
+    values_string = conf.get('FIELDS', config_key)
+    values_list = values_string.split(',')
+    return values_list
