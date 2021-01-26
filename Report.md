@@ -150,7 +150,7 @@ Warning: IceTemperature9 not found
 ### Adjusting P
 |start time|end time|operation|value|
 |-|-|-|-|
-|2016-10-01T00:00:00+00:00|nan|add|-50.0|
+|2016-6-15T00:00:00+00:00|nan|add|-50.0|
  
 ![Adjusted data at Summit](figures/L1_data_treatment/Summit_adj_P.jpeg)
  

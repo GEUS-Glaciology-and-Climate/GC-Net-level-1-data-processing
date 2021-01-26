@@ -51,13 +51,13 @@ for site, ID in zip(site_list.Name,site_list.ID):
     count = 0
     count_fig = 0
     for i, var in enumerate(df.columns):
-        print(var)
         if var[-2:]=='qc':
             continue
         if var[-3:]=='max':
             continue
         if var[-5:]=='stdev':
             continue
+        print(var)
 
         if var+'_qc' in df.columns:
             # import pdb; pdb.set_trace()

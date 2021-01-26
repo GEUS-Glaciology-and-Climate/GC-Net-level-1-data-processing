@@ -191,7 +191,18 @@ def plot_flagged_data(df, site):
             if len(np.unique(df[var].values))>1:
                 fig = plt.figure(figsize = (15,10))
                 for flag in np.unique(df[var].values):
-                    df.loc[df[var]==flag, var[:-3]].plot(marker='o', label=flag)
+                    if flag == "OK":
+                        df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='green', label=flag)
+                    elif flag == "CHECKME":
+                        df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='orange', label=flag)
+                    elif flag == "OOL":
+                        df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='red', label=flag)
+                    elif flag == "FROZEN":
+                        df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='blue', label=flag)
+                    elif flag == "FROZEN_WS":
+                        df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='lightblue', label=flag)
+                    else:
+                        df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', label=flag)
                 plt.title(site)
                 plt.xlabel('Year')
                 plt.ylabel(var[:-3])
