@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import nead 
 import os.path
+import numpy as np
 from os import path
 try:
     os.mkdir('figures')
@@ -35,8 +36,18 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df=df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp).dt.tz_localize('UTC')
     df = df.set_index('timestamp')
-    print('## Removing erroneous data at '+site)
-    df_out = ptb.flag_data(df, site, plot=True, remove_data = True)
+    df=df.resample('H').mean()
+    
+    # Time shifts:
+    df = ptb.time_shifts(df, site)
+        
+    # Applying standard filters
+    df_out = ptb.filter_data(df, site, remove_data = False)
+
+    print('## Manual flagging of data at '+site)
+    df_out = ptb.flag_data(df_out, site, remove_data = False)
+    
+    ptb.plot_flagged_data(df_out, site)
     
     print('## Adjusting data at '+site)
     df_v4 = ptb.adjust_data(df_out, site)

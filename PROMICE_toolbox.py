@@ -118,7 +118,7 @@ def load_promice(path_promice):
 
     return df
 #%% 
-def flag_data(df, site, var_list = ['all'], plot = True, remove_data = False):
+def flag_data(df, site, var_list = ['all'], remove_data = False):
     '''
     Replace data within a specified variable, between specified dates by NaN.
     Reads from file "metadata/flags/<site>.csv".
@@ -145,49 +145,59 @@ def flag_data(df, site, var_list = ['all'], plot = True, remove_data = False):
         
     print('Flagging data:')
     for var in var_list:
-        var_save = var
-        if (var not in df_out.columns) and (name_alias(var) in df_out.columns):
-            print('Warning: interpreting '+var_save+' as '+name_alias(var))
-            var  = name_alias(var)
-        else:
-            print('Warning: '+var_save+' not found')
+        if (var not in df_out.columns):
+            print('Warning: '+var+' not found')
             continue
             
-        df_out[var+'_qc'] = 'OK'
-        df_out.loc[np.isnan(df_out[var]), var+'_qc'] = 'NAN'
-            
-        if plot:
-            fig = plt.figure(figsize = (15,10))
-            df[var].plot(style='o', label='bad data')
+        if var+'_qc' not in df_out.columns:
+            df_out[var+'_qc'] = 'OK'
+        
+        # df_out.loc[np.logical_and(np.isnan(df_out[var]), df_out[var+'_qc'] == 'OK'), var+'_qc'] = 'NAN'
             
         print('|start time|end time|variable|')
         print('|-|-|-|')
-        for t0, t1,flag in zip(pd.to_datetime(flag_data.loc[flag_data.variable==var_save].t0), 
-                               pd.to_datetime(flag_data.loc[flag_data.variable==var_save].t1),
-                               flag_data.loc[flag_data.variable==var_save].flag):
+        for t0, t1,flag in zip(pd.to_datetime(flag_data.loc[flag_data.variable==var].t0), 
+                               pd.to_datetime(flag_data.loc[flag_data.variable==var].t1),
+                               flag_data.loc[flag_data.variable==var].flag):
             print('|'+str(t0) +'|'+ str(t1)+'|'+var+'|')
 
             df_out.loc[t0:t1, var+'_qc'] = flag
             if remove_data:
                 df_out.loc[t0:t1, var] = np.NaN
-            
-        if plot:
-            df_out.loc[df_out[var+'_qc'] == 'OK', var].plot(style='o', label='good data')
-            plt.title(site)
-            plt.xlabel('Year')
-            plt.ylabel(var)
-            var_save = var
-            for c in ['(', ')', '/']:
-                var_save=var_save.replace(c,'')
-            var_save=var_save.replace('%','Perc')
-            plt.legend() 
-            plt.title(site)
-            fig.savefig('figures/'+site.replace(' ','_')+'_'+var_save+'_data_flagging.png',dpi=70)
-            print(' ')
-            print('![Erroneous data at '+ site+'](figures/'+site.replace(' ','_')+'_'+var_save+'_data_flagging.png)')
-            print(' ')
+        print(' ')
+        print('![Erroneous data at '+ site+'](figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var+'_data_flagging.png)')
+        print(' ')
 
     return df_out
+#%% 
+def plot_flagged_data(df, site):
+    '''
+    Replace data within a specified variable, between specified dates by NaN.
+    Reads from file "metadata/flags/<site>.csv".
+    
+    INTPUTS:
+        df: PROMICE data with time index
+        site: string of PROMICE site
+        var_list: list of the variables for which data removal should be 
+            conducted (default: all)
+        plot: whether data removal should be plotted
+    
+    OUTPUTS:
+        promice_data: Dataframe containing PROMICE data for the desired settings [DataFrame]
+    '''    
+       
+    for var in df.columns:
+        if var[-3:]=='_qc':
+            if len(np.unique(df[var].values))>1:
+                fig = plt.figure(figsize = (15,10))
+                for flag in np.unique(df[var].values):
+                    df.loc[df[var]==flag, var[:-3]].plot(marker='o', label=flag)
+                plt.title(site)
+                plt.xlabel('Year')
+                plt.ylabel(var[:-3])
+                plt.legend() 
+                plt.title(site)
+                fig.savefig('figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var[:-3]+'_data_flagging.png',dpi=70)
 
 #%%
 def adjust_data(df, site):
@@ -200,23 +210,19 @@ def adjust_data(df, site):
     adj_info=adj_info.sort_values(by=['variable','t0']) 
     adj_info.set_index(['variable','t0'],drop=False,inplace=True)
 
-    for var in np.unique(adj_info.variable):
-        var_save = var
-        var  = name_alias(var)
-        print('Replacing '+var_save+' by '+var)
-        
+    for var in np.unique(adj_info.variable):       
         if var not in df.columns:
             print(var+' not in datafile')
             continue
-        else:
-            print('### Adjusting '+var)
+
+        print('### Adjusting '+var)
         print('|start time|end time|operation|value|')
         print('|-|-|-|-|')
         # import pdb; pdb.set_trace()        
-        for t0, t1, func, val in zip(adj_info.loc[var_save].t0,
-                                     adj_info.loc[var_save].t1,
-                                     adj_info.loc[var_save].adjust_function,
-                                     adj_info.loc[var_save].adjust_value):
+        for t0, t1, func, val in zip(adj_info.loc[var].t0,
+                                     adj_info.loc[var].t1,
+                                     adj_info.loc[var].adjust_function,
+                                     adj_info.loc[var].adjust_value):
             
             print('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|')
             if isinstance(t1, float):
@@ -228,23 +234,158 @@ def adjust_data(df, site):
                 tmp = df_out.loc[t0:t1,var].values
                 tmp[tmp<val] = np.nan
                 df_out.loc[t0:t1,var] = tmp
-                
-        fig = plt.figure(figsize=(10,5))
-        df[var].plot(style='o',label='before adjustment')
-        df_out[var].plot(style='o',label='after adjustment')  
-        [plt.axvline(t,linestyle='--',color = 'red') for t in adj_info.loc[var_save].t0.values]
-        plt.axvline(np.nan,linestyle='--', color = 'red', label='Adjustment times') 
-        plt.xlabel('Year')
-        plt.ylabel(var)
-        plt.legend()
-        plt.title(site)
-        fig.savefig('figures/'+site.replace(' ','_')+'_adj_'+var+'.jpeg',dpi=120, bbox_inches='tight')
-        print(' ')
-        print('![Adjusted data at '+ site +'](figures/'+site.replace(' ','_')+'_adj_'+var+'.jpeg)')
-        print(' ')
+            if func == 'rotate': 
+                df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values + val
+                df_out.loc[t0:t1,var][df_out.loc[t0:t1,var]>360] = df_out.loc[t0:t1,var]-360
+
+        if df[var].notna().any():
+            fig = plt.figure(figsize=(10,5))
+            df[var].plot(style='o',label='before adjustment')
+            df_out[var].plot(style='o',label='after adjustment')  
+            [plt.axvline(t,linestyle='--',color = 'red') for t in adj_info.loc[var].t0.values]
+            plt.axvline(np.nan,linestyle='--', color = 'red', label='Adjustment times') 
+            plt.xlabel('Year')
+            plt.ylabel(var)
+            plt.legend()
+            plt.title(site)
+            fig.savefig('figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg',dpi=120, bbox_inches='tight')
+            print(' ')
+            print('![Adjusted data at '+ site +'](figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg)')
+            print(' ')
 
     return df_out
 
+#%% 
+def filter_data(df, site, plot = True, remove_data = False):
+    '''
+    Applies standard filter on data.
+    
+    INTPUTS:
+        df: PROMICE data with time index
+        site: string of PROMICE site
+        var_list: list of the variables for which data removal should be 
+            conducted (default: all)
+        plot: whether data removal should be plotted
+    
+    OUTPUTS:
+        promice_data: Dataframe containing PROMICE data for the desired settings [DataFrame]
+    '''    
+    df_out = df.copy()
+    
+    # Limits filter:
+    df_lim = pd.read_csv('metadata/limits.csv', sep='\s*,\s*',engine='python')
+    df_lim.columns = ['site','var_lim','var_min','var_max']
+    for site_lim, var, var_min, var_max in zip(df_lim.site, df_lim.var_lim, df_lim.var_min,df_lim.var_max):
+        
+        if site_lim == '*' or site_lim == site:
+            if var in df_out.columns.values:
+                ind = np.logical_or(df_out[var]>var_max,
+                                    df_out[var]<var_min)
+                if var+'_qc' in df_out.columns:
+                    df_out.loc[ind,var+'_qc'] = "OOL"
+                else:
+                    df_out[var+'_qc'] = "OK"
+                    df_out.loc[ind,var+'_qc'] = "OOL"
+                
+    # Filter #1: Frozen anemometer
+    def filter_low_ws(df_out, var,thresh = 1, length_frozen = 48):
+        ind = df_out[var].values<thresh
+
+        if np.any(ind):
+            no_wind_count = 0
+            for i, val in enumerate(ind):
+                if val:
+                    no_wind_count = no_wind_count +1
+                else:
+                    if no_wind_count>0:
+                        if no_wind_count<=length_frozen:
+                            # gap less than 6 hours putting down the flag
+                            ind[np.arange(i-no_wind_count,i+1)] = False
+                            no_wind_count = 0
+                        else: 
+                            # too long period without wind, leaving flags up
+                            no_wind_count = 0
+        
+            if var+'_qc' in df_out.columns:
+                df_out.loc[ind,var+'_qc'] = "FROZEN_WS"
+            else:
+                df_out[var+'_qc'] = "OK"
+                df_out.loc[ind,var+'_qc'] = "FROZEN_WS"
+        return df_out
+    for var in ['VW1','VW2']:
+        if var in df_out.columns:
+            df_out = filter_low_ws(df_out, var)
+
+    # Filter #2: Frozen values
+    def filter_zero_gradient(df_out, var,thresh = 0.000001, length_frozen = 6, not_in_dark_season = False):
+        ind = np.abs(df_out[var].diff().values)<thresh
+        
+        if not_in_dark_season:
+            dark_month = df_out['ISWR'].groupby(df_out.index.month).mean()<5
+            ind_winter = np.isin(df_out.index.month, dark_month[dark_month].index)
+            ind[ind_winter] = False
+
+            
+        if np.any(ind):
+            no_wind_count = 0
+            for i, val in enumerate(ind):
+                if val:
+                    no_wind_count = no_wind_count +1
+                else:
+                    if no_wind_count>0:
+                        if no_wind_count<=length_frozen:
+                            # gap less than 6 hours putting down the flag
+                            ind[np.arange(i-no_wind_count,i+1)] = False
+                            no_wind_count = 0
+                        else: 
+                            # too long period without wind, leaving flags up
+                            no_wind_count = 0
+        
+            if var+'_qc' in df_out.columns:
+                df_out.loc[ind,var+'_qc'] = "FROZEN"
+            else:
+                df_out[var+'_qc'] = "OK"
+                df_out.loc[ind,var+'_qc'] = "FROZEN"
+        return df_out
+    for var in ['VW1','VW2','TA1','TA1','TA2','TA3','TA4','P','RH1','RH2']:
+        if var in df_out.columns:
+            df_out = filter_zero_gradient(df_out, var)
+    for var in ['ISWR','OSWR']:
+        if var in df_out.columns:
+            df_out = filter_zero_gradient(df_out, var,
+                                          thresh = 1,
+                                          length_frozen=24,
+                                          not_in_dark_season=True)
+    # Filter #3: Thermocouples limited to -40oC
+    for var in ['TA3','TA4']:
+        if var in df_out.columns:
+            df_out.loc[df[var]<-39.5,var+'_qc'] = "OOL"
+    return df_out
+
+# %% 
+def time_shifts(df, site):
+    if site == 'Crawford Point 1':
+        # df_org = df.copy()
+        df_shifted = df['1990-01-01 16:00:00' :'1990-09-26 14:00:00'].copy()
+        df_shifted.reset_index(inplace=True)
+
+        df = df.drop(df['1990-01-01 16:00:00' :'1990-09-26 14:00:00'].index,axis=0)
+        first_good_time = df.notna().any(axis=1).idxmax()
+        df = df.drop(df[:first_good_time].index,axis=0)
+        
+        # starts again 2011-05-02 15:00:00
+        df_shifted['timestamp'] = df_shifted.timestamp.values + pd.Timedelta(str(20*362+283)+" days")
+        df_shifted.set_index('timestamp',inplace=True)
+        
+        # replacing only if no data already existing in the target period
+        ind_replace = np.isnan(df[df_shifted.index[0]:df_shifted.index[-1]])
+        time_replace = ind_replace[ind_replace].index
+        df.loc[time_replace,:] = df_shifted.values
+        
+        # plt.figure()
+        # df.HS2.plot(label='shifted')
+        # df_org.HS2.plot(label='original')
+    return df
 #%%
 def smooth(x,window_len=14,window='hanning'):
     """smooth the data using a window with requested size.
@@ -524,9 +665,9 @@ def combine_hs_dpt(df, site):
     plt.grid()
     for i, y in enumerate(np.unique(years)):
         plt.axvspan(df.index[ind_start[i]],df.index[ind_end[i]], color='orange', alpha=0.1)
-    f1.savefig('figures/'+site+'_surface_height.png',dpi=90, bbox_inches='tight')
+    f1.savefig('figures/L1_data_treatment/'+site+'_surface_height.png',dpi=90, bbox_inches='tight')
     print(' ')
-    print('![Surface height adjustement at '+ site+'](figures/'+site+'_surface_height.png)')
+    print('![Surface height adjustement at '+ site+'](figures/L1_data_treatment/'+site+'_surface_height.png)')
     print(' ')
             
     return df
