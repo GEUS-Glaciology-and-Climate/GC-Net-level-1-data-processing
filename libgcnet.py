@@ -2,6 +2,7 @@ import sys
 import time
 import os
 import numpy as np
+import pandas as pd
 from urllib.error import HTTPError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -12,6 +13,7 @@ import zipfile
 ############################### Function to download data from envidat#########
 def getunzip(resource_link):
     token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4cGRIMG5qUkk1VmJVSzNQVlFkM1dXYnBibDYzYXNaV1kxejJpcWx1RmpfUlBJSzdRaHBrMHpHWVZhaF9TVU5peUgtcnR2aHpabm5XR3Z3VSIsImlhdCI6MTYwNTAwMjU0OX0.RR7BYrDQnCI_NAri2YCwpVqShX_cru-CsRGpkqeguvE'
+    token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJ5Nk8wVEN1QkJuVklmaFhkb0hpU3IxQVF4M3FKRkJua0tJaW1GY1JsYXQxMDNNTkFqNXZyRnk0UHFxVi1IeVpEZm11dUZKRXFjSTZjYllWSSIsImlhdCI6MTYxNTQ3MTE2M30.ls5BYHNW7LiXeax0gaQ0vkZpafL_zKAfKhLTiEXSCHQ'
     base_path = "./L0"
     output_path = os.path.join(base_path, resource_link.rsplit('/', 1)[1])
     print(output_path)
@@ -32,8 +34,8 @@ def getunzip(resource_link):
     except HTTPError as e:
         code = e.getcode()
         print("\t * ERROR * code {0}, {1}".format(code, e))
-    if code != 200:
-        print("\t * Got response code {0}...".format(response.code))
+        #if code != 200:
+        #    print("\t * Got response code {0}...".format(response.code))
         return -1
     # Save the zip file
     print("2. Saving resource at {0}...".format(output_path))
@@ -369,3 +371,18 @@ def calibrate_scale_factor_neg(dfm,fields,scale_factor_neg):
         #dfm[fields[i]]=col
         dfm.loc[dfm[fields[i]] < 0,fields[i]] *= scale_factor_neg[i]
     return dfm
+
+def read_c_file(c_file_path,c_file_header_str):
+    print('Now reading: ',c_file_path)
+    dfc = pd.read_csv(c_file_path,sep='\s+',names=c_file_header_str,header=None,na_values=[999.0, -999,999.99,999.999])
+    # define timestamp from Year and DoY (fractional ordinal day)
+    dfc['timestamp'] = pd.to_datetime(dfc.year,format='%Y') + pd.to_timedelta(dfc.DoY - 1, unit='d')
+    # round to the nearest hour (there is some remainder from fractional day)
+    dfc['timestamp']=dfc['timestamp'].dt.round('H')
+    dfc = dfc.set_index("timestamp")
+    #pd.to_datetime(dfc.index)
+    # remove any possible duplicate datetimes
+    dfc = dfc[~dfc.index.duplicated(keep='first')]
+    dfc = dfc.sort_index()
+    #dfc = pd.concat([df1,df2]).drop_duplicates(subset=["timestamp"])
+    return dfc

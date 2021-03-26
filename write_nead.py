@@ -65,6 +65,7 @@ def write_nead(data_frame, nead_config, output_path):
 
     # Append data to header, omit indices, omit dataframe header, and output columns in fields_list
     with open(nead_output, 'a') as nead_file:
+        print(fields_list)
         data_frame.to_csv(nead_file, index=False, header=False, columns=fields_list, line_terminator='\n', float_format='%.2f')
 
     ds = nead.read(nead_output)

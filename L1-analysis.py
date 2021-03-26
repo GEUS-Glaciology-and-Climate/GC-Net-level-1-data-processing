@@ -14,7 +14,7 @@ import PROMICE_toolbox as ptb
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-import nead 
+import nead
 import os.path
 from os import path
 from matplotlib.dates import DateFormatter
@@ -25,7 +25,8 @@ months = mdates.MonthLocator()  # every month
 years_fmt = mdates.DateFormatter('%Y')
 
 # %% per station data overview
-path_to_L0N = 'L0N/'
+#path_to_L0N = 'L0N/'
+path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)#.iloc[:1]
 
 for site, ID in zip(site_list.Name,site_list.ID):
@@ -39,7 +40,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df=df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp)
     df = df.set_index('timestamp').replace(-999,np.nan)
-    
+
     # % plotting variables
     def new_fig():
         fig, ax = plt.subplots(6,1,sharex=True, figsize=(18,15))
@@ -66,7 +67,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
                 df.loc[df[var+'_qc']==qc_code,var].plot(ax=ax[count])
         else:
             df[var].plot(ax=ax[count])
-            
+
         ax[count].set_ylabel(var)
         ax[count].grid()
         ax[count].axes.xaxis.set_major_formatter(years_fmt)
@@ -128,12 +129,12 @@ for i, folder in enumerate(site_list):
     ds = xr.open_dataset(gcnet_path+'/'+site+'_surface.nc')
     df = ds.to_dataframe().resample('D').mean()
     i, j = np.unravel_index(i,np.shape(ax))
-    
+
 
     trend = np.array([])
     for year in range(1998,2018):
         df2 = df.loc[df.index.year==year,:]
-        
+
         X = df2.index.dayofyear.values
         Y = df2.H_surf_mod.values  -np.nanmean(df2.H_surf_mod.values)
         mask = ~np.isnan(X) & ~np.isnan(Y)
@@ -144,7 +145,7 @@ for i, folder in enumerate(site_list):
         if lm.coef_[0][0]<0:
             continue
         Y_pred = lm.predict(X[mask].reshape(-1, 1))
-    
+
         ax[i,j].plot(X,Y)
         ax[i,j].plot(X[mask].reshape(-1, 1),Y_pred,linestyle='--')
         ax[i,j].set_xlabel('')
@@ -155,7 +156,7 @@ for i, folder in enumerate(site_list):
     ax[i,j].text(100,ax[i,j].get_ylim()[1]*0.8,  ' '+str(round(trend_avg,2))+' $\pm$ '+str(round(trend_std,2))+' $m yr^{-1}$')
     print(site+' '+str(round(trend_avg,2))+' +/- '+str(round(trend_std,2))+' m yr-1')
     # print(lm.intercept_)
-    
+
 ax[1,0].set_ylabel('Surface height (m)')
 ax[2,1].set_xlabel('Day of year')
 
@@ -176,10 +177,10 @@ for i, folder in enumerate(site_list):
     ds = xr.open_dataset(gcnet_path+'/'+site+'_surface.nc')
     df = ds.to_dataframe().resample('D').mean()
     i, j = np.unravel_index(i,np.shape(ax))
-    
+
 
     df2 = df
-    
+
     X = df2.index.values
     Y = df2.H_surf_obs.values # -np.nanmean(df2.H_surf_mod.values)
     mask = ~np.isnan(X) & ~np.isnan(Y)
@@ -197,6 +198,6 @@ for i, folder in enumerate(site_list):
     ax[i,j].text('2005-01-01',ax[i,j].get_ylim()[1]*0.8,  ' '+str(round(trend,2))+' $m yr^{-1}$')
     print(site+' '+str(round(trend,2))+' m yr-1')
     # print(lm.intercept_)
-    
+
 ax[1,0].set_ylabel('Surface height (m)')
 ax[2,1].set_xlabel('Day of year')

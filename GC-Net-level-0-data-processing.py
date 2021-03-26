@@ -1,22 +1,24 @@
-
+# -*- coding: utf-8 -*-
 import numpy as np
 import pandas as pd
 import os
 import time
 import matplotlib.pyplot as plt
-from libgcnet import *
+import libgcnet as gc
 import glob
-from write_nead import *
+import write_nead
 
 ##################################### MAIN ####################################
 
 ##Define file to get links for GC-net Level 0 files on Envidat
-linkfile = "./envidat_gcnet_links.csv"
+linkfile = "metadata/envidat_gcnet_links.csv"
 
 # path to save raw L0 downloaded from envidat
 path = "./L0/"
 # path to save merged nead files
 mpath = "./L0N/"
+# path to save merged nead + c level files
+mcpath = "./L0M/"
 # path to ini/header files for NEAD outputs
 l0inipath = "./L0N_ini/"
 
@@ -26,7 +28,7 @@ try:
     os.mkdir(path)
     # only download data if new directory was created (in try)
     #Download and unzip L0 files from CKAN API on Envidat
-    getLevel0(linkfile)
+    gc.getLevel0(linkfile)
 except OSError:
     # Don't download data if the file already exists or other error
     print ("Data already exists or creating directory %s failed (permission?)" % path)
@@ -44,12 +46,25 @@ except OSError:
 else:
     print ("Successfully created the directory %s " % mpath)
 
+# Create the directory to put the merged L0 + C level files (variable mcpath)
+try:
+    os.mkdir(mcpath)
+except OSError:
+    print ("Data already exists or creating directory %s failed (permission?)" % mcpath)
+else:
+    print ("Successfully created the directory %s " % mcpath)
+
 # Loop through each station, read pandas dataframe and do the merging
 for i in range(len(L0dirs))  :
     print('--------------------------------')
     print('Now Processing Directory: ',L0dirs[i])
     # the file structure of raw campbell data files
     datadir = path+L0dirs[i]+'/Campbell logger files/'
+    #get 2 digit station number from numered station directory
+    cfilenum = str(L0dirs[i])[:2]
+    # define path to historical C level file in L0 directory
+    cfiledir = path+L0dirs[i]+'/C file/'+cfilenum+'c.dat'
+
     #get list and sort all non-hidden files in station directory
     allL0files = sorted([f for f in os.listdir(datadir) if not f.startswith('.')])
 
@@ -120,7 +135,7 @@ for i in range(len(L0dirs))  :
                 df1 = df1_p1
 
             # standardize column header names before merge
-            df1 = nameLevel0col(df1)
+            df1 = gc.nameLevel0col(df1)
         #else take previous merged dataframe
         else:
             # if not the first file continue concatonating to the merged file
@@ -130,6 +145,7 @@ for i in range(len(L0dirs))  :
         df2_p1.set_index(df2_p1["TIMESTAMP"])
         pd.to_datetime(df2_p1.index)
         # implement old ARGOS/ARGOS/GOES case structure for the files being merged
+        # this means there are 3 separate tables for a single "row" in the processed data
         if df2_oldargos_bool and df2_argos_bool:
             print('and')
             print('Now processing files: ',df1_table48file,' and ',df2_table48file)
@@ -160,7 +176,7 @@ for i in range(len(L0dirs))  :
             # this is the GOES station standard with only one data Table (046)
             df2 = df2_p1
         # standardize column header names before vertical concatenate
-        df2 = nameLevel0col(df2)
+        df2 = gc.nameLevel0col(df2)
 
         print('File 1: Start: ',df1["timestamp"].iloc[0],' End: ',df1["timestamp"].iloc[-1])
         print('Number of records = ',len(df1["timestamp"]))
@@ -169,36 +185,37 @@ for i in range(len(L0dirs))  :
         dfm = pd.concat([df1,df2]).drop_duplicates(subset=["timestamp"])
         #dfm = dfm[~dfm.index.duplicated(keep='first')]
         #print(dfm)
+    starttime = dfm["timestamp"].iloc[0]
+    endtime   = dfm["timestamp"].iloc[-1]
     print('-------------------------------------------------------------------')
     print('Merge Complete.')
-    print('Merged File: Start: ',dfm["timestamp"].iloc[0],' End: ',dfm["timestamp"].iloc[-1])
+    print('Merged File: Start: ',starttime,' End: ',endtime)
     print('Number of records = ',len(dfm["timestamp"]))
     print('The following columns have been extracted:')
     print(dfm.dtypes)
 
-    #### TO DO
-    #read and merge c-level file?
-
-    #make path/name of merged nead file the same as raw data directory
+    #make path/name of campbell merged nead file the same as raw data directory
     coutfile = mpath+L0dirs[i]
+    #make path for merged C-level and Campbell nead file
+    mcoutfile = mcpath+L0dirs[i]
     # the ini file with the nead header for each station (determines which variables are output in the nead)
     configfile = l0inipath+L0dirs[i]+'_header.ini'
 
     ##### calibrate data based on header scale_factor, scale_factor_neg, and add_value
     #get string list of fields in output nead file
-    fields = get_config_list_str(configfile, 'fields')
+    fields = write_nead.get_config_list_str(configfile, 'fields')
     # get list of add_value offset calibrations
-    add_value = get_config_list(configfile, 'add_value')
+    add_value = write_nead.get_config_list(configfile, 'add_value')
     #calibrate add_value for all fields
-    dfm=calibrate_add_value(dfm,fields,add_value)
+    dfm=gc.calibrate_add_value(dfm,fields,add_value)
     # get list of scale_factor values for all fields
-    scale_factor = get_config_list(configfile, 'scale_factor')
+    scale_factor = write_nead.get_config_list(configfile, 'scale_factor')
     #calibrate scale_factor for all fields
-    dfm=calibrate_scale_factor(dfm,fields,scale_factor)
+    dfm=gc.calibrate_scale_factor(dfm,fields,scale_factor)
     # get list of scale_factor_neg values for all fields
-    scale_factor_neg = get_config_list(configfile, 'scale_factor_neg')
+    scale_factor_neg = write_nead.get_config_list(configfile, 'scale_factor_neg')
     #calibrate scale_factor_neg for all fields
-    dfm=calibrate_scale_factor_neg(dfm,fields,scale_factor_neg)
+    dfm=gc.calibrate_scale_factor_neg(dfm,fields,scale_factor_neg)
 
     # # # # # # #Plot parameters for each station as merging occurs
     # plt.figure()
@@ -212,9 +229,28 @@ for i in range(len(L0dirs))  :
     ###write level 0N nead files
     print('Outputting merged dataframe to nead: ',coutfile)
     #write dfm to NEAD file coutfile using header headerfile
-    write_nead(dfm, configfile, coutfile)
+    write_nead.write_nead(dfm, configfile, coutfile)
     # INSERT FUNCTION TO OUTPUT csv data in correct column order
     #dfm.to_csv(path_or_buf=coutfile,columns=())
+
+    #read and merge historical c-level file
+    cconfigfile = l0inipath+'c_file_header.ini'
+    c_file_header_str = write_nead.get_config_list_str(cconfigfile, 'fields')
+    if os.path.isfile(cfiledir):
+            dfc = gc.read_c_file(cfiledir,c_file_header_str)
+            needed_dfc = dfc[:starttime-pd.Timedelta(hours=1)]
+            dfm["timestamp"] = pd.to_datetime(dfm["timestamp"])
+            dfm = dfm.set_index("timestamp")
+            print("Using the following part of the C-file: ",needed_dfc)
+            print("Merging with logger files dataframe:",dfm)
+            dfmc = pd.concat([needed_dfc,dfm])
+            dfmc['timestamp']=pd.to_datetime(dfmc.index)
+            write_nead.write_nead(dfmc, configfile, mcoutfile)
+    else:
+        print("No C level file Found for station: ",L0dirs[i])
+        print("Writing L0N to L0M")
+        write_nead.write_nead(dfm, configfile, mcoutfile)
+
 
     #clear dfm from memory before next station
     del dfm
