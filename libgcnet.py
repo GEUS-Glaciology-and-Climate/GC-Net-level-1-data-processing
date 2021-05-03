@@ -215,13 +215,13 @@ def nameLevel0col(dfm):
 
     # change sonic height 1
     try:
-        dfm=dfm.rename(columns={"sd_1_avg":"HS1"})
+        dfm=dfm.rename(columns={"sd_1_avg":"HW1"})
     except:
         print("Error changing sd_1_avg column")
 
     # change sonic height 2
     try:
-        dfm=dfm.rename(columns={"sd_2_avg":"HS2"})
+        dfm=dfm.rename(columns={"sd_2_avg":"HW2"})
     except:
         print("Error changing sd_2_avg column")
 
@@ -332,6 +332,47 @@ def nameLevel0col(dfm):
         dfm=dfm.rename(columns={"tref_avg":"TA5"})
     except:
         print("Error changing tref_avg column")
+    # change names of 10 snow temperatures
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(1)":"TS1"})
+    except:
+        print("Error changing tc_snow_avg(1) column")
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(2)":"TS2"})
+    except:
+        print("Error changing tc_snow_avg(2) column")
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(3)":"TS3"})
+    except:
+        print("Error changing tc_snow_avg(3) column")
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(4)":"TS4"})
+    except:
+        print("Error changing tc_snow_avg(4) column")
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(5)":"TS5"})
+    except:
+        print("Error changing tc_snow_avg(5) column")
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(6)":"TS6"})
+    except:
+        print("Error changing tc_snow_avg(6) column")
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(7)":"TS7"})
+    except:
+        print("Error changing tc_snow_avg(7) column")
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(8)":"TS8"})
+    except:
+        print("Error changing tc_snow_avg(8) column")
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(9)":"TS9"})
+    except:
+        print("Error changing tc_snow_avg(9) column")
+    try:
+        dfm=dfm.rename(columns={"tc_snow_avg(10)":"TS10"})
+    except:
+        print("Error changing tc_snow_avg(10) column")
     #return new dataframe
     return dfm
 

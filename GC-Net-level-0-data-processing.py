@@ -204,6 +204,7 @@ for i in range(len(L0dirs))  :
     ##### calibrate data based on header scale_factor, scale_factor_neg, and add_value
     #get string list of fields in output nead file
     fields = write_nead.get_config_list_str(configfile, 'fields')
+    print(fields)
     # get list of add_value offset calibrations
     add_value = write_nead.get_config_list(configfile, 'add_value')
     #calibrate add_value for all fields
