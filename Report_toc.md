@@ -104,21 +104,8 @@ No data to fix at Swiss Camp 10m
 # <a id='s2' />1 Swiss Camp
 ## <a id='s2-1' />Manual flagging of data at Swiss Camp
 Flagging data:
-|start time|end time|variable|
-|-|-|-|
-|2011-02-15 00:00:00+00:00|2011-05-10 00:00:00+00:00|HS1|
-|2011-08-01 00:00:00+00:00|2012-05-10 00:00:00+00:00|HS1|
-|2017-05-15 00:00:00+00:00|2018-05-01 00:00:00+00:00|HS1|
- 
-![Erroneous data at Swiss Camp](figures/L1_data_treatment/Swiss_Camp_HS1_data_flagging.png)
- 
-|start time|end time|variable|
-|-|-|-|
-|2011-02-15 00:00:00+00:00|2011-05-10 00:00:00+00:00|HS2|
-|2011-08-01 00:00:00+00:00|2012-05-10 00:00:00+00:00|HS2|
- 
-![Erroneous data at Swiss Camp](figures/L1_data_treatment/Swiss_Camp_HS2_data_flagging.png)
- 
+Warning: HS1 not found
+Warning: HS2 not found
 |start time|end time|variable|
 |-|-|-|
 |2009-07-01 00:00:00+00:00|2009-07-01 00:00:00+00:00|ISWR|
