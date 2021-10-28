@@ -21,13 +21,13 @@ try:
 except:
     print('figures and output folders already exist')
 
-sys.stdout = open("Report.md", "w")
+# sys.stdout = open("Report.md", "w")
 
 #path_to_L0N = 'L0N/'
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
-print(site_list)
-# site_list = site_list.iloc[:2:,:]
+# print(site_list)
+site_list = site_list.iloc[6:7,:]
 for site, ID in zip(site_list.Name,site_list.ID):
     print('# '+str(ID)+ ' ' + site)
     filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
@@ -50,7 +50,11 @@ for site, ID in zip(site_list.Name,site_list.ID):
     print('## Manual flagging of data at '+site)
     df_out = ptb.flag_data(df_out, site, remove_data = False)
 
-    ptb.plot_flagged_data(df_out, site)
+    # ptb.plot_flagged_data(df_out, site)
+
+    # Calculating surface height from wind sensor height
+    df_out['HS1'] = df_out.HW1[df_out.HW1.first_valid_index()] - df_out.HW1
+    df_out['HS2'] = df_out.HW2[df_out.HW2.first_valid_index()] - df_out.HW2
 
     print('## Adjusting data at '+site)
     df_v4 = ptb.adjust_data(df_out, site)

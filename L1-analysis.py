@@ -104,8 +104,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df = df.set_index('timestamp').replace(-999,np.nan).resample('D').mean().rolling(7).mean()
     # plotting height
     i, j = np.unravel_index(count,np.shape(ax))
-    df.HS1.plot(ax=ax[i,j])
-    df.HS2.plot(ax=ax[i,j])
+    df.HW1.plot(ax=ax[i,j])
+    df.HW2.plot(ax=ax[i,j])
     ax[i,j].set_title(str(ID)+ ' ' + site)
     ax[i,j].set_xlabel('')
     ax[i,j].grid()
