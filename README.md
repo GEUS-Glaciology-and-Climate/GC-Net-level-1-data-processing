@@ -12,3 +12,33 @@ Uses [pyNEAD](https://github.com/GEUS-PROMICE/pyNEAD) and [PROMICE-AWS-toolbox](
 pip install git+https://github.com/GEUS-PROMICE/pyNEAD.git
 
 ```
+
+## Processing steps
+
+### Level C
+
+- Historical files already processed by K. Steffen
+- Covers 1991-2007 period
+- Original logger files available but poorly documented and changing from year to year
+
+### Level 0
+
+- Unaltered logger files
+- Only available after 2007
+
+### Level 0N
+
+- AWS data translated into readable units
+- Only available after 2007
+
+### Level 0M
+
+- Merging of the L0N and LC files
+
+### Level 1
+
+- Filtering of the erroneous measurements
+- Adjustments applied when needed
+- Quality assessment
+- Derived variables available (T2m, RH2m, WS10m, SurfaceHeight)
+ 

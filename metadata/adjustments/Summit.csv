@@ -1,6 +1,16 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-2009-05-19T21:00:00+00:00,,HS1,add,-0.2,Not reported. Manual shift suggested by bav.
-1999-05-09T00:00:00+00:00,,HS2,add,-0.05,Not reported. Manual shift suggested by bav.
-2004-04-09T10:00:00+00:00,,HS2,add,0.3,Not reported. Manual shift suggested by bav.
-2005-05-26T14:00:00+00:00,,HS2,add,-0.1,Reported visit. SR1 height before/after (m): 0.0/-0.1
-2016-6-15T00:00:00+00:00,,P,add,-50,Manual shift suggested by bav. https://github.com/GEUS-PROMICE/GC-Net-level-1-data-processing/issues/14
+2000-06-09T00:00:00+00:00,,HS1,add,0.8,Not reported. Manual shift suggested by bav.
+2001-06-10T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
+2005-05-23T00:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
+2008-09-13T21:00:00+00:00,,HS1,add,0.5,Not reported. Manual shift suggested by bav.
+2009-05-19T21:00:00+00:00,,HS1,add,0.5,Not reported. Manual shift suggested by bav.
+2010-08-16T21:00:00+00:00,,HS1,add,3.1,Not reported. Manual shift suggested by bav.
+2016-05-22T21:00:00+00:00,,HS1,add,2.9,Not reported. Manual shift suggested by bav.
+
+2000-05-09T00:00:00+00:00,,HS2,add,2.2,Not reported. Manual shift suggested by bav.
+2001-06-10T12:00:00+00:00,,HS2,add,2.1,Not reported. Manual shift suggested by bav.
+2005-05-26T14:00:00+00:00,,HS2,add,2.5,Reported visit. SR1 height before/after (m): 0.0/-0.1
+2010-08-18T14:00:00+00:00,,HS2,add,3.4,Not reported. Manual shift suggested by bav.
+2016-05-22T14:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
+
+2016-05-22T00:00:00+00:00,,P,add,-50,Manual shift suggested by bav. https://github.com/GEUS-PROMICE/GC-Net-level-1-data-processing/issues/14

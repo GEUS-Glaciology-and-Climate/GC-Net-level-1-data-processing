@@ -36,7 +36,8 @@ import warnings
 import difflib
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)
-#%%
+
+
 def name_alias(name_in):
     
     promice_names = ['AirTemperature1C', 'AirTemperature2C','AirTemperature3C', 
@@ -56,7 +57,8 @@ def name_alias(name_in):
     except:
         return None
 
-#%% 
+
+
 def field_info(fields):
 
     field_list = 'timestamp,ISWR,ISWR_max,ISWR_std,OSWR,NSWR,NSWR_std,TA1,TA1_max,TA1_min,TA2,TA2_max,TA2_min,TA3,TA4,RH1,RH2,VW1,VW1_max,VW1_stdev,VW2,VW2_max,VW2_stdev,DW1,DW2,P,HS1,HS2,HW1,HW2,V,TA5,TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8,TS9,TS10'.split(',')
@@ -82,8 +84,7 @@ def field_info(fields):
         [database_fields[i] for i in ind], \
         [database_fields_data_types[i] for i in ind]
             
-
-#%%      
+      
 
 def load_promice(path_promice):
     '''
@@ -117,8 +118,9 @@ def load_promice(path_promice):
     #                                                    df['AirTemperature(C)'])
 
     return df
-#%% 
-def flag_data(df, site, var_list = ['all'], remove_data = False):
+
+
+def flag_data(df, site, var_list = ['all']):
     '''
     Replace data within a specified variable, between specified dates by NaN.
     Reads from file "metadata/flags/<site>.csv".
@@ -162,14 +164,14 @@ def flag_data(df, site, var_list = ['all'], remove_data = False):
             print('|'+str(t0) +'|'+ str(t1)+'|'+var+'|')
 
             df_out.loc[t0:t1, var+'_qc'] = flag
-            if remove_data:
-                df_out.loc[t0:t1, var] = np.NaN
+
         print(' ')
         print('![Erroneous data at '+ site+'](figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var+'_data_flagging.png)')
         print(' ')
 
     return df_out
-#%% 
+
+
 def plot_flagged_data(df, site):
     '''
     Replace data within a specified variable, between specified dates by NaN.
@@ -210,8 +212,21 @@ def plot_flagged_data(df, site):
                 plt.title(site)
                 fig.savefig('figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var[:-3]+'_data_flagging.png',dpi=70)
 
-#%%
-def adjust_data(df, site):
+
+
+def remove_flagged_data(df):
+    '''
+    Remove flagged data
+    '''
+    for var in df.columns:
+        if var[-3:]=='_qc':
+            if len(np.unique(df[var].values))>1:
+                msk = (df[var].values == 'OK') | (df[var].values == '')
+                df.loc[~msk, var[:-3]] = np.nan
+            df = df.drop(columns=[var])
+    return df
+
+def adjust_data(df, site, var_list = []):
     df_out = df.copy()
     if not os.path.isfile('metadata/adjustments/'+site+'.csv'):
         print('No data to fix at '+site)
@@ -221,7 +236,10 @@ def adjust_data(df, site):
     adj_info=adj_info.sort_values(by=['variable','t0']) 
     adj_info.set_index(['variable','t0'],drop=False,inplace=True)
 
-    for var in np.unique(adj_info.variable):       
+    if len(var_list) == 0:
+        var_list = np.unique(adj_info.variable)
+
+    for var in var_list:       
         if var not in df.columns:
             print(var+' not in datafile')
             continue
@@ -244,7 +262,33 @@ def adjust_data(df, site):
             if func == 'min_filter': 
                 tmp = df_out.loc[t0:t1,var].values
                 tmp[tmp<val] = np.nan
+            if func == 'max_filter': 
+                tmp = df_out.loc[t0:t1,var].values
+                tmp[tmp>val] = np.nan
                 df_out.loc[t0:t1,var] = tmp
+            if func == 'upper_perc_filter': 
+                tmp = df_out.loc[t0:t1,var].copy()
+                df_w = df_out.loc[t0:t1,var].resample('14D').quantile(1-val/100)
+                df_w = df_out.loc[t0:t1,var].resample('14D').var()
+                for m_start,m_end in zip(df_w.index[:-2],df_w.index[1:]):
+                    msk = (tmp.index >= m_start) & (tmp.index < m_end)
+                    values_month = tmp.loc[msk].values
+                    values_month[values_month<df_w.loc[m_start]] = np.nan
+                    tmp.loc[msk] = values_month
+
+                df_out.loc[t0:t1,var] = tmp.values
+            if func == 'upper_range_filter': 
+                tmp = df_out.loc[t0:t1,var].copy()
+                df_max = df_out.loc[t0:t1,var].resample('14D').max()
+                for m_start,m_end in zip(df_max.index[:-2], df_max.index[1:]):
+                    msk = (tmp.index >= m_start) & (tmp.index < m_end)
+                    lim = df_max.loc[m_start] - val
+                    values_month = tmp.loc[msk].values
+                    values_month[values_month < lim] = np.nan
+                    tmp.loc[msk] = values_month
+
+                df_out.loc[t0:t1,var] = tmp.values
+                
             if func == 'rotate': 
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values + val
                 df_out.loc[t0:t1,var][df_out.loc[t0:t1,var]>360] = df_out.loc[t0:t1,var]-360
@@ -266,7 +310,8 @@ def adjust_data(df, site):
 
     return df_out
 
-#%% 
+
+ 
 def filter_data(df, site, plot = True, remove_data = False):
     '''
     Applies standard filter on data.
@@ -373,7 +418,8 @@ def filter_data(df, site, plot = True, remove_data = False):
             df_out.loc[df[var]<-39.5,var+'_qc'] = "OOL"
     return df_out
 
-# %% 
+
+
 def time_shifts(df, site):
     if site == 'Crawford Point 1':
         # df_org = df.copy()
@@ -397,7 +443,9 @@ def time_shifts(df, site):
         # df.HS2.plot(label='shifted')
         # df_org.HS2.plot(label='original')
     return df
-#%%
+
+
+
 def smooth(x,window_len=14,window='hanning'):
     """smooth the data using a window with requested size.
     
@@ -480,7 +528,8 @@ def firstNonNan(listfloats):
     if math.isnan(item) == False:
       return item
 
-#%%
+
+
 def combine_hs_dpt(df, site):
     # smoothing and filtering pressure transducer data
     df["DepthPressureTransducer_Cor_adj(m)"] = hampel(df["DepthPressureTransducer_Cor(m)"].interpolate(limit=72)).values
