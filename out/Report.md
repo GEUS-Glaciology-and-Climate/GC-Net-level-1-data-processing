@@ -21,6 +21,8 @@ Flagging data:
  
 ## Adjusting data at Swiss Camp 10m
 No data to fix at Swiss Camp 10m
+## Adjusting data at Swiss Camp 10m
+No data to fix at Swiss Camp 10m
 # 1 Swiss Camp
 ## Manual flagging of data at Swiss Camp
 Flagging data:
@@ -61,6 +63,7 @@ Warning: HS2 not found
 ![Erroneous data at Swiss Camp](figures/L1_data_treatment/Swiss_Camp_VW1_data_flagging.png)
  
 ## Adjusting data at Swiss Camp
+## Adjusting data at Swiss Camp
 # 2 Crawford Point 1
 ## Manual flagging of data at Crawford Point 1
 Flagging data:
@@ -74,6 +77,7 @@ Warning: IceTemperature6 not found
 Warning: IceTemperature7 not found
 Warning: IceTemperature8 not found
 Warning: IceTemperature9 not found
+## Adjusting data at Crawford Point 1
 ## Adjusting data at Crawford Point 1
 # 3 NASA-U
 ## Manual flagging of data at NASA-U
@@ -97,6 +101,9 @@ Flagging data:
  
 ![Erroneous data at NASA-U](figures/L1_data_treatment/NASA-U_RH2_data_flagging.png)
  
+## Adjusting data at NASA-U
+HS1 not in datafile
+HS2 not in datafile
 ## Adjusting data at NASA-U
 ### Adjusting HS1
 |start time|end time|operation|value|
@@ -128,6 +135,13 @@ Flagging data:
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
+|2007-01-01 00:00:00+00:00|2014-05-01 00:00:00+00:00|P|
+|1995-01-01 00:00:00+00:00|1996-05-01 00:00:00+00:00|P|
+ 
+![Erroneous data at GITS](figures/L1_data_treatment/GITS_P_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
 |2010-01-01 00:00:00+00:00|2012-05-26 00:00:00+00:00|RH1|
  
 ![Erroneous data at GITS](figures/L1_data_treatment/GITS_RH1_data_flagging.png)
@@ -138,6 +152,15 @@ Flagging data:
  
 ![Erroneous data at GITS](figures/L1_data_treatment/GITS_TA3_data_flagging.png)
  
+|start time|end time|variable|
+|-|-|-|
+|2007-01-01 00:00:00+00:00|2014-05-01 00:00:00+00:00|VW2|
+ 
+![Erroneous data at GITS](figures/L1_data_treatment/GITS_VW2_data_flagging.png)
+ 
+## Adjusting data at GITS
+HS1 not in datafile
+HS2 not in datafile
 ## Adjusting data at GITS
 ### Adjusting HS1
 |start time|end time|operation|value|
@@ -166,6 +189,9 @@ Flagging data:
 # 5 Humboldt
 ## Manual flagging of data at Humboldt
 No erroneous data listed for Humboldt
+## Adjusting data at Humboldt
+HS1 not in datafile
+HS2 not in datafile
 ## Adjusting data at Humboldt
 ### Adjusting HS1
 |start time|end time|operation|value|
@@ -198,6 +224,16 @@ Warning: IceTemperature6 not found
 Warning: IceTemperature7 not found
 Warning: IceTemperature8 not found
 Warning: IceTemperature9 not found
+## Adjusting data at Summit
+HS1 not in datafile
+HS2 not in datafile
+### Adjusting P
+|start time|end time|operation|value|
+|-|-|-|-|
+|2016-05-22T00:00:00+00:00|nan|add|-50.0|
+ 
+![Adjusted data at Summit](figures/L1_data_treatment/Summit_adj_P.jpeg)
+ 
 ## Adjusting data at Summit
 ### Adjusting HS1
 |start time|end time|operation|value|
@@ -254,6 +290,9 @@ Flagging data:
 ## Adjusting data at Tunu-N
 SnowHeight(m) not in datafile
 SurfaceHeight(m) not in datafile
+## Adjusting data at Tunu-N
+SnowHeight(m) not in datafile
+SurfaceHeight(m) not in datafile
 # 8 DYE2
 ## Manual flagging of data at DYE2
 Flagging data:
@@ -307,14 +346,14 @@ Warning: ShortwaveRadiationUpWm2 not found
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS1|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS1|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS1|
  
 ![Erroneous data at DYE2](figures/L1_data_treatment/DYE2_TS1_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS10|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS10|
 |2000-05-01 00:00:00+00:00|2001-04-17 00:00:00+00:00|TS10|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS10|
  
@@ -322,28 +361,28 @@ Warning: ShortwaveRadiationUpWm2 not found
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS2|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS2|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS2|
  
 ![Erroneous data at DYE2](figures/L1_data_treatment/DYE2_TS2_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS3|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS3|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS3|
  
 ![Erroneous data at DYE2](figures/L1_data_treatment/DYE2_TS3_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS4|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS4|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS4|
  
 ![Erroneous data at DYE2](figures/L1_data_treatment/DYE2_TS4_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS5|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS5|
 |2001-03-10 00:00:00+00:00|2001-04-20 00:00:00+00:00|TS5|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS5|
  
@@ -351,28 +390,28 @@ Warning: ShortwaveRadiationUpWm2 not found
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS6|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS6|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS6|
  
 ![Erroneous data at DYE2](figures/L1_data_treatment/DYE2_TS6_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS7|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS7|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS7|
  
 ![Erroneous data at DYE2](figures/L1_data_treatment/DYE2_TS7_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS8|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS8|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS8|
  
 ![Erroneous data at DYE2](figures/L1_data_treatment/DYE2_TS8_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS9|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|TS9|
 |1999-12-01 00:00:00+00:00|1999-12-10 00:00:00+00:00|TS9|
 |2000-05-01 00:00:00+00:00|2001-04-17 00:00:00+00:00|TS9|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS9|
@@ -386,6 +425,27 @@ Warning: ShortwaveRadiationUpWm2 not found
 ![Erroneous data at DYE2](figures/L1_data_treatment/DYE2_VW2_data_flagging.png)
  
 ## Adjusting data at DYE2
+HS1 not in datafile
+HS2 not in datafile
+### Adjusting HW1
+|start time|end time|operation|value|
+|-|-|-|-|
+|1998-04-28T00:00:00+00:00|2000-05-12T00:00:00+00:00|add|0.5|
+|2009-05-12T00:00:00+00:00|2010-05-12T00:00:00+00:00|upper_range_filter|0.2|
+|2010-09-20T00:00:00+00:00|2020-09-20T00:00:00+00:00|upper_range_filter|0.4|
+ 
+![Adjusted data at DYE2](figures/L1_data_treatment/DYE2_adj_HW1.jpeg)
+ 
+### Adjusting HW2
+|start time|end time|operation|value|
+|-|-|-|-|
+|1996-05-15T00:00:00+00:00|1998-04-28T00:00:00+00:00|add|0.5|
+|2009-06-01T00:00:00+00:00|2010-05-12T00:00:00+00:00|upper_range_filter|0.4|
+|2010-01-01T00:00:00+00:00|2020-09-20T00:00:00+00:00|upper_range_filter|0.4|
+ 
+![Adjusted data at DYE2](figures/L1_data_treatment/DYE2_adj_HW2.jpeg)
+ 
+## Adjusting data at DYE2
 ### Adjusting HS1
 |start time|end time|operation|value|
 |-|-|-|-|
@@ -394,6 +454,7 @@ Warning: ShortwaveRadiationUpWm2 not found
 |2001-06-15T13:00:00+00:00|nan|add|1.7|
 |2003-05-09T00:00:00+00:00|nan|add|2.0|
 |2006-05-10T00:00:00+00:00|nan|add|2.2|
+|2010-04-28T00:00:00+00:00|nan|add|2.6|
  
 ![Adjusted data at DYE2](figures/L1_data_treatment/DYE2_adj_HS1.jpeg)
  
@@ -401,7 +462,7 @@ Warning: ShortwaveRadiationUpWm2 not found
 |start time|end time|operation|value|
 |-|-|-|-|
 |1998-04-20T00:00:00+00:00|nan|add|2.0|
-|2000-04-30T13:00:00+00:00|nan|add|3.59|
+|2000-05-12T13:00:00+00:00|nan|add|2.2|
 |2004-06-01T00:00:00+00:00|nan|add|0.75|
 |2006-05-07T00:00:00+00:00|nan|add|2.5|
 |2014-05-25T16:00:00+00:00|nan|add|6.0|
@@ -409,14 +470,55 @@ Warning: ShortwaveRadiationUpWm2 not found
  
 ![Adjusted data at DYE2](figures/L1_data_treatment/DYE2_adj_HS2.jpeg)
  
+### Adjusting HW1
+|start time|end time|operation|value|
+|-|-|-|-|
+|1998-04-28T00:00:00+00:00|2000-05-12T00:00:00+00:00|add|0.5|
+|2009-05-12T00:00:00+00:00|2010-05-12T00:00:00+00:00|upper_range_filter|0.2|
+|2010-09-20T00:00:00+00:00|2020-09-20T00:00:00+00:00|upper_range_filter|0.4|
+ 
+![Adjusted data at DYE2](figures/L1_data_treatment/DYE2_adj_HW1.jpeg)
+ 
+### Adjusting HW2
+|start time|end time|operation|value|
+|-|-|-|-|
+|1996-05-15T00:00:00+00:00|1998-04-28T00:00:00+00:00|add|0.5|
+|2009-06-01T00:00:00+00:00|2010-05-12T00:00:00+00:00|upper_range_filter|0.4|
+|2010-01-01T00:00:00+00:00|2020-09-20T00:00:00+00:00|upper_range_filter|0.4|
+ 
+![Adjusted data at DYE2](figures/L1_data_treatment/DYE2_adj_HW2.jpeg)
+ 
 # 9 JAR1
 ## Manual flagging of data at JAR1
 No erroneous data listed for JAR1
 ## Adjusting data at JAR1
 SnowHeight(m) not in datafile
+## Adjusting data at JAR1
+SnowHeight(m) not in datafile
 # 10 Saddle
 ## Manual flagging of data at Saddle
-No erroneous data listed for Saddle
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|RH2|
+ 
+![Erroneous data at Saddle](figures/L1_data_treatment/Saddle_RH2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2009-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|VW1|
+ 
+![Erroneous data at Saddle](figures/L1_data_treatment/Saddle_VW1_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2009-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|VW2|
+ 
+![Erroneous data at Saddle](figures/L1_data_treatment/Saddle_VW2_data_flagging.png)
+ 
+## Adjusting data at Saddle
+SnowHeight(m) not in datafile
+SurfaceHeight(m) not in datafile
 ## Adjusting data at Saddle
 SnowHeight(m) not in datafile
 SurfaceHeight(m) not in datafile
@@ -425,15 +527,26 @@ SurfaceHeight(m) not in datafile
 No erroneous data listed for South Dome
 ## Adjusting data at South Dome
 No data to fix at South Dome
+## Adjusting data at South Dome
+No data to fix at South Dome
 # 12 NASA-E
 ## Manual flagging of data at NASA-E
 Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2012-02-01 00:00:00+00:00|2013-06-01 00:00:00+00:00|RH1|
+ 
+![Erroneous data at NASA-E](figures/L1_data_treatment/NASA-E_RH1_data_flagging.png)
+ 
 |start time|end time|variable|
 |-|-|-|
 |2012-02-01 00:00:00+00:00|2013-06-01 00:00:00+00:00|TA3|
  
 ![Erroneous data at NASA-E](figures/L1_data_treatment/NASA-E_TA3_data_flagging.png)
  
+## Adjusting data at NASA-E
+SnowHeight(m) not in datafile
+SurfaceHeight(m) not in datafile
 ## Adjusting data at NASA-E
 SnowHeight(m) not in datafile
 SurfaceHeight(m) not in datafile
@@ -447,6 +560,9 @@ No erroneous data listed for NASA-SE
 ## Adjusting data at NASA-SE
 SnowHeight(m) not in datafile
 SurfaceHeight(m) not in datafile
+## Adjusting data at NASA-SE
+SnowHeight(m) not in datafile
+SurfaceHeight(m) not in datafile
 # 16 KAR
 Warning: No file for station 16 KAR
 # 17 JAR 2
@@ -455,27 +571,102 @@ Warning: No file for station 17 JAR 2
 Warning: No file for station 18 KULU
 # 22 Petermann ELA
 ## Manual flagging of data at Petermann ELA
-No erroneous data listed for Petermann ELA
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2003-01-01 00:00:00+00:00|2011-05-23 00:00:00+00:00|RH1|
+ 
+![Erroneous data at Petermann ELA](figures/L1_data_treatment/Petermann_ELA_RH1_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2003-01-01 00:00:00+00:00|2011-05-01 00:00:00+00:00|RH2|
+ 
+![Erroneous data at Petermann ELA](figures/L1_data_treatment/Petermann_ELA_RH2_data_flagging.png)
+ 
 ## Adjusting data at Petermann ELA
-No data to fix at Petermann ELA
+### Adjusting TA2
+|start time|end time|operation|value|
+|-|-|-|-|
+|2003-05-23T07:00:00+00:00|nan|max_filter|11|
+ 
+![Adjusted data at Petermann ELA](figures/L1_data_treatment/Petermann_ELA_adj_TA2.jpeg)
+ 
+### Adjusting TA3
+|start time|end time|operation|value|
+|-|-|-|-|
+|2003-05-23T07:00:00+00:00|nan|max_filter|11|
+ 
+![Adjusted data at Petermann ELA](figures/L1_data_treatment/Petermann_ELA_adj_TA3.jpeg)
+ 
+### Adjusting TA4
+|start time|end time|operation|value|
+|-|-|-|-|
+|2003-05-23T07:00:00+00:00|nan|max_filter|11|
+ 
+![Adjusted data at Petermann ELA](figures/L1_data_treatment/Petermann_ELA_adj_TA4.jpeg)
+ 
+## Adjusting data at Petermann ELA
+### Adjusting TA2
+|start time|end time|operation|value|
+|-|-|-|-|
+|2003-05-23T07:00:00+00:00|nan|max_filter|11|
+ 
+![Adjusted data at Petermann ELA](figures/L1_data_treatment/Petermann_ELA_adj_TA2.jpeg)
+ 
+### Adjusting TA3
+|start time|end time|operation|value|
+|-|-|-|-|
+|2003-05-23T07:00:00+00:00|nan|max_filter|11|
+ 
+![Adjusted data at Petermann ELA](figures/L1_data_treatment/Petermann_ELA_adj_TA3.jpeg)
+ 
+### Adjusting TA4
+|start time|end time|operation|value|
+|-|-|-|-|
+|2003-05-23T07:00:00+00:00|nan|max_filter|11|
+ 
+![Adjusted data at Petermann ELA](figures/L1_data_treatment/Petermann_ELA_adj_TA4.jpeg)
+ 
 # 23 NEEM
 ## Manual flagging of data at NEEM
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
-|2014-10-01 00:00:00+00:00|2014-11-25 00:00:00+00:00|TA4|
+|2009-01-01 00:00:00+00:00|2017-01-01 00:00:00+00:00|P|
+ 
+![Erroneous data at NEEM](figures/L1_data_treatment/NEEM_P_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2017-02-01 00:00:00+00:00|2018-05-01 00:00:00+00:00|RH2|
+ 
+![Erroneous data at NEEM](figures/L1_data_treatment/NEEM_RH2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2017-02-01 00:00:00+00:00|2018-05-01 00:00:00+00:00|TA4|
  
 ![Erroneous data at NEEM](figures/L1_data_treatment/NEEM_TA4_data_flagging.png)
  
+## Adjusting data at NEEM
 ## Adjusting data at NEEM
 # 24 E-GRIP
 ## Manual flagging of data at E-GRIP
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
-|2016-07-01 00:00:00+00:00|2018-10-01 00:00:00+00:00|ISWR|
+|2016-01-01 00:00:00+00:00|2019-10-01 00:00:00+00:00|ISWR|
  
 ![Erroneous data at E-GRIP](figures/L1_data_treatment/E-GRIP_ISWR_data_flagging.png)
  
+|start time|end time|variable|
+|-|-|-|
+|2016-01-01 00:00:00+00:00|2019-10-01 00:00:00+00:00|OSWR|
+ 
+![Erroneous data at E-GRIP](figures/L1_data_treatment/E-GRIP_OSWR_data_flagging.png)
+ 
+## Adjusting data at E-GRIP
+No data to fix at E-GRIP
 ## Adjusting data at E-GRIP
 No data to fix at E-GRIP

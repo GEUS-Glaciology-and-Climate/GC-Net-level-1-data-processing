@@ -247,7 +247,7 @@ def adjust_data(df, site, var_list = []):
         print('### Adjusting '+var)
         print('|start time|end time|operation|value|')
         print('|-|-|-|-|')
-        # import pdb; pdb.set_trace()        
+
         for t0, t1, func, val in zip(adj_info.loc[var].t0,
                                      adj_info.loc[var].t1,
                                      adj_info.loc[var].adjust_function,

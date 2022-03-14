@@ -21,13 +21,15 @@ try:
 except:
     print('figures and output folders already exist')
 
-# sys.stdout = open("out/Report.md", "w")
+sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # print(site_list)
-site_list = site_list.iloc[8:9,:]
+# site_list = site_list.iloc[8:9,:] # DYE-2
+
 for site, ID in zip(site_list.Name,site_list.ID):
+#%%
     print('# '+str(ID)+ ' ' + site)
     filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
@@ -66,7 +68,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df_v4.loc[df_v4['HW2_qc']=="CHECKME", 'HS2'] = np.nan
     
     print('## Adjusting data at '+site)
-    df_v5 = ptb.adjust_data(df_v4, site, ['HS1','HS2'])
+    df_v5 = ptb.adjust_data(df_v4, site)
     
     if len(df_v4)>0:
         # get info related to the new fields

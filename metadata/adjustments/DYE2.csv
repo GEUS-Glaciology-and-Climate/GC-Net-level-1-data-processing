@@ -1,5 +1,6 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 1996-05-15T00:00:00+00:00,1998-04-28T00:00:00+00:00,HW2,add,0.5,Mismatch between Windsensor height in datafile and reported in maintenance report. Adjusted to match maintenance report. https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/16
+1998-04-28T00:00:00+00:00,2000-05-12T00:00:00+00:00,HW1,add,0.5,Mismatch between Windsensor height in datafile and reported in maintenance report. Adjusted to match maintenance report. https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/16
 
 1998-04-28T00:00:00+00:00,,HS1,add,1.0,Not reported. Manual shift suggested by bav.
 2000-05-12T00:00:00+00:00,,HS1,add,2.2,Not reported. Manual shift suggested by bav.
