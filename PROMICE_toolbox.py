@@ -191,7 +191,7 @@ def plot_flagged_data(df, site):
     for var in df.columns:
         if var[-3:]=='_qc':
             if len(np.unique(df[var].values))>1:
-                fig = plt.figure(figsize = (15,10))
+                fig = plt.figure(figsize=(7, 4))  
                 for flag in np.unique(df[var].values):
                     if flag == "OK":
                         df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='green', label=flag)
@@ -226,7 +226,7 @@ def remove_flagged_data(df):
             df = df.drop(columns=[var])
     return df
 
-def adjust_data(df, site, var_list = []):
+def adjust_data(df, site, var_list = [], skip_var = []):
     df_out = df.copy()
     if not os.path.isfile('metadata/adjustments/'+site+'.csv'):
         print('No data to fix at '+site)
@@ -237,6 +237,13 @@ def adjust_data(df, site, var_list = []):
     adj_info.set_index(['variable','t0'],drop=False,inplace=True)
 
     if len(var_list) == 0:
+        var_list = np.unique(adj_info.variable)
+    else:
+        adj_info = adj_info.loc[np.isin(adj_info.variable, var_list), :]
+        var_list = np.unique(adj_info.variable)
+
+    if len(skip_var) > 0:
+        adj_info = adj_info.loc[~np.isin(adj_info.variable, skip_var), :]
         var_list = np.unique(adj_info.variable)
 
     for var in var_list:       
@@ -294,7 +301,7 @@ def adjust_data(df, site, var_list = []):
                 df_out.loc[t0:t1,var][df_out.loc[t0:t1,var]>360] = df_out.loc[t0:t1,var]-360
 
         if df[var].notna().any():
-            fig = plt.figure(figsize=(10,5))
+            fig = plt.figure(figsize=(7, 4))  
             df[var].plot(style='o',label='before adjustment')
             df_out[var].plot(style='o',label='after adjustment')  
             [plt.axvline(t,linestyle='--',color = 'red') for t in adj_info.loc[var].t0.values]
@@ -711,7 +718,7 @@ def combine_hs_dpt(df, site):
     df.loc[ind_update,"SurfaceHeight_summary(m)"] = data_update[ind_update] 
     
     # plotting result
-    f1 = plt.figure(figsize=(10, 8))    
+    f1 = plt.figure(figsize=(7, 4))    
     df["DepthPressureTransducer_Cor_adj(m)"].plot(label = 'Pressure transducer')
     df["SurfaceHeight1_adj(m)"].plot(label = 'SonicRanger1')
     df["SurfaceHeight2_adj(m)"].plot(label = 'SonicRanger2')

@@ -27,6 +27,7 @@ path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # print(site_list)
 # site_list = site_list.iloc[8:9,:] # DYE-2
+# site_list = site_list.iloc[6:7,:] # Summit
 
 for site, ID in zip(site_list.Name,site_list.ID):
 #%%
@@ -55,7 +56,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df_out = ptb.remove_flagged_data(df_out)
     
     print('## Adjusting data at '+site)
-    df_v4 = ptb.adjust_data(df_out, site) #, ['HW1', 'HW2'])
+    # we start by adjusting and filtering the height of the wind sensors
+    df_v4 = ptb.adjust_data(df_out, site, ['HW1', 'HW2'])
     
     # Calculating surface height from wind sensor height
     df_v4['HS1'] = df_v4.HW1[df_v4.HW1.first_valid_index()] - df_v4.HW1
@@ -68,7 +70,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df_v4.loc[df_v4['HW2_qc']=="CHECKME", 'HS2'] = np.nan
     
     print('## Adjusting data at '+site)
-    df_v5 = ptb.adjust_data(df_v4, site)
+    # we then adjust and filter all other variables than height of the wind sensors
+    df_v5 = ptb.adjust_data(df_v4, site, skip_var = ['HW1', 'HW2'])
     
     if len(df_v4)>0:
         # get info related to the new fields
@@ -88,5 +91,5 @@ for site, ID in zip(site_list.Name,site_list.ID):
         nead.write(df_v4.fillna(-999).reset_index(), 'L1_ini/'+str(ID).zfill(2)+'-'+site+'_header.ini',
                    'L1/'+str(ID).zfill(2)+'-'+site+'.csv')
 
-#%run tocgen.py out/Report.md out/Report_toc.md
+#%run tocgen.py out/Report.md Report_toc.md
 # sys.stdout.close()
