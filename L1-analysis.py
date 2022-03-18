@@ -24,12 +24,12 @@ years = mdates.YearLocator()   # every year
 months = mdates.MonthLocator()  # every month
 years_fmt = mdates.DateFormatter('%Y')
 
-# %% per station data overview
-#path_to_L0N = 'L0N/'
+# %% L0 overview
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)#.iloc[:1]
 
 for site, ID in zip(site_list.Name,site_list.ID):
+    plt.close('all')
     print('# '+str(ID)+ ' ' + site)
     filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
@@ -43,7 +43,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
 
     # % plotting variables
     def new_fig():
-        fig, ax = plt.subplots(6,1,sharex=True, figsize=(18,15))
+        fig, ax = plt.subplots(6,1,sharex=True, figsize=(15,15))
         plt.subplots_adjust(left = 0.1, right=0.9, top = 0.9, bottom = 0.1, wspace=0.2, hspace=0.05)
         return fig, ax
 
@@ -58,10 +58,10 @@ for site, ID in zip(site_list.Name,site_list.ID):
             continue
         if var[-5:]=='stdev':
             continue
-        print(var)
+        # print(var)
 
         if var+'_qc' in df.columns:
-            # import pdb; pdb.set_trace()
+            print(var)
 
             for qc_code in np.flip(np.unique(df[var+'_qc'])):
                 df.loc[df[var+'_qc']==qc_code,var].plot(ax=ax[count])
@@ -73,27 +73,33 @@ for site, ID in zip(site_list.Name,site_list.ID):
         ax[count].axes.xaxis.set_major_formatter(years_fmt)
         ax[count].axes.xaxis.set_major_locator(years)
         ax[count].axes.xaxis.set_minor_locator(months)
+        ax[count].set_xlim((df.index[0],df.index[-1]))
         count=count+1
         if count == 6:
             ax[0].set_title(site)
-            plt.savefig('figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig))
+            plt.savefig('figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
+            print('![](figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
             count_fig = count_fig+1
             fig, ax = new_fig()
             count = 0
     if count < 6:
+        ax[count].xaxis.set_tick_params(which='both', labelbottom=True)
+        ax[count].axes.xaxis.set_major_formatter(years_fmt)
+        ax[count].axes.xaxis.set_major_locator(years)
+        ax[count].axes.xaxis.set_minor_locator(months)
+        for k in range(count+1,len(ax)):
+            ax[k].set_axis_off()
         ax[0].set_title(site)
-        plt.savefig('figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig))
+        plt.savefig('figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
+        print('![](figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
 
+# %% L1 overview
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)#.iloc[:1]
 
-#%% Surface height study
-path_to_L0N = 'L1/'
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
-fig, ax = plt.subplots(5,4)
-plt.subplots_adjust(left = 0.1, right=0.9, top = 0.9, bottom = -0.1, wspace=0.2, hspace=0.5)
-count = 0
 for site, ID in zip(site_list.Name,site_list.ID):
+    plt.close('all')
     print('# '+str(ID)+ ' ' + site)
-    filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
         print('Warning: No file for station '+str(ID)+' '+site)
         continue
@@ -101,16 +107,87 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df = ds.to_dataframe()
     df=df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+
+    # % plotting variables
+    def new_fig():
+        fig, ax = plt.subplots(6,1,sharex=True, figsize=(15,15))
+        plt.subplots_adjust(left = 0.1, right=0.9, top = 0.95, bottom = 0.1, wspace=0.2, hspace=0.05)
+        plt.suptitle(site)
+        return fig, ax
+
+
+    fig, ax = new_fig()
+    count = 0
+    count_fig = 0
+    for i, var in enumerate(df.columns):
+        if var[-2:]=='qc':
+            continue
+        if var[-3:]=='max':
+            continue
+        # if var[-5:]=='stdev':
+        #     continue
+        # print(var)
+
+        
+        df[var].plot(ax=ax[count])
+        ax[count].set_ylabel(var)
+        ax[count].grid()
+        ax[count].axes.xaxis.set_major_formatter(years_fmt)
+        # ax[count].axes.xaxis.set_major_locator(years)
+        # ax[count].axes.xaxis.set_minor_locator(months)
+        ax[count].set_xlim((df.index[0],df.index[-1]))
+        count=count+1
+        if count == 6:
+            ax[0].set_title(site)
+            plt.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
+            print('![](figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
+            count_fig = count_fig+1
+            fig, ax = new_fig()
+            count = 0
+    if count < 6:
+        ax[count].xaxis.set_tick_params(which='both', labelbottom=True)
+        ax[count].axes.xaxis.set_major_formatter(years_fmt)
+        # ax[count].axes.xaxis.set_major_locator(years)
+        for k in range(count+1,len(ax)):
+            ax[k].set_axis_off()
+        ax[0].set_title(site)
+        plt.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
+        print('![](figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
+
+
+
+#%% Surface height study
+
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
+
+fig, ax = plt.subplots(4,5,figsize=(25,25))
+ax = ax.flatten()
+plt.subplots_adjust(left = 0.05, right=0.9, top = 0.94, bottom = 0.1, wspace=0.15, hspace=0.25)
+count = 0
+for site, ID in zip(site_list.Name,site_list.ID):
+    print('# '+str(ID)+ ' ' + site)
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
+    if not path.exists(filename):
+        print('Warning: No file '+filename)
+        continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
     df = df.set_index('timestamp').replace(-999,np.nan).resample('D').mean().rolling(7).mean()
     # plotting height
-    i, j = np.unravel_index(count,np.shape(ax))
-    df.HW1.plot(ax=ax[i,j])
-    df.HW2.plot(ax=ax[i,j])
-    ax[i,j].set_title(str(ID)+ ' ' + site)
-    ax[i,j].set_xlabel('')
-    ax[i,j].grid()
+    df.HS1.plot(ax=ax[count])
+    df.HS2.plot(ax=ax[count])
+    ax[count].set_title(str(ID)+ ' ' + site)
+    ax[count].set_xlabel('')
+    ax[count].grid()
     # ax[i,j].axes.xaxis.set_major_locator(locator)
     count = count+1
+for k in range(count,len(ax)):
+    ax[k].set_axis_off()
+
+fig.savefig('figures/L1_overview/HS_overview.png',bbox_inches='tight')
 
 #%%
 import xarray as xr

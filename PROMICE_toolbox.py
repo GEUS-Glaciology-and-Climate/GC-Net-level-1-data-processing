@@ -166,7 +166,7 @@ def flag_data(df, site, var_list = ['all']):
             df_out.loc[t0:t1, var+'_qc'] = flag
 
         print(' ')
-        print('![Erroneous data at '+ site+'](figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var+'_data_flagging.png)')
+        print('![Erroneous data at '+ site+'](../figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var+'_data_flagging.png)')
         print(' ')
 
     return df_out
@@ -312,7 +312,7 @@ def adjust_data(df, site, var_list = [], skip_var = []):
             plt.title(site)
             fig.savefig('figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg',dpi=120, bbox_inches='tight')
             print(' ')
-            print('![Adjusted data at '+ site +'](figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg)')
+            print('![Adjusted data at '+ site +'](../figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg)')
             print(' ')
 
     return df_out
@@ -734,7 +734,7 @@ def combine_hs_dpt(df, site):
         plt.axvspan(df.index[ind_start[i]],df.index[ind_end[i]], color='orange', alpha=0.1)
     f1.savefig('figures/L1_data_treatment/'+site+'_surface_height.png',dpi=90, bbox_inches='tight')
     print(' ')
-    print('![Surface height adjustement at '+ site+'](figures/L1_data_treatment/'+site+'_surface_height.png)')
+    print('![Surface height adjustement at '+ site+'](../figures/L1_data_treatment/'+site+'_surface_height.png)')
     print(' ')
             
     return df
