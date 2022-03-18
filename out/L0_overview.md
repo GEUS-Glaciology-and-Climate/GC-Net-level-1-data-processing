@@ -1,6 +1,6 @@
 # 0 Swiss Camp 10m
-![](figures/L0_diagnostic/0_Swiss Camp 10m_0.png)
-![](figures/L0_diagnostic/0_Swiss Camp 10m_1.png)
+![](../figures/L0_diagnostic/0_Swiss Camp 10m_0.png)
+![](../figures/L0_diagnostic/0_Swiss Camp 10m_1.png)
 ![](figures/L0_diagnostic/0_Swiss Camp 10m_2.png)
 # 1 Swiss Camp
 ![](figures/L0_diagnostic/1_Swiss Camp_0.png)
