@@ -19,16 +19,16 @@ from datetime import datetime
 import os
 
 # -------------------------------- chdir
-if os.getlogin() == 'jason':
-    base_path = '/Users/jason/Dropbox/AWS/GC-Net-level-1-data-processing/'
-    z_path='/Users/jason/Dropbox/GCNet_photogrammetry/output/'
+# if os.getlogin() == 'jason':
+#     base_path = '/Users/jason/Dropbox/AWS/GC-Net-level-1-data-processing/'
+#     z_path='/Users/jason/Dropbox/GCNet_photogrammetry/output/'
 
-os.chdir(base_path)
+# os.chdir(base_path)
 
 
-site='06-Summit'
+# site='06-Summit'
 site='08-DYE2' ; site_name2="DYE-2"
-site='02-Crawford Point 1' ; site_name2="CP1"
+# site='02-Crawford Point 1' ; site_name2="CP1"
 
 ds = nead.read("./L1/"+site+".csv", index_col=0)
 print(ds)
@@ -54,7 +54,7 @@ df['day'] = df['date'].dt.day
 df['hour'] = df['date'].dt.hour
 df["time"]=pd.to_datetime(df[['year', 'month', 'day', 'hour']])
 
-df = df.loc[df['time']<'2000-01-01',:] 
+# df = df.loc[df['time']<'2000-01-01',:] 
 
 #%% diagnostic
 
@@ -72,6 +72,7 @@ plt.plot(df['HS2'],c='C1',label='HS2')
 # z_df=pd.read_csv(files[0])
 # for i,file in enumerate(files[1:]):
 #     print(i,file)
+
 #     z_df = pd.concat([z_df,pd.read_csv(files[i])])
 
 # z_df["time"]=pd.to_datetime(z_df[['year', 'month', 'day']])
