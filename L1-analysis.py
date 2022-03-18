@@ -161,9 +161,9 @@ for site, ID in zip(site_list.Name,site_list.ID):
 
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 
-fig, ax = plt.subplots(4,5,figsize=(25,25))
+fig, ax = plt.subplots(4,5,figsize=(15,15))
 ax = ax.flatten()
-plt.subplots_adjust(left = 0.05, right=0.9, top = 0.94, bottom = 0.1, wspace=0.15, hspace=0.25)
+plt.subplots_adjust(left = 0.05, right=0.99, top = 0.94, bottom = 0.1, wspace=0.15, hspace=0.25)
 count = 0
 for site, ID in zip(site_list.Name,site_list.ID):
     print('# '+str(ID)+ ' ' + site)

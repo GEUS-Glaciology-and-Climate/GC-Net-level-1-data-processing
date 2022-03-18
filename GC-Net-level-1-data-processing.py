@@ -26,9 +26,9 @@ except:
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # print(site_list)
-site_list = site_list.iloc[8:9,:] # DYE-2
+# site_list = site_list.iloc[8:9,:] # DYE-2
 # site_list = site_list.iloc[6:7,:] # Summit
-# site_list = site_list.iloc[10:11,:] 
+# site_list = site_list.iloc[7:8,:] 
 
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
