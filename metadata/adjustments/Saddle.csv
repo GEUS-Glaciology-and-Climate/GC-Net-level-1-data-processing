@@ -1,2 +1,20 @@
 t0,t1,variable,adjust_function,adjust_value,comment
+19980421T16:00:00+00:00,,HS1,add,0.5,manual shift by bav
+19990420T16:00:00+00:00,,HS1,add,1.5,manual shift by bav
+20010605T16:00:00+00:00,,HS1,add,2,manual shift by bav
+20020607T16:00:00+00:00,,HS1,add,0.5,manual shift by bav
+20040611T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
+20050530T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
+20070522T16:00:00+00:00,,HS1,add,-2.5,manual shift by bav
+20080428T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
+20130607T16:00:00+00:00,,HS1,add,4,manual shift by bav
+20170607T16:00:00+00:00,,HS1,add,1.5,manual shift by bav
+
+19980503T16:00:00+00:00,,HS2,add,-0.5,manual shift by bav
+19990416T11:00:00+00:00,,HS2,add,2.5,manual shift by bav
+20010523T16:00:00+00:00,,HS2,add,2,manual shift by bav
+20040614T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
+20050327T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
+201001607T16:00:00+00:00,,HS2,add,4,manual shift by bav
+20140521T16:00:00+00:00,,HS2,add,4,manual shift by bav
 

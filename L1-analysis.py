@@ -92,7 +92,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
         ax[0].set_title(site)
         plt.savefig('figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
         print('![](figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
-
+# %run tocgen.py out/L0_overview.md out/L0_overview_toc.md
 # %% L1 overview
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)#.iloc[:1]
 
@@ -155,7 +155,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
         plt.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
         print('![](figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
 
-
+# %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
 #%% Surface height study
 
