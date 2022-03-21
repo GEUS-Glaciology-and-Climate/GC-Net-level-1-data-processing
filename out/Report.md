@@ -421,7 +421,7 @@ Flagging data:
 ### Adjusting P
 |start time|end time|operation|value|
 |-|-|-|-|
-|2016-05-22T00:00:00+00:00|nan|add|-50.0|
+|2016-05-22T00:00:00+00:00|nan|add|-61.0|
  
 ![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_P.jpeg)
  
@@ -730,19 +730,98 @@ Flagging data:
  
 # 11 South Dome
 ## Manual flagging of data at South Dome
-No erroneous data listed for South Dome
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2000-10-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|P|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_P_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|1996-01-01 00:00:00+00:00|1999-06-01 00:00:00+00:00|RH2|
+|2010-05-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|RH2|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_RH2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|1996-01-01 00:00:00+00:00|1999-06-01 00:00:00+00:00|TA4|
+|2010-05-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|TA4|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TA4_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2008-06-05 00:00:00+00:00|2021-01-01 00:00:00+00:00|TS10|
+|1997-04-15 00:00:00+00:00|1997-06-05 00:00:00+00:00|TS10|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TS10_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2008-06-05 00:00:00+00:00|2021-01-01 00:00:00+00:00|TS2|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TS2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2008-06-05 00:00:00+00:00|2021-01-01 00:00:00+00:00|TS3|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TS3_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2008-06-05 00:00:00+00:00|2021-01-01 00:00:00+00:00|TS4|
+|2007-06-28 00:00:00+00:00|2007-07-05 00:00:00+00:00|TS4|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TS4_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2008-06-05 00:00:00+00:00|2021-01-01 00:00:00+00:00|TS5|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TS5_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2008-06-05 00:00:00+00:00|2021-01-01 00:00:00+00:00|TS6|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TS6_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2008-06-05 00:00:00+00:00|2021-01-01 00:00:00+00:00|TS7|
+|1997-04-15 00:00:00+00:00|1997-06-05 00:00:00+00:00|TS7|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TS7_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2008-06-05 00:00:00+00:00|2021-01-01 00:00:00+00:00|TS8|
+|1997-04-15 00:00:00+00:00|1997-06-05 00:00:00+00:00|TS8|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TS8_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2008-06-05 00:00:00+00:00|2021-01-01 00:00:00+00:00|TS9|
+|1997-04-15 00:00:00+00:00|1997-06-05 00:00:00+00:00|TS9|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TS9_data_flagging.png)
+ 
 ## Adjusting data at South Dome
 ### Adjusting HW1
 |start time|end time|operation|value|
 |-|-|-|-|
-|1995-05-26T20:00:00+00:00|nan|min_filter|-1.0|
+|1995-05-26T20:00:00+00:00|nan|max_filter|20.0|
  
 ![Adjusted data at South Dome](../figures/L1_data_treatment/South_Dome_adj_HW1.jpeg)
  
 ### Adjusting HW2
 |start time|end time|operation|value|
 |-|-|-|-|
-|1995-05-26T20:00:00+00:00|nan|min_filter|-1.0|
+|1995-05-26T20:00:00+00:00|nan|max_filter|20.0|
  
 ![Adjusted data at South Dome](../figures/L1_data_treatment/South_Dome_adj_HW2.jpeg)
  
@@ -750,21 +829,30 @@ No erroneous data listed for South Dome
 ### Adjusting HS1
 |start time|end time|operation|value|
 |-|-|-|-|
-|2005-05-26T20:00:00+00:00|nan|add|-12.25|
-|2007-07-14T01:00:00+00:00|nan|add|-3.4|
+|1998-04-06T00:00:00+00:00|nan|add|2.5|
+|1999-04-29T00:00:00+00:00|nan|add|2.0|
+|2001-02-03T00:00:00+00:00|nan|add|4.0|
+|2005-05-26T20:00:00+00:00|nan|add|12.25|
+|2006-07-18T01:00:00+00:00|nan|add|2.5|
+|2007-04-23T01:00:00+00:00|nan|add|3.4|
 |2009-05-16T18:00:00+00:00|nan|add|0.4|
-|2014-05-25T20:00:00+00:00|nan|add|-9.9|
-|2017-05-23T00:00:00+00:00|nan|add|-2.3|
+|2014-05-25T20:00:00+00:00|nan|add|9.9|
+|2017-05-23T00:00:00+00:00|nan|add|2.3|
  
 ![Adjusted data at South Dome](../figures/L1_data_treatment/South_Dome_adj_HS1.jpeg)
  
 ### Adjusting HS2
 |start time|end time|operation|value|
 |-|-|-|-|
-|2005-05-26T20:00:00+00:00|nan|add|-12.25|
-|2007-07-14T01:00:00+00:00|nan|add|-3.4|
+|1998-04-06T00:00:00+00:00|nan|add|2.5|
+|1999-04-29T00:00:00+00:00|nan|add|2.0|
+|2005-05-26T20:00:00+00:00|nan|add|12.25|
+|2007-04-23T01:00:00+00:00|nan|add|3.4|
 |2009-05-16T18:00:00+00:00|nan|add|0.4|
-|2017-05-23T00:00:00+00:00|nan|add|-2.3|
+|2011-03-25T18:00:00+00:00|nan|add|3.0|
+|2013-04-22T18:00:00+00:00|nan|add|3.0|
+|2015-04-29T18:00:00+00:00|nan|add|3.0|
+|2017-05-23T00:00:00+00:00|nan|add|2.3|
  
 ![Adjusted data at South Dome](../figures/L1_data_treatment/South_Dome_adj_HS2.jpeg)
  
@@ -912,7 +1000,7 @@ Flagging data:
 |-|-|-|-|
 |20080706T00:00:00+00:00|nan|add|2.0|
 |20090706T00:00:00+00:00|nan|add|0.5|
-|20110706T00:00:00+00:00|nan|add|2.0|
+|20110706T00:00:00+00:00|nan|add|3.0|
 |20160406T00:00:00+00:00|nan|add|2.0|
  
 ![Adjusted data at NEEM](../figures/L1_data_treatment/NEEM_adj_HS1.jpeg)
@@ -958,3 +1046,30 @@ Flagging data:
  
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
  
+# 0 Swiss Camp 10m
+# 1 Swiss Camp
+# 2 Crawford Point 1
+# 3 NASA-U
+# 4 GITS
+# 5 Humboldt
+# 6 Summit
+# 7 Tunu-N
+# 8 DYE2
+# 9 JAR1
+# 10 Saddle
+# 11 South Dome
+# 12 NASA-E
+# 13 CP2
+Warning: No file L1/13-CP2.csv
+# 14 NGRIP
+Warning: No file L1/14-NGRIP.csv
+# 15 NASA-SE
+# 16 KAR
+Warning: No file L1/16-KAR.csv
+# 17 JAR 2
+Warning: No file L1/17-JAR 2.csv
+# 18 KULU
+Warning: No file L1/18-KULU.csv
+# 22 Petermann ELA
+# 23 NEEM
+# 24 E-GRIP
