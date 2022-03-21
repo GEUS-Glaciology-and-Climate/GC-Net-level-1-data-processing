@@ -11,7 +11,7 @@ https://github.com/GEUS-Glaciology-and-Climate/pyNEAD
 
 import nead
 import matplotlib.pyplot as plt
-import seaborn as sns; sns.set()
+# import seaborn as sns; sns.set()
 import numpy as np
 import pandas as pd
 # import math
@@ -28,7 +28,7 @@ os.chdir(base_path)
 
 site='06-Summit'
 site='08-DYE2' ; site_name2="DYE-2"
-site='02-Crawford Point 1' ; site_name2="CP1"
+# site='02-Crawford Point 1' ; site_name2="CP1"
 
 ds = nead.read("./L1/"+site+".csv", index_col=0)
 print(ds)
@@ -58,30 +58,35 @@ df = df.loc[df['time']<'2000-01-01',:]
 
 #%% diagnostic
 
+plt.title(site+' profile instrument heights')
 plt.plot(df['HW1'],c='C0',label='HW1')
 plt.plot(df['HW2'],c='C1',label='HW2')
+plt.legend()
 
+#%% diagnostic
+plt.title(site+' snow heights')
 plt.plot(df['HS1'],c='C0',label='HS1')
 plt.plot(df['HS2'],c='C1',label='HS2')
+plt.legend()
 
-# #%% read instrument height data
-# from glob import glob
+#%% read instrument height data
+from glob import glob
 
-# files = sorted(glob(z_path+"*.csv"), reverse=False)
+files = sorted(glob(z_path+"*.csv"), reverse=False)
 
-# z_df=pd.read_csv(files[0])
-# for i,file in enumerate(files[1:]):
-#     print(i,file)
-#     z_df = pd.concat([z_df,pd.read_csv(files[i])])
+z_df=pd.read_csv(files[0])
+for i,file in enumerate(files[1:]):
+    print(i,file)
+    z_df = pd.concat([z_df,pd.read_csv(files[i])])
 
-# z_df["time"]=pd.to_datetime(z_df[['year', 'month', 'day']])
-# z_df.index = pd.to_datetime(z_df.time)
+z_df["time"]=pd.to_datetime(z_df[['year', 'month', 'day']])
+z_df.index = pd.to_datetime(z_df.time)
 
-# t0=datetime(1996,5,25,23); t1=datetime(1999,12,31,1)
+t0=datetime(1996,5,25,23); t1=datetime(1999,12,31,1)
 
-# # df_nead['date']=df_nead.index.strftime("%Y-%m-%d")
+# df_nead['date']=df_nead.index.strftime("%Y-%m-%d")
 
-# # df_nead = df_nead.loc[df_nead['time']<'1997-01-01',:] 
+# df_nead = df_nead.loc[df_nead['time']<'1997-01-01',:] 
 
 
 #%% read observed instrument height data
