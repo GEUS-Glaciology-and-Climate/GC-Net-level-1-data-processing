@@ -1,4 +1,7 @@
-t0,t1,variable,adjustement_function,adjustement_value,comment
+t0,t1,variable,adjust_function,adjust_value,comment
+1995-05-26T20:00:00+00:00,,HW1,min_filter,-1,
+1995-05-26T20:00:00+00:00,,HW2,min_filter,-1,
+
 2005-05-26T20:00:00+00:00,,HS1,add,-12.25,Reported visit. SR1 height before/after (m): 0.0/-12.25
 2007-07-14T01:00:00+00:00,,HS1,add,-3.4,Not reported. Manual shift suggested by bav.
 2009-05-16T18:00:00+00:00,,HS1,add,0.4,Not reported. Manual shift suggested by bav.
