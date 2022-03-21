@@ -1,6 +1,11 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-2003-06-02T19:30:00+00:00,,SnowHeight(m),add,0.52,Reported visit. SR1 height before/after (m): 1.53/2.05
-2004-10-16T17:00:00+00:00,,SnowHeight(m),add,-3.5,Not reported. Manual shift suggested by bav.
-2015-05-29T00:00:00+00:00,,SnowHeight(m),add,-0.5,Not reported. Manual shift suggested by bav.
-2004-10-16T17:00:00+00:00,,SurfaceHeight(m),add,-3.0,Not reported. Manual shift suggested by bav.
-2015-05-29T00:00:00+00:00,,SurfaceHeight(m),add,-1.0,Not reported. Manual shift suggested by bav.
+20010607T16:00:00+00:00,,HS1,add,2,manual shift by bav
+20080426T16:00:00+00:00,,HS1,add,3,manual shift by bav
+
+20010607T16:00:00+00:00,,HS2,add,2.2,manual shift by bav
+20040513T16:00:00+00:00,,HS2,add,1,manual shift by bav
+20070405T16:00:00+00:00,,HS2,add,-0.5,manual shift by bav
+20080501T00:00:00+00:00,,HS2,add,3.2,manual shift by bav
+20130213T16:00:00+00:00,,HS2,add,-1.5,manual shift by bav
+20150525T16:00:00+00:00,,HS2,add,1,manual shift by bav
+

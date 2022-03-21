@@ -1,0 +1,126 @@
+* [0 Swiss Camp 10m](#s1)
+* [1 Swiss Camp](#s2)
+* [2 Crawford Point 1](#s3)
+* [3 NASA-U](#s4)
+* [4 GITS](#s5)
+* [5 Humboldt](#s6)
+* [6 Summit](#s7)
+* [7 Tunu-N](#s8)
+* [8 DYE2](#s9)
+* [9 JAR1](#s10)
+* [10 Saddle](#s11)
+* [11 South Dome](#s12)
+* [12 NASA-E](#s13)
+* [13 CP2](#s14)
+* [14 NGRIP](#s15)
+* [15 NASA-SE](#s16)
+* [16 KAR](#s17)
+* [17 JAR 2](#s18)
+* [18 KULU](#s19)
+* [22 Petermann ELA](#s20)
+# <a id='s1' />0 Swiss Camp 10m
+![](../figures/L0_diagnostic/0_Swiss%20Camp%2010m_0.png)
+![](../figures/L0_diagnostic/0_Swiss%20Camp%2010m_1.png)
+![](../figures/L0_diagnostic/0_Swiss%20Camp%2010m_2.png)
+# <a id='s2' />1 Swiss Camp
+![](../figures/L0_diagnostic/1_Swiss%20Camp_0.png)
+![](../figures/L0_diagnostic/1_Swiss%20Camp_1.png)
+![](../figures/L0_diagnostic/1_Swiss%20Camp_2.png)
+![](../figures/L0_diagnostic/1_Swiss%20Camp_3.png)
+![](../figures/L0_diagnostic/1_Swiss%20Camp_4.png)
+![](../figures/L0_diagnostic/1_Swiss%20Camp_5.png)
+# <a id='s3' />2 Crawford Point 1
+![](../figures/L0_diagnostic/2_Crawford%20Point 1_0.png)
+![](../figures/L0_diagnostic/2_Crawford%20Point 1_1.png)
+![](../figures/L0_diagnostic/2_Crawford%20Point 1_2.png)
+![](../figures/L0_diagnostic/2_Crawford%20Point 1_3.png)
+![](../figures/L0_diagnostic/2_Crawford%20Point 1_4.png)
+![](../figures/L0_diagnostic/2_Crawford%20Point 1_5.png)
+# <a id='s4' />3 NASA-U
+![](../figures/L0_diagnostic/3_NASA-U_0.png)
+![](../figures/L0_diagnostic/3_NASA-U_1.png)
+![](../figures/L0_diagnostic/3_NASA-U_2.png)
+![](../figures/L0_diagnostic/3_NASA-U_3.png)
+![](../figures/L0_diagnostic/3_NASA-U_4.png)
+![](../figures/L0_diagnostic/3_NASA-U_5.png)
+# <a id='s5' />4 GITS
+![](../figures/L0_diagnostic/4_GITS_0.png)
+![](../figures/L0_diagnostic/4_GITS_1.png)
+![](../figures/L0_diagnostic/4_GITS_2.png)
+![](../figures/L0_diagnostic/4_GITS_3.png)
+![](../figures/L0_diagnostic/4_GITS_4.png)
+![](../figures/L0_diagnostic/4_GITS_5.png)
+# <a id='s6' />5 Humboldt
+![](../figures/L0_diagnostic/5_Humboldt_0.png)
+![](../figures/L0_diagnostic/5_Humboldt_1.png)
+![](../figures/L0_diagnostic/5_Humboldt_2.png)
+![](../figures/L0_diagnostic/5_Humboldt_3.png)
+# <a id='s7' />6 Summit
+![](../figures/L0_diagnostic/6_Summit_0.png)
+![](../figures/L0_diagnostic/6_Summit_1.png)
+![](../figures/L0_diagnostic/6_Summit_2.png)
+![](../figures/L0_diagnostic/6_Summit_3.png)
+![](../figures/L0_diagnostic/6_Summit_4.png)
+![](../figures/L0_diagnostic/6_Summit_5.png)
+# <a id='s8' />7 Tunu-N
+![](../figures/L0_diagnostic/7_Tunu-N_0.png)
+![](../figures/L0_diagnostic/7_Tunu-N_1.png)
+![](../figures/L0_diagnostic/7_Tunu-N_2.png)
+![](../figures/L0_diagnostic/7_Tunu-N_3.png)
+# <a id='s9' />8 DYE2
+![](../figures/L0_diagnostic/8_DYE2_0.png)
+![](../figures/L0_diagnostic/8_DYE2_1.png)
+![](../figures/L0_diagnostic/8_DYE2_2.png)
+![](../figures/L0_diagnostic/8_DYE2_3.png)
+![](../figures/L0_diagnostic/8_DYE2_4.png)
+![](../figures/L0_diagnostic/8_DYE2_5.png)
+# <a id='s10' />9 JAR1
+![](../figures/L0_diagnostic/9_JAR1_0.png)
+![](../figures/L0_diagnostic/9_JAR1_1.png)
+![](../figures/L0_diagnostic/9_JAR1_2.png)
+![](../figures/L0_diagnostic/9_JAR1_3.png)
+![](../figures/L0_diagnostic/9_JAR1_4.png)
+![](../figures/L0_diagnostic/9_JAR1_5.png)
+# <a id='s11' />10 Saddle
+![](../figures/L0_diagnostic/10_Saddle_0.png)
+![](../figures/L0_diagnostic/10_Saddle_1.png)
+![](../figures/L0_diagnostic/10_Saddle_2.png)
+![](../figures/L0_diagnostic/10_Saddle_3.png)
+![](../figures/L0_diagnostic/10_Saddle_4.png)
+![](../figures/L0_diagnostic/10_Saddle_5.png)
+# <a id='s12' />11 South Dome
+![](../figures/L0_diagnostic/11_South%20Dome_0.png)
+![](../figures/L0_diagnostic/11_South%20Dome_1.png)
+![](../figures/L0_diagnostic/11_South%20Dome_2.png)
+![](../figures/L0_diagnostic/11_South%20Dome_3.png)
+![](../figures/L0_diagnostic/11_South%20Dome_4.png)
+![](../figures/L0_diagnostic/11_South%20Dome_5.png)
+# <a id='s13' />12 NASA-E
+![](../figures/L0_diagnostic/12_NASA-E_0.png)
+![](../figures/L0_diagnostic/12_NASA-E_1.png)
+![](../figures/L0_diagnostic/12_NASA-E_2.png)
+![](../figures/L0_diagnostic/12_NASA-E_3.png)
+![](../figures/L0_diagnostic/12_NASA-E_4.png)
+![](../figures/L0_diagnostic/12_NASA-E_5.png)
+# <a id='s14' />13 CP2
+Warning: No file for station 13 CP2
+# <a id='s15' />14 NGRIP
+Warning: No file for station 14 NGRIP
+# <a id='s16' />15 NASA-SE
+![](../figures/L0_diagnostic/15_NASA-SE_0.png)
+![](../figures/L0_diagnostic/15_NASA-SE_1.png)
+![](../figures/L0_diagnostic/15_NASA-SE_2.png)
+![](../figures/L0_diagnostic/15_NASA-SE_3.png)
+![](../figures/L0_diagnostic/15_NASA-SE_4.png)
+![](../figures/L0_diagnostic/15_NASA-SE_5.png)
+# <a id='s17' />16 KAR
+Warning: No file for station 16 KAR
+# <a id='s18' />17 JAR 2
+Warning: No file for station 17 JAR 2
+# <a id='s19' />18 KULU
+Warning: No file for station 18 KULU
+# <a id='s20' />22 Petermann ELA
+![](../figures/L0_diagnostic/22_Petermann%20ELA_0.png)
+![](../figures/L0_diagnostic/22_Petermann%20ELA_1.png)
+![](../figures/L0_diagnostic/22_Petermann%20ELA_2.png)
+![](../figures/L0_diagnostic/22_Petermann%20ELA_3.png)

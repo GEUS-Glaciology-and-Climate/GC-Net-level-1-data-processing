@@ -1,0 +1,23 @@
+t0,t1,variable,adjust_function,adjust_value,comment
+1995-05-26T20:00:00+00:00,,HW1,max_filter,20,
+1995-05-26T20:00:00+00:00,,HW2,max_filter,20,
+
+1998-04-06T00:00:00+00:00,,HS1,add,2.5,
+1999-04-29T00:00:00+00:00,,HS1,add,2,
+2001-02-03T00:00:00+00:00,,HS1,add,4,
+2005-05-26T20:00:00+00:00,,HS1,add,12.25,Reported visit. SR1 height before/after (m): 0.0/-12.25
+2006-07-18T01:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
+2007-04-23T01:00:00+00:00,,HS1,add,3.4,Not reported. Manual shift suggested by bav.
+2009-05-16T18:00:00+00:00,,HS1,add,0.4,Not reported. Manual shift suggested by bav.
+2014-05-25T20:00:00+00:00,,HS1,add,9.9,Not reported. Manual shift suggested by bav.
+2017-05-23T00:00:00+00:00,,HS1,add,2.3,Not reported. Manual shift suggested by bav.
+
+1998-04-06T00:00:00+00:00,,HS2,add,2.5,
+1999-04-29T00:00:00+00:00,,HS2,add,2,
+2005-05-26T20:00:00+00:00,,HS2,add,12.25,Reported visit. SR1 height before/after (m): 0.0/-12.25
+2007-04-23T01:00:00+00:00,,HS2,add,3.4,Not reported. Manual shift suggested by bav.
+2009-05-16T18:00:00+00:00,,HS2,add,0.4,Not reported. Manual shift suggested by bav.
+2011-03-25T18:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
+2013-04-22T18:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
+2015-04-29T18:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
+2017-05-23T00:00:00+00:00,,HS2,add,2.3,Not reported. Manual shift suggested by bav.

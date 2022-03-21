@@ -1,10 +1,20 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-2003-05-01T00:00:00+00:00,,SnowHeight(m),add,-6.0,Not reported. Manual shift suggested by bav.
-2010-05-01T00:00:00+00:00,,SnowHeight(m),add,-6.5,Not reported. Manual shift suggested by bav.
-2013-05-21T16:00:00+00:00,,SnowHeight(m),add,-4.0,Not reported. Manual shift suggested by bav.
-2015-05-20T16:00:00+00:00,,SnowHeight(m),add,-1.8,Not reported. Manual shift suggested by bav.
-2016-05-26T00:00:00+00:00,,SnowHeight(m),add,-1.6,Not reported. Manual shift suggested by bav.
-2003-05-01T00:00:00+00:00,,SurfaceHeight(m),add,-6.0,Not reported. Manual shift suggested by bav.
-2010-05-01T00:00:00+00:00,,SurfaceHeight(m),add,-6.5,Not reported. Manual shift suggested by bav.
-2013-05-21T16:00:00+00:00,,SurfaceHeight(m),add,-3.0,Not reported. Manual shift suggested by bav.
-2015-05-20T16:00:00+00:00,,SurfaceHeight(m),add,-2.05,Not reported. Manual shift suggested by bav.
+19980421T16:00:00+00:00,,HS1,add,0.5,manual shift by bav
+19990420T16:00:00+00:00,,HS1,add,1.5,manual shift by bav
+20010605T16:00:00+00:00,,HS1,add,2,manual shift by bav
+20020607T16:00:00+00:00,,HS1,add,0.5,manual shift by bav
+20040611T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
+20050530T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
+20070522T16:00:00+00:00,,HS1,add,-2.5,manual shift by bav
+20080428T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
+20130607T16:00:00+00:00,,HS1,add,4,manual shift by bav
+20170607T16:00:00+00:00,,HS1,add,1.5,manual shift by bav
+
+19980503T16:00:00+00:00,,HS2,add,-0.5,manual shift by bav
+19990416T11:00:00+00:00,,HS2,add,2.5,manual shift by bav
+20010523T16:00:00+00:00,,HS2,add,2,manual shift by bav
+20040614T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
+20050327T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
+20100107T16:00:00+00:00,,HS2,add,4,manual shift by bav
+20140521T16:00:00+00:00,,HS2,add,4,manual shift by bav
+

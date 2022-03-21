@@ -166,7 +166,7 @@ def flag_data(df, site, var_list = ['all']):
             df_out.loc[t0:t1, var+'_qc'] = flag
 
         print(' ')
-        print('![Erroneous data at '+ site+'](figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var+'_data_flagging.png)')
+        print('![Erroneous data at '+ site+'](../figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var+'_data_flagging.png)')
         print(' ')
 
     return df_out
@@ -191,7 +191,7 @@ def plot_flagged_data(df, site):
     for var in df.columns:
         if var[-3:]=='_qc':
             if len(np.unique(df[var].values))>1:
-                fig = plt.figure(figsize = (15,10))
+                fig = plt.figure(figsize=(7, 4))  
                 for flag in np.unique(df[var].values):
                     if flag == "OK":
                         df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='green', label=flag)
@@ -226,7 +226,7 @@ def remove_flagged_data(df):
             df = df.drop(columns=[var])
     return df
 
-def adjust_data(df, site, var_list = []):
+def adjust_data(df, site, var_list = [], skip_var = []):
     df_out = df.copy()
     if not os.path.isfile('metadata/adjustments/'+site+'.csv'):
         print('No data to fix at '+site)
@@ -238,6 +238,13 @@ def adjust_data(df, site, var_list = []):
 
     if len(var_list) == 0:
         var_list = np.unique(adj_info.variable)
+    else:
+        adj_info = adj_info.loc[np.isin(adj_info.variable, var_list), :]
+        var_list = np.unique(adj_info.variable)
+
+    if len(skip_var) > 0:
+        adj_info = adj_info.loc[~np.isin(adj_info.variable, skip_var), :]
+        var_list = np.unique(adj_info.variable)
 
     for var in var_list:       
         if var not in df.columns:
@@ -247,7 +254,7 @@ def adjust_data(df, site, var_list = []):
         print('### Adjusting '+var)
         print('|start time|end time|operation|value|')
         print('|-|-|-|-|')
-        # import pdb; pdb.set_trace()        
+
         for t0, t1, func, val in zip(adj_info.loc[var].t0,
                                      adj_info.loc[var].t1,
                                      adj_info.loc[var].adjust_function,
@@ -294,7 +301,7 @@ def adjust_data(df, site, var_list = []):
                 df_out.loc[t0:t1,var][df_out.loc[t0:t1,var]>360] = df_out.loc[t0:t1,var]-360
 
         if df[var].notna().any():
-            fig = plt.figure(figsize=(10,5))
+            fig = plt.figure(figsize=(7, 4))  
             df[var].plot(style='o',label='before adjustment')
             df_out[var].plot(style='o',label='after adjustment')  
             [plt.axvline(t,linestyle='--',color = 'red') for t in adj_info.loc[var].t0.values]
@@ -305,7 +312,7 @@ def adjust_data(df, site, var_list = []):
             plt.title(site)
             fig.savefig('figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg',dpi=120, bbox_inches='tight')
             print(' ')
-            print('![Adjusted data at '+ site +'](figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg)')
+            print('![Adjusted data at '+ site +'](../figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg)')
             print(' ')
 
     return df_out
@@ -711,7 +718,7 @@ def combine_hs_dpt(df, site):
     df.loc[ind_update,"SurfaceHeight_summary(m)"] = data_update[ind_update] 
     
     # plotting result
-    f1 = plt.figure(figsize=(10, 8))    
+    f1 = plt.figure(figsize=(7, 4))    
     df["DepthPressureTransducer_Cor_adj(m)"].plot(label = 'Pressure transducer')
     df["SurfaceHeight1_adj(m)"].plot(label = 'SonicRanger1')
     df["SurfaceHeight2_adj(m)"].plot(label = 'SonicRanger2')
@@ -727,7 +734,7 @@ def combine_hs_dpt(df, site):
         plt.axvspan(df.index[ind_start[i]],df.index[ind_end[i]], color='orange', alpha=0.1)
     f1.savefig('figures/L1_data_treatment/'+site+'_surface_height.png',dpi=90, bbox_inches='tight')
     print(' ')
-    print('![Surface height adjustement at '+ site+'](figures/L1_data_treatment/'+site+'_surface_height.png)')
+    print('![Surface height adjustement at '+ site+'](../figures/L1_data_treatment/'+site+'_surface_height.png)')
     print(' ')
             
     return df
