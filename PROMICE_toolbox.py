@@ -247,9 +247,9 @@ def adjust_data(df, site, var_list = [], skip_var = []):
         var_list = np.unique(adj_info.variable)
 
     for var in var_list:       
-        if var not in df.columns:
-            print(var+' not in datafile')
-            continue
+        # if var not in df.columns:
+        #     print(var+' not in datafile')
+        #     continue
 
         print('### Adjusting '+var)
         print('|start time|end time|operation|value|')
@@ -261,9 +261,12 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                                      adj_info.loc[var].adjust_value):
             
             print('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|')
+
             if isinstance(t1, float):
                 if np.isnan(t1):
                     t1 = df_out[var].index[-1].isoformat()
+            if t1 < t0:
+                print('Dates in wrong order')
             if func == 'add': 
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values + val
             if func == 'min_filter': 
@@ -293,8 +296,13 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                     values_month = tmp.loc[msk].values
                     values_month[values_month < lim] = np.nan
                     tmp.loc[msk] = values_month
-
-                df_out.loc[t0:t1,var] = tmp.values
+                    
+            if 'swap_with_' in func: 
+                var2 = func[10:]
+                val_var = df_out.loc[t0:t1,var].values
+                val_var2 = df_out.loc[t0:t1,var2].values
+                df_out.loc[t0:t1,var2] = val_var
+                df_out.loc[t0:t1,var] = val_var2
                 
             if func == 'rotate': 
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values + val

@@ -12,3 +12,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20140515T00:00:00+00:00,,HS2,add,1.25,Not reported. Manual shift suggested by bav.
 20160515T00:00:00+00:00,,HS2,add,1.25,Not reported. Manual shift suggested by bav.
 
+20050101T00:00:00+00:00,20080101T00:00:00+00:00,TA3,add,-2.8, Manual adj suggested by bav.
+20010101T00:00:00+00:00,20080101T00:00:00+00:00,TA4,add,-2.8, Manual adj suggested by bav.
+
+19900101T00:00:00+00:00,,TA3,min_filter,-39.4,
+19900101T00:00:00+00:00,,TA4,min_filter,-39.4,
+

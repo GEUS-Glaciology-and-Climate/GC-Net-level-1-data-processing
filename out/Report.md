@@ -62,6 +62,18 @@ Warning: HS2 not found
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
+|2005-01-01 00:00:00+00:00|2007-05-10 00:00:00+00:00|TA1|
+ 
+![Erroneous data at Crawford Point 1](../figures/L1_data_treatment/Crawford_Point_1_TA1_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2017-03-10 00:00:00+00:00|2017-05-22 00:00:00+00:00|TA3|
+ 
+![Erroneous data at Crawford Point 1](../figures/L1_data_treatment/Crawford_Point_1_TA3_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
 |2004-06-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|TS1|
 |1998-01-01 00:00:00+00:00|1999-01-01 00:00:00+00:00|TS1|
 |2000-07-29 18:00:00+00:00|2000-08-10 00:00:00+00:00|TS1|
@@ -215,6 +227,18 @@ Flagging data:
  
 ![Erroneous data at NASA-U](../figures/L1_data_treatment/NASA-U_RH2_data_flagging.png)
  
+|start time|end time|variable|
+|-|-|-|
+|2017-12-11 00:00:00+00:00|2019-07-01 00:00:00+00:00|TA3|
+ 
+![Erroneous data at NASA-U](../figures/L1_data_treatment/NASA-U_TA3_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2011-01-01 00:00:00+00:00|2012-05-25 00:00:00+00:00|TA4|
+ 
+![Erroneous data at NASA-U](../figures/L1_data_treatment/NASA-U_TA4_data_flagging.png)
+ 
 ## Adjusting data at NASA-U
 ## Adjusting data at NASA-U
 ### Adjusting HS1
@@ -261,6 +285,7 @@ Flagging data:
 |start time|end time|variable|
 |-|-|-|
 |2010-01-01 00:00:00+00:00|2012-05-26 00:00:00+00:00|TA3|
+|2014-04-15 00:00:00+00:00|2014-05-21 00:00:00+00:00|TA3|
  
 ![Erroneous data at GITS](../figures/L1_data_treatment/GITS_TA3_data_flagging.png)
  
@@ -296,9 +321,37 @@ Flagging data:
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HS2.jpeg)
  
+### Adjusting TA3
+|start time|end time|operation|value|
+|-|-|-|-|
+|19900101T00:00:00+00:00|nan|min_filter|-39.4|
+|20050101T00:00:00+00:00|20080101T00:00:00+00:00|add|-2.8|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TA3.jpeg)
+ 
+### Adjusting TA4
+|start time|end time|operation|value|
+|-|-|-|-|
+|19900101T00:00:00+00:00|nan|min_filter|-39.4|
+|20010101T00:00:00+00:00|20080101T00:00:00+00:00|add|-2.8|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TA4.jpeg)
+ 
 # 5 Humboldt
 ## Manual flagging of data at Humboldt
-No erroneous data listed for Humboldt
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|1990-01-01 00:00:00+00:00|1996-07-01 00:00:00+00:00|TA1|
+ 
+![Erroneous data at Humboldt](../figures/L1_data_treatment/Humboldt_TA1_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2007-03-01 00:00:00+00:00|2007-05-04 00:00:00+00:00|TA3|
+ 
+![Erroneous data at Humboldt](../figures/L1_data_treatment/Humboldt_TA3_data_flagging.png)
+ 
 ## Adjusting data at Humboldt
 ## Adjusting data at Humboldt
 ### Adjusting HS1
@@ -322,6 +375,12 @@ No erroneous data listed for Humboldt
 # 6 Summit
 ## Manual flagging of data at Summit
 Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|1997-05-21 00:00:00+00:00|1998-07-01 00:00:00+00:00|TA3|
+ 
+![Erroneous data at Summit](../figures/L1_data_treatment/Summit_TA3_data_flagging.png)
+ 
 |start time|end time|variable|
 |-|-|-|
 |2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS1|
@@ -430,6 +489,18 @@ Flagging data:
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
+|2011-01-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|TA1|
+ 
+![Erroneous data at Tunu-N](../figures/L1_data_treatment/Tunu-N_TA1_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2011-01-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|TA2|
+ 
+![Erroneous data at Tunu-N](../figures/L1_data_treatment/Tunu-N_TA2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
 |2011-01-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|TA3|
  
 ![Erroneous data at Tunu-N](../figures/L1_data_treatment/Tunu-N_TA3_data_flagging.png)
@@ -467,6 +538,20 @@ Flagging data:
 |20150525T16:00:00+00:00|nan|add|1.0|
  
 ![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_HS2.jpeg)
+ 
+### Adjusting TA3
+|start time|end time|operation|value|
+|-|-|-|-|
+|1990-01-01T00:00:00+00:00|1999-01-01T00:00:00+00:00|min_filter|-39.3|
+ 
+![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_TA3.jpeg)
+ 
+### Adjusting TA4
+|start time|end time|operation|value|
+|-|-|-|-|
+|1990-01-01T00:00:00+00:00|1999-01-01T00:00:00+00:00|min_filter|-39.3|
+ 
+![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_TA4.jpeg)
  
 # 8 DYE2
 ## Manual flagging of data at DYE2
@@ -528,7 +613,9 @@ Warning: OSR not found
  
 |start time|end time|variable|
 |-|-|-|
+|1999-10-15 01:00:00+00:00|2000-05-15 00:00:00+00:00|TA3|
 |2009-06-15 01:00:00+00:00|2010-01-01 00:00:00+00:00|TA3|
+|2018-09-27 01:00:00+00:00|2018-10-05 00:00:00+00:00|TA3|
  
 ![Erroneous data at DYE2](../figures/L1_data_treatment/DYE2_TA3_data_flagging.png)
  
@@ -623,7 +710,7 @@ Warning: OSR not found
 ### Adjusting HW1
 |start time|end time|operation|value|
 |-|-|-|-|
-|1998-04-28T00:00:00+00:00|2000-05-12T00:00:00+00:00|add|0.5|
+|1998-04-28T00:00:00+00:00|2000-05-12T00:00:00+00:00|add|0.3|
 |2009-05-12T00:00:00+00:00|2010-05-12T00:00:00+00:00|upper_range_filter|0.2|
 |2010-09-20T00:00:00+00:00|2020-09-20T00:00:00+00:00|upper_range_filter|0.4|
  
@@ -633,6 +720,7 @@ Warning: OSR not found
 |start time|end time|operation|value|
 |-|-|-|-|
 |1996-05-15T00:00:00+00:00|1998-04-28T00:00:00+00:00|add|0.5|
+|1998-04-28T00:00:00+00:00|2000-05-12T00:00:00+00:00|add|-0.8|
 |2009-06-01T00:00:00+00:00|2010-05-12T00:00:00+00:00|upper_range_filter|0.4|
 |2010-01-01T00:00:00+00:00|2020-09-20T00:00:00+00:00|upper_range_filter|0.4|
  
@@ -671,11 +759,46 @@ Warning: OSR not found
  
 ![Adjusted data at DYE2](../figures/L1_data_treatment/DYE2_adj_P.jpeg)
  
+### Adjusting TA1
+|start time|end time|operation|value|
+|-|-|-|-|
+|1990-01-01T00:00:00+00:00|nan|min_filter|-80.0|
+ 
+![Adjusted data at DYE2](../figures/L1_data_treatment/DYE2_adj_TA1.jpeg)
+ 
 # 9 JAR1
 ## Manual flagging of data at JAR1
-No erroneous data listed for JAR1
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2007-10-01 00:00:00+00:00|2008-05-07 00:00:00+00:00|TA2|
+|2010-10-01 00:00:00+00:00|2012-05-04 00:00:00+00:00|TA2|
+ 
+![Erroneous data at JAR1](../figures/L1_data_treatment/JAR1_TA2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2007-10-01 00:00:00+00:00|2008-05-07 00:00:00+00:00|TA4|
+|2010-10-01 00:00:00+00:00|2011-06-05 00:00:00+00:00|TA4|
+ 
+![Erroneous data at JAR1](../figures/L1_data_treatment/JAR1_TA4_data_flagging.png)
+ 
 ## Adjusting data at JAR1
 ## Adjusting data at JAR1
+### Adjusting TA3
+|start time|end time|operation|value|
+|-|-|-|-|
+|2018-02-01T00:00:00+00:00|2019-12-20T00:00:00+00:00|max_filter|9|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TA3.jpeg)
+ 
+### Adjusting TA4
+|start time|end time|operation|value|
+|-|-|-|-|
+|2013-02-01T00:00:00+00:00|2015-12-20T00:00:00+00:00|max_filter|9|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TA4.jpeg)
+ 
 # 10 Saddle
 ## Manual flagging of data at Saddle
 Flagging data:
@@ -684,6 +807,12 @@ Flagging data:
 |2010-01-01 00:00:00+00:00|2020-01-01 00:00:00+00:00|RH2|
  
 ![Erroneous data at Saddle](../figures/L1_data_treatment/Saddle_RH2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2010-01-01 00:00:00+00:00|2016-01-01 00:00:00+00:00|TA1|
+ 
+![Erroneous data at Saddle](../figures/L1_data_treatment/Saddle_TA1_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
@@ -728,6 +857,13 @@ Flagging data:
  
 ![Adjusted data at Saddle](../figures/L1_data_treatment/Saddle_adj_HS2.jpeg)
  
+### Adjusting TA3
+|start time|end time|operation|value|
+|-|-|-|-|
+|19900101T00:00:00+00:00|nan|swap_with_TA4|0.0|
+ 
+![Adjusted data at Saddle](../figures/L1_data_treatment/Saddle_adj_TA3.jpeg)
+ 
 # 11 South Dome
 ## Manual flagging of data at South Dome
 Flagging data:
@@ -743,6 +879,12 @@ Flagging data:
 |2010-05-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|RH2|
  
 ![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_RH2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2010-05-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|TA2|
+ 
+![Erroneous data at South Dome](../figures/L1_data_treatment/South_Dome_TA2_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
@@ -868,8 +1010,15 @@ Flagging data:
 |start time|end time|variable|
 |-|-|-|
 |2012-02-01 00:00:00+00:00|2013-06-01 00:00:00+00:00|TA3|
+|1998-04-12 00:00:00+00:00|1998-11-15 00:00:00+00:00|TA3|
  
 ![Erroneous data at NASA-E](../figures/L1_data_treatment/NASA-E_TA3_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2001-06-07 00:00:00+00:00|2001-06-08 00:00:00+00:00|TA4|
+ 
+![Erroneous data at NASA-E](../figures/L1_data_treatment/NASA-E_TA4_data_flagging.png)
  
 ## Adjusting data at NASA-E
 ## Adjusting data at NASA-E
@@ -901,7 +1050,19 @@ Warning: No file for station 13 CP2
 Warning: No file for station 14 NGRIP
 # 15 NASA-SE
 ## Manual flagging of data at NASA-SE
-No erroneous data listed for NASA-SE
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2012-01-08 00:00:00+00:00|2021-06-01 00:00:00+00:00|TA1|
+ 
+![Erroneous data at NASA-SE](../figures/L1_data_treatment/NASA-SE_TA1_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2012-01-08 00:00:00+00:00|2021-06-01 00:00:00+00:00|TA2|
+ 
+![Erroneous data at NASA-SE](../figures/L1_data_treatment/NASA-SE_TA2_data_flagging.png)
+ 
 ## Adjusting data at NASA-SE
 ## Adjusting data at NASA-SE
 ### Adjusting HS1
@@ -949,6 +1110,18 @@ Flagging data:
  
 ![Erroneous data at Petermann ELA](../figures/L1_data_treatment/Petermann_ELA_RH2_data_flagging.png)
  
+|start time|end time|variable|
+|-|-|-|
+|2011-01-01 00:00:00+00:00|2015-01-01 00:00:00+00:00|TA1|
+ 
+![Erroneous data at Petermann ELA](../figures/L1_data_treatment/Petermann_ELA_TA1_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2011-01-01 00:00:00+00:00|2015-01-01 00:00:00+00:00|TA2|
+ 
+![Erroneous data at Petermann ELA](../figures/L1_data_treatment/Petermann_ELA_TA2_data_flagging.png)
+ 
 ## Adjusting data at Petermann ELA
 ## Adjusting data at Petermann ELA
 ### Adjusting TA2
@@ -989,7 +1162,13 @@ Flagging data:
  
 |start time|end time|variable|
 |-|-|-|
-|2017-02-01 00:00:00+00:00|2018-05-01 00:00:00+00:00|TA4|
+|2017-02-01 00:00:00+00:00|2018-05-09 00:00:00+00:00|TA3|
+ 
+![Erroneous data at NEEM](../figures/L1_data_treatment/NEEM_TA3_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2018-05-04 00:00:00+00:00|2018-05-24 00:00:00+00:00|TA4|
  
 ![Erroneous data at NEEM](../figures/L1_data_treatment/NEEM_TA4_data_flagging.png)
  
@@ -1047,29 +1226,5 @@ Flagging data:
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
  
 # 0 Swiss Camp 10m
+![](figures/L1_overview/air temperature diagnostic/0_Swiss Camp 10m_temperature.png)
 # 1 Swiss Camp
-# 2 Crawford Point 1
-# 3 NASA-U
-# 4 GITS
-# 5 Humboldt
-# 6 Summit
-# 7 Tunu-N
-# 8 DYE2
-# 9 JAR1
-# 10 Saddle
-# 11 South Dome
-# 12 NASA-E
-# 13 CP2
-Warning: No file L1/13-CP2.csv
-# 14 NGRIP
-Warning: No file L1/14-NGRIP.csv
-# 15 NASA-SE
-# 16 KAR
-Warning: No file L1/16-KAR.csv
-# 17 JAR 2
-Warning: No file L1/17-JAR 2.csv
-# 18 KULU
-Warning: No file L1/18-KULU.csv
-# 22 Petermann ELA
-# 23 NEEM
-# 24 E-GRIP

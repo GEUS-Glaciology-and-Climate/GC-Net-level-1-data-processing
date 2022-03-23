@@ -157,6 +157,106 @@ for site, ID in zip(site_list.Name,site_list.ID):
 
 # %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
+# %% L1 temperature overview
+plt.close('all')
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)#.iloc[:1]
+for site, ID in zip(site_list.Name,site_list.ID):
+    variable_list = np.array(['TA1', 'TA2', 'TA3', 'TA4'])
+
+    print('# '+str(ID)+ ' ' + site)
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
+    if not path.exists(filename):
+        print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+
+    # % plotting variables
+    fig, ax = plt.subplots(4,1,sharex=True, figsize=(15,15))
+    plt.subplots_adjust(left = 0.1, right=0.9, top = 0.95, bottom = 0.1, wspace=0.2, hspace=0.05)
+    plt.suptitle(site)
+    count = 0
+    count_fig = 0
+    if len(variable_list)==0:
+        variable_list = df.columns
+    else:
+        variable_list = variable_list[np.isin(variable_list, df.columns.values)]
+    for i, var in enumerate(variable_list):       
+        df[var].plot(ax=ax[count])
+        ax[count].set_ylabel(var)
+        ax[count].grid()
+        # ax[count].axes.xaxis.set_major_formatter(years_fmt)
+        # ax[count].axes.xaxis.set_major_locator(years)
+        # ax[count].axes.xaxis.set_minor_locator(months)
+        ax[count].set_xlim((df.index[0],df.index[-1]))
+        count=count+1
+    plt.savefig('figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature',bbox_inches='tight')
+    print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature.png)')
+
+
+# %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
+
+# %% L1 temperature TC vs C1000 comp
+# plt.close('all')
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
+for site, ID in zip(site_list.Name,site_list.ID):
+    
+    print('# '+str(ID)+ ' ' + site)
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
+    if not path.exists(filename):
+        print('Warning: No file for station '+str(ID)+' '+site)
+        # continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+    if 'TA2' not in df.columns:
+        df['TA2'] = np.nan
+    # % plotting variables
+    fig = plt.figure(figsize=(15,15))
+    plt.suptitle(site)
+    
+    ax1 = fig.add_axes([0.1, 0.55, 0.5, 0.4])
+    df['TA1'].plot(ax=ax1, label = 'TA1')
+    df['TA3'].plot(ax=ax1, label = 'TA3')
+    (df['TA1']-df['TA3']).plot(ax=ax1, label = 'TA1-TA3')
+    ax1.set_ylabel('Air temperature \n Lower level')
+    ax1.grid()
+    ax1.legend()
+
+    ax2 = fig.add_axes([0.65, 0.55, 0.32, 0.4])
+    ax2.plot(df['TA1'],  df['TA3'], marker='.', linestyle='None')
+    ax2.annotate('ME = %0.2f'%(df['TA1']- df['TA3']).mean(), (0.05,0.9), xycoords='axes fraction',fontweight = 'bold')
+    ax2.annotate('ME = %0.2f'%(df['TA1']- df['TA4']).mean(), (0.05,0.8), xycoords='axes fraction')
+    ax2.plot([-50, 10],[-50, 10],'k')
+    ax2.set_xlabel('TA1')
+    ax2.set_ylabel('TA3')
+    ax2.grid()
+    
+    ax3 = fig.add_axes([0.1, 0.1, 0.5, 0.4])
+    df['TA2'].plot(ax=ax3, label = 'TA2')
+    df['TA4'].plot(ax=ax3, label = 'TA4')
+    (df['TA2']-df['TA4']).plot(ax=ax3, label = 'TA2-TA4')
+    # (df['TA2']-df['TA3']).plot(ax=ax3, label = 'TA2-TA3')
+    ax3.set_ylabel('Air temperature \n Lower level')
+    ax3.grid()
+    ax3.legend()
+
+    ax4 = fig.add_axes([0.65, 0.1, 0.32, 0.4])
+    ax4.plot(df['TA2'],  df['TA4'], marker='.', linestyle='None')
+    ax4.annotate('ME = %0.2f'%(df['TA2']- df['TA4']).mean(), (0.05,0.9), xycoords='axes fraction',fontweight = 'bold')
+    ax4.plot([-50, 10],[-50, 10],'k')
+    ax4.set_xlabel('TA2')
+    ax4.set_ylabel('TA4')
+    ax4.grid()
+    # break
+    fig.savefig('figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature_diag',bbox_inches='tight')
+    print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature.png)')
+
 #%% Surface height study
 
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)

@@ -18,3 +18,4 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20100107T16:00:00+00:00,,HS2,add,4,manual shift by bav
 20140521T16:00:00+00:00,,HS2,add,4,manual shift by bav
 
+19900101T00:00:00+00:00,,TA3,swap_with_TA4,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/24
