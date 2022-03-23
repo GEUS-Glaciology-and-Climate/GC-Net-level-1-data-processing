@@ -299,8 +299,8 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                     
             if 'swap_with_' in func: 
                 var2 = func[10:]
-                val_var = df_out.loc[t0:t1,var].values
-                val_var2 = df_out.loc[t0:t1,var2].values
+                val_var = df_out.loc[t0:t1,var].values.copy()
+                val_var2 = df_out.loc[t0:t1,var2].values.copy()
                 df_out.loc[t0:t1,var2] = val_var
                 df_out.loc[t0:t1,var] = val_var2
                 
