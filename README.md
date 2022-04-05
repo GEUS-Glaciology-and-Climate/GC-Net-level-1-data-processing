@@ -10,7 +10,7 @@ This repository contains scripts used to flag, adjust and interpolate GC-Net dat
 - [Air temperature diagnostic](out/L1_air_temperature_diagnostic_toc.md)
 - [Instrument height assessment](out/L1_intrument_heights_toc.md)
 
-![](doc/structure.bmp)
+![](metadata/structure.bmp)
 
 ## Installation
 
