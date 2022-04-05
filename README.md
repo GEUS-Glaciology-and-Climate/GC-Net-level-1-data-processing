@@ -8,6 +8,7 @@ This repository contains scripts used to flag, adjust and interpolate GC-Net dat
 - [Overview of the surface height data](figures/L1_overview/HS_overview.png)
 - [Report of the data treatment](out/report_with_toc.md)
 - [Air temperature diagnostic](out/L1_air_temperature_diagnostic_toc.md)
+- [Instrument height assessment](out/L1_intrument_heights_toc.md)
 
 ![](doc/structure.bmp)
 
