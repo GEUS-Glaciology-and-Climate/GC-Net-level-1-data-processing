@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>NASA-SE 2018.kml</name>
+	<Style id="3866">
+		<IconStyle id="3868">
+			<heading>0</heading>
+			<Icon id="3869">
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle id="3867">
+			<color>ffffff00</color>
+			<scale>1.5</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="38660">
+		<IconStyle id="3868">
+			<heading>0</heading>
+			<Icon id="3869">
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle id="3867">
+			<color>ffffff00</color>
+			<scale>1.5</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="38661">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#38660</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#3866</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="3865">
+		<name>NASA-SE 2018</name>
+		<Camera>
+			<longitude>-42.5002</longitude>
+			<latitude>66.47969999999999</latitude>
+			<altitude>400000</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<roll>0</roll>
+		</Camera>
+		<styleUrl>#38661</styleUrl>
+		<Point id="3864">
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>-42.49505555555556,66.47800000000001,2425</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>
