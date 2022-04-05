@@ -1225,6 +1225,3 @@ Flagging data:
  
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
  
-# 0 Swiss Camp 10m
-![](figures/L1_overview/air temperature diagnostic/0_Swiss Camp 10m_temperature.png)
-# 1 Swiss Camp

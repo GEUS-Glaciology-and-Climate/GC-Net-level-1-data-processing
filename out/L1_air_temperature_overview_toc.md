@@ -21,37 +21,37 @@
 * [23 NEEM](#s21)
 * [24 E-GRIP](#s22)
 # <a id='s1' />0 Swiss Camp 10m
-![](../figures/L1_overview/air temperature diagnostic/0_Swiss Camp 10m_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/0_Swiss%20Camp%2010m_temperature.png)
 # <a id='s2' />1 Swiss Camp
-![](../figures/L1_overview/air temperature diagnostic/1_Swiss Camp_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/1_Swiss%20Camp_temperature.png)
 # <a id='s3' />2 Crawford Point 1
-![](../figures/L1_overview/air temperature diagnostic/2_Crawford Point 1_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/2_Crawford%20Point%201_temperature.png)
 # <a id='s4' />3 NASA-U
-![](../figures/L1_overview/air temperature diagnostic/3_NASA-U_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/3_NASA-U_temperature.png)
 # <a id='s5' />4 GITS
-![](../figures/L1_overview/air temperature diagnostic/4_GITS_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/4_GITS_temperature.png)
 # <a id='s6' />5 Humboldt
-![](../figures/L1_overview/air temperature diagnostic/5_Humboldt_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/5_Humboldt_temperature.png)
 # <a id='s7' />6 Summit
-![](../figures/L1_overview/air temperature diagnostic/6_Summit_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/6_Summit_temperature.png)
 # <a id='s8' />7 Tunu-N
-![](../figures/L1_overview/air temperature diagnostic/7_Tunu-N_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/7_Tunu-N_temperature.png)
 # <a id='s9' />8 DYE2
-![](../figures/L1_overview/air temperature diagnostic/8_DYE2_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/8_DYE2_temperature.png)
 # <a id='s10' />9 JAR1
-![](../figures/L1_overview/air temperature diagnostic/9_JAR1_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/9_JAR1_temperature.png)
 # <a id='s11' />10 Saddle
-![](../figures/L1_overview/air temperature diagnostic/10_Saddle_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/10_Saddle_temperature.png)
 # <a id='s12' />11 South Dome
-![](../figures/L1_overview/air temperature diagnostic/11_South Dome_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/11_South%20Dome_temperature.png)
 # <a id='s13' />12 NASA-E
-![](../figures/L1_overview/air temperature diagnostic/12_NASA-E_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/12_NASA-E_temperature.png)
 # <a id='s14' />13 CP2
 Warning: No file for station 13 CP2
 # <a id='s15' />14 NGRIP
 Warning: No file for station 14 NGRIP
 # <a id='s16' />15 NASA-SE
-![](../figures/L1_overview/air temperature diagnostic/15_NASA-SE_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/15_NASA-SE_temperature.png)
 # <a id='s17' />16 KAR
 Warning: No file for station 16 KAR
 # <a id='s18' />17 JAR 2
@@ -59,8 +59,8 @@ Warning: No file for station 17 JAR 2
 # <a id='s19' />18 KULU
 Warning: No file for station 18 KULU
 # <a id='s20' />22 Petermann ELA
-![](../figures/L1_overview/air temperature diagnostic/22_Petermann ELA_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/22_Petermann%20ELA_temperature.png)
 # <a id='s21' />23 NEEM
-![](../figures/L1_overview/air temperature diagnostic/23_NEEM_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/23_NEEM_temperature.png)
 # <a id='s22' />24 E-GRIP
-![](../figures/L1_overview/air temperature diagnostic/24_E-GRIP_temperature.png)
+![](../figures/L1_overview/air%20temperature%20diagnostic/24_E-GRIP_temperature.png)

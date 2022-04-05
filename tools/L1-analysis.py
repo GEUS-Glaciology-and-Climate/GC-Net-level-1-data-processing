@@ -26,7 +26,7 @@ years_fmt = mdates.DateFormatter('%Y')
 
 # %% L0 overview
 path_to_L0N = 'L0M/'
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)#.iloc[:1]
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0).iloc[21:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
@@ -70,28 +70,32 @@ for site, ID in zip(site_list.Name,site_list.ID):
 
         ax[count].set_ylabel(var)
         ax[count].grid()
-        ax[count].axes.xaxis.set_major_formatter(years_fmt)
-        ax[count].axes.xaxis.set_major_locator(years)
-        ax[count].axes.xaxis.set_minor_locator(months)
+        if site != 'E-GRIP':
+            ax[count].axes.xaxis.set_major_formatter(years_fmt)
+            ax[count].axes.xaxis.set_major_locator(years)
+            # ax[count].axes.xaxis.set_minor_locator(months)
         ax[count].set_xlim((df.index[0],df.index[-1]))
         count=count+1
+
         if count == 6:
             ax[0].set_title(site)
             plt.savefig('figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
-            print('![](figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
+            print('![](../figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
             count_fig = count_fig+1
             fig, ax = new_fig()
             count = 0
     if count < 6:
+        count=count-1
         ax[count].xaxis.set_tick_params(which='both', labelbottom=True)
-        ax[count].axes.xaxis.set_major_formatter(years_fmt)
-        ax[count].axes.xaxis.set_major_locator(years)
-        ax[count].axes.xaxis.set_minor_locator(months)
+        if site != 'E-GRIP':
+            ax[count].axes.xaxis.set_major_formatter(years_fmt)
+            ax[count].axes.xaxis.set_major_locator(years)
+            # ax[count].axes.xaxis.set_minor_locator(months)
         for k in range(count+1,len(ax)):
             ax[k].set_axis_off()
         ax[0].set_title(site)
         plt.savefig('figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
-        print('![](figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
+        print('![](../figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
 # %run tocgen.py out/L0_overview.md out/L0_overview_toc.md
 # %% L1 overview
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)#.iloc[:1]
@@ -208,7 +212,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
         print('Warning: No file for station '+str(ID)+' '+site)
-        # continue
+        continue
     ds = nead.read(filename)
     df = ds.to_dataframe()
     df=df.reset_index(drop=True)
@@ -257,6 +261,34 @@ for site, ID in zip(site_list.Name,site_list.ID):
     fig.savefig('figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature_diag',bbox_inches='tight')
     print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature.png)')
 
+# %% Instrument height assessment and 2m T assessment
+from jaws_tools import extrapolate_temp
+
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
+for site, ID in zip(site_list.Name,site_list.ID):
+    
+    print('# '+str(ID)+ ' ' + site)
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
+    if not path.exists(filename):
+        print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+    if 'TA2' not in df.columns:
+        df['TA2'] = np.nan
+    # % plotting variables
+
+    fig, ax = plt.subplots(2,1,sharex=True)
+    df.HW1.plot(ax=ax[0])
+    df.HW2.plot(ax=ax[0])
+    
+    df.TA1.plot(ax=ax[1])
+    df.TA2.plot(ax=ax[1])
+    T2m = extrapolate_temp(df, 2)
+    T2m.plot(ax=ax[1])
 #%% Surface height study
 
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)

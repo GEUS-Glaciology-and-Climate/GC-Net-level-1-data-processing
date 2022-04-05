@@ -23,21 +23,26 @@ mcpath = "./L0M/"
 l0inipath = "./L0N_ini/"
 
 # create directory to store L0 raw data downloaded from envidat (variable path)
-try:
-    # make new directory in current directory called L0
-    os.mkdir(path)
-    # only download data if new directory was created (in try)
-    #Download and unzip L0 files from CKAN API on Envidat
-    gc.getLevel0(linkfile)
-except OSError:
-    # Don't download data if the file already exists or other error
-    print ("Data already exists or creating directory %s failed (permission?)" % path)
-else:
-    print ("Successfully downloaded L0 data to %s " % path)
+download_data = 0
+if download_data:
+    try:
+        # make new directory in current directory called L0
+        os.mkdir(path)
+        # only download data if new directory was created (in try)
+        #Download and unzip L0 files from CKAN API on Envidat
+        gc.getLevel0(linkfile)
+    except OSError:
+        # Don't download data if the file already exists or other error
+        print ("Data already exists or creating directory %s failed (permission?)" % path)
+    else:
+        print ("Successfully downloaded L0 data to %s " % path)
 
 # Get sorted list of all non-hidden sub-directories in L0 folder
-L0dirs = sorted([f for f in os.listdir(path) if not f.startswith('.')])
-
+L0dirs = np.array(sorted([f for f in os.listdir(path) if not f.startswith('.')]))
+msk = np.core.defchararray.find(L0dirs,'.zip')==-1
+L0dirs = L0dirs[msk]
+msk = np.core.defchararray.find(L0dirs,'Jason')==-1
+L0dirs = L0dirs[msk]
 # Create the directory to put the merged L0 files (variable mpath)
 try:
     os.mkdir(mpath)
@@ -54,7 +59,7 @@ except OSError:
 else:
     print ("Successfully created the directory %s " % mcpath)
 
-# Loop through each station, read pandas dataframe and do the merging
+# %% Loop through each station, read pandas dataframe and do the merging
 for i in range(len(L0dirs))  :
     print('--------------------------------')
     print('Now Processing Directory: ',L0dirs[i])
@@ -63,6 +68,7 @@ for i in range(len(L0dirs))  :
     #get 2 digit station number from numered station directory
     cfilenum = str(L0dirs[i])[:2]
     # define path to historical C level file in L0 directory
+    cfiledir_jeb = path+'/C level Jason/'+cfilenum+'c.dat'
     cfiledir = path+L0dirs[i]+'/C file/'+cfilenum+'c.dat'
 
     #get list and sort all non-hidden files in station directory
@@ -78,6 +84,7 @@ for i in range(len(L0dirs))  :
     L0files = [s for s in allL0files if "Table046" in s]
     nyears = len(L0files)     # number of unique years
     print("Number of Unique years = ",nyears)
+    
     #loop through yearly raw data files
     for j in range(nyears-1): # minus 1 because we index two files including j+1
 
@@ -141,7 +148,7 @@ for i in range(len(L0dirs))  :
             # if not the first file continue concatonating to the merged file
             df1=dfm
         #read next file in station directory
-        df2_p1 = pd.read_csv(datadir+L0files[j+1],sep=',',dtype=None,header=0,parse_dates=[0],skiprows=[ii for ii in (0,2,3)],na_values=nan_string)
+        df2_p1 = pd.read_csv(datadir+L0files[j+1], sep=',', dtype=None, header=0, parse_dates=[0], skiprows=[ii for ii in (0,2,3)], na_values=nan_string, encoding='latin-1')
         df2_p1.set_index(df2_p1["TIMESTAMP"])
         pd.to_datetime(df2_p1.index)
         # implement old ARGOS/ARGOS/GOES case structure for the files being merged
@@ -235,18 +242,36 @@ for i in range(len(L0dirs))  :
     #dfm.to_csv(path_or_buf=coutfile,columns=())
 
     #read and merge historical c-level file
-    cconfigfile = l0inipath+'c_file_header.ini'
-    c_file_header_str = write_nead.get_config_list_str(cconfigfile, 'fields')
+
     if os.path.isfile(cfiledir):
-            dfc = gc.read_c_file(cfiledir,c_file_header_str)
-            needed_dfc = dfc[:starttime-pd.Timedelta(hours=1)]
-            dfm["timestamp"] = pd.to_datetime(dfm["timestamp"])
-            dfm = dfm.set_index("timestamp")
-            print("Using the following part of the C-file: ",needed_dfc)
-            print("Merging with logger files dataframe:",dfm)
-            dfmc = pd.concat([needed_dfc,dfm])
-            dfmc['timestamp']=pd.to_datetime(dfmc.index)
-            write_nead.write_nead(dfmc, configfile, mcoutfile)
+        if os.path.isfile(cfiledir_jeb):
+            cconfigfile = './L0//C level Jason/c_file_header_jeb.ini'
+            c_file_header_str = write_nead.get_config_list_str(cconfigfile, 'fields')
+            dfc_jeb = gc.read_c_file(cfiledir_jeb,c_file_header_str)
+            needed_dfc_jeb = dfc_jeb[:np.minimum(starttime, max(dfc_jeb.index)) -pd.Timedelta(hours=1)]
+            print("Using the following part of the C-file: ",needed_dfc_jeb)
+            end_c_file = np.minimum(starttime, max(dfc_jeb.index))
+        else:
+            end_c_file = []
+            
+        cconfigfile = l0inipath+'c_file_header.ini'
+        c_file_header_str = write_nead.get_config_list_str(cconfigfile, 'fields')
+        dfc = gc.read_c_file(cfiledir,c_file_header_str)
+        if not end_c_file:
+            end_c_file = dfc.index[0]
+        needed_dfc = dfc[end_c_file:starttime-pd.Timedelta(hours=1)]
+        print("Using the following part of the C-file: ",needed_dfc)   
+        
+        dfm["timestamp"] = pd.to_datetime(dfm["timestamp"])
+        dfm = dfm.set_index("timestamp")
+        print("Merging with logger files dataframe:",dfm)
+        if os.path.isfile(cfiledir_jeb):
+            dfmc = pd.concat([needed_dfc_jeb, needed_dfc, dfm])
+            del needed_dfc_jeb
+        else:
+            dfmc = pd.concat([needed_dfc, dfm])
+        dfmc['timestamp']=pd.to_datetime(dfmc.index)
+        write_nead.write_nead(dfmc, configfile, mcoutfile)
     else:
         print("No C level file Found for station: ",L0dirs[i])
         print("Writing L0N to L0M")
