@@ -37,6 +37,7 @@ plt.rcParams["legend.framealpha"] = 0.8
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # you can select a site by specifying f.e.:
 # site_list  = site_list.iloc[2:3,:]
+site_list  = site_list.iloc[8:9,:] # Dye-2
 # site_list  = site_list.iloc[2:3,:] # Crawford Point 1
 
 for site, ID in zip(site_list.Name,site_list.ID):
@@ -80,29 +81,30 @@ for site, ID in zip(site_list.Name,site_list.ID):
     mult=0.6
     # Plotting observed instrument heights
     (obs_df['W1 before (cm)']/100).plot(marker = '>', linestyle = 'None',
-             markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs before')
+              markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs before')
     (obs_df['W2 before (cm)']/100).plot(marker = '>', linestyle = 'None',
-             markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs before')
+              markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs before')
     (obs_df['W1 after (cm)']/100).plot(marker = '<', linestyle = 'None',
-             markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs after')
+              markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs after')
     (obs_df['W2 after (cm)']/100).plot(marker = '<', linestyle = 'None',
-             markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs after')
+              markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs after')
     
     (obs_df['T1 before (cm)']/100).plot(marker = '>', linestyle = 'None',
-             markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs before')
+              markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs before')
     (obs_df['T2 before (cm)']/100).plot(marker = '>', linestyle = 'None',
-             markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs before')
+              markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs before')
     (obs_df['T1 after (cm)']/100).plot(marker = '<', linestyle = 'None',
-             markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs afer')
+              markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs afer')
     (obs_df['T2 after (cm)']/100).plot(marker = '<', linestyle = 'None',
-             markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs after')
+              markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs after')
     plt.xlim(df.index[0] - pd.Timedelta(days=60),t_end + pd.Timedelta(days=90))
     plt.ylabel('Height above surface (m)')
     plt.title(site+' profile instrument heights')
     plt.legend()
     ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     
-    plt.savefig('figures/L1_overview/instrument height assessment/'+site+'_height_comparison.png', bbox_inches='tight',dpi=250)#
-    print('![](../figures/L1_overview/instrument height assessment/'+site+'_height_comparison.png)')
+    plt.savefig('figures/L1_overview/instrument_height_assessment/'+site+'_height_comparison.png', bbox_inches='tight',dpi=250)
+    print('![](../figures/L1_overview/instrument_height_assessment/'+site.replace(' ','%20')+'_height_comparison.png)')
 
+#%run tools/tocgen.py out/L1_intrument_heights.md out/L1_intrument_heights_toc.md
 
