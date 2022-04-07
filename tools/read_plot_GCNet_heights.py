@@ -37,7 +37,7 @@ plt.rcParams["legend.framealpha"] = 0.8
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # you can select a site by specifying f.e.:
 # site_list  = site_list.iloc[2:3,:]
-site_list  = site_list.iloc[8:9,:] # Dye-2
+site_list  = site_list.iloc[7:8,:] # Dye-2
 # site_list  = site_list.iloc[2:3,:] # Crawford Point 1
 
 for site, ID in zip(site_list.Name,site_list.ID):
@@ -49,8 +49,9 @@ for site, ID in zip(site_list.Name,site_list.ID):
     ds = nead.read(filename)
     df = ds.to_dataframe()
     df=df.reset_index(drop=True)
+    df[df == -999] = np.nan
     df['time'] = pd.to_datetime(df.timestamp)
-    df = df.set_index('time').replace(-999,np.nan)
+    df = df.set_index('time')
 
     #% read observed instrument height data
     try:      
@@ -61,43 +62,49 @@ for site, ID in zip(site_list.Name,site_list.ID):
         pass
 
     obs_df = pd.read_csv('metadata/maintenance summary/'+site+'.csv')    
-    obs_df['Date (dd-mm-yyyy HH:MM)'] = pd.to_datetime(obs_df['Date (dd-mm-yyyy HH:MM)'])
-    obs_df = obs_df.set_index("Date (dd-mm-yyyy HH:MM)")
-    if obs_df[['W1 before (cm)','W1 after (cm)','W2 before (cm)','W2 after (cm)', 'T1 before (cm)','T1 after (cm)','T2 before (cm)','T2 after (cm)']].notnull().sum().sum() == 0:
+    obs_df['date'] = pd.to_datetime(obs_df['date'], utc=True)
+    obs_df = obs_df.set_index('date')
+    useful_columns = ['W1 before (cm)', 'W1 after (cm)',
+                  'W2 before (cm)','W2 after (cm)',
+                  'T1 before (cm)','T1 after (cm)',
+                  'T2 before (cm)','T2 after (cm)']
+    if obs_df[useful_columns].notnull().sum().sum() == 0:
         print('no intrument height reported at Swiss Camp')
         continue
+    obs_df[useful_columns] = obs_df[useful_columns]/100
     # finding last index with observed instrument height:
-    t_end = obs_df[['W1 before (cm)','W1 after (cm)','W2 before (cm)','W2 after (cm)', 'T1 before (cm)','T1 after (cm)','T2 before (cm)','T2 after (cm)']].last_valid_index()
-    
+    t_end = obs_df[useful_columns].last_valid_index()
     
     fig = plt.figure()
     ax = plt.subplot(111)
     
-    df['HW1'].plot(c='C0',label='HW1')
-    df['HW2'].plot(c='C1',label='HW2')
+
     
     sym_size=20
-    
     mult=0.6
     # Plotting observed instrument heights
-    (obs_df['W1 before (cm)']/100).plot(marker = '>', linestyle = 'None',
+    obs_df['W1 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
               markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs before')
-    (obs_df['W2 before (cm)']/100).plot(marker = '>', linestyle = 'None',
+    obs_df['W2 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
               markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs before')
-    (obs_df['W1 after (cm)']/100).plot(marker = '<', linestyle = 'None',
+    obs_df['W1 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
               markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs after')
-    (obs_df['W2 after (cm)']/100).plot(marker = '<', linestyle = 'None',
+    obs_df['W2 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
               markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs after')
     
-    (obs_df['T1 before (cm)']/100).plot(marker = '>', linestyle = 'None',
+    obs_df['T1 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
               markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs before')
-    (obs_df['T2 before (cm)']/100).plot(marker = '>', linestyle = 'None',
+    obs_df['T2 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
               markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs before')
-    (obs_df['T1 after (cm)']/100).plot(marker = '<', linestyle = 'None',
+    obs_df['T1 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
               markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs afer')
-    (obs_df['T2 after (cm)']/100).plot(marker = '<', linestyle = 'None',
+    obs_df['T2 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
               markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs after')
-    plt.xlim(df.index[0] - pd.Timedelta(days=60),t_end + pd.Timedelta(days=90))
+
+    df['HW1'].plot(ax =ax, c='C0',label='HW1')
+    df['HW2'].plot(ax =ax, c='C1',label='HW2')
+    
+    ax.set_xlim(df.index[0] - pd.Timedelta(days=60),t_end + pd.Timedelta(days=90))
     plt.ylabel('Height above surface (m)')
     plt.title(site+' profile instrument heights')
     plt.legend()
