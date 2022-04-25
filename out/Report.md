@@ -1222,3 +1222,8 @@ Flagging data:
  
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
  
+# 0 Swiss Camp 10m
+![](../figures/L0_diagnostic/0_Swiss Camp 10m_0.png)
+![](../figures/L0_diagnostic/0_Swiss Camp 10m_1.png)
+![](../figures/L0_diagnostic/0_Swiss Camp 10m_2.png)
+# 1 Swiss Camp

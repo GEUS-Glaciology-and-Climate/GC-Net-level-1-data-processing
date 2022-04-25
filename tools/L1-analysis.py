@@ -289,7 +289,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df.TA2.plot(ax=ax[1])
     T2m = extrapolate_temp(df, 2)
     T2m.plot(ax=ax[1])
-#%% Surface height study
+    
+#%% Surface height overview
 
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 
