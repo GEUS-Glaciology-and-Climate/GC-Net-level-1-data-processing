@@ -710,7 +710,6 @@ Warning: OSR not found
 ### Adjusting HW1
 |start time|end time|operation|value|
 |-|-|-|-|
-|1998-04-28T00:00:00+00:00|2000-05-12T00:00:00+00:00|add|0.3|
 |2009-05-12T00:00:00+00:00|2010-05-12T00:00:00+00:00|upper_range_filter|0.2|
 |2010-09-20T00:00:00+00:00|2020-09-20T00:00:00+00:00|upper_range_filter|0.4|
  
@@ -719,8 +718,6 @@ Warning: OSR not found
 ### Adjusting HW2
 |start time|end time|operation|value|
 |-|-|-|-|
-|1996-05-15T00:00:00+00:00|1998-04-28T00:00:00+00:00|add|0.5|
-|1998-04-28T00:00:00+00:00|2000-05-12T00:00:00+00:00|add|-0.8|
 |2009-06-01T00:00:00+00:00|2010-05-12T00:00:00+00:00|upper_range_filter|0.4|
 |2010-01-01T00:00:00+00:00|2020-09-20T00:00:00+00:00|upper_range_filter|0.4|
  

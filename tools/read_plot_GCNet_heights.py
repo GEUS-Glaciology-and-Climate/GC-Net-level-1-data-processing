@@ -37,7 +37,7 @@ plt.rcParams["legend.framealpha"] = 0.8
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # you can select a site by specifying f.e.:
 # site_list  = site_list.iloc[2:3,:]
-site_list  = site_list.iloc[7:8,:] # Dye-2
+# site_list  = site_list.iloc[7:8,:] 
 # site_list  = site_list.iloc[2:3,:] # Crawford Point 1
 
 for site, ID in zip(site_list.Name,site_list.ID):
