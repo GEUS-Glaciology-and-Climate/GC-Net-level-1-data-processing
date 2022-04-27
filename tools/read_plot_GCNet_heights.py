@@ -69,7 +69,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
                   'T1 before (cm)','T1 after (cm)',
                   'T2 before (cm)','T2 after (cm)']
     if obs_df[useful_columns].notnull().sum().sum() == 0:
-        print('no intrument height reported at Swiss Camp')
+        print('no intrument height reported at ', site)
         continue
     obs_df[useful_columns] = obs_df[useful_columns]/100
     # finding last index with observed instrument height:
