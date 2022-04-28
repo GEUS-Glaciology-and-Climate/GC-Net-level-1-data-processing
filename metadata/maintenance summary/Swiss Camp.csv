@@ -1,2 +1,8 @@
 ,date,reported,SR1 before (cm),SR1 after (cm),SR2 before (cm),SR2 after (cm),T1 before (cm),T1 after (cm),T2 before (cm),T2 after (cm),W1 before (cm),W1 after (cm),W2 before (cm),W2 after (cm),NewDepth1 (m),NewDepth2 (m),NewDepth3 (m),NewDepth4 (m),NewDepth5 (m),NewDepth6 (m),NewDepth7 (m),NewDepth8 (m),NewDepth9 (m),NewDepth10 (m)
-0,1996-01-01 10:00,0,0,0,0,0,,,,,,,,,,,,,,,,,,
+0,1996-01-01 10:00,0,0,0.0,0.0,0.0,,,,,,,,,,,,,,,,,,
+1,2013-05-15 0:00,by K. Steffen. Snow to underside lower arm 238cm. Two SR on lower arm,218,,218.0,,268.0,,408.0,,268.0,,408.0,,,,,,,,,,,
+2,2014-05-07 0:00,by K. Steffen. New station: 145 from arm to ice. 86cm of snow,243,39.0,,,293.0,89.0,,,293.0,89.0,,,,,,,,,,,,
+3,2015-05-13,by K. Steffen,90,,,,140.0,,,,140.0,,,,,,,,,,,,,
+4,2016-05-15,by K. Steffen,87,,,,137.0,,,,137.0,,,,,,,,,,,,,
+5,2017-05-14,by K. Steffen,132,,,,182.0,,,,182.0,,,,,,,,,,,,,
+6,2018-05-05,by K. Steffen,68,,68.0,,118.0,,222.0,,118.0,,222.0,,,,,,,,,,,

@@ -98,10 +98,10 @@ for site, ID in zip(site_list.Name,site_list.ID):
         print('![](../figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
 # %run tocgen.py out/L0_overview.md out/L0_overview_toc.md
 # %% L1 overview
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)#.iloc[:1]
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)  #.iloc[7:,:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
-    plt.close('all')
+    # plt.close('all')
     print('# '+str(ID)+ ' ' + site)
     filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
@@ -112,7 +112,10 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df=df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp)
     df = df.set_index('timestamp').replace(-999,np.nan)
-
+    # df =df.loc['2019':,:]
+    if df.shape[0] == 0:
+        print('no data since 2019')
+        continue
     # % plotting variables
     def new_fig():
         fig, ax = plt.subplots(6,1,sharex=True, figsize=(15,15))
@@ -137,7 +140,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
         df[var].plot(ax=ax[count])
         ax[count].set_ylabel(var)
         ax[count].grid()
-        ax[count].axes.xaxis.set_major_formatter(years_fmt)
+        # ax[count].axes.xaxis.set_major_formatter(years_fmt)
         # ax[count].axes.xaxis.set_major_locator(years)
         # ax[count].axes.xaxis.set_minor_locator(months)
         ax[count].set_xlim((df.index[0],df.index[-1]))
@@ -151,7 +154,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
             count = 0
     if count < 6:
         ax[count].xaxis.set_tick_params(which='both', labelbottom=True)
-        ax[count].axes.xaxis.set_major_formatter(years_fmt)
+        # ax[count].axes.xaxis.set_major_formatter(years_fmt)
         # ax[count].axes.xaxis.set_major_locator(years)
         for k in range(count+1,len(ax)):
             ax[k].set_axis_off()
@@ -289,7 +292,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df.TA2.plot(ax=ax[1])
     T2m = extrapolate_temp(df, 2)
     T2m.plot(ax=ax[1])
-#%% Surface height study
+    
+#%% Surface height overview
 
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 

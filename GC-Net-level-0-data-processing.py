@@ -7,7 +7,28 @@ import matplotlib.pyplot as plt
 import libgcnet as gc
 import glob
 import write_nead
+from datetime import datetime
+import nead
+import requests
+import pytz
 
+envidat_alias = {"Swiss Camp 10m":"swisscamp_10m_tower",
+                "Swiss Camp":"swisscamp",
+                "Crawford Point 1":"crawfordpoint",
+                "NASA-U":"nasa_u",
+                "GITS":"gits",
+                "Humboldt":"humboldt",
+                "Summit":"summit",
+                "Tunu-N":"tunu_n",
+                "DYE2":"dye2",
+                "JAR1":"jar1",
+                "Saddle":"saddle",
+                "South Dome":"southdome",
+                "NASA-E":"nasa_east",
+                "NASA-SE":"nasa_southeast",
+                "Petermann ELA":"petermann",
+                "NEEM":"neem",
+                "E-GRIP":"east_grip"}
 ##################################### MAIN ####################################
 
 ##Define file to get links for GC-net Level 0 files on Envidat
@@ -48,6 +69,7 @@ try:
     os.mkdir(mpath)
 except OSError:
     print ("Data already exists or creating directory %s failed (permission?)" % mpath)
+    pass
 else:
     print ("Successfully created the directory %s " % mpath)
 
@@ -60,7 +82,7 @@ else:
     print ("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(len(L0dirs))  :
+for i in range(2, len(L0dirs))  :
     print('--------------------------------')
     print('Now Processing Directory: ',L0dirs[i])
     # the file structure of raw campbell data files
@@ -225,15 +247,6 @@ for i in range(len(L0dirs))  :
     #calibrate scale_factor_neg for all fields
     dfm=gc.calibrate_scale_factor_neg(dfm,fields,scale_factor_neg)
 
-    # # # # # # #Plot parameters for each station as merging occurs
-    # plt.figure()
-    # plt.subplot(2,1,1)
-    # plt.plot(dfm["timestamp"],dfm["ISWR"])
-    # plt.plot(dfm["timestamp"],dfm["OSWR"])
-    # plt.subplot(2,1,2)
-    # plt.plot(dfm["timestamp"],dfm["NSWR"])
-    # plt.show()
-
     ###write level 0N nead files
     print('Outputting merged dataframe to nead: ',coutfile)
     #write dfm to NEAD file coutfile using header headerfile
@@ -241,13 +254,47 @@ for i in range(len(L0dirs))  :
     # INSERT FUNCTION TO OUTPUT csv data in correct column order
     #dfm.to_csv(path_or_buf=coutfile,columns=())
 
-    #read and merge historical c-level file
+    # % download and append the transmission
+    date_end = dfm.timestamp.iloc[-1].strftime("%Y-%m-%d")
+    date_now = datetime.now().strftime("%Y-%m-%d") # current date and time
+    local_path = path+L0dirs[i]+'/transmissions/'
 
+    try:
+        os.mkdir(local_path)
+    except:
+        pass
+    site = L0dirs[i][3:]    
+    remote_url = 'https://www.envidat.ch/data-api/gcnet/nead/'+envidat_alias[site]+'/end/-999/'+date_end+'/'+date_now+'/'
+    
+    local_file = local_path+site+'.csv'
+    print('requesting transmissions from',date_end,'to',date_now)
+    print('url:',remote_url)
+    data = requests.get(remote_url)
+    # Save file data to local copy
+    with open(local_file, 'wb')as file:
+        file.write(data.content)
+    try:     
+        dft = nead.read(local_file).to_dataframe()
+        print('received transmission from',
+              dft["timestamp"].iloc[0],
+              dft["timestamp"].iloc[-1])
+        dft["timestamp"] = pd.to_datetime(dft["timestamp"], utc=True)
+        dfm["timestamp"] = pd.to_datetime(dfm["timestamp"], utc=True)
+        dft = dft.set_index("timestamp")
+        dfm = dfm.set_index("timestamp")
+    
+        dfm = pd.concat([dfm, dft]).reset_index()
+    except:
+        print('download failed')
+        pass
+    starttime = pytz.utc.localize(starttime)
+    #read and merge historical c-level file
     if os.path.isfile(cfiledir):
         if os.path.isfile(cfiledir_jeb):
             cconfigfile = './L0//C level Jason/c_file_header_jeb.ini'
             c_file_header_str = write_nead.get_config_list_str(cconfigfile, 'fields')
             dfc_jeb = gc.read_c_file(cfiledir_jeb,c_file_header_str)
+            dfc_jeb.index = pd.to_datetime(dfc_jeb.index, utc=True)
             needed_dfc_jeb = dfc_jeb[:np.minimum(starttime, max(dfc_jeb.index)) -pd.Timedelta(hours=1)]
             print("Using the following part of the C-file: ",needed_dfc_jeb)
             end_c_file = np.minimum(starttime, max(dfc_jeb.index))
@@ -257,12 +304,12 @@ for i in range(len(L0dirs))  :
         cconfigfile = l0inipath+'c_file_header.ini'
         c_file_header_str = write_nead.get_config_list_str(cconfigfile, 'fields')
         dfc = gc.read_c_file(cfiledir,c_file_header_str)
+        dfc.index = pd.to_datetime(dfc.index, utc=True)
         if not end_c_file:
             end_c_file = dfc.index[0]
         needed_dfc = dfc[end_c_file:starttime-pd.Timedelta(hours=1)]
         print("Using the following part of the C-file: ",needed_dfc)   
         
-        dfm["timestamp"] = pd.to_datetime(dfm["timestamp"])
         dfm = dfm.set_index("timestamp")
         print("Merging with logger files dataframe:",dfm)
         if os.path.isfile(cfiledir_jeb):
@@ -270,7 +317,7 @@ for i in range(len(L0dirs))  :
             del needed_dfc_jeb
         else:
             dfmc = pd.concat([needed_dfc, dfm])
-        dfmc['timestamp']=pd.to_datetime(dfmc.index)
+        dfmc['timestamp']=pd.to_datetime(dfmc.index, utc = True)
         write_nead.write_nead(dfmc, configfile, mcoutfile)
     else:
         print("No C level file Found for station: ",L0dirs[i])

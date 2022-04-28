@@ -40,7 +40,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     ds =nead.read(filename)
     df = ds.to_dataframe()
     df=df.reset_index(drop=True)
-    df.timestamp = pd.to_datetime(df.timestamp).dt.tz_localize('UTC')
+    df.timestamp = pd.to_datetime(df.timestamp, utc=True)
     df = df.set_index('timestamp')
     df=df.resample('H').mean()
 
