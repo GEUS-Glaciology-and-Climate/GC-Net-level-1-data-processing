@@ -20,7 +20,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-06-01T00:00:00+00:00,2010-05-12T00:00:00+00:00,HW2,upper_range_filter,0.4,Manually filtered by bav
 2010-01-01T00:00:00+00:00,2020-09-20T00:00:00+00:00,HW2,upper_range_filter,0.4,Manually filtered by bav
 
-2021-12-01T00:00:00+00:00,2021-12-31T00:00:00+00:00,TA1,max_filter,0,Manually filtered by bav
+2020-10-01T00:00:00+00:00,2021-12-31T00:00:00+00:00,TA1,max_filter,4,Manually filtered by bav
+2020-10-01T00:00:00+00:00,2021-12-31T00:00:00+00:00,TA2,max_filter,4,Manually filtered by bav
 
 2008-01-01T00:00:00+00:00,2020-01-01T00:00:00+00:00,P,add,-199.653,Adjustement done using another AWS from U. Calg installed in 2016. https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/20
 
