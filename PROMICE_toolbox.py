@@ -297,6 +297,12 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                     values_month[values_month < lim] = np.nan
                     tmp.loc[msk] = values_month
                     
+            if func == 'grad_filter': 
+                tmp = df_out.loc[t0:t1,var].copy()
+                msk = df_out.loc[t0:t1,var].copy().diff()
+                tmp[np.roll(msk.abs()>val,-1)] = np.nan
+                df_out.loc[t0:t1,var] = tmp
+                    
             if 'swap_with_' in func: 
                 var2 = func[10:]
                 val_var = df_out.loc[t0:t1,var].values.copy()
