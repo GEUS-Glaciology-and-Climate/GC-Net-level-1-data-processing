@@ -21,12 +21,12 @@ try:
 except:
     print('figures and output folders already exist')
 
-sys.stdout = open("out/Report.md", "w")
+# sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
+# site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # print(site_list)
-# site_list = site_list.iloc[8:9,:] # DYE-2
+site_list = site_list.iloc[8:9,:] # DYE-2
 # site_list = site_list.iloc[6:7,:] # Summit
 # site_list = site_list.iloc[11:,:]
 

@@ -27,5 +27,5 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 1990-01-01T00:00:00+00:00,,TA1,min_filter,-80,
 
-2001-06-15T00:00:00+00:00,2002-05-15T00:00:00+00:00,HW1,add,-1.5,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/26
-
+2001-06-15T00:00:00+00:00,2002-05-20T12:00:00+00:00,HW1,add,-1.5,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/26
+2001-06-15T00:00:00+00:00,2002-05-20T12:00:00+00:00,HW2,add,-0.86,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/26 Maiken
