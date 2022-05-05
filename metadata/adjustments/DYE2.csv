@@ -34,3 +34,4 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1999-12-29T00:00:00+00:00,1999-12-31T00:00:00+00:00,HW2,min_filter,1.75, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/39
 2001-06-04T00:00:00+00:00,2001-06-06T00:00:00+00:00,HW2,max_filter,2.7, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/39
 2001-06-04T00:00:00+00:00,2001-06-06T00:00:00+00:00,HW1,min_filter,1.45, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/39
+2003-05-10T00:00:00+00:00,2004-06-13T00:00:00+00:00,HW2,add,0.49, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/40
