@@ -2,13 +2,13 @@
 """
 Created on Wed Aug 19 20:00:14 2020
 
-2021-09-05T00:00:00+00:00,2021-09-09T00:00:00+00:00,P,min_filter,725,single outlier?
-2021-12-09T00:00:00+00:00,2021-12-13T00:00:00+00:00,P,max_filter,780,single outlier?
-
+tip list:
+    for plots in spyder command prompte
+    %matplotlib inline
+    for plots in a new window
+    %matplotlib qt
 @author: bav
 """
-# %matplotlib inline
-%matplotlib qt
 import os, sys
 import PROMICE_toolbox as ptb
 import matplotlib.pyplot as plt
@@ -24,14 +24,17 @@ try:
 except:
     print('figures and output folders already exist')
 
+# uncomment for command prompt output in file
 # sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # print(site_list)
+
+# uncomment for use at specific sites
 # site_list = site_list.iloc[8:9,:] # DYE-2
 # site_list = site_list.iloc[6:7,:] # Summit
-site_list = site_list.iloc[7:8,:] # TUN
+# site_list = site_list.iloc[7:8,:] # TUN
 # site_list = site_list.iloc[11:,:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
@@ -46,7 +49,10 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df=df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp, utc=True)
     df = df.set_index('timestamp')
-    # df = df.loc['2000':'2005',:] # reduce time window to save computational time
+    
+    # uncomment for use on reduce time window to save computational time
+    # df = df.loc['2000':'2005',:]
+    
     df=df.resample('H').mean()
 
     # Time shifts:
