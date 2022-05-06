@@ -140,7 +140,7 @@ def flag_data(df, site, var_list = ['all']):
         print('No erroneous data listed for '+site)
         return df
     
-    flag_data = pd.read_csv('metadata/flags/'+site+'.csv')
+    flag_data = pd.read_csv('metadata/flags/'+site+'.csv', comment='#')
     
     if var_list[0]=='all':
         var_list =  np.unique(flag_data.variable)
@@ -232,7 +232,7 @@ def adjust_data(df, site, var_list = [], skip_var = []):
         print('No data to fix at '+site)
         return df_out
     
-    adj_info = pd.read_csv('metadata/adjustments/'+site+'.csv')
+    adj_info = pd.read_csv('metadata/adjustments/'+site+'.csv', comment='#')
     adj_info=adj_info.sort_values(by=['variable','t0']) 
     adj_info.set_index(['variable','t0'],drop=False,inplace=True)
 
@@ -252,19 +252,21 @@ def adjust_data(df, site, var_list = [], skip_var = []):
         #     continue
 
         print('### Adjusting '+var)
-        print('|start time|end time|operation|value|')
-        print('|-|-|-|-|')
+        print('|start time|end time|operation|value|number of removed samples|')
+        print('|-|-|-|-|-|')
 
         for t0, t1, func, val in zip(adj_info.loc[var].t0,
                                      adj_info.loc[var].t1,
                                      adj_info.loc[var].adjust_function,
                                      adj_info.loc[var].adjust_value):
             
-            print('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|')
-
             if isinstance(t1, float):
                 if np.isnan(t1):
                     t1 = df_out[var].index[-1].isoformat()
+            
+            # counting nan values before filtering
+            nan_count_1 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
+
             if t1 < t0:
                 print('Dates in wrong order')
             if func == 'add': 
@@ -287,7 +289,8 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                     tmp.loc[msk] = values_month
 
                 df_out.loc[t0:t1,var] = tmp.values
-            if func == 'upper_range_filter': 
+                
+            if func == 'biweekly_upper_range_filter': 
                 tmp = df_out.loc[t0:t1,var].copy()
                 df_max = df_out.loc[t0:t1,var].resample('14D').max()
                 for m_start,m_end in zip(df_max.index[:-2], df_max.index[1:]):
@@ -296,7 +299,20 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                     values_month = tmp.loc[msk].values
                     values_month[values_month < lim] = np.nan
                     tmp.loc[msk] = values_month
-                    
+                # remaining samples following outside of the last 2 weeks window
+                msk = (tmp.index >= m_end)
+                lim = df_max.loc[m_start] - val
+                values_month = tmp.loc[msk].values
+                values_month[values_month < lim] = np.nan
+                tmp.loc[msk] = values_month
+                # updating original pandas
+                df_out.loc[t0:t1,var] = tmp.values
+                
+            if func == 'hampel_filter': 
+                tmp = df_out.loc[t0:t1,var]
+                tmp = hampel(tmp, k=7*24, t0=val)
+                df_out.loc[t0:t1,var] = tmp.values
+                
             if func == 'grad_filter': 
                 tmp = df_out.loc[t0:t1,var].copy()
                 msk = df_out.loc[t0:t1,var].copy().diff()
@@ -313,7 +329,19 @@ def adjust_data(df, site, var_list = [], skip_var = []):
             if func == 'rotate': 
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values + val
                 df_out.loc[t0:t1,var][df_out.loc[t0:t1,var]>360] = df_out.loc[t0:t1,var]-360
+                
+            if func == 'air_temp_sonic_correction':
+                # finding the available air temp measurements
+                tmp = df_out.loc[t0:t1,'TA'+var[-1]]
+                tmp2 = df_out.loc[t0:t1,['TA'+str(i) for i in range(1,5)]].mean(axis=1)
+                tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()]
+                tmp = tmp.interpolate(method='nearest', fill_value='extrapolate')
+                
+                df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values * np.sqrt((tmp.values + 273.15) / 273.15)
 
+
+            nan_count_2 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
+            print('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|'+str(nan_count_2-nan_count_1)+'|')
         if df[var].notna().any():
             fig = plt.figure(figsize=(7, 4))  
             df[var].plot(style='o',label='before adjustment')
@@ -465,7 +493,22 @@ def time_shifts(df, site):
         # df_org.HS2.plot(label='original')
     return df
 
-
+def hampel(vals_orig, k=7, t0=3):
+    '''
+    vals: pandas series of values from which to remove outliers
+    k: size of window (including the sample; 7 is equal to 3 on either side of value)
+    '''
+    #Make copy so original not edited
+    vals=vals_orig.copy()    
+    #Hampel Filter
+    L= 1.4826
+    rolling_median=vals.rolling(k).median()
+    difference=np.abs(rolling_median-vals)
+    median_abs_deviation=difference.rolling(k).median()
+    threshold= t0 *L * median_abs_deviation
+    outlier_idx=difference>threshold
+    vals[outlier_idx]=np.nan
+    return(vals)
 
 def smooth(x,window_len=14,window='hanning'):
     """smooth the data using a window with requested size.

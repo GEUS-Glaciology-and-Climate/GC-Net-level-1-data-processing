@@ -67,6 +67,10 @@ for site, ID in zip(site_list.Name,site_list.ID):
     ptb.plot_flagged_data(df_out, site)
     df_out = ptb.remove_flagged_data(df_out)
     
+    # gap-filling the temperature TA1 and TA2 with the secondary sensors on the same levels
+    df.loc[df.TA1.isnull(), 'TA1'] = df.loc[df.TA1.isnull(), 'TA3']
+    df.loc[df.TA2.isnull(), 'TA2'] = df.loc[df.TA2.isnull(), 'TA4']
+    
     print('## Adjusting data at '+site)
     # we start by adjusting and filtering the height of the wind sensors
     df_v4 = ptb.adjust_data(df_out, site, ['HW1', 'HW2'])
