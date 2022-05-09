@@ -2,3 +2,17 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2003-05-23T07:00:00+00:00,,TA2,max_filter,11,
 2003-05-23T07:00:00+00:00,,TA3,max_filter,11,
 2003-05-23T07:00:00+00:00,,TA4,max_filter,11,
+
+# air temp correction on HW1 and HW2
+2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
+2009-05-15T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,
+
+# filters on HW1 and HW2
+2016-01-01T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.5,Manually filtered by bav
+2016-01-01T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.5,Manually filtered by bav
+2016-01-01T00:00:00+00:00,2019-01-01T00:00:00+00:00,HW2,max_filter,3.12,Manually flagged by bav
+2016-01-01T00:00:00+00:00,2019-01-01T00:00:00+00:00,HW2,min_filter,2.4,Manually flagged by bav
+2015-07-01T00:00:00+00:00,2016-01-01T00:00:00+00:00,HW2,min_filter,1.4,Manually flagged by bav
+
+2016-01-01T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
+2016-01-01T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav

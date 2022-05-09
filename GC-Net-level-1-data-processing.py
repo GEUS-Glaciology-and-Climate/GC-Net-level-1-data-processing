@@ -25,7 +25,7 @@ except:
     print('figures and output folders already exist')
 
 # uncomment for command prompt output in file
-# sys.stdout = open("out/Report.md", "w")
+sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
@@ -38,7 +38,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # site_list = site_list.iloc[11:,:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
-    plt.close('all')
+    # plt.close('all')
     print('# '+str(ID)+ ' ' + site)
     filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
@@ -53,6 +53,9 @@ for site, ID in zip(site_list.Name,site_list.ID):
     # uncomment for use on reduce time window to save computational time
     # df = df.loc['2000':'2005',:]
     
+    if site == 'Swiss Camp 10m':
+        df['TA2'] = np.nan
+        df['TA4'] = np.nan
     df=df.resample('H').mean()
 
     # Time shifts:
@@ -64,7 +67,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     print('## Manual flagging of data at '+site)
     df_out = ptb.flag_data(df_out, site)
 
-    ptb.plot_flagged_data(df_out, site)
+    # ptb.plot_flagged_data(df_out, site)
     df_out = ptb.remove_flagged_data(df_out)
     
     # gap-filling the temperature TA1 and TA2 with the secondary sensors on the same levels
