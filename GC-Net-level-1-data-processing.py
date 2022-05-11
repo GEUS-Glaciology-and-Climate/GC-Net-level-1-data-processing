@@ -25,7 +25,7 @@ except:
     print('figures and output folders already exist')
 
 # uncomment for command prompt output in file
-sys.stdout = open("out/Report.md", "w")
+# sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
@@ -110,5 +110,5 @@ for site, ID in zip(site_list.Name,site_list.ID):
         nead.write(df_v5.fillna(-999).reset_index(), 'L1_ini/'+str(ID).zfill(2)+'-'+site+'_header.ini',
                    'L1/'+str(ID).zfill(2)+'-'+site+'.csv')
 
-#%run tocgen.py out/Report.md out/Report_toc.md
+#%run tools/tocgen.py out/Report.md out/Report_toc.md
 # sys.stdout.close()
