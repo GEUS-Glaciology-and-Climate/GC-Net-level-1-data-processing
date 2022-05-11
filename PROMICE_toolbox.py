@@ -339,7 +339,13 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                 
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values * np.sqrt((tmp.values + 273.15) / 273.15)
 
-
+            if func == 'ice_to_water':
+                tmp = df_out.loc[t0:t1,'TA'+var[-1]]
+                tmp2 = df_out.loc[t0:t1,'TA'+str(int(var[-1])%2 +1)]
+                tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()].values
+                tmp = tmp.interpolate(method='nearest', fill_value='extrapolate')
+                df_out.loc[t0:t1,var] = RH_ice2water(df_out.loc[t0:t1,var].values, tmp.values)
+                
             nan_count_2 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
             print('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|'+str(nan_count_2-nan_count_1)+'|')
         if df[var].notna().any():
@@ -795,3 +801,144 @@ def combine_hs_dpt(df, site):
     print(' ')
             
     return df
+
+
+def RH_water2ice(RH, T):
+    # switch ONLY SUBFREEZING timesteps to with-regards-to-ice
+    Lv = 2.5001e6  # H2O Vaporization Latent Heat (J/kg)
+    Ls = 2.8337e6  # H2O Sublimation Latent Heat (J/kg)
+    Rv = 461.5     # H2O Vapor Gaz constant (J/kg/K)
+    ind = T < 0
+    TCoeff = 1/273.15 - 1/(T+273.15)
+    Es_Water = 6.112*np.exp(Lv/Rv*TCoeff)
+    Es_Ice = 6.112*np.exp(Ls/Rv*TCoeff)
+    RH_out = RH.copy()
+    RH_out[ind] = RH[ind] * Es_Water[ind]/Es_Ice[ind] 
+    return RH_out
+
+def RH_ice2water(RH, T):
+    # switch ALL timestep to with-regards-to-water
+    RH = np.array(RH)
+    Lv = 2.5001e6  # H2O Vaporization Latent Heat (J/kg)
+    Ls = 2.8337e6  # H2O Sublimation Latent Heat (J/kg)
+    Rv = 461.5     # H2O Vapor Gaz constant (J/kg/K)
+    ind = T < 0
+    TCoeff = 1/273.15 - 1/(T+273.15)
+    Es_Water = 6.112*np.exp(Lv/Rv*TCoeff)
+    Es_Ice = 6.112*np.exp(Ls/Rv*TCoeff)
+    RH_out = RH.copy()
+    
+    # T_100 = 373.15
+    # T_0 = 273.15
+    # T = T +T_0
+    # # GOFF-GRATCH 1945 equation
+    #    # saturation vapour pressure above 0 C (hPa)
+    # Es_Water = 10**(  -7.90298*(T_100/T - 1) + 5.02808 * np.log(T_100/T) 
+    #     - 1.3816E-7 * (10**(11.344*(1-T/T_100))-1) 
+    #     + 8.1328E-3*(10**(-3.49149*(T_100/T-1)) -1.) + np.log(1013.246) )
+    # # saturation vapour pressure below 0 C (hPa)
+    # Es_Ice = 10**(  -9.09718 * (T_0 / T - 1.) - 3.56654 * np.log(T_0 / T) + 
+    #              0.876793 * (1. - T / T_0) + np.log(6.1071)  )   
+    
+    RH_out[ind] = RH[ind] / Es_Water[ind]*Es_Ice[ind] 
+
+    return RH_out
+
+def RH_ice2water2(RH, T):
+    # switch ALL timestep to with-regards-to-water
+    RH = np.array(RH)
+    # Lv = 2.5001e6  # H2O Vaporization Latent Heat (J/kg)
+    # Ls = 2.8337e6  # H2O Sublimation Latent Heat (J/kg)
+    # Rv = 461.5     # H2O Vapor Gaz constant (J/kg/K)
+    ind = T < 0
+    # TCoeff = 1/273.15 - 1/(T+273.15)
+    # Es_Water = 6.112*np.exp(Lv/Rv*TCoeff)
+    # Es_Ice = 6.112*np.exp(Ls/Rv*TCoeff)
+    RH_out = RH.copy()
+    
+    T_100 = 373.15
+    T_0 = 273.15
+    T = T +T_0
+    # GOFF-GRATCH 1945 equation
+        # saturation vapour pressure above 0 C (hPa)
+    Es_Water = 10**(  -7.90298*(T_100/T - 1) + 5.02808 * np.log10(T_100/T) 
+        - 1.3816E-7 * (10**(11.344*(1-T/T_100))-1) 
+        + 8.1328E-3*(10**(-3.49149*(T_100/T-1)) -1.) + np.log10(1013.246) )
+    # saturation vapour pressure below 0 C (hPa)
+    Es_Ice = 10**(  -9.09718 * (T_0 / T - 1.) - 3.56654 * np.log10(T_0 / T) + 
+                  0.876793 * (1. - T / T_0) + np.log10(6.1071)  )   
+    
+    RH_out[ind] = RH[ind] / Es_Water[ind]*Es_Ice[ind] 
+
+    return RH_out
+
+# def RH_ice2water3(RH, T):
+#     # switch ALL timestep to with-regards-to-water
+#     RH = np.array(RH)
+#     # Lv = 2.5001e6  # H2O Vaporization Latent Heat (J/kg)
+#     # Ls = 2.8337e6  # H2O Sublimation Latent Heat (J/kg)
+#     # Rv = 461.5     # H2O Vapor Gaz constant (J/kg/K)
+#     ind = T < 0
+#     # TCoeff = 1/273.15 - 1/(T+273.15)
+#     # Es_Water = 6.112*np.exp(Lv/Rv*TCoeff)
+#     # Es_Ice = 6.112*np.exp(Ls/Rv*TCoeff)
+#     RH_out = RH.copy()
+    
+#     T_100 = 373.15
+#     T_0 = 273.15
+#     T = T +T_0
+#    # saturation vapour pressure above 0 C (hPa)
+#     Es_Water = 10**(  10.79574*(1 - T_100/T) + 5.028 * np.log10(T / T_100)
+#                     + 1.50475E-4 * (1 - 10**(-8.2969 * (T/T_100 - 1)))
+#                     + 0.42873E-3*(10**(4.76955*(1 - T_100/T)) -1.) +  0.78614 + 2.0 )
+
+#     Es_Ice = 10**( -9.09685 * (T_0 / T - 1.) - 3.56654 * np.log10(T_0 / T) +
+#                   0.87682 * (1. - T / T_0) + 0.78614   )
+#     RH_out[ind] = RH[ind] / Es_Water[ind]*Es_Ice[ind] 
+
+#     return RH_out
+
+def RH2SpecHum(RH, T, pres):
+    # Note: RH[T<0] needs to be with regards to ice
+    
+    Lv = 2.5001e6  # H2O Vaporization Latent Heat (J/kg)
+    Ls = 2.8337e6  # H2O Sublimation Latent Heat (J/kg)
+    Rv = 461.5     # H2O Vapor Gaz constant (J/kg/K)
+    es = 0.622
+    
+    TCoeff = 1/273.15 - 1/(T+273.15)
+    Es_Water = 6.112*np.exp(Lv/Rv*TCoeff)
+    Es_Ice = 6.112*np.exp(Ls/Rv*TCoeff)
+    
+    es_all = Es_Water.copy()
+    es_all[T < 0] = Es_Ice[T < 0] 
+    
+    # specific humidity at saturation
+    q_sat = es * es_all/(pres-(1-es)*es_all)
+
+    # specific humidity
+    q = RH * q_sat /100
+    return q
+
+def SpecHum2RH(q, T, pres):
+    # Note: RH[T<0] will be with regards to ice
+    
+    Lv = 2.5001e6  # H2O Vaporization Latent Heat (J/kg)
+    Ls = 2.8337e6  # H2O Sublimation Latent Heat (J/kg)
+    Rv = 461.5     # H2O Vapor Gaz constant (J/kg/K)
+    es = 0.622
+    
+    TCoeff = 1/273.15 - 1/(T+273.15)
+    Es_Water = 6.112*np.exp(Lv/Rv*TCoeff)
+    Es_Ice = 6.112*np.exp(Ls/Rv*TCoeff)
+    
+    es_all = Es_Water
+    es_all[T < 0] = Es_Ice
+    
+    # specific humidity at saturation
+    q_sat = es * es_all/(pres-(1-es)*es_all)
+
+    # relative humidity
+    RH = q / q_sat *100
+    return RH
+    

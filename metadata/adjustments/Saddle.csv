@@ -31,3 +31,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
+
+
+1996-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
+1996-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43

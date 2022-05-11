@@ -38,7 +38,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # site_list = site_list.iloc[11:,:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
-    # plt.close('all')
+    plt.close('all')
     print('# '+str(ID)+ ' ' + site)
     filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
@@ -67,7 +67,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     print('## Manual flagging of data at '+site)
     df_out = ptb.flag_data(df_out, site)
 
-    # ptb.plot_flagged_data(df_out, site)
+    ptb.plot_flagged_data(df_out, site)
     df_out = ptb.remove_flagged_data(df_out)
     
     # gap-filling the temperature TA1 and TA2 with the secondary sensors on the same levels

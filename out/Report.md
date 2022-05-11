@@ -284,6 +284,20 @@ Flagging data:
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/Crawford_Point_1_adj_HS2.jpeg)
  
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2010-05-16T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/Crawford_Point_1_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2010-05-16T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/Crawford_Point_1_adj_RH2.jpeg)
+ 
 # 3 NASA-U
 ## Manual flagging of data at NASA-U
 Flagging data:
@@ -396,6 +410,7 @@ Flagging data:
 |start time|end time|variable|
 |-|-|-|
 |2010-01-01 00:00:00+00:00|2012-05-26 00:00:00+00:00|RH1|
+|2020-08-23 00:00:00+00:00|2021-08-30 00:00:00+00:00|RH1|
  
 ![Erroneous data at GITS](../figures/L1_data_treatment/GITS_RH1_data_flagging.png)
  
@@ -455,6 +470,20 @@ Flagging data:
 |20160515T00:00:00+00:00|2021-08-13T11:00:00+00:00|add|1.25|0|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HS2.jpeg)
+ 
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_RH2.jpeg)
  
 ### Adjusting TA3
 |start time|end time|operation|value|number of removed samples|
@@ -524,6 +553,20 @@ Flagging data:
 |20150326T00:00:00+00:00|2021-12-24T20:00:00+00:00|add|2.0|0|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_HS2.jpeg)
+ 
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2012-08-19T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2012-08-19T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_RH2.jpeg)
  
 # 6 Summit
 ## Manual flagging of data at Summit
@@ -669,6 +712,20 @@ Flagging data:
  
 ![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_P.jpeg)
  
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2009-05-19T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2009-05-19T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_RH2.jpeg)
+ 
 # 7 Tunu-N
 ## Manual flagging of data at Tunu-N
 Flagging data:
@@ -761,6 +818,20 @@ Flagging data:
  
 ![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_P.jpeg)
  
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2011-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2011-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_RH2.jpeg)
+ 
 ### Adjusting TA3
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
@@ -821,6 +892,7 @@ Warning: OSR not found
 |-|-|-|
 |2009-09-09 12:00:00+00:00|2010-05-02 00:00:00+00:00|RH1|
 |1999-04-19 21:00:00+00:00|1999-10-17 00:00:00+00:00|RH1|
+|2021-06-01 00:00:00+00:00|2022-06-01 00:00:00+00:00|RH1|
  
 ![Erroneous data at DYE2](../figures/L1_data_treatment/DYE2_RH1_data_flagging.png)
  
@@ -831,6 +903,7 @@ Warning: OSR not found
 |2013-10-27 07:59:57+00:00|2014-05-20 00:00:00+00:00|RH2|
 |2012-02-11 04:59:00+00:00|2012-11-06 00:00:00+00:00|RH2|
 |2016-01-01 00:00:00+00:00|2018-01-01 00:00:00+00:00|RH2|
+|2010-01-01 00:00:00+00:00|2023-01-01 00:00:00+00:00|RH2|
  
 ![Erroneous data at DYE2](../figures/L1_data_treatment/DYE2_RH2_data_flagging.png)
  
@@ -991,6 +1064,20 @@ Warning: OSR not found
  
 ![Adjusted data at DYE2](../figures/L1_data_treatment/DYE2_adj_P.jpeg)
  
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at DYE2](../figures/L1_data_treatment/DYE2_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at DYE2](../figures/L1_data_treatment/DYE2_adj_RH2.jpeg)
+ 
 ### Adjusting TA1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
@@ -1143,6 +1230,20 @@ Flagging data:
 |20140521T16:00:00+00:00|2021-10-16T17:00:00+00:00|add|4.0|0|
  
 ![Adjusted data at Saddle](../figures/L1_data_treatment/Saddle_adj_HS2.jpeg)
+ 
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Saddle](../figures/L1_data_treatment/Saddle_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Saddle](../figures/L1_data_treatment/Saddle_adj_RH2.jpeg)
  
 ### Adjusting TA3
 |start time|end time|operation|value|number of removed samples|
@@ -1305,6 +1406,20 @@ Flagging data:
  
 ![Adjusted data at South Dome](../figures/L1_data_treatment/South_Dome_adj_HS2.jpeg)
  
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2003-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at South Dome](../figures/L1_data_treatment/South_Dome_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2003-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at South Dome](../figures/L1_data_treatment/South_Dome_adj_RH2.jpeg)
+ 
 # 12 NASA-E
 ## Manual flagging of data at NASA-E
 Flagging data:
@@ -1376,6 +1491,20 @@ Flagging data:
 |2015-06-09T00:00:00+00:00|2022-04-25T23:00:00+00:00|add|2.0|0|
  
 ![Adjusted data at NASA-E](../figures/L1_data_treatment/NASA-E_adj_HS2.jpeg)
+ 
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2011-06-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at NASA-E](../figures/L1_data_treatment/NASA-E_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2011-06-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at NASA-E](../figures/L1_data_treatment/NASA-E_adj_RH2.jpeg)
  
 # 13 CP2
 Warning: No file for station 13 CP2
@@ -1454,6 +1583,20 @@ Flagging data:
 |2018-06-09T00:00:00+00:00|2019-05-19T10:00:00+00:00|add|2.0|0|
  
 ![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_HS2.jpeg)
+ 
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2009-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2009-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_RH2.jpeg)
  
 # 16 KAR
 Warning: No file for station 16 KAR
@@ -1614,6 +1757,20 @@ Flagging data:
 |20160406T00:00:00+00:00|2022-04-25T23:00:00+00:00|add|2.0|0|
  
 ![Adjusted data at NEEM](../figures/L1_data_treatment/NEEM_adj_HS2.jpeg)
+ 
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2009-05-15T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at NEEM](../figures/L1_data_treatment/NEEM_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2009-05-15T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at NEEM](../figures/L1_data_treatment/NEEM_adj_RH2.jpeg)
  
 # 24 E-GRIP
 ## Manual flagging of data at E-GRIP

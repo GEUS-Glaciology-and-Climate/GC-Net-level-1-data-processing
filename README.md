@@ -49,4 +49,11 @@ pip install git+https://github.com/GEUS-PROMICE/pyNEAD.git
 - Adjustments applied when needed
 - Quality assessment
 - Derived variables available (T2m, RH2m, WS10m, SurfaceHeight)
+
+
+# Processing functions
+
+biweekly_upper_range_filter(t0, t1, adj_val)
+searches for the biweekly maximum value var_max and filters all values below val_max-adj_val for these two weeks
+
  
