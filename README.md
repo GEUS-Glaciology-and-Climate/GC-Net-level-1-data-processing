@@ -12,10 +12,10 @@ This repository contains scripts used to flag, adjust and interpolate GC-Net dat
 
 ## Dataset overview
 
-![https://docs.google.com/presentation/d/1p9Z7g7ZOYZ3aiXRJMUF1gz6hb4260d0f4XUG64YiP4Y/edit?usp=sharing](https://user-images.githubusercontent.com/35140661/168021770-82b1c021-b4fd-4461-8d05-4e6c147b7871.png)
+[![image](https://user-images.githubusercontent.com/35140661/168021770-82b1c021-b4fd-4461-8d05-4e6c147b7871.png)](https://docs.google.com/presentation/d/1p9Z7g7ZOYZ3aiXRJMUF1gz6hb4260d0f4XUG64YiP4Y/edit?usp=sharing)
 ## Data treatment overview
 
-![https://docs.google.com/presentation/d/1rJxl9xT4gn1mfH6ooYLO0fLk_oWjZUdHxoKSOupSXuU/edit?usp=sharing](https://user-images.githubusercontent.com/35140661/168020120-61e5a728-edb0-4c3e-af14-dfa466ec9a27.png)
+[![image](https://user-images.githubusercontent.com/35140661/168020120-61e5a728-edb0-4c3e-af14-dfa466ec9a27.png)](https://docs.google.com/presentation/d/1rJxl9xT4gn1mfH6ooYLO0fLk_oWjZUdHxoKSOupSXuU/edit?usp=sharing)
 
 ## Installation
 
