@@ -10,7 +10,13 @@ This repository contains scripts used to flag, adjust and interpolate GC-Net dat
 - [Air temperature diagnostic](out/L1_air_temperature_diagnostic_toc.md)
 - [Instrument height assessment](out/L1_intrument_heights_toc.md)
 
+## Dataset overview
+
 ![](metadata/structure.bmp)
+
+## Data treatment overview
+
+![image](https://user-images.githubusercontent.com/35140661/168020120-61e5a728-edb0-4c3e-af14-dfa466ec9a27.png)
 
 ## Installation
 
