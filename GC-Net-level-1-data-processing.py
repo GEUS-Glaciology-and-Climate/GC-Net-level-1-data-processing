@@ -25,20 +25,23 @@ except:
     print('figures and output folders already exist')
 
 # uncomment for command prompt output in file
-# sys.stdout = open("out/Report.md", "w")
+sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # print(site_list)
 
 # uncomment for use at specific sites
-# site_list = site_list.iloc[8:9,:] # DYE-2
+# site_list = site_list.iloc[0:1:]  # SC 10 m
+# site_list = site_list.iloc[1:2:]  # SC
+# site_list = site_list.iloc[4:5:]  # GITS
+# site_list = site_list.iloc[5:6:]  # Humboldt
 # site_list = site_list.iloc[6:7,:] # Summit
 # site_list = site_list.iloc[7:8,:] # TUN
-# site_list = site_list.iloc[11:,:]
+# site_list = site_list.iloc[8:9,:] # DYE-2
 
 for site, ID in zip(site_list.Name,site_list.ID):
-    plt.close('all')
+    # plt.close('all')
     print('# '+str(ID)+ ' ' + site)
     filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
@@ -61,14 +64,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
     # Time shifts:
     df = ptb.time_shifts(df, site)
 
-    # Applying standard filters
-    df_out = ptb.filter_data(df, site)
-
     print('## Manual flagging of data at '+site)
-    df_out = ptb.flag_data(df_out, site)
-
-    ptb.plot_flagged_data(df_out, site)
-    df_out = ptb.remove_flagged_data(df_out)
+    df_out = ptb.flag_data(df, site)
     
     # gap-filling the temperature TA1 and TA2 with the secondary sensors on the same levels
     df.loc[df.TA1.isnull(), 'TA1'] = df.loc[df.TA1.isnull(), 'TA3']
@@ -91,7 +88,12 @@ for site, ID in zip(site_list.Name,site_list.ID):
     print('## Adjusting data at '+site)
     # we then adjust and filter all other variables than height of the wind sensors
     df_v5 = ptb.adjust_data(df_v4, site, skip_var = ['HW1', 'HW2'])
-    
+
+    # Applying standard filters again
+    df_v5 = ptb.filter_data(df_v5, site)
+    ptb.plot_flagged_data(df_v5, site)
+    df_v5 = ptb.remove_flagged_data(df_v5)
+
     if len(df_v5)>0:
         # get info related to the new fields
         units, display_description, database_fields, database_fields_data_types = \
@@ -110,5 +112,5 @@ for site, ID in zip(site_list.Name,site_list.ID):
         nead.write(df_v5.fillna(-999).reset_index(), 'L1_ini/'+str(ID).zfill(2)+'-'+site+'_header.ini',
                    'L1/'+str(ID).zfill(2)+'-'+site+'.csv')
 
-#%run tools/tocgen.py out/Report.md out/Report_toc.md
+#%run tools/tocgen.py out/Report.md out/Report_with_toc.md
 # sys.stdout.close()

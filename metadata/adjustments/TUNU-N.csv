@@ -9,9 +9,6 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20130213T16:00:00+00:00,,HS2,add,-1.5,manual shift by bav
 20150525T16:00:00+00:00,,HS2,add,1,manual shift by bav
 
-1990-01-01T00:00:00+00:00,1999-01-01T00:00:00+00:00,TA3,min_filter,-39.3,
-1990-01-01T00:00:00+00:00,1999-01-01T00:00:00+00:00,TA4,min_filter,-39.3,
-
 2021-01-05T00:00:00+00:00,2022-09-09T00:00:00+00:00,P,grad_filter,5,
 
 # air temp correction on HW1 and HW2

@@ -101,7 +101,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)  #.iloc[7:,:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
-    # plt.close('all')
+    plt.close('all')
     print('# '+str(ID)+ ' ' + site)
     filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
@@ -262,13 +262,12 @@ for site, ID in zip(site_list.Name,site_list.ID):
     ax4.grid()
     # break
     fig.savefig('figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature_diag',bbox_inches='tight')
-    print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature.png)')
+    print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature_diag.png)')
     
 # %% RH1 vs RH2
 plt.close('all')
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)[2:]
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)[0:1]
 for site, ID in zip(site_list.Name,site_list.ID):
-    break
     print('# '+str(ID)+ ' ' + site)
     filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
@@ -288,12 +287,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     
     ax1 = fig.add_axes([0.1, 0.15, 0.5, 0.8])
     df['RH1'].plot(ax=ax1, label = 'RH1')
-    df['RH1_w'] = ptb.RH_ice2water(df['RH1'].values, df['TA1'].values)
-    df['RH1_w'] = ptb.RH_ice2water(df['RH1'].values, df['TA1'].values)
-    df.loc[:'2010-05-12', 'RH1_w'].plot(ax=ax1, label='RH1_wrw')
-    df.loc['2004-06-10':'2007-05-10', 'RH1_w'] = ptb.RH_ice2water(df.loc['2004-06-10':'2007-05-10', 'RH1'].values, df.loc['2004-06-10':'2007-05-10', 'TA3'].values)
-    df.loc['2004-06-10':'2007-05-10', 'RH1_w'].plot(ax=ax1, label='RH1_wrw')
-    # df['RH2'].plot(ax=ax1, label = 'RH2')
+    df['RH2'].plot(ax=ax1, label = 'RH2')
     (df['RH1']-df['RH2']).plot(ax=ax1, label = 'RH1-RH2')
     ax1.set_ylabel('Relative Humidity (%)')
     ax1.grid()
@@ -310,7 +304,32 @@ for site, ID in zip(site_list.Name,site_list.ID):
     # break
     fig.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_RH_diag',bbox_inches='tight')
     # print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature.png)')
+    
+    # %% P
+plt.close('all')
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)[1:2]
 
+for site, ID in zip(site_list.Name,site_list.ID):
+    fig = plt.figure(figsize=(15,7))
+    plt.suptitle(site)
+    ax1 = fig.add_axes([0.1, 0.15, 0.8, 0.8])
+    print('# '+str(ID)+ ' ' + site)
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
+    if not path.exists(filename):
+        print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+
+    df['P'].plot(ax=ax1, label = site)
+    ax1.set_ylabel('Pressure (hPa)')
+    ax1.grid()
+    fig.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_P_diag',bbox_inches='tight')
+    
 # %% Instrument height assessment and 2m T assessment
 # from jaws_tools import extrapolate_temp
 

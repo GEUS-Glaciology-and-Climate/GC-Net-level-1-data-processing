@@ -21,6 +21,12 @@ Flagging data:
  
 |start time|end time|variable|
 |-|-|-|
+|2015-05-15 00:00:00+00:00|2016-05-15 00:00:00+00:00|TA2|
+ 
+![Erroneous data at Swiss Camp 10m](../figures/L1_data_treatment/Swiss_Camp_10m_TA2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
 |2015-05-15 00:00:00+00:00|2016-05-15 00:00:00+00:00|TA3|
  
 ![Erroneous data at Swiss Camp 10m](../figures/L1_data_treatment/Swiss_Camp_10m_TA3_data_flagging.png)
@@ -30,7 +36,7 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|biweekly_upper_range_filter|0.5|2151|
+|2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|biweekly_upper_range_filter|0.5|2448|
 |2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|hampel_filter|2.0|3817|
  
 ![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/Swiss_Camp_10m_adj_HW1.jpeg)
@@ -39,12 +45,19 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|biweekly_upper_range_filter|0.5|3605|
-|2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|hampel_filter|2.0|2798|
+|2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|biweekly_upper_range_filter|0.5|8997|
+|2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|hampel_filter|2.0|2635|
  
 ![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/Swiss_Camp_10m_adj_HW2.jpeg)
  
 ## Adjusting data at Swiss Camp 10m
+### Adjusting P
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2014-01-01T00:00:00+00:00|2022-01-23T07:00:00+00:00|add|-96.5|0|
+ 
+![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/Swiss_Camp_10m_adj_P.jpeg)
+ 
 # 1 Swiss Camp
 ## Manual flagging of data at Swiss Camp
 Flagging data:
@@ -95,8 +108,8 @@ Warning: HS2 not found
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|biweekly_upper_range_filter|0.5|4199|
-|2009-05-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|hampel_filter|2.0|686|
+|2009-05-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|biweekly_upper_range_filter|0.5|9242|
+|2009-05-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|hampel_filter|2.0|732|
  
 ![Adjusted data at Swiss Camp](../figures/L1_data_treatment/Swiss_Camp_adj_HW1.jpeg)
  
@@ -105,13 +118,34 @@ Warning: HS2 not found
 |-|-|-|-|-|
 |1995-01-12T00:00:00+00:00|2000-01-01T00:00:00+00:00|max_filter|8.0|19148|
 |2009-05-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|biweekly_upper_range_filter|0.5|5298|
+|2009-05-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|biweekly_upper_range_filter|0.5|10880|
 |2009-05-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|hampel_filter|2.0|3274|
 |2018-03-12T00:00:00+00:00|2018-05-12T00:00:00+00:00|max_filter|0.77|13|
  
 ![Adjusted data at Swiss Camp](../figures/L1_data_treatment/Swiss_Camp_adj_HW2.jpeg)
  
 ## Adjusting data at Swiss Camp
+### Adjusting P
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-11-15T00:00:00+00:00|2021-08-05T14:00:00+00:00|min_filter|856.0|13334|
+ 
+![Adjusted data at Swiss Camp](../figures/L1_data_treatment/Swiss_Camp_adj_P.jpeg)
+ 
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2011-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Swiss Camp](../figures/L1_data_treatment/Swiss_Camp_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1996-01-01T00:00:00+00:00|2011-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+ 
+![Adjusted data at Swiss Camp](../figures/L1_data_treatment/Swiss_Camp_adj_RH2.jpeg)
+ 
 # 2 Crawford Point 1
 ## Manual flagging of data at Crawford Point 1
 Flagging data:
@@ -120,6 +154,12 @@ Flagging data:
 |2017-07-26 00:00:00+00:00|2020-01-01 00:00:00+00:00|HW2|
  
 ![Erroneous data at Crawford Point 1](../figures/L1_data_treatment/Crawford_Point_1_HW2_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2011-05-25 00:00:00+00:00|2012-11-01 00:00:00+00:00|P|
+ 
+![Erroneous data at Crawford Point 1](../figures/L1_data_treatment/Crawford_Point_1_P_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
@@ -239,8 +279,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|biweekly_upper_range_filter|0.5|17788|
-|2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|hampel_filter|2.0|2108|
+|2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|biweekly_upper_range_filter|0.5|19143|
+|2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|hampel_filter|2.0|2106|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/Crawford_Point_1_adj_HW1.jpeg)
  
@@ -248,8 +288,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|biweekly_upper_range_filter|0.5|1825|
-|2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|hampel_filter|2.0|1513|
+|2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|biweekly_upper_range_filter|0.5|6779|
+|2009-05-15T00:00:00+00:00|2019-05-11T16:00:00+00:00|hampel_filter|2.0|1545|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/Crawford_Point_1_adj_HW2.jpeg)
  
@@ -350,8 +390,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.3|2950|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|1913|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.3|16410|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|1914|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_HW1.jpeg)
  
@@ -359,8 +399,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.3|9723|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|2010|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.3|22178|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|2019|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_HW2.jpeg)
  
@@ -402,6 +442,7 @@ Flagging data:
  
 |start time|end time|variable|
 |-|-|-|
+|2011-05-25 00:00:00+00:00|2013-01-01 00:00:00+00:00|P|
 |2007-01-01 00:00:00+00:00|2014-05-01 00:00:00+00:00|P|
 |1995-01-01 00:00:00+00:00|1996-05-01 00:00:00+00:00|P|
  
@@ -413,6 +454,12 @@ Flagging data:
 |2020-08-23 00:00:00+00:00|2021-08-30 00:00:00+00:00|RH1|
  
 ![Erroneous data at GITS](../figures/L1_data_treatment/GITS_RH1_data_flagging.png)
+ 
+|start time|end time|variable|
+|-|-|-|
+|2013-09-04 00:00:00+00:00|2014-05-21 00:00:00+00:00|TA1|
+ 
+![Erroneous data at GITS](../figures/L1_data_treatment/GITS_TA1_data_flagging.png)
  
 |start time|end time|variable|
 |-|-|-|
@@ -431,18 +478,18 @@ Flagging data:
 ### Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|air_temp_sonic_correction|0.0|6020|
-|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|biweekly_upper_range_filter|0.5|5592|
-|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|hampel_filter|2.0|2038|
+|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|biweekly_upper_range_filter|0.5|16145|
+|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|hampel_filter|2.0|2258|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HW1.jpeg)
  
 ### Adjusting HW2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|air_temp_sonic_correction|0.0|5883|
-|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|biweekly_upper_range_filter|0.5|1570|
-|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|hampel_filter|2.0|2440|
+|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|biweekly_upper_range_filter|0.5|5080|
+|2009-05-15T00:00:00+00:00|2021-08-13T11:00:00+00:00|hampel_filter|2.0|2310|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HW2.jpeg)
  
@@ -474,21 +521,21 @@ Flagging data:
 ### Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|1996-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+|1995-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_RH1.jpeg)
  
 ### Adjusting RH2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|1996-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
+|1995-01-01T00:00:00+00:00|2010-01-01T00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_RH2.jpeg)
  
 ### Adjusting TA3
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|19900101T00:00:00+00:00|2021-08-13T11:00:00+00:00|min_filter|-39.4|114|
+|19900101T00:00:00+00:00|2021-08-13T11:00:00+00:00|min_filter|-39.4|7034|
 |20050101T00:00:00+00:00|20080101T00:00:00+00:00|add|-2.8|0|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TA3.jpeg)
@@ -496,7 +543,7 @@ Flagging data:
 ### Adjusting TA4
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|19900101T00:00:00+00:00|2021-08-13T11:00:00+00:00|min_filter|-39.4|116|
+|19900101T00:00:00+00:00|2021-08-13T11:00:00+00:00|min_filter|-39.4|5585|
 |20010101T00:00:00+00:00|20080101T00:00:00+00:00|add|-2.8|0|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TA4.jpeg)
@@ -521,7 +568,7 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2021-12-24T20:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2021-12-24T20:00:00+00:00|biweekly_upper_range_filter|0.3|3071|
+|2009-05-15T00:00:00+00:00|2021-12-24T20:00:00+00:00|biweekly_upper_range_filter|0.3|4389|
 |2009-05-15T00:00:00+00:00|2021-12-24T20:00:00+00:00|hampel_filter|2.0|2688|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_HW1.jpeg)
@@ -530,7 +577,7 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2021-12-24T20:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2021-12-24T20:00:00+00:00|biweekly_upper_range_filter|0.3|3270|
+|2009-05-15T00:00:00+00:00|2021-12-24T20:00:00+00:00|biweekly_upper_range_filter|0.3|3282|
 |2009-05-15T00:00:00+00:00|2021-12-24T20:00:00+00:00|hampel_filter|2.0|3725|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_HW2.jpeg)
@@ -557,14 +604,14 @@ Flagging data:
 ### Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|1996-01-01T00:00:00+00:00|2012-08-19T00:00:00+00:00|ice_to_water|0.0|0|
+|1995-01-01T00:00:00+00:00|2012-08-19T00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_RH1.jpeg)
  
 ### Adjusting RH2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|1996-01-01T00:00:00+00:00|2012-08-19T00:00:00+00:00|ice_to_water|0.0|0|
+|1995-01-01T00:00:00+00:00|2012-08-19T00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_RH2.jpeg)
  
@@ -666,8 +713,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.3|4990|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|5705|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.3|13009|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|5776|
  
 ![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_HW1.jpeg)
  
@@ -675,8 +722,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.3|10020|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|4187|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.3|18068|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|4199|
  
 ![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_HW2.jpeg)
  
@@ -776,8 +823,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|biweekly_upper_range_filter|0.2|4160|
-|2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|hampel_filter|2.0|3332|
+|2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|biweekly_upper_range_filter|0.2|8674|
+|2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|hampel_filter|2.0|3284|
  
 ![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_HW1.jpeg)
  
@@ -785,8 +832,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|biweekly_upper_range_filter|0.2|6077|
-|2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|hampel_filter|2.0|1466|
+|2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|biweekly_upper_range_filter|0.2|10658|
+|2009-05-15T00:00:00+00:00|2022-03-14T04:00:00+00:00|hampel_filter|2.0|1342|
  
 ![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_HW2.jpeg)
  
@@ -831,20 +878,6 @@ Flagging data:
 |1996-01-01T00:00:00+00:00|2011-01-01T00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_RH2.jpeg)
- 
-### Adjusting TA3
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|1990-01-01T00:00:00+00:00|1999-01-01T00:00:00+00:00|min_filter|-39.3|30|
- 
-![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_TA3.jpeg)
- 
-### Adjusting TA4
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|1990-01-01T00:00:00+00:00|1999-01-01T00:00:00+00:00|min_filter|-39.3|47|
- 
-![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_TA4.jpeg)
  
 # 8 DYE2
 ## Manual flagging of data at DYE2
@@ -1009,11 +1042,11 @@ Warning: OSR not found
 |1999-12-29T00:00:00+00:00|1999-12-31T00:00:00+00:00|min_filter|0.63|20|
 |2001-06-04T00:00:00+00:00|2001-06-06T00:00:00+00:00|min_filter|1.45|1|
 |2001-06-15T00:00:00+00:00|2002-05-20T12:00:00+00:00|add|-1.5|0|
-|2009-05-16T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|9|
-|2009-05-16T00:00:00+00:00|2010-01-01T00:00:00+00:00|biweekly_upper_range_filter|0.15|457|
-|2009-05-16T00:00:00+00:00|2020-09-20T00:00:00+00:00|hampel_filter|2.0|4982|
-|2010-01-01T00:00:00+00:00|2010-05-12T00:00:00+00:00|biweekly_upper_range_filter|0.3|216|
-|2010-05-12T00:00:00+00:00|2020-09-20T00:00:00+00:00|biweekly_upper_range_filter|0.4|985|
+|2009-05-16T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|10|
+|2009-05-16T00:00:00+00:00|2010-01-01T00:00:00+00:00|biweekly_upper_range_filter|0.15|626|
+|2009-05-16T00:00:00+00:00|2020-09-20T00:00:00+00:00|hampel_filter|2.0|5271|
+|2010-01-01T00:00:00+00:00|2010-05-12T00:00:00+00:00|biweekly_upper_range_filter|0.3|345|
+|2010-05-12T00:00:00+00:00|2020-09-20T00:00:00+00:00|biweekly_upper_range_filter|0.4|5835|
  
 ![Adjusted data at DYE2](../figures/L1_data_treatment/DYE2_adj_HW1.jpeg)
  
@@ -1024,10 +1057,10 @@ Warning: OSR not found
 |2001-06-04T00:00:00+00:00|2001-06-06T00:00:00+00:00|max_filter|2.7|4|
 |2001-06-15T00:00:00+00:00|2002-05-20T12:00:00+00:00|add|-0.86|0|
 |2003-05-10T00:00:00+00:00|2004-06-13T00:00:00+00:00|add|0.49|0|
-|2009-05-16T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|8|
-|2009-05-16T00:00:00+00:00|2010-05-12T00:00:00+00:00|biweekly_upper_range_filter|0.2|119|
-|2009-05-16T00:00:00+00:00|2020-09-20T00:00:00+00:00|hampel_filter|2.0|3033|
-|2010-05-12T00:00:00+00:00|2020-09-20T00:00:00+00:00|biweekly_upper_range_filter|0.4|847|
+|2009-05-16T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|9|
+|2009-05-16T00:00:00+00:00|2010-05-12T00:00:00+00:00|biweekly_upper_range_filter|0.2|443|
+|2009-05-16T00:00:00+00:00|2020-09-20T00:00:00+00:00|hampel_filter|2.0|4230|
+|2010-05-12T00:00:00+00:00|2020-09-20T00:00:00+00:00|biweekly_upper_range_filter|0.4|4426|
  
 ![Adjusted data at DYE2](../figures/L1_data_treatment/DYE2_adj_HW2.jpeg)
  
@@ -1089,7 +1122,7 @@ Warning: OSR not found
 ### Adjusting TA2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2020-10-01T00:00:00+00:00|2021-12-31T00:00:00+00:00|max_filter|4.0|3|
+|2020-10-01T00:00:00+00:00|2021-12-31T00:00:00+00:00|max_filter|4.0|5|
  
 ![Adjusted data at DYE2](../figures/L1_data_treatment/DYE2_adj_TA2.jpeg)
  
@@ -1115,7 +1148,7 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2019-09-08T01:00:00+00:00|air_temp_sonic_correction|0|0|
-|2009-05-15T00:00:00+00:00|2019-09-08T01:00:00+00:00|hampel_filter|2|2810|
+|2009-05-15T00:00:00+00:00|2019-09-08T01:00:00+00:00|hampel_filter|2|3173|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_HW1.jpeg)
  
@@ -1123,7 +1156,7 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2019-09-08T01:00:00+00:00|air_temp_sonic_correction|0|0|
-|2009-05-15T00:00:00+00:00|2019-09-08T01:00:00+00:00|hampel_filter|2|6338|
+|2009-05-15T00:00:00+00:00|2019-09-08T01:00:00+00:00|hampel_filter|2|7573|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_HW2.jpeg)
  
@@ -1131,14 +1164,14 @@ Flagging data:
 ### Adjusting TA3
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2018-02-01T00:00:00+00:00|2019-12-20T00:00:00+00:00|max_filter|9|127|
+|2018-02-01T00:00:00+00:00|2019-12-20T00:00:00+00:00|max_filter|9|233|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TA3.jpeg)
  
 ### Adjusting TA4
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2013-02-01T00:00:00+00:00|2015-12-20T00:00:00+00:00|max_filter|9|414|
+|2013-02-01T00:00:00+00:00|2015-12-20T00:00:00+00:00|max_filter|9|3469|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TA4.jpeg)
  
@@ -1187,8 +1220,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|biweekly_upper_range_filter|0.5|4487|
-|2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|hampel_filter|2.0|955|
+|2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|biweekly_upper_range_filter|0.5|19701|
+|2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|hampel_filter|2.0|986|
  
 ![Adjusted data at Saddle](../figures/L1_data_treatment/Saddle_adj_HW1.jpeg)
  
@@ -1196,8 +1229,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|biweekly_upper_range_filter|0.5|9170|
-|2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|hampel_filter|2.0|1080|
+|2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|biweekly_upper_range_filter|0.5|15376|
+|2009-05-15T00:00:00+00:00|2021-10-16T17:00:00+00:00|hampel_filter|2.0|1092|
  
 ![Adjusted data at Saddle](../figures/L1_data_treatment/Saddle_adj_HW2.jpeg)
  
@@ -1248,7 +1281,7 @@ Flagging data:
 ### Adjusting TA3
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|19900101T00:00:00+00:00|2021-10-16T17:00:00+00:00|swap_with_TA4|0.0|-866|
+|19900101T00:00:00+00:00|2021-10-16T17:00:00+00:00|swap_with_TA4|0.0|640|
  
 ![Adjusted data at Saddle](../figures/L1_data_treatment/Saddle_adj_TA3.jpeg)
  
@@ -1358,9 +1391,9 @@ Flagging data:
 ### Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|1995-05-26T20:00:00+00:00|2020-08-24T19:00:00+00:00|max_filter|20.0|0|
+|1995-05-26T20:00:00+00:00|2020-08-24T19:00:00+00:00|max_filter|20.0|1|
 |1996-05-15T00:00:00+00:00|2020-08-24T19:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2020-08-24T19:00:00+00:00|biweekly_upper_range_filter|0.3|25631|
+|2009-05-15T00:00:00+00:00|2020-08-24T19:00:00+00:00|biweekly_upper_range_filter|0.3|45873|
 |2009-05-15T00:00:00+00:00|2020-08-24T19:00:00+00:00|hampel_filter|2.0|1023|
  
 ![Adjusted data at South Dome](../figures/L1_data_treatment/South_Dome_adj_HW1.jpeg)
@@ -1368,9 +1401,9 @@ Flagging data:
 ### Adjusting HW2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|1995-05-26T20:00:00+00:00|2020-08-24T19:00:00+00:00|max_filter|20.0|0|
+|1995-05-26T20:00:00+00:00|2020-08-24T19:00:00+00:00|max_filter|20.0|1|
 |1996-05-15T00:00:00+00:00|2020-08-24T19:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2020-08-24T19:00:00+00:00|biweekly_upper_range_filter|0.3|5601|
+|2009-05-15T00:00:00+00:00|2020-08-24T19:00:00+00:00|biweekly_upper_range_filter|0.3|9967|
 |2009-05-15T00:00:00+00:00|2020-08-24T19:00:00+00:00|hampel_filter|2.0|82|
  
 ![Adjusted data at South Dome](../figures/L1_data_treatment/South_Dome_adj_HW2.jpeg)
@@ -1454,9 +1487,9 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.2|5720|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|4764|
-|2011-05-15T00:00:00+00:00|2019-05-15T00:00:00+00:00|min_filter|1.5|800|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.2|7616|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|4694|
+|2011-05-15T00:00:00+00:00|2019-05-15T00:00:00+00:00|min_filter|1.5|1470|
  
 ![Adjusted data at NASA-E](../figures/L1_data_treatment/NASA-E_adj_HW1.jpeg)
  
@@ -1464,8 +1497,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.2|9315|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|3198|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.2|32846|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|3447|
  
 ![Adjusted data at NASA-E](../figures/L1_data_treatment/NASA-E_adj_HW2.jpeg)
  
@@ -1545,8 +1578,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|biweekly_upper_range_filter|0.5|6764|
-|2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|hampel_filter|2.0|4661|
+|2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|biweekly_upper_range_filter|0.5|20463|
+|2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|hampel_filter|2.0|4057|
  
 ![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_HW1.jpeg)
  
@@ -1554,8 +1587,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|biweekly_upper_range_filter|0.5|3265|
-|2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|hampel_filter|2.0|2873|
+|2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|biweekly_upper_range_filter|0.5|13142|
+|2009-05-15T00:00:00+00:00|2019-05-19T10:00:00+00:00|hampel_filter|2.0|2943|
  
 ![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_HW2.jpeg)
  
@@ -1636,7 +1669,7 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-12T18:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2016-01-01T00:00:00+00:00|2022-04-12T18:00:00+00:00|biweekly_upper_range_filter|0.5|5|
+|2016-01-01T00:00:00+00:00|2022-04-12T18:00:00+00:00|biweekly_upper_range_filter|0.5|196|
 |2016-01-01T00:00:00+00:00|2022-04-12T18:00:00+00:00|hampel_filter|2.0|1515|
  
 ![Adjusted data at Petermann ELA](../figures/L1_data_treatment/Petermann_ELA_adj_HW1.jpeg)
@@ -1646,9 +1679,9 @@ Flagging data:
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-12T18:00:00+00:00|air_temp_sonic_correction|0.0|0|
 |2015-07-01T00:00:00+00:00|2016-01-01T00:00:00+00:00|min_filter|1.4|3|
-|2016-01-01T00:00:00+00:00|2022-04-12T18:00:00+00:00|biweekly_upper_range_filter|0.5|4978|
+|2016-01-01T00:00:00+00:00|2022-04-12T18:00:00+00:00|biweekly_upper_range_filter|0.5|7096|
 |2016-01-01T00:00:00+00:00|2019-01-01T00:00:00+00:00|max_filter|3.12|156|
-|2016-01-01T00:00:00+00:00|2019-01-01T00:00:00+00:00|min_filter|2.4|117|
+|2016-01-01T00:00:00+00:00|2019-01-01T00:00:00+00:00|min_filter|2.4|927|
 |2016-01-01T00:00:00+00:00|2022-04-12T18:00:00+00:00|hampel_filter|2.0|22|
  
 ![Adjusted data at Petermann ELA](../figures/L1_data_treatment/Petermann_ELA_adj_HW2.jpeg)
@@ -1657,21 +1690,21 @@ Flagging data:
 ### Adjusting TA2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2003-05-23T07:00:00+00:00|2022-04-12T18:00:00+00:00|max_filter|11.0|9|
+|2003-05-23T07:00:00+00:00|2022-04-12T18:00:00+00:00|max_filter|11.0|32|
  
 ![Adjusted data at Petermann ELA](../figures/L1_data_treatment/Petermann_ELA_adj_TA2.jpeg)
  
 ### Adjusting TA3
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2003-05-23T07:00:00+00:00|2022-04-12T18:00:00+00:00|max_filter|11.0|14|
+|2003-05-23T07:00:00+00:00|2022-04-12T18:00:00+00:00|max_filter|11.0|33|
  
 ![Adjusted data at Petermann ELA](../figures/L1_data_treatment/Petermann_ELA_adj_TA3.jpeg)
  
 ### Adjusting TA4
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2003-05-23T07:00:00+00:00|2022-04-12T18:00:00+00:00|max_filter|11.0|13|
+|2003-05-23T07:00:00+00:00|2022-04-12T18:00:00+00:00|max_filter|11.0|25|
  
 ![Adjusted data at Petermann ELA](../figures/L1_data_treatment/Petermann_ELA_adj_TA4.jpeg)
  
@@ -1722,9 +1755,9 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.5|4409|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|min_filter|0.1|56|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|4281|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.5|13078|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|min_filter|0.1|15195|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|4659|
  
 ![Adjusted data at NEEM](../figures/L1_data_treatment/NEEM_adj_HW1.jpeg)
  
@@ -1732,8 +1765,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.5|1657|
-|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|6174|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.5|13471|
+|2009-05-15T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|6682|
  
 ![Adjusted data at NEEM](../figures/L1_data_treatment/NEEM_adj_HW2.jpeg)
  
@@ -1792,8 +1825,8 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2014-01-01T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2014-01-01T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.4|2439|
-|2014-01-01T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|3351|
+|2014-01-01T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.4|4683|
+|2014-01-01T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|3352|
  
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HW1.jpeg)
  
@@ -1801,7 +1834,7 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2014-01-01T00:00:00+00:00|2022-04-25T23:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2014-01-01T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.4|3205|
+|2014-01-01T00:00:00+00:00|2022-04-25T23:00:00+00:00|biweekly_upper_range_filter|0.4|3404|
 |2014-01-01T00:00:00+00:00|2022-04-25T23:00:00+00:00|hampel_filter|2.0|3592|
  
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HW2.jpeg)

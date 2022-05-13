@@ -172,7 +172,7 @@ def flag_data(df, site, var_list = ['all']):
     return df_out
 
 
-def plot_flagged_data(df, site):
+def plot_flagged_data(df, site, tag=''):
     '''
     Replace data within a specified variable, between specified dates by NaN.
     Reads from file "metadata/flags/<site>.csv".
@@ -210,7 +210,7 @@ def plot_flagged_data(df, site):
                 plt.ylabel(var[:-3])
                 plt.legend() 
                 plt.title(site)
-                fig.savefig('figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var[:-3]+'_data_flagging.png',dpi=70)
+                fig.savefig('figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var[:-3]+'_data_flagging'+tag+'.png',dpi=70)
 
 
 
@@ -850,7 +850,7 @@ def RH_ice2water2(RH, T):
     # Lv = 2.5001e6  # H2O Vaporization Latent Heat (J/kg)
     # Ls = 2.8337e6  # H2O Sublimation Latent Heat (J/kg)
     # Rv = 461.5     # H2O Vapor Gaz constant (J/kg/K)
-    ind = T < 0
+    ind = (T==T) #T < 0
     # TCoeff = 1/273.15 - 1/(T+273.15)
     # Es_Water = 6.112*np.exp(Lv/Rv*TCoeff)
     # Es_Ice = 6.112*np.exp(Ls/Rv*TCoeff)

@@ -1,4 +1,7 @@
 t0,t1,variable,adjust_function,adjust_value,comment
+# shift in pressure compared to the other stations (SWC and SWC_v2)
+2014-01-01T00:00:00+00:00,,P,add,-96.5,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/50
+
 # air temp correction on HW1 and HW2
 2014-01-01T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
 2014-01-01T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,
