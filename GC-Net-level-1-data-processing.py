@@ -25,7 +25,7 @@ except:
     print('figures and output folders already exist')
 
 # uncomment for command prompt output in file
-sys.stdout = open("out/Report.md", "w")
+# sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
@@ -39,6 +39,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # site_list = site_list.iloc[6:7,:] # Summit
 # site_list = site_list.iloc[7:8,:] # TUN
 # site_list = site_list.iloc[8:9,:] # DYE-2
+# site_list = site_list.iloc[15:16,:] # NASA-SE
 
 for site, ID in zip(site_list.Name,site_list.ID):
     # plt.close('all')
@@ -74,7 +75,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     print('## Adjusting data at '+site)
     # we start by adjusting and filtering the height of the wind sensors
     df_v4 = ptb.adjust_data(df_out, site, ['HW1', 'HW2'])
-    
+
     # Calculating surface height from wind sensor height
     df_v4['HS1'] = df_v4.HW1[df_v4.HW1.first_valid_index()] - df_v4.HW1
     df_v4['HS2'] = df_v4.HW2[df_v4.HW2.first_valid_index()] - df_v4.HW2

@@ -28,3 +28,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 1996-01-01T00:00:00+00:00,2009-01-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 1996-01-01T00:00:00+00:00,2009-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
+
+# instrument height adjustment
+2002-05-18T00:00:00+00:00,2005-05-27T09:00:00+00:00,HW1,add,3,
+2002-05-18T00:00:00+00:00,2005-05-27T09:00:00+00:00,HW2,add,3,
+2003-05-10T09:00:00+00:00,2005-05-27T09:00:00+00:00,HW1,add,8.26,
+2003-05-10T09:00:00+00:00,2005-05-27T09:00:00+00:00,HW2,add,9.56,

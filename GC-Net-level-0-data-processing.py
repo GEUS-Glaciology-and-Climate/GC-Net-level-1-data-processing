@@ -297,6 +297,9 @@ for i in range(2, len(L0dirs))  :
             dfc_jeb.index = pd.to_datetime(dfc_jeb.index, utc=True)
             needed_dfc_jeb = dfc_jeb[:np.minimum(starttime, max(dfc_jeb.index)) -pd.Timedelta(hours=1)]
             print("Using the following part of the C-file: ",needed_dfc_jeb)
+            msk = needed_dfc_jeb.HS1.notnull() & needed_dfc_jeb.HW1.isnull()
+            needed_dfc_jeb.loc[msk, 'HW1'] = -needed_dfc_jeb.loc[msk, 'HS1']
+            needed_dfc_jeb.loc[msk, 'HW2'] = -needed_dfc_jeb.loc[msk, 'HS2']
             end_c_file = np.minimum(starttime, max(dfc_jeb.index))
         else:
             end_c_file = []
@@ -309,6 +312,9 @@ for i in range(2, len(L0dirs))  :
             end_c_file = dfc.index[0]
         needed_dfc = dfc[end_c_file:starttime-pd.Timedelta(hours=1)]
         print("Using the following part of the C-file: ",needed_dfc)   
+        msk = needed_dfc.HS1.notnull() & needed_dfc.HW1.isnull()
+        needed_dfc.loc[msk, 'HW1'] = -needed_dfc.loc[msk, 'HS1']
+        needed_dfc.loc[msk, 'HW2'] = -needed_dfc.loc[msk, 'HS2']
         
         dfm = dfm.set_index("timestamp")
         print("Merging with logger files dataframe:",dfm)
