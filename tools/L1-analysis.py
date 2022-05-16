@@ -307,7 +307,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     
     # %% P
 plt.close('all')
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)[1:2]
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)[6:7]
 
 for site, ID in zip(site_list.Name,site_list.ID):
     fig = plt.figure(figsize=(15,7))
@@ -326,6 +326,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df = df.set_index('timestamp').replace(-999,np.nan)
 
     df['P'].plot(ax=ax1, label = site)
+    df.loc[df.P_adj_flag==1,'P'].plot(ax=ax1, label = 'Pressure that has been adjusted')
     ax1.set_ylabel('Pressure (hPa)')
     ax1.grid()
     fig.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_P_diag',bbox_inches='tight')

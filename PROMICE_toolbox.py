@@ -71,11 +71,11 @@ def field_info(fields):
 
     database_fields_data_types = 'timestamp,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real'.split(',')
     
-    field_list = field_list + [s+'_qc' for s in field_list]
-    units = units + ['-' for s in units]
-    display_description = display_description + [s+'_quality_flag' for s in display_description]
-    database_fields = database_fields + [s+'_quality_flag' for s in database_fields]
-    database_fields_data_types = database_fields_data_types + ['int' for s in database_fields_data_types]
+    field_list = field_list + [s+'_qc' for s in field_list] + [s+'_adj_flag' for s in field_list]
+    units = units + ['-' for s in units] + ['-' for s in units]
+    display_description = display_description + [s+'_quality_flag' for s in display_description] + [s+'_adj_flag' for s in display_description]
+    database_fields = database_fields + [s+'_quality_flag' for s in database_fields] + [s+'_adj_flag' for s in database_fields]
+    database_fields_data_types = database_fields_data_types + ['int' for s in database_fields_data_types]+ ['int' for s in database_fields_data_types]
 
     ind = [field_list.index(s) for s in fields]
     
