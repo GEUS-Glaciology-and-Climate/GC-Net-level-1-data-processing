@@ -271,6 +271,8 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                 print('Dates in wrong order')
             if func == 'add': 
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values + val
+            if func == 'multiply': 
+                df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values * val
             if func == 'min_filter': 
                 tmp = df_out.loc[t0:t1,var].values
                 tmp[tmp<val] = np.nan

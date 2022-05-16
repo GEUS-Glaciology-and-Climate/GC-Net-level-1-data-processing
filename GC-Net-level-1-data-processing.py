@@ -25,24 +25,22 @@ except:
     print('figures and output folders already exist')
 
 # uncomment for command prompt output in file
-# sys.stdout = open("out/Report.md", "w")
+sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # print(site_list)
 
 # uncomment for use at specific sites
-# site_list = site_list.iloc[0:1:]  # SC 10 m
-# site_list = site_list.iloc[1:2:]  # SC
-# site_list = site_list.iloc[4:5:]  # GITS
-# site_list = site_list.iloc[5:6:]  # Humboldt
-# site_list = site_list.iloc[6:7,:] # Summit
-# site_list = site_list.iloc[7:8,:] # TUN
-# site_list = site_list.iloc[8:9,:] # DYE-2
-# site_list = site_list.iloc[15:16,:] # NASA-SE
+# All station names: 'Swiss Camp 10m', 'Swiss Camp', 'Crawford Point 1', 'NASA-U',
+       # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
+       # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
+       # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
+# site_list = site_list.loc[site_list.Name.values == 'GITS',:]
+
 
 for site, ID in zip(site_list.Name,site_list.ID):
-    # plt.close('all')
+    plt.close('all')
     print('# '+str(ID)+ ' ' + site)
     filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
@@ -69,8 +67,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df_out = ptb.flag_data(df, site)
     
     # gap-filling the temperature TA1 and TA2 with the secondary sensors on the same levels
-    df.loc[df.TA1.isnull(), 'TA1'] = df.loc[df.TA1.isnull(), 'TA3']
-    df.loc[df.TA2.isnull(), 'TA2'] = df.loc[df.TA2.isnull(), 'TA4']
+    # df_out.loc[df.TA1.isnull(), 'TA1'] = df_out.loc[df_out.TA1.isnull(), 'TA3']
+    # df_out.loc[df.TA2.isnull(), 'TA2'] = df_out.loc[df_out.TA2.isnull(), 'TA4']
     
     print('## Adjusting data at '+site)
     # we start by adjusting and filtering the height of the wind sensors
@@ -88,7 +86,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     
     print('## Adjusting data at '+site)
     # we then adjust and filter all other variables than height of the wind sensors
-    df_v5 = ptb.adjust_data(df_v4, site, skip_var = ['HW1', 'HW2'])
+    df_v5 = ptb.adjust_data(df_v4, site, ['P'], skip_var = ['HW1', 'HW2'])
 
     # Applying standard filters again
     df_v5 = ptb.filter_data(df_v5, site)

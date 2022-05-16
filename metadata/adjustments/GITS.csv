@@ -31,3 +31,6 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 1995-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 1995-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
+
+2012-01-01T00:00:00+00:00,,ISWR,multiply,0.385, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/7
+2012-01-01T00:00:00+00:00,,OSWR,multiply,0.385, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/7
