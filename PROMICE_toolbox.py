@@ -269,10 +269,25 @@ def adjust_data(df, site, var_list = [], skip_var = []):
 
             if t1 < t0:
                 print('Dates in wrong order')
+                
             if func == 'add': 
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values + val
+                # flagging adjusted values
+                if var+'_adj_flag' not in df_out.columns:
+                    df_out[var+'_adj_flag'] = 0
+                msk = df_out.loc[t0:t1, var].notnull()
+                ind = df_out.loc[t0:t1, var].loc[msk].index
+                df_out.loc[ind, var+'_adj_flag'] = 1
+                
             if func == 'multiply': 
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values * val
+                # flagging adjusted values
+                if var+'_adj_flag' not in df_out.columns:
+                    df_out[var+'_adj_flag'] = 0
+                msk = df_out.loc[t0:t1, var].notnull()
+                ind = df_out.loc[t0:t1, var].loc[msk].index
+                df_out.loc[ind, var+'_adj_flag'] = 1
+                
             if func == 'min_filter': 
                 tmp = df_out.loc[t0:t1,var].values
                 tmp[tmp<val] = np.nan
@@ -350,6 +365,8 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                 
             nan_count_2 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
             print('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|'+str(nan_count_2-nan_count_1)+'|')
+            
+            
         if df[var].notna().any():
             fig = plt.figure(figsize=(7, 4))  
             df[var].plot(style='o',label='before adjustment')

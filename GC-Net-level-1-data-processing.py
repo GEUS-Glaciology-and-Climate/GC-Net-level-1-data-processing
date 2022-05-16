@@ -86,7 +86,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     
     print('## Adjusting data at '+site)
     # we then adjust and filter all other variables than height of the wind sensors
-    df_v5 = ptb.adjust_data(df_v4, site, ['P'], skip_var = ['HW1', 'HW2'])
+    df_v5 = ptb.adjust_data(df_v4, site, skip_var = ['HW1', 'HW2'])
 
     # Applying standard filters again
     df_v5 = ptb.filter_data(df_v5, site)
