@@ -331,6 +331,56 @@ for site, ID in zip(site_list.Name,site_list.ID):
     ax1.grid()
     fig.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_P_diag',bbox_inches='tight')
     
+    # %% Time shift search
+plt.close('all')
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
+from pandas.tseries.offsets import DateOffset
+for site, ID in zip(site_list.Name,site_list.ID):
+
+    print('# '+str(ID)+ ' ' + site)
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
+    if not path.exists(filename):
+        print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+    
+    # plt.figure()
+    for year in df.index.year.unique()[:-1]:
+        df1 = df.loc[df.index.year==year,:].resample('H').mean().copy()
+        df2 = df.loc[df.index.year==year+1,:].resample('H').mean().copy()
+        df2.index = df2.index - DateOffset(years=1)
+        msk = df2.index.intersection(df1.index)
+        df1 = df1.loc[msk,:]
+        df2 = df2.loc[msk,:]
+        df1 = df1[~df1.index.duplicated(keep='first')].fillna(0)
+        df2 = df2[~df2.index.duplicated(keep='first')].fillna(0)
+        
+        if (df1['ISWR'] != 0).any() and (df2['ISWR'] != 0).any():
+            lags, cor, _,_ = plt.xcorr(df1['ISWR'].values, df2['ISWR'].values, 
+                      usevlines=False, maxlags=20, normed=True,
+                      linestyle='-',
+                      label=str(year)+' vs '+str(year+1))
+            if lags[cor.argmax()] != 0:
+                print(year, 'max cor at', lags[cor.argmax()], 'timesteps')
+                fig = plt.figure(figsize=(15,7))
+                plt.suptitle(site+': max cor at '+str(lags[cor.argmax()])+' timesteps')
+                ax1 = fig.add_axes([0.1, 0.15, 0.8, 0.8])
+                df1['ISWR'].plot(ax=ax1, label = str(year))
+                df2['ISWR'].plot(ax=ax1, label = str(year+1))
+                ax1.set_ylabel('ISWR')
+                ax1.grid()
+                ax1.legend()
+    # plt.grid()
+
+    # plt.legend()
+        
+    # fig.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_ISWR_diag',bbox_inches='tight')
+    
 # %% Instrument height assessment and 2m T assessment
 # from jaws_tools import extrapolate_temp
 

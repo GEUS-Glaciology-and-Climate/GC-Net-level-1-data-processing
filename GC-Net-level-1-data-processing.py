@@ -25,7 +25,7 @@ except:
     print('figures and output folders already exist')
 
 # uncomment for command prompt output in file
-sys.stdout = open("out/Report.md", "w")
+# sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
@@ -36,7 +36,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
        # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
        # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
        # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'Summit',:]
+# site_list = site_list.loc[site_list.Name.values == 'Crawford Point 1',:]
 
 
 for site, ID in zip(site_list.Name,site_list.ID):
@@ -59,10 +59,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
         df['TA2'] = np.nan
         df['TA4'] = np.nan
     df=df.resample('H').mean()
-
-    # Time shifts:
-    df = ptb.time_shifts(df, site)
-
+    
     print('## Manual flagging of data at '+site)
     df_out = ptb.flag_data(df, site)
     
@@ -78,9 +75,9 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df_v4['HS1'] = df_v4.HW1[df_v4.HW1.first_valid_index()] - df_v4.HW1
     df_v4['HS2'] = df_v4.HW2[df_v4.HW2.first_valid_index()] - df_v4.HW2
     if 'HW1_qc' not in df_out.columns:
-        df_v4['HW1_qc'] = ''
+        df_v4['HW1_qc'] = 'OK'
     if 'HW2_qc' not in df_out.columns:
-        df_v4['HW2_qc'] = ''
+        df_v4['HW2_qc'] = 'OK'
     df_v4.loc[df_v4['HW1_qc']=="CHECKME", 'HS1'] = np.nan
     df_v4.loc[df_v4['HW2_qc']=="CHECKME", 'HS2'] = np.nan
     
@@ -93,6 +90,11 @@ for site, ID in zip(site_list.Name,site_list.ID):
     ptb.plot_flagged_data(df_v5, site)
     df_v5 = ptb.remove_flagged_data(df_v5)
 
+    # removing empty rows:
+    useful_var_list = ['ISWR', 'OSWR', 'NSWR', 'TA1', 'TA2', 'TA3', 'TA4', 'RH1', 'RH2', 'P']+['TS'+str(i) for i in range(1,11)]
+    ind_first = df_v5[[v for v in useful_var_list if v in df_v5.columns]].first_valid_index()
+    df_v5 = df_v5.loc[ind_first:,:]
+    
     if len(df_v5)>0:
         # get info related to the new fields
         units, display_description, database_fields, database_fields_data_types = \

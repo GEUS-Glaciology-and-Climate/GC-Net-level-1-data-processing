@@ -34,3 +34,6 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 2012-01-01T00:00:00+00:00,,ISWR,multiply,0.385, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/7
 2012-01-01T00:00:00+00:00,,OSWR,multiply,0.385, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/7
+
+# time shift
+2019-03-14T00, 2019-04-29T01', *, time_shift, 520, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/63

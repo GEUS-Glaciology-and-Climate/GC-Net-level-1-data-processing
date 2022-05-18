@@ -190,9 +190,11 @@ def plot_flagged_data(df, site, tag=''):
        
     for var in df.columns:
         if var[-3:]=='_qc':
-            if len(np.unique(df[var].values))>1:
+            df[var].values[df[var].isnull()] = 'OK'
+            flags_uni = np.unique(df[var].values.astype(str))
+            if len(flags_uni)>1:
                 fig = plt.figure(figsize=(7, 4))  
-                for flag in np.unique(df[var].values):
+                for flag in flags_uni:
                     if flag == "OK":
                         df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='green', label=flag)
                     elif flag == "CHECKME":
@@ -204,7 +206,10 @@ def plot_flagged_data(df, site, tag=''):
                     elif flag == "FROZEN_WS":
                         df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='lightblue', label=flag)
                     else:
-                        df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', label=flag)
+                        try:
+                            df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', label=flag)
+                        except:
+                            print('Could not plot flag: ',flag)
                 plt.title(site)
                 plt.xlabel('Year')
                 plt.ylabel(var[:-3])
@@ -232,7 +237,16 @@ def adjust_data(df, site, var_list = [], skip_var = []):
         print('No data to fix at '+site)
         return df_out
     
-    adj_info = pd.read_csv('metadata/adjustments/'+site+'.csv', comment='#')
+    adj_info = pd.read_csv('metadata/adjustments/'+site+'.csv', comment='#', skipinitialspace=True)
+    
+    for ind in adj_info.loc[adj_info.variable == '*',:].index:
+        line_template = adj_info.loc[ind,:].copy()
+        for var in df_out.columns:
+            line_template.variable = var
+            line_template.name = adj_info.index.max()+1
+            adj_info = adj_info.append(line_template)
+        adj_info = adj_info.drop(labels=ind, axis=0)
+    
     adj_info=adj_info.sort_values(by=['variable','t0']) 
     adj_info.set_index(['variable','t0'],drop=False,inplace=True)
 
@@ -246,14 +260,19 @@ def adjust_data(df, site, var_list = [], skip_var = []):
         adj_info = adj_info.loc[~np.isin(adj_info.variable, skip_var), :]
         var_list = np.unique(adj_info.variable)
 
-    for var in var_list:       
+    for var in var_list:  
         # if var not in df.columns:
         #     print(var+' not in datafile')
         #     continue
-
-        print('### Adjusting '+var)
-        print('|start time|end time|operation|value|number of removed samples|')
-        print('|-|-|-|-|-|')
+        if ('_qc' not in var) & \
+            ('_min' not in var) & \
+            ('_max' not in var) & \
+            ('_std' not in var) & \
+            ('_adj_flag' not in var) & \
+            ('_min' not in var):
+            print('### Adjusting '+var)
+            print('|start time|end time|operation|value|number of removed samples|')
+            print('|-|-|-|-|-|')
 
         for t0, t1, func, val in zip(adj_info.loc[var].t0,
                                      adj_info.loc[var].t1,
@@ -262,10 +281,11 @@ def adjust_data(df, site, var_list = [], skip_var = []):
             
             if isinstance(t1, float):
                 if np.isnan(t1):
-                    t1 = df_out[var].index[-1].isoformat()
+                    t1 = df_out.index[-1].isoformat()
             
             # counting nan values before filtering
-            nan_count_1 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
+            if '_qc' not in var:
+                nan_count_1 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
 
             if t1 < t0:
                 print('Dates in wrong order')
@@ -363,11 +383,31 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                 tmp = tmp.interpolate(method='nearest', fill_value='extrapolate')
                 df_out.loc[t0:t1,var] = RH_ice2water(df_out.loc[t0:t1,var].values, tmp.values)
                 
-            nan_count_2 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
-            print('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|'+str(nan_count_2-nan_count_1)+'|')
-            
-            
-        if df[var].notna().any():
+            if func == 'time_shift':
+                t0 = pd.to_datetime(t0)
+                t1 = pd.to_datetime(t1)
+                df_out.loc[t0+pd.Timedelta(hours=val): t1+pd.Timedelta(hours=val), var] = df_out.loc[t0:t1, var].values
+                if val<(t1-t0)/ np.timedelta64(1, 'h'):
+                    df_out.loc[t0:t0+pd.Timedelta(hours=val), var] = np.nan
+                else:
+                    df_out.loc[t0:t1, var] = np.nan
+                    
+            if ('_qc' not in var) & \
+                ('_min' not in var) & \
+                ('_max' not in var) & \
+                ('_std' not in var) & \
+                ('_adj_flag' not in var) & \
+                ('_min' not in var):
+                nan_count_2 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
+                print('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|'+str(nan_count_2-nan_count_1)+'|')
+                        
+        if df[var].notna().any() & \
+                ('_qc' not in var) & \
+                ('_min' not in var) & \
+                ('_max' not in var) & \
+                ('_std' not in var) & \
+                ('_adj_flag' not in var) & \
+                ('_min' not in var):
             fig = plt.figure(figsize=(7, 4))  
             df[var].plot(style='o',label='before adjustment')
             df_out[var].plot(style='o',label='after adjustment')  
@@ -406,7 +446,6 @@ def filter_data(df, site, plot = True, remove_data = False):
     df_lim = pd.read_csv('metadata/limits.csv', sep='\s*,\s*',engine='python')
     df_lim.columns = ['site','var_lim','var_min','var_max']
     for site_lim, var, var_min, var_max in zip(df_lim.site, df_lim.var_lim, df_lim.var_min,df_lim.var_max):
-        
         if site_lim == '*' or site_lim == site:
             if var in df_out.columns.values:
                 ind = np.logical_or(df_out[var]>var_max,
@@ -490,33 +529,11 @@ def filter_data(df, site, plot = True, remove_data = False):
     for var in ['TA3','TA4']:
         if var in df_out.columns:
             df_out.loc[df[var]<-39.5,var+'_qc'] = "OOL"
+        else:
+            df_out[var+'_qc'] = "OK"
+            df_out.loc[df[var]<-39.5,var+'_qc'] = "OOL"
     return df_out
 
-
-
-def time_shifts(df, site):
-    if site == 'Crawford Point 1':
-        # df_org = df.copy()
-        df_shifted = df['1990-01-01 16:00:00' :'1990-09-26 14:00:00'].copy()
-        df_shifted.reset_index(inplace=True)
-
-        df = df.drop(df['1990-01-01 16:00:00' :'1990-09-26 14:00:00'].index,axis=0)
-        first_good_time = df.notna().any(axis=1).idxmax()
-        df = df.drop(df[:first_good_time].index,axis=0)
-        
-        # starts again 2011-05-02 15:00:00
-        df_shifted['timestamp'] = df_shifted.timestamp.values + pd.Timedelta(str(20*362+283)+" days")
-        df_shifted.set_index('timestamp',inplace=True)
-        
-        # replacing only if no data already existing in the target period
-        ind_replace = np.isnan(df[df_shifted.index[0]:df_shifted.index[-1]])
-        time_replace = ind_replace[ind_replace].index
-        df.loc[time_replace,:] = df_shifted.values
-        
-        # plt.figure()
-        # df.HS2.plot(label='shifted')
-        # df_org.HS2.plot(label='original')
-    return df
 
 def hampel(vals_orig, k=7, t0=3):
     '''
