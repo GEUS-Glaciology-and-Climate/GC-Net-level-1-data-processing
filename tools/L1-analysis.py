@@ -26,7 +26,7 @@ years_fmt = mdates.DateFormatter('%Y')
 
 # %% L0 overview
 path_to_L0N = 'L0M/'
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)[1:2]
 
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
@@ -70,9 +70,9 @@ for site, ID in zip(site_list.Name,site_list.ID):
 
         ax[count].set_ylabel(var)
         ax[count].grid()
-        if site != 'E-GRIP':
-            ax[count].axes.xaxis.set_major_formatter(years_fmt)
-            ax[count].axes.xaxis.set_major_locator(years)
+        # if site != 'E-GRIP':
+        #     ax[count].axes.xaxis.set_major_formatter(years_fmt)
+        #     ax[count].axes.xaxis.set_major_locator(years)
             # ax[count].axes.xaxis.set_minor_locator(months)
         ax[count].set_xlim((df.index[0],df.index[-1]))
         count=count+1

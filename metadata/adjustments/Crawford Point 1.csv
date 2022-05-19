@@ -38,7 +38,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2002-01-01T00:00:00+00:00,2003-01-01T00:00:00+00:00,HW2,add,-1,Adjustment based on continuity
 
 # pressure shift
-1995-05-25,2010-05-09T19,P,add,-12,Adjustment based on continuity
+1999-01-01,2010-05-09T19,P,add,-12,Adjustment based on continuity
 
 # time shifts
 1990-01-01T16:00:00, 1990-09-26T14:00:00, *, time_shift, 180552, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/63

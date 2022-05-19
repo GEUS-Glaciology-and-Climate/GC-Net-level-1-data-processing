@@ -13,6 +13,10 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20110601T22:00:00+00:00,,HS2,add,1.58,Not reported. Manual shift suggested by bav.
 20150115T00:00:00+00:00,,HS2,add,3.5,Not reported. Manual shift suggested by bav.
 
+1999-05-14T00:00+00:00,2000-01-01T00:00+00:00,P,add,-30,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
+2000-01-01T00:00+00:00,2005-05-26T00:00+00:00,P,add,-15,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
+2016-07-01T00:00+00:00,,P,add,-40,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
+
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
 2009-05-15T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,

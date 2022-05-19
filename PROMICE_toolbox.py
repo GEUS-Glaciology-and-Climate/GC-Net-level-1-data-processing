@@ -225,6 +225,7 @@ def remove_flagged_data(df):
     '''
     for var in df.columns:
         if var[-3:]=='_qc':
+            df[var].values[df[var].isnull()] = 'OK'
             if len(np.unique(df[var].values))>1:
                 msk = (df[var].values == 'OK') | (df[var].values == '')
                 df.loc[~msk, var[:-3]] = np.nan
