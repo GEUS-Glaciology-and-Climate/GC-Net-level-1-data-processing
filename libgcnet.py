@@ -123,9 +123,10 @@ def nameLevel0col(dfm):
                         "tc_snow_avg(9)": "TS9",
                         "tc_snow_avg(10)": "TS10",
                         "tc_snow_avg(10)": "TS10",
-                        "L_in_Avg": 'ILWR',
-                        "T_surf1_Avg": 'TS1',
-                        "T_surf2_Avg": 'TS2'}
+                        "uv_avg":'IUVR',
+                        "l_in_avg": 'ILWR',
+                        "t_surf1_avg": 'Tsurf1',
+                        "t_surf2_avg": 'Tsurf2'}
 
     target_var = np.array(list(variable_aliases.keys()))
     ind = np.isin(target_var, dfm.columns)

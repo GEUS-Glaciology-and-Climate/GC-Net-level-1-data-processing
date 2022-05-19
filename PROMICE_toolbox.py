@@ -193,7 +193,7 @@ def plot_flagged_data(df, site, tag=''):
             df[var].values[df[var].isnull()] = 'OK'
             flags_uni = np.unique(df[var].values.astype(str))
             if len(flags_uni)>1:
-                fig = plt.figure(figsize=(7, 4))  
+                fig = plt.figure(figsize=(12, 8))  
                 for flag in flags_uni:
                     if flag == "OK":
                         df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', color ='green', label=flag)
@@ -408,7 +408,7 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                 ('_std' not in var) & \
                 ('_adj_flag' not in var) & \
                 ('_min' not in var):
-            fig = plt.figure(figsize=(7, 4))  
+            fig = plt.figure(figsize=(12, 8))  
             df[var].plot(style='o',label='before adjustment')
             df_out[var].plot(style='o',label='after adjustment')  
             [plt.axvline(t,linestyle='--',color = 'red') for t in adj_info.loc[var].t0.values]
@@ -817,7 +817,7 @@ def combine_hs_dpt(df, site):
     df.loc[ind_update,"SurfaceHeight_summary(m)"] = data_update[ind_update] 
     
     # plotting result
-    f1 = plt.figure(figsize=(7, 4))    
+    f1 = plt.figure(figsize=(12, 8))    
     df["DepthPressureTransducer_Cor_adj(m)"].plot(label = 'Pressure transducer')
     df["SurfaceHeight1_adj(m)"].plot(label = 'SonicRanger1')
     df["SurfaceHeight2_adj(m)"].plot(label = 'SonicRanger2')

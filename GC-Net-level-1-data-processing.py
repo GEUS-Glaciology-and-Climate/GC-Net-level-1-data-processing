@@ -36,7 +36,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
        # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
        # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
        # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'Crawford Point 1',:]
+site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
 
 
 for site, ID in zip(site_list.Name,site_list.ID):
@@ -110,7 +110,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
                           database_fields_data_types = database_fields_data_types)
 
          # saving to file
-        nead.write(df_v5.fillna(-999).reset_index(), 'L1_ini/'+str(ID).zfill(2)+'-'+site+'_header.ini',
+        nead.write(df_v5.fillna(-999).reset_index(), 
+                   'L1_ini/'+str(ID).zfill(2)+'-'+site+'_header.ini',
                    'L1/'+str(ID).zfill(2)+'-'+site+'.csv')
 
 #%run tools/tocgen.py out/Report.md out/Report_with_toc.md
