@@ -2,20 +2,14 @@
 """
 Created on Wed Aug 19 20:00:14 2020
 
-2021-09-05T00:00:00+00:00,2021-09-09T00:00:00+00:00,P,min_filter,725,single outlier?
-2021-12-09T00:00:00+00:00,2021-12-13T00:00:00+00:00,P,max_filter,780,single outlier?
-
+tip list:
+    for plots in spyder command prompte
+    %matplotlib inline
+    for plots in a new window
+    %matplotlib qt
 @author: bav
 """
-# %matplotlib inline
-# %matplotlib qt
-
 import os, sys
-
-base_path= '/Users/maiken/Desktop/GCNet/GC-Net-level-1-data-processing/'
-os.chdir(base_path) # changing working directory
-
-
 import PROMICE_toolbox as ptb
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -24,7 +18,8 @@ import os.path
 import numpy as np
 from os import path
 
-
+base_path= '/Users/maiken/Desktop/GCNet/GC-Net-level-1-data-processing/'
+os.chdir(base_path) # changing working directory
 
 try:
     os.mkdir('figures')
@@ -33,16 +28,20 @@ try:
 except:
     print('figures and output folders already exist')
 
+# uncomment for command prompt output in file
 # sys.stdout = open("out/Report.md", "w")
-
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # print(site_list)
-site_list = site_list.iloc[8:9,:] # DYE-2
-# site_list = site_list.iloc[6:7,:] # Summit
-# site_list = site_list.iloc[7:8,:] # TUN
-# site_list = site_list.iloc[11:,:]
+
+# uncomment for use at specific sites
+# All station names: 'Swiss Camp 10m', 'Swiss Camp', 'Crawford Point 1', 'NASA-U',
+       # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
+       # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
+       # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
+site_list = site_list.loc[site_list.Name.values == 'Summit',:]
+
 
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
@@ -56,38 +55,49 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df=df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp, utc=True)
     df = df.set_index('timestamp')
-    # df = df.loc['2000':'2005',:] # reduce time window to save computational time
+    
+    # uncomment for use on reduce time window to save computational time
+    df = df.loc['2000':'2006',:]
+    
+    if site == 'Swiss Camp 10m':
+        df['TA2'] = np.nan
+        df['TA4'] = np.nan
     df=df.resample('H').mean()
-
-    # Time shifts:
-    df = ptb.time_shifts(df, site)
-
-    # Applying standard filters
-    df_out = ptb.filter_data(df, site)
-
+    
     print('## Manual flagging of data at '+site)
-    df_out = ptb.flag_data(df_out, site)
-
-    ptb.plot_flagged_data(df_out, site)
-    df_out = ptb.remove_flagged_data(df_out)
+    df_out = ptb.flag_data(df, site)
+    
+    # gap-filling the temperature TA1 and TA2 with the secondary sensors on the same levels
+    # df_out.loc[df.TA1.isnull(), 'TA1'] = df_out.loc[df_out.TA1.isnull(), 'TA3']
+    # df_out.loc[df.TA2.isnull(), 'TA2'] = df_out.loc[df_out.TA2.isnull(), 'TA4']
     
     print('## Adjusting data at '+site)
     # we start by adjusting and filtering the height of the wind sensors
     df_v4 = ptb.adjust_data(df_out, site, ['HW1', 'HW2'])
-    
+
     # Calculating surface height from wind sensor height
     df_v4['HS1'] = df_v4.HW1[df_v4.HW1.first_valid_index()] - df_v4.HW1
     df_v4['HS2'] = df_v4.HW2[df_v4.HW2.first_valid_index()] - df_v4.HW2
     if 'HW1_qc' not in df_out.columns:
-        df_v4['HW1_qc'] = ''
+        df_v4['HW1_qc'] = 'OK'
     if 'HW2_qc' not in df_out.columns:
-        df_v4['HW2_qc'] = ''
+        df_v4['HW2_qc'] = 'OK'
     df_v4.loc[df_v4['HW1_qc']=="CHECKME", 'HS1'] = np.nan
     df_v4.loc[df_v4['HW2_qc']=="CHECKME", 'HS2'] = np.nan
     
     print('## Adjusting data at '+site)
     # we then adjust and filter all other variables than height of the wind sensors
     df_v5 = ptb.adjust_data(df_v4, site, skip_var = ['HW1', 'HW2'])
+
+    # Applying standard filters again
+    df_v5 = ptb.filter_data(df_v5, site)
+    ptb.plot_flagged_data(df_v5, site)
+    df_v5 = ptb.remove_flagged_data(df_v5)
+
+    # removing empty rows:
+    useful_var_list = ['ISWR', 'OSWR', 'NSWR', 'TA1', 'TA2', 'TA3', 'TA4', 'RH1', 'RH2', 'P']+['TS'+str(i) for i in range(1,11)]
+    ind_first = df_v5[[v for v in useful_var_list if v in df_v5.columns]].first_valid_index()
+    df_v5 = df_v5.loc[ind_first:,:]
     
     if len(df_v5)>0:
         # get info related to the new fields
@@ -104,8 +114,9 @@ for site, ID in zip(site_list.Name,site_list.ID):
                           database_fields_data_types = database_fields_data_types)
 
          # saving to file
-        nead.write(df_v5.fillna(-999).reset_index(), 'L1_ini/'+str(ID).zfill(2)+'-'+site+'_header.ini',
+        nead.write(df_v5.fillna(-999).reset_index(), 
+                   'L1_ini/'+str(ID).zfill(2)+'-'+site+'_header.ini',
                    'L1/'+str(ID).zfill(2)+'-'+site+'.csv')
 
-#%run tocgen.py out/Report.md out/Report_toc.md
+#%run tools/tocgen.py out/Report.md out/Report_with_toc.md
 # sys.stdout.close()
