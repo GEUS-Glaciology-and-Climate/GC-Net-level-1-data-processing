@@ -31,7 +31,13 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1996-01-01T00:00:00+00:00,2009-05-19T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 
 2001-06-15T16:00:00+00:00,2003-12-13T17:00:00+00:00,HW1,add,0.78,Shift to match field notes and photgrammetry
-2001-06-15T16:00:00+00:00,2004-03-02T16:05:00+00:00,HW2,add,0.78,Shift to match field notes and photgrammetry
-2004-08-19T17:05:00+00:00,2005-05-04T21:00:00+00:00,HW2,add,0.78,Shift to match field notes and photgrammetry
+2001-06-15T16:00:00+00:00,2003-12-13T17:00:00+00:00,HW2,add,0.62,Shift to match field notes and photgrammetry
+2003-12-13T17:05:00+00:00,2004-03-02T16:05:00+00:00,HW2,add,0.84,Shift to match field notes and photgrammetry
+2004-08-19T17:05:00+00:00,2005-05-04T21:00:00+00:00,HW2,add,0.84,Shift to match field notes and photgrammetry
 2003-12-13T17:05:00+00:00,2005-05-04T19:00:00+00:00,HW1,add,0.37,Shift to match field notes and photgrammetry
 2004-12-13T17:05:00+00:00,2005-07-04T19:00:00+00:00,HW1,min_filter,-4,Outlier at -5 meter
+2005-05-26T07:00:00+00:00,2008-09-13T01:05:00+00:00,HW1,add,0.72,Shift to match photgrammetry!!
+2005-10-08T14:00:00+00:00,2006-03-17T14:05:00+00:00,HW2,add,0.87,Shift to match photgrammetry!!
+2009-05-19T19:00:00+00:00,2010-08-06T23:05:00+00:00,HW1,add,-0.39,Shift to match photgrammetry!!
+2009-05-19T19:00:00+00:00,2010-08-06T23:05:00+00:00,HW2,add,-0.39,Shift to match photgrammetry!!
+2005-05-26T07:00:00+00:00,2010-08-06T23:05:00+00:00,HW2,add,0.39,Shift to match photgrammetry!!

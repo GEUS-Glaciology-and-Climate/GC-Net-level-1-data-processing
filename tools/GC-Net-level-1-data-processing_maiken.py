@@ -10,6 +10,10 @@ tip list:
 @author: bav
 """
 import os, sys
+
+base_path= '/Users/maiken/Desktop/GCNet/GC-Net-level-1-data-processing/'
+os.chdir(base_path) # changing working directory
+
 import PROMICE_toolbox as ptb
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -17,9 +21,6 @@ import nead
 import os.path
 import numpy as np
 from os import path
-
-base_path= '/Users/maiken/Desktop/GCNet/GC-Net-level-1-data-processing/'
-os.chdir(base_path) # changing working directory
 
 try:
     os.mkdir('figures')
@@ -57,7 +58,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df = df.set_index('timestamp')
     
     # uncomment for use on reduce time window to save computational time
-    df = df.loc['2000':'2006',:]
+    #df = df.loc['2005':'2010',:]
     
     if site == 'Swiss Camp 10m':
         df['TA2'] = np.nan
