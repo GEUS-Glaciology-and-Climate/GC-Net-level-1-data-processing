@@ -82,7 +82,7 @@ else:
     print ("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(1,2):  #(len(L0dirs))  :
+for i in range(len(L0dirs))  :
     print('--------------------------------')
     print('Now Processing Directory: ',L0dirs[i])
     # the file structure of raw campbell data files
@@ -109,7 +109,7 @@ for i in range(1,2):  #(len(L0dirs))  :
     
     #loop through yearly raw data files
     for j in range(nyears-1): # minus 1 because we index two files including j+1
-
+        print(' ')
         print('###############################################################')
         print('Now processing files: ',L0files[j],' and ',L0files[j+1])
 
