@@ -36,7 +36,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
        # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
        # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
        # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
+# site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
 
 
 for site, ID in zip(site_list.Name,site_list.ID):
@@ -80,6 +80,23 @@ for site, ID in zip(site_list.Name,site_list.ID):
         df_v4['HW2_qc'] = 'OK'
     df_v4.loc[df_v4['HW1_qc']=="CHECKME", 'HS1'] = np.nan
     df_v4.loc[df_v4['HW2_qc']=="CHECKME", 'HS2'] = np.nan
+    
+    # HS1 = -df_v5.HW1
+    # HS1 = HS1.resample('H').interpolate(limit=24*14)
+    # ind_nan = HS1.isnull()
+    # average_acc = HS1.loc[:'1999'].diff().mean()
+    # HS_avg = np.arange(len(HS1))*average_acc
+    
+    # plt.figure()
+    # HS1.diff().plot()
+    # HS1.plot()
+
+    # HS1.loc[ind_nan] = HS_avg[ind_nan]
+    # adj_list = HS1.diff().loc[(HS1.diff().abs()>0.3)]
+    # for i in adj_list.index:
+    #     HS1.loc[i:] = HS1.loc[i:] - adj_list.loc[i]
+    # HS1.loc[ind_nan] = np.nan
+    # HS1.plot()
     
     print('## Adjusting data at '+site)
     # we then adjust and filter all other variables than height of the wind sensors
