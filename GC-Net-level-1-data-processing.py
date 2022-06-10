@@ -38,7 +38,6 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
        # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
 # site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
 
-
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
     print('# '+str(ID)+ ' ' + site)
@@ -51,22 +50,22 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df=df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp, utc=True)
     df = df.set_index('timestamp')
-    
+
     # uncomment for use on reduce time window to save computational time
     # df = df.loc['2000':'2005',:]
-    
+
     if site == 'Swiss Camp 10m':
         df['TA2'] = np.nan
         df['TA4'] = np.nan
     df=df.resample('H').mean()
-    
+
     print('## Manual flagging of data at '+site)
     df_out = ptb.flag_data(df, site)
-    
+
     # gap-filling the temperature TA1 and TA2 with the secondary sensors on the same levels
     # df_out.loc[df.TA1.isnull(), 'TA1'] = df_out.loc[df_out.TA1.isnull(), 'TA3']
     # df_out.loc[df.TA2.isnull(), 'TA2'] = df_out.loc[df_out.TA2.isnull(), 'TA4']
-    
+
     print('## Adjusting data at '+site)
     # we start by adjusting and filtering the height of the wind sensors
     df_v4 = ptb.adjust_data(df_out, site, ['HW1', 'HW2'])
@@ -98,6 +97,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     # HS1.loc[ind_nan] = np.nan
     # HS1.plot()
     
+
     print('## Adjusting data at '+site)
     # we then adjust and filter all other variables than height of the wind sensors
     df_v5 = ptb.adjust_data(df_v4, site, skip_var = ['HW1', 'HW2'])
@@ -111,7 +111,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     useful_var_list = ['ISWR', 'OSWR', 'NSWR', 'TA1', 'TA2', 'TA3', 'TA4', 'RH1', 'RH2', 'P']+['TS'+str(i) for i in range(1,11)]
     ind_first = df_v5[[v for v in useful_var_list if v in df_v5.columns]].first_valid_index()
     df_v5 = df_v5.loc[ind_first:,:]
-    
+
     if len(df_v5)>0:
         # get info related to the new fields
         units, display_description, database_fields, database_fields_data_types = \
@@ -127,7 +127,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
                           database_fields_data_types = database_fields_data_types)
 
          # saving to file
-        nead.write(df_v5.fillna(-999).reset_index(), 
+        nead.write(df_v5.fillna(-999).reset_index(),
                    'L1_ini/'+str(ID).zfill(2)+'-'+site+'_header.ini',
                    'L1/'+str(ID).zfill(2)+'-'+site+'.csv')
 
