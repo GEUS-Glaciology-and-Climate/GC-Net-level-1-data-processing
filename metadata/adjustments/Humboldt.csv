@@ -20,10 +20,13 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1995-01-01T00:00:00+00:00,2012-08-19T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 1995-01-01T00:00:00+00:00,2012-08-19T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 
-# time shifts
-2004-08-08, 2005-01-01, *, time_shift, -24, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/62
-2005-01-02, 2006-05-04, *, time_shift, -48, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/62
-2016-12-01T00, 2017-10-03T00, *, time_shift, 2943, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/62
-2015-01-01T00, 2015-02-18T06, *, time_shift, 2198, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/62
-2017-12-10T00, 2018-02-02T15, *, time_shift, 2691, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/62
-2018-12-06T00, 2019-01-18T13, *, time_shift, 2954, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/62
+# time shifts. For more info see: https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/62
+2004-08-08T00:00:00+00:00, 2005-01-01T00:00:00+00:00, *, time_shift, -24, 
+2005-01-02T00:00:00+00:00, 2006-05-04T00:00:00+00:00, *, time_shift, -48, 
+2015-01-01T00:00:00+00:00, 2015-02-18T06:00:00+00:00, *, time_shift, 2198, 
+2016-12-03T00:00:00+00:00, 2017-08-10T00:00:00+00:00, *, time_shift, 2943, 
+2017-08-10T00:00:00+00:00, 2017-10-04T00:00:00+00:00, *, time_shift, 5611, 
+2018-12-06T00:00:00+00:00, 2019-01-19T20:00:00+00:00, *, time_shift, 2954, 
+2019-12-10T00:00:00+00:00, 2020-08-10T00:00:00+00:00, *, time_shift, 2954, 
+2020-08-10T00:00:00+00:00, 2021-01-01T00:00:00+00:00, *, time_shift, 5424, 
+2021-08-14T00:00:00+00:00, , *, time_shift, -3360, 

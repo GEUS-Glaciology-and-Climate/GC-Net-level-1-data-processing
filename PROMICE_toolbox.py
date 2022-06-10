@@ -231,6 +231,7 @@ def remove_flagged_data(df):
                 df.loc[~msk, var[:-3]] = np.nan
             df = df.drop(columns=[var])
     return df
+import pytz
 
 def adjust_data(df, site, var_list = [], skip_var = []):
     df_out = df.copy()
@@ -239,7 +240,13 @@ def adjust_data(df, site, var_list = [], skip_var = []):
         return df_out
 
     adj_info = pd.read_csv('metadata/adjustments/'+site+'.csv', comment='#', skipinitialspace=True)
-
+    
+    adj_info.t0 = pd.to_datetime(adj_info.t0)
+    adj_info.t0 = adj_info.t0.apply(lambda x: x.replace(tzinfo=pytz.utc).isoformat()).values
+    adj_info.loc[adj_info.t1.isnull(), 't1'] = df_out.index[-1].isoformat()
+    adj_info.t1 = pd.to_datetime(adj_info.t1)
+    adj_info.t1 = adj_info.t1.apply(lambda x: x.replace(tzinfo=pytz.utc).isoformat()).values
+            
     for ind in adj_info.loc[adj_info.variable == '*',:].index:
         line_template = adj_info.loc[ind,:].copy()
         for var in df_out.columns:
@@ -247,8 +254,11 @@ def adjust_data(df, site, var_list = [], skip_var = []):
             line_template.name = adj_info.index.max()+1
             adj_info = adj_info.append(line_template)
         adj_info = adj_info.drop(labels=ind, axis=0)
-
+    
     adj_info=adj_info.sort_values(by=['variable','t0'])
+    
+    adj_info.loc[adj_info.adjust_function == 'time_shift',:] = adj_info.loc[adj_info.adjust_function == 'time_shift',:].sort_values(by='t0',ascending=False).values
+
     adj_info.set_index(['variable','t0'],drop=False,inplace=True)
 
     if len(var_list) == 0:
@@ -278,11 +288,7 @@ def adjust_data(df, site, var_list = [], skip_var = []):
         for t0, t1, func, val in zip(adj_info.loc[var].t0,
                                      adj_info.loc[var].t1,
                                      adj_info.loc[var].adjust_function,
-                                     adj_info.loc[var].adjust_value):
-
-            if isinstance(t1, float):
-                if np.isnan(t1):
-                    t1 = df_out.index[-1].isoformat()
+                                     adj_info.loc[var].adjust_value):            
 
             # counting nan values before filtering
             if '_qc' not in var:
@@ -387,11 +393,26 @@ def adjust_data(df, site, var_list = [], skip_var = []):
             if func == 'time_shift':
                 t0 = pd.to_datetime(t0)
                 t1 = pd.to_datetime(t1)
+                
+                if t1+pd.Timedelta(hours=val) > df_out.index[-1]:
+                    # case where the files needs to be extended to receive the shifted data
+                    nb_new_rows = (t1+pd.Timedelta(hours=val) - df_out.index[-1]).total_seconds()/3600
+                    df_new_rows = df_out.iloc[-int(nb_new_rows):,:].copy()
+                    df_new_rows.loc[:,:] = np.NaN
+                    df_new_rows.index = df_new_rows.index + (t1+pd.Timedelta(hours=val) - df_out.index[-1])
+                    df_out = df_out.append(df_new_rows)
+                    
                 df_out.loc[t0+pd.Timedelta(hours=val): t1+pd.Timedelta(hours=val), var] = df_out.loc[t0:t1, var].values
-                if val<(t1-t0)/ np.timedelta64(1, 'h'):
-                    df_out.loc[t0:t0+pd.Timedelta(hours=val), var] = np.nan
+                
+                if val>0:
+                    if val < 10000:
+                        # errasing data that existed during the time shift
+                        df_out.loc[t0:t0+pd.Timedelta(hours=val), var] = np.nan
+                    else:
+                        # case of Crawford Point where only the shifted data should be errased
+                        df_out.loc[t0:t1, var] = np.nan
                 else:
-                    df_out.loc[t0:t1, var] = np.nan
+                    df_out.loc[t1+pd.Timedelta(hours=val):t1, var] = np.nan
 
             if ('_qc' not in var) & \
                 ('_min' not in var) & \
