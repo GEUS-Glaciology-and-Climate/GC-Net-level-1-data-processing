@@ -11,6 +11,10 @@
 *, ISWR, 0, 950
 *, OSWR, 0, 950
 *, P, 610, 1000
+DYE2, HS1, -1, 1000
+DYE2, HS2, -1, 1000
+*, HW1, 0, 7
+*, HW2, 0, 7
 Crawford Point 1, P, 740, 820
 Petermann ELA,P, 850, 960
 NASA-SE, P, 680, 790

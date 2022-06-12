@@ -1,12 +1,15 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-20010607T16:00:00+00:00,,HS1,add,2,manual shift by bav
+20010607T16:00:00+00:00,,HS1,add,1.7,manual shift by bav
+20020227T00:00:00+00:00,,HS1,add,0.9,manual shift by bav
 20080426T16:00:00+00:00,,HS1,add,3,manual shift by bav
+20180519T00:00:00+00:00,,HS1,add,2.5,manual shift by bav
+20190626T00:00:00+00:00,,HS1,add,-2.5,manual shift by bav
 
-20010607T16:00:00+00:00,,HS2,add,2.2,manual shift by bav
+20010607T16:00:00+00:00,,HS2,add,1.5,manual shift by bav
 20040513T16:00:00+00:00,,HS2,add,1,manual shift by bav
 20070405T16:00:00+00:00,,HS2,add,-0.5,manual shift by bav
 20080501T00:00:00+00:00,,HS2,add,3.2,manual shift by bav
-20130213T16:00:00+00:00,,HS2,add,-1.5,manual shift by bav
+20130213T16:00:00+00:00,,HS2,add,-0.5,manual shift by bav
 20150525T16:00:00+00:00,,HS2,add,1,manual shift by bav
 
 2021-01-05T00:00:00+00:00,2022-09-09T00:00:00+00:00,P,grad_filter,5,

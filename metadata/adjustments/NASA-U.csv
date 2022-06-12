@@ -1,17 +1,22 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-19960529T00:00:00+00:00,,HS1,add,1.25,Not reported. Manual shift suggested by bav.
-20030603T16:00:00+00:00,,HS1,add,8.0,Not reported. Manual shift suggested by bav.
+19970101T00:00:00+00:00,,HS1,add,1.25,Not reported. Manual shift suggested by bav.
+19990514T16:00:00+00:00,,HS1,add,2.25,Not reported. Manual shift suggested by bav.
+20030603T16:00:00+00:00,,HS1,add,4.0,Not reported. Manual shift suggested by bav.
 20050525T00:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
-20090420T16:00:00+00:00,,HS1,add,1.0,Not reported. Manual shift suggested by bav.
-20110601T22:00:00+00:00,,HS1,add,1.7,Not reported. Manual shift suggested by bav.
-20140531T00:00:00+00:00,,HS1,add,3.0,Not reported. Manual shift suggested by bav.
-19960529T00:00:00+00:00,,HS2,add,1.25,Not reported. Manual shift suggested by bav.
-19970522T00:00:00+00:00,,HS2,add,1.25,Not reported. Manual shift suggested by bav.
+20090420T16:00:00+00:00,,HS1,add,1.5,Not reported. Manual shift suggested by bav.
+20110601T22:00:00+00:00,,HS1,add,0.7,Not reported. Manual shift suggested by bav.
+20140531T00:00:00+00:00,,HS1,add,2.0,Not reported. Manual shift suggested by bav.
+20180101T00:00:00+00:00,,HS1,add,2.0,Not reported. Manual shift suggested by bav.
+
+19970101T00:00:00+00:00,,HS2,add,1.25,Not reported. Manual shift suggested by bav.
+19970501T00:00:00+00:00,,HS2,add,1.25,Not reported. Manual shift suggested by bav.
+19990514T16:00:00+00:00,,HS2,add,2.25,Not reported. Manual shift suggested by bav.
 20030603T16:00:00+00:00,,HS2,add,4.0,Not reported. Manual shift suggested by bav.
-20050525T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
-20090420T16:00:00+00:00,,HS2,add,4.7,Not reported. Manual shift suggested by bav.
-20110601T22:00:00+00:00,,HS2,add,1.58,Not reported. Manual shift suggested by bav.
-20150115T00:00:00+00:00,,HS2,add,3.5,Not reported. Manual shift suggested by bav.
+20050525T00:00:00+00:00,,HS2,add,2.8,Not reported. Manual shift suggested by bav.
+20090420T16:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
+20110601T22:00:00+00:00,,HS2,add,0.58,Not reported. Manual shift suggested by bav.
+20130604T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
+20170115T00:00:00+00:00,,HS2,add,1.5,Not reported. Manual shift suggested by bav.
 
 1999-05-14T00:00+00:00,2000-01-01T00:00+00:00,P,add,-30,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
 2000-01-01T00:00+00:00,2005-05-26T00:00+00:00,P,add,-15,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46

@@ -25,7 +25,7 @@ except:
     print('figures and output folders already exist')
 
 # uncomment for command prompt output in file
-# sys.stdout = open("out/Report.md", "w")
+sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
@@ -62,6 +62,9 @@ for site, ID in zip(site_list.Name,site_list.ID):
     print('## Manual flagging of data at '+site)
     df_out = ptb.flag_data(df, site)
 
+    # flagging frozen values
+    df_out = ptb.filter_zero_gradient(df_out)
+
     # gap-filling the temperature TA1 and TA2 with the secondary sensors on the same levels
     # df_out.loc[df.TA1.isnull(), 'TA1'] = df_out.loc[df_out.TA1.isnull(), 'TA3']
     # df_out.loc[df.TA2.isnull(), 'TA2'] = df_out.loc[df_out.TA2.isnull(), 'TA4']
@@ -69,39 +72,23 @@ for site, ID in zip(site_list.Name,site_list.ID):
     print('## Adjusting data at '+site)
     # we start by adjusting and filtering the height of the wind sensors
     df_v4 = ptb.adjust_data(df_out, site, ['HW1', 'HW2'])
-
-    # Calculating surface height from wind sensor height
-    df_v4['HS1'] = df_v4.HW1[df_v4.HW1.first_valid_index()] - df_v4.HW1
-    df_v4['HS2'] = df_v4.HW2[df_v4.HW2.first_valid_index()] - df_v4.HW2
-    if 'HW1_qc' not in df_out.columns:
+    
+    # Creating surface height field
+    ind1 = np.max([df_v4.HW1.first_valid_index(), df_v4.HW1_qc.where(df_v4.HW1_qc=='OK').first_valid_index()])
+    ind2 = np.max([df_v4.HW2.first_valid_index(), df_v4.HW2_qc.where(df_v4.HW2_qc=='OK').first_valid_index()])
+    df_v4['HS1'] = df_v4.HW1[ind1] - df_v4.HW1
+    df_v4['HS2'] = df_v4.HW2[ind2] - df_v4.HW2
+    if 'HW1_qc' not in df_v4.columns:
         df_v4['HW1_qc'] = 'OK'
-    if 'HW2_qc' not in df_out.columns:
+    if 'HW2_qc' not in df_v4.columns:
         df_v4['HW2_qc'] = 'OK'
     df_v4.loc[df_v4['HW1_qc']=="CHECKME", 'HS1'] = np.nan
     df_v4.loc[df_v4['HW2_qc']=="CHECKME", 'HS2'] = np.nan
-    
-    # HS1 = -df_v5.HW1
-    # HS1 = HS1.resample('H').interpolate(limit=24*14)
-    # ind_nan = HS1.isnull()
-    # average_acc = HS1.loc[:'1999'].diff().mean()
-    # HS_avg = np.arange(len(HS1))*average_acc
-    
-    # plt.figure()
-    # HS1.diff().plot()
-    # HS1.plot()
-
-    # HS1.loc[ind_nan] = HS_avg[ind_nan]
-    # adj_list = HS1.diff().loc[(HS1.diff().abs()>0.3)]
-    # for i in adj_list.index:
-    #     HS1.loc[i:] = HS1.loc[i:] - adj_list.loc[i]
-    # HS1.loc[ind_nan] = np.nan
-    # HS1.plot()
-    
 
     print('## Adjusting data at '+site)
     # we then adjust and filter all other variables than height of the wind sensors
     df_v5 = ptb.adjust_data(df_v4, site, skip_var = ['HW1', 'HW2'])
-
+    
     # Applying standard filters again
     df_v5 = ptb.filter_data(df_v5, site)
     ptb.plot_flagged_data(df_v5, site)

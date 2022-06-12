@@ -141,6 +141,12 @@ def flag_data(df, site, var_list = ['all']):
         return df
 
     flag_data = pd.read_csv('metadata/flags/'+site+'.csv', comment='#')
+    
+    flag_data.t0 = pd.to_datetime(flag_data.t0)
+    flag_data.t0 = flag_data.t0.apply(lambda x: x.replace(tzinfo=pytz.utc).isoformat()).values
+    flag_data.loc[flag_data.t1.isnull(), 't1'] = df_out.index[-1].isoformat()
+    flag_data.t1 = pd.to_datetime(flag_data.t1)
+    flag_data.t1 = flag_data.t1.apply(lambda x: x.replace(tzinfo=pytz.utc).isoformat()).values
 
     if var_list[0]=='all':
         var_list =  np.unique(flag_data.variable)
@@ -447,6 +453,55 @@ def adjust_data(df, site, var_list = [], skip_var = []):
     return df_out
 
 
+# Filter frozen values
+from scipy.ndimage import binary_dilation
+def filter_zero_gradient(df_out):
+    # default settings:
+    thresh = 0.000001
+    length_frozen = 6
+    not_in_dark_season = False
+    var_list =  ['VW1','VW2','TA1','TA1','TA2','TA3','TA4','P','RH1','RH2', 'HW1','HW2', 'ISWR','OSWR']
+    for var in var_list:
+        if var not in df_out.columns:
+            continue
+        if var in ['HW1','HW2']:
+            length_frozen=5*24
+        if var in ['ISWR','OSWR']:
+            thresh = 1
+            length_frozen=24
+            not_in_dark_season=True
+            
+        ind = np.abs(df_out[var].diff().values)<thresh
+    
+        if not_in_dark_season:
+            dark_month = df_out['ISWR'].groupby(df_out.index.month).mean()<5
+            ind_winter = np.isin(df_out.index.month, dark_month[dark_month].index)
+            ind[ind_winter] = False
+    
+    
+        if np.any(ind):
+            no_wind_count = 0
+            for i, val in enumerate(ind):
+                if val:
+                    no_wind_count = no_wind_count +1
+                else:
+                    if no_wind_count>0:
+                        if no_wind_count<=length_frozen:
+                            # gap less than length_frozen hours putting down the flag
+                            ind[np.arange(i-no_wind_count,i+1)] = False
+                            no_wind_count = 0
+                        else:
+                            # too long period without wind, leaving flags up
+                            no_wind_count = 0
+            ind = binary_dilation(ind)
+    
+            if var+'_qc' in df_out.columns:
+                df_out.loc[ind,var+'_qc'] = "FROZEN"
+            else:
+                df_out[var+'_qc'] = "OK"
+                df_out.loc[ind,var+'_qc'] = "FROZEN"
+    return df_out
+
 
 def filter_data(df, site, plot = True, remove_data = False):
     '''
@@ -507,46 +562,7 @@ def filter_data(df, site, plot = True, remove_data = False):
         if var in df_out.columns:
             df_out = filter_low_ws(df_out, var)
 
-    # Filter #2: Frozen values
-    def filter_zero_gradient(df_out, var,thresh = 0.000001, length_frozen = 6, not_in_dark_season = False):
-        ind = np.abs(df_out[var].diff().values)<thresh
 
-        if not_in_dark_season:
-            dark_month = df_out['ISWR'].groupby(df_out.index.month).mean()<5
-            ind_winter = np.isin(df_out.index.month, dark_month[dark_month].index)
-            ind[ind_winter] = False
-
-
-        if np.any(ind):
-            no_wind_count = 0
-            for i, val in enumerate(ind):
-                if val:
-                    no_wind_count = no_wind_count +1
-                else:
-                    if no_wind_count>0:
-                        if no_wind_count<=length_frozen:
-                            # gap less than 6 hours putting down the flag
-                            ind[np.arange(i-no_wind_count,i+1)] = False
-                            no_wind_count = 0
-                        else:
-                            # too long period without wind, leaving flags up
-                            no_wind_count = 0
-
-            if var+'_qc' in df_out.columns:
-                df_out.loc[ind,var+'_qc'] = "FROZEN"
-            else:
-                df_out[var+'_qc'] = "OK"
-                df_out.loc[ind,var+'_qc'] = "FROZEN"
-        return df_out
-    for var in ['VW1','VW2','TA1','TA1','TA2','TA3','TA4','P','RH1','RH2']:
-        if var in df_out.columns:
-            df_out = filter_zero_gradient(df_out, var)
-    for var in ['ISWR','OSWR']:
-        if var in df_out.columns:
-            df_out = filter_zero_gradient(df_out, var,
-                                          thresh = 1,
-                                          length_frozen=24,
-                                          not_in_dark_season=True)
     # Filter #3: Thermocouples limited to -40oC
     for var in ['TA3','TA4']:
         if var in df_out.columns:
@@ -657,7 +673,61 @@ def firstNonNan(listfloats):
       return item
 
 
+def surface_height_processor(df_v4):
+    # Calculating surface height from wind sensor height
+    df_v4['HS1'] = df_v4.HW1[df_v4.HW1.first_valid_index()] - df_v4.HW1
+    df_v4['HS2'] = df_v4.HW2[df_v4.HW2.first_valid_index()] - df_v4.HW2
+    if 'HW1_qc' not in df_v4.columns:
+        df_v4['HW1_qc'] = 'OK'
+    if 'HW2_qc' not in df_v4.columns:
+        df_v4['HW2_qc'] = 'OK'
+    df_v4.loc[df_v4['HW1_qc']=="CHECKME", 'HS1'] = np.nan
+    df_v4.loc[df_v4['HW2_qc']=="CHECKME", 'HS2'] = np.nan
+    
+    df_v4.HS1 = df_v4.HS1.resample('H').interpolate(limit=12, method='nearest')
+    ind_nan = df_v4.HS1.isnull()
+    average_acc = df_v4.HS1.loc[:'1999'].diff().mean()
+    HS_avg = np.arange(len(df_v4.HS1))*average_acc
+    
+    df_v4.HS1.loc[ind_nan] = HS_avg[ind_nan]
+    adj_list = df_v4.HS1.diff().loc[(df_v4.HS1.diff().abs()>0.3)]
+    for i in adj_list.index:
+        df_v4.HS1.loc[i:] = df_v4.HS1.loc[i:] - adj_list.loc[i]
+    df_v4.HS1.loc[ind_nan] = np.nan
+    diff = df_v4.HS1.diff() 
+    diff.loc[diff.isnull()] = average_acc
+    df_v4['HS1_adj'] = diff.cumsum()
+    
+    plt.figure()
+    df_v4.HS1.diff() .plot()
+    df_v4.HS1.plot()
+    (-df_v4.HW1).plot(label='original instrument height')
+    df_v4.HS1.plot()
+    df_v4.HS1_adj.plot(label='final adjusted HS')
+    plt.title('HS1')
 
+    df_v4.HS2 = df_v4.HS2.resample('H').interpolate(limit=12, method='nearest')
+    ind_nan = df_v4.HS2.isnull()
+    average_acc = df_v4.HS2.loc[:'1999'].diff().mean()
+    HS_avg = np.arange(len(df_v4.HS2))*average_acc
+    
+    df_v4.HS2.loc[ind_nan] = HS_avg[ind_nan]
+    adj_list = df_v4.HS2.diff().loc[(df_v4.HS2.diff().abs()>0.3)]
+    for i in adj_list.index:
+        df_v4.HS2.loc[i:] = df_v4.HS2.loc[i:] - adj_list.loc[i]
+    df_v4.HS2.loc[ind_nan] = np.nan
+    diff = df_v4.HS2.diff() 
+    diff.loc[diff.isnull()] = average_acc
+    df_v4['HS2_adj'] = diff.cumsum()
+    
+    plt.figure()
+    df_v4.HS2.diff() .plot()
+    df_v4.HS2.plot()
+    (-df_v4.HW2).plot(label='original instrument height')
+    df_v4.HS2.plot()
+    df_v4.HS2_adj.plot(label='final adjusted HS')
+    plt.title('HS2')
+    return df_v4
 def combine_hs_dpt(df, site):
     # smoothing and filtering pressure transducer data
     df["DepthPressureTransducer_Cor_adj(m)"] = hampel(df["DepthPressureTransducer_Cor(m)"].interpolate(limit=72)).values

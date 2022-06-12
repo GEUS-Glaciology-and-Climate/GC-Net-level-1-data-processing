@@ -82,7 +82,7 @@ else:
     print ("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(len(L0dirs))  :
+for i in range(7, 8):  #len(L0dirs))  :
     print('--------------------------------')
     print('Now Processing Directory: ',L0dirs[i])
     # the file structure of raw campbell data files
@@ -222,7 +222,7 @@ for i in range(len(L0dirs))  :
     print('Number of records = ',len(dfm["timestamp"]))
     print('The following columns have been extracted:')
     print(dfm.dtypes)
-
+    
     #make path/name of campbell merged nead file the same as raw data directory
     coutfile = mpath+L0dirs[i]
     #make path for merged C-level and Campbell nead file
@@ -234,6 +234,9 @@ for i in range(len(L0dirs))  :
     #get string list of fields in output nead file
     fields = write_nead.get_config_list_str(configfile, 'fields')
     print(fields)
+    for var in fields:
+        if var not in dfm.columns:
+            dfm[var] = np.nan
     # get list of add_value offset calibrations
     add_value = write_nead.get_config_list(configfile, 'add_value')
     #calibrate add_value for all fields
@@ -288,7 +291,8 @@ for i in range(len(L0dirs))  :
         print('download failed')
         pass
     starttime = pytz.utc.localize(starttime)
-    #read and merge historical c-level file
+    
+    #read and merge historical c-level file            
     if os.path.isfile(cfiledir):
         if os.path.isfile(cfiledir_jeb):
             cconfigfile = './L0//C level Jason/c_file_header_jeb.ini'
@@ -317,6 +321,7 @@ for i in range(len(L0dirs))  :
         needed_dfc.loc[msk, 'HW2'] = -needed_dfc.loc[msk, 'HS2']
         
         dfm = dfm.set_index("timestamp")
+        
         print("Merging with logger files dataframe:",dfm)
         if os.path.isfile(cfiledir_jeb):
             dfmc = pd.concat([needed_dfc_jeb, needed_dfc, dfm])
@@ -332,4 +337,4 @@ for i in range(len(L0dirs))  :
 
 
     #clear dfm from memory before next station
-    del dfm
+    # del dfm
