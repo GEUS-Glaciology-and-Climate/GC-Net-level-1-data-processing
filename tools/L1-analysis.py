@@ -465,13 +465,13 @@ for i, folder in enumerate(site_list):
 
 ax[1,0].set_ylabel('Surface height (m)')
 ax[2,1].set_xlabel('Day of year')
-#%%
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)  #.iloc[7:,:]
 
+#%% Data availability
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)  #.iloc[7:,:]
+plt.close('all')
 for site, ID in zip(site_list.Name,site_list.ID):
     filename = 'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv'
     if not path.exists(filename):
-        print('Warning: No file for station '+str(ID)+' '+site)
         continue
     ds = nead.read(filename)
     df = ds.to_dataframe()
@@ -480,12 +480,12 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df = df.set_index('timestamp').replace(-999,np.nan)
 
     df_m = df.resample('M').count()/31/24*100
-    cols = ['ISWR', 'OSWR','NSWR','TA1','TA2','TA3','TA4','RH1','RH2','VW1','DW1','VW2','DW2','P','HW1','HW2']
+    cols = [col for col in ['ISWR', 'OSWR','NSWR','TA1','TA2','TA3','TA4','RH1','RH2','VW1','DW1','VW2','DW2','P','HW1','HW2'] if col in df_m.columns]
     cols.reverse()
     df_m = df_m[cols]
  
-    fig = plt.figure()
-    plt.pcolor(df_m.transpose())
+    fig = plt.figure(figsize=(12,5))
+    plt.pcolor(df_m.transpose(), cmap='magma')
     major_ticks = [d for d in df_m.index if d.month==1]
     ticks_labels = [d.year for d in df_m.index if d.month==1]
         
@@ -493,8 +493,98 @@ for site, ID in zip(site_list.Name,site_list.ID):
                          len(major_ticks)*12, 12), ticks_labels)
     ax = plt.gca()
     ax.set_xticks(np.arange(0, len(df_m.index), 1), minor=True)
+    plt.xticks(rotation = 45)
     plt.yticks(np.arange(0.5, len(df_m.columns), 1), df_m.columns)
     plt.colorbar(label='Data availability (%)')
     plt.title(site)
     fig.savefig('figures/L1_overview/data_availability_'+site.replace(' ','_')+'.png',bbox_inches='tight')
     print('![](../figures/L1_overview/data_availability_'+site.replace(' ','_')+'.png)')
+
+# %% Instrument height assessment
+name_alias = {'DY2': 'DYE2', 'CP1':'Crawford Point 1'}
+
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)[19:]
+# you can select a site by specifying f.e.:
+# site_list  = site_list.iloc[2:3,:]
+# site_list  = site_list.iloc[8:9,:] # Dye-2 
+# site_list  = site_list.iloc[2:3,:] # Crawford Point 1
+# site_list  = site_list.iloc[15:16,:] # nasa-se 
+plt.close('all')
+for site, ID in zip(site_list.Name,site_list.ID):
+    print('# '+str(ID)+ ' ' + site)
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv'
+    if not path.exists(filename):
+        print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df[df == -999] = np.nan
+    df['time'] = pd.to_datetime(df.timestamp)
+    df = df.set_index('time')
+
+    # read observed instrument height data
+    try:      
+        url = 'https://docs.google.com/spreadsheets/d/172LNxgYevqwO892zrc98UDMAVTQmJ0XZB5kmMLme4GM/gviz/tq?tqx=out:csv&sheet='+site.replace(' ','%20')
+        pd.read_csv(url).to_csv('metadata/maintenance summary/'+site+'.csv')
+    except:
+        print('Cannot download maintenance summary. Using local file.')
+        pass
+
+    obs_df = pd.read_csv('metadata/maintenance summary/'+site+'.csv')    
+    obs_df['date'] = pd.to_datetime(obs_df['date'], utc=True)
+    obs_df = obs_df.set_index('date')
+    useful_columns = ['W1 before (cm)', 'W1 after (cm)',
+                  'W2 before (cm)','W2 after (cm)',
+                  'T1 before (cm)','T1 after (cm)',
+                  'T2 before (cm)','T2 after (cm)']
+    if obs_df[useful_columns].notnull().sum().sum() == 0:
+        print('no intrument height reported at ', site)
+        continue
+    obs_df[useful_columns] = obs_df[useful_columns]/100
+    
+    # read photogrammetry heights
+    df_photo = pd.read_csv('metadata/photogrammetry_instrument_height_20220425.csv')
+    df_photo = df_photo.replace({'site': name_alias})
+    df_photo = df_photo.loc[df_photo.site==site, :]
+    df_photo['date'] = pd.to_datetime(df_photo[['year','month','day']])
+    df_photo = df_photo.set_index('date').drop(columns = ['site','year','month','day'])
+    
+    fig = plt.figure()
+    ax = plt.subplot(111)
+    sym_size=20
+    mult=0.6
+    # Plotting observed instrument heights
+    obs_df['W1 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
+              markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs before')
+    obs_df['W2 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
+              markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs before')
+    obs_df['W1 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
+              markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs after')
+    obs_df['W2 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
+              markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs after')
+    
+    obs_df['T1 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
+              markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs before')
+    obs_df['T2 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
+              markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs before')
+    obs_df['T1 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
+              markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs afer')
+    obs_df['T2 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
+              markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs after')
+    
+    df_photo[['Wz1','Wz2','THz1','THz2']].plot(ax=ax, marker='o', linestyle='None')
+
+    df['HW1'].plot(ax =ax, c='C0',label='HW1')
+    df['HW2'].plot(ax =ax, c='C1',label='HW2')
+    
+    plt.ylabel('Height above surface (m)')
+    plt.title(site+' profile instrument heights')
+    plt.legend()
+    ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    
+    plt.savefig('figures/L1_overview/instrument_height_assessment/'+site+'_height_comparison.png', bbox_inches='tight',dpi=250)
+    print('![](../figures/L1_overview/instrument_height_assessment/'+site.replace(' ','%20')+'_height_comparison.png)')
+
+#%run tools/tocgen.py out/L1_intrument_heights.md out/L1_intrument_heights_toc.md
+
