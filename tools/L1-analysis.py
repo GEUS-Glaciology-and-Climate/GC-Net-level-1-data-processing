@@ -97,6 +97,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
         plt.savefig('figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
         print('![](../figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
 # %run tocgen.py out/L0_overview.md out/L0_overview_toc.md
+
+
 # %% L1 overview
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)  #.iloc[7:,:]
 
@@ -160,7 +162,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
             ax[k].set_axis_off()
         ax[0].set_title(site)
         plt.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
-        print('![](figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
+        print('![](figures/L1_overview/all variables/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
 
 # %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
@@ -463,3 +465,36 @@ for i, folder in enumerate(site_list):
 
 ax[1,0].set_ylabel('Surface height (m)')
 ax[2,1].set_xlabel('Day of year')
+#%%
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)  #.iloc[7:,:]
+
+for site, ID in zip(site_list.Name,site_list.ID):
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv'
+    if not path.exists(filename):
+        print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+
+    df_m = df.resample('M').count()/31/24*100
+    cols = ['ISWR', 'OSWR','NSWR','TA1','TA2','TA3','TA4','RH1','RH2','VW1','DW1','VW2','DW2','P','HW1','HW2']
+    cols.reverse()
+    df_m = df_m[cols]
+ 
+    fig = plt.figure()
+    plt.pcolor(df_m.transpose())
+    major_ticks = [d for d in df_m.index if d.month==1]
+    ticks_labels = [d.year for d in df_m.index if d.month==1]
+        
+    plt.xticks(np.arange(np.where(df_m.index==major_ticks[0])[0],
+                         len(major_ticks)*12, 12), ticks_labels)
+    ax = plt.gca()
+    ax.set_xticks(np.arange(0, len(df_m.index), 1), minor=True)
+    plt.yticks(np.arange(0.5, len(df_m.columns), 1), df_m.columns)
+    plt.colorbar(label='Data availability (%)')
+    plt.title(site)
+    fig.savefig('figures/L1_overview/data_availability_'+site.replace(' ','_')+'.png',bbox_inches='tight')
+    print('![](../figures/L1_overview/data_availability_'+site.replace(' ','_')+'.png)')
