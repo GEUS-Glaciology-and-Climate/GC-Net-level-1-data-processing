@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use the L1 dataset, please cite it as below."
+authors:
+  - family-names: Vandecrux
+    given-names: Baptiste
+  - family-names: Box
+    given-names: Jason
+  - family-names: Houtz
+    given-names: Derek
+  - family-names: Revheim
+    given-names: Maiken Kristiansen
+title: "The GC-Net level 1 dataset and processing scripts"
+version: 1
+url: https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing
+date-released: 2022

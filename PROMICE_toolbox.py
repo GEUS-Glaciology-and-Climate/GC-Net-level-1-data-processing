@@ -532,44 +532,6 @@ def filter_data(df, site, plot = True, remove_data = False):
                 else:
                     df_out[var+'_qc'] = "OK"
                     df_out.loc[ind,var+'_qc'] = "OOL"
-
-    # Filter #1: Frozen anemometer
-    def filter_low_ws(df_out, var,thresh = 1, length_frozen = 48):
-        ind = df_out[var].values<thresh
-
-        if np.any(ind):
-            no_wind_count = 0
-            for i, val in enumerate(ind):
-                if val:
-                    no_wind_count = no_wind_count +1
-                else:
-                    if no_wind_count>0:
-                        if no_wind_count<=length_frozen:
-                            # gap less than 6 hours putting down the flag
-                            ind[np.arange(i-no_wind_count,i+1)] = False
-                            no_wind_count = 0
-                        else:
-                            # too long period without wind, leaving flags up
-                            no_wind_count = 0
-
-            if var+'_qc' in df_out.columns:
-                df_out.loc[ind,var+'_qc'] = "FROZEN_WS"
-            else:
-                df_out[var+'_qc'] = "OK"
-                df_out.loc[ind,var+'_qc'] = "FROZEN_WS"
-        return df_out
-    for var in ['VW1','VW2']:
-        if var in df_out.columns:
-            df_out = filter_low_ws(df_out, var)
-
-
-    # Filter #3: Thermocouples limited to -40oC
-    for var in ['TA3','TA4']:
-        if var in df_out.columns:
-            df_out.loc[df[var]<-39.5,var+'_qc'] = "OOL"
-        else:
-            df_out[var+'_qc'] = "OK"
-            df_out.loc[df[var]<-39.5,var+'_qc'] = "OOL"
     return df_out
 
 
