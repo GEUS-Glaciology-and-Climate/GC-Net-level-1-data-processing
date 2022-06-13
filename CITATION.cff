@@ -11,5 +11,5 @@ authors:
     given-names: Maiken Kristiansen
 title: "The GC-Net level 1 dataset and processing scripts"
 version: 1
-doi: https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing
+url: https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing
 date-released: 2022
