@@ -26,7 +26,7 @@ years_fmt = mdates.DateFormatter('%Y')
 
 # %% L0 overview
 path_to_L0N = 'L0M/'
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)[1:2]
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
@@ -100,7 +100,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
 
 
 # %% L1 overview
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)  #.iloc[7:,:]
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
@@ -503,7 +503,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
 # %% Instrument height assessment
 name_alias = {'DY2': 'DYE2', 'CP1':'Crawford Point 1'}
 
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)[19:]
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 # you can select a site by specifying f.e.:
 # site_list  = site_list.iloc[2:3,:]
 # site_list  = site_list.iloc[8:9,:] # Dye-2 

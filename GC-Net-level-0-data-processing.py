@@ -82,7 +82,7 @@ else:
     print ("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(7, 8):  #len(L0dirs))  :
+for i in range(len(L0dirs))  :
     print('--------------------------------')
     print('Now Processing Directory: ',L0dirs[i])
     # the file structure of raw campbell data files
@@ -94,8 +94,11 @@ for i in range(7, 8):  #len(L0dirs))  :
     cfiledir = path+L0dirs[i]+'/C file/'+cfilenum+'c.dat'
 
     #get list and sort all non-hidden files in station directory
-    allL0files = sorted([f for f in os.listdir(datadir) if not f.startswith('.')])
-
+    try:
+        allL0files = sorted([f for f in os.listdir(datadir) if not f.startswith('.')])
+    except:
+        print('No file available in',L0dirs[i])
+        continue
     #print files found in station folder:
     print('Merging the files found in the station directory:')
     [print(ii) for ii in allL0files]
@@ -172,7 +175,7 @@ for i in range(7, 8):  #len(L0dirs))  :
         #read next file in station directory
         df2_p1 = pd.read_csv(datadir+L0files[j+1], sep=',', dtype=None, header=0, parse_dates=[0], skiprows=[ii for ii in (0,2,3)], na_values=nan_string, encoding='latin-1')
         df2_p1.set_index(df2_p1["TIMESTAMP"])
-        pd.to_datetime(df2_p1.index)
+
         # implement old ARGOS/ARGOS/GOES case structure for the files being merged
         # this means there are 3 separate tables for a single "row" in the processed data
         if df2_oldargos_bool and df2_argos_bool:
@@ -272,11 +275,12 @@ for i in range(7, 8):  #len(L0dirs))  :
     local_file = local_path+site+'.csv'
     print('requesting transmissions from',date_end,'to',date_now)
     print('url:',remote_url)
-    data = requests.get(remote_url)
-    # Save file data to local copy
-    with open(local_file, 'wb')as file:
-        file.write(data.content)
+
     try:     
+        data = requests.get(remote_url)
+        # Save file data to local copy
+        with open(local_file, 'wb')as file:
+            file.write(data.content)
         dft = nead.read(local_file).to_dataframe()
         print('received transmission from',
               dft["timestamp"].iloc[0],
@@ -289,6 +293,21 @@ for i in range(7, 8):  #len(L0dirs))  :
         dfm = pd.concat([dfm, dft]).reset_index()
     except:
         print('download failed')
+        print('reading last transmission file available')
+        pass
+    try:
+        dft = nead.read(local_file).to_dataframe()
+        print('received transmission from',
+              dft["timestamp"].iloc[0],
+              dft["timestamp"].iloc[-1])
+        dft["timestamp"] = pd.to_datetime(dft["timestamp"], utc=True)
+        dfm["timestamp"] = pd.to_datetime(dfm["timestamp"], utc=True)
+        dft = dft.set_index("timestamp")
+        dfm = dfm.set_index("timestamp")
+        dfm = pd.concat([dfm, dft]).reset_index()
+
+    except:
+        print('could not read local file')
         pass
     starttime = pytz.utc.localize(starttime)
     
