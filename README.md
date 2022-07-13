@@ -24,7 +24,7 @@ Steffen (†), Konrad; Houtz, Derek; Vandecrux, Baptiste; Abdalati, Waleed; Bayo
 
 When using the L1 data please additionally cite:
 
-Vandecrux, B., Box, Houtz D., J., Revheim, M. K. (2022). The GC-Net level 1 dataset and processing scripts. https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing
+Vandecrux, B., Box, J., Houtz, D.,  Revheim, M. K. (2022). The GC-Net level 1 dataset and processing scripts. https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing
 
 ## Dataset decription
 

@@ -16,6 +16,7 @@ import pandas as pd
 import nead
 import os.path
 import numpy as np
+import jaws_tools
 from os import path
 try:
     os.mkdir('figures')
@@ -94,8 +95,28 @@ for site, ID in zip(site_list.Name,site_list.ID):
     ptb.plot_flagged_data(df_v5, site)
     df_v5 = ptb.remove_flagged_data(df_v5)
 
+    # calculating SHF and LHF
+    try: 
+        df_v5['SHF'], df_v5['SHF'] = jaws_tools.gradient_fluxes(df_v5)
+        # interpolating variables at standard heights
+        df_v5['TA2m'] = jaws_tools.extrapolate_temp(df_v5, 
+                                                    var = ['TA1','TA2'], 
+                                                    target_height = 2,
+                                                    max_diff = 5)
+        df_v5['RH2m'] = jaws_tools.extrapolate_temp(df_v5, 
+                                                    var = ['RH1','RH2'], 
+                                                    target_height = 2,
+                                                    max_diff = 10)
+        df_v5['VW10m'] = jaws_tools.extrapolate_temp(df_v5, 
+                                                    var = ['VW1','VW2'], 
+                                                    target_height = 10,
+                                                    max_diff = 5)
+    except Exception as e: 
+        print(e)
+        print('Failed to calculate added values')
     # removing empty rows:
-    useful_var_list = ['ISWR', 'OSWR', 'NSWR', 'TA1', 'TA2', 'TA3', 'TA4', 'RH1', 'RH2', 'P']+['TS'+str(i) for i in range(1,11)]
+    useful_var_list = ['ISWR', 'OSWR', 'NSWR', 'TA1', 'TA2', 'TA3', 'TA4', 
+                       'RH1', 'RH2', 'P']+['TS'+str(i) for i in range(1,11)]
     ind_first = df_v5[[v for v in useful_var_list if v in df_v5.columns]].first_valid_index()
     df_v5 = df_v5.loc[ind_first:,:]
 

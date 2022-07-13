@@ -588,3 +588,319 @@ for site, ID in zip(site_list.Name,site_list.ID):
 
 #%run tools/tocgen.py out/L1_intrument_heights.md out/L1_intrument_heights_toc.md
 
+# %% L1 temperature climatology
+plt.close('all')
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0).iloc[1:]
+
+fig, ax = plt.subplots(4,4,figsize=(8, 6))
+plt.subplots_adjust(left=0.08,right=0.99, bottom=0.09,top=0.95, hspace=0.15, wspace = 0.03)
+ax = ax.flatten()
+i=-1
+
+for site, ID in zip(site_list.Name,site_list.ID):
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv'
+    if not path.exists(filename):
+        # print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    i=i+1
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+    df = df[['TA1', 'TA2', 'TA3', 'TA4','HW1', 'HW2']]
+    df.loc[df.TA1.isnull(), 'TA1'] = df.loc[df.TA1.isnull(), 'TA3']
+    df.loc[df.TA1.isnull(), 'TA2'] = df.loc[df.TA1.isnull(), 'TA4']
+    
+    from jaws_tools import extrapolate_temp
+    
+    df['T2m'] = extrapolate_temp(df).values
+    df['T'] = df['T2m']
+    df.loc[df.T2m.isnull(), 'T'] = df.loc[df.T2m.isnull(), 'TA1']
+    df.loc[df.T2m.isnull(), 'T'] = df.loc[df.T2m.isnull(), 'TA2']
+    climatology = df.groupby(df.index.dayofyear).mean()['T']
+    
+    # seasonal averages
+    msk = (climatology.index < 60) | (climatology.index > 334)
+    JFD = climatology.loc[msk].mean()
+    msk = (climatology.index >= 60) & (climatology.index < 152)
+    MAM = climatology.loc[msk].mean()
+    msk = (climatology.index >= 152) & (climatology.index < 244)
+    JJA = climatology.loc[msk].mean()
+    msk = (climatology.index >= 244) & (climatology.index < 335)
+    SON = climatology.loc[msk].mean()
+    print('%s, %0.1f, %0.1f, %0.1f, %0.1f, %0.1f'% (site, JFD, MAM, JJA, SON, climatology.mean()))
+    
+    for year in df.index.year.unique():
+        try:
+            tmp = df.loc[str(year),:].resample('D').mean()
+            doy = tmp.index.dayofyear.values
+            ax[i].plot(doy, tmp['T'].values, color='gray', label=str(year), alpha= 0.2)
+        except:
+            pass
+    climatology.plot(ax=ax[i], color='k', linewidth=3, label='average')
+    # plt.legend()
+    ax[i].set_title(' '+site,
+                    loc='left',
+                    y=1.0, pad=-14)
+    ax[i].set_xlim(0, 365)
+    ax[i].set_ylim(-65,15)
+    ax[i].set_xlabel('')
+    if i < 12:
+        ax[i].set_xticklabels('')
+    if i not in [0, 4, 8, 12]:
+            ax[i].set_yticklabels('')
+    ax[i].grid('on')
+fig.text(0.5, 0.02, 'Day of year', ha='center', va='center', fontsize=14)
+fig.text(0.02, 0.5, 'Near-surface air temperature ($^o$C)', fontsize=14, ha='center', va='center', rotation='vertical')
+plt.savefig('figures/pub/climatology_temperature',bbox_inches='tight')
+
+# %% L1 humidity climatology
+plt.close('all')
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0).iloc[1:]
+
+fig, ax = plt.subplots(4,4,figsize=(8, 6))
+plt.subplots_adjust(left=0.08,right=0.99, bottom=0.09,top=0.95, hspace=0.15, wspace = 0.03)
+ax = ax.flatten()
+i=-1
+
+for site, ID in zip(site_list.Name,site_list.ID):
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv'
+    if not path.exists(filename):
+        # print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    i=i+1
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+    df = df[['RH1', 'RH2','HW1', 'HW2']]
+    
+    from jaws_tools import extrapolate_temp
+    
+    df['T2m'] = extrapolate_temp(df, var = ['RH1','RH2']).values
+    df['T'] = df['T2m']
+    df.loc[df.T2m.isnull(), 'T'] = df.loc[df.T2m.isnull(), 'RH1']
+    df.loc[df.T2m.isnull(), 'T'] = df.loc[df.T2m.isnull(), 'RH2']
+    climatology = df.groupby(df.index.dayofyear).mean()['T']
+    
+    # seasonal averages
+    msk = (climatology.index < 60) | (climatology.index > 334)
+    JFD = climatology.loc[msk].mean()
+    msk = (climatology.index >= 60) & (climatology.index < 152)
+    MAM = climatology.loc[msk].mean()
+    msk = (climatology.index >= 152) & (climatology.index < 244)
+    JJA = climatology.loc[msk].mean()
+    msk = (climatology.index >= 244) & (climatology.index < 335)
+    SON = climatology.loc[msk].mean()
+    print('%s, %0.1f, %0.1f, %0.1f, %0.1f, %0.1f'% (site, JFD, MAM, JJA, SON, climatology.mean()))
+    
+    for year in df.index.year.unique():
+        try:
+            tmp = df.loc[str(year),:].resample('D').mean()
+            doy = tmp.index.dayofyear.values
+            ax[i].plot(doy, tmp['T'].values, color='gray', label=str(year), alpha= 0.2)
+        except:
+            pass
+    climatology.plot(ax=ax[i], color='k', linewidth=3, label='average')
+    # plt.legend()
+    ax[i].set_title(' '+site,
+                    loc='left',
+                    y=0.0, pad=5)
+    ax[i].set_xlim(0, 365)
+    ax[i].set_ylim(30,100)
+    ax[i].set_xlabel('')
+    if i < 12:
+        ax[i].set_xticklabels('')
+    if i not in [0, 4, 8, 12]:
+            ax[i].set_yticklabels('')
+    ax[i].grid('on')
+fig.text(0.5, 0.02, 'Day of year', ha='center', va='center', fontsize=14)
+fig.text(0.02, 0.5, 'Near-surface relative humidity (%)', fontsize=14, ha='center', va='center', rotation='vertical')
+plt.savefig('figures/pub/climatology_humidity',bbox_inches='tight')
+
+# %% L1 pressure climatology
+plt.close('all')
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0).iloc[1:]
+
+fig, ax = plt.subplots(4,4,figsize=(8, 6))
+plt.subplots_adjust(left=0.08,right=0.99, bottom=0.09,top=0.95, hspace=0.15, wspace = 0.03)
+ax = ax.flatten()
+i=-1
+
+for site, ID in zip(site_list.Name,site_list.ID):
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv'
+    if not path.exists(filename):
+        # print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    i=i+1
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+    df = df[['P']]
+
+    climatology = df.groupby(df.index.dayofyear).mean()['P']
+    
+    # seasonal averages
+    msk = (climatology.index < 60) | (climatology.index > 334)
+    JFD = climatology.loc[msk].mean()
+    msk = (climatology.index >= 60) & (climatology.index < 152)
+    MAM = climatology.loc[msk].mean()
+    msk = (climatology.index >= 152) & (climatology.index < 244)
+    JJA = climatology.loc[msk].mean()
+    msk = (climatology.index >= 244) & (climatology.index < 335)
+    SON = climatology.loc[msk].mean()
+    print('%s, %0.1f, %0.1f, %0.1f, %0.1f, %0.1f'% (site, JFD, MAM, JJA, SON, climatology.mean()))
+    
+    for year in df.index.year.unique():
+        try:
+            tmp = df.loc[str(year),:].resample('D').mean()
+            doy = tmp.index.dayofyear.values
+            ax[i].plot(doy, tmp['P'].values, color='gray', label=str(year), alpha= 0.2)
+        except:
+            pass
+    climatology.plot(ax=ax[i], color='k', linewidth=3, label='average')
+    # plt.legend()
+    if site == 'Summit':
+        ax[i].set_title(' '+site,
+                        loc='left',
+                        y=1.0, pad=-14)
+    else:
+        ax[i].set_title(' '+site,
+                        loc='left',
+                        y=0.0, pad=5)
+    ax[i].set_xlim(0, 365)
+    ax[i].set_ylim(600,950)
+    ax[i].set_xlabel('')
+    if i < 12:
+        ax[i].set_xticklabels('')
+    if i not in [0, 4, 8, 12]:
+            ax[i].set_yticklabels('')
+    ax[i].grid('on')
+fig.text(0.5, 0.02, 'Day of year', ha='center', va='center', fontsize=14)
+fig.text(0.02, 0.5, 'Near-surface air pressure (hPa)', fontsize=14, ha='center', va='center', rotation='vertical')
+plt.savefig('figures/pub/climatology_pressure',bbox_inches='tight')
+
+# %% L1 wind speed climatology
+plt.close('all')
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0).iloc[1:]
+
+fig, ax = plt.subplots(4,4,figsize=(8, 6))
+plt.subplots_adjust(left=0.08,right=0.99, bottom=0.09,top=0.95, hspace=0.15, wspace = 0.03)
+ax = ax.flatten()
+i=-1
+
+for site, ID in zip(site_list.Name,site_list.ID):
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv'
+    if not path.exists(filename):
+        # print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    i=i+1
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+    df = df[['VW1', 'VW2','HW1', 'HW2']]
+    
+    from jaws_tools import extrapolate_temp
+    
+    df['T2m'] = extrapolate_temp(df, var = ['VW1','VW2'], target_height=10).values
+    df['T'] = df['T2m']
+    df.loc[df.T2m.isnull(), 'T'] = df.loc[df.T2m.isnull(), 'VW1']
+    df.loc[df.T2m.isnull(), 'T'] = df.loc[df.T2m.isnull(), 'VW2']
+    climatology = df.groupby(df.index.dayofyear).mean()['T']
+    
+    # seasonal averages
+    msk = (climatology.index < 60) | (climatology.index > 334)
+    JFD = climatology.loc[msk].mean()
+    msk = (climatology.index >= 60) & (climatology.index < 152)
+    MAM = climatology.loc[msk].mean()
+    msk = (climatology.index >= 152) & (climatology.index < 244)
+    JJA = climatology.loc[msk].mean()
+    msk = (climatology.index >= 244) & (climatology.index < 335)
+    SON = climatology.loc[msk].mean()
+    print('%s, %0.1f, %0.1f, %0.1f, %0.1f, %0.1f'% (site, JFD, MAM, JJA, SON, climatology.mean()))
+    
+    for year in df.index.year.unique():
+        try:
+            tmp = df.loc[str(year),:].resample('D').mean()
+            doy = tmp.index.dayofyear.values
+            ax[i].plot(doy, tmp['T'].values, color='gray', label=str(year), alpha= 0.2)
+        except:
+            pass
+    climatology.plot(ax=ax[i], color='k', linewidth=3, label='average')
+    # plt.legend()
+    
+    ax[i].set_title(' '+site,
+                    loc='left',
+                    y=1.0, pad=-14)
+    ax[i].set_xlim(0, 365)
+    ax[i].set_ylim(0,30)
+    ax[i].set_xlabel('')
+    if i < 12:
+        ax[i].set_xticklabels('')
+    if i not in [0, 4, 8, 12]:
+            ax[i].set_yticklabels('')
+    ax[i].grid('on')
+fig.text(0.5, 0.02, 'Day of year', ha='center', va='center', fontsize=14)
+fig.text(0.02, 0.5, 'Near-surface wind speed (m s$^{-1}$)', fontsize=14, ha='center', va='center', rotation='vertical')
+plt.savefig('figures/pub/climatology_windspeed',bbox_inches='tight')
+
+# %% Converting back to old format to run jaws
+plt.close('all')
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0).iloc[1:2]
+ 
+import json
+with open('metadata/original_columns.json') as json_file:
+    field_list = json.load(json_file)
+
+fields = pd.DataFrame(field_list.items(), columns=['org_name','nead_name'])
+
+import os
+import importlib.util
+import sys
+spec = importlib.util.spec_from_file_location("module.name", "C:/Users/bav/AppData/Local/Continuum/anaconda3/lib/site-packages/jaws/jaws.py")
+jaws = importlib.util.module_from_spec(spec)
+sys.modules["module.name"] = jaws
+spec.loader.exec_module(jaws)
+
+for site, ID in zip(site_list.Name,site_list.ID):
+    filename = 'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv'
+    if not path.exists(filename):
+        # print('Warning: No file for station '+str(ID)+' '+site)
+        continue
+    i=i+1
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df=df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp').replace(-999,np.nan)
+    df['year'] = df.index.year
+    df['julian_decimal_time'] = df.index.dayofyear + df.index.hour/24
+    df['station_number'] = ID
+    
+    filename = '%02i_old_format.dat'%ID
+    try:
+        os.remove(filename)
+    except:
+        pass
+    with open(filename, 'a') as the_file:
+        the_file.write('Data avaiable from 1995 147.0417 to 2018 142.5000 1\n')
+        k = 0
+        var_list = list()
+        for i in fields.index.values:
+            if fields.loc[i,'nead_name'] in df.columns:
+                the_file.write('%i %s\n'%(k, fields.loc[i,'org_name']))
+                var_list.append(fields.loc[i,'nead_name'])
+                k=k+1
+        the_file.write('\n')
+    df.loc['2010':'2011',var_list].to_csv(filename, mode='a', index=False, header=False,
+                        sep=' ', na_rep=999 )
+
+    args = jaws.parse_args([filename, 'out.nc', '-D 9', '--flx'])  #'--rigb', '--merra'])
+    jaws.main(args) 
+    stations = jaws.get_stations()
