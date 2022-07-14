@@ -145,3 +145,16 @@ def gradient_fluxes(df):  # This method is very sensitive to input data quality
     lh = num/dnm
     lh[np.abs(lh) >= 100] = np.nan
     return sh, lh
+
+import pvlib
+from pvlib.location import Location
+def get_saa_sza(dataframe, longitude, latitude, elevation, site):
+    location = Location(latitude, longitude, 'UTC', elevation, site) # latitude, longitude, time_zone, altitude, name
+    
+    # Definition of a time range of simulation
+    times = pd.to_datetime(dataframe.index.values,  utc=True)
+    
+    # Estimate Solar Position with the 'Location' object
+    solpos = location.get_solarposition(times)
+    
+    return solpos.azimuth.values, solpos.zenith.values

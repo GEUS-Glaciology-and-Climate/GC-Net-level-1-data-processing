@@ -37,7 +37,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
        # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
        # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
        # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
+site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
@@ -111,6 +111,11 @@ for site, ID in zip(site_list.Name,site_list.ID):
                                                     var = ['VW1','VW2'], 
                                                     target_height = 10,
                                                     max_diff = 5)
+        latitude = site_list.loc[site_list.Name==site, 'Northing'].values[0]
+        longitude = site_list.loc[site_list.Name==site, 'Easting'].values[0]
+        elevation = site_list.loc[site_list.Name==site, 'Elevationm'].values[0]
+        df_v5['SAA'], df_v5['SZA'] = jaws_tools.get_saa_sza(df_v5, latitude, longitude, elevation, site)
+
     except Exception as e: 
         print(e)
         print('Failed to calculate added values')
