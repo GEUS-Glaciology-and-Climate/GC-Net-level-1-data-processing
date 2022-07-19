@@ -237,6 +237,7 @@ def remove_flagged_data(df):
     return df
 import pytz
 
+
 def adjust_data(df, site, var_list = [], skip_var = []):
     df_out = df.copy()
     if not os.path.isfile('metadata/adjustments/'+site+'.csv'):
@@ -250,7 +251,8 @@ def adjust_data(df, site, var_list = [], skip_var = []):
     adj_info.loc[adj_info.t1.isnull(), 't1'] = df_out.index[-1].isoformat()
     adj_info.t1 = pd.to_datetime(adj_info.t1)
     adj_info.t1 = adj_info.t1.apply(lambda x: x.replace(tzinfo=pytz.utc).isoformat()).values
-            
+    
+    # if "*" is given as variable then we append this adjustement for all variables      
     for ind in adj_info.loc[adj_info.variable == '*',:].index:
         line_template = adj_info.loc[ind,:].copy()
         for var in df_out.columns:
@@ -276,9 +278,6 @@ def adjust_data(df, site, var_list = [], skip_var = []):
         var_list = np.unique(adj_info.variable)
 
     for var in var_list:
-        # if var not in df.columns:
-        #     print(var+' not in datafile')
-        #     continue
         if ('_qc' not in var) & \
             ('_min' not in var) & \
             ('_max' not in var) & \
@@ -292,7 +291,9 @@ def adjust_data(df, site, var_list = [], skip_var = []):
         for t0, t1, func, val in zip(adj_info.loc[var].t0,
                                      adj_info.loc[var].t1,
                                      adj_info.loc[var].adjust_function,
-                                     adj_info.loc[var].adjust_value):            
+                                     adj_info.loc[var].adjust_value):
+            if (pd.to_datetime(t0) > df.index[-1]) | (pd.to_datetime(t1) < df.index[0]):
+                continue
 
             # counting nan values before filtering
             if '_qc' not in var:
@@ -341,7 +342,7 @@ def adjust_data(df, site, var_list = [], skip_var = []):
             if func == 'biweekly_upper_range_filter':
                 tmp = df_out.loc[t0:t1,var].copy()
                 df_max = df_out.loc[t0:t1,var].resample('14D').max()
-                for m_start,m_end in zip(df_max.index[:-2], df_max.index[1:]):
+                for m_start, m_end in zip(df_max.index[:-2], df_max.index[1:]):
                     msk = (tmp.index >= m_start) & (tmp.index < m_end)
                     lim = df_max.loc[m_start] - val
                     values_month = tmp.loc[msk].values
@@ -393,6 +394,13 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                 tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()].values
                 tmp = tmp.interpolate(method='nearest', fill_value='extrapolate')
                 df_out.loc[t0:t1,var] = RH_ice2water(df_out.loc[t0:t1,var].values, tmp.values)
+                
+            if func == 'water_to_ice':
+                tmp = df_out.loc[t0:t1,'TA'+var[-1]]
+                tmp2 = df_out.loc[t0:t1,'TA'+str(int(var[-1])%2 +1)]
+                tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()].values
+                tmp = tmp.interpolate(method='nearest', fill_value='extrapolate')
+                df_out.loc[t0:t1,var] = RH_water2ice(df_out.loc[t0:t1,var].values, tmp.values)
 
             if func == 'time_shift':
                 t0 = pd.to_datetime(t0)
@@ -449,6 +457,100 @@ def adjust_data(df, site, var_list = [], skip_var = []):
             print(' ')
 
     return df_out
+
+
+import jaws_tools
+from progressbar import progressbar
+def augment_data(df_in, latitude, longitude, elevation, site):
+    # Interpolate small gaps in available variables
+    # and add variables to the dataset: 
+        # Surface height HS
+        # Sensible and Latent Heat Fluxes SHF & LHF
+        # Solar azimuth and zenith angles
+        # albedo
+        
+    df = df_in.copy()    
+    # Interpolation over gaps smaller than a week
+    mask =  df[['HW1', 'HW2']].copy()
+    for i in ['HW1', 'HW2']:
+        tmp = pd.DataFrame(df[i] )
+        tmp['new'] = ((tmp.notnull() != tmp.shift().notnull()).cumsum())
+        tmp['ones'] = 1
+        mask[i] = (tmp.groupby('new')['ones'].transform('count') < 24*7) | df[i].notnull()
+    df[['HW1', 'HW2']] = df[['HW1', 'HW2']].interpolate().values
+    df.loc[mask.HW1==False,'HW1'] = np.nan
+    df.loc[mask.HW2==False,'HW2'] = np.nan
+    
+    fig = plt.figure()
+    df_in.HW1.plot(label='HW1 original', marker='o', linestyle='None', color='turquoise')
+    df_in.HW2.plot(label='HW2 original', marker='o', linestyle='None', color='magenta')
+    def fill_gap_HW(df, var_target='HW1', var_sec='HW2'):
+        prev_no_nan =  df[var_target].notnull().shift(1).fillna(False)
+        is_nan =  df[var_target].isnull()
+        list_start_gaps = df.index[(prev_no_nan & is_nan)]
+        
+        prev_nan =  df[var_target].isnull().shift(1).fillna(False)
+        no_nan =  df[var_target].notnull()
+        list_end_gaps = df.index[(prev_nan & no_nan)]
+        
+        if len(list_end_gaps)<len(list_start_gaps):
+            list_end_gaps = np.append(list_end_gaps, df.index[-1])
+        df[var_target].plot(label=var_target+' interpolated')
+        for start, end in progressbar(zip(list_start_gaps, list_end_gaps)):
+            # we look at the month preceeding the gap
+            # calculate the mean difference between the two heights during that time
+            mean_diff = (df.loc[(start-pd.Timedelta(days=30)):start, var_target] - df.loc[(start-pd.Timedelta(days=30)):start, var_sec]).mean()
+            
+            # and use that difference to adjust the secondary height to the height
+            # that is to be gap-filled
+            df.loc[start:end, var_target] = df.loc[start:end, var_sec].values + mean_diff
+            df.loc[start:end, var_target].plot(label='__no_legend__', color='red',linewidth=2)
+        df.loc[start:end, var_target].plot(label=var_target+' gap-filled',color='red',linewidth=2)
+        return df[var_target].values
+    try:
+        df['HW1'] = fill_gap_HW(df, 'HW1', 'HW2')
+        df['HW2'] = fill_gap_HW(df, 'HW2', 'HW1')
+    except:
+        pass
+    
+    plt.ylabel('Intrument height (m)')
+    plt.title('Gap filling instrument height using the other level')
+    plt.legend()
+    fig.savefig('figures/L1_data_treatment/'+site+'_gap_filling_HW.png')
+    
+    # Creating surface height field
+    if 'HW1_qc' not in df.columns:
+        df['HW1_qc'] = 'OK'
+    if 'HW2_qc' not in df.columns:
+        df['HW2_qc'] = 'OK'
+    ind1 = np.max([df.HW1.first_valid_index(),
+                   df.HW1_qc.where(df.HW1_qc=='OK').first_valid_index()])
+    ind2 = np.max([df.HW2.first_valid_index(),
+                   df.HW2_qc.where(df.HW2_qc=='OK').first_valid_index()])
+    df['HS1'] = df.HW1[ind1] - df.HW1
+    df['HS2'] = df.HW2[ind2] - df.HW2
+
+    df.loc[df['HW1_qc']=="CHECKME", 'HS1'] = np.nan
+    df.loc[df['HW2_qc']=="CHECKME", 'HS2'] = np.nan
+    # we then adjust and filter all surface height (could be replaced by an automated adjustment)
+    df = adjust_data(df, site, ['HS1', 'HS2'])
+    
+    # calculating SHF and LHF
+    df['SHF'], df['SHF'] = jaws_tools.gradient_fluxes(df.copy())
+    # interpolating variables at standard heights
+    df['TA2m'] = jaws_tools.extrapolate_temp(df, var = ['TA1','TA2'], 
+                                                target_height = 2,
+                                                max_diff = 5)
+    df['RH2m'] = jaws_tools.extrapolate_temp(df, var = ['RH1','RH2'], 
+                                                target_height = 2,
+                                                max_diff = 10)
+    df['VW10m'] = jaws_tools.extrapolate_temp(df,var = ['VW1','VW2'], 
+                                                target_height = 10,
+                                                max_diff = 5)
+
+    df['SAA'], df['SZA'] = jaws_tools.get_saa_sza(df, 
+                                                  latitude, longitude, elevation, site)
+    return df
 
 
 # Filter frozen values
@@ -530,6 +632,21 @@ def filter_data(df, site, plot = True, remove_data = False):
                 else:
                     df_out[var+'_qc'] = "OK"
                     df_out.loc[ind,var+'_qc'] = "OOL"
+
+    # Isolated measurements filter
+    msk1 =  df_out.HW1.isnull().shift(2).fillna(False)
+    msk2 =  df_out.HW1.isnull().shift(1).fillna(False)
+    msk3 =  df_out.HW1.isnull().shift(-1).fillna(False)
+    msk4 =  df_out.HW1.isnull().shift(-2).fillna(False)
+    msk = (msk2 & msk3) | (msk1 & msk3) | (msk2 & msk4)
+    df_out.loc[msk, 'HW1'] = np.nan
+    msk1 =  df_out.HW2.isnull().shift(2).fillna(False)
+    msk2 =  df_out.HW2.isnull().shift(1).fillna(False)
+    msk3 =  df_out.HW2.isnull().shift(-1).fillna(False)
+    msk4 =  df_out.HW2.isnull().shift(-2).fillna(False)
+    msk = (msk2 & msk3) | (msk1 & msk3) | (msk2 & msk4)
+    df_out.loc[msk, 'HW2'] = np.nan
+
     return df_out
 
 
@@ -897,6 +1014,7 @@ def RH_water2ice(RH, T):
     Ls = 2.8337e6  # H2O Sublimation Latent Heat (J/kg)
     Rv = 461.5     # H2O Vapor Gaz constant (J/kg/K)
     ind = T < 0
+    # ind = T == T
     TCoeff = 1/273.15 - 1/(T+273.15)
     Es_Water = 6.112*np.exp(Lv/Rv*TCoeff)
     Es_Ice = 6.112*np.exp(Ls/Rv*TCoeff)

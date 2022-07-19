@@ -1,7 +1,4 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-1995-05-26T20:00:00+00:00,,HW1,max_filter,20,
-1995-05-26T20:00:00+00:00,,HW2,max_filter,20,
-
 1998-04-17T00:00:00+00:00,,HS1,add,2.5,
 1999-04-22T15:00:00+00:00,,HS1,add,2,
 2001-06-07T00:00:00+00:00,,HS1,add,3,
@@ -31,15 +28,25 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1996-05-15T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,
 
 # filters on HW1 and HW2
+1995-05-26T20:00:00+00:00,,HW1,max_filter,20,
+1995-05-26T20:00:00+00:00,,HW2,max_filter,20,
 2009-05-15T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.3,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.3,Manually filtered by bav
 
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
+# 2006-07-20T22:00:00+00:00,,HW1,swap_with_HW2,,Manually filtered by bav
+# 2006-07-20T22:00:00+00:00,,TA1,swap_with_TA2,,Manually filtered by bav
+# 2006-07-20T22:00:00+00:00,,RH1,swap_with_RH2,,Manually filtered by bav
+# 2006-07-20T22:00:00+00:00,,VW1,swap_with_VW2,,Manually filtered by bav
+# 2006-07-20T22:00:00+00:00,,DW1,swap_with_DW2,,Manually filtered by bav
+# 2006-07-20T22:00:00+00:00,,TA3,swap_with_TA4,,Manually filtered by bav
+2007-06-13T16:00:00+00:00,2008-07-01T00:00:00+00:00,TS4,biweekly_upper_range_filter,1.3,Manually flagged by bav
+
 
 1996-01-01T00:00:00+00:00,2003-01-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 1996-01-01T00:00:00+00:00,2003-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 
 # time shifts
-1998-04-20T03:00:00, 1999-04-23T03:00:00, *, time_shift, -3, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/59
+# 1998-04-20T03:00:00, 1999-04-23T03:00:00, *, time_shift, -3, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/59

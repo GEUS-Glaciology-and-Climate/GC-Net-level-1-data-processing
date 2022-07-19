@@ -105,6 +105,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
     print('# '+str(ID)+ ' ' + site)
+    site=site.replace(' ','')
     filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
         print('Warning: No file for station '+str(ID)+' '+site)
@@ -134,6 +135,8 @@ for site, ID in zip(site_list.Name,site_list.ID):
             continue
         if var[-3:]=='max':
             continue
+        if var[-4:]=='flag':
+            continue
         # if var[-5:]=='stdev':
         #     continue
         # print(var)
@@ -142,29 +145,23 @@ for site, ID in zip(site_list.Name,site_list.ID):
         df[var].plot(ax=ax[count])
         ax[count].set_ylabel(var)
         ax[count].grid()
-        # ax[count].axes.xaxis.set_major_formatter(years_fmt)
-        # ax[count].axes.xaxis.set_major_locator(years)
-        # ax[count].axes.xaxis.set_minor_locator(months)
         ax[count].set_xlim((df.index[0],df.index[-1]))
         count=count+1
         if count == 6:
-            ax[0].set_title(site)
-            plt.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
-            print('![](figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
+            plt.savefig('figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
+            print('![](figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
             count_fig = count_fig+1
-            fig, ax = new_fig()
-            count = 0
+            if var!=df.columns[-1]:
+                fig, ax = new_fig()
+                count = 0
     if count < 6:
         ax[count].xaxis.set_tick_params(which='both', labelbottom=True)
-        # ax[count].axes.xaxis.set_major_formatter(years_fmt)
-        # ax[count].axes.xaxis.set_major_locator(years)
         for k in range(count+1,len(ax)):
             ax[k].set_axis_off()
-        ax[0].set_title(site)
-        plt.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
-        print('![](figures/L1_overview/all variables/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
+        plt.savefig('figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
+        print('![](figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
 
-# %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
+# %run tools/tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
 # %% L1 temperature overview
 plt.close('all')

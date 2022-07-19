@@ -21,11 +21,12 @@ name_alias = {'DY2': 'DYE2', 'CP1':'Crawford Point 1'}
 
 
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
-# you can select a site by specifying f.e.:
-# site_list  = site_list.iloc[2:3,:]
-# site_list  = site_list.iloc[8:9,:] # Dye-2 
-# site_list  = site_list.iloc[2:3,:] # Crawford Point 1
-site_list  = site_list.iloc[15:16,:] # nasa-se 
+# uncomment for use at specific sites
+# All station names: 'Swiss Camp 10m', 'Swiss Camp', 'Crawford Point 1', 'NASA-U',
+       # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
+       # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
+       # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
+# site_list = site_list.loc[site_list.Name.values == 'NASA-E',:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
     print('# '+str(ID)+ ' ' + site)
@@ -66,14 +67,10 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df_photo = df_photo.loc[df_photo.site==site, :]
     df_photo['date'] = pd.to_datetime(df_photo[['year','month','day']])
     df_photo = df_photo.set_index('date').drop(columns = ['site','year','month','day'])
-    
-
-    
+        
     fig = plt.figure()
     ax = plt.subplot(111)
-    
-
-    
+       
     sym_size=20
     mult=0.6
     # Plotting observed instrument heights

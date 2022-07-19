@@ -31,10 +31,10 @@ except ImportError:
 
 
 def extrapolate_temp(dataframe, var = ['TA1','TA2'], target_height = 2, max_diff = 5):
-    ht_low = dataframe['HW1']
-    ht_high = dataframe['HW2']
-    var_low = dataframe[var[0]]
-    var_high = dataframe[var[1]]
+    ht_low = dataframe['HW1'].copy()
+    ht_high = dataframe['HW2'].copy()
+    var_low = dataframe[var[0]].copy()
+    var_high = dataframe[var[1]].copy()
     
     # making sure the level 1 is the lowest and 2 the highest
     ind = ht_high < ht_low
