@@ -26,8 +26,7 @@ years_fmt = mdates.DateFormatter('%Y')
 
 # %% L0 overview
 path_to_L0N = 'L0M/'
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
-
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0,skipinitialspace=True)
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
     print('# '+str(ID)+ ' ' + site)

@@ -60,15 +60,15 @@ def name_alias(name_in):
 
 
 def field_info(fields):
-    field_list = 'timestamp,ISWR,ISWR_max,ISWR_std,OSWR,NSWR,NSWR_std,TA1,TA1_max,TA1_min,TA2,TA2_max,TA2_min,TA3,TA4,RH1,RH2,VW1,VW1_max,VW1_stdev,VW2,VW2_max,VW2_stdev,DW1,DW2,P,HS1,HS2,HW1,HW2,V,TA5,TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8,TS9,TS10,Tsurf1,Tsurf2,IUVR,ILWR,SHF,LHF,TA2m,RH2m,VW10m,SAA,SZA'.split(',')
+    field_list = 'timestamp,ISWR,ISWR_max,ISWR_std,OSWR,OSWR_max,NSWR,NSWR_max,NSWR_std,TA1,TA1_max,TA1_min,TA2,TA2_max,TA2_min,TA3,TA4,RH1,RH2,VW1,VW1_max,VW1_stdev,VW2,VW2_max,VW2_stdev,DW1,DW2,P,HS1,HS2,HW1,HW2,V,TA5,TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8,TS9,TS10,Tsurf1,Tsurf2,IUVR,ILWR,SHF,LHF,TA2m,RH2m,VW10m,SAA,SZA'.split(',')
 
-    units = 'time,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,%/100,%/100,m/s,m/s,m/s,m/s,m/s,m/s,Degrees,Degrees,mbar,m,m,m,m,m,m,m,m,m,m,m,m,m,m,V,Degrees C,Degrees C,Degrees C,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,%/100,m/s,Degrees,Degrees'.split(',')
+    units = 'time,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,%/100,%/100,m/s,m/s,m/s,m/s,m/s,m/s,Degrees,Degrees,mbar,m,m,m,m,m,m,m,m,m,m,m,m,m,m,V,Degrees C,Degrees C,Degrees C,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,%/100,m/s,Degrees,Degrees'.split(',')
 
-    display_description = 'timestamp_iso,shortwave_incoming_radiation,shortwave_incoming_radiation_max,shortwave_incoming_radiation_stdev,shortwave_outgoing_radiation,net_radiation,net_radiation_stdev,air_temperature_1,air_temperature_1_max,air_temperature_1_min,air_temperature_2,air_temperature_2_max,air_temperature_2_min,air_temperature_cs500_air1,air_temperature_cs500_air2,relative_humidity_1,relative_humidity_2,wind_speed_1,wind_speed_u1_max,wind_speed_u1_stdev,wind_speed_2,wind_speed_u2_max,wind_speed_u2_stdev,wind_from_direction_1,wind_from_direction_2,air_pressure,snow_depth_1,snow_depth_2,height_wind_sensor_1,height_wind_sensor_2,battery_voltage,ref_temperature,snow_temperature_1,snow_temperature_2,snow_temperature_3,snow_temperature_4,snow_temperature_5,snow_temperature_6,snow_temperature_7,snow_temperature_8,snow_temperature_9,snow_temperature_10,surface_temperature_1,surface_temperature_2,incoming_uv_radiation,incoming_longwave_radiation,sensible_heat_flux,latent_heat_flux,air_temperature_2m,relative_humidity_2m,wind_speed_10m,solar_azimuth_angle,solar_zenith_angle'.split(',')
+    display_description = 'timestamp_iso,shortwave_incoming_radiation,shortwave_incoming_radiation_max,shortwave_incoming_radiation_stdev,shortwave_outgoing_radiation,shortwave_outgoing_radiation_max,net_radiation,net_radiation_maximum,net_radiation_stdev,air_temperature_1,air_temperature_1_max,air_temperature_1_min,air_temperature_2,air_temperature_2_max,air_temperature_2_min,air_temperature_cs500_air1,air_temperature_cs500_air2,relative_humidity_1,relative_humidity_2,wind_speed_1,wind_speed_u1_max,wind_speed_u1_stdev,wind_speed_2,wind_speed_u2_max,wind_speed_u2_stdev,wind_from_direction_1,wind_from_direction_2,air_pressure,snow_depth_1,snow_depth_2,height_wind_sensor_1,height_wind_sensor_2,battery_voltage,ref_temperature,snow_temperature_1,snow_temperature_2,snow_temperature_3,snow_temperature_4,snow_temperature_5,snow_temperature_6,snow_temperature_7,snow_temperature_8,snow_temperature_9,snow_temperature_10,surface_temperature_1,surface_temperature_2,incoming_uv_radiation,incoming_longwave_radiation,sensible_heat_flux,latent_heat_flux,air_temperature_2m,relative_humidity_2m,wind_speed_10m,solar_azimuth_angle,solar_zenith_angle'.split(',')
 
-    database_fields = 'timestamp_iso,swin,swin_maximum,swin_stdev,swout,netrad,netrad_stdev,airtemp1,airtemp1_maximum,airtemp1_minimum,airtemp2,airtemp2_maximum,airtemp2_minimum,airtemp_cs500air1,airtemp_cs500air2,rh1,rh2,windspeed1,windspeed_u1_maximum,windspeed_u1_stdev,windspeed2,windspeed_u2_maximum,windspeed_u2_stdev,winddir1,winddir2,pressure,sh1,sh2,hw1,hw2,battvolt,reftemp,ts1,ts2,ts3,ts4,ts5,ts6,ts7,ts8,ts9,ts10,tsurf1,tsurf2,uvin,lwin,shf,lhf,airtemp_2m,rh_2m,windspeed_10m,solar_azimuth_angle,solar_zenith_angle'.split(',')
+    database_fields = 'timestamp_iso,swin,swin_maximum,swin_stdev,swout,swout_maximum,netrad,netrad_max,netrad_stdev,airtemp1,airtemp1_maximum,airtemp1_minimum,airtemp2,airtemp2_maximum,airtemp2_minimum,airtemp_cs500air1,airtemp_cs500air2,rh1,rh2,windspeed1,windspeed_u1_maximum,windspeed_u1_stdev,windspeed2,windspeed_u2_maximum,windspeed_u2_stdev,winddir1,winddir2,pressure,sh1,sh2,hw1,hw2,battvolt,reftemp,ts1,ts2,ts3,ts4,ts5,ts6,ts7,ts8,ts9,ts10,tsurf1,tsurf2,uvin,lwin,shf,lhf,airtemp_2m,rh_2m,windspeed_10m,solar_azimuth_angle,solar_zenith_angle'.split(',')
 
-    database_fields_data_types = 'timestamp,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real'.split(',')
+    database_fields_data_types = 'timestamp,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real'.split(',')
 
     field_list = field_list + [s+'_qc' for s in field_list] + [s+'_adj_flag' for s in field_list]
     units = units + ['-' for s in units] + ['-' for s in units]
@@ -496,7 +496,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         if len(list_end_gaps)<len(list_start_gaps):
             list_end_gaps = np.append(list_end_gaps, df.index[-1])
         df[var_target].plot(label=var_target+' interpolated')
-        for start, end in progressbar(zip(list_start_gaps, list_end_gaps)):
+        for start, end in zip(list_start_gaps, list_end_gaps):
             # we look at the month preceeding the gap
             # calculate the mean difference between the two heights during that time
             mean_diff = (df.loc[(start-pd.Timedelta(days=30)):start, var_target] - df.loc[(start-pd.Timedelta(days=30)):start, var_sec]).mean()
@@ -523,12 +523,14 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         df['HW1_qc'] = 'OK'
     if 'HW2_qc' not in df.columns:
         df['HW2_qc'] = 'OK'
-    ind1 = np.max([df.HW1.first_valid_index(),
-                   df.HW1_qc.where(df.HW1_qc=='OK').first_valid_index()])
-    ind2 = np.max([df.HW2.first_valid_index(),
+    if any(df.HW1.notnull()):
+        ind1 = np.max([df.HW1.first_valid_index(),
+                       df.HW1_qc.where(df.HW1_qc=='OK').first_valid_index()])
+        df['HS1'] = df.HW1[ind1] - df.HW1
+    if any(df.HW2.notnull()):
+        ind2 = np.max([df.HW2.first_valid_index(),
                    df.HW2_qc.where(df.HW2_qc=='OK').first_valid_index()])
-    df['HS1'] = df.HW1[ind1] - df.HW1
-    df['HS2'] = df.HW2[ind2] - df.HW2
+        df['HS2'] = df.HW2[ind2] - df.HW2
 
     df.loc[df['HW1_qc']=="CHECKME", 'HS1'] = np.nan
     df.loc[df['HW2_qc']=="CHECKME", 'HS2'] = np.nan

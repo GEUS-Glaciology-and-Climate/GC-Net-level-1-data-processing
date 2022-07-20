@@ -2,6 +2,8 @@ from io import StringIO
 import configparser
 from pathlib import Path
 import nead
+import numpy as np
+
 
 def read_config(config_path: str):
     config_file = Path(config_path)
@@ -50,6 +52,12 @@ def write_nead(data_frame, nead_config, output_path):
     fields =conf.get('FIELDS', 'fields')
     fields_list = fields.split(',')
 
+    # fields_list = [f for f in fields_list if f in data_frame.columns]
+
+    for f in fields_list:
+        if f not in data_frame.columns:
+            data_frame[f] = np.nan
+            
     # Write conf into buffer
     buffer = StringIO()
     conf.write(buffer)
@@ -65,7 +73,7 @@ def write_nead(data_frame, nead_config, output_path):
 
     # Append data to header, omit indices, omit dataframe header, and output columns in fields_list
     with open(nead_output, 'a') as nead_file:
-        print(fields_list)
+        # print(fields_list)
         data_frame.to_csv(nead_file, index=False, header=False, columns=fields_list, line_terminator='\n', float_format='%.2f')
 
     ds = nead.read(nead_output)

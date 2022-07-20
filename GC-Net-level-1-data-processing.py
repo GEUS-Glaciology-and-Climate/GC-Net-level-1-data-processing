@@ -29,7 +29,7 @@ except:
 # sys.stdout = open("out/Report.md", "w")
 
 path_to_L0N = 'L0M/'
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0, skipinitialspace=True)
 # print(site_list)
 
 # uncomment for use at specific sites
@@ -58,6 +58,10 @@ for site, ID in zip(site_list.Name,site_list.ID):
     if site == 'Swiss Camp 10m':
         df['TA2'] = np.nan
         df['TA4'] = np.nan
+    if 'HW1' not in df.columns:
+        df['HW1'] =  df['HS1']
+    if 'HW2' not in df.columns:
+        df['HW2'] = df['HS2']
     df=df.resample('H').mean()
 
     print('## Manual flagging of data at '+site)
