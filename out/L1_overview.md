@@ -99,10 +99,18 @@
 ![](figures/L1_overview/all_variables/12_NASA-E_4.png)
 ![](figures/L1_overview/all_variables/12_NASA-E_5.png)
 ![](figures/L1_overview/all_variables/12_NASA-E_6.png)
-# 13 CP2
-Warning: No file for station 13 CP2
+# 13 Crawford Point 2
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_0.png)
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_1.png)
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_2.png)
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_3.png)
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_4.png)
 # 14 NGRIP
-Warning: No file for station 14 NGRIP
+![](figures/L1_overview/all_variables/14_NGRIP_0.png)
+![](figures/L1_overview/all_variables/14_NGRIP_1.png)
+![](figures/L1_overview/all_variables/14_NGRIP_2.png)
+![](figures/L1_overview/all_variables/14_NGRIP_3.png)
+![](figures/L1_overview/all_variables/14_NGRIP_4.png)
 # 15 NASA-SE
 ![](figures/L1_overview/all_variables/15_NASA-SE_0.png)
 ![](figures/L1_overview/all_variables/15_NASA-SE_1.png)
@@ -112,18 +120,48 @@ Warning: No file for station 14 NGRIP
 ![](figures/L1_overview/all_variables/15_NASA-SE_5.png)
 ![](figures/L1_overview/all_variables/15_NASA-SE_6.png)
 # 16 KAR
-Warning: No file for station 16 KAR
-# 17 JAR 2
-Warning: No file for station 17 JAR2
-# 18 KULU
-Warning: No file for station 18 KULU
-# 22 Petermann ELA
+![](figures/L1_overview/all_variables/16_KAR_0.png)
+![](figures/L1_overview/all_variables/16_KAR_1.png)
+![](figures/L1_overview/all_variables/16_KAR_2.png)
+![](figures/L1_overview/all_variables/16_KAR_3.png)
+![](figures/L1_overview/all_variables/16_KAR_4.png)
+# 17  JAR2
+![](figures/L1_overview/all_variables/17_JAR2_0.png)
+![](figures/L1_overview/all_variables/17_JAR2_1.png)
+![](figures/L1_overview/all_variables/17_JAR2_2.png)
+![](figures/L1_overview/all_variables/17_JAR2_3.png)
+![](figures/L1_overview/all_variables/17_JAR2_4.png)
+# 18  KULU
+![](figures/L1_overview/all_variables/18_KULU_0.png)
+![](figures/L1_overview/all_variables/18_KULU_1.png)
+![](figures/L1_overview/all_variables/18_KULU_2.png)
+![](figures/L1_overview/all_variables/18_KULU_3.png)
+![](figures/L1_overview/all_variables/18_KULU_4.png)
+# 19  JAR3
+![](figures/L1_overview/all_variables/19_JAR3_0.png)
+![](figures/L1_overview/all_variables/19_JAR3_1.png)
+![](figures/L1_overview/all_variables/19_JAR3_2.png)
+![](figures/L1_overview/all_variables/19_JAR3_3.png)
+![](figures/L1_overview/all_variables/19_JAR3_4.png)
+# 20  Aurora
+![](figures/L1_overview/all_variables/20_Aurora_0.png)
+![](figures/L1_overview/all_variables/20_Aurora_1.png)
+![](figures/L1_overview/all_variables/20_Aurora_2.png)
+![](figures/L1_overview/all_variables/20_Aurora_3.png)
+![](figures/L1_overview/all_variables/20_Aurora_4.png)
+# 21  Petermann Glacier
+![](figures/L1_overview/all_variables/21_PetermannGlacier_0.png)
+![](figures/L1_overview/all_variables/21_PetermannGlacier_1.png)
+![](figures/L1_overview/all_variables/21_PetermannGlacier_2.png)
+![](figures/L1_overview/all_variables/21_PetermannGlacier_3.png)
+![](figures/L1_overview/all_variables/21_PetermannGlacier_4.png)
+# 22  Petermann ELA
 ![](figures/L1_overview/all_variables/22_PetermannELA_0.png)
 ![](figures/L1_overview/all_variables/22_PetermannELA_1.png)
 ![](figures/L1_overview/all_variables/22_PetermannELA_2.png)
 ![](figures/L1_overview/all_variables/22_PetermannELA_3.png)
 ![](figures/L1_overview/all_variables/22_PetermannELA_4.png)
-# 23 NEEM
+# 23  NEEM
 ![](figures/L1_overview/all_variables/23_NEEM_0.png)
 ![](figures/L1_overview/all_variables/23_NEEM_1.png)
 ![](figures/L1_overview/all_variables/23_NEEM_2.png)
@@ -131,9 +169,27 @@ Warning: No file for station 18 KULU
 ![](figures/L1_overview/all_variables/23_NEEM_4.png)
 ![](figures/L1_overview/all_variables/23_NEEM_5.png)
 ![](figures/L1_overview/all_variables/23_NEEM_6.png)
-# 24 E-GRIP
+# 24  E-GRIP
 ![](figures/L1_overview/all_variables/24_E-GRIP_0.png)
 ![](figures/L1_overview/all_variables/24_E-GRIP_1.png)
 ![](figures/L1_overview/all_variables/24_E-GRIP_2.png)
 ![](figures/L1_overview/all_variables/24_E-GRIP_3.png)
 ![](figures/L1_overview/all_variables/24_E-GRIP_4.png)
+# 30  LAR1
+![](figures/L1_overview/all_variables/30_LAR1_0.png)
+![](figures/L1_overview/all_variables/30_LAR1_1.png)
+![](figures/L1_overview/all_variables/30_LAR1_2.png)
+![](figures/L1_overview/all_variables/30_LAR1_3.png)
+![](figures/L1_overview/all_variables/30_LAR1_4.png)
+# 31  LAR2
+![](figures/L1_overview/all_variables/31_LAR2_0.png)
+![](figures/L1_overview/all_variables/31_LAR2_1.png)
+![](figures/L1_overview/all_variables/31_LAR2_2.png)
+![](figures/L1_overview/all_variables/31_LAR2_3.png)
+![](figures/L1_overview/all_variables/31_LAR2_4.png)
+# 32  LAR3
+![](figures/L1_overview/all_variables/32_LAR3_0.png)
+![](figures/L1_overview/all_variables/32_LAR3_1.png)
+![](figures/L1_overview/all_variables/32_LAR3_2.png)
+![](figures/L1_overview/all_variables/32_LAR3_3.png)
+![](figures/L1_overview/all_variables/32_LAR3_4.png)

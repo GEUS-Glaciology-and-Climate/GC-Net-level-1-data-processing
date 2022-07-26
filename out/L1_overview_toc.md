@@ -11,15 +11,21 @@
 * [10 Saddle](#s11)
 * [11 South Dome](#s12)
 * [12 NASA-E](#s13)
-* [13 CP2](#s14)
+* [13 Crawford Point 2](#s14)
 * [14 NGRIP](#s15)
 * [15 NASA-SE](#s16)
 * [16 KAR](#s17)
-* [17 JAR 2](#s18)
-* [18 KULU](#s19)
-* [22 Petermann ELA](#s20)
-* [23 NEEM](#s21)
-* [24 E-GRIP](#s22)
+* [17  JAR2](#s18)
+* [18  KULU](#s19)
+* [19  JAR3](#s20)
+* [20  Aurora](#s21)
+* [21  Petermann Glacier](#s22)
+* [22  Petermann ELA](#s23)
+* [23  NEEM](#s24)
+* [24  E-GRIP](#s25)
+* [30  LAR1](#s26)
+* [31  LAR2](#s27)
+* [32  LAR3](#s28)
 # <a id='s1' />0 Swiss Camp 10m
 ![](figures/L1_overview/all_variables/0_SwissCamp10m_0.png)
 ![](figures/L1_overview/all_variables/0_SwissCamp10m_1.png)
@@ -121,10 +127,18 @@
 ![](figures/L1_overview/all_variables/12_NASA-E_4.png)
 ![](figures/L1_overview/all_variables/12_NASA-E_5.png)
 ![](figures/L1_overview/all_variables/12_NASA-E_6.png)
-# <a id='s14' />13 CP2
-Warning: No file for station 13 CP2
+# <a id='s14' />13 Crawford Point 2
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_0.png)
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_1.png)
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_2.png)
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_3.png)
+![](figures/L1_overview/all_variables/13_CrawfordPoint2_4.png)
 # <a id='s15' />14 NGRIP
-Warning: No file for station 14 NGRIP
+![](figures/L1_overview/all_variables/14_NGRIP_0.png)
+![](figures/L1_overview/all_variables/14_NGRIP_1.png)
+![](figures/L1_overview/all_variables/14_NGRIP_2.png)
+![](figures/L1_overview/all_variables/14_NGRIP_3.png)
+![](figures/L1_overview/all_variables/14_NGRIP_4.png)
 # <a id='s16' />15 NASA-SE
 ![](figures/L1_overview/all_variables/15_NASA-SE_0.png)
 ![](figures/L1_overview/all_variables/15_NASA-SE_1.png)
@@ -134,18 +148,48 @@ Warning: No file for station 14 NGRIP
 ![](figures/L1_overview/all_variables/15_NASA-SE_5.png)
 ![](figures/L1_overview/all_variables/15_NASA-SE_6.png)
 # <a id='s17' />16 KAR
-Warning: No file for station 16 KAR
-# <a id='s18' />17 JAR 2
-Warning: No file for station 17 JAR2
-# <a id='s19' />18 KULU
-Warning: No file for station 18 KULU
-# <a id='s20' />22 Petermann ELA
+![](figures/L1_overview/all_variables/16_KAR_0.png)
+![](figures/L1_overview/all_variables/16_KAR_1.png)
+![](figures/L1_overview/all_variables/16_KAR_2.png)
+![](figures/L1_overview/all_variables/16_KAR_3.png)
+![](figures/L1_overview/all_variables/16_KAR_4.png)
+# <a id='s18' />17  JAR2
+![](figures/L1_overview/all_variables/17_JAR2_0.png)
+![](figures/L1_overview/all_variables/17_JAR2_1.png)
+![](figures/L1_overview/all_variables/17_JAR2_2.png)
+![](figures/L1_overview/all_variables/17_JAR2_3.png)
+![](figures/L1_overview/all_variables/17_JAR2_4.png)
+# <a id='s19' />18  KULU
+![](figures/L1_overview/all_variables/18_KULU_0.png)
+![](figures/L1_overview/all_variables/18_KULU_1.png)
+![](figures/L1_overview/all_variables/18_KULU_2.png)
+![](figures/L1_overview/all_variables/18_KULU_3.png)
+![](figures/L1_overview/all_variables/18_KULU_4.png)
+# <a id='s20' />19  JAR3
+![](figures/L1_overview/all_variables/19_JAR3_0.png)
+![](figures/L1_overview/all_variables/19_JAR3_1.png)
+![](figures/L1_overview/all_variables/19_JAR3_2.png)
+![](figures/L1_overview/all_variables/19_JAR3_3.png)
+![](figures/L1_overview/all_variables/19_JAR3_4.png)
+# <a id='s21' />20  Aurora
+![](figures/L1_overview/all_variables/20_Aurora_0.png)
+![](figures/L1_overview/all_variables/20_Aurora_1.png)
+![](figures/L1_overview/all_variables/20_Aurora_2.png)
+![](figures/L1_overview/all_variables/20_Aurora_3.png)
+![](figures/L1_overview/all_variables/20_Aurora_4.png)
+# <a id='s22' />21  Petermann Glacier
+![](figures/L1_overview/all_variables/21_PetermannGlacier_0.png)
+![](figures/L1_overview/all_variables/21_PetermannGlacier_1.png)
+![](figures/L1_overview/all_variables/21_PetermannGlacier_2.png)
+![](figures/L1_overview/all_variables/21_PetermannGlacier_3.png)
+![](figures/L1_overview/all_variables/21_PetermannGlacier_4.png)
+# <a id='s23' />22  Petermann ELA
 ![](figures/L1_overview/all_variables/22_PetermannELA_0.png)
 ![](figures/L1_overview/all_variables/22_PetermannELA_1.png)
 ![](figures/L1_overview/all_variables/22_PetermannELA_2.png)
 ![](figures/L1_overview/all_variables/22_PetermannELA_3.png)
 ![](figures/L1_overview/all_variables/22_PetermannELA_4.png)
-# <a id='s21' />23 NEEM
+# <a id='s24' />23  NEEM
 ![](figures/L1_overview/all_variables/23_NEEM_0.png)
 ![](figures/L1_overview/all_variables/23_NEEM_1.png)
 ![](figures/L1_overview/all_variables/23_NEEM_2.png)
@@ -153,9 +197,27 @@ Warning: No file for station 18 KULU
 ![](figures/L1_overview/all_variables/23_NEEM_4.png)
 ![](figures/L1_overview/all_variables/23_NEEM_5.png)
 ![](figures/L1_overview/all_variables/23_NEEM_6.png)
-# <a id='s22' />24 E-GRIP
+# <a id='s25' />24  E-GRIP
 ![](figures/L1_overview/all_variables/24_E-GRIP_0.png)
 ![](figures/L1_overview/all_variables/24_E-GRIP_1.png)
 ![](figures/L1_overview/all_variables/24_E-GRIP_2.png)
 ![](figures/L1_overview/all_variables/24_E-GRIP_3.png)
 ![](figures/L1_overview/all_variables/24_E-GRIP_4.png)
+# <a id='s26' />30  LAR1
+![](figures/L1_overview/all_variables/30_LAR1_0.png)
+![](figures/L1_overview/all_variables/30_LAR1_1.png)
+![](figures/L1_overview/all_variables/30_LAR1_2.png)
+![](figures/L1_overview/all_variables/30_LAR1_3.png)
+![](figures/L1_overview/all_variables/30_LAR1_4.png)
+# <a id='s27' />31  LAR2
+![](figures/L1_overview/all_variables/31_LAR2_0.png)
+![](figures/L1_overview/all_variables/31_LAR2_1.png)
+![](figures/L1_overview/all_variables/31_LAR2_2.png)
+![](figures/L1_overview/all_variables/31_LAR2_3.png)
+![](figures/L1_overview/all_variables/31_LAR2_4.png)
+# <a id='s28' />32  LAR3
+![](figures/L1_overview/all_variables/32_LAR3_0.png)
+![](figures/L1_overview/all_variables/32_LAR3_1.png)
+![](figures/L1_overview/all_variables/32_LAR3_2.png)
+![](figures/L1_overview/all_variables/32_LAR3_3.png)
+![](figures/L1_overview/all_variables/32_LAR3_4.png)

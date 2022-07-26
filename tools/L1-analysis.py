@@ -95,7 +95,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
         ax[0].set_title(site)
         plt.savefig('figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
         print('![](../figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
-# %run tocgen.py out/L0_overview.md out/L0_overview_toc.md
+# %run tools/tocgen.py out/L0_overview.md out/L0_overview_toc.md
 
 
 # %% L1 overview
