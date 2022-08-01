@@ -20,7 +20,7 @@ from os import path
 name_alias = {'DY2': 'DYE2', 'CP1':'Crawford Point 1'}
 
 
-site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
+site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0, skipinitialspace = True)[16:]
 # uncomment for use at specific sites
 # All station names: 'Swiss Camp 10m', 'Swiss Camp', 'Crawford Point 1', 'NASA-U',
        # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',

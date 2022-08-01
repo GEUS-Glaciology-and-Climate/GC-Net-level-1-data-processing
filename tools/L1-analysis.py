@@ -30,6 +30,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0,skipinitialspace
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
     print('# '+str(ID)+ ' ' + site)
+
     filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
         print('Warning: No file for station '+str(ID)+' '+site)
@@ -39,6 +40,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df=df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp)
     df = df.set_index('timestamp').replace(-999,np.nan)
+    site=site.replace(' ','')
 
     # % plotting variables
     def new_fig():
@@ -97,7 +99,6 @@ for site, ID in zip(site_list.Name,site_list.ID):
         print('![](../figures/L0_diagnostic/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
 # %run tools/tocgen.py out/L0_overview.md out/L0_overview_toc.md
 
-
 # %% L1 overview
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
 
@@ -148,7 +149,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
         count=count+1
         if count == 6:
             plt.savefig('figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
-            print('![](figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
+            print('![](../figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
             count_fig = count_fig+1
             if var!=df.columns[-1]:
                 fig, ax = new_fig()
@@ -158,7 +159,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
         for k in range(count+1,len(ax)):
             ax[k].set_axis_off()
         plt.savefig('figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig),bbox_inches='tight')
-        print('![](figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
+        print('![](../figures/L1_overview/all_variables/'+str(ID)+'_'+site+'_'+str(count_fig)+'.png)')
 
 # %run tools/tocgen.py out/L1_overview.md out/L1_overview_toc.md
 

@@ -95,7 +95,7 @@ def gradient_fluxes(df):  # This method is very sensitive to input data quality
     pot_tmp_low = potential_temperature(units.Quantity(P, "hPa"),                                        
                                         units.Quantity(ta_low , "degC")).magnitude
     pot_tmp_high = potential_temperature(units.Quantity(P, "hPa"), 
-                                         units.Quantity(ta_low , "degC")).magnitude
+                                         units.Quantity(ta_high , "degC")).magnitude
     pot_tmp_avg = (pot_tmp_low + pot_tmp_high)/2
     ta_avg = (ta_low + ta_high)/2
 

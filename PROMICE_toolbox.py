@@ -313,6 +313,8 @@ def adjust_data(df, site, var_list = [], skip_var = []):
 
             if func == 'multiply':
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values * val
+                if 'DW' in var:
+                    df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var]%360
                 # flagging adjusted values
                 if var+'_adj_flag' not in df_out.columns:
                     df_out[var+'_adj_flag'] = 0
@@ -538,7 +540,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     df = adjust_data(df, site, ['HS1', 'HS2'])
     
     # calculating SHF and LHF
-    df['SHF'], df['SHF'] = jaws_tools.gradient_fluxes(df.copy())
+    df['SHF'], df['LHF'] = jaws_tools.gradient_fluxes(df.copy())
     # interpolating variables at standard heights
     df['TA2m'] = jaws_tools.extrapolate_temp(df, var = ['TA1','TA2'], 
                                                 target_height = 2,

@@ -12,6 +12,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2016-05-22T14:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 
 2016-05-22T00:00:00+00:00,,P,add,-61,Manual shift suggested by bav. https://github.com/GEUS-PROMICE/GC-Net-level-1-data-processing/issues/14
+2019-04-28T00:00:00+00:00,,P,add,38,Manual shift suggested by bav. 
+2019-04-29T00:00:00+00:00,,P,add,21,Manual shift suggested by bav. 
 
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
