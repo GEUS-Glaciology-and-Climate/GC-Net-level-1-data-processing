@@ -22,7 +22,7 @@ name_alias = {'CP1':'Crawford Point 1', 'DY2': 'DYE2', 'EGP':'E-GRIP',
               'JR3':'JAR3', 'NSE':'NASA-SE', 'TUN':'Tunu-N', 'JAR':'JAR1',
               'JR2':'JAR2', 'NAE':'NASA-E', 'SDM':'South Dome', 'NEM':'NEEM',
               'SWC':'Swiss Camp', 'SW1':'Swiss Camp 10m', 'SDL':'Saddle',
-              'NGP':'NGRIP', 'PET':'Petermann ELA', 'CP2':'Crawford Point 2'}
+              'NGP':'NGRIP', 'PET':'Petermann ELA', 'CP2':'CP2'}
 
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0, skipinitialspace = True)
 # uncomment for use at specific sites
@@ -30,7 +30,7 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0, skipinitialspac
        # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
        # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
        # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'NASA-E',:]
+# site_list = site_list.loc[site_list.Name.values == 'CP2',:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
     print('# '+str(ID)+ ' ' + site)
@@ -76,8 +76,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df_photo['date'] = pd.to_datetime(df_photo[['year','month','day']])
     df_photo = df_photo.set_index('date').drop(columns = ['site','year','month','day'])
 
-
-    df_photo[['Wz1','Wz2','THz1','THz2']] = df_photo[['Wz1','Wz2','THz1','THz2']].values
+    # df_photo[['Wz1','Wz2','THz1','THz2']] = df_photo[['Wz1','Wz2','THz1','THz2']].values
     
     df_photo_m = pd.read_csv('metadata/photogrammetry_instrument_height_20220425.csv')
     df_photo_m = df_photo_m.replace({'site': name_alias})
@@ -92,26 +91,29 @@ for site, ID in zip(site_list.Name,site_list.ID):
     sym_size=20
     mult=0.6
     # Plotting observed instrument heights
-    obs_df['W1 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
+    if obs_df[useful_columns] .notnull().sum().sum() > 0:
+        obs_df['W1 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
               markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs before')
-    obs_df['W2 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
-              markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs before')
-    obs_df['W1 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
-              markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs after')
-    obs_df['W2 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
-              markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs after')
+        obs_df['W2 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
+                  markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs before')
+        obs_df['W1 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
+                  markerfacecolor='none', markersize=sym_size*mult,c='C0',label='HW1 obs after')
+        obs_df['W2 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
+                  markerfacecolor='none', markersize=sym_size*mult,c='C1',label='HW2 obs after')
+        
+        obs_df['T1 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
+                  markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs before')
+        obs_df['T2 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
+                  markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs before')
+        obs_df['T1 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
+                  markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs afer')
+        obs_df['T2 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
+                  markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs after')
     
-    obs_df['T1 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
-              markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs before')
-    obs_df['T2 before (cm)'].plot(ax=ax, marker = '>', linestyle = 'None',
-              markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs before')
-    obs_df['T1 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
-              markerfacecolor='none', markersize=sym_size*mult,c='C2',label='HT1 obs afer')
-    obs_df['T2 after (cm)'].plot(ax=ax, marker = '<', linestyle = 'None',
-              markerfacecolor='none', markersize=sym_size*mult,c='C3',label='HT2 obs after')
-    
-    df_photo[['Wz1','Wz2','THz1','THz2']].plot(ax=ax, marker='o', linestyle='None')
-    df_photo_m[['Wz1','Wz2','THz1','THz2']].plot(ax=ax, marker='x', linestyle='None')
+    if df_photo[['Wz1','Wz2','THz1','THz2']] .notnull().sum().sum() > 0:
+        df_photo[['Wz1','Wz2','THz1','THz2']].plot(ax=ax, marker='o', linestyle='None')
+    if df_photo_m[['Wz1','Wz2','THz1','THz2']] .notnull().sum().sum() > 0:
+        df_photo_m[['Wz1','Wz2','THz1','THz2']].plot(ax=ax, marker='x', linestyle='None')
 
     df['HW1'].plot(ax =ax, c='C0',label='HW1')
     df['HW2'].plot(ax =ax, c='C1',label='HW2')
