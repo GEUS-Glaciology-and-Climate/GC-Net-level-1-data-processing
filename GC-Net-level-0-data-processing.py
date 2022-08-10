@@ -86,7 +86,7 @@ for i in range(len(L0dirs))  :
     print('--------------------------------')
     print('Now Processing Directory: ',L0dirs[i])
     # the file structure of raw campbell data files
-    datadir = path+L0dirs[i]+'/Campbell logger files/'
+    datadir = path+L0dirs[i]+'/CR1000 logger files/'
     #get 2 digit station number from numered station directory
     cfilenum = str(L0dirs[i])[:2]
     # define path to historical C level file in L0 directory
