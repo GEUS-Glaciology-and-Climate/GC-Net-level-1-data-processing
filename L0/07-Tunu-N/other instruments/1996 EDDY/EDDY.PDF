@@ -1,0 +1,245 @@
+
+
+
+      Program:Eddy96B
+             Program for the Eddy Flux Calculation
+        To be used in Greenland during the 1996 Expedition
+        This is to be Eddy flux station B
+      
+        With this use new eddy flux equip
+        And the CS105 pressure
+        And the RH207 Temperature / Humidity
+      
+        Final Storage will be as followes
+             IDcode, Julian Day, Hour Minute, Pressure,
+               Latent Heat, Sensible Heat,
+                 Temperature, Relative Humidity
+
+
+      *     1       Table 1 Programs 
+        01: .2      Sec. Execution Interval 
+
+      01:  P2       Volt (DIFF) 
+        01: 03      Reps 
+        02: 15      5000 mV fast Range 
+        03: 3       IN Chan 
+        04: 0002    Loc : 
+        05: 1.0000  Mult 
+        06: 0.0000  Offset 
+      FAST EDDY FLUX (WIND TEMP HUMIDITY)
+
+      02:  P37      Z=X*F 
+        01: 0002    X Loc 
+        02: .00100  F 
+        03: 0002    Z Loc : 
+
+      03:  P37      Z=X*F 
+        01: 0003    X Loc 
+        02: .00400  F 
+        03: 0003    Z Loc : 
+
+      04:  P92      If time is 
+        01: 0000    minutes into a 
+        02: 10      minute interval 
+        03: 10      Set high Flag 0 (output) 
+
+      05:  P62      CV/CR (OSX-0) 
+        01: 03      No. of Input Values 
+        02: 03      No. of Means 
+        03: 00      No. of Variances 
+        04: 03      No. of Std. Dev. 
+        05: 02      No. of Covariances 
+        06: 00      No. of Correlations 
+        07: 3000    Samples per Average 
+        08: 0002    First Sample Loc 
+        09: 0005    Loc : 
+
+      06:  P91      If Flag 
+        01: 10      0 (output) is set 
+        02: 30      Then Do 
+
+      Page 2   Table 1
+
+
+      07:  P37      Z=X*F 
+        01: 0007    X Loc 
+        02: -.19264 F 
+        03: 0013    Z Loc : 
+
+      08:  P38      Z=X/Y 
+        01: 0010    X Loc 
+        02: 0013    Y Loc 
+        03: 0014    Z Loc : 
+
+      09:  P37      Z=X*F 
+        01: 0012    X Loc 
+        02: 2500.0  F 
+        03: 0015    Z Loc : 
+
+      10:  P38      Z=X/Y 
+        01: 0015    X Loc 
+        02: 0013    Y Loc 
+        03: 0016    Z Loc : 
+
+      11:  P42      Z=1/X 
+        01: 0017    X Loc 
+        02: 0018    Z Loc : 
+
+      12:  P37      Z=X*F 
+        01: 0018    X Loc 
+        02: 3.4897  F 
+        03: 0019    Z Loc : 
+
+      13:  P36      Z=X*Y 
+        01: 0001    X Loc 
+        02: 0019    Y Loc 
+        03: 0020    Z Loc : 
+
+      14:  P37      Z=X*F 
+        01: 0020    X Loc 
+        02: 1000.0  F 
+        03: 0020    Z Loc : 
+
+      15:  P36      Z=X*Y 
+        01: 0011    X Loc 
+        02: 0020    Y Loc 
+        03: 0021    Z Loc : 
+
+      16:  P37      Z=X*F 
+        01: 0021    X Loc 
+        02: 1       F 
+        03: 0022    Z Loc : 
+
+      17:  P77      Real Time 
+        01: 0110    Day,Hour-Minute 
+
+      18:  P78      Resolution 
+        01: 1       High Resolution 
+
+      Page 3   Table 1
+
+
+      19:  P71      Average 
+        01: 1       Rep 
+        02: 1       Loc 
+
+      20:  P70      Sample 
+        01: 1       Rep 
+        02: 16      Loc 
+
+      21:  P70      Sample 
+        01: 1       Rep 
+        02: 22      Loc 
+
+      22:  P71      Average 
+        01: 2       Reps 
+        02: 23      Loc 
+      Final storage will be as follows
+          IDcode, Julian day, Hour Minute,  Pressure,
+                    Latent Heat, Sensible Heat,
+                    Temperature, Relative Humidity        
+
+      23:  P95      End 
+
+      24:  P        End Table 1 
+
+
+      *     2       Table 2 Programs 
+        01: 10      Sec. Execution Interval 
+
+      01:  P11      Temp 107 Probe 
+        01: 1       Rep 
+        02: 1       IN Chan 
+        03: 1       Excite all reps w/EXchan 1 
+        04: 23      Loc : 
+        05: 1       Mult 
+        06: 0       Offset 
+      RH207 TEMPERATURE
+
+      02:  P12      RH 207 Probe 
+        01: 1       Rep 
+        02: 2       IN Chan 
+        03: 1       Excite all reps w/EXchan 1 
+        04: 23      Temperature Loc 
+        05: 24      Loc : 
+        06: 1       Mult 
+        07: 0       Offset 
+      RH207 HUMIDITY
+
+      03:  P34      Z=X+F 
+        01: 23      X Loc 
+        02: 273.15  F 
+        03: 17      Z Loc : 
+
+      Page 4   Table 2
+
+
+      04:  P4       Excite,Delay,Volt(SE) 
+        01: 1       Rep 
+        02: 5       5000 mV slow Range 
+        03: 3       IN Chan 
+        04: 2       Excite all reps w/EXchan 2 
+        05: 100     Delay (units .01sec) 
+        06: 5000    mV Excitation 
+        07: 1       Loc : 
+        08: .184    Mult 
+        09: 600     Offset 
+      CS105 PRESSURE
+         multipler = (mb range 640)/ 2500
+         offset = (lowest value of mb range)
+
+      05:  P37      Z=X*F 
+        01: 0001    X Loc 
+        02: .10000  F 
+        03: 0001    Z Loc : 
+
+      06:  P        End Table 2 
+
+
+      *     3       Table 3 Subroutines 
+
+      01:  P        End Table 3 
+
+
+      *     4       Mode 4 Output Options 
+        01: 00      (Tape OFF) (Printer OFF) 
+        02: 00      Printer 300 Baud 
+
+
+      *     A       Mode 10 Memory Allocation 
+        01: 0028    Input Locations 
+        02: 0064    Intermediate Locations 
+
+
+      *     C       Mode 12 Security (OSX-0) 
+        01: 00      Security Disabled 
+        02: 0000    Security Code 
+
+      Page 5    Input Location Assignments (with comments):
+
+
+       Key:
+       T=Table Number
+       E=Entry Number
+       L=Location Number
+
+       T:  E:  L:
+       2:  4:  1:  Loc : 
+       2:  5:  1:  Z Loc : 
+       1:  1:  2:  Loc : 
+       1:  2:  2:  Z Loc : 
+       1:  3:  3:  Z Loc : 
+       1:  5:  5:  Loc : 
+       1:  7: 13:  Z Loc : 
+       1:  8: 14:  Z Loc : 
+       1:  9: 15:  Z Loc : 
+       1: 10: 16:  Z Loc : 
+       2:  3: 17:  Z Loc : 
+       1: 11: 18:  Z Loc : 
+       1: 12: 19:  Z Loc : 
+       1: 13: 20:  Z Loc : 
+       1: 14: 20:  Z Loc : 
+       1: 15: 21:  Z Loc : 
+       1: 16: 22:  Z Loc : 
+       2:  1: 23:  Loc : 
+       2:  2: 24:  Loc : 

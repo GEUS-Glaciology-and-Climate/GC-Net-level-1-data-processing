@@ -1,0 +1,44 @@
+Program Trace Information File for:  AWS_1.CSI
+Date: 6/11/2001
+Time: 22:38:21
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|10 Batt Voltage                 7.6    7.6    7.6      7.6    7.6    7.6
+1|2|89 If (X<=>F)                   0.4    8.0    8.0      0.4    8.0    8.0
+1|3|9 Full Bridge w/mv Excit      525.5  533.5  533.5    525.5  533.5  533.5
+1|4|16 Temperature RTD              8.5  542.0  542.0      8.5  542.0  542.0
+1|5|1 Volt (SE)                    19.5  561.5  561.5     19.5  561.5  561.5
+1|6|3 Pulse                         3.8  565.3  565.3      3.8  565.3  565.3
+1|7|4 Excite Delay Volt (SE)       28.1  593.4  593.4     28.1  593.4  593.4
+1|8|92 If time is                   0.3  593.7  593.7      0.3  593.7  593.7
+ Output Flag Set @ 18 for Array 108
+1|9|77 Real Time                    0.1  593.8  593.8      1.0  594.7  594.7
+ Output Data 2 Values
+1|10|78 Resolution                  0.4  594.2  594.2      0.4  595.1  595.1
+1|11|71 Average                     5.9  600.1  600.1     32.1  627.2  627.2
+ Output Data 10 Values
+1|12|70 Sample                      0.1  600.2  600.2      1.0  628.2  628.2
+ Output Data 1 Values
+
+Program Table 1 Execution Interval    5.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec  600.2 w/Output  628.2
+
+Table 1 Estimated Total Final Storage Locations used per day 3600.0
+
+
+
+Estimated Total Final Storage Locations used per day 3600.0

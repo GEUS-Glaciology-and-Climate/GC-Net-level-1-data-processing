@@ -1,0 +1,224 @@
+;{21X}
+*Table 1 Program
+  01: 0.2000    Execution Interval (seconds)
+
+1:  Volt (Diff) (P2)
+ 1: 3        Reps
+ 2: 15       5000 mV Fast Range
+ 3: 3        DIFF Channel
+ 4: 2        Loc [ _________ ]
+ 5: 1.0000   Multiplier
+ 6: 0.0000   Offset
+
+2:  Z=X*F (P37)
+ 1: 2        X Loc [ _________ ]
+ 2: .00100   F
+ 3: 2        Z Loc [ _________ ]
+
+3:  Z=X*F (P37)
+ 1: 3        X Loc [ _________ ]
+ 2: .00400   F
+ 3: 3        Z Loc [ _________ ]
+
+4:  If time is (P92)
+ 1: 0        Minutes into a
+ 2: 10       Minute Interval
+ 3: 10       Set Output Flag High
+
+5:  CV/CR (OSX-0) (P62)
+ 1: 3        No. of Input Locations
+ 2: 3        No. of Means
+ 3: 0        No. of Variances
+ 4: 3        No. of Std. Dev.
+ 5: 2        No. of Covariance
+ 6: 0        No. of Correlations
+ 7: 3000     Samples per Average
+ 8: 2        First Source Loc [ _________ ]
+ 9: 5        First Destination Loc [ _________ ]
+
+6:  If Flag/Input (P91)
+ 1: 10       Do if Output Flag (Flag 0) is High
+ 2: 30       Then Do
+
+7:  Z=X*F (P37)
+ 1: 7        X Loc [ _________ ]
+ 2: -.19264  F
+ 3: 13       Z Loc [ _________ ]
+
+8:  Z=X/Y (P38)
+ 1: 10       X Loc [ _________ ]
+ 2: 13       Y Loc [ _________ ]
+ 3: 14       Z Loc [ _________ ]
+
+9:  Z=X*F (P37)
+ 1: 12       X Loc [ _________ ]
+ 2: 2500.0   F
+ 3: 15       Z Loc [ _________ ]
+
+10:  Z=X/Y (P38)
+ 1: 15       X Loc [ _________ ]
+ 2: 13       Y Loc [ _________ ]
+ 3: 16       Z Loc [ _________ ]
+
+11:  Z=1/X (P42)
+ 1: 17       X Loc [ _________ ]
+ 2: 18       Z Loc [ _________ ]
+
+12:  Z=X*F (P37)
+ 1: 18       X Loc [ _________ ]
+ 2: 3.4897   F
+ 3: 19       Z Loc [ _________ ]
+
+13:  Z=X*Y (P36)
+ 1: 1        X Loc [ _________ ]
+ 2: 19       Y Loc [ _________ ]
+ 3: 20       Z Loc [ _________ ]
+
+14:  Z=X*F (P37)
+ 1: 20       X Loc [ _________ ]
+ 2: 1000.0   F
+ 3: 20       Z Loc [ _________ ]
+
+15:  Z=X*Y (P36)
+ 1: 11       X Loc [ _________ ]
+ 2: 20       Y Loc [ _________ ]
+ 3: 21       Z Loc [ _________ ]
+
+16:  Z=X*F (P37)
+ 1: 21       X Loc [ _________ ]
+ 2: 1        F
+ 3: 22       Z Loc [ _________ ]
+
+17:  Real Time (P77)^22046
+ 1: 110      Day,Hour/Minute (midnight = 0000)
+
+18:  Resolution (P78)
+ 1: 1        High Resolution
+
+19:  Average (P71)^29820
+ 1: 1        Reps
+ 2: 1        Loc [ _________ ]
+
+20:  Sample (P70)^11039
+ 1: 1        Reps
+ 2: 16       Loc [ _________ ]
+
+21:  Sample (P70)^1306
+ 1: 1        Reps
+ 2: 22       Loc [ _________ ]
+
+22:  Average (P71)^15783
+ 1: 4        Reps
+ 2: 23       Loc [ _________ ]
+
+23:  End (P95)
+
+*Table 2 Program
+  01: 10.0000   Execution Interval (seconds)
+
+1:  Temp 107 Probe (P11)
+ 1: 1        Reps
+ 2: 1        SE Channel
+ 3: 1        Excite all reps w/Exchan 1
+ 4: 23       Loc [ _________ ]
+ 5: 1        Multiplier
+ 6: 0        Offset
+
+2:  R.H. 207 Probe (P12)
+ 1: 1        Reps
+ 2: 2        SE Channel
+ 3: 1        Excite all reps w/Exchan 1
+ 4: 23       Temperature Loc [ _________ ]
+ 5: 24       Loc [ _________ ]
+ 6: 1        Multiplier
+ 7: 0        Offset
+
+3:  Z=X+F (P34)
+ 1: 23       X Loc [ _________ ]
+ 2: 273.15   F
+ 3: 17       Z Loc [ _________ ]
+
+4:  Excite Delay Volt (SE) (P4)
+ 1: 1        Reps
+ 2: 5        5000 mV Slow Range
+ 3: 3        SE Channel
+ 4: 2        Excite all reps w/Exchan 2
+ 5: 100      Delay (0.01 sec units)
+ 6: 5000     mV Excitation
+ 7: 1        Loc [ _________ ]
+ 8: .184     Multiplier
+ 9: 600      Offset
+
+5:  Z=X*F (P37)
+ 1: 1        X Loc [ _________ ]
+ 2: .10000   F
+ 3: 1        Z Loc [ _________ ]
+
+6:  Pulse (P3)
+ 1: 1        Reps
+ 2: 1        Pulse Input Channel
+ 3: 21       Low Level AC, Output Hz
+ 4: 25       Loc [ _________ ]
+ 5: .0980    Multiplier
+ 6: .447     Offset
+
+7:  Excite Delay Volt (SE) (P4)
+ 1: 1        Reps
+ 2: 5        5000 mV Slow Range
+ 3: 12       SE Channel
+ 4: 3        Excite all reps w/Exchan 3
+ 5: 2        Delay (0.01 sec units)
+ 6: 5000     mV Excitation
+ 7: 26       Loc [ _________ ]
+ 8: .071     Multiplier
+ 9: 0.0000   Offset
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 _________ 1 3 2
+2 _________ 5 2 2
+3 _________ 9 2 2
+4 _________ 17 1 1
+5 _________ 5 0 1
+6 _________ 9 0 1
+7 _________ 9 1 1
+8 _________ 9 0 1
+9 _________ 9 0 1
+10 _________ 9 1 1
+11 _________ 9 1 1
+12 _________ 17 1 1
+13 _________ 1 2 1
+14 _________ 1 0 1
+15 _________ 1 1 1
+16 _________ 1 1 1
+17 _________ 1 1 1
+18 _________ 1 1 1
+19 _________ 1 1 1
+20 _________ 1 3 2
+21 _________ 1 2 1
+22 _________ 1 1 1
+23 _________ 1 3 1
+24 _________ 1 1 1
+25 _________ 1 1 1
+26 _________ 1 1 1
+27 _________ 0 0 0
+28 _________ 0 0 0
+-Program Security-
+0000
+0000
+0000
+-DLD File Labels-
+0
+-Final Storage Labels-
+0,Day_RTM,22046
+0,Hour_Minute_RTM
+1,__________AVG~1,29820
+2,_________~16,11039
+3,_________~22,1306
+4,__________AVG~23,15783
+4,__________AVG~24
+4,__________AVG~25
+4,__________AVG~26

@@ -1,0 +1,326 @@
+;{CR10X}
+;Program to read the Trimble SVeeSix GPS
+
+;Wiring:
+;GPS power Red to 12 V, black to GND, yellow to 5 V
+;GPS RS232; Cable has a 1 kOhm resitor in
+;seried with GPS TX line, which is white.
+;Wire black to C2, White to C3, clear to GND
+
+;Operation:
+;Flag 1 high turn SV NEMA GGA string and get data
+;Flag 2 high will turn NEMA GGA string off
+
+;Input used:
+; 3 hours/minuntes
+; 4 seconds
+; 5 Lat deg
+; 6 Lat tousands
+; 7 Long  Deg
+; 8 Long thousands
+; 43 Quality, zero is no GPS signal
+; 44 Number of satellites in view
+; 46 Altimeter in meters
+
+*Table 1 Program
+  01: 5         Execution Interval (seconds)
+
+
+1:  Batt Voltage (P10)
+ 1: 1        Loc [ Battery   ]
+
+; Load Command to tunr NEMA GGA string on
+
+
+2:  Bulk Load (P65)
+ 1: 62       F
+ 2: 83       F
+ 3: 80       F
+ 4: 82       F
+ 5: 59       F
+ 6: 78       F
+ 7: 77       F
+ 8: 69       F
+ 9: 10       Loc [ NEMAon_1  ]
+
+
+3:  Bulk Load (P65)
+ 1: 65       F
+ 2: 61       F
+ 3: 70       F
+ 4: 79       F
+ 5: 60       F
+ 6: 0.0      F
+ 7: 0.0      F
+ 8: 0.0      F
+ 9: 18       Loc [ NEMAon_9  ]
+
+; Load comamnd to turn NEMA GGA string off
+
+
+4:  Bulk Load (P65)
+ 1: 62       F
+ 2: 83       F
+ 3: 80       F
+ 4: 82       F
+ 5: 59       F
+ 6: 78       F
+ 7: 77       F
+ 8: 69       F
+ 9: 23       Loc [ NMAoff_1  ]
+
+
+5:  Bulk Load (P65)
+ 1: 65       F
+ 2: 61       F
+ 3: 70       F
+ 4: 70       F
+ 5: 60       F
+ 6: 0.0      F
+ 7: 0.0      F
+ 8: 0.0      F
+ 9: 31       Loc [ NMAoff_9  ]
+
+; If Flag 1 high, turn NEMA outouts and receive string
+
+6:  If Flag/Port (P91)
+ 1: 11       Do if Flag 1 is High
+ 2: 30       Then Do
+
+; Clear GPS Quality input locations
+
+7:  Z=F (P30)
+ 1: 0        F
+ 2: 0        Exponent of 10
+ 3: 43       Z Loc [ Quality   ]
+
+; Enable NEMA $GPGGA string, read data
+
+8:  Port Serial I/O (P15)
+ 1: 1        Reps
+ 2: 1        ASCII/RS-232, 1200 Baud
+ 3: 1        Delay (units = 0.01 sec)
+ 4: 1        First Control Port
+ 5: 10       Output Loc [ NEMAon_1  ]
+ 6: 13       No. of Locs to Send
+ 7: 42       Termination Character
+ 8: 100      Maximum Characters
+ 9: 150      CTS/Input Wait (units = 0.01 sec)
+10: 40       Loc [ RAW_time1 ]
+11: 1.0      Mult
+12: 0.0      Offset
+
+
+9:  End (P95)
+
+; If Flag 2 high, turn NEMA outputs
+
+10:  If Flag/Port (P91)
+ 1: 12       Do if Flag 2 is High
+ 2: 30       Then Do
+
+
+11:  Excitation with Delay (P22)
+ 1: 1        Ex Channel
+ 2: 50       Delay W/Ex (units = 0.01 sec)
+ 3: 0000     Delay After Ex (units = 0.01 sec)
+ 4: 0000     mV Excitation
+
+
+
+12:  Port Serial I/O (P15)
+ 1: 1        Reps
+ 2: 1        ASCII/RS-232, 1200 Baud
+ 3: 1        Delay (units = 0.01 sec)
+ 4: 1        First Control Port
+ 5: 23       Output Loc [ NMAoff_1  ]
+ 6: 13       No. of Locs to Send
+ 7: 42       Termination Character
+ 8: 0        Maximum Characters
+ 9: 13       CTS/Input Wait (units = 0.01 sec)
+10: 60       Loc [ Null      ]
+11: 1.0      Mult
+12: 0.0      Offset
+
+
+13:  End (P95)
+
+
+; Time field too large to display, these instructions
+; break the time into two locations. The first for
+; hours and min (Hour_Min), the seconds for sec
+
+14:  Z=X*F (P37)
+ 1: 40       X Loc [ RAW_time1 ]
+ 2: 0.01     F
+ 3: 2        Z Loc [ Raw_time2 ]
+
+
+15:  Z=INT(X) (P45)
+ 1: 2        X Loc [ Raw_time2 ]
+ 2: 3        Z Loc [ Hou_Min   ]
+
+
+16:  Z=FRAC(X) (P44)
+ 1: 2        X Loc [ Raw_time2 ]
+ 2: 4        Z Loc [ Seconds   ]
+
+
+17:  Z=X*F (P37)
+ 1: 4        X Loc [ Seconds   ]
+ 2: 100      F
+ 3: 4        Z Loc [ Seconds   ]
+
+
+18:  Z=INT(X) (P45)
+ 1: 4        X Loc [ Seconds   ]
+ 2: 4        Z Loc [ Seconds   ]
+
+
+19:  If (X<=>F) (P89)
+ 1: 4        X Loc [ Seconds   ]
+ 2: 3        >=
+ 3: 60       F
+ 4: 30       Then Do
+
+
+20:  Z=F (P30)
+ 1: 0        F
+ 2: 0        Exponent of 10
+ 3: 4        Z Loc [ Seconds   ]
+
+
+21:  End (P95)
+
+; Seperate tghe degrees from thousends of degrees
+; in Lat and Long
+
+
+22:  Z=INT(X) (P45)
+ 1: 41       X Loc [ Latitude  ]
+ 2: 5        Z Loc [ Lat_Deg   ]
+
+
+23:  Z=FRAC(X) (P44)
+ 1: 41       X Loc [ Latitude  ]
+ 2: 6        Z Loc [ Lat_Thds  ]
+
+
+24:  Z=INT(X) (P45)
+ 1: 42       X Loc [ Longitude ]
+ 2: 7        Z Loc [ Long_Deg  ]
+
+
+25:  Z=FRAC(X) (P44)
+ 1: 42       X Loc [ Longitude ]
+ 2: 8        Z Loc [ Long_Thds ]
+
+; Only write data if GPS data is valid
+; Note this method does not work for averages, max ect
+
+
+26:  If (X<=>F) (P89)
+ 1: 43       X Loc [ Quality   ]
+ 2: 3        >=
+ 3: 1        F
+ 4: 30       Then Do
+
+
+27:  Do (P86)
+ 1: 10       Set Output Flag High (Flag 0)
+
+
+28:  Real Time (P77)
+ 1: 0220     Day,Hour/Minute (midnight = 2400)
+
+
+29:  Resolution (P78)
+ 1: 1        High Resolution
+
+
+30:  Sample (P70)
+ 1: 2        Reps
+ 2: 3        Loc [ Hou_Min   ]
+
+
+31:  Sample (P70)
+ 1: 4        Reps
+ 2: 5        Loc [ Lat_Deg   ]
+
+
+32:  Sample (P70)
+ 1: 6        Reps
+ 2: 43       Loc [ Quality   ]
+
+
+33:  End (P95)
+
+
+
+
+*Table 2 Program
+  02: 0.0000    Execution Interval (seconds)
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 Battery   1 0 1
+2 Raw_time2 1 2 1
+3 Hou_Min   1 1 1
+4 Seconds   1 4 4
+5 Lat_Deg   1 1 1
+6 Lat_Thds  1 1 1
+7 Long_Deg  1 1 1
+8 Long_Thds 1 1 1
+9 _________ 0 0 0
+10 NEMAon_1  5 1 1
+11 NEMAon_2  9 0 1
+12 NEMAon_3  9 0 1
+13 NEMAon_4  9 0 1
+14 NEMAon_5  9 0 1
+15 NEMAon_6  9 0 1
+16 NEMAon_7  9 0 1
+17 NEMAon_8  17 0 1
+18 NEMAon_9  5 0 1
+19 NEMAon_10 9 0 1
+20 NEMAon_11 9 0 1
+21 NEMAon_12 9 0 1
+22 NEMAon_13 9 0 1
+23 NMAoff_1  13 1 2
+24 NMAoff_2  9 0 2
+25 NMAoff_3  25 0 2
+26 NMAoff_4  9 0 1
+27 NMAoff_5  9 0 1
+28 NMAoff_6  9 0 1
+29 NMAoff_7  9 0 1
+30 NMAoff_8  17 0 1
+31 NMAoff_9  5 0 1
+32 NMAoff_10 9 0 1
+33 NMAoff_11 9 0 1
+34 NMAoff_12 9 0 1
+35 NMAoff_13 9 0 1
+36 NMAoff_14 9 0 1
+37 NMAoff_15 9 0 1
+38 NMAoff_16 17 0 1
+39 _________ 1 0 0
+40 RAW_time1 1 1 1
+41 Latitude  1 2 0
+42 Longitude 1 2 0
+43 Quality   1 2 1
+44 _________ 1 1 0
+45 _________ 1 1 0
+46 _________ 1 1 0
+60 Null      1 0 1
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0
+-CR10X ID-
+0
+-CR10X Power Up-
+3

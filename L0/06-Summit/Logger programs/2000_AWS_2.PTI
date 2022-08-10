@@ -1,0 +1,48 @@
+Program Trace Information File for:  AWS_2.CSI
+Date: 6/18/2000
+Time: 00:17:09
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|10 Batt Voltage                 8.3    8.3    8.3      8.3    8.3    8.3
+1|2|89 If (X<=>F)                   0.6    8.9    8.9      0.6    8.9    8.9
+1|3|86 Do                           0.3    9.2    9.2      0.3    9.2    9.2
+1|4|22 Excitation with Delay      150.5  159.7  159.7    150.5  159.7  159.7
+1|5|1 Volt (SE)                    10.4  170.1  170.1     10.4  170.1  170.1
+1|6|1 Volt (SE)                    10.4  180.5  180.5     10.4  180.5  180.5
+1|7|86 Do                           0.3  180.8  180.8      0.3  180.8  180.8
+1|8|2 Volt (Diff)                   4.9  185.7  185.7      4.9  185.7  185.7
+1|9|105 SDI-12 Recorder               *  185.7  185.7        *  185.7  185.7
+1|10|8 Ex-Del-Diff                 35.3  221.0  221.0     35.3  221.0  221.0
+1|11|37 Z=X*F                       1.2  222.2  222.2      1.2  222.2  222.2
+1|12|92 If time is                  0.4  222.6  222.6      0.4  222.6  222.6
+ Output Flag Set @ 112 for Array 112
+1|13|77 Real Time                   0.2  222.8  222.8      3.8  226.4  226.4
+ Output Data 2 Values
+1|14|78 Resolution                  0.4  223.2  223.2      0.4  226.8  226.8
+1|15|71 Average                     9.4  232.6  232.6     36.7  263.5  263.5
+ Output Data 8 Values
+1|16|70 Sample                      0.2  232.8  232.8      0.9  264.4  264.4
+ Output Data 1 Values
+
+Program Table 1 Execution Interval    5.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec  232.8 w/Output  264.4
+
+Table 1 Estimated Total Final Storage Locations used per day 3024.0
+
+
+
+Estimated Total Final Storage Locations used per day 3024.0

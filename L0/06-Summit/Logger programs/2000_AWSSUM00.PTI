@@ -1,0 +1,113 @@
+Program Trace Information File for:  AWSSUM00.CSI
+Date: 6/20/2000
+Time: 17:18:17
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|20 Set Port(s)                 11.3   11.3   11.3     11.3   11.3   11.3
+1|2|86 Do                           0.3   11.6   11.6      0.3   11.6   11.6
+1|3|6 Full Bridge                  20.7   32.3   32.3     20.7   32.3   32.3
+1|4|59 BR Transform Rf[X/(1-X)]     1.6   33.9   33.9      1.6   33.9   33.9
+1|5|34 Z=X+F                        1.1   35.0   35.0      1.1   35.0   35.0
+1|6|30 Z=F                          1.0   36.0   36.0      1.0   36.0   36.0
+1|7|38 Z=X/Y                        3.0   39.0   39.0      3.0   39.0   39.0
+1|8|87 Beginning of Loop            0.3   39.3   39.3      0.3   39.3   39.3
+ Execution times in the loop are calculated for one pass only.
+1|9|86 Do                           0.3   39.6   39.6      0.3   39.6   39.6
+1|10|86 Do                          0.3   39.9   39.9      0.3   39.9   39.9
+1|11|2 Volt (Diff)                  9.7   49.6   49.6      9.7   49.6   49.6
+1|12|95 End                         0.2   49.8   49.8      0.2   49.8   49.8
+1|13|89 If (X<=>F)                  0.6   50.4   50.4      0.6   50.4   50.4
+1|14|30 Z=F                         1.0   51.4   51.4      1.0   51.4   51.4
+1|15|95 End                         0.2   51.6   51.6      0.2   51.6   51.6
+1|16|89 If (X<=>F)                  0.6   52.2   52.2      0.6   52.2   52.2
+1|17|30 Z=F                         1.0   53.2   53.2      1.0   53.2   53.2
+1|18|95 End                         0.2   53.4   53.4      0.2   53.4   53.4
+1|19|86 Do                          0.3   53.7   53.7      0.3   53.7   53.7
+1|20|86 Do                          0.3   54.0   54.0      0.3   54.0   54.0
+1|21|2 Volt (Diff)                  9.7   63.7   63.7      9.7   63.7   63.7
+1|22|87 Beginning of Loop           0.3   64.0   64.0      0.3   64.0   64.0
+ Execution times in the loop are calculated for one pass only.
+1|23|86 Do                          0.3   64.3   64.3      0.3   64.3   64.3
+1|24|86 Do                          0.3   64.6   64.6      0.3   64.6   64.6
+1|25|14 Thermocouple Temp (DIFF)   18.0   82.6   82.6     18.0   82.6   82.6
+1|26|95 End                         0.2   82.8   82.8      0.2   82.8   82.8
+1|27|87 Beginning of Loop           0.3   83.1   83.1      0.3   83.1   83.1
+ Execution times in the loop are calculated for one pass only.
+1|28|86 Do                          0.3   83.4   83.4      0.3   83.4   83.4
+1|29|86 Do                          0.3   83.7   83.7      0.3   83.7   83.7
+1|30|14 Thermocouple Temp (DIFF)   18.0  101.7  101.7     18.0  101.7  101.7
+1|31|95 End                         0.2  101.9  101.9      0.2  101.9  101.9
+1|32|86 Do                          0.3  102.2  102.2      0.3  102.2  102.2
+1|33|92 If time is                  0.4  102.6  102.6      0.4  102.6  102.6
+ Output Flag Set @ 133 for Array 133
+1|34|77 Real Time                   0.2  102.8  102.8      3.8  106.4  106.4
+ Output Data 2 Values
+1|35|71 Average                    25.9  128.7  128.7    102.7  209.1  209.1
+ Output Data 23 Values
+1|36|71 Average                     1.7  130.4  130.4      5.9  215.0  215.0
+ Output Data 1 Values
+1|37|71 Average                     2.8  133.2  133.2     10.3  225.3  225.3
+ Output Data 2 Values
+1|38|73 Maximum                     2.2  135.4  135.4      8.0  233.3  233.3
+ Output Data 1 Values
+1|39|70 Sample                      0.2  135.6  135.6      0.9  234.2  234.2
+ Output Data 1 Values
+1|40|3 Pulse                        3.1  138.7  138.7      3.1  237.3  237.3
+
+Program Table 1 Execution Interval   15.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec  138.7 w/Output  237.3
+
+Table 1 Estimated Total Final Storage Locations used per day  744.0
+
+
+--------------- Table 2 ---------------
+2|1|30 Z=F                          1.0    1.0    1.0      1.0    1.0    1.0
+2|2|86 Do                           0.3    1.3    1.3      0.3    1.3    1.3
+2|3|22 Excitation with Delay     1000.5 1001.8 1001.8   1000.5 1001.8 1001.8
+2|4|1 Volt (SE)                     7.6 1009.4 1009.4      7.6 1009.4 1009.4
+2|5|1 Volt (SE)                     7.6 1017.0 1017.0      7.6 1017.0 1017.0
+2|6|86 Do                           0.3 1017.3 1017.3      0.3 1017.3 1017.3
+2|7|4 Excite-Delay (SE)            48.1 1065.4 1065.4     48.1 1065.4 1065.4
+2|8|92 If time is                   0.4 1065.8 1065.8      0.4 1065.8 1065.8
+2|9|30 Z=F                          1.0 1066.8 1066.8      1.0 1066.8 1066.8
+2|10|92 If time is                  0.4 1067.2 1067.2      0.4 1067.2 1067.2
+2|11|89 If (X<=>F)                  0.6 1067.8 1067.8      0.6 1067.8 1067.8
+2|12|4 Excite-Delay (SE)         3005.2 4073.0 4073.0   3005.2 4073.0 4073.0
+2|13|10 Batt Voltage                8.3 4081.3 4081.3      8.3 4081.3 4081.3
+2|14|95 End                         0.2 4081.5 4081.5      0.2 4081.5 4081.5
+2|15|89 If (X<=>F)                  0.6 4082.1 4082.1      0.6 4082.1 4082.1
+2|16|1 Volt (SE)                    4.8 4086.9 4086.9      4.8 4086.9 4086.9
+2|17|10 Batt Voltage                8.3 4095.2 4095.2      8.3 4095.2 4095.2
+2|18|86 Do                          0.3 4095.5 4095.5      0.3 4095.5 4095.5
+2|19|95 End                         0.2 4095.7 4095.7      0.2 4095.7 4095.7
+2|20|95 End                         0.2 4095.9 4095.9      0.2 4095.9 4095.9
+2|21|92 If time is                  0.4 4096.3 4096.3      0.4 4096.3 4096.3
+2|22|105 SDI-12 Recorder              * 4096.3 4096.3        * 4096.3 4096.3
+2|23|105 SDI-12 Recorder              * 4096.3 4096.3        * 4096.3 4096.3
+2|24|95 End                         0.2 4096.5 4096.5      0.2 4096.5 4096.5
+
+Program Table 2 Execution Interval   60.000 Seconds
+
+Table 2 Estimated Total Program Execution Time in msec 4096.5 w/Output 4096.5
+
+Table 2 Estimated Total Final Storage Locations used per day    0.0
+
+
+
+Estimated Total Final Storage Locations used per day  744.0
+
+*Execution time is unknown.

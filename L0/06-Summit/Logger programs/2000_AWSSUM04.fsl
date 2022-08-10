@@ -1,0 +1,39 @@
+Final Storage Label File for:  AWSSUM04.csi
+Date:  3/11/2004
+Time:  23:24:45
+
+17 Output_Table   1.00 Min
+1 17 L
+2 Day_RTM  L
+3 Hour_Minute_RTM  L
+4 sw_in_AVG  L
+5 sw_ref_AVG  L
+6 net_rad_AVG  L
+7 tc1_AVG  L
+8 tc2_AVG  L
+9 tc3_AVG  L
+10 tc4_AVG  L
+11 tc5_AVG  L
+12 tc6_AVG  L
+13 tc7_AVG  L
+14 tc8_AVG  L
+15 tc9_AVG  L
+16 tc10_AVG  L
+17 tc_air1_AVG  L
+18 tc_air2_AVG  L
+19 thmp_1_AVG  L
+20 thmp_2_AVG  L
+21 rh_1_AVG  L
+22 rh_2_AVG  L
+23 U_1_AVG  L
+24 U_2_AVG  L
+25 Dir_1_AVG  L
+26 Dir_2_AVG  L
+27 pressure_AVG  L
+28 SD_1_AVG  L
+29 SD_2_AVG  L
+30 U_2_MAX  L
+31 BATTERY  L
+
+
+Estimated Total Final Storage Locations used per day 44640

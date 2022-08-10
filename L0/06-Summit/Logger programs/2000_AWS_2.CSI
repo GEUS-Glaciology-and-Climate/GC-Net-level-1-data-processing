@@ -1,0 +1,152 @@
+;{CR10X}
+
+;Summit 2000 AWS station
+;Surface temperature, pressure, sonic height and
+;HMP 45C temperatures
+
+*Table 1 Program
+  01: 5         Execution Interval (seconds)
+
+1:  Batt Voltage (P10)
+ 1: 1        Loc [ Battery   ]
+
+2:  IF (X<=>F) (P89)
+ 1: 1        X Loc [ Battery   ]
+ 2: 4        <
+ 3: 9.8      F
+ 4: 0        Go to end of Program Table
+
+;Temperature and humidity, HMP 45C x3
+
+3:  Do (P86)
+ 1: 41       Set Port 1 High
+
+4:  Excitation with Delay (P22)
+ 1: 1        Ex Channel
+ 2: 0        Delay W/Ex (units = 0.01 sec)
+ 3: 15       Delay After Ex (units = 0.01 sec)
+ 4: 0        mV Excitation
+
+5:  Volt (SE) (P1)
+ 1: 3        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 1        SE Channel
+ 4: 2        Loc [ Temp_1    ]
+ 5: .1       Mult
+ 6: -40      Offset
+
+6:  Volt (SE) (P1)
+ 1: 3        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 4        SE Channel
+ 4: 5        Loc [ RH_1      ]
+ 5: .1       Mult
+ 6: 0.0      Offset
+
+7:  Do (P86)
+ 1: 52       Set Port 2 Low
+
+;Everst IR thermometer
+
+8:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 5        5000 mV Slow Range
+ 3: 4        DIFF Channel
+ 4: 8        Loc [ Temp_s    ]
+ 5: 0.1      Mult
+ 6: 0.0      Offset
+
+;Sonic ranging instrument
+
+9:  SDI-12 Recorder (P105)
+ 1: 0        SDI-12 Address
+ 2: 0        Start Measurement (aM0!)
+ 3: 2        Port
+ 4: 9        Loc [ Sonic_h   ]
+ 5: 1        Mult
+ 6: 0.0      Offset
+
+;Pressure
+
+10:  Ex-Del-Diff (P8)
+ 1: 1        Reps
+ 2: 4        500 mV Slow Range
+ 3: 5        DIFF Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 1        Delay (units 0.01 sec)
+ 6: 2500     mV Excitation
+ 7: 10       Loc [ Pressure  ]
+ 8: 1.2      Mult
+ 9: 800      Offset
+
+11:  Z=X*F (P37)
+ 1: 10       X Loc [ Pressure  ]
+ 2: .1       F
+ 3: 10       Z Loc [ Pressure  ]
+
+12:  If time is (P92)
+ 1: 0        Minutes into a
+ 2: 10       Minute Interval
+ 3: 10       Set Output Flag High
+
+13:  Real Time (P77)
+ 1: 0110     Day,Hour/Minute (midnight = 0000)
+
+14:  Resolution (P78)
+ 1: 1        High Resolution
+
+15:  Average (P71)
+ 1: 8        Reps
+ 2: 2        Loc [ Temp_1    ]
+
+16:  Sample (P70)
+ 1: 1        Reps
+ 2: 10       Loc [ Pressure  ]
+
+*Table 2 Program
+  02: 0.0000    Execution Interval (seconds)
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 Battery   1 1 1
+2 Temp_1    5 1 1
+3 Temp_2    9 1 1
+4 Temp_3    17 1 1
+5 RH_1      5 1 1
+6 RH_2      9 1 1
+7 RH_3      17 1 1
+8 Temp_s    1 1 1
+9 Sonic_h   1 1 1
+10 Pressure  1 2 2
+11 _________ 0 0 0
+12 _________ 0 0 0
+13 _________ 0 0 0
+14 _________ 0 0 0
+15 _________ 0 0 0
+16 _________ 0 0 0
+17 _________ 0 0 0
+18 _________ 0 0 0
+19 _________ 0 0 0
+20 _________ 0 0 0
+21 _________ 0 0 0
+22 _________ 0 0 0
+23 _________ 0 0 0
+24 _________ 0 0 0
+25 _________ 0 0 0
+26 _________ 0 0 0
+27 _________ 0 0 0
+28 _________ 0 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0
+-CR10X ID-
+0
+-CR10X Power Up-
+3

@@ -1,0 +1,44 @@
+Final Storage Label File for:  PET_PRT.CSI
+Date:  6/4/2002
+Time:  01:36:52
+
+212 Output_Table  60.00 Min
+1 212 L
+2 Day_RTM  L
+3 Hour_Minute_RTM  L
+4 sw_in_AVG  L
+5 sw_ref_AVG  L
+6 net_rad_AVG  L
+7 tc_air1_AVG  L
+8 tc_air2_AVG  L
+9 rh_1_AVG  L
+10 rh_2_AVG  L
+11 U1_AVG  L
+12 U2_AVG  L
+13 U_dir1_AVG  L
+14 U_dir2_AVG  L
+15 pressure_AVG  L
+16 SD_1_AVG  L
+17 SD_2_AVG  L
+
+208 Output_Table  60.00 Min
+1 208 L
+2 Day_RTM  L
+3 Hour_Minute_RTM  L
+4 tc1_AVG  L
+5 tc2_AVG  L
+6 tc3_AVG  L
+7 tc4_AVG  L
+8 tc5_AVG  L
+9 tc6_AVG  L
+10 tc7_AVG  L
+11 tc8_AVG  L
+12 tc9_AVG  L
+13 tc10_AVG  L
+14 tair_1_AVG  L
+15 tair_2_AVG  L
+16 U2_MAX  L
+17 CCT_AVG  L
+
+
+Estimated Total Final Storage Locations used per day  816.0

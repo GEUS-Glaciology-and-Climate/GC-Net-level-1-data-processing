@@ -1,0 +1,23 @@
+Final Storage Label File for:  SMS_GPS.CSI
+Date:  5/31/2002
+Time:  21:49:07
+
+127 Output_Table   5.00 Sec
+1 127 L
+2 Day_RTM  L
+3 Hour_Minute_RTM  L
+4 Hou_Min  H
+5 Seconds  H
+6 Lat_Deg  H
+7 Lat_Thds  H
+8 Long_Deg  H
+9 Long_Thds  H
+10 Quality  H
+11 _________  H
+12 _________  H
+13 _________  H
+14 _________  H
+15 _________  H
+
+
+Estimated Total Final Storage Locations used per day 466560.0

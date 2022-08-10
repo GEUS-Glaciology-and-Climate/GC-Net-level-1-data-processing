@@ -1,0 +1,230 @@
+' New program for Greenland AWS with CR1000 and ARGOS ST-21 transmitter
+' Swiss Camp, Greenland: 13 May, 2012
+'
+'This program was converted from D:\Data1\GREENL\CLIMATE\GOES\Logger programs\GOES NEW 09.CSI
+'using Campbell Scientific's Transformer application.
+
+' The Argos buffers can only accept 30 bytes of data. Each data point is 2 bytes.
+' Make sure the ArgosData command only sends 30  bytes, or less, to the
+' ST-21.Sample program received from Campbell for ST-21 transmitter
+
+' Use this program to test your ST-21 hardware/firmware. The new ID numbers
+' require the current version of firmware. The 9 public variables that
+' end if "rc" are used to indicate success or failure. Success is -1.
+' failure is zero.
+
+'
+'CRBasic angle units are in Radians by default.
+'Switch to Degrees as CR10 used Degrees.
+ AngleDegrees
+'
+'
+'\\\\\\\\\\\\\\\\\\\\\\\\\ DECLARATIONS /////////////////////////
+
+' Define station name 1 SC, 2 CP1, 3 NASA-U, 4 GITS, 5 HUM, 6 SUM, 7 Tune-N, 8 Dye-I, 9 JAR1
+' 10 Saddle, 11 S-Dome, 12 NASA-E, 13 CP2, 14 NGIRP, 15 NASA-SE, 16 KAR, 17 JAR2, 18 KULU
+' 19 JAR3, 20 Aurora, 21 PET Gl, 22 PET ELA, 23 NEEM 
+
+StationName=5
+
+Public i1
+Public rTime(9)
+Public TRef
+Public alpha1
+Public sw_in(2)
+Public net_rad
+Public tc_snow(10)
+Public tc_air(2)
+Public t_air(2)
+Public rh(2)
+Public U(2)
+Public Dir(2)
+Public pressure
+Public SD_1
+Public SD_2
+Public Battery
+Public p_flag
+Public LoggerID
+Public ArgosResult
+
+Alias sw_in(2)=sw_ref
+Alias rTime(1) = Year          'assign the alias Year to rTime(1)
+Alias rTime(2) = Month         'assign the alias Month to rTime(2)
+Alias rTime(3) = DOM           'assign the alias Day to rTime(3)
+Alias rTime(4) = Hour          'assign the alias Hour to rTime(4)
+Alias rTime(5) = Minute        'assign the alias Minute to rTime(5)
+Alias rTime(6) = Second        'assign the alias Second to rTime(6)
+Alias rTime(7) = uSecond       'assign the alias uSecond to rTime(7)
+Alias rTime(8) = WeekDay       'assign the alias WeekDay to rTime(8)
+Alias rTime(9) = Day_of_Year   'assign the alias Day_of_Year to rTime(9)
+
+' for ST-21 ARGOS trasmitter 
+Public setup_rc(2), data_rc(2), xmit_rc(2), DataReady As Boolean, go As Boolean
+
+'\\\\\\\\\\\\\\\\\\\\\\\\ OUTPUT SECTION ////////////////////////
+
+DataTable(Table046,true,-1)
+  OpenInterval      
+  DataInterval(0,60,Min,-1)
+  Sample (1, LoggerID, FP2) 
+  Sample (1,Year,FP2)
+  Sample (1, Day_of_Year,FP2)
+  Sample (1,Hour,FP2)
+  Average(2, sw_in, FP2, 0)
+  Average(1, net_rad, FP2, 0)
+  Average(2, tc_air, FP2, 0)
+  Average(2, t_air, FP2, 0)
+  Average(2, rh, FP2, 0)
+  Average(2, U, FP2, 0)
+   CardOut (0,-1)
+ EndTable
+ 
+DataTable(Table048,true,-1)
+  OpenInterval      
+  DataInterval(0,60,Min,-1)
+  Average(2, Dir, FP2, 0)
+  Average(1, pressure, FP2, 0)
+  Average(1, SD_1, FP2, 0)
+  Average(1, SD_2, FP2, 0)
+  Maximum (1,sw_in(),FP2,False,False)
+  StdDev (1,sw_in(),FP2,False)
+  StdDev (1,net_rad,FP2,False)  
+  Maximum(2, tc_air, FP2, 0, False)
+  Minimum(2, tc_air, FP2, 0, False)
+  Maximum(2, U(), FP2, 0, False)
+  Sample(1, Battery, FP2)
+  CardOut (0,-1)
+ EndTable
+
+
+'\\\\\\\\\\\\\\\\\\\\\\\\\ SUBROUTINES //////////////////////////
+
+
+'\\\\\\\\\\\\\\\\\\\\\\\\\\\ PROGRAM ////////////////////////////
+
+BeginProg
+  
+'  check which presure sensor *******************************************
+    p_flag = 0
+'  set pressure sensor option. 0 is for the new cs106 = PTB110 pressure sensor
+'  p_flag = 1 is for cs105 = PTB101B pressure sensor.
+
+  Scan(15,Sec, 3, 0)
+' 15 second suggested execution interval
+' give data logger and data set an ID
+  LoggerID=Status.StationName(1,1)
+
+    AM25T(TRef,0,mV2_5C,1,1,TypeT,TRef,2,1,1,True,0,250,1,0)
+' Reference temperature on AM25T
+
+    AM25T (sw_in(),2,mV25,1,1,-1,TRef,1 ,2 ,Vx1,True ,0,250,1.0,0)
+' Two Li Cor Photo-Diode Pyranometers
+
+' end Li Cor multiplexer loop
+    If (sw_in < 0) Then                                  
+      sw_in = 0
+    EndIf
+' end set negative SW in values to zero
+    If (sw_ref < 0) Then                                  
+      sw_ref = 0
+    EndIf
+' end set negative SW ref values to zero
+
+    AM25T (net_rad,1,mV250,3,1,-1,TRef,1 ,2 ,Vx1,True ,0,250,1.0,0)
+' Net Radiometer
+
+    AM25T (tc_snow(),10,mV2_5,4,1,TypeT,TRef,1 ,2 ,Vx1,True ,0,250,1.0,0)
+' 10 snow TC sensors
+
+    AM25T (tc_air(),2,mV2_5,14,1,TypeE,TRef,1 ,2 ,Vx1,True ,0,250,1.0,0)
+' 2 air temperature thermocouple 
+
+    PulseCount(U, 2, 1, 1, 1, 0.098, 0)     
+' Young Wind Monitor wind speed -> m/s
+
+If  TimeIntoInterval(0,60,Min) Then RealTime (rTime)
+
+' Output data in final storage every hour -----------------------------
+   If  TimeIntoInterval(0,60,Min) Then go = true
+   If go Then
+      DataReady = true
+      CallTable Table046
+      CallTable Table048
+      ArgosSetup (setup_rc(1),0,107283,&h262F635,401630000)'setup first buffer
+      ArgosSetup (setup_rc(2),1,107283,&h262F635,401634000) 'setup second buffer
+      ArgosData (data_rc(1),0,Table046,7,"FP2")' load data to first buffer
+      ArgosData (data_rc(2),1,Table048,7,"FP2")' load data to second buffer
+      EndIf
+  
+ 'transmit each of the three buffers once every 600 seconds. Can't violate
+    'the 200 second repeat interval for the one ID number.
+    If DataReady Then
+      If IfTime(0,600,sec) Then
+        ArgosTransmit (xmit_rc(),0)
+      EndIf
+
+      If IfTime(200,600,sec) Then
+        ArgosTransmit (xmit_rc(),1)
+      EndIf
+    EndIf
+              
+     NextScan
+
+SlowSequence
+  Scan(60,Sec, 3, 0)
+' 60 sec scanning rate
+
+    SW12(1)
+    PortSet (6 ,1 )
+    ' old HMP45C need trigger on Contral port 6 (C6) for orange cable
+    
+    Delay(0,150,mSec)
+    VoltSe(t_air, 2, mV2500, 3, 0, 0, 250, 0.1, -40) 
+' 2 temperature cs500 or HMP45 probe x 2
+
+    VoltSe(rh, 2, mV2500, 5, 0, 0, 250, 0.1, 0) 
+' 2 humidity cs500 or HMP45
+
+    PortSet (6 ,0)
+' close Contral Port 6
+    SW12(0)
+          
+    BrHalf(Dir, 2, mV2500, 7, VX2, 2, 2500, true, 0, 250, 355, 0)
+   ' 2 Young wind direction measurement
+
+' Following a loop of the barometer measurement that is performed for the last minute of each hour.
+    If  TimeIntoInterval(59,60,Min) Then PortSet(7, 1)       
+' The pressure sensor has a range from 600 - 1060 hPa,mb
+' -> multiplier = sensor range (460)/mV Excitation(2500)
+                                
+      If (p_flag = 0) Then                                  
+        VoltSe(pressure, 1, mV2500, 9, 1, 0, _60Hz, 0.24, 100) 
+'new vaisala cs106 pressure sensor
+' offset is 500, need to offset by -400 and add +400 to process data
+        Battery(Battery)
+      EndIf
+' end cs106 new pressure sensor measurement last minute of each hr
+
+      If (p_flag = 1) Then                                  
+        VoltSe(pressure, 1, mV2500, 9, 1, 0, _60Hz, 0.184, 200) 
+' CS105 Vaisala Barometer
+' another 400 has to be added to pressure value to yield
+' mb this can be done in post processing.
+         Battery(Battery)
+       EndIf
+' end cs105 pressure sensor measurement last minute of each hr
+    PortSet(7, 0)  
+' end pressure sensor measurement last minute of each hr
+' Following is the snow height measurement which
+' occurs each 10 minutes, nested in a 15 second
+' measurement interval.
+                      
+    If  TimeIntoInterval(0,2,Min) Then                             
+      SDI12Recorder(SD_1, 3, 0, "M!", 1, 0)     
+' sonic snow height sensor 1
+      SDI12Recorder(SD_2, 5, 0, "M!", 1, 0)     
+' sonic snow height sensor 2
+    EndIf
+
+  NextScan
+EndProg

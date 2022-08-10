@@ -1,0 +1,66 @@
+Program Trace Information File for:  SMS_GPS.CSI
+Date: 5/31/2002
+Time: 21:49:07
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|10 Batt Voltage                 8.3    8.3    8.3      8.3    8.3    8.3
+1|2|65 Bulk Load                    4.5   12.8   12.8      4.5   12.8   12.8
+1|3|65 Bulk Load                    4.5   17.3   17.3      4.5   17.3   17.3
+1|4|65 Bulk Load                    4.5   21.8   21.8      4.5   21.8   21.8
+1|5|65 Bulk Load                    4.5   26.3   26.3      4.5   26.3   26.3
+1|6|91 If Flag/Port                 0.4   26.7   26.7      0.4   26.7   26.7
+1|7|30 Z=F                          1.0   27.7   27.7      1.0   27.7   27.7
+1|8|15 Port Serial I/O            150.0  177.7  177.7    150.0  177.7  177.7
+1|9|95 End                          0.2  177.9  177.9      0.2  177.9  177.9
+1|10|91 If Flag/Port                0.4  178.3  178.3      0.4  178.3  178.3
+1|11|22 Excitation with Delay     500.5  678.8  678.8    500.5  678.8  678.8
+1|12|15 Port Serial I/O            13.0  691.8  691.8     13.0  691.8  691.8
+1|13|95 End                         0.2  692.0  692.0      0.2  692.0  692.0
+1|14|37 Z=X*F                       1.2  693.2  693.2      1.2  693.2  693.2
+1|15|45 Z=INT(X)                    1.4  694.6  694.6      1.4  694.6  694.6
+1|16|44 Z=FRAC(X)                   1.1  695.7  695.7      1.1  695.7  695.7
+1|17|37 Z=X*F                       1.2  696.9  696.9      1.2  696.9  696.9
+1|18|45 Z=INT(X)                    1.4  698.3  698.3      1.4  698.3  698.3
+1|19|89 If (X<=>F)                  0.6  698.9  698.9      0.6  698.9  698.9
+1|20|30 Z=F                         1.0  699.9  699.9      1.0  699.9  699.9
+1|21|95 End                         0.2  700.1  700.1      0.2  700.1  700.1
+1|22|45 Z=INT(X)                    1.4  701.5  701.5      1.4  701.5  701.5
+1|23|44 Z=FRAC(X)                   1.1  702.6  702.6      1.1  702.6  702.6
+1|24|45 Z=INT(X)                    1.4  704.0  704.0      1.4  704.0  704.0
+1|25|44 Z=FRAC(X)                   1.1  705.1  705.1      1.1  705.1  705.1
+1|26|89 If (X<=>F)                  0.6  705.7  705.7      0.6  705.7  705.7
+1|27|86 Do                          0.3  706.0  706.0      0.3  706.0  706.0
+ Output Flag Set @ 127 for Array 127
+1|28|77 Real Time                   0.2  706.2  706.2      3.8  709.8  709.8
+ Output Data 2 Values
+1|29|78 Resolution                  0.4  706.6  706.6      0.4  710.2  710.2
+1|30|70 Sample                      0.2  706.8  706.8      1.3  711.5  711.5
+ Output Data 2 Values
+1|31|70 Sample                      0.2  707.0  707.0      2.1  713.6  713.6
+ Output Data 4 Values
+1|32|70 Sample                      0.2  707.2  707.2      2.9  716.5  716.5
+ Output Data 6 Values
+1|33|95 End                         0.2  707.4  707.4      0.2  716.7  716.7
+
+Program Table 1 Execution Interval    5.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec  707.4 w/Output  716.7
+
+Table 1 Estimated Total Final Storage Locations used per day 466560.0
+
+
+
+Estimated Total Final Storage Locations used per day 466560.0

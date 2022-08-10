@@ -1,0 +1,23 @@
+Final Storage Label File for:  SMS_PET1.CSI
+Date:  6/1/2002
+Time:  02:47:37
+
+112 Output_Table  60.00 Min
+1 112 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 tc_AIR1_AVG  L
+6 tair_1_AVG  L
+7 rh_1_AVG  L
+8 Li_1_AVG  L
+9 Li_2_AVG  L
+10 Net_rad_AVG  L
+11 U1_S_WVT  L
+12 U_dir1_D1_WVT  L
+13 U1_MAX  L
+14 SH_1_AVG  L
+15 BATTERY  L
+
+
+Estimated Total Final Storage Locations used per day  360.0

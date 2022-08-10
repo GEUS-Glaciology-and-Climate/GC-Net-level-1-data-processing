@@ -1,0 +1,20 @@
+Final Storage Label File for:  AWS_2.CSI
+Date:  6/18/2000
+Time:  00:17:09
+
+112 Output_Table  10.00 Min
+1 112 L
+2 Day_RTM  L
+3 Hour_Minute_RTM  L
+4 Temp_1_AVG  H
+5 Temp_2_AVG  H
+6 Temp_3_AVG  H
+7 RH_1_AVG  H
+8 RH_2_AVG  H
+9 RH_3_AVG  H
+10 Temp_s_AVG  H
+11 Sonic_h_AVG  H
+12 Pressure  H
+
+
+Estimated Total Final Storage Locations used per day 3024.0

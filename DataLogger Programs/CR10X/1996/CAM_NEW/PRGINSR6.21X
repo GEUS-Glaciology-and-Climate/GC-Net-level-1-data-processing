@@ -1,0 +1,738 @@
+1,Volts (SE),15,0,1,6,5,8,8,2,1,0,1,2,3,4,5,6,1-16,A,1-16,0-0,0-0,0-0
+2,Volt (Diff),15,0,1,6,5,8,8,2,1,0,1,2,7,4,5,6,1-8,A,1-8,0-0,0-0,0-0
+3,Pulse,15,0,1,6,5,8,8,2,1,0,1,8,9,4,5,6,1-4,1-4,B,0-0,0-0,0-0
+4,Excite Delay Volt (SE),20,0,1,9,5,8,8,8,7,7,2,1,0,1,2,3,10,11,12,4,5,6,1-16,A,1-16,C,0-0,-5000-5000,0-0,0-0,0-0
+5,AC Half Bridge,18,0,1,8,5,8,8,8,7,2,1,0,1,2,3,10,12,4,5,6,1-16,A,1-16,C,-5000-5000,0-0,0-0,0-0
+6,Full Bridge,18,0,1,8,5,8,8,8,7,2,1,0,1,2,7,10,12,4,5,6,1-8,A,1-8,C,-5000-5000,0-0,0-0,0-0
+7,3W Half Bridge,18,0,1,8,5,8,8,8,7,2,1,0,1,2,3,10,12,4,5,6,1-16,A,1-16,C,-5000-5000,0-0,0-0,0-0
+8,Ex-Del-Diff,20,0,1,9,5,8,8,8,7,7,2,1,0,1,2,7,10,11,12,4,5,6,1-8,A,1-8,C,0-0,-5000-5000,0-0,0-0,0-0
+9,Full Bridge w/mv Excit,19,0,1,9,5,8,8,8,8,7,2,1,0,1,13,14,7,10,12,4,5,6,1-8,D,E,1-8,C,-5000-5000,0-0,0-0,0-0
+10,Batt Voltage,4,0,1,1,2,4,0-0
+11,Temp 107 Probe,15,0,1,6,5,8,8,2,1,0,1,3,10,4,5,6,1-16,1-16,C,0-0,0-0,0-0
+12,R.H. 207 Probe,17,0,1,7,5,8,8,2,2,1,0,1,3,10,15,4,5,6,1-16,1-16,C,0-0,0-0,0-0,0-0
+13,Thermocouple Temp (SE),18,0,1,8,5,8,8,8,3,2,1,0,1,2,3,16,17,4,5,6,1-16,A,1-16,J,0-0,0-0,0-0,0-0
+14,Thermocouple Temp (DIFF),18,0,1,8,5,8,8,8,3,2,1,0,1,2,7,16,17,4,5,6,1-8,A,1-8,J,0-0,0-0,0-0,0-0
+15,Serial Input,20,-1,1,8,5,8,8,8,7,2,1,0,1,7,18,19,20,4,5,6,1-16,1-8,0-0,0-0,0-0,0-0,0-0,0-0
+16,Temperature RTD,15,0,1,5,5,3,2,1,0,1,21,4,5,6,1-16,0-0,0-0,0-0,0-0
+17,Internal Temperature,4,0,1,1,2,4,0-0
+18,Time,7,0,1,3,8,7,2,22,23,4,Y,0-0,0-0
+19,Signature,4,0,1,1,2,4,0-0
+20,Set Port,4,0,1,2,8,8,22,24,K,1-6
+21,Analog Out,5,0,1,2,8,3,25,26,1-2,0-0
+22,Excitation with Delay,11,0,1,4,8,7,7,6,27,28,29,12,1-4,0-0,0-0,-5000-5000
+23,Burst Measurement,35,0,1,12,8,8,8,7,6,6,7,6,7,2,1,0,30,2,31,32,33,34,35,36,12,4,5,6,1-16,Z,1-16,0-0,970-50,0-0,0-0,0-0,-5000-5000,0-0,0-0,0-0
+24,Calibration,4,0,1,1,2,37,0-0
+26,Timer,4,0,1,1,2,4,0-0
+30,Z=F,8,0,2,2,6,2,38,39,0-0,0-0
+31,Z=X,6,0,2,2,3,2,40,41,0-0,0-0
+32,Z=Z+1,4,0,2,1,4,41,0-0
+33,Z=X+Y,8,0,2,3,3,3,2,40,42,41,0-0,0-0,0-0
+34,Z=X+F,10,0,2,3,3,6,2,40,38,41,0-0,0-0,0-0
+35,Z=X-Y,8,0,2,3,3,3,4,40,42,41,0-0,0-0,0-0
+36,Z=X*Y,8,0,2,3,3,3,4,40,42,41,0-0,0-0,0-0
+37,Z=X*F,10,0,2,3,3,6,2,40,38,41,0-0,0-0,0-0
+38,Z=X/Y,8,0,2,3,3,3,2,40,42,41,0-0,0-0,0-0
+39,Z=SQRT(X),6,0,2,2,3,2,40,41,0-0,0-0
+40,Z=LN(X),6,0,2,2,3,2,40,41,0-0,0-0
+41,Z=EXP(X),6,0,2,2,3,2,40,41,0-0,0-0
+42,Z=1/X,6,0,2,2,3,2,40,41,0-0,0-0
+43,Z=ABS(X),6,0,2,2,3,2,40,41,0-0,0-0
+44,Z=FRAC(X),6,0,2,2,3,2,40,41,0-0,0-0
+45,Z=INT(X),6,0,2,2,3,2,40,41,0-0,0-0
+46,Z=X MOD F,10,0,2,3,3,6,2,40,38,41,0-0,0-0,0-0
+47,Z=X^Y,8,0,2,3,3,3,2,40,42,41,0-0,0-0,0-0
+48,Z=SIN(X),6,0,2,2,3,2,40,41,0-0,0-0
+49,Spatial Maximum,7,0,2,3,12,3,13,43,44,45,0-0,0-0,0-0
+50,Spatial Mimimum,7,0,2,3,12,3,13,43,44,46,0-0,0-0,0-0
+51,Spatial Average,7,0,2,3,12,3,13,43,44,47,0-0,0-0,0-0
+52,Standard Deviation (pre OSX),11,-1,2,4,5,3,2,7,1,48,49,50,0-0,0-0,0-0,0-0
+53,Scaling Array (A*Loc+B),36,0,2,9,4,6,6,6,6,6,6,6,6,51,52,53,54,55,56,57,58,59,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0
+54,Block Move,10,0,2,5,12,3,8,2,8,60,61,62,63,64,0-0,0-0,0-0,0-0,0-0
+55,Polynomial,31,0,2,9,5,3,2,6,6,6,6,6,6,1,40,65,66,67,68,69,70,71,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0
+56,Saturation Vapor Pressure,6,0,2,2,3,2,15,4,0-0,0-0
+57,Wet/Dry Bulb Temp to VP,10,0,2,4,3,3,3,2,72,73,74,4,0-0,0-0,0-0,0-0
+58,Low Pass Filter,13,-1,2,4,5,3,2,6,1,48,4,75,0-0,0-0,0-0,0-0
+59,BR Transform Rf[X/(1-X)],9,0,2,3,5,4,1,1,4,76,0-0,0-0,0-0
+60,FFT (OSX-2),13,-1,2,5,8,8,8,3,1,77,78,79,80,5,1-13,a,0-0,0-0,0-0
+61,Indirect Move,6,0,2,2,3,2,81,82,0-0,0-0
+62,CV/CR (OSX-0),28,-1,2,9,8,8,8,8,8,8,6,3,2,83,84,85,86,87,88,89,80,4,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0
+66,Z=ARCTAN(X/Y),8,0,2,3,3,3,4,40,42,41,0-0,0-0,0-0
+67,Dynagage Sap-Flow,43,0,2,12,3,6,6,6,6,6,6,6,8,2,1,0,90,91,92,93,94,95,96,97,98,99,5,6,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0,j,0-0,0-0,0-0
+68,Extended Parameters 4 Digit,18,0,1,8,7,7,7,7,7,7,7,7,22,22,22,22,22,22,22,22,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0
+69,Wind Vector,12,-1,3,5,5,7,8,3,3,1,100,101,102,103,0-0,0-0,F,0-0,0-0
+70,Sample,5,0,3,2,5,3,1,4,0-0,0-0
+71,Average,7,-1,3,2,5,3,1,4,0-0,0-0
+72,Totalize,7,-1,3,2,5,3,1,4,0-0,0-0
+73,Maximize,8,-1,3,3,5,8,3,1,104,4,0-0,G,0-0
+74,Minimize,8,-1,3,3,5,8,3,1,104,4,0-0,G,0-0
+75,Histogram,24,-1,3,7,5,7,8,3,3,6,6,1,105,106,107,108,109,110,0-0,0-0,T,0-0,0-0,0-0,0-0
+76,Wind Vector,10,-1,3,4,5,8,3,3,111,22,102,103,0-0,f,0-0,0-0
+77,Real Time,4,-1,3,1,7,22,M
+78,Resolution,3,0,3,1,8,112,N
+79,Sample on Max or Min,7,-1,3,2,5,3,1,4,0-0,0-0
+80,Set Active Storage Area,5,0,3,2,8,3,113,114,O,0-0
+81,Rainflow Histogram,42,-1,3,10,5,3,7,7,7,6,6,6,8,2,1,115,116,117,118,119,120,121,122,4,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0,e,0-0
+82,Standard Deviation,7,-1,3,2,5,3,1,48,0-0,0-0
+83,If Case Location < F,9,0,4,2,6,8,38,123,0-0,H
+85,Beginning of Subroutine,3,0,4,1,8,124,P
+86,Do,5,0,4,1,8,123,H
+87,Beginning of Loop,9,1,4,2,7,7,125,126,0-0,0-0
+88,IF (X<=>Y),10,0,4,4,3,8,4,8,40,127,42,123,0-0,I,0-0,H
+89,IF (X<=>F),12,0,4,4,3,8,6,8,40,127,38,123,0-0,I,0-0,H
+90,Step Loop Index,3,0,4,1,8,128,0-0
+91,If Flag/Port,6,0,4,2,8,8,129,123,L,H
+92,If time is,11,1,4,3,7,7,8,130,131,123,0-0,0-0,H
+93,CASE,8,1,4,1,3,132,0-0
+94,Else,4,0,4,0
+95,End,4,0,4,0
+96,Serial Out,3,0,4,1,8,133,U
+97,Initiate Telecommunications,23,7,4,10,8,8,7,7,8,7,2,7,154,154,134,135,136,137,138,139,140,141,142,143,V,W,0-0,0-0,0-0,0-0,0-0,0-255,0-0,0-0
+98,Send Printer Character,4,0,4,1,7,144,X
+99,Data Transfer to GOES,7,0,1,3,8,2,7,145,146,147,d,0-0,0-0
+100,TDR Measurment,29,-1,1,8,8,7,6,6,7,2,1,0,148,149,150,151,152,153,5,6,Q,c,0-0,0-0,0-0,0-0,0-0,0-0
+101,SDM-INT8,25,9,1,9,8,7,7,7,7,7,2,1,0,154,155,156,157,158,159,4,5,6,g,0-3333,0-3333,0-8888,0-8888,0-0,0-0,0-0,0-0
+102,SDM-SW8A,16,0,1,7,5,8,8,8,2,1,0,1,154,160,161,4,6,5,0-0,g,R,0-0,0-0,0-0,0-0
+103,SDM-A04,6,0,1,3,5,8,3,1,154,4,0-0,g,0-0
+104,SDM-CD16,6,0,1,3,5,8,3,1,154,4,0-0,g,0-0
+107,SDM-CSAT3,7,0,1,4,5,8,7,2,1,162,22,163,1-15,h,i,0-0
+109,SDMX50 Channel Select,4,0,1,2,8,8,164,165,b,1-8
+110,SDM-Group Trigger,2,0,2,0
+;
+*default protected comments
+1 Reps
+2 Range Option
+3 SE Channel
+4 Loc
+5 Mult
+6 Offset
+7 DIFF Channel
+8 Pulse Input Channel
+9 Config Option
+10 Ex Channel Option
+11 Delay (units 0.01 sec)
+12 mV Excitation
+13 Ex Range
+14 Br Range
+15 Temperature Loc
+16 TC Type Option
+17 Ref Temp Loc
+18 X=Portx, TTL; 1X=Portx, RS-232
+19 Characters per Input
+20 Delay (units = 0.012 sec)
+21 R/RO Loc
+22 Option
+23 Mod/By
+24 Port Number
+25 CAO Channel
+26 mV Loc
+27 Ex Channel
+28 Delay w/Ex (units = 0.01 sec)
+29 Delay After Ex (units = 0.01 sec)
+30 Input Channels per Scan
+31 In Chan
+32 Trig/Trig/Dest/Meas Options
+33 Time per Scan (msec)
+34 Scans (in thousands)
+35 Samples before Trigger
+36 mV Limit
+37 First of 2 Loc
+38 F
+39 Z Loc
+40 X Loc
+41 Z Loc
+42 Y Loc
+43 Swath
+44 First Loc
+45 Max Option
+46 Min Option
+47 Avg Loc
+48 Sample Loc
+49 SD Loc
+50 No. of Samples
+51 Start Loc
+52 A1
+53 B1
+54 A2
+55 B2
+56 A3
+57 B3
+58 A4
+59 B4
+60 No. of Values
+61 First Source Loc
+62 Source Step
+63 First Destination Loc
+64 Destination Step
+65 F(X) Loc
+66 C0
+67 C1
+68 C2
+69 C3
+70 C4
+71 C5
+72 Pressure Loc
+73 Dry Bulb Loc
+74 Wet Bulb Loc
+75 Weighting Factor
+76 Mult (Rf)
+77 Log (base 2) of  Samples
+78 FFT Option
+79 Log (base 2) of Bins
+80 First Sample Loc
+81 Source Loc
+82 Destination Loc
+83 No. of Input Locations
+84 No. of Means
+85 No. of Variances
+86 No. of Std. Dev.
+87 No. of Covariance
+88 No. of Correlations
+89 Samples per Average
+90 Begin Input Location
+91 Ksh (W/mV)
+92 Heater Resistance (Ohm)
+93 Stem Area (sq cm)
+94 Thermal Conductivity (W/m*K)
+95 Thermocouple Gap (cm)
+96 Low-Flow Cutoff Temperature (C)
+97 High-Flow Cutoff Velocity (cm/s)
+98 Output
+99 Destination Input Location
+100 Samples per Sub-Interval
+101 Sensor/Output Option
+102 Wind Speed/East Loc
+103 Wind Direction/North Loc
+104 Time Option
+105 No. of Bins
+106 Form Code Option
+107 Bin Select Value Loc
+108 WV Loc Option
+109 Low Limit
+110 High Limit
+111 Reps of Wind Speed & Direction
+112 Resolution
+113 Area Option
+114 Array ID or Loc
+115 Input Location of Input Data
+116 Swath (per rep) of Data at Inloc (1=online)
+117 No. of Mean Bins
+118 No. of Amplitude Bins
+119 Low Limit of Input Data
+120 High Limit of Input Data
+121 Min Distance Between Peak & Valley
+122 Option (AB)
+123 Command Code Option
+124 Subroutine Number
+125 Delay
+126 Loop Count
+127 Comparison Code Option
+128 Step
+129 Flag/Port Option
+130 Minutes into a
+131 Minute Interval
+132 Case Loc
+133 Destination
+134 Modem/Baud Option
+135 Flag No. to Disable Program 97
+136 Seconds Call Time Limit
+137 Seconds Before Fast Retry
+138 Fast Retries
+139 Minutes Before Slow Retry
+140 Failures Loc
+141 Data Logger ID
+142 RF Link IDs
+143 Phone Number
+144 BVVV--Baud & Value
+145 Buffer Selection
+146 FWD/Ref Power Loc
+147 Array ID (ID>0) Transferred to TGT1'S Buffer
+148 SDM1502 Address
+149 Output Option
+150 Probe Length (meters)
+151 Cable Length (meters)
+152 MMMP--Mux & Probe Selection
+153 Loc
+154 Address
+155 Input Config:  Channels 8,7,6,5
+156 Input Config:  Channels 4,3,2,1
+157 Function:  Channels 8,7,6,5
+158 Function:  Channels 4,3,2,1
+159 Output Options
+160 Function Option
+161 Channel
+162 SDM Address
+163 Ux Input Location
+164 SDMX50 Address
+165 SDMX50 Channel
+;
+*A Range"1-5, 11-15
+1 ñ 5 mV Slow Range
+2 ñ 15 mV Slow Range
+3 ñ 50 mV Slow Range
+4 ñ 500 mV Slow Range
+5 ñ 5000 mV Slow Range
+11 ñ 5 mV Fast Range
+12 ñ 15 mV Fast Range
+13 ñ 50 mV Fast Range
+14 ñ 500 mV Fast Range
+15 ñ 5000 mV Fast Range
+;
+*B Config"0-4, 10-14, 20-24
+0 High Frequency
+1 Low Level AC
+2 Switch Closure
+3 High Frequency, 16 Bit
+4 Low Level AC, 16 Bit
+10 High Frequency
+11 Low Level AC
+12 Switch Closure
+13 High Frequency, 16 Bit
+14 Low Level AC, 16 Bit
+20 High Frequency, Output Hz
+21 Low Level AC, Output Hz
+22 Switch Closure, Output Hz
+23 High Frequency, Output Hz
+24 Low Level AC, 16 Bit, Output Hz
+;
+*C Ex Chan"1-4, 11-14
+1 Excite all reps w/Exchan 1
+2 Excite all reps w/Exchan 2
+3 Excite all reps w/Exchan 3
+4 Excite all reps w/Exchan 4
+11 Excite 1 plus reps
+12 Excite 2 plus reps
+13 Excite 3 plus reps
+14 Excite 4 plus reps
+;
+*D Ex Range"1-5, 11-15
+1 ñ 5 mV Slow Ex Range
+2 ñ 15 mV Slow Ex Range
+3 ñ 50 mV Slow Ex Range
+4 ñ 500 mV Slow Ex Range
+5 ñ 5000 mV Slow Ex Range
+11 ñ 5 mV Fast Ex Range
+12 ñ 15 mV Fast Ex Range
+13 ñ 50 mV Fast Ex Range
+14 ñ 500 mV Fast Ex Range
+15 ñ 5000 mV Fast Ex Range
+;
+*E Br Range"1-5, 11-15
+1 ñ 5 mV Slow Br Range
+2 ñ 15 mV Slow Br Range
+3 ñ 50 mV Slow Br Range
+4 ñ 500 mV Slow Br Range
+5 ñ 5000  mV Slow Br Range
+11 ñ 5 mV Fast Br Range
+12 ñ 15 mV Fast Br Range
+13 ñ 50 mV Fast Br Range
+14 ñ 500 mV Fast Br Range
+15 ñ 5000 mV Fast Br Range
+;
+*F Wind Vector, 69 "0-2, 10-12
+0 S, é1, & å(é1) Polar
+1 S, é1 Polar
+2 S, U, éu, å(éu) Polar
+10 S, é1, & å(é1) Orth.
+11 S, é1 Orth.
+12 S, U, éu, å(éu) Orth.
+;
+*G Tim of Min or Max"0-1, 10-11
+0 Value Only
+1 Value with Seconds
+10 Value with Hr-Min
+11 Value with Hr-Min-Sec
+;
+*H Command Code Option"0-32,41-46,51-56,61-66,71-76,79-99
+0 Go to end of Program Table
+1 Call Subroutine 1
+2 Call Subroutine 2
+3 Call Subroutine 3
+4 Call Subroutine 4
+5 Call Subroutine 5
+6 Call Subroutine 6
+7 Call Subroutine 7
+8 Call Subroutine 8
+9 Call Subroutine 9
+10 Set Output Flag High
+11 Set Flag 1 High
+12 Set Flag 2 High
+13 Set Flag 3 High
+14 Set Flag 4 High
+15 Set Flag 5 High
+16 Set Flag 6 High
+17 Set Flag 7 High
+18 Set Flag 8 High
+19 Set Flag 9 High
+20 Set Output Flag Low
+21 Set Flag 1 Low
+22 Set Flag 2 Low
+23 Set Flag 3 Low
+24 Set Flag 4 Low
+25 Set Flag 5 Low
+26 Set Flag 6 Low
+27 Set Flag 7 Low
+28 Set Flag 8 Low
+29 Set Flag 9 Low
+30 Then Do
+31 Exit Loop if True
+32 Exit Loop if False
+41 Set Port 1 High
+42 Set Port 2 High
+43 Set Port 3 High
+44 Set Port 4 High
+45 Set Port 5 High
+46 Set Port 6 High
+51 Set Port 1 Low
+52 Set Port 2 Low
+53 Set Port 3 Low
+54 Set Port 4 Low
+55 Set Port 5 Low
+56 Set Port 6 Low
+61 Toggle Port 1
+62 Toggle Port 2
+63 Toggle Port 3
+64 Toggle Port 4
+65 Toggle Port 5
+66 Toggle Port 6
+71 Pulse Port 1
+72 Pulse Port 2
+73 Pulse Port 3
+74 Pulse Port 4
+75 Pulse Port 5
+76 Pulse Port 6
+79 Call Subroutine 79
+80 Call Subroutine 80
+81 Call Subroutine 81
+82 Call Subroutine 82
+83 Call Subroutine 83
+84 Call Subroutine 84
+85 Call Subroutine 85
+86 Call Subroutine 86
+87 Call Subroutine 87
+88 Call Subroutine 88
+89 Call Subroutine 89
+90 Call Subroutine 90
+91 Call Subroutine 91
+92 Call Subroutine 92
+93 Call Subroutine 93
+94 Call Subroutine 94
+95 Call Subroutine 95
+96 Call Subroutine 96
+97 Call Subroutine 97
+98 Call Subroutine 98
+99 Call Subroutine 99
+;
+*I Comparison Code Option"1-4
+1 =
+2 <>
+3 >=
+4 <
+;
+*J TC TYPE OPTION"1-4, 81-84, 91-94
+1 Type T (Copper-Constantan)
+2 Type E (Chromel-Constantan)
+3 Type K (Chromel-Alumel)
+4 Type J (Iron-Constantan)
+81 Type T (Copper-Constantan) w/A5B40
+82 Type E (Chromel-Constantan) w/A5B40
+83 Type K (Chromel-Alumel) w/A5B40
+84 Type J (Iron-Constantan) w/A5B40
+91 Type T (Copper-Constantan) w/CM Check
+92 Type E (Chromel-Constantan) w/CM Check
+93 Type K (Chromel-Alumel) w/CM Check
+94 Type J (Iron-Constantan) w/CM Check
+;
+*K OPTION"0,1,10-19,20-29
+0 Set Low
+1 Set High
+10 Set According to Flag 0
+11 Set According to Flag 1
+12 Set According to Flag 2
+13 Set According to Flag 3
+14 Set According to Flag 4
+15 Set According to Flag 5
+16 Set According to Flag 6
+17 Set According to Flag 7
+18 Set According to Flag 8
+19 Set According to Flag 9
+20 Set Opposite to Flag 0
+21 Set Opposite to Flag 1
+22 Set Opposite to Flag 2
+23 Set Opposite to Flag 3
+24 Set Opposite to Flag 4
+25 Set Opposite to Flag 5
+26 Set Opposite to Flag 6
+27 Set Opposite to Flag 7
+28 Set Opposite to Flag 8
+29 Set Opposite to Flag 9
+;
+*L Flag/Port Options"10-19, 20-29,41-48, 51-58
+10 Do if Output Flag is High (Flag 0)
+11 Do if Flag 1 is High
+12 Do if Flag 2 is High
+13 Do if Flag 3 is High
+14 Do if Flag 4 is High
+15 Do if Flag 5 is High
+16 Do if Flag 6 is High
+17 Do if Flag 7 is High
+18 Do if Flag 8 is High
+19 Do if Flag 9 is High
+20 Do if Output Flag is Low (Flag 0)
+21 Do if Flag 1 is Low
+22 Do if Flag 2 is Low
+23 Do if Flag 3 is Low
+24 Do if Flag 4 is Low
+25 Do if Flag 5 is Low
+26 Do if Flag 6 is Low
+27 Do if Flag 7 is Low
+28 Do if Flag 8 is Low
+29 Do if Flag 9 is Low
+41 Do if Port 1 is High
+42 Do if Port 2 is High
+43 Do if Port 3 is High
+44 Do if Port 4 is High
+45 Do if Port 5 is High
+46 Do if Port 6 is High
+47 Do if Port 7 is High
+48 Do if Port 8 is High
+51 Do if Port 1 is Low
+52 Do if Port 2 is Low
+53 Do if Port 3 is Low
+54 Do if Port 4 is Low
+55 Do if Port 5 is Low
+56 Do if Port 6 is Low
+57 Do if Port 7 is Low
+58 Do if Port 8 is Low
+;
+*M 77 Option Codes"xyyx (x = 0 or 1, y - 0, 1, or 2)
+0 no output
+1 Seconds
+10 Hour/Minute
+11 Hour/Minute,Seconds
+100 Day
+101 Day,Seconds
+110 Day,Hour/Minute
+111 Day,Hour/Minute,Seconds
+1000 Year
+1001 Year,Seconds
+1010 Year,Hour/Minute
+1011 Year,Hour/Minute,Seconds
+1100 Year,Day
+1101 Year,Day,Seconds
+1110 Year,Day,Hour/Minute
+1111 Year,Day,Hour/Minute,Seconds
+20 Hour/Minute (2400 at midnight)
+21 Hour/Minute,Seconds (2400 at midnight)
+200 Day (prev day at midnight)
+201 Day,Seconds (prev day at midnight)
+220 Day,Hour/Minute (prev day at midnight, 2400 at midnight)
+221 Day,Hour/Minute,Seconds (prev day at midnight, 2400 at midnight)
+1000 Year
+1001 Year,Seconds
+1020 Year,Hour/Minute (2400 at midnight)
+1021 Year,Hour/Minute,Seconds (2400 at midnight)
+1200 Year,Day (prev day at midnight)
+1201 Year,Day,Seconds (prev day at midnight)
+1220 Year,Day,Hour/Minute (prev day at midnight, 2400 at midnight)
+1221 Year,Day,Hour/Minute,Seconds (prev day at midnight, 2400 at midnight)
+120 Day,Hour/Minute (2400 at midnight)
+121 Day,Hour/Minute,Seconds (2400 at midnight)
+1120 Year,Day,Hour/Minute (2400 at midnight)
+1121 Year,Day,Hour/Minute,Seconds (2400 at midnight)
+210 Day,Hour/Minute (prev day at midnight)
+211 Day,Hour/Minute,Seconds (prev day at midnight)
+1210 Year,Day,Hour/Minute (prev day at midnight)
+1211 Year,Day,Hour/Minute,Seconds (prev day at midnight)
+;
+*N Resolution"0 - low resolution  1 - high resolution
+0 low resolution
+1 high resolution
+;
+*O Active Storage Area P80"1- Final Storage 2 -Final Storage 3-Input Storage
+1 Final Storage
+2 Final Storage
+3 Input Storage
+;
+*P Subroutines"1-9, 79-99
+1 Subroutine 1
+2 Subroutine 2
+3 Subroutine 3
+4 Subroutine 4
+5 Subroutine 5
+6 Subroutine 6
+7 Subroutine 7
+8 Subroutine 8
+9 Subroutine 9
+79 Subroutine 79
+80 Subroutine 80
+81 Subroutine 81
+82 Subroutine 82
+83 Subroutine 83
+84 Subroutine 84
+85 Subroutine 85
+86 Subroutine 86
+87 Subroutine 87
+88 Subroutine 88
+89 Subroutine 89
+90 Subroutine 90
+91 Subroutine 91
+92 Subroutine 92
+93 Subroutine 93
+94 Subroutine 94
+95 Subroutine 95
+96 Subroutine 96
+97 Subroutine 97
+98 Subroutine 98
+99 Subroutine 99
+;
+*Q address"0-3, 10-13, 20-23, 30-33
+0-3 SDM1502 Address
+10-13 SDM1502 Address
+20-23 SDM1502 Address
+30-33 SDM1502 Address
+;
+*R function option (P102)"0, 1, 2, 3
+0 Channel state(s) function
+1 Duty cycle function
+2 Counts function
+3 Memory test function
+;
+*T Histogram Form"0-1
+0 Open Form
+1 Closed Form
+;
+*U p96 Serial Out Destination"0,10-13,20-23,30-31
+0 Tape
+10 Printer ASCII/300 Baud
+11 Printer ASCII/1200 Baud
+12 Printer ASCII/9600 Baud
+13 Printer ASCII/76800 Baud
+20 Printer Comma/300 Baud
+21 Printer Comma/1200 Baud
+22 Printer Comma/9600 Baud
+23 Printer Comma/76800 Baud
+30 SM192/SM716/CSM1
+31 File Mark to SM192/SM716/CSM1
+;
+*V Modem/Baud Option"0-2, 10-12, 20-22
+0 RF Modem/300 Baud
+1 RF Modem/1200 Baud
+2 RF Modem/9600 Baud
+10 Direct/300 Baud
+11 Direct/1200 Baud
+12 Direct/9600 Baud
+20 Phone Modem/300 Baud
+21 Phone Modem/1200 Baud
+22 Phone Modem/9600 Baud
+;
+*W Flag to Disable"0, 1,2,3,4,5,6,7,8
+0 Never Disabled
+1 Disabled when User Flag 1 is High
+2 Disabled when User Flag 2 is High
+3 Disabled when User Flag 3 is High
+4 Disabled when User Flag 4 is High
+5 Disabled when User Flag 5 is High
+6 Disabled when User Flag 6 is High
+7 Disabled when User Flag 7 is High
+8 Disabled when User Flag 8 is High
+;
+*X p98 printer"1-255,1001-1255,2001-2255,3001-3255
+1-255 300 Baud
+1001-1255 1200 Baud
+2001-2255 9600 Baud
+3001-3255 76800 Baud
+;
+*Y P18"0-2
+0 Tenths of seconds into current minute (maximum 600)
+1 Minutes into current day (maximum 1440)
+2 Hours into current year (maximum 8748)
+;
+*Z p23"11-15
+11 ñ 5 mV Fast Range
+12 ñ 15 mV Fast Range
+13 ñ 50 mV Fast Range
+14 ñ 500 mV Fast Range
+15 ñ 5000 mV Fast Range
+;
+*a FFT"0,1,10,11,20,21
+0 Power Spectra/No Taper
+1 Power Spectra/Taper
+10 Real & Imaginary/No Taper
+11 Real & Imaginary/Taper
+20 Magnitude & Phase/No Taper
+21 Magnitude & Phase/Taper
+;
+*b P109 PARA 1"0-3,10-13,20,23
+0-3 ADDRESS
+10-13 ADDRESS
+20-23 ADDRESS
+30-33 ADDRESS
+;
+*c TDR PARAMETER 2"0,1,2,3,98,99,4000-4999
+0 Apparent Length/Actual Length (La/L)
+1 Waveform (256 locs)
+2  Waveform + Derivative (507 locs)
+3 Electrical Conductivity
+98 Manual MUX Address Advance
+99 SDM1502 PROM Signature
+4000-4999 La/L with Probe Correction in mm
+;
+*d p99, goes"0,1,10,11
+0 self-timed buffer/append new data to old data
+1 self-timed buffer/overwrite the old data
+10 random buffer/append new data to old data
+11 random buffer/overwrite the old data
+;
+*e p81, rainflow histrogram"0,1,10,11
+0 closed/fraction
+1 closed/counts
+10 open/fraction
+11 open/counts
+;
+*f Wind Vector 76 (CR7,21X) "0, 1
+0 S, U, éu, å(éu) Polar
+1 S, U, éu, å(éu) Orth.
+;
+*g P101 - P104"0-3, 10-13, 20-23, 30-33
+0-3 Address
+10-13 Address
+20-23 Address
+30-33 Address
+;
+*h P107, parameter 2"0,1,2,3,10,11,12,13,20,21,22,23,30,31,32
+0 SDM Address
+1 SDM Address
+2 SDM Address
+3 SDM Address
+10 SDM Address
+11 SDM Address
+12 SDM Address
+13 SDM Address
+20 SDM Address
+21 SDM Address
+22 SDM Address
+23 SDM Address
+30 SDM Address
+31 SDM Address
+32 SDM Address
+;
+*i P107, parameter 3"0,1,2,3,5,6,10,12,15,20,30,60,72,99
+0 Get Data and Measure
+1 Set Execution Parameter
+2 Set Execution Parameter
+3 Set Execution Parameter
+5 Set Execution Parameter
+6 Set Execution Parameter
+10 Set Execution Parameter
+12 Set Execution Parameter
+15 Set Execution Parameter
+20 Set Execution Parameter
+30 Set Execution Parameter
+60 Set Execution Parameter
+72 CSI Use Only
+99 Get Data After a Group Trigger
+;
+*j Dynagage"0 - Short, 1 - Long
+0 Short
+1 Long
+$END$
