@@ -1,0 +1,35 @@
+   AERO SENSOR CALIBRATION #3, GREENLAND 1994 DATA  
+ ............ correction coefficients ...............
+  
+ ------------------ temp sensors --------------------
+      relative calibration to temp sensor # 3
+      class 1 mult   -13.14.ge.Tc3.le.-10.819
+                                107 #1    =       1.022465
+                                107 #2    =       1.004181
+      class 2 mult   -10.819.gt.Tc3.le.-8.492
+                                107 #1    =       1.019637
+                                107 #2    =   9.951413E-01
+      class 3 mult   -8.492.gt.Tc3.le.-6.177
+                                107 #1    =       1.018045
+                                107 #2    =   9.782304E-01
+      class 4 mult   -6.177.gt.Tc3.le.-3.856
+                                107 #1    =       1.005402
+                                107 #2    =   9.221697E-01
+ sensor id #s: t1(3891); t2(5291); t3(5274)
+  
+ ----------------- wind sensors -------------------
+ relative calibration to wind sensor # 3
+         class 1  1.4.gt.w3.le.2.648
+                             sensor #1    =   9.937575E-01
+                             sensor #2    =   9.986658E-01
+         class 2  2.68.gt.w3.le.3.93
+                             sensor #1    =   9.856120E-01
+                             sensor #2    =   9.962237E-01
+ sensor id #s: w1(2460); w2(2454); w3(2465)
+  
+ --------------- humidity sensors -----------------
+ relative calibration to sensor # 3
+ one class humidity interval:87.209%-92.189%
+                             sensor #1    =   9.553955E-01
+                             sensor #2    =   9.867451E-01
+ sensor id #s: h1(3831); h2(5291); h3(5274)

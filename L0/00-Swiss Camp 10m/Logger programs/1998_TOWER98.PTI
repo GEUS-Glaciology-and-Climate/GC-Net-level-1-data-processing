@@ -1,0 +1,61 @@
+Program Trace Information File for:  TOWER98.CSI
+Date: 5/25/1998
+Time: 21:09:07
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|2 Volt (Diff)                  18.9   18.9   18.9     18.9   18.9   18.9
+1|2|2 Volt (Diff)                   9.7   28.6   28.6      9.7   28.6   28.6
+1|3|92 If time is                   0.3   28.9   28.9      0.3   28.9   28.9
+ Output Flag Set @ 13 for Array 21
+1|4|80 Set Active Storage Area      0.2   29.1   29.1      0.2   29.1   29.1
+1|5|77 Real Time                    0.1   29.2   29.2      1.0   30.1   30.1
+ Output Data 3 Values
+1|6|71 Average                      2.4   31.6   31.6     11.1   41.2   41.2
+ Output Data 3 Values
+1|7|71 Average                      3.9   35.5   35.5     20.1   61.3   61.3
+ Output Data 6 Values
+1|8|73 Maximize                    11.1   46.6   46.6     18.1   79.4   79.4
+ Output Data 6 Values
+1|9|74 Minimize                    11.1   57.7   57.7     18.1   97.5   97.5
+ Output Data 6 Values
+1|10|71 Average                     1.9   59.6   59.6      8.1  105.6  105.6
+ Output Data 2 Values
+
+Program Table 1 Execution Interval   15.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec   59.6 w/Output  105.6
+
+Table 1 Estimated Total Final Storage Locations used per day  648.0
+
+
+--------------- Table 2 ---------------
+2|1|86 Do                           0.1    0.1    0.1      0.1    0.1    0.1
+2|2|22 Excitation with Delay      100.5  100.6  100.6    100.5  100.6  100.6
+2|3|1 Volt (SE)                     7.5  108.1  108.1      7.5  108.1  108.1
+2|4|1 Volt (SE)                     7.5  115.6  115.6      7.5  115.6  115.6
+2|5|86 Do                           0.1  115.7  115.7      0.1  115.7  115.7
+2|6|3 Pulse                         0.9  116.6  116.6      0.9  116.6  116.6
+2|7|4 Excite-Delay (SE)            47.9  164.5  164.5     47.9  164.5  164.5
+
+Program Table 2 Execution Interval   60.000 Seconds
+
+Table 2 Estimated Total Program Execution Time in msec  164.5 w/Output  164.5
+
+Table 2 Estimated Total Final Storage Locations used per day    0.0
+
+
+
+Estimated Total Final Storage Locations used per day  648.0

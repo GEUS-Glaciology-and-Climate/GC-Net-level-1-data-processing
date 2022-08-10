@@ -1,0 +1,36 @@
+Final Storage Label File for:  SCI_TOWER 09.csi
+Date:  8/10/2009
+Time:  15:48:30
+
+168 Output_Table  10.00 Min
+1 168 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 CM3_UP_AVG  H
+6 CM3_DOWN_AVG  H
+7 CG3_UP_AVG  H
+8 CG3_DOWN_AVG  H
+9 CNRTEMP_C_AVG  H
+
+213 Output_Table  60.00 Min
+1 213 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 T_air_1_AVG  L
+6 T_air_2_AVG  L
+7 T_1_AVG  H
+8 T_2_AVG  H
+9 T_3_AVG  H
+10 T_4_AVG  H
+11 T_5_AVG  H
+12 T_6_AVG  H
+13 wind_spd_S_WVT  L
+14 wind_dir_D1_WVT  L
+15 wind_spd_MAX  L
+16 battery  L
+17 SR50_AVG  L
+
+
+Estimated Total Final Storage Locations used per day 2568

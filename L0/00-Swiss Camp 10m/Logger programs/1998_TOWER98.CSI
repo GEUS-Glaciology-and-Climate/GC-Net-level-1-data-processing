@@ -1,0 +1,165 @@
+;{CR10}
+; Swiss Camp 10 meter Tower, new set up
+; 2x RM Young wind fan, 2x CS500 T/H
+; 24 May 1998{CR10X}
+
+*Table 1 Program
+  01: 15.0      Execution Interval (seconds)
+
+1:  Volt (Diff) (P2)
+ 1: 2        Reps
+ 2: 3        25 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 1        Loc [ s_1       ]
+ 5: 1        Mult
+ 6: 0.0      Offset
+;LI-Core Radiometer, first in, second reflected
+
+2:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 4        250 mV Slow Range
+ 3: 3        DIFF Channel
+ 4: 3        Loc [ Net_rad   ]
+ 5: 1.0      Mult
+ 6: 0.0      Offset
+; Net Radiation
+
+3:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 10       Set Output Flag High (Flag 0)
+
+4:  Set Active Storage Area (P80)
+ 1: 01       Final Storage Area 1
+ 2: 21       Array ID
+; Station ID 00(tower at Swiss Camp)
+
+5:  Real Time (P77)
+ 1: 1110     Year,Day,Hour/Minute
+
+6:  Average (P71)
+ 1: 3        Reps
+ 2: 1        Loc [ s_1       ]
+; average the radiation meas.
+
+7:  Average (P71)
+ 1: 6        Reps
+ 2: 4        Loc [ T_1       ]
+; average temp, hum, wind
+
+8:  Maximize (P73)
+ 1: 6        Reps
+ 2: 0        Value Only
+ 3: 4        Loc [ T_1       ]
+; max value of temp, hum, wind
+
+9:  Minimize (P74)
+ 1: 6        Reps
+ 2: 0        Value Only
+ 3: 4        Loc [ T_1       ]
+; min value of temp, hum, wind
+
+10:  Average (P71)
+ 1: 2        Reps
+ 2: 10       Loc [ wdir_1    ]
+; average of wind dir
+
+
+*Table 2 Program
+  02: 60.0      Execution Interval (seconds)
+
+1:  Do (P86)
+ 1: 43       Set Port 3 High
+; Voltage control port 3, jumped to switch on 12 V
+; to CS500
+
+2:  Excitation with Delay (P22)
+ 1: 3        Ex Channel
+ 2: 0        Delay W/Ex (units = 0.01 sec)
+ 3: 10       Delay After Ex (units = 0.01 sec)
+ 4: 0        mV Excitation
+; this only makes a delay, there is no exitation
+
+3:  Volt (SE) (P1)
+ 1: 2        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 7        SE Channel
+ 4: 4        Loc [ T_1       ]
+ 5: .1       Mult
+ 6: -40      Offset
+; CS500 temperatures 1 and 2
+
+4:  Volt (SE) (P1)
+ 1: 2        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 9        SE Channel
+ 4: 6        Loc [ hum_1     ]
+ 5: .1       Mult
+ 6: 0.0      Offset
+; CS500 humidity 1 and 2
+
+5:  Do (P86)
+ 1: 53       Set Port 3 Low
+; Voltage contro port 3 turned off, switched 12 V
+; to CS500 is turned off
+
+6:  Pulse (P3)
+ 1: 2        Reps
+ 2: 1        Pulse Channel 1
+ 3: 21       Low Level AC, Output Hz
+ 4: 8        Loc [ wind_1    ]
+ 5: 0.098    Mult
+ 6: 0.       Offset
+; RM Young wind 1 and 2
+
+7:  Excite-Delay (SE) (P4)
+ 1: 2        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 11       SE Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 2        Delay (units 0.01 sec)
+ 6: 2500     mV Excitation
+ 7: 10       Loc [ wdir_1    ]
+ 8: 0.142    Mult
+ 9: 0.0      Offset
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 s_1       5 1 1
+2 s_2       17 1 1
+3 Net_rad   1 1 1
+4 T_1       1 3 1
+5 T_2       17 3 1
+6 hum_1     5 3 1
+7 hum_2     17 3 1
+8 wind_1    5 3 1
+9 wind_2    1 3 1
+10 wdir_1    5 1 1
+11 wdir_2    17 1 1
+12 max_t1    1 0 0
+13 max_t2    1 0 0
+14 max_h1    1 0 0
+15 max_h2    1 0 0
+16 max_w1    1 0 0
+17 max_w2    1 0 0
+18 min_t1    1 0 0
+19 min_t2    1 0 0
+20 min_h1    1 0 0
+21 min_h2    1 0 0
+22 min_w1    1 0 0
+23 min_w2    1 0 0
+24 _________ 0 0 0
+25 _________ 0 0 0
+26 _________ 0 0 0
+27 _________ 0 0 0
+28 _________ 0 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0

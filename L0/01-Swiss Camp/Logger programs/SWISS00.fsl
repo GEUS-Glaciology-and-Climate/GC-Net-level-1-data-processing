@@ -1,0 +1,47 @@
+Final Storage Label File for:  SWISS00.csi
+Date:  6/4/2004
+Time:  21:32:01
+
+11 Output_Table  10.00 Min
+1 11 L
+2 Day_RTM  L
+3 Hour_Minute_RTM  L
+4 sw_in_AVG  L
+5 sw_ref_AVG  L
+6 net_rad_AVG  L
+7 ts_AVG  L
+8 L_in_AVG  L
+9 UV_AVG  L
+10 L_in_STD  L
+11 UV_STD  L
+12 tc_air1_AVG  L
+13 tc_air2_AVG  L
+14 tair_1_AVG  L
+15 tair_2_AVG  L
+16 rh_1_AVG  L
+17 rh_2_AVG  L
+18 U1_AVG  L
+19 U2_AVG  L
+20 U_dir1_AVG  L
+21 U_dir2_AVG  L
+22 pressure_AVG  L
+23 SD_1_AVG  L
+24 SD_2_AVG  L
+25 tc1_AVG  L
+26 tc2_AVG  L
+27 tc3_AVG  L
+28 tc4_AVG  L
+29 tc5_AVG  L
+30 tc6_AVG  L
+31 tc7_AVG  L
+32 tc8_AVG  L
+33 tc9_AVG  L
+34 tc10_AVG  L
+35 TC_snow1_AVG  L
+36 TC_snow2_AVG  L
+37 TC_snow3_AVG  L
+38 TC_snow4_AVG  L
+39 BATTERY_AVG  L
+
+
+Estimated Total Final Storage Locations used per day 5616

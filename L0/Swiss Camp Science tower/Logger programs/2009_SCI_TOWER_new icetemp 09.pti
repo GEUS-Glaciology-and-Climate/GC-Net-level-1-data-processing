@@ -1,0 +1,145 @@
+Program Trace Information File for:  SCI_TOWER_new icetemp 09.csi
+Date: 8/11/2009
+Time: 10:42:29
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|20 Set Port(s)                 11.3   11.3   11.3     11.3   11.3   11.3
+1|2|86 Do                           0.3   11.6   11.6      0.3   11.6   11.6
+1|3|6 Full Bridge                  20.7   32.3   32.3     20.7   32.3   32.3
+1|4|59 BR Transform Rf[X/(1-X)]     1.6   33.9   33.9      1.6   33.9   33.9
+1|5|16 Temperature RTD              3.5   37.4   37.4      3.5   37.4   37.4
+1|6|86 Do                           0.3   37.7   37.7      0.3   37.7   37.7
+1|7|86 Do                           0.3   38.0   38.0      0.3   38.0   38.0
+1|8|2 Volt (Diff)                   9.7   47.7   47.7      9.7   47.7   47.7
+1|9|86 Do                           0.3   48.0   48.0      0.3   48.0   48.0
+1|10|86 Do                          0.3   48.3   48.3      0.3   48.3   48.3
+1|11|2 Volt (Diff)                  9.7   58.0   58.0      9.7   58.0   58.0
+1|12|86 Do                          0.3   58.3   58.3      0.3   58.3   58.3
+1|13|86 Do                          0.3   58.6   58.6      0.3   58.6   58.6
+1|14|2 Volt (Diff)                  9.7   68.3   68.3      9.7   68.3   68.3
+1|15|86 Do                          0.3   68.6   68.6      0.3   68.6   68.6
+1|16|86 Do                          0.3   68.9   68.9      0.3   68.9   68.9
+1|17|2 Volt (Diff)                  9.7   78.6   78.6      9.7   78.6   78.6
+1|18|9 Full Bridge w/mv Excit      38.4  117.0  117.0     38.4  117.0  117.0
+1|19|16 Temperature RTD             3.5  120.5  120.5      3.5  120.5  120.5
+1|20|34 Z=X+F                       1.1  121.6  121.6      1.1  121.6  121.6
+1|21|30 Z=F x 10^n                  2.6  124.2  124.2      2.6  124.2  124.2
+1|22|30 Z=F x 10^n                  1.0  125.2  125.2      1.0  125.2  125.2
+1|23|47 Z=X^Y                      14.9  140.1  140.1     14.9  140.1  140.1
+1|24|36 Z=X*Y                       1.5  141.6  141.6      1.5  141.6  141.6
+1|25|33 Z=X+Y                       1.2  142.8  142.8      1.2  142.8  142.8
+1|26|33 Z=X+Y                       1.2  144.0  144.0      1.2  144.0  144.0
+1|27|92 If time is                  0.7  144.7  144.7      0.7  144.7  144.7
+1|28|10 Batt Voltage                8.3  153.0  153.0      8.3  153.0  153.0
+1|29|89 If (X<=>F)                  0.6  153.6  153.6      0.6  153.6  153.6
+1|30|89 If (X<=>F)                  0.6  154.2  154.2      0.6  154.2  154.2
+1|31|89 If (X<=>F)                  0.6  154.8  154.8      0.6  154.8  154.8
+1|32|89 If (X<=>F)                  0.6  155.4  155.4      0.6  155.4  155.4
+1|33|86 Do                          0.3  155.7  155.7      0.3  155.7  155.7
+1|34|95 End                         0.2  155.9  155.9      0.2  155.9  155.9
+1|35|95 End                         0.2  156.1  156.1      0.2  156.1  156.1
+1|36|95 End                         0.2  156.3  156.3      0.2  156.3  156.3
+1|37|95 End                         0.2  156.5  156.5      0.2  156.5  156.5
+1|38|95 End                         0.2  156.7  156.7      0.2  156.7  156.7
+1|39|92 If time is                  0.7  157.4  157.4      0.7  157.4  157.4
+1|40|92 If time is                  0.7  158.1  158.1      0.7  158.1  158.1
+1|41|89 If (X<=>F)                  0.6  158.7  158.7      0.6  158.7  158.7
+1|42|86 Do                          0.3  159.0  159.0      0.3  159.0  159.0
+1|43|86 Do                          0.3  159.3  159.3      0.3  159.3  159.3
+1|44|14 Thermocouple Temp (DIFF)   18.0  177.3  177.3     18.0  177.3  177.3
+1|45|86 Do                          0.3  177.6  177.6      0.3  177.6  177.6
+1|46|86 Do                          0.3  177.9  177.9      0.3  177.9  177.9
+1|47|14 Thermocouple Temp (DIFF)   18.0  195.9  195.9     18.0  195.9  195.9
+1|48|95 End                         0.2  196.1  196.1      0.2  196.1  196.1
+1|49|89 If (X<=>F)                  0.6  196.7  196.7      0.6  196.7  196.7
+1|50|86 Do                          0.3  197.0  197.0      0.3  197.0  197.0
+1|51|86 Do                          0.3  197.3  197.3      0.3  197.3  197.3
+1|52|14 Thermocouple Temp (DIFF)   18.0  215.3  215.3     18.0  215.3  215.3
+1|53|86 Do                          0.3  215.6  215.6      0.3  215.6  215.6
+1|54|86 Do                          0.3  215.9  215.9      0.3  215.9  215.9
+1|55|14 Thermocouple Temp (DIFF)   18.0  233.9  233.9     18.0  233.9  233.9
+1|56|95 End                         0.2  234.1  234.1      0.2  234.1  234.1
+1|57|95 End                         0.2  234.3  234.3      0.2  234.3  234.3
+1|58|92 If time is                  0.7  235.0  235.0      0.7  235.0  235.0
+1|59|86 Do                          0.3  235.3  235.3      0.3  235.3  235.3
+1|60|86 Do                          0.3  235.6  235.6      0.3  235.6  235.6
+1|61|4 Excite-Delay (SE)           30.0  265.6  265.6     30.0  265.6  265.6
+1|62|86 Do                          0.3  265.9  265.9      0.3  265.9  265.9
+1|63|86 Do                          0.3  266.2  266.2      0.3  266.2  266.2
+1|64|4 Excite-Delay (SE)           30.0  296.2  296.2     30.0  296.2  296.2
+1|65|86 Do                          0.3  296.5  296.5      0.3  296.5  296.5
+1|66|86 Do                          0.3  296.8  296.8      0.3  296.8  296.8
+1|67|4 Excite-Delay (SE)           30.0  326.8  326.8     30.0  326.8  326.8
+1|68|86 Do                          0.3  327.1  327.1      0.3  327.1  327.1
+1|69|86 Do                          0.3  327.4  327.4      0.3  327.4  327.4
+1|70|4 Excite-Delay (SE)           30.0  357.4  357.4     30.0  357.4  357.4
+1|71|95 End                         0.2  357.6  357.6      0.2  357.6  357.6
+1|72|86 Do                          0.3  357.9  357.9      0.3  357.9  357.9
+1|73|3 Pulse                        2.2  360.1  360.1      2.2  360.1  360.1
+1|74|92 If time is                  0.7  360.8  360.8      0.7  360.8  360.8
+ Output Flag Set @ 174 for Array 174
+1|75|77 Real Time                   0.2  361.0  361.0      3.8  364.6  364.6
+ Output Data 3 Values
+1|76|71 Average                     7.2  368.2  368.2     27.9  392.5  392.5
+ Output Data 6 Values
+1|77|73 Maximum                     2.2  370.4  370.4      8.0  400.5  400.5
+ Output Data 1 Values
+1|78|96 Serial Out                  0.5  370.9  370.9      0.5  401.0  401.0
+
+Program Table 1 Execution Interval    2.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec  370.9 w/Output  401.0
+
+Table 1 Estimated Total Final Storage Locations used per day 1584
+
+
+--------------- Table 2 ---------------
+2|1|89 If (X<=>F)                   0.6    0.6    0.6      0.6    0.6    0.6
+2|2|4 Excite-Delay (SE)           156.5  157.1  157.1    156.5  157.1  157.1
+2|3|95 End                          0.2  157.3  157.3      0.2  157.3  157.3
+2|4|89 If (X<=>F)                   0.6  157.9  157.9      0.6  157.9  157.9
+2|5|4 Excite-Delay (SE)           139.7  297.6  297.6    139.7  297.6  297.6
+2|6|95 End                          0.2  297.8  297.8      0.2  297.8  297.8
+2|7|105 SDI-12 Recorder               *  297.8  297.8        *  297.8  297.8
+2|8|92 If time is                   0.7  298.5  298.5      0.7  298.5  298.5
+ Output Flag Set @ 28 for Array 208
+2|9|77 Real Time                    0.2  298.7  298.7      3.8  302.3  302.3
+ Output Data 3 Values
+2|10|71 Average                     2.8  301.5  301.5     10.3  312.6  312.6
+ Output Data 2 Values
+2|11|78 Resolution                  0.4  301.9  301.9      0.4  313.0  313.0
+2|12|71 Average                     7.2  309.1  309.1     27.9  340.9  340.9
+ Output Data 6 Values
+2|13|71 Average                     5.0  314.1  314.1     19.1  360.0  360.0
+ Output Data 4 Values
+2|14|78 Resolution                  0.4  314.5  314.5      0.4  360.4  360.4
+2|15|71 Average                     1.7  316.2  316.2      5.9  366.3  366.3
+ Output Data 1 Values
+2|16|70 Sample                      0.2  316.4  316.4      0.9  367.2  367.2
+ Output Data 1 Values
+2|17|96 Serial Out                  0.5  316.9  316.9      0.5  367.7  367.7
+
+Program Table 2 Execution Interval   60.000 Seconds
+
+Table 2 Estimated Total Program Execution Time in msec  316.9 w/Output  367.7
+
+Table 2 Estimated Total Final Storage Locations used per day 672
+
+
+
+Estimated Total Final Storage Locations used per day 2256
+
+*Execution time is unknown.

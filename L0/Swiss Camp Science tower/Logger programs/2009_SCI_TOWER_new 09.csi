@@ -1,0 +1,560 @@
+;{CR10X}
+
+;*************************************
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Swiss Camp 'Science Tower'
+;
+; CNR1 4-component net radiometer
+; 10 x snow temperature sensors
+; 10 May 2005 by J. Box and R. Huff
+; 10 Aug 2009 modified by Koni Steffen
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;*************************************
+
+*Table 1 Program
+  01: 2         Execution Interval (seconds)
+
+1:  Set Port(s) (P20)
+ 1: 9999     C8..C5 = nc/nc/nc/nc
+ 2: 9933     C4..C1 = nc/nc/1ms/1ms
+
+
+; ------------------------------------------ turn on multiplexer
+
+2:  Do (P86)
+ 1: 42       Set Port 2 High
+; turn multiplexer on
+
+3:  Full Bridge (P6)
+ 1: 1        Reps
+ 2: 2        7.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 250      mV Excitation
+ 6: 8        Loc [ brg_am25t ]
+ 7: -.001    Mult
+ 8: .09707   Offset
+; measures the output of the Full Bridge
+; -> (internal multiplexer reference temperature signal)
+
+4:  BR Transform Rf[X/(1-X)] (P59)
+ 1: 1        Reps
+ 2: 8        Loc [ brg_am25t ]
+ 3: 10.025   Multiplier (Rf)
+; Find the resistance of the reference temperature probe
+
+
+5:  Z=X+F (P34)
+ 1: 8        X Loc [ brg_am25t ]
+ 2: -1       F
+ 3: 8        Z Loc [ brg_am25t ]
+
+6:  Z=F x 10^n (P30)
+ 1: .00385   F
+ 2: 0        n, Exponent of 10
+ 3: 24       Z Loc [ brg_d1    ]
+
+7:  Z=X/Y (P38)
+ 1: 8        X Loc [ brg_am25t ]
+ 2: 24       Y Loc [ brg_d1    ]
+ 3: 8        Z Loc [ brg_am25t ]
+
+; calculate the reference temperature
+
+; ----------------------------------------------------------------- CNR1 S/N 040836
+; 141.2429 = CNR1 4- component radiometer multiplier
+;
+; ------------------------------------------ CM3 Downward Shortwave
+; plex twice, differential
+
+8:  Do (P86)
+ 1: 71       Pulse Port 1
+
+9:  Do (P86)
+ 1: 71       Pulse Port 1
+
+10:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 3        25 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 1     -- Loc [ CM3_UP    ]
+ 5: 141.24   Mult
+ 6: 0.0      Offset
+; ------------------------------------------ CM3 Upward Shortwave
+
+; plex twice, differential
+11:  Do (P86)
+ 1: 71       Pulse Port 1
+
+12:  Do (P86)
+ 1: 71       Pulse Port 1
+
+13:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 3        25 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2     -- Loc [ CM3_DOWN  ]
+ 5: 141.24   Mult
+ 6: 0.0      Offset
+; ------------------------------------------ CG3 Downward Longwave
+
+; plex twice, differential
+14:  Do (P86)
+ 1: 71       Pulse Port 1
+
+15:  Do (P86)
+ 1: 71       Pulse Port 1
+
+16:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 2        7.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 3     -- Loc [ CG3_UP    ]
+ 5: 141.24   Mult
+ 6: 0.0      Offset
+; ------------------------------------------ CG3 Upward Longwave
+
+; plex twice, differential
+17:  Do (P86)
+ 1: 71       Pulse Port 1
+
+18:  Do (P86)
+ 1: 71       Pulse Port 1
+
+19:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 2        7.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 4     -- Loc [ CG3_DOWN  ]
+ 5: 141.24   Mult
+ 6: 0.0      Offset
+; ------------------------------------------ measure CNR1 temp
+
+20:  Full Bridge w/mv Excit (P9)
+ 1: 1        Reps
+ 2: 3        25 mV Slow Ex Range
+ 3: 3        25 mV Slow Br Range
+ 4: 2        DIFF Channel
+ 5: 2        Excite all reps w/Exchan 2
+ 6: 2100     mV Excitation
+ 7: 5        Loc [ CNRTEMP_C ]
+ 8: 1        Mult
+ 9: 0.0      Offset
+
+21:  Temperature RTD (P16)
+ 1: 1        Reps
+ 2: 5        R/R0 Loc [ CNRTEMP_C ]
+ 3: 5        Loc [ CNRTEMP_C ]
+ 4: 1.0      Mult
+ 5: 0.0      Offset
+
+22:  Z=X+F (P34)
+ 1: 5        X Loc [ CNRTEMP_C ]
+ 2: 273.18   F
+ 3: 19       Z Loc [ CNRT_D1   ]
+
+23:  Z=F x 10^n (P30)
+ 1: 5.67     F
+ 2: 8     -- n, Exponent of 10
+ 3: 20       Z Loc [ CNRT_D2   ]
+
+24:  Z=F x 10^n (P30)
+ 1: 4        F
+ 2: 0        n, Exponent of 10
+ 3: 21       Z Loc [ CNRT_D3   ]
+
+25:  Z=X^Y (P47)
+ 1: 19       X Loc [ CNRT_D1   ]
+ 2: 21       Y Loc [ CNRT_D3   ]
+ 3: 22       Z Loc [ CNRT_D4   ]
+
+26:  Z=X*Y (P36)
+ 1: 22       X Loc [ CNRT_D4   ]
+ 2: 20       Y Loc [ CNRT_D2   ]
+ 3: 23       Z Loc [ CNFT_D5   ]
+
+27:  Z=X+Y (P33)
+ 1: 3        X Loc [ CG3_UP    ]
+ 2: 23       Y Loc [ CNFT_D5   ]
+ 3: 3        Z Loc [ CG3_UP    ]
+
+28:  Z=X+Y (P33)
+ 1: 4        X Loc [ CG3_DOWN  ]
+ 2: 23       Y Loc [ CNFT_D5   ]
+ 3: 4        Z Loc [ CG3_DOWN  ]
+
+; -------------------------------------------------- run ventilation if conditions are apropriate
+
+29:  If time is (P92)
+ 1: 34    -- Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 30       Then Do
+
+; -------------------------------------------------- calculate watts downward solar to decide if to ventilate
+
+30:  Batt Voltage (P10)
+ 1: 18       Loc [ battery   ]
+
+31:  If (X<=>F) (P89)
+ 1: 1        X Loc [ CM3_UP    ]
+ 2: 3        >=
+ 3: 300      F
+ 4: 30       Then Do
+
+32:  If (X<=>F) (P89)
+ 1: 3        X Loc [ CG3_UP    ]
+ 2: 4        <
+ 3: 250      F
+ 4: 30       Then Do
+
+33:  If (X<=>F) (P89)
+ 1: 18       X Loc [ battery   ]
+ 2: 3        >=
+ 3: 11       F
+ 4: 30       Then Do
+
+34:  If (X<=>F) (P89)
+ 1: 6        X Loc [ wind_spd  ]
+ 2: 4        <
+ 3: 6        F
+ 4: 30       Then Do
+
+35:  Do (P86)
+ 1: 44       Set Port 4 High
+
+; ------------------------ battery voltage is sufficient for ventilation
+36:  End (P95)
+
+; ------------------------ wind speed threshold less
+37:  End (P95)
+
+; ------------------------ downward shorwave is gt 300
+38:  End (P95)
+
+; ------------------------ think about turning on at 35 sec into minute
+39:  End (P95)
+
+40:  End (P95)
+
+41:  If time is (P92)
+ 1: 54    -- Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 54       Set Port 4 Low
+
+; -------------------------------------------------- Air Thermocouples
+42:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 1        Interval (same units as above)
+ 3: 30       Then Do
+
+43:  If (X<=>F) (P89)
+ 1: 8        X Loc [ brg_am25t ]
+ 2: 3        >=
+ 3: -35      F
+ 4: 30       Then Do
+
+; plex twice, differential
+44:  Do (P86)
+ 1: 71       Pulse Port 1
+
+45:  Do (P86)
+ 1: 71       Pulse Port 1
+
+46:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 1        2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 8        Ref Temp (Deg. C) Loc [ brg_am25t ]
+ 6: 9        Loc [ T_air_1   ]
+ 7: 1.0      Multiplier
+ 8: 0.0      Offset
+
+; plex twice, differential
+47:  Do (P86)
+ 1: 71       Pulse Port 1
+
+48:  Do (P86)
+ 1: 71       Pulse Port 1
+
+49:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 1        2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 8        Ref Temp (Deg. C) Loc [ brg_am25t ]
+ 6: 10       Loc [ T_air_2   ]
+ 7: 1.0      Multiplier
+ 8: 0.0      Offset
+
+50:  End (P95)
+
+51:  If (X<=>F) (P89)
+ 1: 8        X Loc [ brg_am25t ]
+ 2: 4        <
+ 3: -35      F
+ 4: 30       Then Do
+
+; plex twice, differential
+52:  Do (P86)
+ 1: 71       Pulse Port 1
+
+53:  Do (P86)
+ 1: 71       Pulse Port 1
+
+54:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 2        7.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 8        Ref Temp (Deg. C) Loc [ brg_am25t ]
+ 6: 9        Loc [ T_air_1   ]
+ 7: 1.0      Multiplier
+ 8: 0.0      Offset
+
+; plex twice, differential
+55:  Do (P86)
+ 1: 71       Pulse Port 1
+
+56:  Do (P86)
+ 1: 71       Pulse Port 1
+
+57:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 2        7.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 8        Ref Temp (Deg. C) Loc [ brg_am25t ]
+ 6: 10       Loc [ T_air_2   ]
+ 7: 1.0      Multiplier
+ 8: 0.0      Offset
+; -------------------------------------------------- measure thermocouple air temps once per minute
+
+58:  End (P95)
+
+59:  End (P95)
+
+60:  Do (P86)
+ 1: 52       Set Port 2 Low
+
+
+; -------------------------------------------------- wind speed
+61:  Pulse (P3)
+ 1: 1        Reps
+ 2: 1        Pulse Channel 1
+ 3: 21       Low Level AC, Output Hz
+ 4: 6        Loc [ wind_spd  ]
+ 5: .098     Mult
+ 6: 0        Offset
+
+;********************************
+;
+; Write out Table 1 instruments
+;
+;********************************
+
+;Output frequency is once per hour
+62:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 10       Interval (same units as above)
+ 3: 10       Set Output Flag High (Flag 0)
+
+63:  Real Time (P77)^25281
+ 1: 1110     Year,Day,Hour/Minute (midnight = 0000) ;
+
+64:  Average (P71)^25064
+ 1: 6        Reps
+ 2: 1        Loc [ CM3_UP    ]
+
+65:  Maximum (P73)^17478
+ 1: 1        Reps
+ 2: 00       Time Option
+ 3: 6        Loc [ wind_spd  ]
+
+66:  Serial Out (P96)
+ 1: 71       Storage Module
+
+
+;***************************************
+;***************************************
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Table 2: Thermistors and soil moisture
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;****************************************
+;
+;table 2 program control
+;
+
+*Table 2 Program
+  02: 60        Execution Interval (seconds)
+
+; ----------------------------------------- Snow Temperatures
+
+; ---------------------- measure 6 single ended snow thermistors
+
+1:  If (X<=>F) (P89)
+ 1: 8        X Loc [ brg_am25t ]
+ 2: 3        >=
+ 3: -35      F
+ 4: 30       Then Do
+
+2:  Excite-Delay (SE) (P4)
+ 1: 6        Reps
+ 2: 4        250 mV Slow Range
+ 3: 7        SE Channel
+ 4: 3        Excite all reps w/Exchan 3
+ 5: 2        Delay (0.01 sec units)
+ 6: 2500     mV Excitation
+ 7: 11       Loc [ T_1       ]
+ 8: 1.0      Mult
+ 9: -100     Offset
+
+3:  End (P95)
+
+4:  If (X<=>F) (P89)
+ 1: 8        X Loc [ brg_am25t ]
+ 2: 4        <
+ 3: -35      F
+ 4: 30       Then Do
+
+5:  Excite-Delay (SE) (P4)
+ 1: 6        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 7        SE Channel
+ 4: 3        Excite all reps w/Exchan 3
+ 5: 2        Delay (0.01 sec units)
+ 6: 2500     mV Excitation
+ 7: 11       Loc [ T_1       ]
+ 8: 1.0      Mult
+ 9: -100     Offset
+
+6:  End (P95)
+
+; -------------------------------------------------- Sonic ranger  SR50
+
+7:  SDI-12 Recorder (P105)
+ 1: 0     -- SDI-12 Address
+ 2: 0        Start Measurement (aM!)
+ 3: 6        Port
+ 4: 17       Loc [ snow_H    ]
+ 5: 1        Multiplier
+ 6: 0.0      Offset
+
+8:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 10       Set Output Flag High (Flag 0)
+; ----------------------------------------------  Output Table 2 to Final Storage
+
+9:  Real Time (P77)^704
+ 1: 1110     Year,Day,Hour/Minute (midnight = 0000)
+
+10:  Average (P71)^2594
+ 1: 2        Reps
+ 2: 9        Loc [ T_air_1   ]
+
+11:  Resolution (P78)
+ 1: 1        High Resolution
+
+12:  Average (P71)^10970
+ 1: 6        Reps
+ 2: 11       Loc [ T_1       ]
+
+13:  Resolution (P78)
+ 1: 0        Low Resolution
+
+14:  Sample (P70)^25654
+ 1: 1        Reps
+ 2: 18       Loc [ battery   ]
+
+15:  Average (P71)^15359
+ 1: 1        Reps
+ 2: 17       Loc [ snow_H    ]
+
+16:  Serial Out (P96)
+ 1: 71       Storage Module
+
+*Table 3 Subroutines
+
+End Program
+
+
+
+
+-Input Locations-
+1 CM3_UP    1 1 1
+2 CM3_DOWN  1 1 1
+3 CG3_UP    1 3 2
+4 CG3_DOWN  1 2 2
+5 CNRTEMP_C 1 3 2
+6 wind_spd  1 3 1
+7 wind_dir  1 0 0
+8 brg_am25t 1 11 4
+9 T_air_1   5 2 2
+10 T_air_2   17 1 2
+11 T_1       1 1 2
+12 T_2       1 1 2
+13 T_3       1 1 2
+14 T_4       1 1 2
+15 T_5       1 1 2
+16 T_6       17 1 2
+17 snow_H    1 1 1
+18 battery   1 1 1
+19 CNRT_D1   1 0 1
+20 CNRT_D2   1 1 1
+21 CNRT_D3   5 1 1
+22 CNRT_D4   1 1 1
+23 CNFT_D5   1 2 1
+24 brg_d1    1 1 1
+25 _________ 1 0 0
+26 _________ 1 0 0
+27 _________ 0 0 0
+28 _________ 0 0 0
+30 _________ 1 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0
+-CR10X ID-
+0
+-CR10X Power Up-
+3
+-CR10X Compile Setting-
+3
+-CR10X RS-232 Setting-
+-1
+-DLD File Labels-
+0
+-Final Storage Labels-
+0,Year_RTM,25281
+0,Day_RTM
+0,Hour_Minute_RTM
+1,Year_RTM,704
+1,Day_RTM
+1,Hour_Minute_RTM
+2,T_air_1_AVG~9,2594
+2,T_air_2_AVG~10
+3,battery~18,25654
+4,T_1_AVG~11,10970
+4,T_2_AVG~12
+4,T_3_AVG~13
+4,T_4_AVG~14
+4,T_5_AVG~15
+4,T_6_AVG~16
+5,snow_H_AVG~17,15359
+6,CM3_UP_AVG~1,25064
+6,CM3_DOWN_AVG~2
+6,CG3_UP_AVG~3
+6,CG3_DOWN_AVG~4
+6,CNRTEMP_C_AVG~5
+6,wind_spd_AVG~6
+7,wind_spd_MAX~6,17478

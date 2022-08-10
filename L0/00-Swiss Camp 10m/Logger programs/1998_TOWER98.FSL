@@ -1,0 +1,35 @@
+Final Storage Label File for:  TOWER98.CSI
+Date:  5/25/1998
+Time:  21:09:07
+
+21 Output_Table  60.00 Min
+1 21 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 s_1_AVG  L
+6 s_2_AVG  L
+7 Net_rad_AVG  L
+8 T_1_AVG  L
+9 T_2_AVG  L
+10 hum_1_AVG  L
+11 hum_2_AVG  L
+12 wind_1_AVG  L
+13 wind_2_AVG  L
+14 T_1_MAX  L
+15 T_2_MAX  L
+16 hum_1_MAX  L
+17 hum_2_MAX  L
+18 wind_1_MAX  L
+19 wind_2_MAX  L
+20 T_1_MIN  L
+21 T_2_MIN  L
+22 hum_1_MIN  L
+23 hum_2_MIN  L
+24 wind_1_MIN  L
+25 wind_2_MIN  L
+26 wdir_1_AVG  L
+27 wdir_2_AVG  L
+
+
+Estimated Total Final Storage Locations used per day  648.0

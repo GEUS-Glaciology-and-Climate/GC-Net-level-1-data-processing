@@ -1,0 +1,39 @@
+Final Storage Label File for:  SCI_TOWER_new icetemp 09.csi
+Date:  8/11/2009
+Time:  10:42:29
+
+174 Output_Table  10.00 Min
+1 174 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 CM3_UP_AVG  L
+6 CM3_DOWN_AVG  L
+7 CG3_UP_AVG  L
+8 CG3_DOWN_AVG  L
+9 CNRTEMP_C_AVG  L
+10 wind_spd_AVG  L
+11 wind_spd_MAX  L
+
+208 Output_Table  60.00 Min
+1 208 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 T_air_1_AVG  L
+6 T_air_2_AVG  L
+7 T_1_AVG  H
+8 T_2_AVG  H
+9 T_3_AVG  H
+10 T_4_AVG  H
+11 T_5_AVG  H
+12 T_6_AVG  H
+13 Tice_1_AVG  H
+14 Tice_2_AVG  H
+15 Tice_3_AVG  H
+16 Tice_4_AVG  H
+17 snow_H_AVG  L
+18 battery  L
+
+
+Estimated Total Final Storage Locations used per day 2256

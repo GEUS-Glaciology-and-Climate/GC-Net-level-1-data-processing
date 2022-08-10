@@ -1,0 +1,49 @@
+Final Storage Label File for:  SWISS98.CSI
+Date:  6/5/1998
+Time:  19:39:51
+
+11 Output_Table  60.00 Min
+1 11 L
+2 Day_RTM  L
+3 Hour_Minute_RTM  L
+4 net_rad_AVG  L
+5 THR_up_AVG  L
+6 THR_down_AVG  L
+7 THR_res_AVG  L
+8 THR_T_up_AVG  L
+9 THR_T_do_AVG  L
+10 L_in_AVG  L
+11 UV_AVG  L
+12 L_in_STD  L
+13 UV_STD  L
+14 tc_air1_AVG  L
+15 tc_air2_AVG  L
+16 tair_1_AVG  L
+17 tair_2_AVG  L
+18 rh_1_AVG  L
+19 rh_2_AVG  L
+20 U1_AVG  L
+21 U2_AVG  L
+22 U_dir1_AVG  L
+23 U_dir1_2_AVG  L
+24 pressure_AVG  L
+25 SD_1_AVG  L
+26 SD_2_AVG  L
+27 tc1_AVG  L
+28 tc2_AVG  L
+29 tc3_AVG  L
+30 tc4_AVG  L
+31 tc5_AVG  L
+32 tc6_AVG  L
+33 tc7_AVG  L
+34 tc8_AVG  L
+35 tc9_AVG  L
+36 tc10_AVG  L
+37 TC_snow1_AVG  L
+38 TC_snow2_AVG  L
+39 TC_snow3_AVG  L
+40 TC_snow4_AVG  L
+41 BATTERY_AVG  L
+
+
+Estimated Total Final Storage Locations used per day  984.0

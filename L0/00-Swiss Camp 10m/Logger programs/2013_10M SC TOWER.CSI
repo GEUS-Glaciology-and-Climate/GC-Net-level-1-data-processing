@@ -1,0 +1,195 @@
+;{CR10}
+; 10 m tower at Swiss Camp
+
+*Table 1 Program
+  01: 15        Execution Interval (seconds)
+
+
+1:  Volt (Diff) (P2)
+ 1: 2        Reps
+ 2: 3        25 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 1        Loc [ sw_1      ]
+ 5: 1.0      Multiplier
+ 6: 0.0      Offset
+; short waver in and out
+
+2:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 4        250 mV Slow Range
+ 3: 3        DIFF Channel
+ 4: 3        Loc [ netrad    ]
+ 5: 1.0      Multiplier
+ 6: 0.0      Offset
+; Net radiometer
+
+3:  If time is (P92)
+ 1: 0000     Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 10       Set Output Flag High (Flag 0)
+
+
+4:  Set Active Storage Area (P80)^27412
+ 1: 1        Final Storage Area 1
+ 2: 21       Array ID
+
+
+5:  Real Time (P77)^26005
+ 1: 1110     Year,Day,Hour/Minute (midnight = 0000)
+
+
+6:  Average (P71)^30588
+ 1: 3        Reps
+ 2: 1        Loc [ sw_1      ]
+
+
+7:  Average (P71)^19943
+ 1: 6        Reps
+ 2: 4        Loc [ tempair_1 ]
+
+
+8:  Maximum (P73)^29287
+ 1: 6        Reps
+ 2: 0        Value Only
+ 3: 4        Loc [ tempair_1 ]
+
+
+9:  Minimum (P74)^4782
+ 1: 6        Reps
+ 2: 0        Value Only
+ 3: 4        Loc [ tempair_1 ]
+
+
+10:  Average (P71)^28685
+ 1: 2        Reps
+ 2: 10       Loc [ pressur_1 ]
+
+
+*Table 2 Program
+  02: 60        Execution Interval (seconds)
+
+1:  Do (P86)
+ 1: 43       Set Port 3 High
+
+
+2:  Excitation with Delay (P22)
+ 1: 3        Ex Channel
+ 2: 0        Delay W/Ex (0.01 sec units)
+ 3: 10       Delay After Ex (0.01 sec units)
+ 4: 0        mV Excitation
+
+
+3:  Volt (SE) (P1)
+ 1: 2        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 7        SE Channel
+ 4: 4        Loc [ tempair_1 ]
+ 5: .1       Multiplier
+ 6: -40      Offset
+; air temp 2 x
+
+4:  Volt (SE) (P1)
+ 1: 2        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 9        SE Channel
+ 4: 6        Loc [ hum_1     ]
+ 5: .1       Multiplier
+ 6: 0.0      Offset
+; Humidity 2 x
+
+5:  Do (P86)
+ 1: 53       Set Port 3 Low
+
+
+6:  Pulse (P3)
+ 1: 2        Reps
+ 2: 1        Pulse Channel 1
+ 3: 21       Low Level AC, Output Hz
+ 4: 8        Loc [ wind_1    ]
+ 5: .098     Multiplier
+ 6: 0        Offset
+; wind speed
+
+7:  Excite-Delay (SE) (P4)
+ 1: 2        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 11       SE Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 2        Delay (0.01 sec units)
+ 6: 2500     mV Excitation
+ 7: 12       Loc [ wind_di_1 ]
+ 8: .142     Multiplier
+ 9: 0        Offset
+
+
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 sw_1      5 1 1
+2 sw_2      17 1 1
+3 netrad    1 1 1
+4 tempair_1 5 3 1
+5 tempair_2 17 3 1
+6 hum_1     5 3 1
+7 hum_2     17 3 1
+8 wind_1    5 3 1
+9 wind_2    17 3 1
+10 pressur_1 1 1 0
+11 pressur_2 1 1 0
+12 wind_di_1 5 0 1
+13 wind_di_2 17 0 1
+14 _________ 0 0 0
+15 _________ 0 0 0
+16 _________ 0 0 0
+17 _________ 0 0 0
+18 _________ 0 0 0
+19 _________ 0 0 0
+20 _________ 0 0 0
+21 _________ 0 0 0
+22 _________ 0 0 0
+23 _________ 0 0 0
+24 _________ 0 0 0
+25 _________ 0 0 0
+26 _________ 0 0 0
+27 _________ 0 0 0
+28 _________ 0 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0
+-DLD File Labels-
+0
+-Final Storage Labels-
+0,21,27412
+1,Year_RTM,26005
+1,Day_RTM
+1,Hour_Minute_RTM
+2,sw_1_AVG~1,30588
+2,sw_2_AVG~2
+2,netrad_AVG~3
+3,tempair_1_AVG~4,19943
+3,tempair_2_AVG~5
+3,hum_1_AVG~6
+3,hum_2_AVG~7
+3,wind_1_AVG~8
+3,wind_2_AVG~9
+4,tempair_1_MAX~4,29287
+4,tempair_2_MAX~5
+4,hum_1_MAX~6
+4,hum_2_MAX~7
+4,wind_1_MAX~8
+4,wind_2_MAX~9
+5,tempair_1_MIN~4,4782
+5,tempair_2_MIN~5
+5,hum_1_MIN~6
+5,hum_2_MIN~7
+5,wind_1_MIN~8
+5,wind_2_MIN~9
+6,pressur_1_AVG~10,28685
+6,pressur_2_AVG~11

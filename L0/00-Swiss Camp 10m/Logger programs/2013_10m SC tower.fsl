@@ -1,0 +1,35 @@
+Final Storage Label File for:  10m SC tower.csi
+Date:  5/14/2013
+Time:  15:10:14
+
+21 Output_Table  60.00 Min
+1 21 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 sw_1_AVG  L
+6 sw_2_AVG  L
+7 netrad_AVG  L
+8 tempair_1_AVG  L
+9 tempair_2_AVG  L
+10 hum_1_AVG  L
+11 hum_2_AVG  L
+12 wind_1_AVG  L
+13 wind_2_AVG  L
+14 tempair_1_MAX  L
+15 tempair_2_MAX  L
+16 hum_1_MAX  L
+17 hum_2_MAX  L
+18 wind_1_MAX  L
+19 wind_2_MAX  L
+20 tempair_1_MIN  L
+21 tempair_2_MIN  L
+22 hum_1_MIN  L
+23 hum_2_MIN  L
+24 wind_1_MIN  L
+25 wind_2_MIN  L
+26 pressur_1_AVG  L
+27 pressur_2_AVG  L
+
+
+Estimated Total Final Storage Locations used per day 648

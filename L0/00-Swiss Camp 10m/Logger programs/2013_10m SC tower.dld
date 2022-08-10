@@ -1,0 +1,165 @@
+};CR10
+;10m SC tower.dld
+;$
+;:sw_1     :sw_2     :netrad   :tempair_1:tempair_2
+;:hum_1    :hum_2    :wind_1   :wind_2   :pressur_1
+;:pressur_2:wind_di_1:wind_di_2
+;$
+
+;%
+;Final Storage Label File for:  10m SC tower.csi
+;Date:  5/14/2013
+;Time:  15:10:14
+;
+;21 Output_Table  60.00 Min
+;1 21 L
+;2 Year_RTM  L
+;3 Day_RTM  L
+;4 Hour_Minute_RTM  L
+;5 sw_1_AVG  L
+;6 sw_2_AVG  L
+;7 netrad_AVG  L
+;8 tempair_1_AVG  L
+;9 tempair_2_AVG  L
+;10 hum_1_AVG  L
+;11 hum_2_AVG  L
+;12 wind_1_AVG  L
+;13 wind_2_AVG  L
+;14 tempair_1_MAX  L
+;15 tempair_2_MAX  L
+;16 hum_1_MAX  L
+;17 hum_2_MAX  L
+;18 wind_1_MAX  L
+;19 wind_2_MAX  L
+;20 tempair_1_MIN  L
+;21 tempair_2_MIN  L
+;22 hum_1_MIN  L
+;23 hum_2_MIN  L
+;24 wind_1_MIN  L
+;25 wind_2_MIN  L
+;26 pressur_1_AVG  L
+;27 pressur_2_AVG  L
+;
+;
+;Estimated Total Final Storage Locations used per day 648
+;%
+
+MODE 1
+SCAN RATE 15
+
+1:P2
+1:2
+2:3
+3:1
+4:1
+5:1.0
+6:0.0
+
+2:P2
+1:1
+2:4
+3:3
+4:3
+5:1.0
+6:0.0
+
+3:P92
+1:0000
+2:60
+3:10
+
+4:P80
+1:1
+2:21
+
+5:P77
+1:1110
+
+6:P71
+1:3
+2:1
+
+7:P71
+1:6
+2:4
+
+8:P73
+1:6
+2:0
+3:4
+
+9:P74
+1:6
+2:0
+3:4
+
+10:P71
+1:2
+2:10
+
+
+MODE 2
+SCAN RATE 60
+
+1:P86
+1:43
+
+2:P22
+1:3
+2:0
+3:10
+4:0
+
+3:P1
+1:2
+2:5
+3:7
+4:4
+5:.1
+6:-40
+
+4:P1
+1:2
+2:5
+3:9
+4:6
+5:.1
+6:0.0
+
+5:P86
+1:53
+
+6:P3
+1:2
+2:1
+3:21
+4:8
+5:.098
+6:0
+
+7:P4
+1:2
+2:5
+3:11
+4:1
+5:2
+6:2500
+7:12
+8:.142
+9:0
+
+
+MODE 3
+
+MODE 10
+1:28
+2:64
+3:0
+
+
+MODE 12
+1:0000
+2:0000
+3:0000
+
+

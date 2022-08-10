@@ -1,0 +1,256 @@
+;{CR10}
+;Program:GOES95 aero tower
+;Flag Usage:
+;Input Channel Usage:
+;Excitation Channel Usage:
+;Control Port Usage:
+;Pulse Input Channel Usage:
+;Output Array Definitions:
+*Table 1 Program
+  01: 10        Execution Interval (seconds)
+
+1:  Set Port(s) (P20)
+ 1: 9999     C8,C7,C6,C5 Options
+ 2: 9933     C4,C3,C2,C1 Options
+
+2:  Do (P86); turn AM25T on
+ 1: 42       Set Port 2 High
+
+3:  Full Bridge (P6)
+ 1: 1        Reps
+ 2: 22       ñ 7.5 mV 60 Hz Rejection Range
+ 3: 1        DIFF Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 350      mV Excitation
+ 6: 24       Loc [ _________ ]
+ 7: -.001    Mult
+ 8: .09707   Offset
+;measure Muliplexer Ref. Temp.
+
+4:  BR Transform Rf[X/(1-X)] (P59)
+ 1: 1        Reps
+ 2: 24       Loc [ _________ ]
+ 3: 10.025   Multiplier (Rf)
+;find resistance on the ref temp
+
+5:  Temperature RTD (P16)
+ 1: 1        Reps
+ 2: 24       R/RO Loc [ _________ ]
+ 3: 24       Loc [ _________ ]
+ 4: 1        Mult
+ 5: 0        Offset
+;calculate ref temp
+
+6:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 8        Loop Count
+
+7:  Do (P86)
+ 1: 71       Pulse Port 1
+
+8:  Do (P86)
+ 1: 71       Pulse Port 1
+
+9:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 3        ñ 25 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 1     -- Loc [ _________ ]
+ 5: 1        Mult
+ 6: 0.0000   Offset
+;All radiation instruments: s(in), s(out), s(red),s(diff
+;Longwave incoming radiometer - pyrgeometer
+;Shortwave direct - Pyrheliometer
+;Net Radiometer
+;UV Radiometer
+
+10:  End (P95)
+
+11:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 3        Loop Count
+
+12:  Do (P86)
+ 1: 71       Pulse Port 1
+
+13:  Do (P86)
+ 1: 71       Pulse Port 1
+
+14:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 9     -- Loc [ _________ ]
+ 5: 1        Mult
+ 6: 0.0000   Offset
+;Sun Diodes 1-3 
+
+15:  End (P95)
+
+16:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 3        Loop Count
+
+17:  Do (P86)
+ 1: 71       Pulse Port 1
+
+18:  Do (P86)
+ 1: 71       Pulse Port 1
+
+19:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 1        ñ 2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 24       Ref Temp Loc [ _________ ]
+ 6: 25    -- Loc [ _________ ]
+ 7: 1        Mult
+ 8: 0.0000   Offset
+;Three TC air temperatures
+
+20:  End (P95)
+
+21:  Do (P86); turn multiplexer off
+ 1: 52       Set Port 2 Low
+
+22:  Temp (107) (P11)
+ 1: 3        Reps
+ 2: 3        SE Channel
+ 3: 2        Excite all reps w/Exchan 2
+ 4: 12       Loc [ _________ ]
+ 5: 1        Mult
+ 6: 0.0000   Offset
+;3 temperatures: 12 at bottom, 14 at top
+
+23:  R.H. (207) (P12)
+ 1: 3        Reps
+ 2: 6        SE Channel
+ 3: 2        Excite all reps w/Exchan 2
+ 4: 12       Temperature Loc [ _________ ]
+ 5: 15       Loc [ _________ ]
+ 6: 1        Mult
+ 7: 0.0000   Offset
+;3 humidity: 15 at bottom, 17 at top
+
+24:  Pulse (P3)
+ 1: 2        Reps
+ 2: 1        Pulse Input Channel
+ 3: 2        Switch Closure
+ 4: 18       Loc [ _________ ]
+ 5: 0.08     Mult
+ 6: 0.447    Offset
+;2 wind speed: 18 at lowest level, 19 at highest
+
+25:  Excite-Delay (SE) (P4)
+ 1: 1        Reps
+ 2: 15       ñ 2500 mV Fast Range
+ 3: 9        SE Channel
+ 4: 3        Excite all reps w/Exchan 3
+ 5: 2        Delay (units 0.01 sec)
+ 6: 1000     mV Excitation
+ 7: 20       Loc [ _________ ]
+ 8: 0.071    Mult
+ 9: 0.0000   Offset
+;Met One wind direction
+
+26:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 10       Interval (same units as above)
+ 3: 10       Set Output Flag High
+
+27:  Real Time (P77)
+ 1: 1110     Year,Day,Hour/Minute
+
+28:  Resolution (P78)
+ 1: 1        high resolution
+
+29:  Average (P71)
+ 1: 23       Reps
+ 2: 1        Loc [ _________ ]
+
+30:  Average (P71)
+ 1: 3        Reps
+ 2: 25       Loc [ _________ ]
+
+31:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 10       Interval (same units as above)
+ 3: 30       Then Do
+
+32:  Serial Out (P96)
+ 1: 71       SM192/SM716/CSM1
+
+33:  End (P95)
+
+*Table 2 Program
+  02: 60        Execution Interval (seconds)
+
+1:  Excite-Delay (SE) (P4)
+ 1: 1        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 10       SE Channel
+ 4: 3        Excite all reps w/Exchan 3
+ 5: 300      Delay (units 0.01 sec)
+ 6: 0        mV Excitation
+ 7: 21       Loc [ _________ ]
+ 8: .184     Mult
+ 9: 600      Offset
+;Vaisala PTA427 Barometer
+
+2:  SDI-12 Recorder (OS10 1.1) (P105)
+ 1: 0        SDI-12 Address
+ 2: 0        Start Measurement (aM0!)
+ 3: 3        Port
+ 4: 22       Loc [ _________ ]
+ 5: 1        Mult
+ 6: 0.0000   Offset
+;Snow Height at lower level, SW facing
+
+3:  SDI-12 Recorder (OS10 1.1) (P105)
+ 1: 0        SDI-12 Address
+ 2: 0        Start Measurement (aM0!)
+ 3: 4        Port
+ 4: 23       Loc [ _________ ]
+ 5: 1        Mult
+ 6: 0        Offset
+;Snow Height at higher level, SE facing
+
+*Table 3 Subroutines
+
+End Program
+-Input Locations-
+1 _________ 0 0 0
+2 _________ 0 0 0
+3 _________ 0 0 0
+4 _________ 0 0 0
+5 _________ 0 0 0
+6 _________ 0 0 0
+7 _________ 0 0 0
+8 _________ 0 0 0
+9 _________ 0 0 0
+10 _________ 0 0 0
+11 _________ 0 0 0
+12 _________ 0 0 0
+13 _________ 0 0 0
+14 _________ 0 0 0
+15 _________ 0 0 0
+16 _________ 0 0 0
+17 _________ 0 0 0
+18 _________ 0 0 0
+19 _________ 0 0 0
+20 _________ 0 0 0
+21 _________ 0 0 0
+22 _________ 0 0 0
+23 _________ 0 0 0
+24 _________ 0 0 0
+25 _________ 0 0 0
+26 _________ 0 0 0
+27 _________ 0 0 0
+28 _________ 0 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0

@@ -1,0 +1,853 @@
+;{CR10X}
+;
+;-------------------------------------------------------------
+; Program: awsgos96.csi (cr10x) for the Swiss Camp
+; to be loaded to Swiss Camp aws in 1999.
+; Program written by: Ted DeMaria; Jason Box; and Dan Anderson. 4-96
+; Modified by K. Steffen 5-21-97
+; Modified by K. Steffen 6-5-98 for THR
+; Modified by J. Box and N. Cullen 4-1-99
+; --------------------------------------------------------------
+
+
+*Table 1 Program
+  01: 15        Execution Interval (seconds)
+
+1:  Set Port(s) (P20)
+ 1: 8079     C8..C5 = input/low/output/nc
+ 2: 9933     C4,C3,C2,C1 Options
+; Configure control ports so that 1 and 2 are
+; milisecond pulses
+
+2:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 3        ñ 25 mV Slow Range
+ 3: 6        DIFF Channel
+ 4: 9        Loc [ UV        ]
+ 5: 1.0      Mult
+ 6: 0.0      Offset
+; UV meas (DIFF)
+
+3:  Do (P86)
+ 1: 42       Set Port 2 High
+; send voltage from control port 2 to multiplexer
+; to turn on multiplexer
+
+4:  Full Bridge (P6)
+ 1: 1        Reps
+ 2: 22       ñ 7.5 mV 60 Hz Rejection Range
+ 3: 1        DIFF Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 350      mV Excitation
+ 6: 1        Loc [ full_brg  ]
+ 7: -.001    Mult
+ 8: .09707   Offset
+; measures the output of the Full Bridge
+; -> (internal multiplexer reference temperature signal)
+
+5:  BR Transform Rf[X/(1-X)] (P59)
+ 1: 1        Reps
+ 2: 1        Loc [ full_brg  ]
+ 3: 10.025   Multiplier (Rf)
+; Find the resistance of the reference temperature probe
+
+6:  Temperature RTD (P16)
+ 1: 1        Reps
+ 2: 1        R/RO Loc [ full_brg  ]
+ 3: 1        Loc [ full_brg  ]
+ 4: 1        Mult
+ 5: 0.0000   Offset
+; calculate the reference temperature
+
+7:  Do (P86)
+ 1: 71       Pulse Port 1
+; send voltage from control port 1 to multiplexer
+
+8:  Do (P86)
+ 1: 71       Pulse Port 1
+; same as above, must do 2 x to step forward one
+; multiplexer input channel.
+
+9:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 4        ñ 250 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2     -- Loc [ net_rad   ]
+ 5: 1        Mult
+ 6: 0        Offset
+; Net Radiometer
+
+10:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 2        Loop Count
+
+11:  Do (P86)
+ 1: 71       Pulse Port 1
+; send voltage from control port 1 to multiplexer
+; moves measurement to the next mplexer port
+
+12:  Do (P86)
+ 1: 71       Pulse Port 1
+; same as above, must do it twice
+
+13:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 4        ñ 250 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 3     -- Loc [ THR_up    ]
+ 5: 1        Mult
+ 6: 0        Offset
+; THR Thermopile upward-looking
+
+14:  End (P95)
+; end of THR loop (up and down)
+
+15:  Do (P86)
+ 1: 71       Pulse Port 1
+
+16:  Do (P86)
+ 1: 71       Pulse Port 1
+
+17:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 5     -- Loc [ THR_res   ]
+ 5: 1.0      Mult
+ 6: 0.0      Offset
+
+; THR precision resistor
+
+18:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 2        Loop Count
+
+19:  Do (P86)
+ 1: 71       Pulse Port 1
+
+20:  Do (P86)
+ 1: 71       Pulse Port 1
+
+21:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 1        ñ 2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 6     -- Loc [ THR_T_up  ]
+ 5: 1.0      Mult
+ 6: 0.0      Offset
+; THR Dome Temperature
+
+22:  End (P95)
+; end of THR loop (Dome temp up and down)
+
+23:  Do (P86)
+ 1: 71       Pulse Port 1
+
+24:  Do (P86)
+ 1: 71       Pulse Port 1
+
+25:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 1        ñ 2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 8     -- Loc [ L_in      ]
+ 5: 1.0      Mult
+ 6: 0.0      Offset
+;L_in
+
+26:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 2        Loop Count
+; begin air temperature thermocouple multiplexer loop
+
+27:  Do (P86)
+ 1: 71       Pulse Port 1
+
+28:  Do (P86)
+ 1: 71       Pulse Port 1
+
+29:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 01       ñ 2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 1        Ref Temp Loc [ full_brg  ]
+ 6: 10    -- Loc [ tc_air1   ]
+ 7: 1        Mult
+ 8: 0        Offset
+; 2 x temperature mesurement
+
+30:  End (P95)
+; end air temperature thermocouple multiplexer loop
+
+31:  Do (P86)
+ 1: 52       Set Port 2 Low
+; turns multiplexer off, the remaining measurements
+; will occur on the cr10 and not on the multiplexer.
+
+32:  If time is (P92)
+ 1: 55       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 30       Then Do
+
+33:  Do (P86)
+ 1: 42       Set Port 2 High
+; send voltage from control port 2 to multiplexer
+; to turn on multiplexer
+
+34:  Full Bridge (P6)
+ 1: 1        Reps
+ 2: 22       ñ 7.5 mV 60 Hz Rejection Range
+ 3: 1        DIFF Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 350      mV Excitation
+ 6: 1        Loc [ full_brg  ]
+ 7: -.001    Mult
+ 8: .09707   Offset
+; measures the output of the Full Bridge
+; -> (internal multiplexer reference temperature signal)
+
+35:  BR Transform Rf[X/(1-X)] (P59)
+ 1: 1        Reps
+ 2: 1        Loc [ full_brg  ]
+ 3: 10.025   Multiplier (Rf)
+; Find the resistance of the reference temperature probe
+
+36:  Temperature RTD (P16)
+ 1: 1        Reps
+ 2: 1        R/RO Loc [ full_brg  ]
+ 3: 1        Loc [ full_brg  ]
+ 4: 1        Mult
+ 5: 0.0000   Offset
+; calculate the reference temperature
+
+37:  Do (P86)
+ 1: 71       Pulse Port 1
+38:  Do (P86)
+ 1: 71       Pulse Port 1
+
+39:  Do (P86)
+ 1: 71       Pulse Port 1
+40:  Do (P86)
+ 1: 71       Pulse Port 1
+
+41:  Do (P86)
+ 1: 71       Pulse Port 1
+42:  Do (P86)
+ 1: 71       Pulse Port 1
+
+43:  Do (P86)
+ 1: 71       Pulse Port 1
+44:  Do (P86)
+ 1: 71       Pulse Port 1
+
+45:  Do (P86)
+ 1: 71       Pulse Port 1
+46:  Do (P86)
+ 1: 71       Pulse Port 1
+
+47:  Do (P86)
+ 1: 71       Pulse Port 1
+48:  Do (P86)
+ 1: 71       Pulse Port 1
+
+49:  Do (P86)
+ 1: 71       Pulse Port 1
+50:  Do (P86)
+ 1: 71       Pulse Port 1
+
+51:  Do (P86)
+ 1: 71       Pulse Port 1
+52:  Do (P86)
+ 1: 71       Pulse Port 1
+
+53:  Do (P86)
+ 1: 71       Pulse Port 1
+54:  Do (P86)
+ 1: 71       Pulse Port 1
+
+55:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 14       Loop Count
+; begin thermocople multiplexer measurement loop
+
+56:  Do (P86)
+ 1: 71       Pulse Port 1
+; send voltage from control port 1 to multiplexer
+
+57:  Do (P86)
+ 1: 71       Pulse Port 1
+; same as above, must do it twice
+
+58:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 01       ñ 2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 1        Type T (Copper-Constantan)
+ 5: 1        Ref Temp Loc [ full_brg  ]
+ 6: 12    -- Loc [ tc1       ]
+ 7: 1        Mult
+ 8: 0        Offset
+; Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+; Snow TC (4x)
+
+59:  End (P95)
+; end loop of 10, thermocouple measurement loop.
+
+60:  Do (P86)
+ 1: 52       Set Port 2 Low
+; turns multiplexer off, the remaining measurements
+; will occur on the cr10 and not on the multiplexer.
+
+61:  End (P95)
+; End of hourly ice and snow TC meas. 14x
+
+62:  If time is (P92)
+ 1: 00       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 10       Set Output Flag High
+; send data to final storage each hour
+; xx parameters are to be measured and averaged,
+; xx + JD and time = xx, the maximum
+; number of parameters GOES will transmit.
+
+63:  Set Active Storage Area (P80)
+ 1: 01       Final Storage Area 1
+ 2: 11       Array ID or Loc [ _________ ]
+; set station array id number, 01 = swiss camp,
+; 02 = crawford point, ... in the order that they
+; were installed.  So, field season 1996, first AWS
+; will be number 06.
+; set array id = station number plus block number
+; array id # = station number (06) + block number (2) -> id#=062
+
+64:  Real Time (P77)
+ 1: 0110     Day,Hour/Minute
+
+65:  Average (P71)
+ 1: 8        Reps
+ 2: 2        Loc [ net_rad   ]
+; net, THR_up, THR_do, THR_res, THR_T_up, THR_T_do, L_in, UV: loc 2-9
+
+66:  Standard Deviation (P82)
+ 1: 2        Reps
+ 2: 8        Sample Loc [ L_in      ]
+;L_in and UV radiation
+
+67:  Average (P71)
+ 1: 2        Reps
+ 2: 10       Loc [ tc_air1   ]
+; 2 x air temperature thermocouple averages, loc 19-20
+
+68:  Average (P71)
+ 1: 2        Reps
+ 2: 26       Loc [ tair_1    ]
+; CS-500 air temperature measurements 1 and 2
+
+69:  Average (P71)
+ 1: 4        Reps
+ 2: 28       Loc [ rh_1      ]
+; 2 x cs-500 relative humidity averages
+; 2 x wind speed averages
+
+70:  Average (P71)
+ 1: 2        Reps
+ 2: 32       Loc [ U_dir1    ]
+; 2 x wind direction averages
+
+71:  Average (P71)
+ 1: 1        Reps
+ 2: 34       Loc [ pressure  ]
+; 1 x pressure average, loc 28
+
+72:  Average (P71)
+ 1: 2        Reps
+ 2: 35       Loc [ SD_1      ]
+; 2 x snow height averages, loc 29-30
+
+73:  Average (P71)
+ 1: 10       Reps
+ 2: 12       Loc [ tc1       ]
+; ice thermocouple measurements tc1 - tc10
+
+74:  Average (P71)
+ 1: 4        Reps
+ 2: 22       Loc [ TC_snow1  ]
+; snow thermocouples TC_snow1 - TC_snow4
+
+75:  Average (P71)
+ 1: 1        Reps
+ 2: 37       Loc [ BATTERY   ]
+
+76:  Serial Out (P96)
+ 1: 71       SM192/SM716/CSM1
+
+77:  If time is (P92)
+ 1: 58       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 30       Then Do
+
+78:  Data Transfer to GOES (P120)
+ 1: 00       Buffer Selection
+ 2: 38       FWD/Ref Power Loc [ Antenna   ]
+
+79:  End (P95)
+; end transmission
+
+
+; ------------------------------------- begin code for GPS clock reset
+80:  If time is (P92)
+ 1: 1410     Minutes (Seconds --) into a
+ 2: 1440     Interval (same units as above)
+ 3: 46       Set Port 6 High
+
+81:  If time is (P92)
+ 1: 1430     Minutes (Seconds --) into a
+ 2: 1440     Interval (same units as above)
+ 3: 56       Set Port 6 Low
+
+82:  If time is (P92)
+ 1: 1425     Minutes (Seconds --) into a
+ 2: 1440     Interval (same units as above)
+ 3: 30       Then Do
+
+83:  Z=F (P30)
+ 1: 1        F
+ 2: 0        Exponent of 10
+ 3: 39       Z Loc [ flag      ]
+
+84:  End (P95)
+; set flag hi
+
+85:  If time is (P92)
+ 1: 1430     Minutes (Seconds --) into a
+ 2: 1440     Interval (same units as above)
+ 3: 30       Then Do
+
+86:  Z=F (P30)
+ 1: 0        F
+ 2: 0        Exponent of 10
+ 3: 39       Z Loc [ flag      ]
+
+87:  End (P95)
+
+88:  If (X<=>F) (P89)
+ 1: 39       X Loc [ flag      ]
+ 2: 1        =
+ 3: 1        F
+ 4: 30       Then Do
+
+89:  Port Serial I/O (P15)
+ 1: 1        Reps
+ 2: 21       Binary/RS-232, 1200 Baud
+ 3: 0        Wait for Clear to Send
+ 4: 7        First Control Port
+ 5: 59       Output Loc [ in17      ]
+ 6: 0        No. of Locs to Send
+ 7: 13       Termination Character
+ 8: 40       Maximum Characters
+ 9: 400      CTS/Input Wait
+10: 43       Loc [ in1       ]
+11: 1.0      Mult
+12: 0.0      Offset
+
+90:  If (X<=>F) (P89)
+ 1: 43       X Loc [ in1       ]
+ 2: 1        =
+ 3: 36       F
+ 4: 30       Then Do
+
+91:  If (X<=>F) (P89)
+ 1: 82       X Loc [ in40      ]
+ 2: 1        =
+ 3: 49       F
+ 4: 30       Then Do
+
+92:  Z=X+F (P34)
+ 1: 50       X Loc [ in8       ]
+ 2: -48      F
+ 3: 40       Z Loc [ hour      ]
+
+93:  Z=X*F (P37)
+ 1: 40       X Loc [ hour      ]
+ 2: 10       F
+ 3: 40       Z Loc [ hour      ]
+
+94:  Z=X+Y (P33)
+ 1: 40       X Loc [ hour      ]
+ 2: 51       Y Loc [ in9       ]
+ 3: 40       Z Loc [ hour      ]
+
+95:  Z=X+F (P34)
+ 1: 40       X Loc [ hour      ]
+ 2: -48      F
+ 3: 40       Z Loc [ hour      ]
+
+; begin loop if GPS hour = 23.
+
+; minutes
+96:  Z=X+F (P34)
+ 1: 52       X Loc [ in10      ]
+ 2: -48      F
+ 3: 41       Z Loc [ min       ]
+
+97:  Z=X*F (P37)
+ 1: 41       X Loc [ min       ]
+ 2: 10       F
+ 3: 41       Z Loc [ min       ]
+
+98:  Z=X+Y (P33)
+ 1: 41       X Loc [ min       ]
+ 2: 53       Y Loc [ in11      ]
+ 3: 41       Z Loc [ min       ]
+
+99:  Z=X+F (P34)
+ 1: 41       X Loc [ min       ]
+ 2: -48      F
+ 3: 41       Z Loc [ min       ]
+;seconds
+100:  Z=X+F (P34)
+ 1: 54       X Loc [ in12      ]
+ 2: -48      F
+ 3: 42       Z Loc [ sec       ]
+
+101:  Z=X*F (P37)
+ 1: 42       X Loc [ sec       ]
+ 2: 10       F
+ 3: 42       Z Loc [ sec       ]
+
+102:  Z=X+Y (P33)
+ 1: 42       X Loc [ sec       ]
+ 2: 55       Y Loc [ in13      ]
+ 3: 42       Z Loc [ sec       ]
+
+103:  Z=X+F (P34)
+ 1: 42       X Loc [ sec       ]
+ 2: -48      F
+ 3: 42       Z Loc [ sec       ]
+
+; begin hour is 23 , set logger clk, and set flag low.
+; above comment only valid if 23 hour filter is added.
+
+; begin flag is definately 1
+104:  If (X<=>F) (P89)
+ 1: 39       X Loc [ flag      ]
+ 2: 1        =
+ 3: 1        F
+ 4: 30       Then Do
+
+105:  Set Real Time Clock (P114)
+ 1: 0        Set Hr,Min,Sec from locations
+ 2: 40       Loc [ hour      ]
+
+106:  Z=F (P30)
+ 1: 0        F
+ 2: 0        Exponent of 10
+ 3: 39       Z Loc [ flag      ]
+
+107:  Do (P86)
+ 1: 56       Set Port 6 Low
+
+
+108:  Z=F (P30)
+ 1: 0        F
+ 2: 0        Exponent of 10
+ 3: 43       Z Loc [ in1       ]
+
+
+109:  Z=F (P30)
+ 1: 0        F
+ 2: 0        Exponent of 10
+ 3: 82       Z Loc [ in40      ]
+
+; end loop if hour is 23.
+
+110:  End (P95)
+; end flag is definately 1
+
+; end hour is 23 , set logger clk, and set flag low.
+
+111:  End (P95)
+; status good
+
+112:  End (P95)
+; dollar sign / gps-logger in sink
+
+113:  End (P95)
+; end loop for flag hi
+
+
+114:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 1440     Interval (same units as above)
+ 3: 30       Then Do
+
+; below, program TGT1 using freq code for Swiss Camp 80300118
+
+115:  Automatic Setup of TGT1 (P123)
+ 1: 8        Address
+ 2: 0        Address
+ 3: 3        Address
+ 4: 0        Address
+ 5: 0        Address
+ 6: 1        Address
+ 7: 1        Address
+ 8: 8        Address
+ 9: 81       Assigned Uplink Channel
+10: 81       Random Uplink Channel
+11: 0        Self-timed Interval Days
+12: 1        Self-timed Interval Hours
+13: 0        Self-timed Interval Minutes
+14: 0        Self-timed Interval Seconds
+15: 0        Random Interval Hours
+16: 0        Random Interval Minutes
+17: 0        Random Interval Seconds
+18: 0        Initial Self-timed Hours
+19: 58       Initial Self-timed Minutes
+20: 0        Initial Self-timed Seconds
+21: 0        One Minute Window
+22: 0        Short Preamble
+23: 1        Self-Timed Buffer
+
+; 58 minutes into hour is specific to our 'swiss camp' site.
+; previously we had a 'frequency correlation' of 81, that may be the
+; 'Uplink Channel'
+
+116:  End (P95)
+; end auto TGT1 configuration loop
+; ------------------------------------- end code for GPS clock reset
+
+
+
+*Table 2 Program
+  02: 60        Execution Interval (seconds)
+
+1:  Do (P86)
+ 1: 43       Set Port 3 High
+; voltage control port 3, jumped to switched 12V
+; for the purpose of switching on 12V to cs500
+
+2:  Excitation with Delay (P22)
+ 1: 3        Ex Channel
+ 2: 0        Delay W/Ex (units = 0.01 sec)
+ 3: 10       Delay After Ex (units = 0.01 sec)
+ 4: 0        mV Excitation
+; this only makes a delay, there is no excitation
+
+3:  Volts (SE) (P1)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 3        SE Channel
+ 4: 26       Loc [ tair_1    ]
+ 5: .1       Mult
+ 6: -40      Offset
+; temperature cs500 probe x 2
+; this is a single ended measurement so it is InChan 3
+; removed 60 Hz rejection range since there is no 60 Hz
+; power tools creating electrical noise.
+
+4:  Volts (SE) (P1)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 5        SE Channel
+ 4: 28       Loc [ rh_1      ]
+ 5: .1       Mult
+ 6: 0        Offset
+; humidity cs500 probe x 2
+
+5:  Do (P86)
+ 1: 53       Set Port 3 Low
+; Voltage control port 3 turned off, switched 12V
+; to the cs-500 is turned off.
+
+6:  Pulse (P3)
+ 1: 2        Reps
+ 2: 1        Pulse Input Channel
+ 3: 21       Low Level AC, Output Hz
+ 4: 30       Loc [ U1        ]
+ 5: 0.098    Mult
+ 6: 0.0      Offset
+; Met One Wind Speed -> m/s
+
+7:  Excite-Delay (SE) (P4)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 7        SE Channel
+ 4: 3        Excite all reps w/Exchan 3
+ 5: 2        Delay (units 0.01 sec)
+ 6: 2500     mV Excitation
+ 7: 32       Loc [ U_dir1    ]
+ 8: 0.142    Mult
+ 9: 0.0      Offset
+; Met One wind direction measurement.
+
+; Following a loop of the barometer measurement that is
+; performed for the last minute of each hour.
+; The pressure sensor has a range from 600 - 1060 hPa,mb
+; -> multiplier = sensor range (460)/mV Excitation(2500)
+; = 0.184
+
+8:  If time is (P92)
+ 1: 59       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 30       Then Do
+
+9:  Do (P86)
+ 1: 47       Set Port 7 High
+
+10:  End (P95)
+
+11:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 30       Then Do
+
+12:  Volt (SE) (P1)
+ 1: 1        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 9        SE Channel
+ 4: 34       Loc [ pressure  ]
+ 5: .184     Mult
+ 6: 200      Offset
+
+; CS105 Vaisala Barometer
+; another 400 has to be added to pressure value to yield
+; mb this can be done in post processing.
+
+13:  Batt Voltage (P10)
+ 1: 37       Loc [ BATTERY   ]
+
+14:  Do (P86)
+ 1: 57       Set Port 7 Low
+
+15:  End (P95)
+; end pressure sensor measurement last minute of each hr
+
+; Following is the snow height measurement which
+; occurs each 10 minutes, nested in a 15 second
+; measurement interval.
+
+16:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 10       Interval (same units as above)
+ 3: 30       Then Do
+
+17:  SDI-12 Recorder (OS10 1.1) (P105)
+ 1: 0        SDI-12 Address
+ 2: 0        Start Measurement (aM0!)
+ 3: 4        Port
+ 4: 35       Loc [ SD_1      ]
+ 5: 1        Mult
+ 6: 0        Offset
+; sonic snow height sensor 1
+
+18:  SDI-12 Recorder (OS10 1.1) (P105)
+ 1: 0        SDI-12 Address
+ 2: 0        Start Measurement (aM0!)
+ 3: 5        Port
+ 4: 36       Loc [ SD_2      ]
+ 5: 1        Mult
+ 6: 0        Offset
+; sonic snow height sensor 2
+
+19:  End (P95)
+
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 full_brg  1 6 6
+2 net_rad   1 1 1
+3 THR_up    1 1 1
+4 THR_down  0 0 0
+5 THR_res   1 1 1
+6 THR_T_up  1 1 1
+7 THR_T_dn  0 0 0
+8 L_in      1 2 1
+9 UV        1 0 1
+10 tc_air1   1 3 1
+11 tc_air2   0 0 0
+12 tc1       1 3 1
+13 tc2       0 0 0
+14 tc3       0 0 0
+15 tc4       0 0 0
+16 tc5       0 0 0
+17 tc6       0 0 0
+18 tc7       0 0 0
+19 tc8       0 0 0
+20 tc9       1 2 0
+21 tc10      0 0 0
+22 TC_snow1  1 1 0
+23 TC_snow2  0 0 0
+24 TC_snow3  0 0 0
+25 TC_snow4  0 0 0
+26 tair_1    5 2 1
+27 tair_2    17 2 1
+28 rh_1      5 2 1
+29 rh_2      17 2 1
+30 U1        5 0 1
+31 U2        17 0 1
+32 U_dir1    1 2 1
+33 U_dir2    1 1 0
+34 pressure  1 1 1
+35 SD_1      1 1 1
+36 SD_2      1 0 1
+37 BATTERY   1 1 1
+38 Antenna   1 0 1
+39 flag      1 2 3
+40 hour      1 4 4
+41 min       1 4 4
+42 sec       1 4 4
+43 in1       1 1 2
+44 in2       1 2 0
+45 in3       0 0 0
+46 in4       0 0 0
+47 in5       0 0 0
+48 in6       0 0 0
+49 in7       0 0 0
+50 in8       1 1 0
+51 in9       1 1 0
+52 in10      1 1 0
+53 in11      1 1 0
+54 in12      1 1 0
+55 in13      1 1 0
+56 in14      0 0 0
+57 in15      0 0 0
+58 in16      1 1 0
+59 in17      1 1 0
+60 in18      0 0 0
+61 in19      1 1 0
+62 in20      1 1 0
+63 in21      1 1 0
+64 in22      0 0 0
+65 in23      0 0 0
+66 in24      0 0 0
+67 in25      0 0 0
+68 in26      0 0 0
+69 in27      0 0 0
+70 in28      0 0 0
+71 in29      0 0 0
+72 in30      0 0 0
+73 in31      0 0 0
+74 in32      0 0 0
+75 in33      0 0 0
+76 in34      0 0 0
+77 in35      0 0 0
+78 in36      0 0 0
+79 in37      0 0 0
+80 in38      0 0 0
+81 in39      0 0 0
+82 in40      1 1 1
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0
+-CR10X ID-
+0
+-CR10X Power Up-
+3

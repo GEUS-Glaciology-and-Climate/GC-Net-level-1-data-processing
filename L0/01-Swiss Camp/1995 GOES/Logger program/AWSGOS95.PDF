@@ -1,0 +1,396 @@
+
+
+
+      Program: awsarg95
+      Flag Usage:
+      Input Channel Usage:
+      Excitation Channel Usage:
+      Control Port Usage:
+      Pulse Input Channel Usage:
+      Output Array Definitions:
+
+
+      *     1       Table 1 Programs 
+        01: 15      Sec. Execution Interval 
+      15 second suggested execution interval
+
+      01:  P20      Set Port(s) 
+        01: 9999    C8..C5=nc/nc/nc/nc 
+        02: 9933    C4..C1=nc/nc/1ms/1ms 
+      Configure control ports so that 1 and 2 are
+      milisecond pulses
+
+      02:  P86      Do 
+        01: 42      Set high Port 2 
+      send voltage from control port 2 to multiplexer
+      to turn on the multiplexer
+
+      03:  P6       Full Bridge 
+        01: 1       Rep 
+        02: 22      7.5 mV 60 Hz rejection Range 
+        03: 1       IN Chan 
+        04: 1       Excite all reps w/EXchan 1 
+        05: 350     mV Excitation 
+        06: 1       Loc : 
+        07: -.001   Mult 
+        08: .09707  Offset 
+      measures the output of the Full Bridge
+      (reference temperature)
+
+      04:  P59      BR Transform Rf[X/(1-X)] 
+        01: 1       Rep 
+        02: 1       Loc : 
+        03: 10.025  Multiplier (Rf) 
+      Find the resistance of the reference temp
+      probe
+
+      05:  P16      Temperature RTD 
+        01: 1       Rep 
+        02: 1       R/Ro Loc 
+        03: 1       Loc : 
+        04: 1       Mult 
+        05: 0.0000  Offset 
+      calculate the reference temperature
+
+      06:  P87      Beginning of Loop 
+        01: 0       Delay 
+        02: 2       Loop Count 
+      begin multiplexer measurement loop
+
+      Page 2   Table 1
+
+
+      07:  P86      Do 
+        01: 71      Pulse Port 1 
+      send voltage from control port 1 to multiplexer
+
+      08:  P86      Do 
+        01: 71      Pulse Port 1 
+      same as above, must do 2 x
+
+      09:  P2       Volt (DIFF) 
+        01: 1       Rep 
+        02: 3       25 mV slow Range 
+        03: 1       IN Chan 
+        04: 2--     Loc : 
+        05: 1       Mult 
+        06: 0       Offset 
+      Li Cor Pyranometer
+
+      10:  P95      End 
+      end Li Cor multiplexer loop
+
+      11:  P87      Beginning of Loop 
+        01: 0       Delay 
+        02: 1       Loop Count 
+      begin multiplexer measurement loop
+
+      12:  P86      Do 
+        01: 71      Pulse Port 1 
+      send voltage from control port 1 to multiplexer
+      moves measurement to the next mplexer port
+
+      13:  P86      Do 
+        01: 71      Pulse Port 1 
+      same as above, must do it twice
+
+      14:  P2       Volt (DIFF) 
+        01: 1       Rep 
+        02: 4       250 mV slow Range 
+        03: 1       IN Chan 
+        04: 4--     Loc : 
+        05: 1       Mult 
+        06: 0       Offset 
+      Net Radiometer
+
+      15:  P95      End 
+      end net radiometer multiplexer loop
+
+      16:  P87      Beginning of Loop 
+        01: 0       Delay 
+        02: 10      Loop Count 
+      begin multiplexer measurement loop
+
+      17:  P86      Do 
+        01: 71      Pulse Port 1 
+      send voltage from control port 1 to multiplexer
+
+      Page 3   Table 1
+
+
+      18:  P86      Do 
+        01: 71      Pulse Port 1 
+      same as above, must do it twice
+
+      19:  P14      Thermocouple Temp (DIFF) 
+        01: 1       Rep 
+        02: 21      2.5 mV 60 Hz rejection Range 
+        03: 1       IN Chan 
+        04: 1       Type T (Copper-Constantan) 
+        05: 1       Ref Temp Loc 
+        06: 20      Loc : 
+        07: 1       Mult 
+        08: 0       Offset 
+      Sub-surface Ice Thermocouple cable (1 m,10 m)
+
+      20:  P95      End 
+      end thermocouple multiplexer loop
+
+      21:  P86      Do 
+        01: 52      Set low Port 2 
+      turns multiplexer off
+
+      22:  P92      If time is 
+        01: 58      minutes into a 
+        02: 60      minute interval 
+        03: 10      Set high Flag 0 (output) 
+      send data to final storage each hour 
+
+      23:  P78      Resolution 
+        01: 0       Low Resolution 
+
+      24:  P77      Real Time 
+        01: 0110    Day,Hour-Minute 
+
+      25:  P71      Average 
+        01: 12      Reps 
+        02: 2       Loc 
+      radiation NET temp hum wspeed wdir pres
+
+      26:  P71      Average 
+        01: 1       Rep 
+        02: 15      Loc 
+      Snow depth 1
+
+      27:  P71      Average 
+        01: 1       Rep 
+        02: 18      Loc 
+      Snow depth 2
+
+      28:  P71      Average 
+        01: 10      Reps 
+        02: 20      Loc 
+      thermocouples
+
+      Page 4   Table 1
+
+
+      29:  P92      If time is 
+        01: 58      minutes into a 
+        02: 60      minute interval 
+        03: 30      Then Do 
+
+      30:  P99      User Special
+        01: 0       
+        02: 0       
+
+      31:  P95      End 
+
+      32:  P92      If time is 
+        01: 58      minutes into a 
+        02: 60      minute interval 
+        03: 30      Then Do 
+
+      33:  P96      Serial Output 
+        01: 71      SM192/SM716 
+
+      34:  P95      End 
+
+      35:  P        End Table 1 
+
+
+      *     2       Table 2 Programs 
+        01: 600     Sec. Execution Interval 
+      600 second suggested sampling interval
+
+      01:  P86      Do 
+        01: 43      Set high Port 3 
+
+      02:  P22      Excitation with Delay 
+        01: 3       EX Chan 
+        02: 0       Delay w/EX (units=.01sec) 
+        03: 10      Delay after EX (units=.01sec) 
+        04: 0       mV Excitation 
+      this just makes a delay, there is no excitation
+
+      03:  P1       Volt (SE) 
+        01: 2       Reps 
+        02: 25      2500 mV 60 Hz rejection Range 
+        03: 3       IN Chan 
+        04: 5       Loc : 
+        05: .1      Mult 
+        06: -40     Offset 
+      temperature cs500 probe x 2
+
+      04:  P1       Volt (SE) 
+        01: 2       Reps 
+        02: 25      2500 mV 60 Hz rejection Range 
+        03: 5       IN Chan 
+        04: 7       Loc : 
+        05: .1      Mult 
+        06: 0       Offset 
+      humidity cs500 probe x 2
+
+      Page 5   Table 2
+
+
+      05:  P86      Do 
+        01: 53      Set low Port 3 
+      set port 3 low
+
+      06:  P3       Pulse 
+        01: 2       Reps 
+        02: 1       Pulse Input Chan 
+        03: 21      Low level AC; Output Hz. 
+        04: 9       Loc : 
+        05: 0.0980  Mult 
+        06: 0       Offset 
+      Young Wind Monitor x 2
+
+      07:  P4       Excite,Delay,Volt(SE) 
+        01: 2       Reps 
+        02: 5       2500 mV slow Range 
+        03: 7       IN Chan 
+        04: 2       Excite all reps w/EXchan 2 
+        05: 2       Delay (units .01sec) 
+        06: 2500    mV Excitation 
+        07: 11      Loc : 
+        08: 0.142   Mult 
+        09: 0       Offset 
+      Young Wind Direction x 2
+
+      08:  P4       Excite,Delay,Volt(SE) 
+        01: 1       Rep 
+        02: 5       2500 mV slow Range 
+        03: 9       IN Chan 
+        04: 2       Excite all reps w/EXchan 2 
+        05: 300     Delay (units .01sec) 
+        06: 2500    mV Excitation 
+        07: 13      Loc : 
+        08: 0.184   Mult 
+        09: 600     Offset 
+      Vaisala Barometer
+      This sensor has a range from 600 - 1060 hPa
+      Multiplier = sensor range (460)/Mv Excitation (2500)
+      = 0.184
+      We may want to make the mult = 1.84 to get another
+      decimal place using low resolution.
+
+      09:  P34      Z=X+F 
+        01: 5       X Loc 
+        02: 273.15  F 
+        03: 14      Z Loc : 
+      get reference temperature from location 7
+      convert to Kelvin degrees
+
+      Page 6   Table 2
+
+
+      10:  P105     SDI-12 Recorder (OS10 1.1) 
+        01: 0       Address (0-9) 
+        02: 0       Command (0=Init. Measurement) 
+        03: 4       Port (1-8) 
+        04: 15      Loc : 
+        05: -1      Mult. 
+        06: 0       Offset 
+      activate sonic snow depth height sensor.
+
+      11:  P30      Z=F 
+        01: 273.15  F 
+        02: 0       Exponent of 10 
+        03: 16      Z Loc : 
+      set reference temperature of 0 deg C.
+
+      12:  P38      Z=X/Y 
+        01: 14      X Loc 
+        02: 16      Y Loc 
+        03: 17      Z Loc : 
+      divide real temperature by reference temperature.
+
+      13:  P39      Z=SQRT(X) 
+        01: 17      X Loc 
+        02: 17      Z Loc : 
+      take square root of previous result
+
+      14:  P36      Z=X*Y 
+        01: 15      X Loc 
+        02: 17      Y Loc 
+        03: 15      Z Loc : 
+      multiply snow depth inst. value by prev. #
+      the result will be the vertical distance from the
+      surface to the SR-50 snow depth sensor
+
+      15:  P105     SDI-12 Recorder (OS10 1.1) 
+        01: 1       Address (0-9) 
+        02: 0       Command (0=Init. Measurement) 
+        03: 5       Port (1-8) 
+        04: 18      Loc : 
+        05: 1       Mult. 
+        06: 0       Offset 
+
+      16:  P38      Z=X/Y 
+        01: 14      X Loc 
+        02: 16      Y Loc 
+        03: 19      Z Loc : 
+
+      17:  P39      Z=SQRT(X) 
+        01: 19      X Loc 
+        02: 19      Z Loc : 
+
+      Page 7   Table 2
+
+
+      18:  P36      Z=X*Y 
+        01: 18      X Loc 
+        02: 19      Y Loc 
+        03: 18      Z Loc : 
+
+      19:  P        End Table 2 
+
+
+      *     3       Table 3 Subroutines 
+
+      01:  P        End Table 3 
+
+
+      *     A       Mode 10 Memory Allocation 
+        01: 29      Input Locations 
+        02: 64      Intermediate Locations 
+        03: 0.0000  Final Storage Area 2 
+
+
+      *     C       Mode 12 Security 
+        01: 0000    LOCK 1 
+        02: 0000    LOCK 2 
+        03: 0000    LOCK 3 
+
+      Page 8    Input Location Assignments (with comments):
+
+
+       Key:
+       T=Table Number
+       E=Entry Number
+       L=Location Number
+
+       T:  E:  L:
+       1:  3:  1:  Loc : 
+       1:  4:  1:  Loc : 
+       1:  5:  1:  Loc : 
+       1:  9:  2:  Loc : 
+       1: 14:  4:  Loc : 
+       2:  3:  5:  Loc : 
+       2:  4:  7:  Loc : 
+       2:  6:  9:  Loc : 
+       2:  7: 11:  Loc : 
+       2:  8: 13:  Loc : 
+       2:  9: 14:  Z Loc : 
+       2: 10: 15:  Loc : 
+       2: 14: 15:  Z Loc : 
+       2: 11: 16:  Z Loc : 
+       2: 12: 17:  Z Loc : 
+       2: 13: 17:  Z Loc : 
+       2: 15: 18:  Loc : 
+       2: 18: 18:  Z Loc : 
+       2: 16: 19:  Z Loc : 
+       2: 17: 19:  Z Loc : 
+       1: 19: 20:  Loc : 

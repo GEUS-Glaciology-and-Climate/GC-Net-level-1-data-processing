@@ -1,0 +1,146 @@
+Program Trace Information File for:  SWISS97.CSI
+Date: 5/22/1998
+Time: 04:56:13
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|20 Set Port(s)                  9.5    9.5    9.5      9.5    9.5    9.5
+1|2|2 Volt (Diff)                   9.7   19.2   19.2      9.7   19.2   19.2
+1|3|86 Do                           0.1   19.3   19.3      0.1   19.3   19.3
+1|4|6 Full Bridge                  54.3   73.6   73.6     54.3   73.6   73.6
+1|5|59 BR Transform Rf[X/(1-X)]     3.4   77.0   77.0      3.4   77.0   77.0
+1|6|16 Temperature RTD              3.4   80.4   80.4      3.4   80.4   80.4
+1|7|86 Do                           0.1   80.5   80.5      0.1   80.5   80.5
+1|8|86 Do                           0.1   80.6   80.6      0.1   80.6   80.6
+1|9|2 Volt (Diff)                   9.7   90.3   90.3      9.7   90.3   90.3
+1|10|87 Beginning of Loop           0.2   90.5   90.5      0.2   90.5   90.5
+ Execution times in the loop are calculated for one pass only.
+1|11|86 Do                          0.1   90.6   90.6      0.1   90.6   90.6
+1|12|86 Do                          0.1   90.7   90.7      0.1   90.7   90.7
+1|13|2 Volt (Diff)                  9.7  100.4  100.4      9.7  100.4  100.4
+1|14|95 End                         0.2  100.6  100.6      0.2  100.6  100.6
+1|15|86 Do                          0.1  100.7  100.7      0.1  100.7  100.7
+1|16|86 Do                          0.1  100.8  100.8      0.1  100.8  100.8
+1|17|8 Ex-Del-Diff                  5.2  106.0  106.0      5.2  106.0  106.0
+1|18|87 Beginning of Loop           0.2  106.2  106.2      0.2  106.2  106.2
+ Execution times in the loop are calculated for one pass only.
+1|19|86 Do                          0.1  106.3  106.3      0.1  106.3  106.3
+1|20|86 Do                          0.1  106.4  106.4      0.1  106.4  106.4
+1|21|2 Volt (Diff)                  9.7  116.1  116.1      9.7  116.1  116.1
+1|22|95 End                         0.2  116.3  116.3      0.2  116.3  116.3
+1|23|86 Do                          0.1  116.4  116.4      0.1  116.4  116.4
+1|24|86 Do                          0.1  116.5  116.5      0.1  116.5  116.5
+1|25|2 Volt (Diff)                  9.7  126.2  126.2      9.7  126.2  126.2
+1|26|87 Beginning of Loop           0.2  126.4  126.4      0.2  126.4  126.4
+ Execution times in the loop are calculated for one pass only.
+1|27|86 Do                          0.1  126.5  126.5      0.1  126.5  126.5
+1|28|86 Do                          0.1  126.6  126.6      0.1  126.6  126.6
+1|29|14 Thermocouple Temp (DIFF)   17.2  143.8  143.8     17.2  143.8  143.8
+1|30|95 End                         0.2  144.0  144.0      0.2  144.0  144.0
+1|31|86 Do                          0.1  144.1  144.1      0.1  144.1  144.1
+1|32|92 If time is                  0.3  144.4  144.4      0.3  144.4  144.4
+1|33|86 Do                          0.1  144.5  144.5      0.1  144.5  144.5
+1|34|6 Full Bridge                 54.3  198.8  198.8     54.3  198.8  198.8
+1|35|59 BR Transform Rf[X/(1-X)]    3.4  202.2  202.2      3.4  202.2  202.2
+1|36|16 Temperature RTD             3.4  205.6  205.6      3.4  205.6  205.6
+1|37|86 Do                          0.1  205.7  205.7      0.1  205.7  205.7
+1|38|86 Do                          0.1  205.8  205.8      0.1  205.8  205.8
+1|39|86 Do                          0.1  205.9  205.9      0.1  205.9  205.9
+1|40|86 Do                          0.1  206.0  206.0      0.1  206.0  206.0
+1|41|86 Do                          0.1  206.1  206.1      0.1  206.1  206.1
+1|42|86 Do                          0.1  206.2  206.2      0.1  206.2  206.2
+1|43|86 Do                          0.1  206.3  206.3      0.1  206.3  206.3
+1|44|86 Do                          0.1  206.4  206.4      0.1  206.4  206.4
+1|45|86 Do                          0.1  206.5  206.5      0.1  206.5  206.5
+1|46|86 Do                          0.1  206.6  206.6      0.1  206.6  206.6
+1|47|86 Do                          0.1  206.7  206.7      0.1  206.7  206.7
+1|48|86 Do                          0.1  206.8  206.8      0.1  206.8  206.8
+1|49|86 Do                          0.1  206.9  206.9      0.1  206.9  206.9
+1|50|86 Do                          0.1  207.0  207.0      0.1  207.0  207.0
+1|51|86 Do                          0.1  207.1  207.1      0.1  207.1  207.1
+1|52|86 Do                          0.1  207.2  207.2      0.1  207.2  207.2
+1|53|86 Do                          0.1  207.3  207.3      0.1  207.3  207.3
+1|54|86 Do                          0.1  207.4  207.4      0.1  207.4  207.4
+1|55|87 Beginning of Loop           0.2  207.6  207.6      0.2  207.6  207.6
+ Execution times in the loop are calculated for one pass only.
+1|56|86 Do                          0.1  207.7  207.7      0.1  207.7  207.7
+1|57|86 Do                          0.1  207.8  207.8      0.1  207.8  207.8
+1|58|14 Thermocouple Temp (DIFF)   17.2  225.0  225.0     17.2  225.0  225.0
+1|59|95 End                         0.2  225.2  225.2      0.2  225.2  225.2
+1|60|86 Do                          0.1  225.3  225.3      0.1  225.3  225.3
+1|61|95 End                         0.2  225.5  225.5      0.2  225.5  225.5
+1|62|92 If time is                  0.3  225.8  225.8      0.3  225.8  225.8
+ Output Flag Set @ 162 for Array 11
+1|63|80 Set Active Storage Area     0.2  226.0  226.0      0.2  226.0  226.0
+1|64|77 Real Time                   0.1  226.1  226.1      1.0  227.0  227.0
+ Output Data 2 Values
+1|65|71 Average                     4.9  231.0  231.0     26.1  253.1  253.1
+ Output Data 8 Values
+1|66|82 Standard Deviation          3.8  234.8  234.8      3.8  256.9  256.9
+ Output Data 2 Values
+1|67|71 Average                     1.9  236.7  236.7      8.1  265.0  265.0
+ Output Data 2 Values
+1|68|71 Average                     1.9  238.6  238.6      8.1  273.1  273.1
+ Output Data 2 Values
+1|69|71 Average                     2.9  241.5  241.5     14.1  287.2  287.2
+ Output Data 4 Values
+1|70|71 Average                     1.9  243.4  243.4      8.1  295.3  295.3
+ Output Data 2 Values
+1|71|71 Average                     1.4  244.8  244.8      5.1  300.4  300.4
+ Output Data 1 Values
+1|72|71 Average                     1.9  246.7  246.7      8.1  308.5  308.5
+ Output Data 2 Values
+1|73|71 Average                     5.9  252.6  252.6     32.1  340.6  340.6
+ Output Data 10 Values
+1|74|71 Average                     2.9  255.5  255.5     14.1  354.7  354.7
+ Output Data 4 Values
+1|75|71 Average                     1.4  256.9  256.9      5.1  359.8  359.8
+ Output Data 1 Values
+
+Program Table 1 Execution Interval   15.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec  256.9 w/Output  359.8
+
+Table 1 Estimated Total Final Storage Locations used per day 5904.0
+
+
+--------------- Table 2 ---------------
+2|1|86 Do                           0.1    0.1    0.1      0.1    0.1    0.1
+2|2|22 Excitation with Delay      100.5  100.6  100.6    100.5  100.6  100.6
+2|3|1 Volt (SE)                     7.5  108.1  108.1      7.5  108.1  108.1
+2|4|1 Volt (SE)                     7.5  115.6  115.6      7.5  115.6  115.6
+2|5|86 Do                           0.1  115.7  115.7      0.1  115.7  115.7
+2|6|3 Pulse                         0.9  116.6  116.6      0.9  116.6  116.6
+2|7|4 Excite-Delay (SE)            47.9  164.5  164.5     47.9  164.5  164.5
+2|8|92 If time is                   0.3  164.8  164.8      0.3  164.8  164.8
+2|9|92 If time is                   0.3  165.1  165.1      0.3  165.1  165.1
+2|10|2 Volt (Diff)                  4.9  170.0  170.0      4.9  170.0  170.0
+2|11|10 Batt Voltage                4.8  174.8  174.8      4.8  174.8  174.8
+2|12|86 Do                          0.1  174.9  174.9      0.1  174.9  174.9
+2|13|95 End                         0.2  175.1  175.1      0.2  175.1  175.1
+2|14|92 If time is                  0.3  175.4  175.4      0.3  175.4  175.4
+2|15|105 SDI-12 Recorder (OS10 1.1)     *  175.4  175.4        *  175.4  175.4
+2|16|105 SDI-12 Recorder (OS10 1.1)     *  175.4  175.4        *  175.4  175.4
+2|17|95 End                         0.2  175.6  175.6      0.2  175.6  175.6
+
+Program Table 2 Execution Interval   60.000 Seconds
+
+Table 2 Estimated Total Program Execution Time in msec  175.6 w/Output  175.6
+
+Table 2 Estimated Total Final Storage Locations used per day    0.0
+
+
+
+Estimated Total Final Storage Locations used per day 5904.0
