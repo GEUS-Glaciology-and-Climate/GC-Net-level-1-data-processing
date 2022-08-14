@@ -41,7 +41,7 @@ mpath = "./L0N/"
 # path to save merged nead + c level files
 mcpath = "./L0M/"
 # path to ini/header files for NEAD outputs
-l0inipath = "./L0N_ini/"
+l0inipath = "./L0/L0_ini/"
 
 # create directory to store L0 raw data downloaded from envidat (variable path)
 download_data = 0
@@ -146,12 +146,19 @@ for i in range(len(L0dirs))  :
                 if df1_oldargos_bool:
                     # old argos stations have three different tables per timestamp row (called 046, 048, and 050)
                     # for this condition we read all three tables and horizontally concatenate according to the timestamp index
-                    df1_p3 = pd.read_csv(datadir+df1_table50file,sep=',',dtype=None,header=0,parse_dates=[0],skiprows=[ii for ii in (0,2,3)],na_values=nan_string)
+                    df1_p3 = pd.read_csv(datadir+df1_table50file,sep=',',
+                                         dtype=None, header=0, parse_dates=[0],
+                                         skiprows=[ii for ii in (0,2,3)], 
+                                         na_values=nan_string)
                     # index by the timestamp
                     df1_p3.set_index(df1_p3["TIMESTAMP"])
                     pd.to_datetime(df1_p3.index)
                     # read part 2 of table
-                    df1_p2 = pd.read_csv(datadir+df1_table48file,sep=',',dtype=None,header=0,parse_dates=[0],skiprows=[ii for ii in (0,2,3)],na_values=nan_string)
+                    df1_p2 = pd.read_csv(datadir+df1_table48file,sep=',',
+                                         dtype=None, header=0,
+                                         parse_dates=[0],
+                                         skiprows=[ii for ii in (0,2,3)],
+                                         na_values=nan_string)
                     df1_p2.set_index(df1_p2["TIMESTAMP"])
                     pd.to_datetime(df1_p2.index)
                     df1 = pd.concat([df1_p1,df1_p2,df1_p3],axis=1)
@@ -159,7 +166,10 @@ for i in range(len(L0dirs))  :
     
                 elif df1_argos_bool and not df1_oldargos_bool:
                     # this is the more modern and standard ARGOS station format with 2 Tables per hourly timestamp index (046 and 048)
-                    df1_p2 = pd.read_csv(datadir+df1_table48file,sep=',',dtype=None,header=0,parse_dates=[0],skiprows=[ii for ii in (0,2,3)],na_values=nan_string)
+                    df1_p2 = pd.read_csv(datadir+df1_table48file,sep=',',
+                                         dtype=None, header=0, parse_dates=[0],
+                                         skiprows=[ii for ii in (0,2,3)],
+                                         na_values=nan_string)
                     df1_p2.set_index(df1_p2["TIMESTAMP"])
                     pd.to_datetime(df1_p2.index)
                     df1 = pd.concat([df1_p1,df1_p2],axis=1)
@@ -175,7 +185,10 @@ for i in range(len(L0dirs))  :
                 # if not the first file continue concatonating to the merged file
                 df1=dfm
             #read next file in station directory
-            df2_p1 = pd.read_csv(datadir+L0files[j+1], sep=',', dtype=None, header=0, parse_dates=[0], skiprows=[ii for ii in (0,2,3)], na_values=nan_string, encoding='latin-1')
+            df2_p1 = pd.read_csv(datadir+L0files[j+1], sep=',', dtype=None,
+                                 header=0, parse_dates=[0], 
+                                 skiprows=[ii for ii in (0,2,3)], 
+                                 na_values=nan_string, encoding='latin-1')
             df2_p1.set_index(df2_p1["TIMESTAMP"])
     
             # implement old ARGOS/ARGOS/GOES case structure for the files being merged
@@ -187,12 +200,19 @@ for i in range(len(L0dirs))  :
                 print('Now processing files: ',df1_table50file,' and ',df2_table50file)
                 # old argos stations have three different tables per timestamp row (called 046, 048, and 050)
                 # for this condition we read all three tables and horizontally concatenate according to the timestamp index
-                df2_p3 = pd.read_csv(datadir+df2_table50file,sep=',',dtype=None,header=0,parse_dates=[0],skiprows=[ii for ii in (0,2,3)],na_values=nan_string)
+                df2_p3 = pd.read_csv(datadir+df2_table50file,sep=',',
+                                     dtype=None, header=0, parse_dates=[0],
+                                     skiprows=[ii for ii in (0,2,3)],
+                                     na_values=nan_string)
                 # index by the timestamp
                 df2_p3.set_index(df2_p3["TIMESTAMP"])
                 pd.to_datetime(df2_p3.index)
                 # read part 2 of table
-                df2_p2 = pd.read_csv(datadir+df2_table48file,sep=',',dtype=None,header=0,parse_dates=[0],skiprows=[ii for ii in (0,2,3)],na_values=nan_string)
+                df2_p2 = pd.read_csv(datadir+df2_table48file,
+                                     sep=',', dtype=None, header=0,
+                                     parse_dates=[0],
+                                     skiprows=[ii for ii in (0,2,3)],
+                                     na_values=nan_string)
                 df2_p2.set_index(df2_p2["TIMESTAMP"])
                 pd.to_datetime(df2_p2.index)
                 df2 = pd.concat([df2_p1,df2_p2,df2_p3],axis=1)
@@ -201,7 +221,10 @@ for i in range(len(L0dirs))  :
                 print('and')
                 print('Now processing files: ',df1_table48file,' and ',df2_table48file)
                 # this is the more modern and standard ARGOS station format with 2 Tables per hourly timestamp index (046 and 048)
-                df2_p2 = pd.read_csv(datadir+df2_table48file,sep=',',dtype=None,header=0,parse_dates=[0],skiprows=[ii for ii in (0,2,3)],na_values=nan_string)
+                df2_p2 = pd.read_csv(datadir+df2_table48file,
+                                     sep=',', dtype=None, header=0, parse_dates=[0],
+                                     skiprows=[ii for ii in (0,2,3)],
+                                     na_values=nan_string)
                 df2_p2.set_index(df2_p2["TIMESTAMP"])
                 pd.to_datetime(df2_p2.index)
                 df2 = pd.concat([df2_p1,df2_p2],axis=1)
