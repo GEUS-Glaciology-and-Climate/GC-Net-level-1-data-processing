@@ -37,7 +37,6 @@ import difflib
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
-
 def name_alias(name_in):
 
     promice_names = ['AirTemperature1C', 'AirTemperature2C','AirTemperature3C',
@@ -117,6 +116,11 @@ def load_promice(path_promice):
 
     return df
 
+def Msg(txt):
+    f = open("out/Report.md", "a")
+    print(txt)
+    f.write(txt+'\n')
+
 
 def flag_data(df, site, var_list = ['all']):
     '''
@@ -133,9 +137,10 @@ def flag_data(df, site, var_list = ['all']):
     OUTPUTS:
         promice_data: Dataframe containing PROMICE data for the desired settings [DataFrame]
     '''
+
     df_out = df.copy()
     if not os.path.isfile('metadata/flags/'+site+'.csv'):
-        print('No erroneous data listed for '+site)
+        Msg('No erroneous data listed for '+site)
         return df
 
     flag_data = pd.read_csv('metadata/flags/'+site+'.csv', comment='#')
@@ -149,10 +154,10 @@ def flag_data(df, site, var_list = ['all']):
     if var_list[0]=='all':
         var_list =  np.unique(flag_data.variable)
 
-    print('Flagging data:')
+    Msg('Flagging data:')
     for var in var_list:
         if (var not in df_out.columns):
-            print('Warning: '+var+' not found')
+            Msg('Warning: '+var+' not found')
             continue
 
         if var+'_qc' not in df_out.columns:
@@ -160,18 +165,18 @@ def flag_data(df, site, var_list = ['all']):
 
         # df_out.loc[np.logical_and(np.isnan(df_out[var]), df_out[var+'_qc'] == 'OK'), var+'_qc'] = 'NAN'
 
-        print('|start time|end time|variable|')
-        print('|-|-|-|')
+        Msg('|start time|end time|variable|')
+        Msg('|-|-|-|')
         for t0, t1,flag in zip(pd.to_datetime(flag_data.loc[flag_data.variable==var].t0),
                                pd.to_datetime(flag_data.loc[flag_data.variable==var].t1),
                                flag_data.loc[flag_data.variable==var].flag):
-            print('|'+str(t0) +'|'+ str(t1)+'|'+var+'|')
+            Msg('|'+str(t0) +'|'+ str(t1)+'|'+var+'|')
 
             df_out.loc[t0:t1, var+'_qc'] = flag
 
-        print(' ')
-        print('![Erroneous data at '+ site+'](../figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var+'_data_flagging.png)')
-        print(' ')
+        Msg(' ')
+        Msg('![Erroneous data at '+ site+'](../figures/L1_data_treatment/'+site.replace(' ','_')+'_'+var+'_data_flagging.png)')
+        Msg(' ')
 
     return df_out
 
@@ -213,7 +218,7 @@ def plot_flagged_data(df, site, tag=''):
                         try:
                             df.loc[df[var]==flag, var[:-3]].plot(marker='o',linestyle='none', label=flag)
                         except:
-                            print('Could not plot flag: ',flag)
+                            Msg('Could not plot flag: ',flag)
                 plt.title(site)
                 plt.xlabel('Year')
                 plt.ylabel(var[:-3])
@@ -241,7 +246,7 @@ import pytz
 def adjust_data(df, site, var_list = [], skip_var = []):
     df_out = df.copy()
     if not os.path.isfile('metadata/adjustments/'+site+'.csv'):
-        print('No data to fix at '+site)
+        Msg('No data to fix at '+site)
         return df_out
 
     adj_info = pd.read_csv('metadata/adjustments/'+site+'.csv', comment='#', skipinitialspace=True)
@@ -284,9 +289,9 @@ def adjust_data(df, site, var_list = [], skip_var = []):
             ('_std' not in var) & \
             ('_adj_flag' not in var) & \
             ('_min' not in var):
-            print('### Adjusting '+var)
-            print('|start time|end time|operation|value|number of removed samples|')
-            print('|-|-|-|-|-|')
+            Msg('### Adjusting '+var)
+            Msg('|start time|end time|operation|value|number of removed samples|')
+            Msg('|-|-|-|-|-|')
 
         for t0, t1, func, val in zip(adj_info.loc[var].t0,
                                      adj_info.loc[var].t1,
@@ -300,7 +305,7 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                 nan_count_1 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
 
             if t1 < t0:
-                print('Dates in wrong order')
+                Msg('Dates in wrong order')
 
             if func == 'add':
                 df_out.loc[t0:t1,var] = df_out.loc[t0:t1,var].values + val
@@ -435,7 +440,7 @@ def adjust_data(df, site, var_list = [], skip_var = []):
                 ('_adj_flag' not in var) & \
                 ('_min' not in var):
                 nan_count_2 = np.sum(np.isnan(df_out.loc[t0:t1,var].values))
-                print('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|'+str(nan_count_2-nan_count_1)+'|')
+                Msg('|'+str(t0)+'|'+str(t1)+'|'+func+'|'+str(val)+'|'+str(nan_count_2-nan_count_1)+'|')
 
         if df[var].notna().any() & \
                 ('_qc' not in var) & \
@@ -454,9 +459,9 @@ def adjust_data(df, site, var_list = [], skip_var = []):
             plt.legend()
             plt.title(site)
             fig.savefig('figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg',dpi=120, bbox_inches='tight')
-            print(' ')
-            print('![Adjusted data at '+ site +'](../figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg)')
-            print(' ')
+            Msg(' ')
+            Msg('![Adjusted data at '+ site +'](../figures/L1_data_treatment/'+site.replace(' ','_')+'_adj_'+var+'.jpeg)')
+            Msg(' ')
 
     return df_out
 
@@ -552,8 +557,42 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                                                 target_height = 10,
                                                 max_diff = 5)
 
-    df['SAA'], df['SZA'] = jaws_tools.get_saa_sza(df, 
-                                                  latitude, longitude, elevation, site)
+    # calculatin SZA and SAA with same script as for PROMICE stations
+    doy = df.index.dayofyear.values
+    hour = df.index.hour.values
+    minute = df.index.minute.values
+    lon = np.abs(longitude)
+    deg2rad = np.pi / 180
+    rad2deg = 1 / deg2rad
+    
+    d0_rad = 2 * np.pi * (doy + (hour + minute / 60) / 24 -1) / 365
+    
+    Declination_rad = np.arcsin(0.006918 - 0.399912
+                                * np.cos(d0_rad) + 0.070257
+                                * np.sin(d0_rad) - 0.006758
+                                * np.cos(2 * d0_rad) + 0.000907
+                                * np.sin(2 * d0_rad) - 0.002697
+                                * np.cos(3 * d0_rad) + 0.00148
+                                * np.sin(3 * d0_rad))
+    
+    HourAngle_rad = 2 * np.pi * (((hour + minute / 60) / 24 - 0.5) - lon/360)
+    # ; - 15.*timezone/360.) ; NB: Make sure time is in UTC and longitude is positive when west! Hour angle should be 0 at noon.
+    
+    # This is 180 deg at noon (NH), as opposed to HourAngle.
+    DirectionSun_deg = HourAngle_rad * 180/np.pi - 180
+    
+    DirectionSun_deg[DirectionSun_deg < 0] += 360
+    DirectionSun_deg[DirectionSun_deg < 0] += 360
+    
+    ZenithAngle_rad = np.arccos(np.cos(latitude * deg2rad)
+                                * np.cos(Declination_rad)
+                                * np.cos(HourAngle_rad)
+                                + np.sin(latitude * deg2rad)
+                                * np.sin(Declination_rad))
+    
+    ZenithAngle_deg = ZenithAngle_rad * rad2deg
+    df['SZA'] = ZenithAngle_deg
+    df['SAA'] = DirectionSun_deg
     return df
 
 
@@ -717,7 +756,7 @@ def smooth(x,window_len=14,window='hanning'):
 
 
     s=np.r_[x[window_len-1:0:-1],x,x[-2:-window_len-1:-1]]
-    #print(len(s))
+    #Msg(len(s))
     if window == 'flat': #moving average
         w=np.ones(window_len,'d')
     else:
@@ -1005,9 +1044,9 @@ def combine_hs_dpt(df, site):
     for i, y in enumerate(np.unique(years)):
         plt.axvspan(df.index[ind_start[i]],df.index[ind_end[i]], color='orange', alpha=0.1)
     f1.savefig('figures/L1_data_treatment/'+site+'_surface_height.png',dpi=90, bbox_inches='tight')
-    print(' ')
-    print('![Surface height adjustement at '+ site+'](../figures/L1_data_treatment/'+site+'_surface_height.png)')
-    print(' ')
+    Msg(' ')
+    Msg('![Surface height adjustement at '+ site+'](../figures/L1_data_treatment/'+site+'_surface_height.png)')
+    Msg(' ')
 
     return df
 

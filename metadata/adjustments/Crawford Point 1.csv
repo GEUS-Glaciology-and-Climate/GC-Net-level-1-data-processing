@@ -41,6 +41,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # pressure shift
 1999-01-01,2010-05-09T19,P,add,-12,Adjustment based on continuity
 
+# ISWR and OSWR swapped
+2012-01-01T00:00:00+00:00,,ISWR,swap_with_OSWR,0,manual adjustment from bav
+
 # time shifts
 1990-01-01T16:00:00, 1990-09-26T14:00:00, *, time_shift, 180552, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/63
 1999-08-09, 2000-06-04T06, *, time_shift, 24, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/63

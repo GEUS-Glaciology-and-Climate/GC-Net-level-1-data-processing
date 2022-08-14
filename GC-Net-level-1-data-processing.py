@@ -17,6 +17,8 @@ import nead
 import os.path
 import numpy as np
 import jaws_tools
+import tocgen
+
 from os import path
 try:
     os.mkdir('figures')
@@ -25,9 +27,14 @@ try:
 except:
     print('figures and output folders already exist')
 
-# uncomment for command prompt output in file
-# sys.stdout = open("out/Report.md", "w")
+# uncomment for the overwriting report file
+f = open("out/Report.md", "w")
 
+def Msg(txt):
+    f = open("out/Report.md", "a")
+    print(txt)
+    f.write(txt+'\n')
+    
 path_to_L0N = 'L0M/'
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0, skipinitialspace=True)
 # print(site_list)
@@ -37,14 +44,14 @@ site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0, skipinitialspac
        # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
        # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
        # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'CP2',:]
+# site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
 
 for site, ID in zip(site_list.Name,site_list.ID):
     plt.close('all')
-    print('# '+str(ID)+ ' ' + site)
+    Msg('# '+str(ID)+ ' ' + site)
     filename = path_to_L0N+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
-        print('Warning: No file for station '+str(ID)+' '+site)
+        Msg('Warning: No file for station '+str(ID)+' '+site)
         continue
     ds =nead.read(filename)
     df = ds.to_dataframe()
@@ -64,7 +71,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
         df['HW2'] = 3.4+df['HS2'].max()-df['HS2']
     df=df.resample('H').mean()
 
-    print('## Manual flagging of data at '+site)
+    Msg('## Manual flagging of data at '+site)
     df_out = ptb.flag_data(df, site)
 
     # flagging frozen values
@@ -74,7 +81,7 @@ for site, ID in zip(site_list.Name,site_list.ID):
     # df_out.loc[df.TA1.isnull(), 'TA1'] = df_out.loc[df_out.TA1.isnull(), 'TA3']
     # df_out.loc[df.TA2.isnull(), 'TA2'] = df_out.loc[df_out.TA2.isnull(), 'TA4']
 
-    print('## Adjusting data at '+site)
+    Msg('## Adjusting data at '+site)
     # we start by adjusting and filtering all variables except surface height
     df_v4 = ptb.adjust_data(df_out, site, skip_var=['HS1','HS2'])
         
@@ -115,5 +122,4 @@ for site, ID in zip(site_list.Name,site_list.ID):
                    'L1_ini/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'_header.ini',
                    'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv')
 
-#%run tools/tocgen.py out/Report.md out/Report_with_toc.md
-# sys.stdout.close()
+tocgen.processFile('out/report.md','out/report.md')
