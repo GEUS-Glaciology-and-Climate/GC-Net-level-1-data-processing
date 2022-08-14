@@ -23,6 +23,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1995-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH1,ice_to_water,0, 
 1995-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH2,ice_to_water,0, 
 
+# calibration of OSWR with LiCor offset
+2011-05-31T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
 
 1999-05-14T00:00+00:00,2000-01-01T00:00+00:00,P,add,-30,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
 2000-01-01T00:00+00:00,2005-05-26T00:00+00:00,P,add,-15,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46

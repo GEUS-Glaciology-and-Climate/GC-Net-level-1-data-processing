@@ -11,6 +11,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2010-08-18T14:00:00+00:00,,HS2,add,3.4,Not reported. Manual shift suggested by bav.
 2016-05-22T14:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 
+# calibration of OSWR with LiCor offset
+2009-05-19T00:00:00+00:00,,OSWR,multiply,0.91, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
+
 2016-05-22T00:00:00+00:00,,P,add,-61,Manual shift suggested by bav. https://github.com/GEUS-PROMICE/GC-Net-level-1-data-processing/issues/14
 2019-04-28T00:00:00+00:00,,P,add,38,Manual shift suggested by bav. 
 2019-04-29T00:00:00+00:00,,P,add,21,Manual shift suggested by bav. 

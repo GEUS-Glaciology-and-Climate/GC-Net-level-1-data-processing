@@ -21,6 +21,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 19900101T00:00:00+00:00,,TA3,swap_with_TA4,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/24
 
+# calibration of OSWR with LiCor offset
+2010-04-30T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
 
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,

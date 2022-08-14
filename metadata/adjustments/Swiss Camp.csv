@@ -7,6 +7,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20140508T00:00:00+00:00,,HS2,add,-2,Not reported. Manual shift suggested by bav.
 
 20120510T00:00:00+00:00,,ISWR,swap_with_OSWR,0,Not reported. Manual shift adj by bav.
+# calibration of OSWR with LiCor offset
+2009-05-07T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
 
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
