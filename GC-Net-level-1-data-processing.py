@@ -121,5 +121,5 @@ for site, ID in zip(site_list.Name,site_list.ID):
         nead.write(df_v6.fillna(-999).reset_index(),
                    'L1_ini/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'_header.ini',
                    'L1/'+str(ID).zfill(2)+'-'+site.replace(' ','')+'.csv')
-
-tocgen.processFile('out/report.md','out/report.md')
+tocgen.processFile('out/Report.md','out/report_with_toc.md')
+f.close()

@@ -358,13 +358,16 @@ for site, ID in zip(site_list.Name,site_list.ID):
         
     # fig.savefig('figures/L1_overview/'+str(ID)+'_'+site+'_ISWR_diag',bbox_inches='tight')
     
-# %% Instrument height assessment and 2m T assessment
-# from jaws_tools import extrapolate_temp
-
+# %% radiation overview
+plt.close('all')
 site_list = pd.read_csv('metadata/GC-Net_location.csv',header=0)
+# site_list = site_list.loc[site_list.Name.values == 'Crawford Point 1',:]
+
 for site, ID in zip(site_list.Name,site_list.ID):
     
     print('# '+str(ID)+ ' ' + site)
+    site_org = site
+    site = site.replace(' ','')
     filename = 'L1/'+str(ID).zfill(2)+'-'+site+'.csv'
     if not path.exists(filename):
         print('Warning: No file for station '+str(ID)+' '+site)
@@ -374,17 +377,37 @@ for site, ID in zip(site_list.Name,site_list.ID):
     df=df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp)
     df = df.set_index('timestamp').replace(-999,np.nan)
-    if 'TA2' not in df.columns:
-        df['TA2'] = np.nan
-    # % plotting variables
-
-    fig, ax = plt.subplots(2,1,sharex=True)
-    df.HW1.plot(ax=ax[0])
-    df.HW2.plot(ax=ax[0])
     
-    df.TA1.plot(ax=ax[1])
-    df.TA2.plot(ax=ax[1])
-    # T2m = extrapolate_temp(df, 2)
+    df['albedo'] = df.OSWR/df.ISWR
+    msk = (df.OSWR<100) | (df.ISWR<100)
+    df.loc[msk, 'albedo'] = np.nan
+    
+    # Calculating zenith and hour angle of the sun
+    deg2rad = np.pi / 180
+    ZenithAngle_rad = df.SZA * deg2rad
+    
+    sundown = df.SZA >= 90
+    df['isr_toa'] = 1372 * np.cos(ZenithAngle_rad) # Incoming shortware radiation at the top of the atmosphere
+    df.loc[sundown, 'isr_toa'] = 0
+            
+    #  plotting variables
+    fig, ax = plt.subplots(3,1,sharex=True, figsize=(15,15))
+    plt.subplots_adjust(left = 0.1, right=0.9, top = 0.95, bottom = 0.1, wspace=0.2, hspace=0.05)
+    plt.suptitle(site)
+
+    for count, var in enumerate(['ISWR', 'OSWR', 'albedo']):       
+        if var in ['ISWR','OSWR']:
+            df['isr_toa'].plot(ax=ax[count], color='r', alpha=0.5)
+        df[var].plot(ax=ax[count])
+        ax[count].set_ylabel(var)
+        ax[count].grid()
+        ax[count].set_xlim((df.index[0],df.index[-1]))
+        count=count+1
+    plt.savefig('figures/L1_overview/radiation_assessment/'+str(ID)+'_'+site+'_albedo',bbox_inches='tight')
+    print('![](figures/L1_overview/radiation_ assessment/'+str(ID)+'_'+site+'_albedo.png)')
+
+
+# %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
     
 #%% Surface height overview
 
