@@ -23,6 +23,7 @@ envidat_alias = {
     "Tunu-N": "tunu_n",
     "DYE2": "dye2",
     "JAR1": "jar1",
+    "JAR2": "jar2",
     "Saddle": "saddle",
     "South Dome": "southdome",
     "NASA-E": "nasa_east",
