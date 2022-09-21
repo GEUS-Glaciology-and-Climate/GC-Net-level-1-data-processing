@@ -11,7 +11,7 @@
 # field_delimiter = ,
 # 
 # [FIELDS]
-# fields = timestamp,ISWR,ISWR_max,OSWR,OSWR_max,NSWR,NSWR_max,TA1,TA1_max,TA1_min,TA2,TA2_max,TA2_min,TA3,TA4,RH1,RH2,VW1,VW1_max,VW1_stdev,VW2,VW2_max,VW2_stdev,DW1,DW2,P,HS1,HS2,V,TA5
+# fields = timestamp,ISWR,ISWR_max,OSWR,OSWR_max,NR,NR_max,TA1,TA1_max,TA1_min,TA2,TA2_max,TA2_min,TA3,TA4,RH1,RH2,VW1,VW1_max,VW1_stdev,VW2,VW2_max,VW2_stdev,DW1,DW2,P,HS1,HS2,V,TA5
 # add_value = 0,0,0,0,0,0,0,273.15,273.15,273.15,273.15,273.15,273.15,273.15,273.15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,273.15
 # scale_factor = 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0.01,0.01,1,1,1,1,1,1,1,1,100,1,1,1,1
 # units = time,W/m2,W/m2,W/m2,W/m2,W/m2,W/m2,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,%,%,m/s,m/s,m/s,m/s,m/s,m/s,Degrees,Degrees,mbar,m,m,V,Degrees C

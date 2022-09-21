@@ -223,7 +223,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %% L1 temperature overview
 plt.close("all")
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)  # .iloc[:1]
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
 for site, ID in zip(site_list.Name, site_list.ID):
     variable_list = np.array(["TA1", "TA2", "TA3", "TA4"])
 
@@ -366,9 +366,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %% RH1 vs RH2
 plt.close("all")
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[0:1]
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
+    site = site.replace(" ", "")
     filename = "L1/" + str(ID).zfill(2) + "-" + site + ".csv"
     if not path.exists(filename):
         print("Warning: No file for station " + str(ID) + " " + site)
@@ -546,6 +547,8 @@ plt.subplots_adjust(
 count = 0
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
+    site = site.replace(" ", "")
+
     filename = "L1/" + str(ID).zfill(2) + "-" + site + ".csv"
     if not path.exists(filename):
         print("Warning: No file " + filename)
@@ -666,7 +669,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         for col in [
             "ISWR",
             "OSWR",
-            "NSWR",
+            "NR",
             "TA1",
             "TA2",
             "TA3",

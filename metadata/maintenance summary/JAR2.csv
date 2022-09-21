@@ -1,4 +1,6 @@
 ,date,reported,SR1 before (cm),SR1 after (cm),SR2 before (cm),SR2 after (cm),T1 before (cm),T1 after (cm),T2 before (cm),T2 after (cm),W1 before (cm),W1 after (cm),W2 before (cm),W2 after (cm),NewDepth1 (m),NewDepth2 (m),NewDepth3 (m),NewDepth4 (m),NewDepth5 (m),NewDepth6 (m),NewDepth7 (m),NewDepth8 (m),NewDepth9 (m),NewDepth10 (m),Unnamed: 24,Unnamed: 25
 0,2004-05-25,y,,,,287.0,,201.0,,349.0,,205.0,,349.0,,,,,,,,,,,,
 1,2005-05-12,y,,100.0,,100.0,495.5,40.0,615.5,189.0,494.5,41.0,614.5,198.0,400.0,350.0,300.0,250.0,200.0,150.0,100.0,50.0,19.0,19.0,,
-2,,,,,,,,,,,,,,,,19.0,,,,,,,,,,
+2,2011-06-21,"Nicola Bayou: s1-W2: 80cm, s1-s2 = 6cm, s1-w1 = 122-38=84 ( SR height from data file)",,113.0,,123.0,,,,,,29.0,,151.0,,19.0,,,,,,,,,,
+3,,,,,,,,,,,,71.0,,193.0,,,,,,,,,,,,
+4,,,,,,,,,,,,,38.0,,,,,,,,,,,,,

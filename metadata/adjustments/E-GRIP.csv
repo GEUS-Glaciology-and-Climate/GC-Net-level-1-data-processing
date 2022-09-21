@@ -13,6 +13,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2014-01-01T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2014-01-01T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
+2014-01-01T00:00:00+00:00,,HW2,add,1.2,Manually added by bav
+
 2014-01-01T00:00:00+00:00,,DW1,multiply,-1,Manually filtered by bav
 2014-01-01T00:00:00+00:00,,DW1,rotate,20,Manually filtered by bav
 2014-01-01T00:00:00+00:00,,DW1,rotate,30,Manually filtered by bav

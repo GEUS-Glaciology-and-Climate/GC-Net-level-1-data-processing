@@ -98,7 +98,7 @@ def nameLevel0col(dfm):
         "sw_in_avg": "ISWR",
         "sw_ref_avg(1)": "OSWR",
         "sw_ref_avg": "OSWR",
-        "net_rad_avg": "NSWR",
+        "net_rad_avg": "NR",
         "t_air_avg(1)": "TA3",
         "t_air_avg(2)": "TA4",
         "t_air1_avg": "TA3",
@@ -127,7 +127,7 @@ def nameLevel0col(dfm):
         "sw_in_max": "ISWR_max",
         "sw_in_std(1)": "ISWR_std",
         "sw_in_std": "ISWR_std",
-        "net_rad_std": "NSWR_std",
+        "net_rad_std": "NR_std",
         "tc_air_max(1)": "TA1_max",
         "tc_air_max(2)": "TA2_max",
         "tc_air_min(1)": "TA1_min",
@@ -153,15 +153,21 @@ def nameLevel0col(dfm):
     }
 
     target_var = np.array(list(variable_aliases.keys()))
-    ind = np.isin(target_var, dfm.columns)
-    print("Warning:", target_var[~ind], "are not in the L0 data file")
+    # ind = np.isin(target_var, dfm.columns)
+    # print("Warning:", target_var[~ind], "are not in the L0 data file")
     ind = np.isin(dfm.columns, target_var)
-    if len(ind) > 0:
+    missing_var = (~ind & ~np.isin(dfm.columns,
+                                   ['timestamp', 'record', 'loggerid', 
+                                    'year', 'day_of_year', 'hour',
+                                    'val(1)', 'val(2)', 'val(3)', 'val(4)']))
+    if any(missing_var) > 0:
+        
         print(
             "====> Warning:",
-            dfm.columns[~ind],
+            dfm.columns[missing_var],
             "are in the L0 data file but not in the dataframe",
         )
+        print(wtf)
     dfm = dfm.rename(columns=variable_aliases)
     return dfm
 

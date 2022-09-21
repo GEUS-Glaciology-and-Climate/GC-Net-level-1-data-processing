@@ -73,11 +73,12 @@ def name_alias(name_in):
         "VW1",
         "VW2",
         "DW1",
-        "DW2" "HS1",
+        "DW2",
+        "HS1",
         "HS2",
         "HS1",
         "HS2",
-        "NSWR",
+        "NR",
     ]
 
     try:
@@ -88,11 +89,11 @@ def name_alias(name_in):
 
 
 def field_info(fields):
-    field_list = "timestamp,ISWR,ISWR_max,ISWR_std,OSWR,OSWR_max,NSWR,NSWR_max,NSWR_std,TA1,TA1_max,TA1_min,TA2,TA2_max,TA2_min,TA3,TA4,RH1,RH2,VW1,VW1_max,VW1_stdev,VW2,VW2_max,VW2_stdev,DW1,DW2,P,HS1,HS2,HW1,HW2,V,TA5,TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8,TS9,TS10,Tsurf1,Tsurf2,IUVR,ILWR,SHF,LHF,TA2m,RH2m,VW10m,SAA,SZA".split(
+    field_list = "timestamp,ISWR,ISWR_max,ISWR_std,OSWR,OSWR_max,NR,NR_max,NR_std,TA1,TA1_max,TA1_min,TA2,TA2_max,TA2_min,TA3,TA4,RH1,RH2,VW1,VW1_max,VW1_stdev,VW2,VW2_max,VW2_stdev,DW1,DW2,P,HS1,HS2,HW1,HW2,V,TA5,TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8,TS9,TS10,Tsurf1,Tsurf2,IUVR,ILWR,SHF,LHF,TA2m,RH2m,VW10m,SAA,SZA".split(
         ","
     )
 
-    units = "time,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,%/100,%/100,m/s,m/s,m/s,m/s,m/s,m/s,Degrees,Degrees,mbar,m,m,m,m,m,m,m,m,m,m,m,m,m,m,V,Degrees C,Degrees C,Degrees C,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,%/100,m/s,Degrees,Degrees".split(
+    units = "time,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,%/100,%/100,m/s,m/s,m/s,m/s,m/s,m/s,Degrees,Degrees,mbar,m,m,m,m,V,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,%/100,m/s,Degrees,Degrees".split(
         ","
     )
 
@@ -710,29 +711,13 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     fig.savefig("figures/L1_data_treatment/" + site + "_gap_filling_HW.png")
 
     # Creating surface height field
-    if "HW1_qc" not in df.columns:
-        df["HW1_qc"] = "OK"
-    if "HW2_qc" not in df.columns:
-        df["HW2_qc"] = "OK"
     if any(df.HW1.notnull()):
-        ind1 = np.max(
-            [
-                df.HW1.first_valid_index(),
-                df.HW1_qc.where(df.HW1_qc == "OK").first_valid_index(),
-            ]
-        )
+        ind1 = df.HW1.first_valid_index()
         df["HS1"] = df.HW1[ind1] - df.HW1
     if any(df.HW2.notnull()):
-        ind2 = np.max(
-            [
-                df.HW2.first_valid_index(),
-                df.HW2_qc.where(df.HW2_qc == "OK").first_valid_index(),
-            ]
-        )
+        ind2 = df.HW2.first_valid_index()
         df["HS2"] = df.HW2[ind2] - df.HW2
 
-    df.loc[df["HW1_qc"] == "CHECKME", "HS1"] = np.nan
-    df.loc[df["HW2_qc"] == "CHECKME", "HS2"] = np.nan
     # we then adjust and filter all surface height (could be replaced by an automated adjustment)
     df = adjust_data(df, site, ["HS1", "HS2"])
 
@@ -801,6 +786,8 @@ def filter_zero_gradient(df_out):
     var_list = [
         "VW1",
         "VW2",
+        "DW1",
+        "DW2",
         "TA1",
         "TA1",
         "TA2",

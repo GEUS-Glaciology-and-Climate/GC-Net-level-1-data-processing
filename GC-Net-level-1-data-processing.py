@@ -39,7 +39,7 @@ def Msg(txt):
 
 
 path_to_L0N = "L0M/"
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)[1:2]
 # print(site_list)
 
 # uncomment for use at specific sites
@@ -106,7 +106,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     useful_var_list = [
         "ISWR",
         "OSWR",
-        "NSWR",
+        "NR",
         "TA1",
         "TA2",
         "TA3",
@@ -142,7 +142,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
         # saving to file
         nead.write(
-            df_v6.fillna(-999).reset_index(),
+            df_v6.reset_index(),
             "L1_ini/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_header.ini",
             "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + ".csv",
         )

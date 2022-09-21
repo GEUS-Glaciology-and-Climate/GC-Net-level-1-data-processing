@@ -32,36 +32,13 @@ envidat_alias = {
     "NEEM": "neem",
     "E-GRIP": "east_grip",
 }
-##################################### MAIN ####################################
-
-##Define file to get links for GC-net Level 0 files on Envidat
-linkfile = "metadata/envidat_gcnet_links.csv"
 
 # path to save raw L0 downloaded from envidat
 path = "./L0/"
-# path to save merged nead files
-mpath = "./L0N/"
 # path to save merged nead + c level files
 mcpath = "./L0M/"
 # path to ini/header files for NEAD outputs
 l0inipath = "./L0/L0_ini/"
-
-# create directory to store L0 raw data downloaded from envidat (variable path)
-download_data = 0
-if download_data:
-    try:
-        # make new directory in current directory called L0
-        os.mkdir(path)
-        # only download data if new directory was created (in try)
-        # Download and unzip L0 files from CKAN API on Envidat
-        gc.getLevel0(linkfile)
-    except OSError:
-        # Don't download data if the file already exists or other error
-        print(
-            "Data already exists or creating directory %s failed (permission?)" % path
-        )
-    else:
-        print("Successfully downloaded L0 data to %s " % path)
 
 # Get sorted list of all non-hidden sub-directories in L0 folder
 L0dirs = np.array(sorted([f for f in os.listdir(path) if not f.startswith(".")]))
@@ -69,14 +46,6 @@ msk = np.core.defchararray.find(L0dirs, ".zip") == -1
 L0dirs = L0dirs[msk]
 msk = np.core.defchararray.find(L0dirs, "Jason") == -1
 L0dirs = L0dirs[msk]
-# Create the directory to put the merged L0 files (variable mpath)
-try:
-    os.mkdir(mpath)
-except OSError:
-    print("Data already exists or creating directory %s failed (permission?)" % mpath)
-    pass
-else:
-    print("Successfully created the directory %s " % mpath)
 
 # Create the directory to put the merged L0 + C level files (variable mcpath)
 try:
@@ -87,7 +56,7 @@ else:
     print("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(len(L0dirs)):
+for i in range(6,7):  #len(L0dirs)):
     print("--------------------------------")
     print("Now Processing Directory: ", L0dirs[i])
     # the file structure of raw campbell data files
@@ -98,8 +67,7 @@ for i in range(len(L0dirs)):
     cfiledir_jeb = path + "/C level Jason/" + cfilenum + "c.dat"
     cfiledir = path + L0dirs[i] + "/C file/" + cfilenum + "c.dat"
     configfile = l0inipath + L0dirs[i] + "_header.ini"
-    # make path/name of campbell merged nead file the same as raw data directory
-    coutfile = mpath + L0dirs[i]
+
     # make path for merged C-level and Campbell nead file
     mcoutfile = mcpath + L0dirs[i]
     # get list and sort all non-hidden files in station directory
@@ -402,6 +370,7 @@ for i in range(len(L0dirs)):
             dfm["timestamp"] = pd.to_datetime(dfm["timestamp"], utc=True)
             dft = dft.set_index("timestamp")
             dfm = dfm.set_index("timestamp")
+            dft.columns = dft.columns.str.replace('NSWR','NR')
             dfm = pd.concat([dfm, dft]).reset_index()
 
         except:
@@ -472,8 +441,9 @@ for i in range(len(L0dirs)):
         write_nead.write_nead(dfmc, configfile, mcoutfile)
     else:
         print("No C level file Found for station: ", L0dirs[i])
-        print("Writing L0N to L0M")
-        write_nead.write_nead(dfm, configfile, mcoutfile)
+        if len(dfm)>0:
+            print("Writing L0N to L0M")
+            write_nead.write_nead(dfm, configfile, mcoutfile)
 
     # clear dfm from memory before next station
     # del dfm
