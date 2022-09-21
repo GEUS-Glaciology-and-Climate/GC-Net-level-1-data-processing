@@ -101,9 +101,9 @@ for site, ID in zip(site_list.Name, site_list.ID):
     if count < 6:
         count = count - 1
         ax[count].xaxis.set_tick_params(which="both", labelbottom=True)
-        if site != "E-GRIP":
-            ax[count].axes.xaxis.set_major_formatter(years_fmt)
-            ax[count].axes.xaxis.set_major_locator(years)
+        # if site != "E-GRIP":
+        #     ax[count].axes.xaxis.set_major_formatter(years_fmt)
+        #     ax[count].axes.xaxis.set_major_locator(years)
             # ax[count].axes.xaxis.set_minor_locator(months)
         for k in range(count + 1, len(ax)):
             ax[k].set_axis_off()
