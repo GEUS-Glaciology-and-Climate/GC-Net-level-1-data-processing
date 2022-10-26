@@ -134,11 +134,14 @@ for site, ID in zip(site_list.Name, site_list.ID):
     if not path.exists(filename):
         print("Warning: No file for station " + str(ID) + " " + site)
         continue
-    ds = nead.read(filename)
-    df = ds.to_dataframe()
-    df = df.reset_index(drop=True)
+    df = nead.read(filename).to_dataframe().reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp)
     df = df.set_index("timestamp").replace(-999, np.nan)
+
+    df_d = nead.read(filename[:-4]+'_daily.csv').to_dataframe().reset_index(drop=True)
+    df_d.timestamp = pd.to_datetime(df_d.timestamp)
+    df_d = df_d.set_index("timestamp").replace(-999, np.nan)
+    
     # df =df.loc['2019':,:]
     if df.shape[0] == 0:
         print("no data since 2019")
@@ -169,6 +172,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         # print(var)
 
         df[var].plot(ax=ax[count])
+        df_d[var].plot(ax=ax[count], drawstyle="steps-post")
         ax[count].set_ylabel(var)
         ax[count].grid()
         ax[count].set_xlim((df.index[0], df.index[-1]))
@@ -221,6 +225,54 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %run tools/tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
+# %% L1 overview
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[:-3]
+fig, ax = plt.subplots(1,1, figsize=(7,10))
+plt.subplots_adjust(
+        left=0.23, right=0.97, top=0.98, bottom=0.1, wspace=0.2, hspace=0.05
+    )
+count = 0
+col = ['tab:red','tab:green','tab:blue','tab:orange']
+xtick_loc = np.array([1.5])
+for site, ID in zip(site_list.Name, site_list.ID):
+    site = site.replace(" ", "")
+    filename = "L1/" + str(ID).zfill(2) + "-" + site + "_daily.csv"
+    if not path.exists(filename):
+        print("Warning: No file for station " + str(ID) + " " + site)
+        continue
+    df = nead.read(filename).to_dataframe().reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index("timestamp").replace(-999, np.nan)
+    if 'ISWR' in df.columns:
+        df['rad'] = df[['ISWR','OSWR']].mean(axis=1)
+    else: 
+        df['rad'] = np.nan
+    df['t'] = df[['TA1','TA2','TA3','TA4']].mean(axis=1)
+    df['rh'] = df[['RH1','RH2']].mean(axis=1)
+    df['ws'] = df[['VW1','VW2']].mean(axis=1)
+
+    for i, var in enumerate(['rad','t','rh','ws']):
+        # print(site, var,df[var].first_valid_index(), df[var].last_valid_index())
+        tmp = df[var].notnull() *(-count + (i-1.5)/3)
+        tmp[tmp==0] = np.nan
+        plt.plot(tmp.index, tmp.values, color = col[i], marker='s',markersize=3)
+        count = count+1
+plt.yticks(np.arange(len(site_list.Name))*(-4) - 1.5,
+           site_list.Name)
+
+plt.plot(np.nan,np.nan, color = col[0], label='radiation', linewidth = 4.5)
+plt.plot(np.nan,np.nan, color = col[1], label='temperature', linewidth = 4.5)
+plt.plot(np.nan,np.nan, color = col[2], label='humidity', linewidth = 4.5)
+plt.plot(np.nan,np.nan, color = col[3], label='wind', linewidth = 4.5)
+plt.legend(loc='lower left')
+
+plt.ylim(-count-1, 1)
+plt.xlim(pd.to_datetime('1994'),pd.to_datetime('2023'))
+plt.grid()
+fig.savefig(
+    "figures/L1_overview/data_availability.png",
+    bbox_inches="tight",
+)
 # %% L1 temperature overview
 plt.close("all")
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)

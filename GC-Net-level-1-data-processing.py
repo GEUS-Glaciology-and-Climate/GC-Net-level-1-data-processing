@@ -37,9 +37,8 @@ def Msg(txt):
     print(txt)
     f.write(txt + "\n")
 
-
 path_to_L0N = "L0M/"
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)[1:2]
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)
 # print(site_list)
 
 # uncomment for use at specific sites
@@ -128,6 +127,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
             database_fields,
             database_fields_data_types,
         ) = ptb.field_info(df_v6.reset_index().columns)
+        
+        df_v6.attrs['averaging'] = 'hourly'
 
         # write ini file
         nead.write_header(
@@ -146,5 +147,51 @@ for site, ID in zip(site_list.Name, site_list.ID):
             "L1_ini/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_header.ini",
             "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + ".csv",
         )
+        
+        # daily average
+        def limited_mean(array_like):
+            if pd.isnull(array_like).sum()>6:
+                return np.nan
+            else:
+                return array_like.mean()
+        def limited_max(array_like):
+            if pd.isnull(array_like).sum()>6:
+                return np.nan
+            else:
+                return array_like.max()
+        def limited_min(array_like):
+            if pd.isnull(array_like).sum()>6:
+                return np.nan
+            else:
+                return array_like.min()
+            
+        df_v7 = df_v6.resample('D').apply(limited_mean)
+        max_vars = [var for var in df_v6.keys() if 'max' in var]
+        df_v7[max_vars] = df_v6[max_vars].resample('D').apply(limited_max)
+        min_vars = [var for var in df_v6.keys() if 'min' in var]
+        df_v7[min_vars] = df_v6[min_vars].resample('D').apply(limited_min)
+        flag_vars = [var for var in df_v6.keys() if 'adj_flag' in var]
+        df_v7[flag_vars] = df_v6[flag_vars].resample('D').apply(limited_max)
+        
+        df_v7.attrs['averaging'] = 'daily'
+
+        # write ini file
+        nead.write_header(
+            "L1_ini/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_header_daily.ini",
+            df_v7.reset_index(),
+            metadata=ds.attrs,
+            units=units,
+            display_description=display_description,
+            database_fields=database_fields,
+            database_fields_data_types=database_fields_data_types,
+        )
+
+        # saving to file
+        nead.write(
+            df_v7.reset_index(),
+            "L1_ini/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_header_daily.ini",
+            "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_daily.csv",
+        )
+        
 tocgen.processFile("out/Report.md", "out/report_with_toc.md")
 f.close()
