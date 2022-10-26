@@ -38,7 +38,7 @@ def Msg(txt):
     f.write(txt + "\n")
 
 path_to_L0N = "L0M/"
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)[0:1]
 # print(site_list)
 
 # uncomment for use at specific sites

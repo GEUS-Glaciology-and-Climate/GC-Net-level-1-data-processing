@@ -9,29 +9,8 @@ import glob
 import write_nead
 from datetime import datetime
 import nead
-import requests
 import pytz
-
-envidat_alias = {
-    "Swiss Camp 10m": "swisscamp_10m_tower",
-    "Swiss Camp": "swisscamp",
-    "Crawford Point 1": "crawfordpoint",
-    "NASA-U": "nasa_u",
-    "GITS": "gits",
-    "Humboldt": "humboldt",
-    "Summit": "summit",
-    "Tunu-N": "tunu_n",
-    "DYE2": "dye2",
-    "JAR1": "jar1",
-    "JAR2": "jar2",
-    "Saddle": "saddle",
-    "South Dome": "southdome",
-    "NASA-E": "nasa_east",
-    "NASA-SE": "nasa_southeast",
-    "Petermann ELA": "petermann",
-    "NEEM": "neem",
-    "E-GRIP": "east_grip",
-}
+import json
 
 # path to save raw L0 downloaded from envidat
 path = "./L0/"
@@ -56,7 +35,7 @@ else:
     print("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(6,7):  #len(L0dirs)):
+for i in range(0,1):  #len(L0dirs)):
     print("--------------------------------")
     print("Now Processing Directory: ", L0dirs[i])
     # the file structure of raw campbell data files
@@ -132,7 +111,7 @@ for i in range(6,7):  #len(L0dirs)):
                 )
                 # index by the timestamp
                 df1_p1.set_index(df1_p1["TIMESTAMP"])
-                pd.to_datetime(df1_p1.index)
+                pd.to_datetime(df1_p1.index, utc=True)
 
                 if df1_oldargos_bool:
                     # old argos stations have three different tables per timestamp row (called 046, 048, and 050)
@@ -148,7 +127,7 @@ for i in range(6,7):  #len(L0dirs)):
                     )
                     # index by the timestamp
                     df1_p3.set_index(df1_p3["TIMESTAMP"])
-                    pd.to_datetime(df1_p3.index)
+                    pd.to_datetime(df1_p3.index, utc=True)
                     # read part 2 of table
                     df1_p2 = pd.read_csv(
                         datadir + df1_table48file,
@@ -160,7 +139,7 @@ for i in range(6,7):  #len(L0dirs)):
                         na_values=nan_string,
                     )
                     df1_p2.set_index(df1_p2["TIMESTAMP"])
-                    pd.to_datetime(df1_p2.index)
+                    pd.to_datetime(df1_p2.index, utc=True)
                     df1 = pd.concat([df1_p1, df1_p2, df1_p3], axis=1)
                     df1 = df1.loc[:, ~df1.columns.duplicated()]
 
@@ -176,7 +155,7 @@ for i in range(6,7):  #len(L0dirs)):
                         na_values=nan_string,
                     )
                     df1_p2.set_index(df1_p2["TIMESTAMP"])
-                    pd.to_datetime(df1_p2.index)
+                    pd.to_datetime(df1_p2.index, utc=True)
                     df1 = pd.concat([df1_p1, df1_p2], axis=1)
                     df1 = df1.loc[:, ~df1.columns.duplicated()]
                 else:
@@ -226,7 +205,7 @@ for i in range(6,7):  #len(L0dirs)):
                 )
                 # index by the timestamp
                 df2_p3.set_index(df2_p3["TIMESTAMP"])
-                pd.to_datetime(df2_p3.index)
+                pd.to_datetime(df2_p3.index, utc=True)
                 # read part 2 of table
                 df2_p2 = pd.read_csv(
                     datadir + df2_table48file,
@@ -238,7 +217,7 @@ for i in range(6,7):  #len(L0dirs)):
                     na_values=nan_string,
                 )
                 df2_p2.set_index(df2_p2["TIMESTAMP"])
-                pd.to_datetime(df2_p2.index)
+                pd.to_datetime(df2_p2.index, utc=True)
                 df2 = pd.concat([df2_p1, df2_p2, df2_p3], axis=1)
                 df2 = df2.loc[:, ~df2.columns.duplicated()]
             elif df2_argos_bool and not df2_oldargos_bool:
@@ -257,7 +236,7 @@ for i in range(6,7):  #len(L0dirs)):
                     na_values=nan_string,
                 )
                 df2_p2.set_index(df2_p2["TIMESTAMP"])
-                pd.to_datetime(df2_p2.index)
+                pd.to_datetime(df2_p2.index, utc=True)
                 df2 = pd.concat([df2_p1, df2_p2], axis=1)
                 df2 = df2.loc[:, ~df2.columns.duplicated()]
             else:
@@ -314,74 +293,67 @@ for i in range(6,7):  #len(L0dirs)):
         # calibrate scale_factor_neg for all fields
         dfm = gc.calibrate_scale_factor_neg(dfm, fields, scale_factor_neg)
 
-        # % download and append the transmission
+        # if possible download and append the transmission
+        print('\nTransmissions:')
         date_end = dfm.timestamp.iloc[-1].strftime("%Y-%m-%d")
         date_now = datetime.now().strftime("%Y-%m-%d")  # current date and time
-        local_path = path + L0dirs[i] + "/transmissions/"
-
-        try:
-            os.mkdir(local_path)
-        except:
-            pass
+                
+        metadata = pd.read_csv('metadata/GC-Net_location.csv')
         site = L0dirs[i][3:]
-        remote_url = (
-            "https://www.envidat.ch/data-api/gcnet/nead/"
-            + envidat_alias[site]
-            + "/end/-999/"
-            + date_end
-            + "/"
-            + date_now
-            + "/"
-        )
+        if metadata.loc[metadata.Name == site,'LastValidDate'].notnull().values[0]:
+            print('Station decommissioned. No transmission.')
+        else:
+            print('Fetching latest transmission.')
+            dfm = gc.get_transmission(site, 
+                                   date_end, 
+                                   date_now, 
+                                   dfm, 
+                                   path + L0dirs[i] + "/transmissions/",
+                                   )
 
-        local_file = local_path + site + ".csv"
-        print("requesting transmissions from", date_end, "to", date_now)
-        print("url:", remote_url)
-
-        try:
-            data = requests.get(remote_url)
-            # Save file data to local copy
-            with open(local_file, "wb") as file:
-                file.write(data.content)
-            dft = nead.read(local_file).to_dataframe()
-            print(
-                "received transmission from",
-                dft["timestamp"].iloc[0],
-                dft["timestamp"].iloc[-1],
-            )
-            dft["timestamp"] = pd.to_datetime(dft["timestamp"], utc=True)
-            dfm["timestamp"] = pd.to_datetime(dfm["timestamp"], utc=True)
-            dft = dft.set_index("timestamp")
-            dfm = dfm.set_index("timestamp")
-
-            dfm = pd.concat([dfm, dft]).reset_index()
-        except:
-            print("download failed")
-            print("reading last transmission file available")
-            pass
-        try:
-            dft = nead.read(local_file).to_dataframe()
-            print(
-                "received transmission from",
-                dft["timestamp"].iloc[0],
-                dft["timestamp"].iloc[-1],
-            )
-            dft["timestamp"] = pd.to_datetime(dft["timestamp"], utc=True)
-            dfm["timestamp"] = pd.to_datetime(dfm["timestamp"], utc=True)
-            dft = dft.set_index("timestamp")
-            dfm = dfm.set_index("timestamp")
-            dft.columns = dft.columns.str.replace('NSWR','NR')
-            dfm = pd.concat([dfm, dft]).reset_index()
-
-        except:
-            print("could not read local file")
-            pass
         starttime = pytz.utc.localize(starttime)
     else:
         dfm = []
         starttime = []
 
+    # tries to read CR10X logger files
+    print('\nLooking for CR10X logger files:')
+    cr10x_info = pd.read_csv('L0/L0_ini/CR10X_all_station.ini',
+                             skipinitialspace=True)
+    cr10x_info = cr10x_info.loc[cr10x_info.site == site,:]
+    if len(cr10x_info) > 0:
+        file_list = os.listdir(path + L0dirs[i] + '/CR10X logger files')
+        df_cr10x = pd.DataFrame()
+        plt.figure()
+        dfm.set_index('timestamp').ISWR.plot()
+        for f in file_list:
+            print('Reading',f)
+            tmp = pd.read_csv(path + L0dirs[i] + '/CR10X logger files/' + f,
+                              header=None,
+                              names = cr10x_info.var_list.values[0].replace( ' ','').split(','))
+            tmp['timestamp'] = pd.to_datetime(tmp.year * 100000 + tmp.day_of_year * 100 + tmp.hour/100 ,
+                                              format='%Y%j%H', utc=True)
+            tmp[tmp==-6999] = np.nan
+            # shortwave radiation calibration
+            tmp.ISWR = tmp.ISWR * cr10x_info.calib_ISWR.values[0]
+            tmp.OSWR = tmp.OSWR * cr10x_info.calib_OSWR.values[0]
+            tmp.set_index('timestamp').ISWR.plot()
+            # net radiation calibration
+            msk_pos = tmp.NR>0
+            tmp.loc[msk_pos, 'NR'] = tmp.loc[msk_pos, 'NR'] *cr10x_info.calib_NR_pos.values[0]
+            msk_neg = tmp.NR<0
+            tmp.loc[msk_neg, 'NR'] = tmp.loc[msk_neg, 'NR'] *cr10x_info.calib_NR_neg.values[0]
+            df_cr10x = pd.concat([df_cr10x, tmp])
+            
+        print("Merging CR10X and CR1000 logger files dataframes")
+        dfm = dfm.set_index("timestamp")
+        df_cr10x = df_cr10x.set_index("timestamp")
+        dfm = pd.concat([df_cr10x, dfm])
+    else:
+        print('No header specified for CR10X logger files')
+    
     # read and merge historical c-level file
+    print('\nLooking for C-level files to fill the gaps')
     if os.path.isfile(cfiledir):
         if os.path.isfile(cfiledir_jeb):
             cconfigfile = "./L0//C level Jason/c_file_header_jeb.ini"
@@ -443,6 +415,7 @@ for i in range(6,7):  #len(L0dirs)):
         print("No C level file Found for station: ", L0dirs[i])
         if len(dfm)>0:
             print("Writing L0N to L0M")
+            dfm["timestamp"] = pd.to_datetime(dfm.index, utc=True)
             write_nead.write_nead(dfm, configfile, mcoutfile)
 
     # clear dfm from memory before next station

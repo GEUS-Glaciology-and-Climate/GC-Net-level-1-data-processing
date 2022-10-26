@@ -1,0 +1,142 @@
+	program RAD
+
+c ****************************************************************************
+c	adds the air temperature to the cloud file, and calculates
+c	the longwave out radiations (8-5-96)
+c
+c       read Campell met data from the ETH camp in Greenland
+c       change jd and time to jd_time
+c       10 m tower, datalogger outside on tower (station klima)
+c       pyranometer: up # 12875, channel 1, close to mast (cal. 106.49)
+c       pyranometer: up # 12798, channel 2, above down looking (cal. 105.89)
+c       pyronometer: down # 12880, channel 3, down (cal. 105.92)
+c       net radiometer: #90094, channel 4
+c	pos: 13.3 * 1.182, neg: 13.3 * 0.962
+c       program : 6-15-93 Syno City
+c ****************************************************************************
+
+	character*20 in
+	integer ich
+	real jd,time,licore(3),min,hour,xmin
+	real wind(3),ta1(3),t1(3),t2(3),hum(3)
+	real jd_t,r(3),net,wdir,press,ta,lout,lnet,lin
+	
+
+c   Li-Core calibration coefficients (6-15-93)
+	licore(1)=106.49
+	licore(2)=105.89
+	licore(3)=105.92
+
+c   UUB coefficients for air temperature
+	a=-9.0763671
+	b=0.704343
+	c=0.00919
+	d=0.000137
+	e=0.00000116676
+	f=0.00000000400674
+
+	print *,'give input file name '
+	read(*,'(a)') in
+	open(1,file=in)
+
+c	print *,'give name output '
+c	read(*,'(a)') out1
+	open(2,file='rad_all.dat')
+ 2020	format('  Jul.Day  S1(up)  S2(up)  S(dw) net_rad lnet lout lin')
+	write(2,2020)
+
+	do 100 i=1,100000
+
+	ta=0.
+
+	read(1,*,end=6000) ich
+
+	if(ich.eq.206) then
+	backspace (1)
+	read(1,*,end=6000) ich,jd,time,wind(1),t1(1),t2(1),hum(1),
+     1  wind(2),t1(2),t2(2),hum(2),
+     2  wind(3),t1(3),t2(3),hum(3),wdir,press
+
+c    change jd and time in real
+	if(time.eq.0) then
+	hour=0.
+	goto 150
+	else
+	endif
+	min=time-(aint(time/100.))*100.
+	if(min.eq.0) goto 160
+	min=min/60.
+ 160    hour=aint(time/100.)
+	hour=(hour+min)/24.
+ 150    continue
+	jd_t=jd + hour
+
+        if(t1(1).ge.300) t1(1)=t1(1)-400.
+	if(t1(2).ge.300) t1(2)=t1(2)-400.
+	if(t1(3).ge.300) t1(3)=t1(3)-400.
+
+	do 165 l=1,3
+c    convert UUB thermister reading to temperature      
+	ta1(l)=a+b*t1(l)+c*(t1(l)**2)+d*(t1(l)**3)+e*(t1(l)**4)+
+     1  f*(t1(l)**5)
+  165	continue
+					       
+        ta=ta1(1)
+
+	else
+	endif
+	
+	xmin=0.
+	do 500 ii=1,10
+	read(1,*,end=7000) ich,r(1),r(2),r(3),net
+
+	if(ich.eq.206) then
+	backspace (1)
+	goto 100
+	else
+	endif
+
+c    change jd and time in real
+	if(time.eq.0) then
+	hour=0.
+	min=min+xmin
+	min=min/60.
+	goto 170
+	else
+	endif
+	min=time-(aint(time/100.))*100.+xmin
+	if(min.eq.0) goto 180
+	min=min/60.
+  180   hour=aint(time/100.)
+  170   hour=(hour+min)/24.
+	jd_t=jd + hour
+	xmin=xmin+60.
+	
+c    convert Li-Core mV to W/m2
+	do 200 l=1,3
+	r(l)=r(l)*licore(l)
+  200   continue        
+
+c    convert net radiation mv to W/m2
+	if(net.ge.0) net=net*13.3*1.182
+	if(net.lt.0) net=net*13.3*0.962
+
+c    calculate the longwave out radiaton from air temp
+	lout=((ta+273.15)**4.)*0.97*.0000000567	
+
+c    calculate the net longwave radiations
+	lnet=((r(1)+r(2))/2-r(3))*(-1)+net
+
+c    calculate the longwave incoming radiation
+  	lin=lnet-lout	
+
+	write(2,2002) jd_t,(r(l),l=1,3),net,lnet,lout,lin
+ 2002   format(f9.3,3f8.1,4f7.1)
+  
+  500   continue
+
+  100   continue
+
+ 6000   continue
+ 7000   continue
+	end

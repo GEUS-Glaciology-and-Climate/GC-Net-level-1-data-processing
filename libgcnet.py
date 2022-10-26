@@ -234,3 +234,85 @@ def read_c_file(c_file_path, c_file_header_str):
     dfc = dfc.sort_index()
     # dfc = pd.concat([df1,df2]).drop_duplicates(subset=["timestamp"])
     return dfc
+
+import requests
+import nead
+
+def get_transmission(site, date_end, date_now, dfm, local_path):
+    envidat_alias = {
+        "Swiss Camp 10m": "swisscamp_10m_tower",
+        "Swiss Camp": "swisscamp",
+        "Crawford Point 1": "crawfordpoint",
+        "NASA-U": "nasa_u",
+        "GITS": "gits",
+        "Humboldt": "humboldt",
+        "Summit": "summit",
+        "Tunu-N": "tunu_n",
+        "DYE2": "dye2",
+        "JAR1": "jar1",
+        "JAR2": "jar2",
+        "Saddle": "saddle",
+        "South Dome": "southdome",
+        "NASA-E": "nasa_east",
+        "NASA-SE": "nasa_southeast",
+        "Petermann ELA": "petermann",
+        "NEEM": "neem",
+        "E-GRIP": "east_grip",
+    }
+    try:
+        os.mkdir(local_path)
+    except:
+        pass
+    remote_url = (
+        "https://www.envidat.ch/data-api/gcnet/nead/"
+        + envidat_alias[site]
+        + "/end/-999/"
+        + date_end
+        + "/"
+        + date_now
+        + "/"
+    )
+
+    local_file = local_path + site + ".csv"
+    print("requesting transmissions from", date_end, "to", date_now)
+    print("url:", remote_url)
+
+    try:
+        data = requests.get(remote_url)
+        # Save file data to local copy
+        with open(local_file, "wb") as file:
+            file.write(data.content)
+        dft = nead.read(local_file).to_dataframe()
+        print(
+            "received transmission from",
+            dft["timestamp"].iloc[0],
+            dft["timestamp"].iloc[-1],
+        )
+        dft["timestamp"] = pd.to_datetime(dft["timestamp"], utc=True)
+        dfm["timestamp"] = pd.to_datetime(dfm["timestamp"], utc=True)
+        dft = dft.set_index("timestamp")
+        dfm = dfm.set_index("timestamp")
+
+        dfm = pd.concat([dfm, dft]).reset_index()
+    except:
+        print("download failed")
+        print("reading last transmission file available")
+        pass
+    try:
+        dft = nead.read(local_file).to_dataframe()
+        print(
+            "received transmission from",
+            dft["timestamp"].iloc[0],
+            dft["timestamp"].iloc[-1],
+        )
+        dft["timestamp"] = pd.to_datetime(dft["timestamp"], utc=True)
+        dfm["timestamp"] = pd.to_datetime(dfm["timestamp"], utc=True)
+        dft = dft.set_index("timestamp")
+        dfm = dfm.set_index("timestamp")
+        dft.columns = dft.columns.str.replace('NSWR','NR')
+        dfm = pd.concat([dfm, dft]).reset_index()
+
+    except:
+        print("could not read local file")
+        pass
+    return dfm
