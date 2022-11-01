@@ -21,9 +21,7 @@ from matplotlib.dates import DateFormatter
 import matplotlib.dates as mdates
 
 # Set the locator
-years = mdates.YearLocator()  # every year
-months = mdates.MonthLocator()  # every month
-years_fmt = mdates.DateFormatter("%Y")
+
 
 # %% L0 overview
 path_to_L0N = "L0M/"

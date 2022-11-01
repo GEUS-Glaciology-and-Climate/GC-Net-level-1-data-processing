@@ -35,7 +35,7 @@ else:
     print("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(0,1):  #len(L0dirs)):
+for i in range(0, len(L0dirs)):
     print("--------------------------------")
     print("Now Processing Directory: ", L0dirs[i])
     # the file structure of raw campbell data files
@@ -325,6 +325,7 @@ for i in range(0,1):  #len(L0dirs)):
         file_list = os.listdir(path + L0dirs[i] + '/CR10X logger files')
         df_cr10x = pd.DataFrame()
         plt.figure()
+        plt.title('CR10X files at SWC10m')
         dfm.set_index('timestamp').ISWR.plot()
         for f in file_list:
             print('Reading',f)
@@ -352,8 +353,16 @@ for i in range(0,1):  #len(L0dirs)):
     else:
         print('No header specified for CR10X logger files')
     
+    # if swiss camp 10 m loading old logger files
+    if i == 0:
+        print("\nLoading CR27 logger files")
+        df_old = gc.load_old_logger_file()
+        dfm = pd.concat([df_old, dfm])
+        print("\nMerging CR10X and CR1000 logger files dataframes")
+
+        
     # read and merge historical c-level file
-    print('\nLooking for C-level files to fill the gaps')
+    print('\n\nLooking for C-level files to fill the gaps')
     if os.path.isfile(cfiledir):
         if os.path.isfile(cfiledir_jeb):
             cconfigfile = "./L0//C level Jason/c_file_header_jeb.ini"
