@@ -223,11 +223,11 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %run tools/tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
-# %% L1 overview
+# %% data availability
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[:-3]
 fig, ax = plt.subplots(1,1, figsize=(7,10))
 plt.subplots_adjust(
-        left=0.23, right=0.97, top=0.98, bottom=0.1, wspace=0.2, hspace=0.05
+        left=0.27, right=0.97, top=0.98, bottom=0.1, wspace=0.2, hspace=0.05
     )
 count = 0
 col = ['tab:red','tab:green','tab:blue','tab:orange']
@@ -253,7 +253,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         # print(site, var,df[var].first_valid_index(), df[var].last_valid_index())
         tmp = df[var].notnull() *(-count + (i-1.5)/3)
         tmp[tmp==0] = np.nan
-        plt.plot(tmp.index, tmp.values, color = col[i], marker='s',markersize=3)
+        plt.plot(tmp.index, tmp.values, color = col[i], marker='s',markersize=2.5)
         count = count+1
 plt.yticks(np.arange(len(site_list.Name))*(-4) - 1.5,
            site_list.Name)
@@ -265,7 +265,7 @@ plt.plot(np.nan,np.nan, color = col[3], label='wind', linewidth = 4.5)
 plt.legend(loc='lower left')
 
 plt.ylim(-count-1, 1)
-plt.xlim(pd.to_datetime('1994'),pd.to_datetime('2023'))
+plt.xlim(pd.to_datetime('1990'),pd.to_datetime('2023'))
 plt.grid()
 fig.savefig(
     "figures/L1_overview/data_availability.png",

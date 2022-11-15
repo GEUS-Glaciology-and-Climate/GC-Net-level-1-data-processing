@@ -693,7 +693,7 @@ def load_old_logger_file(plot=True):
     print('resolution', np.unique(np.diff(df_94_rad.index[df_94_rad.index.notnull()])))
     df_all = df_94_rad.combine_first(df_all)
     
-    # %% 
+    ######################### 30 min ####################################### 
     filename = '1990_RAD90.DAT'
     df_rad90 = pd.read_csv(path + filename, 
                            delim_whitespace=True, header=None)
@@ -709,7 +709,8 @@ def load_old_logger_file(plot=True):
     print('start date', df_rad90.index[0])
     print('end date', df_rad90.index[-1])
     print('resolution', np.unique(np.diff(df_rad90.index[df_rad90.index.notnull()])))
-    
+
+    ######################### 30 min #######################################
     filename='1990_SYNO90.DAT'
     df_syno = pd.read_csv(path+filename, 
                            delim_whitespace=True, header=None)
@@ -788,5 +789,5 @@ def load_old_logger_file(plot=True):
         ax[i].legend(loc='upper center', bbox_to_anchor=(1.5, 1.4), ncol=4)
         for i in range(6):
             ax[i].set_xlim(pd.to_datetime('1990'),pd.to_datetime('1999'))
-        plt.suptitle('Old logger files at SwissCamp 10m')
+        # plt.suptitle('Old logger files at SwissCamp 10m')
     return df_all
