@@ -647,6 +647,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     # albedo
 
     df = df_in.copy()
+    
     # Interpolation over gaps smaller than a week
     mask = df[["HW1", "HW2"]].copy()
     for i in ["HW1", "HW2"]:
@@ -723,18 +724,25 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
     # calculating SHF and LHF
     df["SHF"], df["LHF"] = jaws_tools.gradient_fluxes(df.copy())
+    
     # interpolating variables at standard heights
-    df["TA2m"] = jaws_tools.extrapolate_temp(
+    df["TA2m"] = extrapolate_temp(
         df, var=["TA1", "TA2"], target_height=2, max_diff=5
     )
-    df["RH2m"] = jaws_tools.extrapolate_temp(
+    df["RH2m"] = extrapolate_temp(
         df, var=["RH1", "RH2"], target_height=2, max_diff=10
     )
-    df["VW10m"] = jaws_tools.extrapolate_temp(
+    df["VW10m"] = extrapolate_temp(
         df, var=["VW1", "VW2"], target_height=10, max_diff=5
     )
 
-    # calculatin SZA and SAA with same script as for PROMICE stations
+    # Solar zenith and azimuth angles
+    df["SZA"], df["SAA"] = sza_ssa(df, longitude, latitude)
+    return df
+
+
+def sza_ssa(df, longitude, latitude):
+        # calculatin SZA and SAA with same script as for PROMICE stations
     doy = df.index.dayofyear.values
     hour = df.index.hour.values
     minute = df.index.minute.values
@@ -769,10 +777,40 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     )
 
     ZenithAngle_deg = ZenithAngle_rad * rad2deg
-    df["SZA"] = ZenithAngle_deg
-    df["SAA"] = DirectionSun_deg
-    return df
+    return ZenithAngle_deg, DirectionSun_deg
 
+
+def extrapolate_temp(dataframe, var=["TA1", "TA2"], target_height=2, max_diff=5):
+    ht_low = dataframe["HW1"].copy()
+    ht_high = dataframe["HW2"].copy()
+    var_low = dataframe[var[0]].copy()
+    var_high = dataframe[var[1]].copy()
+
+    # making sure the level 1 is the lowest and 2 the highest
+    ind = ht_high < ht_low
+    ht_low.loc[ind] = dataframe["HW2"].values[ind]
+    ht_high.loc[ind] = dataframe["HW1"].values[ind]
+    var_low.loc[ind] = dataframe[var[1]].values[ind]
+    var_high.loc[ind] = dataframe[var[0]].values[ind]
+
+    msk = (
+        var_low.notnull()
+        & var_high.notnull()
+        & ht_low.notnull()
+        & ht_high.notnull()
+        & ((var_low - var_high) != 0)
+        & ((ht_low - ht_high) != 0)
+    )
+    surface_temp = ht_low * np.nan
+
+    surface_temp.loc[msk] = var_low.loc[msk] - (
+        ((var_high.loc[msk] - var_low.loc[msk]) / (ht_high.loc[msk] - ht_low.loc[msk]))
+        * (target_height - ht_low.loc[msk])
+    )
+    diff_1 = (surface_temp - var_low).abs()
+    diff_2 = (surface_temp - var_high).abs()
+    surface_temp.loc[(diff_1 > max_diff) | (diff_2 > max_diff)] = np.nan
+    return surface_temp
 
 # Filter frozen values
 from scipy.ndimage import binary_dilation

@@ -37,37 +37,7 @@ except ImportError:
     import common, sunposition, clearsky, tilt_angle, fsds_adjust
 
 
-def extrapolate_temp(dataframe, var=["TA1", "TA2"], target_height=2, max_diff=5):
-    ht_low = dataframe["HW1"].copy()
-    ht_high = dataframe["HW2"].copy()
-    var_low = dataframe[var[0]].copy()
-    var_high = dataframe[var[1]].copy()
 
-    # making sure the level 1 is the lowest and 2 the highest
-    ind = ht_high < ht_low
-    ht_low.loc[ind] = dataframe["HW2"].values[ind]
-    ht_high.loc[ind] = dataframe["HW1"].values[ind]
-    var_low.loc[ind] = dataframe[var[1]].values[ind]
-    var_high.loc[ind] = dataframe[var[0]].values[ind]
-
-    msk = (
-        var_low.notnull()
-        & var_high.notnull()
-        & ht_low.notnull()
-        & ht_high.notnull()
-        & ((var_low - var_high) != 0)
-        & ((ht_low - ht_high) != 0)
-    )
-    surface_temp = ht_low * np.nan
-
-    surface_temp.loc[msk] = var_low.loc[msk] - (
-        ((var_high.loc[msk] - var_low.loc[msk]) / (ht_high.loc[msk] - ht_low.loc[msk]))
-        * (target_height - ht_low.loc[msk])
-    )
-    diff_1 = (surface_temp - var_low).abs()
-    diff_2 = (surface_temp - var_high).abs()
-    surface_temp.loc[(diff_1 > max_diff) | (diff_2 > max_diff)] = np.nan
-    return surface_temp
 
 
 def gradient_fluxes(df):  # This method is very sensitive to input data quality
@@ -161,21 +131,3 @@ def gradient_fluxes(df):  # This method is very sensitive to input data quality
     lh = num / dnm
     lh[np.abs(lh) >= 100] = np.nan
     return sh, lh
-
-
-import pvlib
-from pvlib.location import Location
-
-
-def get_saa_sza(dataframe, longitude, latitude, elevation, site):
-    location = Location(
-        latitude, longitude, "UTC", elevation, site
-    )  # latitude, longitude, time_zone, altitude, name
-
-    # Definition of a time range of simulation
-    times = pd.to_datetime(dataframe.index.values, utc=True)
-
-    # Estimate Solar Position with the 'Location' object
-    solpos = location.get_solarposition(times)
-
-    return solpos.azimuth.values, solpos.zenith.values
