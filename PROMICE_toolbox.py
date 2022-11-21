@@ -89,25 +89,12 @@ def name_alias(name_in):
 
 
 def field_info(fields):
-    field_list = "timestamp,ISWR,ISWR_max,ISWR_std,OSWR,OSWR_max,NR,NR_max,NR_std,TA1,TA1_max,TA1_min,TA2,TA2_max,TA2_min,TA3,TA4,RH1,RH2,VW1,VW1_max,VW1_stdev,VW2,VW2_max,VW2_stdev,DW1,DW2,P,HS1,HS2,HW1,HW2,V,TA5,TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8,TS9,TS10,Tsurf1,Tsurf2,IUVR,ILWR,SHF,LHF,TA2m,RH2m,VW10m,SAA,SZA".split(
-        ","
-    )
-
-    units = "time,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,%/100,%/100,m/s,m/s,m/s,m/s,m/s,m/s,Degrees,Degrees,mbar,m,m,m,m,V,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,Degrees C,W/m^2,W/m^2,W/m^2,W/m^2,Degrees C,%/100,m/s,Degrees,Degrees".split(
-        ","
-    )
-
-    display_description = "timestamp_iso,shortwave_incoming_radiation,shortwave_incoming_radiation_max,shortwave_incoming_radiation_stdev,shortwave_outgoing_radiation,shortwave_outgoing_radiation_max,net_radiation,net_radiation_maximum,net_radiation_stdev,air_temperature_1,air_temperature_1_max,air_temperature_1_min,air_temperature_2,air_temperature_2_max,air_temperature_2_min,air_temperature_cs500_air1,air_temperature_cs500_air2,relative_humidity_1,relative_humidity_2,wind_speed_1,wind_speed_u1_max,wind_speed_u1_stdev,wind_speed_2,wind_speed_u2_max,wind_speed_u2_stdev,wind_from_direction_1,wind_from_direction_2,air_pressure,snow_depth_1,snow_depth_2,height_wind_sensor_1,height_wind_sensor_2,battery_voltage,ref_temperature,snow_temperature_1,snow_temperature_2,snow_temperature_3,snow_temperature_4,snow_temperature_5,snow_temperature_6,snow_temperature_7,snow_temperature_8,snow_temperature_9,snow_temperature_10,surface_temperature_1,surface_temperature_2,incoming_uv_radiation,incoming_longwave_radiation,sensible_heat_flux,latent_heat_flux,air_temperature_2m,relative_humidity_2m,wind_speed_10m,solar_azimuth_angle,solar_zenith_angle".split(
-        ","
-    )
-
-    database_fields = "timestamp_iso,swin,swin_maximum,swin_stdev,swout,swout_maximum,netrad,netrad_max,netrad_stdev,airtemp1,airtemp1_maximum,airtemp1_minimum,airtemp2,airtemp2_maximum,airtemp2_minimum,airtemp_cs500air1,airtemp_cs500air2,rh1,rh2,windspeed1,windspeed_u1_maximum,windspeed_u1_stdev,windspeed2,windspeed_u2_maximum,windspeed_u2_stdev,winddir1,winddir2,pressure,sh1,sh2,hw1,hw2,battvolt,reftemp,ts1,ts2,ts3,ts4,ts5,ts6,ts7,ts8,ts9,ts10,tsurf1,tsurf2,uvin,lwin,shf,lhf,airtemp_2m,rh_2m,windspeed_10m,solar_azimuth_angle,solar_zenith_angle".split(
-        ","
-    )
-
-    database_fields_data_types = "timestamp,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real,real".split(
-        ","
-    )
+    tmp =pd.read_csv('metadata/L1_variable_list.csv', skipinitialspace=True)
+    field_list = tmp.fields.tolist()
+    units = tmp.units.tolist()
+    display_description = tmp.display_description.tolist()
+    database_fields = tmp.database_fields.tolist()
+    database_fields_data_types = tmp.database_fields_data_types.tolist()
 
     field_list = (
         field_list
@@ -252,7 +239,7 @@ def flag_data(df, site, var_list=["all"]):
             "![Erroneous data at "
             + site
             + "](../figures/L1_data_treatment/"
-            + site.replace(" ", "_")
+            + site.replace(" ", "")
             + "_"
             + var
             + "_data_flagging.png)"
@@ -319,7 +306,7 @@ def plot_flagged_data(df, site, tag=""):
                 plt.title(site)
                 fig.savefig(
                     "figures/L1_data_treatment/"
-                    + site.replace(" ", "_")
+                    + site.replace(" ", "")
                     + "_"
                     + var[:-3]
                     + "_data_flagging"
@@ -612,7 +599,7 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
             plt.title(site)
             fig.savefig(
                 "figures/L1_data_treatment/"
-                + site.replace(" ", "_")
+                + site.replace(" ", "")
                 + "_adj_"
                 + var
                 + ".jpeg",
@@ -624,7 +611,7 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
                 "![Adjusted data at "
                 + site
                 + "](../figures/L1_data_treatment/"
-                + site.replace(" ", "_")
+                + site.replace(" ", "")
                 + "_adj_"
                 + var
                 + ".jpeg)"
@@ -737,11 +724,110 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     )
 
     # Solar zenith and azimuth angles
-    df["SZA"], df["SAA"] = sza_ssa(df, longitude, latitude)
+    df["SZA"], df["SAA"] = sza_saa(df, longitude, latitude)
+    
+    # Albedo
+    if 'OSWR' in df.columns:
+        df['Alb'] = calcAlbedo(df.OSWR, df.ISWR, df.SZA)
+    
+    # Humidity with regard to ice and specific humidity
+    T1 = df.TA1.copy()
+    T1.loc[df.TA1.isnull()] = df.loc[df.TA1.isnull(), 'TA3']
+    df['RH1_cor'] = correctHumidity(df.RH1, T1)
+    T2 = df.TA2.copy()
+    T2.loc[df.TA1.isnull()] = df.loc[df.TA2.isnull(), 'TA4']
+    df['RH2_cor'] = correctHumidity(df.RH2, T2)
+
+    df['SH1'] = calcHumid(T1, df.P, df.RH1_cor)  
+    df['SH2'] = calcHumid(T2, df.P, df.RH2_cor)  
     return df
 
 
-def sza_ssa(df, longitude, latitude):
+def calcHumid(T_h, p_h, RH_cor_h, T_0=273.15, T_100=373.15,
+              es_0=6.1071, es_100=1013.246, eps=0.622):
+    '''Calculate specific humidity'''                                                         
+    # Saturation vapour pressure above 0 C (hPa)
+    es_wtr = 10**(-7.90298 * (T_100 / (T_h + T_0) - 1) + 5.02808 * np.log10(T_100 / (T_h + T_0))
+                  - 1.3816E-7 * (10**(11.344 * (1 - (T_h + T_0) / T_100)) - 1)
+                  + 8.1328E-3 * (10**(-3.49149 * (T_100 / (T_h + T_0) -1)) - 1) + np.log10(es_100))
+
+    # Saturation vapour pressure below 0 C (hPa)
+    es_ice = 10**(-9.09718 * (T_0 / (T_h + T_0) - 1) - 3.56654
+                  * np.log10(T_0 / (T_h + T_0)) + 0.876793
+                  * (1 - (T_h + T_0) / T_0)
+                  + np.log10(es_0)) 
+
+    # Specific humidity at saturation (incorrect below melting point)
+    q_sat = eps * es_wtr / (p_h - (1 - eps) * es_wtr) 
+    
+    # Replace saturation specific humidity values below melting point
+    freezing = T_h < 0  
+    q_sat[freezing] = eps * es_ice[freezing] / (p_h[freezing] - (1 - eps) * es_ice[freezing])
+    
+    # Convert to kg/kg
+    return RH_cor_h * q_sat / 100 
+
+
+def correctHumidity(rh, T, T_0=273.15, T_100=373.15, ews=1013.246, ei0=6.1071):
+    '''Correct relative humidity using Groff & Gratch method
+    Parameters
+    ----------
+    rh : xarray.DataArray
+        Relative humidity
+    T : xarray.DataArray
+        Air temperature
+    T_0 : int
+        Steam point temperature
+    T_100 : int
+        Steam point temperature in K
+    ews : int
+        Saturation pressure (normal atmosphere) at steam point temperature
+    ei0 : int
+        DESCRIPTION
+        
+    Returns
+    -------
+    xarray.DataArray
+        Corrected relative humidity
+    '''                                            
+    # Convert to hPa (Groff & Gratch)   
+    e_s_wtr = 10**(-7.90298 * (T_100 / (T + T_0) - 1)
+                   + 5.02808 * np.log10(T_100 / (T + T_0)) 
+                   - 1.3816E-7 * (10**(11.344 * (1 - (T + T_0) / T_100)) - 1)
+                   + 8.1328E-3 * (10**(-3.49149 * (T_100/(T + T_0) - 1)) -1)
+                   + np.log10(ews))
+    e_s_ice = 10**(-9.09718 * (T_0 / (T + T_0) - 1)
+                   - 3.56654 * np.log10(T_0 / (T + T_0))
+                   + 0.876793 * (1 - (T + T_0) / T_0)
+                   + np.log10(ei0))
+    
+    # Define freezing point. Why > -100?  
+    freezing = (T < 0) & (T > -100).values 
+
+    # Set to Groff & Gratch values when freezing, otherwise just rh                         
+    rh_cor = rh.where(~freezing, other = rh*(e_s_wtr / e_s_ice)) 
+    return rh_cor  
+
+
+def calcAlbedo(usr, dsr_cor, ZenithAngle_deg):
+    '''Calculate surface albedo based on upwelling and downwelling shorwave 
+    flux, the angle between the sun and sensor, and the sun zenith'''
+    albedo = usr / dsr_cor    
+    
+    # NaN bad data
+    OKalbedos = (ZenithAngle_deg < 70) & (albedo < 1) & (albedo > 0)    
+    albedo[~OKalbedos] = np.nan             
+    
+    # Interpolate all. Note "use_coordinate=False" is used here to force 
+    # comparison against the GDL code when that is run with *only* a TX file. 
+    # Should eventually set to default (True) and interpolate based on time, 
+    # not index.                                           
+    # albedo = albedo.interpolate_na(dim='time', use_coordinate=False)           
+    # albedo = albedo.ffill(dim='time').bfill(dim='time')                        #TODO remove this line and one above?
+    return albedo
+
+
+def sza_saa(df, longitude, latitude):
         # calculatin SZA and SAA with same script as for PROMICE stations
     doy = df.index.dayofyear.values
     hour = df.index.hour.values
