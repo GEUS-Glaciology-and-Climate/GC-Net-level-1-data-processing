@@ -108,16 +108,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
     )
     # removing empty rows:
     useful_var_list = [
-        "ISWR",
-        "OSWR",
-        "NR",
-        "TA1",
-        "TA2",
-        "TA3",
-        "TA4",
-        "RH1",
-        "RH2",
-        "P",
+        "ISWR",  "OSWR", "NR", "TA1", "TA2", "TA3",
+        "TA4",  "RH1" "RH2", "P",
     ] + ["TS" + str(i) for i in range(1, 11)]
     ind_first = df_v6[
         [v for v in useful_var_list if v in df_v6.columns]

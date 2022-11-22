@@ -738,8 +738,8 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     T2.loc[df.TA1.isnull()] = df.loc[df.TA2.isnull(), 'TA4']
     df['RH2_cor'] = correctHumidity(df.RH2, T2)
 
-    df['SH1'] = calcHumid(T1, df.P, df.RH1_cor)  
-    df['SH2'] = calcHumid(T2, df.P, df.RH2_cor)  
+    df['SH1'] = calcHumid(T1, df.P, df.RH1_cor)  *1000
+    df['SH2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
     return df
 
 

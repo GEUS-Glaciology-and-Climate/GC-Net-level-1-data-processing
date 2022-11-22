@@ -107,9 +107,10 @@ Warning: HS2 not found
 ### Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2009-05-01T00:00:00+00:00|2022-08-03T19:00:00+00:00|add|-0.5|0|
 |2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|biweekly_upper_range_filter|0.5|9349|
-|2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|hampel_filter|2.0|733|
+|2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|biweekly_upper_range_filter|0.5|9287|
+|2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|hampel_filter|2.0|789|
  
 ![Adjusted data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_adj_HW1.jpeg)
  
@@ -117,10 +118,11 @@ Warning: HS2 not found
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |1995-01-12T00:00:00+00:00|2000-01-01T00:00:00+00:00|max_filter|8.0|19148|
+|2009-05-01T00:00:00+00:00|2022-08-03T19:00:00+00:00|add|0.3|0|
 |2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|biweekly_upper_range_filter|0.5|13732|
-|2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|hampel_filter|2.0|3296|
-|2018-03-12T00:00:00+00:00|2018-05-12T00:00:00+00:00|max_filter|0.77|13|
+|2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|biweekly_upper_range_filter|0.5|13737|
+|2009-05-15T00:00:00+00:00|2022-08-03T19:00:00+00:00|hampel_filter|2.0|3607|
+|2018-03-12T00:00:00+00:00|2018-05-12T00:00:00+00:00|max_filter|0.77|430|
  
 ![Adjusted data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_adj_HW2.jpeg)
  
@@ -162,7 +164,6 @@ Warning: HS2 not found
 ### Adjusting HS1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2002-01-19T00:00:00+00:00|2022-08-03T19:00:00+00:00|add|1.5|0|
 |2003-01-19T00:00:00+00:00|2022-08-03T19:00:00+00:00|add|-0.6|0|
 |2003-04-27T00:00:00+00:00|2022-08-03T19:00:00+00:00|add|0.4|0|
 |2014-05-08T00:00:00+00:00|2022-08-03T19:00:00+00:00|add|-2.0|0|
