@@ -301,8 +301,16 @@
       * [Adjusting HW2](#s25-2-3)
       * [Adjusting HS1](#s25-2-4)
       * [Adjusting HS2](#s25-2-5)
-      * [Adjusting HS1](#s25-2-6)
-      * [Adjusting HS2](#s25-2-7)
+* [30 LAR1](#s26)
+  * [Manual flagging of data at LAR1](#s26-1)
+  * [Adjusting data at LAR1](#s26-2)
+      * [Adjusting ISWR](#s26-2-1)
+* [31 LAR2](#s27)
+  * [Manual flagging of data at LAR2](#s27-1)
+  * [Adjusting data at LAR2](#s27-2)
+* [32 LAR3](#s28)
+  * [Manual flagging of data at LAR3](#s28-1)
+  * [Adjusting data at LAR3](#s28-2)
 # <a id='s1' />0 Swiss Camp 10m
 ## <a id='s1-1' />Manual flagging of data at Swiss Camp 10m
 Flagging data:
@@ -3916,17 +3924,26 @@ Warning: OSWR not found
  
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
  
-### <a id='s25-2-6' />Adjusting HS1
+# <a id='s26' />30 LAR1
+## <a id='s26-1' />Manual flagging of data at LAR1
+No erroneous data listed for LAR1
+## <a id='s26-2' />Adjusting data at LAR1
+### <a id='s26-2-1' />Adjusting ISWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2016-05-23T00:00:00+00:00|2022-09-20T23:00:00+00:00|add|2.0|0|
+|2000-01-01T00:00:00+00:00|2012-01-01T00:00:00+00:00|swap_with_OSWR|0.0|0|
  
-![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS1.jpeg)
+![Adjusted data at LAR1](../figures/L1_data_treatment/LAR1_adj_ISWR.jpeg)
  
-### <a id='s25-2-7' />Adjusting HS2
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|2016-05-23T00:00:00+00:00|2022-09-20T23:00:00+00:00|add|2.0|0|
- 
-![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
- 
+# <a id='s27' />31 LAR2
+## <a id='s27-1' />Manual flagging of data at LAR2
+No erroneous data listed for LAR2
+## <a id='s27-2' />Adjusting data at LAR2
+No data to fix at LAR2
+No data to fix at LAR2
+# <a id='s28' />32 LAR3
+## <a id='s28-1' />Manual flagging of data at LAR3
+No erroneous data listed for LAR3
+## <a id='s28-2' />Adjusting data at LAR3
+No data to fix at LAR3
+No data to fix at LAR3

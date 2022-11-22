@@ -3611,17 +3611,26 @@ Warning: OSWR not found
  
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
  
-### Adjusting HS1
+# 30 LAR1
+## Manual flagging of data at LAR1
+No erroneous data listed for LAR1
+## Adjusting data at LAR1
+### Adjusting ISWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2016-05-23T00:00:00+00:00|2022-09-20T23:00:00+00:00|add|2.0|0|
+|2000-01-01T00:00:00+00:00|2012-01-01T00:00:00+00:00|swap_with_OSWR|0.0|0|
  
-![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS1.jpeg)
+![Adjusted data at LAR1](../figures/L1_data_treatment/LAR1_adj_ISWR.jpeg)
  
-### Adjusting HS2
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|2016-05-23T00:00:00+00:00|2022-09-20T23:00:00+00:00|add|2.0|0|
- 
-![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
- 
+# 31 LAR2
+## Manual flagging of data at LAR2
+No erroneous data listed for LAR2
+## Adjusting data at LAR2
+No data to fix at LAR2
+No data to fix at LAR2
+# 32 LAR3
+## Manual flagging of data at LAR3
+No erroneous data listed for LAR3
+## Adjusting data at LAR3
+No data to fix at LAR3
+No data to fix at LAR3

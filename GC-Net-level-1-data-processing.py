@@ -13,13 +13,18 @@ import os, sys
 import PROMICE_toolbox as ptb
 import matplotlib.pyplot as plt
 import pandas as pd
-import nead
 import os.path
 import numpy as np
 import jaws_tools
 import tocgen
-
 from os import path
+import nead
+
+class CustomError(Exception):
+    pass
+
+if not hasattr(nead, 'build_header_obj'):
+    raise CustomError('Please install the latest version of pyNEAD. \nVisit https://github.com/GEUS-Glaciology-and-Climate/pyNEAD/') 
 
 try:
     os.mkdir("figures")
@@ -130,9 +135,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
         
         df_v6.attrs['averaging'] = 'hourly'
 
-        # write ini file
-        nead.write_header(
-            "L1_ini/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_header.ini",
+        # build header object
+        header_obj = nead.build_header_obj(
             df_v6.reset_index(),
             metadata=ds.attrs,
             units=units,
@@ -144,7 +148,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         # saving to file
         nead.write(
             df_v6.reset_index(),
-            "L1_ini/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_header.ini",
+            header_obj,
             "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + ".csv",
         )
         
@@ -176,8 +180,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         df_v7.attrs['averaging'] = 'daily'
 
         # write ini file
-        nead.write_header(
-            "L1_ini/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_header_daily.ini",
+        header_obj = nead.build_header_obj(
             df_v7.reset_index(),
             metadata=ds.attrs,
             units=units,
@@ -189,7 +192,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         # saving to file
         nead.write(
             df_v7.reset_index(),
-            "L1_ini/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_header_daily.ini",
+            header_obj,
             "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_daily.csv",
         )
         
