@@ -21,3 +21,10 @@ t0,t1,variable,flag,comment,URL_graphic
 2007-06-01T00:00:00+00:00,,TS8,CHECKME,Manually flagged by bav,
 2007-06-01T00:00:00+00:00,,TS9,CHECKME,Manually flagged by bav,
 2007-06-01T00:00:00+00:00,,TS10,CHECKME,Manually flagged by bav,
+
+2020-11-01T00:00:00+00:00,, TA1, NAN, bav,
+2020-11-01T00:00:00+00:00,, TA3, NAN, bav,
+2020-11-01T00:00:00+00:00,, RH1, NAN, bav,
+2020-11-01T00:00:00+00:00,, VW2, NAN, bav,
+2020-11-01T00:00:00+00:00,, DW2, NAN, bav,
+2015-01-01T00:00:00+00:00, 2018-05-01T00:00:00+00:00, TA4, NAN, bav,

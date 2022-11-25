@@ -25,15 +25,13 @@ tip list:
 
 import pandas as pd
 import numpy as np
-import matplotlib as mpl
 import matplotlib.pyplot as plt
-from collections import Counter
 import math
 import datetime
 import pytz
 import os
 import warnings
-import difflib
+import jaws_tools
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
@@ -197,7 +195,7 @@ def flag_data(df, site, var_list=["all"]):
         Msg("No erroneous data listed for " + site)
         return df
 
-    flag_data = pd.read_csv("metadata/flags/" + site + ".csv", comment="#")
+    flag_data = pd.read_csv("metadata/flags/" + site + ".csv", comment="#", skipinitialspace=True)
 
     flag_data.t0 = pd.to_datetime(flag_data.t0)
     flag_data.t0 = flag_data.t0.apply(
@@ -280,9 +278,17 @@ def plot_flagged_data(df, site, tag=""):
                         df.loc[df[var] == flag, var[:-3]].plot(
                             marker="o", linestyle="none", color="orange", label=flag
                         )
+                    elif flag == "NAN":
+                        df.loc[df[var] == flag, var[:-3]].plot(
+                            marker="o", linestyle="none", color="violet", label=flag
+                        )
                     elif flag == "OOL":
                         df.loc[df[var] == flag, var[:-3]].plot(
                             marker="o", linestyle="none", color="red", label=flag
+                        )
+                    elif flag == "IWS":
+                        df.loc[df[var] == flag, var[:-3]].plot(
+                            marker="o", linestyle="none", color="cyan", label=flag
                         )
                     elif flag == "FROZEN":
                         df.loc[df[var] == flag, var[:-3]].plot(
@@ -621,10 +627,6 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
     return df_out
 
 
-import jaws_tools
-from progressbar import progressbar
-
-
 def augment_data(df_in, latitude, longitude, elevation, site):
     # Interpolate small gaps in available variables
     # and add variables to the dataset:
@@ -740,6 +742,8 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
     df['SH1'] = calcHumid(T1, df.P, df.RH1_cor)  *1000
     df['SH2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
+    df.loc[df['SH1']>40, 'SH1'] = np.nan
+    df.loc[df['SH2']>40, 'SH2'] = np.nan
     return df
 
 
@@ -918,8 +922,6 @@ def filter_zero_gradient(df_out):
         "TA3",
         "TA4",
         "P",
-        "RH1",
-        "RH2",
         "HW1",
         "HW2",
         "ISWR",
@@ -1010,7 +1012,13 @@ def filter_data(df, site, plot=True, remove_data=False):
     msk4 = df_out.HW2.isnull().shift(-2).fillna(False)
     msk = (msk2 & msk3) | (msk1 & msk3) | (msk2 & msk4)
     df_out.loc[msk, "HW2"] = np.nan
-
+    
+    # Filtering DW for low or NaN values of VW
+    msk = df_out.VW1.isnull() | df_out.VW1 < 0.5
+    df_out.loc[msk, "DW1_qc"] = "IWS"
+    msk = df_out.VW2.isnull() | df_out.VW2 < 0.5
+    df_out.loc[msk, "DW2_qc"] = "IWS"
+    
     return df_out
 
 

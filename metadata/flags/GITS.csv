@@ -15,15 +15,11 @@ t0,t1,variable,flag,comment,URL_graphic
 2007-01-01T00:00:00+00:00,2014-05-01T00:00:00+00:00,P,CHECKME,Manually flagged by bav,
 1995-01-01T00:00:00+00:00,1996-05-01T00:00:00+00:00,P,CHECKME,Manually flagged by bav,
 
+2012-01-01, 2014-06-01, DW2, NAN,confirmed by bav,
 2014-01-01T00:00:00+00:00,2014-04-26T00:00:00+00:00,ISWR,CHECKME,Manually flagged by bav,
-
 
 2015-08-23T00:00:00+00:00,2016-04-06T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
 2016-06-07T00:00:00+00:00,2018-05-15T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
-
-2019-10-28T00:00:00+00:00,,DW2,CHECKME,Manually flagged by bav,
-2020--08-10T00:00:00+00:00,,ISWR,CHECKME,Manually flagged by bav,
-2020--08-10T00:00:00+00:00,,OSWR,CHECKME,Manually flagged by bav,
 
 2010-01-01T00:00:00+00:00,,TS1,CHECKME,Manually flagged by bav,
 2010-01-01T00:00:00+00:00,,TS2,CHECKME,Manually flagged by bav,
@@ -35,3 +31,12 @@ t0,t1,variable,flag,comment,URL_graphic
 2010-01-01T00:00:00+00:00,,TS8,CHECKME,Manually flagged by bav,
 2010-01-01T00:00:00+00:00,,TS9,CHECKME,Manually flagged by bav,
 2010-01-01T00:00:00+00:00,,TS10,CHECKME,Manually flagged by bav,
+
+2019-10-28T00:00:00+00:00,,DW2,CHECKME,Manually flagged by bav,
+2020-08-10T00:00:00+00:00,,ISWR,NAN,Manually flagged by bav,
+2020-08-10T00:00:00+00:00,,OSWR,NAN,Manually flagged by bav,
+2020-08-29T00:00:00+00:00,,TA1,NAN,TA1 and TA2 dampened,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/94
+2020-08-29T00:00:00+00:00,,TA2,NAN,TA1 and TA2 dampened,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/94
+2020-08-29T00:00:00+00:00,,TA3,NAN,TA1 and TA2 dampened,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/94
+2020-08-29T00:00:00+00:00,,RH2,NAN,TA1 and TA2 dampened,
+
