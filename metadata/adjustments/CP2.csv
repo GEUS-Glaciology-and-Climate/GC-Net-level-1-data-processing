@@ -18,3 +18,5 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1999-05-27T00:00:00+00:00,,HS2,add,1,Not reported. Manual shift suggested by bav.
 2000-06-02T00:00:00+00:00,,HS1,add,1.7,Not reported. Manual shift suggested by bav.
 2000-06-02T00:00:00+00:00,,HS2,add,1.7,Not reported. Manual shift suggested by bav.
+
+1997-01-01T00:00:00+00:00,,TA1,swap_with_TA2,0,Confirmed by bav.

@@ -1,12 +1,11 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 19970101T00:00:00+00:00,,HS1,add,1.25,Not reported. Manual shift suggested by bav.
-19990514T16:00:00+00:00,,HS1,add,2.25,Not reported. Manual shift suggested by bav.
+19990514T16:00:00+00:00,,HS1,add,4.25,Not reported. Manual shift suggested by bav.
 20030603T16:00:00+00:00,,HS1,add,4.0,Not reported. Manual shift suggested by bav.
 20050525T00:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
 20090420T16:00:00+00:00,,HS1,add,1.5,Not reported. Manual shift suggested by bav.
 20110601T22:00:00+00:00,,HS1,add,0.7,Not reported. Manual shift suggested by bav.
 20130525T22:00:00+00:00,,HS1,add,2.3,Not reported. Manual shift suggested by bav.
-20140531T00:00:00+00:00,,HS1,add,2.0,Not reported. Manual shift suggested by bav.
 20180101T00:00:00+00:00,,HS1,add,2.0,Not reported. Manual shift suggested by bav.
 
 19970101T00:00:00+00:00,,HS2,add,1.25,Not reported. Manual shift suggested by bav.
@@ -20,8 +19,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20170115T00:00:00+00:00,,HS2,add,1.5,Not reported. Manual shift suggested by bav.
 
 # Realtive humidity back to water
-1995-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH1,ice_to_water,0, 
-1995-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH2,ice_to_water,0, 
+1995-01-01T00:00:00+00:00,2011-05-30T00:00:00+00:00,RH1,ice_to_water,0, 
+1995-01-01T00:00:00+00:00,2011-05-30T00:00:00+00:00,RH2,ice_to_water,0, 
 
 # calibration of OSWR with LiCor offset
 2011-05-31T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89

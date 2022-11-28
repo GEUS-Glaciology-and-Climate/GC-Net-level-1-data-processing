@@ -1,4 +1,6 @@
 t0,t1,variable,flag,comment,URL_graphic
 2005-09-01T00:00:00+00:00,2006-01-01T00:00:00+00:00,HS1,CHECKME,Manually flagged by bav,
 2005-09-01T00:00:00+00:00,2006-01-01T00:00:00+00:00,HS2,CHECKME,Manually flagged by bav,
+2008-01-01T00:00:00+00:00,,TA1,NAN,lower level getting buried (bav),
+2008-01-01T00:00:00+00:00,,RH1,NAN,lower level getting buried (bav),
 

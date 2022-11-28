@@ -493,10 +493,7 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
                 df_out.loc[t0:t1, var] = val_var2
 
             if func == "rotate":
-                df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values + val
-                df_out.loc[t0:t1, var][df_out.loc[t0:t1, var] > 360] = (
-                    df_out.loc[t0:t1, var] - 360
-                )
+                df_out.loc[t0:t1, var] = (df_out.loc[t0:t1, var].values + val) % 360
 
             if func == "air_temp_sonic_correction":
                 # finding the available air temp measurements
@@ -985,7 +982,7 @@ def filter_data(df, site, plot=True, remove_data=False):
     df_out = df.copy()
 
     # Limits filter:
-    df_lim = pd.read_csv("metadata/limits.csv", sep="\s*,\s*", engine="python")
+    df_lim = pd.read_csv("metadata/limits.csv", skipinitialspace=True)
     df_lim.columns = ["site", "var_lim", "var_min", "var_max"]
     for site_lim, var, var_min, var_max in zip(
         df_lim.site, df_lim.var_lim, df_lim.var_min, df_lim.var_max

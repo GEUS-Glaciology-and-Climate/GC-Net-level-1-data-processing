@@ -3,7 +3,10 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20020503T00:00:00+00:00,,HS1,add,-1.5,Not reported. Manual shift suggested by bav.
 20020914T00:00:00+00:00,,HS1,add,1,Not reported. Manual shift suggested by bav.
 20030424T00:00:00+00:00,,HS1,add,-1,Not reported. Manual shift suggested by bav.
+20060511T00:00:00+00:00,,HS1,add,-2,Not reported. Manual shift suggested by bav.
+20070517T00:00:00+00:00,,HS1,add,-1,Not reported. Manual shift suggested by bav.
 20080424T00:00:00+00:00,,HS1,add,-2,Not reported. Manual shift suggested by bav.
+20090429T00:00:00+00:00,,HS1,add,-0.5,Not reported. Manual shift suggested by bav.
 20100424T00:00:00+00:00,,HS1,add,-2,Not reported. Manual shift suggested by bav.
 20110424T00:00:00+00:00,,HS1,add,-2,Not reported. Manual shift suggested by bav.
 20140424T00:00:00+00:00,,HS1,add,-2,Not reported. Manual shift suggested by bav.
@@ -13,7 +16,10 @@ t0,t1,variable,adjust_function,adjust_value,comment
 19990524T00:00:00+00:00,,HS2,add,-2,Not reported. Manual shift suggested by bav.
 20020503T00:00:00+00:00,,HS2,add,-1.5,Not reported. Manual shift suggested by bav.
 20030424T00:00:00+00:00,,HS2,add,-1,Not reported. Manual shift suggested by bav.
+20060511T00:00:00+00:00,,HS2,add,-2,Not reported. Manual shift suggested by bav.
+20070517T00:00:00+00:00,,HS2,add,-1,Not reported. Manual shift suggested by bav.
 20080424T00:00:00+00:00,,HS2,add,-2,Not reported. Manual shift suggested by bav.
+20090429T00:00:00+00:00,,HS2,add,-1,Not reported. Manual shift suggested by bav.
 20100424T00:00:00+00:00,,HS2,add,-2,Not reported. Manual shift suggested by bav.
 20110424T00:00:00+00:00,,HS2,add,-2,Not reported. Manual shift suggested by bav.
 20140424T00:00:00+00:00,,HS2,add,-2,Not reported. Manual shift suggested by bav.
@@ -26,8 +32,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 2018-02-01T00:00:00+00:00,2019-12-20T00:00:00+00:00,TA3,max_filter,9,Manually flagged by bav
 2013-02-01T00:00:00+00:00,2015-12-20T00:00:00+00:00,TA4,max_filter,9,Manually flagged by bav
-
-
+2005-01-01T00:00:00+00:00,2013-01-01T00:00:00+00:00,TA4,swap_with_TA3,0,Manually flagged by bav
 
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
