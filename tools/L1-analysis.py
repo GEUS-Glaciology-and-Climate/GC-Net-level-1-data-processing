@@ -578,7 +578,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %% radiation overview
 plt.close("all")
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
 # site_list = site_list.loc[site_list.Name.values == 'Crawford Point 1',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
@@ -642,16 +642,18 @@ for site, ID in zip(site_list.Name, site_list.ID):
 # %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
 #%% Surface height overview
+plt.close('all')
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
 
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
-
-fig, ax = plt.subplots(5, 5, figsize=(15, 15))
+fig, ax = plt.subplots(4, 5, figsize=(17, 10))
 ax = ax.flatten()
 plt.subplots_adjust(
-    left=0.05, right=0.99, top=0.94, bottom=0.1, wspace=0.15, hspace=0.25
+    left=0.05, right=0.99, top=0.94, bottom=0.12, wspace=0.15, hspace=0.5
 )
 count = 0
 for site, ID in zip(site_list.Name, site_list.ID):
+    if site in ['Swiss Camp 10m', 'Aurora', 'KULU', 'JAR3', 'LAR1', 'LAR2', 'LAR3', 'KAR']:
+        continue
     print("# " + str(ID) + " " + site)
     site = site.replace(" ", "")
 
@@ -676,11 +678,13 @@ for site, ID in zip(site_list.Name, site_list.ID):
     ax[count].set_title(str(ID) + " " + site)
     ax[count].set_xlabel("")
     ax[count].grid()
-    # ax[i,j].axes.xaxis.set_major_locator(locator)
+    if ID == 0:
+        ax[count].set_xlim('2010','2020')
     count = count + 1
 for k in range(count, len(ax)):
     ax[k].set_axis_off()
-
+for k in [13,17,18,19]:
+    ax[k].tick_params('x', labelrotation=45)
 fig.savefig("figures/L1_overview/HS_overview.png", bbox_inches="tight")
 
 

@@ -1,0 +1,147 @@
+;{CR10}
+;
+
+; --------------------------------------------------------------------
+;   Smart Stake INSTRUMENT CALIBRATION Program for CR10 Datalogger
+;   Version:  30-May-2001
+;
+;   Includes instructions for 2x HMP45C's and 2 TCs
+;           Note: This is a second calibration of instruments intended
+;                 to replace rotronics
+; --------------------------------------------------------------------
+
+
+*Table 1 Program
+  01: 10        Execution Interval (seconds)
+; 10 sec for calibration
+
+
+; Turn on both HMPs
+
+1:  Do (P86)
+ 1: 41       Set Port 1 High
+
+
+;Allow HMP instruments to warm up and T and RH values to stabalize
+
+2:  Excitation with Delay (P22)
+ 1: 3        Ex Channel
+ 2: 0        Delay W/Ex (units = 0.01 sec)
+ 3: 200      Delay After Ex (units = 0.01 sec)
+ 4: 0        mV Excitation
+; this only makes a delay, there is no excitation
+
+
+; Measure HMP Temperature
+
+3:  Volt (SE) (P1)
+ 1: 2        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 1        SE Channel
+ 4: 1        Loc [ tair_1    ]
+ 5: .1       Mult
+ 6: -40      Offset
+
+
+; Measure the RH from the HMP
+
+4:  Volt (SE) (P1)
+ 1: 2        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 3        SE Channel
+ 4: 3        Loc [ rh_1      ]
+ 5: .1       Mult
+ 6: 0        Offset
+
+
+; Turn the HMP's off
+
+5:  Do (P86)
+ 1: 51       Set Port 1 Low
+
+
+; reference temperature
+
+6:  Internal Temperature (P17)
+ 1: 7        Loc [ T_panel   ]
+
+
+; Air thermocouple
+
+7:  Thermocouple Temp (DIFF) (P14)
+ 1: 2        Reps
+ 2: 01       ñ 2.5 mV Slow Range
+ 3: 3        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 7        Ref Temp Loc [ T_panel   ]
+ 6: 5        Loc [ tc_1      ]
+ 7: 1        Mult
+ 8: 0        Offset
+
+
+
+*Table 2 Program
+  02: 60        Execution Interval (seconds)
+
+
+1:  Batt Voltage (P10)
+ 1: 8        Loc [ BATTERY   ]
+
+
+2:  Do (P86)
+ 1: 10       Set Output Flag High
+
+
+3:  Real Time (P77)
+ 1: 1110     Year,Day,Hour/Minute (midnight = 0000)
+
+
+4:  Average (P71)
+ 1: 6        Reps
+ 2: 1        Loc [ tair_1    ]
+
+
+5:  Sample (P70)
+ 1: 1        Reps
+ 2: 8        Loc [ BATTERY   ]
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 tair_1    5 1 1
+2 tair_2    17 1 1
+3 rh_1      5 1 1
+4 rh_2      17 1 1
+5 tc_1      5 1 1
+6 tc_2      17 1 1
+7 T_panel   1 1 1
+8 BATTERY   1 1 1
+9 _________ 0 0 0
+10 _________ 0 0 0
+11 _________ 0 0 0
+12 _________ 0 0 0
+13 _________ 0 0 0
+14 _________ 0 0 0
+15 _________ 0 0 0
+16 _________ 0 0 0
+17 _________ 0 0 0
+18 _________ 0 0 0
+19 _________ 0 0 0
+20 _________ 0 0 0
+21 _________ 0 0 0
+22 _________ 0 0 0
+23 _________ 0 0 0
+24 _________ 0 0 0
+25 _________ 0 0 0
+26 _________ 0 0 0
+27 _________ 0 0 0
+28 _________ 0 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0

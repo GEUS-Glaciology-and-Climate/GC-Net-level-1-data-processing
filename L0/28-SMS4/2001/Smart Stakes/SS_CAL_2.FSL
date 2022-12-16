@@ -1,0 +1,25 @@
+Final Storage Label File for:  SS_CAL_2.CSI
+Date:  5/17/2001
+Time:  14:58:36
+
+202 Output_Table  60.00 Sec
+1 202 L
+2 Day_RTM  L
+3 Hour_Minute_RTM  L
+4 Seconds_RTM  L
+5 tc_1_AVG  L
+6 tc_2_AVG  L
+7 tc_3_AVG  L
+8 tc_4_AVG  L
+9 U_3_AVG  L
+10 U_4_AVG  L
+11 U_3_S_WVT  L
+12 Udir_3_D1_WVT  L
+13 U_4_S_WVT  L
+14 Udir_4_D1_WVT  L
+15 U_3_MAX  L
+16 U_4_MAX  L
+17 BATTERY  L
+
+
+Estimated Total Final Storage Locations used per day 24480.0

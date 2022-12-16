@@ -1,0 +1,143 @@
+;{CR10X}
+;
+; --------------------------------------------------------------------
+;   Smart Stake INSTRUMENT CALIBRATION Program for CR10X Datalogger
+;   Version:  17-May-2001
+;
+;   Includes instructions for 2x Young wind and 4x Thermocouples
+;
+; --------------------------------------------------------------------
+
+
+*Table 1 Program
+  01: 10        Execution Interval (seconds)
+; 10 second execution interval for calibration
+
+
+; reference temperature
+
+1:  Internal Temperature (P17)
+ 1: 10       Loc [ T_pan_2   ]
+
+
+; Air thermocouple
+
+2:  Thermocouple Temp (DIFF) (P14)
+ 1: 4        Reps
+ 2: 01       ñ 2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 10       Ref Temp Loc [ T_pan_2   ]
+ 6: 1        Loc [ tc_1      ]
+ 7: 1        Mult
+ 8: 0        Offset
+
+
+; Young Wind Monitor wind speed -> m/s
+
+3:  Pulse (P3)
+ 1: 2        Reps
+ 2: 1        Pulse Input Channel
+ 3: 21       Low Level AC, Output Hz
+ 4: 5        Loc [ U_3       ]
+ 5: 0.0980   Mult
+ 6: 0        Offset
+
+; Young wind direction measurement.
+
+4:  Excite-Delay (SE) (P4)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 9        SE Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 2        Delay (units 0.01 sec)
+ 6: 2500     mV Excitation
+ 7: 7        Loc [ Udir_3    ]
+ 8: 0.142    Mult
+ 9: 0        Offset
+
+
+
+*Table 2 Program
+  02: 60        Execution Interval (seconds)
+
+1:  Batt Voltage (P10)
+ 1: 9        Loc [ BATTERY   ]
+
+
+2:  Do (P86)
+ 1: 10       Set Output Flag High (Flag 0)
+; send data to final storage each minute
+
+3:  Real Time (P77)
+ 1: 111      Day,Hour/Minute,Seconds (midnight = 0000)
+
+4:  Average (P71)
+ 1: 6        Reps
+ 2: 1        Loc [ tc_1      ]
+
+5:  Wind Vector (P69)
+ 1: 2        Reps
+ 2: 0        Samples per Sub-Interval
+ 3: 1        S, é1 Polar
+ 4: 5        Wind Speed/East Loc [ U_3       ]
+ 5: 7        Wind Direction/North Loc [ Udir_3    ]
+
+6:  Maximize (P73)
+ 1: 2        Reps
+ 2: 0        Value Only
+ 3: 5        Loc [ U_3       ]
+
+7:  Sample (P70)
+ 1: 1        Reps
+ 2: 9        Loc [ BATTERY   ]
+
+8:  Serial Out (P96)
+ 1: 71       SM192/SM716/CSM1
+
+
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 tc_1      5 1 1
+2 tc_2      9 1 1
+3 tc_3      9 1 1
+4 tc_4      17 1 1
+5 U_3       5 3 1
+6 U_4       17 3 1
+7 Udir_3    5 1 1
+8 Udir_4    17 1 1
+9 BATTERY   1 1 1
+10 T_pan_2   1 1 1
+11 _________ 0 0 0
+12 _________ 0 0 0
+13 _________ 0 0 0
+14 _________ 0 0 0
+15 _________ 0 0 0
+16 _________ 0 0 0
+17 _________ 0 0 0
+18 _________ 0 0 0
+19 _________ 0 0 0
+20 _________ 0 0 0
+21 _________ 0 0 0
+22 _________ 0 0 0
+23 _________ 0 0 0
+24 _________ 0 0 0
+25 _________ 0 0 0
+26 _________ 0 0 0
+27 _________ 0 0 0
+28 _________ 0 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0
+-CR10X ID-
+0
+-CR10X Power Up-
+3

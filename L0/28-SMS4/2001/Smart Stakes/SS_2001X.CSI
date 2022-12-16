@@ -1,0 +1,235 @@
+;{CR10X}
+
+; --------------------------------------------------------------------------
+;   Smart Stake Program for CR10X Datalogger
+;   Version:  19-May-2001
+;   Author:  Todd Albert
+;
+;   Includes instructions for CS500, SR50, Young wind, and one Thermocouple
+;
+; --------------------------------------------------------------------------
+
+
+*Table 1 Program
+  01: 15        Execution Interval (seconds)
+; 15 second suggested execution interval
+
+
+; Turn on CS500
+
+1:  Do (P86)
+ 1: 43       Set Port 3 High
+; C3 (voltage control port 3) jumped to Switched 12V Control
+
+
+;Allow CS500 to warm up and T and RH to stabalize
+
+2:  Excitation with Delay (P22)
+ 1: 3        Ex Channel
+ 2: 0        Delay W/Ex (units = 0.01 sec)
+ 3: 200      Delay After Ex (units = 0.01 sec)
+ 4: 0        mV Excitation
+; this only makes a delay, there is no excitation
+
+
+; Measure T from CS500
+
+3:  Volts (SE) (P1)
+ 1: 1        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 1        SE Channel
+ 4: 2        Loc [ tair_1    ]
+ 5: .1       Mult
+ 6: -40      Offset
+
+; For ROTRONICS Temps, use Mult = 0.15, Offset = -50
+
+
+
+; Measure RH from CS500
+
+4:  Volts (SE) (P1)
+ 1: 1        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 2        SE Channel
+ 4: 3        Loc [ rh_1      ]
+ 5: .1       Mult
+ 6: 0        Offset
+
+; Different offset and Mult for ROTRONICS,too
+
+
+
+; Turn CS500 off
+
+5:  Do (P86)
+ 1: 53       Set Port 3 Low
+
+
+; Young Wind Monitor wind speed -> m/s
+
+6:  Pulse (P3)
+ 1: 1        Reps
+ 2: 1        Pulse Input Channel
+ 3: 21       Low Level AC, Output Hz
+ 4: 4        Loc [ U1        ]
+ 5: 0.0980   Mult
+ 6: 0        Offset
+
+
+; Young wind direction measurement.
+
+7:  Excite-Delay (SE) (P4)
+ 1: 1        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 3        SE Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 2        Delay (units 0.01 sec)
+ 6: 2500     mV Excitation
+ 7: 5        Loc [ U_dir1    ]
+ 8: 0.142    Mult
+ 9: 0        Offset
+
+
+; reference temperature
+
+8:  Internal Temperature (P17)
+ 1: 8        Loc [ T_panel   ]
+
+
+; Measure air temperature from thermocouple
+
+9:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 01       ñ 2.5 mV Slow Range
+ 3: 3        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 8        Ref Temp Loc [ T_panel   ]
+ 6: 1        Loc [ tc_AIR1   ]
+ 7: 1        Mult
+ 8: 0        Offset
+
+
+; ------------------------------------
+; Send data to final storage each hour
+; ------------------------------------
+
+10:  If time is (P92)
+ 1: 00       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 10       Set Output Flag High
+
+
+; Record time (Year, JD, HrMn)
+
+11:  Real Time (P77)
+ 1: 1110     Year,Day,Hour/Minute (midnight = 0000)
+
+
+; Record average TC-temp, CS500-temp, CS500-rh
+
+12:  Average (P71)
+ 1: 3        Reps
+ 2: 1        Loc [ tc_AIR1   ]
+
+
+; Record wind speed and direction
+
+13:  Wind Vector (P69)
+ 1: 1        Reps
+ 2: 0        Samples per Sub-Interval
+ 3: 1        S, é1 Polar
+ 4: 4        Wind Speed/East Loc [ U1        ]
+ 5: 5        Wind Direction/North Loc [ U_dir1    ]
+
+
+; Record MAX wind speed
+
+14:  Maximize (P73)
+ 1: 1        Reps
+ 2: 0        Value Only
+ 3: 4        Loc [ U1        ]
+
+
+; Record average surface ht.
+
+15:  Average (P71)
+ 1: 1        Reps
+ 2: 6        Loc [ SH_1      ]
+
+
+;Record battery voltage (CR10X ONLY!)
+
+16:  Sample (P70)
+ 1: 1        Reps
+ 2: 7        Loc [ BATTERY   ]
+
+; ------------------------------------
+
+
+*Table 2 Program
+  02: 60        Execution Interval (seconds)
+
+
+; Measure Surface Height from SR50
+
+1:  SDI-12 Recorder (OS10 1.1) (P105)
+ 1: 0        SDI-12 Address
+ 2: 0        Start Measurement (aM0!)
+ 3: 1        Port
+ 4: 6        Loc [ SH_1      ]
+ 5: 1        Mult
+ 6: 0        Offset
+
+
+; Measure battery voltage
+
+2:  Batt Voltage (P10)
+ 1: 7        Loc [ BATTERY   ]
+
+
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 tc_AIR1   1 1 1
+2 tair_1    1 1 1
+3 rh_1      1 1 1
+4 U1        1 2 1
+5 U_dir1    1 1 1
+6 SH_1      1 1 1
+7 BATTERY   1 1 1
+8 T_panel   1 1 1
+9 _________ 0 0 0
+10 _________ 0 0 0
+11 _________ 0 0 0
+12 _________ 0 0 0
+13 _________ 0 0 0
+14 _________ 0 0 0
+15 _________ 0 0 0
+16 _________ 0 0 0
+17 _________ 0 0 0
+18 _________ 0 0 0
+19 _________ 0 0 0
+20 _________ 0 0 0
+21 _________ 0 0 0
+22 _________ 0 0 0
+23 _________ 0 0 0
+24 _________ 0 0 0
+25 _________ 0 0 0
+26 _________ 0 0 0
+27 _________ 0 0 0
+28 _________ 0 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0
+-CR10X ID-
+0
+-CR10X Power Up-
+3

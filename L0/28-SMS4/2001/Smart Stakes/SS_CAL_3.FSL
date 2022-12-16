@@ -1,0 +1,19 @@
+Final Storage Label File for:  SS_CAL_3.CSI
+Date:  1/1/1980
+Time:  10:34:52
+
+202 Output_Table  60.00 Sec
+1 202 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 tair_1_AVG  L
+6 tair_2_AVG  L
+7 rh_1_AVG  L
+8 rh_2_AVG  L
+9 tc_1_AVG  L
+10 tc_2_AVG  L
+11 BATTERY  L
+
+
+Estimated Total Final Storage Locations used per day 15840.0

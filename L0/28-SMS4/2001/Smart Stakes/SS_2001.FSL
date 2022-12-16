@@ -1,0 +1,19 @@
+Final Storage Label File for:  SS_2001.CSI
+Date:  5/20/2001
+Time:  11:48:44
+
+110 Output_Table  60.00 Min
+1 110 L
+2 Year_RTM  L
+3 Day_RTM  L
+4 Hour_Minute_RTM  L
+5 tc_AIR1_AVG  L
+6 tair_1_AVG  L
+7 rh_1_AVG  L
+8 U1_S_WVT  L
+9 U_dir1_D1_WVT  L
+10 U1_MAX  L
+11 SH_1_AVG  L
+
+
+Estimated Total Final Storage Locations used per day  264.0

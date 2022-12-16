@@ -1,0 +1,679 @@
+;{CR10}
+;                                                version 02/22/1999
+; --------------------------------------------------------------
+; Program: awsarg99.csi (cr10x)
+; to be loaded to aws installed in 1999.
+; --------------------------------------------------------------
+; This program measures various meteorological instruments
+; and stores and transmits two blocks of data.  The first block
+; contains what we consider to be the important measurements
+; though both blocks are to be stored in hourly-mean format.
+; So, we are attempting to transmit two differnt blocks of
+; data stored in the two ARGOS buffers.
+; --------------------------------------------------------------
+; Program began 4-96 by: Ted DeMaria; Jason Box; and Dan Anderson.
+; --------------------------------------------------------------
+; Program modified 02/21/1999 by Jason Box
+;  modifications include a reset of TC measurement range if it reads -6999
+;  i.e. really if it reads less than -50.
+;  pressure will require measurement elsewhere than c6
+; --------------------------------------------------------------
+; Program modified 03/20/1998 by Jason Box
+;  modifications:
+;  air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+;  air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+;  SW radiation is set to zero if negative.
+;  replace peak wind speed with reference temperature.
+; --------------------------------------------------------------
+; NOTE: this program is written for the cr10x not cr10
+; The cr10 will take a program called awsarg96.doc
+; --------------------------------------------------------------
+
+*Table 1 Program
+  01: 15.0      Execution Interval (seconds)
+; 15 second suggested execution interval
+
+1:  Set Port(s) (P20)
+ 1: 9999     C8..C5 = nc/nc/nc/nc
+ 2: 9933     C4,C3,C2,C1 Options
+; Configure control ports so that 1 and 2 are
+; milisecond pulses
+
+2:  Do (P86)
+ 1: 42       Set Port 2 High
+; send voltage from control port 2 to multiplexer
+; to turn on multiplexer
+
+3:  Full Bridge (P6)
+ 1: 1        Reps
+ 2: 22       ñ 7.5 mV 60 Hz Rejection Range
+ 3: 1        DIFF Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 350      mV Excitation
+ 6: 1        Loc [ full_brg  ]
+ 7: -.001    Mult
+ 8: .09707   Offset
+; measures the output of the Full Bridge
+; -> (internal multiplexer reference temperature signal)
+
+4:  BR Transform Rf[X/(1-X)] (P59)
+ 1: 1        Reps
+ 2: 1        Loc [ full_brg  ]
+ 3: 10.025   Multiplier (Rf)
+; Find the resistance of the reference temperature probe
+
+5:  Temperature RTD (P16)
+ 1: 1        Reps
+ 2: 1        R/RO Loc [ full_brg  ]
+ 3: 1        Loc [ full_brg  ]
+ 4: 1        Mult
+ 5: 0.0000   Offset
+; calculate the reference temperature
+
+6:  If (X<=>F) (P89)
+ 1: 1        X Loc [ full_brg  ]
+ 2: 4        <
+ 3: -50.     F
+ 4: 30       Then Do
+
+7:  Full Bridge (P6)
+ 1: 1        Reps
+ 2: 23       25 mV 60 Hz Rejection Range
+ 3: 1        DIFF Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 350      mV Excitation
+ 6: 1        Loc [ full_brg  ]
+ 7: -.001    Mult
+ 8: .09707   Offset
+; measures the output of the Full Bridge
+; -> (internal multiplexer reference temperature signal)
+
+8:  BR Transform Rf[X/(1-X)] (P59)
+ 1: 1        Reps
+ 2: 1        Loc [ full_brg  ]
+ 3: 10.025   Multiplier (Rf)
+; Find the resistance of the reference temperature probe
+
+9:  Temperature RTD (P16)
+ 1: 1        Reps
+ 2: 1        R/RO Loc [ full_brg  ]
+ 3: 1        Loc [ full_brg  ]
+ 4: 1        Mult
+ 5: 0.0000   Offset
+; calculate the reference temperature
+
+10:  End (P95)
+
+11:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 2        Loop Count
+; begin multiplexer measurement loop
+
+12:  Do (P86)
+ 1: 71       Pulse Port 1
+; send voltage from control port 1 to multiplexer
+
+13:  Do (P86)
+ 1: 71       Pulse Port 1
+; same as above, must do 2 x to step forward one
+; multiplexer input channel.
+
+14:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 3        ñ 25 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2     -- Loc [ sw_in     ]
+ 5: 1        Mult
+ 6: 0        Offset
+; Two Li Cor Photo-Diode Pyranometers
+
+15:  End (P95)
+; end Li Cor multiplexer loop
+
+16:  IF (X<=>F) (P89)
+ 1: 2        X Loc [ sw_in     ]
+ 2: 4        <
+ 3: 0.       F
+ 4: 30       Then Do
+
+17:  Z=F (P30)
+ 1: 0        F
+ 2: 0        Exponent of 10
+ 3: 2        Z Loc [ sw_in     ]
+
+18:  End (P95)
+; end set negative SW in values to zero
+
+
+19:  IF (X<=>F) (P89)
+ 1: 3        X Loc [ sw_ref    ]
+ 2: 4        <
+ 3: 0.       F
+ 4: 30       Then Do
+
+20:  Z=F (P30)
+ 1: 0        F
+ 2: 0        Exponent of 10
+ 3: 3        Z Loc [ sw_ref    ]
+
+21:  End (P95)
+; end set negative SW ref values to zero
+
+22:  Do (P86)
+ 1: 71       Pulse Port 1
+; send voltage from control port 1 to multiplexer
+; moves measurement to the next mplexer port
+
+23:  Do (P86)
+ 1: 71       Pulse Port 1
+; same as above, must do it twice
+
+24:  Volt (Diff) (P2)
+ 1: 1        Reps
+ 2: 4        ñ 250 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 4     -- Loc [ net_rad   ]
+ 5: 1        Mult
+ 6: 0        Offset
+; Net Radiometer
+
+25:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 10       Loop Count
+; begin thermocople multiplexer measurement loop
+
+26:  Do (P86)
+ 1: 71       Pulse Port 1
+; send voltage from control port 1 to multiplexer
+
+27:  Do (P86)
+ 1: 71       Pulse Port 1
+; same as above, must do it twice
+
+28:  IF (X<=>F) (P89)
+ 1: 1        X Loc [ full_brg  ]
+ 2: 3        >=
+ 3: -35      F
+ 4: 30       Then Do
+
+29:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 01       ñ 2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 1        Type T (Copper-Constantan)
+ 5: 1        Ref Temp Loc [ full_brg  ]
+ 6: 5     -- Loc [ tc1       ]
+ 7: 1        Mult
+ 8: 0        Offset
+; Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+
+30:  End (P95)
+; end if statement for T > -35 C.
+
+31:  IF (X<=>F) (P89)
+ 1: 1        X Loc [ full_brg  ]
+ 2: 4        <
+ 3: -35      F
+ 4: 30       Then Do
+
+32:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 2        ñ 7.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 1        Type T (Copper-Constantan)
+ 5: 1        Ref Temp Loc [ full_brg  ]
+ 6: 5     -- Loc [ tc1       ]
+ 7: 1        Mult
+ 8: 0        Offset
+; Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+
+33:  End (P95)
+; end if statement for T < -35 C.
+
+34:  End (P95)
+; end loop of 10, thermocouple measurement loop.
+
+35:  Beginning of Loop (P87)
+ 1: 0        Delay
+ 2: 2        Loop Count
+; begin air temperature thermocouple multiplexer loop
+
+36:  Do (P86)
+ 1: 71       Pulse Port 1
+
+37:  Do (P86)
+ 1: 71       Pulse Port 1
+
+38:  IF (X<=>F) (P89)
+ 1: 1        X Loc [ full_brg  ]
+ 2: 3        >=
+ 3: -35      F
+ 4: 30       Then Do
+
+39:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 01       ñ 2.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 1        Ref Temp Loc [ full_brg  ]
+ 6: 15    -- Loc [ tc_air1   ]
+ 7: 1        Mult
+ 8: 0        Offset
+; 2 x temperature mesurement
+
+40:  End (P95)
+; end if statement, T > -30 C
+
+41:  IF (X<=>F) (P89)
+ 1: 1        X Loc [ full_brg  ]
+ 2: 4        <
+ 3: -35      F
+ 4: 30       Then Do
+
+42:  Thermocouple Temp (DIFF) (P14)
+ 1: 1        Reps
+ 2: 2        ñ 7.5 mV Slow Range
+ 3: 1        DIFF Channel
+ 4: 2        Type E (Chromel-Constantan)
+ 5: 1        Ref Temp Loc [ full_brg  ]
+ 6: 15    -- Loc [ tc_air1   ]
+ 7: 1        Mult
+ 8: 0        Offset
+; 2 x temperature mesurement
+
+43:  End (P95)
+; end if statement, T < -30 C
+
+44:  End (P95)
+; end air temperature thermocouple multiplexer loop
+
+45:  Do (P86)
+ 1: 52       Set Port 2 Low
+; turns multiplexer off, the remaining measurements
+; will occur on the cr10 and not on the multiplexer.
+
+46:  Pulse (P3)
+ 1: 2        Reps
+ 2: 1        Pulse Input Channel
+ 3: 21       Low Level AC, Output Hz
+ 4: 21       Loc [ U1        ]
+ 5: 0.0980   Mult
+ 6: 0        Offset
+; Young Wind Monitor wind speed -> m/s
+
+47:  If time is (P92)
+ 1: 00       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 10       Set Output Flag High
+; send data to final storage each hour
+; 14 parameters are to be measured and averaged,
+; 14 + JD and time = 16, the maximum
+; number of parameters ARGOS will transmit.
+
+48:  Set Active Storage Area (P80)
+ 1: 01       Final Storage Area 1
+ 2: 012      Array ID or Loc [ _________ ]
+; set station array id number, 01 = swiss camp,
+; 02 = crawford point, ... in the order that they
+; were installed.  So, field season 1996, first AWS
+; will be number 06.
+; set array id = station number plus block number
+; array id # = station number (06) + block number (2) -> id#=062
+
+49:  Real Time (P77)
+ 1: 0110     Day,Hour/Minute
+
+50:  Average (P71)
+ 1: 3        Reps
+ 2: 2        Loc [ sw_in     ]
+; sw in, sw ref, net, loc 2-4
+
+51:  Average (P71)
+ 1: 2        Reps
+ 2: 15       Loc [ tc_air1   ]
+; 2 x air temperature thermocouple averages, loc 15-16
+
+52:  Average (P71)
+ 1: 4        Reps
+ 2: 19       Loc [ rh_1      ]
+; 2 x cs-500 relative humidity averages, loc 19-20
+; 2 x wind speed averages, loc 21 - 22
+
+53:  Average (P71)
+ 1: 2        Reps
+ 2: 23       Loc [ U_dir1    ]
+; 1 x wind direction average from the higher wind monitor, loc 24
+
+54:  Average (P71)
+ 1: 1        Reps
+ 2: 25       Loc [ pressure  ]
+
+55:  Average (P71)
+ 1: 2        Reps
+ 2: 26       Loc [ SD_1      ]
+; 2 x snow height averages, loc 26-27
+
+
+56:  Serial Out (P96)
+ 1: 71       SM192/SM716/CSM1
+
+57:  If time is (P92)
+ 1: 00       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 30       Then Do
+
+58:  Data Transfer to ARGOS ST-13 (P121)
+ 1: 23       Command Byte #1
+ 2: 0000     Command Byte #2
+ 3: 0000     Command Byte #3
+
+59:  End (P95)
+
+60:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 10       Set Output Flag High
+
+61:  Set Active Storage Area (P80)
+ 1: 1        Final Storage Area 1
+ 2: 002      Array ID or Loc [ _________ ]
+; set array id = station number plus block number
+; array id # = station number (06) + block number (2) -> id#=062
+
+62:  Real Time (P77)
+ 1: 0110     Day,Hour/Minute
+
+63:  Average (P71)
+ 1: 10       Reps
+ 2: 5        Loc [ tc1       ]
+; snow thermocouple measurements tc1 - tc10
+
+64:  Average (P71)
+ 1: 2        Reps
+ 2: 17       Loc [ tair_1    ]
+; CS-500 air temperature measurements 1 and 2
+
+
+65:  Maximize (P73)
+ 1: 1        Reps
+ 2: 0        Value Only
+ 3: 22       Loc [ U2        ]
+
+66:  Sample (P70)
+ 1: 1        Reps
+ 2: 28       Loc [ BATTERY   ]
+
+67:  Serial Out (P96)
+ 1: 71       SM192/SM716/CSM1
+
+68:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 30       Then Do
+
+69:  Data Transfer to ARGOS ST-13 (P121)
+ 1: 39       Command Byte #1
+ 2: 0000     Command Byte #2
+ 3: 0000     Command Byte #3
+; selects second memory buffer.
+
+70:  Data Transfer to ARGOS ST-13 (P121)
+ 1: 118      Command Byte #1
+ 2: 0000     Command Byte #2
+ 3: 0000     Command Byte #3
+; toggles transmitter memory buffer between 1 and 2
+
+71:  End (P95)
+; end second buffer transmission
+
+*Table 2 Program
+  02: 60.0      Execution Interval (seconds)
+; 60 second suggested sampling interval
+; in 1995 this was 600, but filled memory with wind
+; sensor pulses.
+; if we set exec to 60 sec, we will not overfill the
+; memory buffer, yet we can still measure certain sensors
+; on a 600 sec interval.
+
+1:  Do (P86)
+ 1: 43       Set Port 3 High
+; voltage control port 3, jumped to switched 12V
+; for the purpose of switching on 12V to cs500
+
+2:  Excitation with Delay (P22)
+ 1: 3        Ex Channel
+ 2: 0        Delay W/Ex (units = 0.01 sec)
+ 3: 10       Delay After Ex (units = 0.01 sec)
+ 4: 0        mV Excitation
+; this only makes a delay, there is no excitation
+
+3:  Volts (SE) (P1)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 3        SE Channel
+ 4: 17       Loc [ tair_1    ]
+ 5: .1       Mult
+ 6: -40      Offset
+; temperature cs500 probe x 2
+; this is a siungle ended measurement so it is InChan 3
+; removed 60 Hz rejection range since there is no 60 Hz
+; power tools creating electrical noise.
+
+4:  Volts (SE) (P1)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 5        SE Channel
+ 4: 19       Loc [ rh_1      ]
+ 5: .1       Mult
+ 6: 0        Offset
+; humidity cs500 probe x 2
+
+5:  Do (P86)
+ 1: 53       Set Port 3 Low
+; Voltage control port 3 turned off, switched 12V
+; to the cs-500 is turned off.
+
+6:  Excite-Delay (SE) (P4)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 7        SE Channel
+ 4: 2        Excite all reps w/Exchan 2
+ 5: 2        Delay (units 0.01 sec)
+ 6: 2500     mV Excitation
+ 7: 23       Loc [ U_dir1    ]
+ 8: 0.142    Mult
+ 9: 0        Offset
+; Young wind direction measurement.
+
+; Following a loop of the barometer measurement that is
+; performed for the last minute of each hour.
+; The pressure sensor has a range from 600 - 1060 hPa,mb
+; -> multiplier = sensor range (460)/mV Excitation(2500)
+; = 0.184
+
+
+7:  If time is (P92)
+ 1: 19       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 46       Set Port 6 High
+
+
+8:  If time is (P92)
+ 1: 39       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 46       Set Port 6 High
+
+
+9:  If time is (P92)
+ 1: 59       Minutes (Seconds --) into a
+ 2: 60       Interval (same units as above)
+ 3: 46       Set Port 6 High
+
+
+10:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 20       Interval (same units as above)
+ 3: 30       Then Do
+
+; Following a loop of the barometer measurement that is
+; performed for the last minute of each hour.
+; The pressure sensor has a range from 600 - 1060 hPa,mb
+; -> multiplier = sensor range (460)/mV Excitation(2500)
+; = 0.184
+
+11:  Z=F (P30)
+ 1: 1        F
+ 2: 0        Exponent of 10
+ 3: 52       Z Loc [ flag2     ]
+; 0 in parameter location 1 sets flag2 to 0 for pta427
+; 1 in parameter location 1 sets flag2 to 1 for cs105
+
+12:  If (X<=>F) (P89)
+ 1: 52       X Loc [ flag2     ]
+ 2: 1        =
+ 3: 0        F
+ 4: 30       Then Do
+
+13:  Excite-Delay (SE) (P4)
+ 1: 1        Reps
+ 2: 5        2500 mV Slow Range
+ 3: 9        SE Channel
+ 4: 3        Excite all reps w/Exchan 3
+ 5: 300      Delay (units 0.01 sec)
+ 6: 2500     mV Excitation
+ 7: 25       Loc [ pressure  ]
+ 8: .104     Mult
+ 9: 300      Offset
+
+14:  End (P95)
+; end pta427 pressure sensor measurement last minute of each hr
+
+15:  If (X<=>F) (P89)
+ 1: 52       X Loc [ flag2     ]
+ 2: 1        =
+ 3: 1        F
+ 4: 30       Then Do
+
+16:  Volts (SE) (P1)
+ 1: 1        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 9        SE Channel
+ 4: 25       Loc [ pressure  ]
+ 5: .184     Mult
+ 6: 200      Offset
+; CS105 Vaisala Barometer
+; another 400 has to be added to pressure value to yield
+; mb this can be done in post processing.
+
+
+17:  Do (P86)
+ 1: 56       Set Port 6 Low
+
+18:  End (P95)
+; end cs105 pressure sensor measurement last minute of each hr
+
+19:  Batt Voltage (P10)
+ 1: 28       Loc [ BATTERY   ]
+
+20:  End (P95)
+; end pressure sensor measurement last minute of each hr
+
+; Following is the snow height measurement which
+; occurs each 10 minutes, nested in a 15 second
+; measurement interval.
+
+21:  If time is (P92)
+ 1: 0        Minutes (Seconds --) into a
+ 2: 10       Interval (same units as above)
+ 3: 30       Then Do
+
+22:  SDI-12 Recorder (OS10 1.1) (P105)
+ 1: 0        SDI-12 Address
+ 2: 0        Start Measurement (aM0!)
+ 3: 4        Port
+ 4: 26       Loc [ SD_1      ]
+ 5: 1        Mult
+ 6: 0        Offset
+; sonic snow height sensor 1
+
+23:  SDI-12 Recorder (OS10 1.1) (P105)
+ 1: 0        SDI-12 Address
+ 2: 0        Start Measurement (aM0!)
+ 3: 5        Port
+ 4: 27       Loc [ SD_2      ]
+ 5: 1        Mult
+ 6: 0        Offset
+; sonic snow height sensor 2
+
+24:  End (P95)
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 full_brg  1 19 3
+2 sw_in     0 1 1
+3 sw_ref    0 1 1
+4 net_rad   0 0 0
+5 tc1       4 1 2
+6 tc2       0 1 0
+7 tc3       0 1 0
+8 tc4       0 1 0
+9 tc5       0 1 0
+10 tc6       0 1 0
+11 tc7       0 1 0
+12 tc8       0 1 0
+13 tc9       0 1 0
+14 tc10      0 1 0
+15 tc_air1   1 0 4
+16 tc_air2   1 0 0
+17 tair_1    1 1 0
+18 tair_2    1 1 0
+19 rh_1      5 1 1
+20 rh_2      1 1 1
+21 U1        1 1 0
+22 U2        1 2 0
+23 U_dir1    5 1 1
+24 U_dir2    17 2 1
+25 pressure  1 2 2
+26 SD_1      1 2 0
+27 SD_2      1 3 1
+28 BATTERY   1 3 3
+29 _________ 0 0 0
+30 _________ 0 0 0
+31 _________ 0 0 0
+32 _________ 0 0 0
+33 _________ 0 0 0
+34 _________ 0 0 0
+35 _________ 0 0 0
+36 _________ 0 0 0
+37 _________ 0 0 0
+38 _________ 0 0 0
+39 _________ 0 0 0
+40 _________ 0 0 0
+41 _________ 0 0 0
+42 _________ 0 0 0
+43 _________ 0 0 0
+44 _________ 0 0 0
+45 _________ 0 0 0
+46 _________ 0 0 0
+47 _________ 0 0 0
+48 _________ 0 0 0
+49 _________ 0 0 0
+50 _________ 0 0 0
+51 _________ 0 0 0
+52 flag2     1 2 1
+53 tair1_1   1 0 0
+54 tair1_2   1 0 0
+55 Udir_1    1 0 0
+56 Udir_2    1 0 0
+57 SD2       1 0 0
+58 U_2       1 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0

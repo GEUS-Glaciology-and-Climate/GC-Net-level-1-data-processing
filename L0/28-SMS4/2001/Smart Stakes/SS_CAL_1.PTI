@@ -1,0 +1,62 @@
+Program Trace Information File for:  SS_CAL_1.CSI
+Date: 5/19/2001
+Time: 17:20:41
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                          Output Flag High
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|86 Do                           0.3    0.3    0.3      0.3    0.3    0.3
+1|2|22 Excitation with Delay     2000.5 2000.8 2000.8   2000.5 2000.8 2000.8
+1|3|1 Volt (SE)                     7.6 2008.4 2008.4      7.6 2008.4 2008.4
+1|4|1 Volt (SE)                     7.6 2016.0 2016.0      7.6 2016.0 2016.0
+1|5|1 Volt (SE)                     7.6 2023.6 2023.6      7.6 2023.6 2023.6
+1|6|1 Volt (SE)                     4.8 2028.4 2028.4      4.8 2028.4 2028.4
+1|7|1 Volt (SE)                     4.8 2033.2 2033.2      4.8 2033.2 2033.2
+1|8|86 Do                           0.3 2033.5 2033.5      0.3 2033.5 2033.5
+1|9|3 Pulse                         3.1 2036.6 2036.6      3.1 2036.6 2036.6
+1|10|4 Excite-Delay (SE)           48.1 2084.7 2084.7     48.1 2084.7 2084.7
+1|11|17 Internal Temperature        6.2 2090.9 2090.9      6.2 2090.9 2090.9
+
+Program Table 1 Execution Interval   10.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec 2090.9 w/Output 2090.9
+
+Table 1 Estimated Total Final Storage Locations used per day    0.0
+
+
+--------------- Table 2 ---------------
+2|1|10 Batt Voltage                 8.3    8.3    8.3      8.3    8.3    8.3
+2|2|86 Do                           0.3    8.6    8.6      0.3    8.6    8.6
+ Output Flag Set @ 22 for Array 202
+2|3|77 Real Time                    0.2    8.8    8.8      3.8   12.4   12.4
+ Output Data 3 Values
+2|4|71 Average                     11.6   20.4   20.4     45.5   57.9   57.9
+ Output Data 10 Values
+2|5|69 Wind Vector                 38.8   59.2   59.2    144.7  202.6  202.6
+ Output Data 4 Values
+2|6|73 Maximum                      3.4   62.6   62.6     11.0  213.6  213.6
+ Output Data 2 Values
+2|7|70 Sample                       0.2   62.8   62.8      0.9  214.5  214.5
+ Output Data 1 Values
+2|8|96 Serial Out                   0.5   63.3   63.3      0.5  215.0  215.0
+
+Program Table 2 Execution Interval   60.000 Seconds
+
+Table 2 Estimated Total Program Execution Time in msec   63.3 w/Output  215.0
+
+Table 2 Estimated Total Final Storage Locations used per day 30240.0
+
+
+
+Estimated Total Final Storage Locations used per day 30240.0

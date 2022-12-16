@@ -1,0 +1,209 @@
+;{CR10X}
+;
+; --------------------------------------------------------------------
+;   Smart Stake INSTRUMENT CALIBRATION Program for CR10X Datalogger
+;   Version:  17-May-2001
+;
+;   Includes instructions for 2x CS500, 2x Rotronics, 2x Young wind
+;     Note: Rest of instruments on second datalogger
+; --------------------------------------------------------------------
+
+
+*Table 1 Program
+  01: 10        Execution Interval (seconds)
+; 10 second execution interval for calibration
+
+
+; Turn on both CS500's and Rotronics
+
+1:  Do (P86)
+ 1: 43       Set Port 3 High
+; C3 (voltage control port 3)
+; jumped to
+; Switched 12V Control
+
+
+;Allow CS500'snstruments to warm up and T and RH values to stabalize
+
+2:  Excitation with Delay (P22)
+ 1: 3        Ex Channel
+ 2: 0        Delay W/Ex (units = 0.01 sec)
+ 3: 200      Delay After Ex (units = 0.01 sec)
+ 4: 0        mV Excitation
+; this only makes a delay, there is no excitation
+
+
+; Measure T from CS500
+
+3:  Volts (SE) (P1)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 1        SE Channel
+ 4: 1        Loc [ tcs500_1  ]
+ 5: .1       Mult
+ 6: -40      Offset
+
+
+; Measure T from Rotronics
+
+4:  Volts (SE) (P1)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 3        SE Channel
+ 4: 3        Loc [ trotro_1  ]
+ 5: .15      Mult
+ 6: -50      Offset
+
+
+; Measure RH from CS500
+
+5:  Volts (SE) (P1)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 5        SE Channel
+ 4: 5        Loc [ rcs500_1  ]
+ 5: .1       Mult
+ 6: 0        Offset
+
+
+; Measure RH3 from (BROKEN) Rotronics
+
+6:  Volts (SE) (P1)
+ 1: 1        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 7        SE Channel
+ 4: 7        Loc [ rrotro_1  ]
+ 5: 181.654  Mult
+ 6: 0.63175  Offset
+
+
+; Measure RH4 from Rotronics
+
+7:  Volts (SE) (P1)
+ 1: 1        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 8        SE Channel
+ 4: 8        Loc [ rrotro_2  ]
+ 5: 56.8901  Mult
+ 6: 0.24463  Offset
+
+
+; Turn instruments off
+
+8:  Do (P86)
+ 1: 53       Set Port 3 Low
+
+
+; R.M. Young Wind Monitor wind speed -> m/s
+
+9:  Pulse (P3)
+ 1: 2        Reps
+ 2: 1        Pulse Input Channel
+ 3: 21       Low Level AC, Output Hz
+ 4: 9        Loc [ U_1       ]
+ 5: 0.0980   Mult
+ 6: 0        Offset
+
+; R.M. Young wind direction measurement.
+
+10:  Excite-Delay (SE) (P4)
+ 1: 2        Reps
+ 2: 5        ñ 2500 mV Slow Range
+ 3: 9        SE Channel
+ 4: 1        Excite all reps w/Exchan 1
+ 5: 2        Delay (units 0.01 sec)
+ 6: 2500     mV Excitation
+ 7: 11       Loc [ Udir_1    ]
+ 8: 0.142    Mult
+ 9: 0        Offset
+
+; reference temperature
+
+11:  Internal Temperature (P17)
+ 1: 14       Loc [ T_panel   ]
+
+
+
+*Table 2 Program
+  02: 60        Execution Interval (seconds)
+
+1:  Batt Voltage (P10)
+ 1: 13       Loc [ BATTERY   ]
+
+
+2:  Do (P86)
+ 1: 10       Set Output Flag High (Flag 0)
+; send data to final storage each minute
+
+3:  Real Time (P77)
+ 1: 111      Day,Hour/Minute,Seconds (midnight = 0000)
+
+4:  Average (P71)
+ 1: 10       Reps
+ 2: 1        Loc [ tcs500_1  ]
+
+5:  Wind Vector (P69)
+ 1: 2        Reps
+ 2: 0        Samples per Sub-Interval
+ 3: 1        S, é1 Polar
+ 4: 9        Wind Speed/East Loc [ U_1       ]
+ 5: 11       Wind Direction/North Loc [ Udir_1    ]
+
+6:  Maximize (P73)
+ 1: 2        Reps
+ 2: 0        Value Only
+ 3: 9        Loc [ U_1       ]
+
+7:  Sample (P70)
+ 1: 1        Reps
+ 2: 13       Loc [ BATTERY   ]
+
+8:  Serial Out (P96)
+ 1: 71       SM192/SM716/CSM1
+
+
+
+*Table 3 Subroutines
+
+End Program
+
+-Input Locations-
+1 tcs500_1  5 1 1
+2 tcs500_2  17 1 1
+3 trotro_1  5 1 1
+4 trotro_2  17 1 1
+5 rcs500_1  5 1 1
+6 rcs500_2  17 1 1
+7 rrotro_1  5 1 1
+8 rrotro_2  1 1 1
+9 U_1       5 3 1
+10 U_2       17 3 1
+11 Udir_1    5 1 1
+12 Udir_2    17 1 1
+13 BATTERY   1 1 1
+14 T_panel   1 0 1
+15 _________ 0 0 0
+16 _________ 0 0 0
+17 _________ 0 0 0
+18 _________ 0 0 0
+19 _________ 0 0 0
+20 _________ 0 0 0
+21 _________ 0 0 0
+22 _________ 0 0 0
+23 _________ 0 0 0
+24 _________ 0 0 0
+25 _________ 0 0 0
+26 _________ 0 0 0
+27 _________ 0 0 0
+28 _________ 0 0 0
+-Program Security-
+0000
+0000
+0000
+-Mode 4-
+-Final Storage Area 2-
+0
+-CR10X ID-
+0
+-CR10X Power Up-
+3
