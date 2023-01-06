@@ -753,6 +753,49 @@ for site, ID in zip(site_list.Name, site_list.ID):
     )
 
 
+#%% Data quantity
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)  # .iloc[7:,:]
+plt.close("all")
+df_all =pd.DataFrame()
+for site, ID in zip(site_list.Name, site_list.ID):
+    site = site.replace(" ", "")
+    print(site)
+    filename = "L1/" + str(ID).zfill(2) + "-" + site + ".csv"
+    if not path.exists(filename):
+        continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df = df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index("timestamp").replace(-999, np.nan)
+    df['site'] = site
+    cols = [
+        "site",
+        "ISWR",
+        "OSWR",
+        "NR",
+        "TA1",
+        "TA2",
+        "TA3",
+        "TA4",
+        "RH1",
+        "RH2",
+        "VW1",
+        "DW1",
+        "VW2",
+        "DW2",
+        "P",
+        "HW1",
+        "HW2",
+    ]
+    for col in cols:
+        if col not in df.columns:
+            df[col] = np.nan
+    df = df[cols]
+    df_all = df_all.append(df)
+
+df_all.count().mean()/365/24
+
 # %% Converting back to old format to run jaws
 plt.close("all")
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0).iloc[1:2]
