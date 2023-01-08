@@ -46,7 +46,7 @@ Provided in this dataset are the 16 longest running stations in the network, whi
 
 ### The standard GC-Net station consists of: 
 * Air temperature measurements at 2 heights above the surface
-* Temperature and humidity measurements at 2 heights above the surface
+* Relative humidity measurements at 2 heights above the surface
 * Wind speed and direction measured at 2 heights above the surface
 * Sonic distance sounder measurements for 2 snow height and distance of instruments to surface
 * Incoming shortwave radiation measurement
