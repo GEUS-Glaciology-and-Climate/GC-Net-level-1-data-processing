@@ -1,11 +1,12 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-1999-05-15T00:00:00+00:00,,HS1,add,0.8,Not reported. Manual shift suggested by bav.
+1997-05-22T00:00:00+00:00,,HS1,add,0.12,Not reported. Manual shift suggested by jeb.
+1999-01-01T00:00:00+00:00,,HS1,add,1.12,Not reported. Manual shift suggested by jeb
 2001-06-10T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
 2005-05-23T00:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
 2010-08-16T21:00:00+00:00,,HS1,add,3.6,Not reported. Manual shift suggested by bav.
 2016-05-22T21:00:00+00:00,,HS1,add,2.6,Not reported. Manual shift suggested by bav.
 
-1999-05-15T00:00:00+00:00,,HS2,add,0.8,Not reported. Manual shift suggested by bav.
+1999-01-01T00:00:00+00:00,,HS2,add,1.07,Not reported. Manual shift suggested by jeb
 2001-06-10T12:00:00+00:00,,HS2,add,2.1,Not reported. Manual shift suggested by bav.
 2005-05-26T14:00:00+00:00,,HS2,add,3,Reported visit. SR1 height before/after (m): 0.0/-0.1
 2010-08-18T14:00:00+00:00,,HS2,add,3.4,Not reported. Manual shift suggested by bav.
