@@ -1,20 +1,22 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 # adjustement to reconstruct continuous snow height
-1998-04-28T00:00:00+00:00,,HS1,add,1.0,Not reported. Manual shift suggested by bav.
-2000-05-12T00:00:00+00:00,,HS1,add,2.2,Not reported. Manual shift suggested by bav.
+1998-04-26T17:00:00+00:00,,HS1,add,1.24,Not reported. Manual shift suggested by bav.
+2000-05-13T00:00:00+00:00,,HS1,add,2.4,Not reported. Manual shift suggested by bav.
 # 2001-06-15T13:00:00+00:00,,HS1,add,1.7,Reported visit. SR1 height before/after (m): 0.0/-3.1
 2003-05-09T00:00:00+00:00,,HS1,add,4,Reported visit. SR1 height before/after (m): 0.0/-1.4
-2006-05-10T00:00:00+00:00,,HS1,add,2.2,Not reported. Manual shift suggested by bav.
-2010-04-28T00:00:00+00:00,,HS1,add,2.6,Not reported. Manual shift suggested by bav.
-2017-05-25T00:00:00+00:00,,HS1,add,2.0,Not reported. Manual shift suggested by bav.
+2006-05-07T16:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
+2009-05-16T20:00:00+00:00,,HS1,add,0.5,Not reported. Manual shift suggested by bav.
+2010-05-01T03:00:00+00:00,,HS1,add,2.6,Not reported. Manual shift suggested by bav.
+2017-05-22T20:00:00+00:00,,HS1,add,2.3,Not reported. Manual shift suggested by bav.
+2021-06-15T10:00:00+00:00,,HS1,add,2.1,Not reported. Manual shift suggested by bav.
 
-1998-04-20T00:00:00+00:00,,HS2,add,1,Not reported. Manual shift suggested by bav.
-2000-05-12T13:00:00+00:00,,HS2,add,2.2,Not reported. Manual shift suggested by bav.
-2003-05-09T00:00:00+00:00,,HS2,add,4,Reported visit. SR1 height before/after (m): 0.0/-1.4
-2004-06-01T00:00:00+00:00,,HS2,add,0.75,Not reported. Manual shift suggested by bav.
-2006-05-07T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
-2010-04-28T00:00:00+00:00,,HS2,add,2.6,Not reported. Manual shift suggested by bav.
-2017-05-25T00:00:00+00:00,,HS2,add,2.0,Not reported. Manual shift suggested by bav.
+1998-04-26T17:00:00+00:00,,HS2,add,0.9,Not reported. Manual shift suggested by bav.
+2000-05-13T00:00:00+00:00,,HS2,add,2.45,Not reported. Manual shift suggested by bav.
+2003-05-09T00:00:00+00:00,,HS2,add,3.65,Reported visit. SR1 height before/after (m): 0.0/-1.4
+2006-05-07T16:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
+2010-05-01T03:00:00+00:00,,HS2,add,2.6,Not reported. Manual shift suggested by bav.
+2017-05-22T20:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
+2021-06-15T10:00:00+00:00,,HS2,add,2.1,Not reported. Manual shift suggested by bav.
 
 # air temp correction on HW1 and HW2
 2009-05-16T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/41
@@ -32,8 +34,13 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2010-05-12T00:00:00+00:00,2020-09-20T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.4,Manually filtered by bav
 2009-05-16T00:00:00+00:00,2010-05-12T00:00:00+00:00,HW2,biweekly_upper_range_filter,0.2,Manually filtered by bav
 2010-05-12T00:00:00+00:00,2020-09-20T00:00:00+00:00,HW2,biweekly_upper_range_filter,0.4,Manually filtered by bav
-2009-05-16T00:00:00+00:00,2020-09-20T00:00:00+00:00,HW1,hampel_filter,2,Manually filtered by bav
+
+2010-05-10T00:00:00+00:00,2022-09-20T00:00:00+00:00,HW1, min_filter,1.4, Manually filtered by bav
+2017-05-21T00:00:00+00:00,2022-09-20T00:00:00+00:00,HW2, min_filter,1.8, Manually filtered by bav
+
+2009-05-16T00:00:00+00:00,2022-09-20T00:00:00+00:00,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-16T00:00:00+00:00,2020-09-20T00:00:00+00:00,HW2,hampel_filter,2,Manually filtered by bav
+
 2018-10-01T00:00:00+00:00,2022-12-31T00:00:00+00:00,HW2,max_filter,100,Manually filtered by bav
 2019-10-01T00:00:00+00:00,2022-12-31T00:00:00+00:00,TA1,max_filter,4,Manually filtered by bav
 2019-10-01T00:00:00+00:00,2022-12-31T00:00:00+00:00,TA2,max_filter,4,Manually filtered by bav

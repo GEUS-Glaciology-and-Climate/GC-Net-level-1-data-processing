@@ -1,15 +1,17 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 1997-05-22T00:00:00+00:00,,HS1,add,0.12,Not reported. Manual shift suggested by jeb.
-1999-01-01T00:00:00+00:00,,HS1,add,1.12,Not reported. Manual shift suggested by jeb
-2001-06-10T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
-2005-05-23T00:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
-2010-08-16T21:00:00+00:00,,HS1,add,3.6,Not reported. Manual shift suggested by bav.
-2016-05-22T21:00:00+00:00,,HS1,add,2.6,Not reported. Manual shift suggested by bav.
+1999-01-01T14:00:00+00:00,,HS1,add,0.27,Not reported. Manual shift suggested by jeb
+1999-05-09T15:00:00+00:00,,HS1,add,0.85,Not reported. Manual shift suggested by jeb
+2001-06-15T16:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
+2005-05-26T06:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
+2010-08-16T19:00:00+00:00,,HS1,add,3.6,Not reported. Manual shift suggested by bav.
+2016-05-22T14:00:00+00:00,,HS1,add,2.6,Not reported. Manual shift suggested by bav.
 
-1999-01-01T00:00:00+00:00,,HS2,add,1.07,Not reported. Manual shift suggested by jeb
-2001-06-10T12:00:00+00:00,,HS2,add,2.1,Not reported. Manual shift suggested by bav.
-2005-05-26T14:00:00+00:00,,HS2,add,3,Reported visit. SR1 height before/after (m): 0.0/-0.1
-2010-08-18T14:00:00+00:00,,HS2,add,3.4,Not reported. Manual shift suggested by bav.
+1999-01-01T14:00:00+00:00,,HS2,add,0.27,Not reported. Manual shift suggested by jeb
+1999-05-09T15:00:00+00:00,,HS2,add,0.93,Not reported. Manual shift suggested by jeb
+2001-06-15T15:00:00+00:00,,HS2,add,2.1,Not reported. Manual shift suggested by bav.
+2005-05-26T06:00:00+00:00,,HS2,add,3,Reported visit. SR1 height before/after (m): 0.0/-0.1
+2010-08-16T19:00:00+00:00,,HS2,add,3.05,Not reported. Manual shift suggested by bav.
 2016-05-22T14:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 
 # calibration of OSWR with LiCor offset
