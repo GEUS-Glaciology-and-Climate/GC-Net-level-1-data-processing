@@ -1,23 +1,25 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 19970513T09:00:00+00:00,,HS1,add,2.5,manual shift by bav
 19980905T00:00:00+00:00,,HS1,add,3,manual shift by bav
-20010526T00:00:00+00:00,,HS1,add,2,manual shift by bav
-20030411T00:00:00+00:00,,HS1,add,2.5,manual shift by bav
-20050501T03:00:00+00:00,,HS1,add,3,manual shift by bav
-20080505T00:00:00+00:00,,HS1,add,2.7,manual shift by bav
+20010528T18:00:00+00:00,,HS1,add,2,manual shift by bav
+20030411T00:00:00+00:00,,HS1,add,2.8,manual shift by bav
+20050503T08:00:00+00:00,,HS1,add,3,manual shift by bav
+20080505T14:00:00+00:00,,HS1,add,2.7,manual shift by bav
 20091213T00:00:00+00:00,,HS1,add,1,manual shift by bav
+20100508T00:00:00+00:00,,HS1,add,0.7,manual shift by bav
 20110101T00:00:00+00:00,,HS1,add,3.5,manual shift by bav
 20170521T00:00:00+00:00,,HS1,add,3,manual shift by bav
 
 19970513T09:00:00+00:00,,HS2,add,2.5,manual shift by bav
 19980905T00:00:00+00:00,,HS2,add,3,manual shift by bav
-20010526T00:00:00+00:00,,HS2,add,2,manual shift by bav
-20030411T00:00:00+00:00,,HS2,add,2.8,manual shift by bav
-20050501T03:00:00+00:00,,HS2,add,3.6,manual shift by bav
-20080505T00:00:00+00:00,,HS2,add,3,manual shift by bav
+20010528T18:00:00+00:00,,HS2,add,2,manual shift by bav
+20030411T00:00:00+00:00,,HS2,add,2.5,manual shift by bav
+20050503T08:00:00+00:00,,HS2,add,3.6,manual shift by bav
+20080505T14:00:00+00:00,,HS2,add,3,manual shift by bav
 20091210T00:00:00+00:00,,HS2,add,0.3,manual shift by bav
 20100511T00:00:00+00:00,,HS2,add,-2.5,manual shift by bav
-20110428T00:00:00+00:00,,HS2,add,2.5,manual shift by bav
+20110502T22:00:00+00:00,,HS2,add,3.5,manual shift by bav
+20170521T00:00:00+00:00,,HS2,add,2.2,manual shift by bav
 
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,

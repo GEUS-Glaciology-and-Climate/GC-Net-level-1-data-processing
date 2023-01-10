@@ -626,7 +626,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         tmp = pd.DataFrame(df[i])
         tmp["new"] = (tmp.notnull() != tmp.shift().notnull()).cumsum()
         tmp["ones"] = 1
-        mask[i] = (tmp.groupby("new")["ones"].transform("count") < 24 * 3) | df[
+        mask[i] = (tmp.groupby("new")["ones"].transform("count") < 24 * 2) | df[
             i
         ].notnull()
     df[["HW1", "HW2"]] = df[["HW1", "HW2"]].interpolate().values

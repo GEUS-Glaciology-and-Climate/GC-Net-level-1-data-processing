@@ -33,10 +33,7 @@ try:
 except:
     print("figures and output folders already exist")
 
-# uncomment for the overwriting report file
 f = open("out/Report.md", "w")
-
-
 def Msg(txt):
     f = open("out/Report.md", "a")
     print(txt)
@@ -106,6 +103,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         site_list.loc[site_list.Name == site, "Elevationm"].values[0],
         site,
     )
+
     # removing empty rows:
     useful_var_list = [
         "ISWR",  "OSWR", "NR", "TA1", "TA2", "TA3",
