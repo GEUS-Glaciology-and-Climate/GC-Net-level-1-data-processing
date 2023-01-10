@@ -20,8 +20,7 @@ This repository contains scripts used to clean, adjust and interpolate GC-Net da
 - [Instrument height assessment](out/L1_intrument_heights_toc.md)
 
 ## Dataset and processing overview
-
-[![image](https://user-images.githubusercontent.com/35140661/168021770-82b1c021-b4fd-4461-8d05-4e6c147b7871.png)](https://docs.google.com/presentation/d/1p9Z7g7ZOYZ3aiXRJMUF1gz6hb4260d0f4XUG64YiP4Y/edit?usp=sharing)
+[![image](https://user-images.githubusercontent.com/35140661/211565684-4101ca83-4440-4610-b9a5-621eda120ed5.png)](https://docs.google.com/presentation/d/1p9Z7g7ZOYZ3aiXRJMUF1gz6hb4260d0f4XUG64YiP4Y/edit?usp=sharing)
 
 ## Usage
 When using the L0 data please cite:
