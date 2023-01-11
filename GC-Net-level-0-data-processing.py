@@ -35,7 +35,7 @@ else:
     print("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(0, len(L0dirs)):
+for i in range(len(L0dirs)):
     print("--------------------------------")
     print("Now Processing Directory: ", L0dirs[i])
     # the file structure of raw campbell data files
@@ -298,11 +298,10 @@ for i in range(0, len(L0dirs)):
         date_end = dfm.timestamp.iloc[-1].strftime("%Y-%m-%d")
         date_now = datetime.now().strftime("%Y-%m-%d")  # current date and time
                 
-        metadata = pd.read_csv('metadata/GC-Net_location.csv')
+        metadata = pd.read_csv('metadata/GC-Net_location.csv', skipinitialspace=True)
         site = L0dirs[i][3:]
-        if metadata.loc[metadata.Name == site,'LastValidDate'].notnull().values[0]:
-            print('Station decommissioned. No transmission.')
-        else:
+
+        if date_end < metadata.loc[metadata.Name == site,'LastValidDate'].values[0]:
             print('Fetching latest transmission.')
             dfm = gc.get_transmission(site, 
                                    date_end, 
@@ -310,6 +309,8 @@ for i in range(0, len(L0dirs)):
                                    dfm, 
                                    path + L0dirs[i] + "/transmissions/",
                                    )
+        else:
+            print('Station decommissioned. No transmission.')
 
         starttime = pytz.utc.localize(starttime)
     else:

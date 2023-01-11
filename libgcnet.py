@@ -240,65 +240,72 @@ import requests
 import nead
 
 def get_transmission(site, date_end, date_now, dfm, local_path):
-    envidat_alias = {
-        "Swiss Camp 10m": "swisscamp_10m_tower",
-        "Swiss Camp": "swisscamp",
-        "Crawford Point 1": "crawfordpoint",
-        "NASA-U": "nasa_u",
-        "GITS": "gits",
-        "Humboldt": "humboldt",
-        "Summit": "summit",
-        "Tunu-N": "tunu_n",
-        "DYE2": "dye2",
-        "JAR1": "jar1",
-        "JAR2": "jar2",
-        "Saddle": "saddle",
-        "South Dome": "southdome",
-        "NASA-E": "nasa_east",
-        "NASA-SE": "nasa_southeast",
-        "Petermann ELA": "petermann",
-        "NEEM": "neem",
-        "E-GRIP": "east_grip",
-    }
-    try:
-        os.mkdir(local_path)
-    except:
-        pass
-    remote_url = (
-        "https://www.envidat.ch/data-api/gcnet/nead/"
-        + envidat_alias[site]
-        + "/end/-999/"
-        + date_end
-        + "/"
-        + date_now
-        + "/"
-    )
+    # as of 2023-01-11, transmissions are not available anymore from Envidat
+    # we just use that last available transimission file for the stations
+    # that could not be visited in 2021 and 2022 (last available transmission
+    # 2022-09-20)
+    
+    # envidat_alias = {
+    #     "Swiss Camp 10m": "swisscamp_10m_tower",
+    #     "Swiss Camp": "swisscamp",
+    #     "Crawford Point 1": "crawfordpoint",
+    #     "NASA-U": "nasa_u",
+    #     "GITS": "gits",
+    #     "Humboldt": "humboldt",
+    #     "Summit": "summit",
+    #     "Tunu-N": "tunu_n",
+    #     "DYE2": "dye2",
+    #     "JAR1": "jar1",
+    #     "JAR2": "jar2",
+    #     "Saddle": "saddle",
+    #     "South Dome": "southdome",
+    #     "NASA-E": "nasa_east",
+    #     "NASA-SE": "nasa_southeast",
+    #     "Petermann ELA": "petermann",
+    #     "NEEM": "neem",
+    #     "E-GRIP": "east_grip",
+    # }
+    # try:
+    #     os.mkdir(local_path)
+    # except:
+    #     pass
+    
+    
+    # remote_url = (
+    #     "https://www.envidat.ch/data-api/gcnet/nead/"
+    #     + envidat_alias[site]
+    #     + "/end/-999/"
+    #     + date_end
+    #     + "/"
+    #     + date_now
+    #     + "/"
+    # )
 
     local_file = local_path + site + ".csv"
-    print("requesting transmissions from", date_end, "to", date_now)
-    print("url:", remote_url)
+    # print("requesting transmissions from", date_end, "to", date_now)
+    # print("url:", remote_url)
 
-    try:
-        data = requests.get(remote_url)
-        # Save file data to local copy
-        with open(local_file, "wb") as file:
-            file.write(data.content)
-        dft = nead.read(local_file).to_dataframe()
-        print(
-            "received transmission from",
-            dft["timestamp"].iloc[0],
-            dft["timestamp"].iloc[-1],
-        )
-        dft["timestamp"] = pd.to_datetime(dft["timestamp"], utc=True)
-        dfm["timestamp"] = pd.to_datetime(dfm["timestamp"], utc=True)
-        dft = dft.set_index("timestamp")
-        dfm = dfm.set_index("timestamp")
+    # try:
+    #     data = requests.get(remote_url)
+    #     # Save file data to local copy
+    #     with open(local_file, "wb") as file:
+    #         file.write(data.content)
+    #     dft = nead.read(local_file).to_dataframe()
+    #     print(
+    #         "received transmission from",
+    #         dft["timestamp"].iloc[0],
+    #         dft["timestamp"].iloc[-1],
+    #     )
+    #     dft["timestamp"] = pd.to_datetime(dft["timestamp"], utc=True)
+    #     dfm["timestamp"] = pd.to_datetime(dfm["timestamp"], utc=True)
+    #     dft = dft.set_index("timestamp")
+    #     dfm = dfm.set_index("timestamp")
 
-        dfm = pd.concat([dfm, dft]).reset_index()
-    except:
-        print("download failed")
-        print("reading last transmission file available")
-        pass
+    #     dfm = pd.concat([dfm, dft]).reset_index()
+    # except:
+    #     print("download failed")
+    print("reading last transmission file available")
+        # pass
     try:
         dft = nead.read(local_file).to_dataframe()
         print(
@@ -458,13 +465,13 @@ def load_old_logger_file(plot=True):
             df_all = df_met[['VW1', 'TA1', 'TA2', 'RH1', 'VW2', 'TA1_max', 
                              'TA2_max', 'RH1_max', 'VW1_min', 'TA1_min', 'TA2_min',
                              'RH1_min', 'DW1']]
-            df_all = df_all.append(df_rad[['ISWR', 'ISWR2', 'OSWR', 'NR',]])
+            df_all = pd.concat((df_all, df_rad[['ISWR', 'ISWR2', 'OSWR', 'NR',]]))
         else:
-            df_all = df_all.append(df_met[['VW1', 'TA1', 'TA2', 'RH1', 'VW2', 
+            df_all = pd.concat((df_all, df_met[['VW1', 'TA1', 'TA2', 'RH1', 'VW2', 
                                            'TA1_max', 'TA2_max', 'RH1_max', 
                                            'VW1_min', 'TA1_min', 'TA2_min', 
-                                           'RH1_min', 'DW1']])
-            df_all = df_all.append(df_rad[['ISWR', 'ISWR2', 'OSWR', 'NR',]])
+                                           'RH1_min', 'DW1']]))
+            df_all = pd.concat((df_all, df_rad[['ISWR', 'ISWR2', 'OSWR', 'NR',]]))
     
     # %% 
     filename = '1993_KLIMA.DAT'
@@ -581,8 +588,8 @@ def load_old_logger_file(plot=True):
     print('end date', df_rad.index[-1])
     print('resolution', np.unique(np.diff(df_rad.index)))
     
-    df_all = df_all.append(df_met[[ 'VW1', 'VW1_max', 'TA1', 'DW1']])
-    df_all = df_all.append(df_rad.resample('H',label='right').mean()[['ISWR', 'ISWR2', 'OSWR', 'NR',]])
+    df_all = pd.concat((df_all, df_met[[ 'VW1', 'VW1_max', 'TA1', 'DW1']]))
+    df_all = pd.concat((df_all, df_rad.resample('H',label='right').mean()[['ISWR', 'ISWR2', 'OSWR', 'NR',]]))
     
     # %% 
     ################################## 3 hours ################################### 
@@ -600,7 +607,7 @@ def load_old_logger_file(plot=True):
     print('start date', df_93.index[0])
     print('end date', df_93.index[-1])
     print('resolution', np.unique(np.diff(df_93.index)))
-    df_all = df_all.append(df_93)
+    df_all = pd.concat((df_all, df_93))
     ############################ 3 hours ##################################### 
     filename='1993_MET_90_3h_doy.hh.DAT'
     df_90 = pd.read_csv(path+filename, sep = ' ')
@@ -613,7 +620,7 @@ def load_old_logger_file(plot=True):
     print('start date', df_90.index[0])
     print('end date', df_90.index[-1])
     print('resolution', np.unique(np.diff(df_90.index)))
-    df_all = df_all.append(df_90)
+    df_all = pd.concat((df_all, df_90))
     
     ############################ 3 hours ##################################### 
     filename='1994_T_W_R_93-94_3h.DAT'
@@ -635,7 +642,7 @@ def load_old_logger_file(plot=True):
     print('start date', df_94_twr.index[0])
     print('end date', df_94_twr.index[-1])
     print('resolution', np.unique(np.diff(df_94_twr.index)))
-    df_all = df_all.append(df_94_twr)
+    df_all = pd.concat((df_all, df_94_twr))
     ############################ 3 h #######################################
     filename = '1993_TOWER.DAT'
     df_1993_tower = pd.read_csv(path + filename, header=None)
@@ -655,7 +662,7 @@ def load_old_logger_file(plot=True):
     print('start date', df_1993_tower.index[0])
     print('end date', df_1993_tower.index[-1])
     print('resolution', np.unique(np.diff(df_1993_tower.index)))
-    df_all = df_all.append(df_1993_tower)
+    df_all = pd.concat((df_all, df_1993_tower))
     
     ########################### hourly ########################################### 
     filename = '1991_TOWER_90-91_10m.DAT'
@@ -726,8 +733,8 @@ def load_old_logger_file(plot=True):
     print('resolution', np.unique(np.diff(df_syno.index[df_syno.index.notnull()])))
     
     df_syno = df_syno.resample('H', label='right').mean()                  
-    df_rad90 = df_rad90.append(df_syno)
-    df_all = df_all.append(df_rad90)
+    df_rad90 = pd.concat((df_rad90, df_syno))
+    df_all = pd.concat((df_all, df_rad90))
     
     df_all = df_all.sort_index()
     
