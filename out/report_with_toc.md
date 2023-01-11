@@ -277,9 +277,7 @@
 * [20 Aurora](#s21)
   * [Manual flagging of data at Aurora](#s21-1)
   * [Adjusting data at Aurora](#s21-2)
-* [21 Petermann Glacier](#s22)
-  * [Manual flagging of data at Petermann Glacier](#s22-1)
-  * [Adjusting data at Petermann Glacier](#s22-2)
+* [21 Petermann Gl](#s22)
 * [22 Petermann ELA](#s23)
   * [Manual flagging of data at Petermann ELA](#s23-1)
   * [Adjusting data at Petermann ELA](#s23-2)
@@ -309,16 +307,22 @@
       * [Adjusting TA1](#s25-2-5)
       * [Adjusting HS1](#s25-2-6)
       * [Adjusting HS2](#s25-2-7)
-* [30 LAR1](#s26)
-  * [Manual flagging of data at LAR1](#s26-1)
-  * [Adjusting data at LAR1](#s26-2)
-      * [Adjusting ISWR](#s26-2-1)
-* [31 LAR2](#s27)
-  * [Manual flagging of data at LAR2](#s27-1)
-  * [Adjusting data at LAR2](#s27-2)
-* [32 LAR3](#s28)
-  * [Manual flagging of data at LAR3](#s28-1)
-  * [Adjusting data at LAR3](#s28-2)
+* [25 SMS1](#s26)
+* [26 SMS2](#s27)
+* [27 SMS3](#s28)
+* [28 SMS4](#s29)
+* [29 SMS5](#s30)
+* [30 LAR1](#s31)
+  * [Manual flagging of data at LAR1](#s31-1)
+  * [Adjusting data at LAR1](#s31-2)
+      * [Adjusting ISWR](#s31-2-1)
+* [31 LAR2](#s32)
+  * [Manual flagging of data at LAR2](#s32-1)
+  * [Adjusting data at LAR2](#s32-2)
+* [32 LAR3](#s33)
+  * [Manual flagging of data at LAR3](#s33-1)
+  * [Adjusting data at LAR3](#s33-2)
+* [33 SMS-PET](#s34)
 # <a id='s1' />0 Swiss Camp 10m
 ## <a id='s1-1' />Manual flagging of data at Swiss Camp 10m
 Flagging data:
@@ -402,19 +406,19 @@ Flagging data:
 ### <a id='s1-2-1' />Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|biweekly_upper_range_filter|0.5|2602|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|hampel_filter|2.0|3797|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|biweekly_upper_range_filter|0.5|2602|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|hampel_filter|2.0|3797|
  
 ![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_adj_HW1.jpeg)
  
 ### <a id='s1-2-2' />Adjusting HW2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|biweekly_upper_range_filter|0.5|8517|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|hampel_filter|2.0|2714|
-|2014-05-09T21:00:00+00:00|2019-05-04T18:00:00+00:00|add|9.0|0|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|biweekly_upper_range_filter|0.5|8516|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|hampel_filter|2.0|2730|
+|2014-05-09T21:00:00+00:00|2020-11-03T21:00:00+00:00|add|9.0|0|
  
 ![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_adj_HW2.jpeg)
  
@@ -428,7 +432,7 @@ Flagging data:
 ### <a id='s1-2-4' />Adjusting TA1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|swap_with_TA2|0.0|0|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|swap_with_TA2|0.0|0|
  
 ![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_adj_TA1.jpeg)
  
@@ -3917,24 +3921,8 @@ No erroneous data listed for Aurora
 ## <a id='s21-2' />Adjusting data at Aurora
 No data to fix at Aurora
 No data to fix at Aurora
-# <a id='s22' />21 Petermann Glacier
-## <a id='s22-1' />Manual flagging of data at Petermann Glacier
-Flagging data:
-|start time|end time|variable|
-|-|-|-|
-|2005-06-19 00:00:00+00:00|2005-08-13 00:00:00+00:00|TA3|
- 
-![Erroneous data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_TA3_data_flagging.png)
- 
-|start time|end time|variable|
-|-|-|-|
-|2005-06-19 00:00:00+00:00|2005-08-13 00:00:00+00:00|TA4|
- 
-![Erroneous data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_TA4_data_flagging.png)
- 
-## <a id='s22-2' />Adjusting data at Petermann Glacier
-No data to fix at Petermann Glacier
-No data to fix at Petermann Glacier
+# <a id='s22' />21 Petermann Gl
+Warning: No file for station 21 Petermann Gl
 # <a id='s23' />22 Petermann ELA
 ## <a id='s23-1' />Manual flagging of data at Petermann ELA
 Flagging data:
@@ -4294,26 +4282,38 @@ Warning: OSWR not found
  
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
  
-# <a id='s26' />30 LAR1
-## <a id='s26-1' />Manual flagging of data at LAR1
+# <a id='s26' />25 SMS1
+Warning: No file for station 25 SMS1
+# <a id='s27' />26 SMS2
+Warning: No file for station 26 SMS2
+# <a id='s28' />27 SMS3
+Warning: No file for station 27 SMS3
+# <a id='s29' />28 SMS4
+Warning: No file for station 28 SMS4
+# <a id='s30' />29 SMS5
+Warning: No file for station 29 SMS5
+# <a id='s31' />30 LAR1
+## <a id='s31-1' />Manual flagging of data at LAR1
 No erroneous data listed for LAR1
-## <a id='s26-2' />Adjusting data at LAR1
-### <a id='s26-2-1' />Adjusting ISWR
+## <a id='s31-2' />Adjusting data at LAR1
+### <a id='s31-2-1' />Adjusting ISWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2000-01-01T00:00:00+00:00|2012-01-01T00:00:00+00:00|swap_with_OSWR|0.0|0|
  
 ![Adjusted data at LAR1](../figures/L1_data_treatment/LAR1_adj_ISWR.jpeg)
  
-# <a id='s27' />31 LAR2
-## <a id='s27-1' />Manual flagging of data at LAR2
+# <a id='s32' />31 LAR2
+## <a id='s32-1' />Manual flagging of data at LAR2
 No erroneous data listed for LAR2
-## <a id='s27-2' />Adjusting data at LAR2
+## <a id='s32-2' />Adjusting data at LAR2
 No data to fix at LAR2
 No data to fix at LAR2
-# <a id='s28' />32 LAR3
-## <a id='s28-1' />Manual flagging of data at LAR3
+# <a id='s33' />32 LAR3
+## <a id='s33-1' />Manual flagging of data at LAR3
 No erroneous data listed for LAR3
-## <a id='s28-2' />Adjusting data at LAR3
+## <a id='s33-2' />Adjusting data at LAR3
 No data to fix at LAR3
 No data to fix at LAR3
+# <a id='s34' />33 SMS-PET
+Warning: No file for station 33 SMS-PET

@@ -81,19 +81,19 @@ Flagging data:
 ### Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|biweekly_upper_range_filter|0.5|2602|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|hampel_filter|2.0|3797|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|biweekly_upper_range_filter|0.5|2602|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|hampel_filter|2.0|3797|
  
 ![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_adj_HW1.jpeg)
  
 ### Adjusting HW2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|biweekly_upper_range_filter|0.5|8517|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|hampel_filter|2.0|2714|
-|2014-05-09T21:00:00+00:00|2019-05-04T18:00:00+00:00|add|9.0|0|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|biweekly_upper_range_filter|0.5|8516|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|hampel_filter|2.0|2730|
+|2014-05-09T21:00:00+00:00|2020-11-03T21:00:00+00:00|add|9.0|0|
  
 ![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_adj_HW2.jpeg)
  
@@ -107,7 +107,7 @@ Flagging data:
 ### Adjusting TA1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2014-01-01T00:00:00+00:00|2019-05-04T18:00:00+00:00|swap_with_TA2|0.0|0|
+|2014-01-01T00:00:00+00:00|2020-11-03T21:00:00+00:00|swap_with_TA2|0.0|0|
  
 ![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_adj_TA1.jpeg)
  
@@ -3596,24 +3596,8 @@ No erroneous data listed for Aurora
 ## Adjusting data at Aurora
 No data to fix at Aurora
 No data to fix at Aurora
-# 21 Petermann Glacier
-## Manual flagging of data at Petermann Glacier
-Flagging data:
-|start time|end time|variable|
-|-|-|-|
-|2005-06-19 00:00:00+00:00|2005-08-13 00:00:00+00:00|TA3|
- 
-![Erroneous data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_TA3_data_flagging.png)
- 
-|start time|end time|variable|
-|-|-|-|
-|2005-06-19 00:00:00+00:00|2005-08-13 00:00:00+00:00|TA4|
- 
-![Erroneous data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_TA4_data_flagging.png)
- 
-## Adjusting data at Petermann Glacier
-No data to fix at Petermann Glacier
-No data to fix at Petermann Glacier
+# 21 Petermann Gl
+Warning: No file for station 21 Petermann Gl
 # 22 Petermann ELA
 ## Manual flagging of data at Petermann ELA
 Flagging data:
@@ -3973,6 +3957,16 @@ Warning: OSWR not found
  
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
  
+# 25 SMS1
+Warning: No file for station 25 SMS1
+# 26 SMS2
+Warning: No file for station 26 SMS2
+# 27 SMS3
+Warning: No file for station 27 SMS3
+# 28 SMS4
+Warning: No file for station 28 SMS4
+# 29 SMS5
+Warning: No file for station 29 SMS5
 # 30 LAR1
 ## Manual flagging of data at LAR1
 No erroneous data listed for LAR1
@@ -3996,3 +3990,5 @@ No erroneous data listed for LAR3
 ## Adjusting data at LAR3
 No data to fix at LAR3
 No data to fix at LAR3
+# 33 SMS-PET
+Warning: No file for station 33 SMS-PET
