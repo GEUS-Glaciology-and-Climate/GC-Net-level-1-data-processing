@@ -19,9 +19,9 @@ import os.path
 from os import path
 from matplotlib.dates import DateFormatter
 import matplotlib.dates as mdates
+import requests
 
 # Set the locator
-
 
 # %% L0 overview
 path_to_L0N = "L0M/"
