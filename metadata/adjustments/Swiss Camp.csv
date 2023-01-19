@@ -1,10 +1,20 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-01T00:00:00+00:00,,HW1,add,-0.5,Not reported. Manual shift suggested by bav.
 2009-05-01T00:00:00+00:00,,HW2,add,0.3,Not reported. Manual shift suggested by bav.
-20030119T00:00:00+00:00,,HS1,add,-0.6,Not reported. Manual shift suggested by bav.
-20030427T00:00:00+00:00,,HS1,add,0.4,Not reported. Manual shift suggested by bav.
-20140508T00:00:00+00:00,,HS1,add,-2,Not reported. Manual shift suggested by bav.
-20140508T00:00:00+00:00,,HS2,add,-2,Not reported. Manual shift suggested by bav.
+
+1999-01-01T00:00:00+00:00,,HS1,add,-0.75,Not reported. Manual shift suggested by bav.
+2000-12-31T00:00:00+00:00,,HS1,add,-0.7,Not reported. Manual shift suggested by bav.
+2002-01-25T00:00:00+00:00,,HS1,add,+1.5,Not reported. Manual shift suggested by bav.
+2003-01-19T00:00:00+00:00,,HS1,add,-0.6,Not reported. Manual shift suggested by bav.
+2003-04-27T00:00:00+00:00,,HS1,add,0.4,Not reported. Manual shift suggested by bav.
+2004-01-01T00:00:00+00:00,,HS1,add,-0.5,Not reported. Manual shift suggested by bav.
+2011-08-01T00:00:00+00:00,,HS1,add,-3,Not reported. Manual shift suggested by bav.
+2014-05-08T00:00:00+00:00,,HS1,add,-2,Not reported. Manual shift suggested by bav.
+
+2000-12-31T00:00:00+00:00,,HS2,add,-0.8,Not reported. Manual shift suggested by bav.
+2001-05-17T00:00:00+00:00,,HS2,add,-0.3,Not reported. Manual shift suggested by bav.
+2011-08-01T00:00:00+00:00,,HS2,add,-3,Not reported. Manual shift suggested by bav.
+2014-05-08T00:00:00+00:00,,HS2,add,-2,Not reported. Manual shift suggested by bav.
 
 20120510T00:00:00+00:00,,ISWR,swap_with_OSWR,0,Not reported. Manual shift adj by bav.
 
@@ -12,6 +22,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-07T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
 
 # air temp correction on HW1 and HW2
+1996-01-01T00:00:00+00:00,1996-08-01T00:00:00+00:00,HW1,air_temp_sonic_anticorrection,0,
+1996-01-01T00:00:00+00:00,1996-08-01T00:00:00+00:00,HW2,air_temp_sonic_anticorrection,0,
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
 2009-05-15T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,
 
@@ -20,6 +32,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.5,Manually filtered by bav
 2018-03-12T00:00:00+00:00,2018-05-12T00:00:00+00:00,HW2,max_filter,0.77,Manually filtered by bav
 1995-01-12T00:00:00+00:00,2000-01-01T00:00:00+00:00,HW2,max_filter,8,Manually filtered by bav
+2009-01-01T00:00:00+00:00,2011-07-15T00:00:00+00:00,HW1,min_filter,1,Manually filtered by bav
+2009-01-01T00:00:00+00:00,2012-01-15T00:00:00+00:00,HW2,min_filter,1,Manually filtered by bav
 
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav

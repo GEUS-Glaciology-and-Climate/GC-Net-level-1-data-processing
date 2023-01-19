@@ -87,7 +87,9 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
     Msg("## Adjusting data at " + site)
     # we start by adjusting and filtering all variables except surface height
-    df_v4 = ptb.adjust_data(df_out, site, skip_var=["HS1", "HS2"])
+    df_v4 = ptb.adjust_data(df_out, site,
+                            # var_list=['HW1','HW2'], 
+                            skip_var=["HS1", "HS2"])
 
     # Applying standard filters again
     df_v4 = df_v4.resample("H").asfreq()
@@ -104,6 +106,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         site,
     )
 
+    # df_v6[['HS1','HS2']].plot()
     # removing empty rows:
     useful_var_list = [
         "ISWR",  "OSWR", "NR", "TA1", "TA2", "TA3",
