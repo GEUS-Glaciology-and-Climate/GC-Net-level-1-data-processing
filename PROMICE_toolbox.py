@@ -920,7 +920,7 @@ def extrapolate_temp(dataframe, var=["TA1", "TA2"], target_height=2, max_diff=5)
     )
     surface_temp = ht_low * np.nan
 
-    surface_temp.loc[msk] = var_low.loc[msk] - (
+    surface_temp.loc[msk] = var_low.loc[msk] + (
         ((var_high.loc[msk] - var_low.loc[msk]) / (ht_high.loc[msk] - ht_low.loc[msk]))
         * (target_height - ht_low.loc[msk])
     )
