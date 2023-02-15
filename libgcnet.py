@@ -447,6 +447,9 @@ def load_old_logger_file(plot=True):
         print('end date', df_rad.index[-1])
         print('resolution', np.unique(np.diff(df_rad.index)))
     
+        # interpolating to hourly values
+        df_met = df_met.resample('H').mean().ffill(limit=3)
+        
         # plotting
         if plot:
             if year != 1998:
@@ -587,7 +590,7 @@ def load_old_logger_file(plot=True):
     print('start date', df_rad.index[0])
     print('end date', df_rad.index[-1])
     print('resolution', np.unique(np.diff(df_rad.index)))
-    
+       
     df_all = pd.concat((df_all, df_met[[ 'VW1', 'VW1_max', 'TA1', 'DW1']]))
     df_all = pd.concat((df_all, df_rad.resample('H',label='right').mean()[['ISWR', 'ISWR2', 'OSWR', 'NR',]]))
     
@@ -607,6 +610,8 @@ def load_old_logger_file(plot=True):
     print('start date', df_93.index[0])
     print('end date', df_93.index[-1])
     print('resolution', np.unique(np.diff(df_93.index)))
+    # interpolating to hourly values
+    df_93 = df_93.resample('H').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_93))
     ############################ 3 hours ##################################### 
     filename='1993_MET_90_3h_doy.hh.DAT'
@@ -620,6 +625,8 @@ def load_old_logger_file(plot=True):
     print('start date', df_90.index[0])
     print('end date', df_90.index[-1])
     print('resolution', np.unique(np.diff(df_90.index)))
+    # interpolating to hourly values
+    df_93 = df_93.resample('H').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_90))
     
     ############################ 3 hours ##################################### 
@@ -642,6 +649,8 @@ def load_old_logger_file(plot=True):
     print('start date', df_94_twr.index[0])
     print('end date', df_94_twr.index[-1])
     print('resolution', np.unique(np.diff(df_94_twr.index)))
+    # interpolating to hourly values
+    df_94_twr = df_94_twr.resample('H').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_94_twr))
     ############################ 3 h #######################################
     filename = '1993_TOWER.DAT'
@@ -662,6 +671,8 @@ def load_old_logger_file(plot=True):
     print('start date', df_1993_tower.index[0])
     print('end date', df_1993_tower.index[-1])
     print('resolution', np.unique(np.diff(df_1993_tower.index)))
+    # interpolating to hourly values
+    df_1993_tower = df_1993_tower.resample('H').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_1993_tower))
     
     ########################### hourly ########################################### 

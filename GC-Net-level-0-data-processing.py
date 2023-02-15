@@ -35,7 +35,7 @@ else:
     print("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(len(L0dirs)):
+for i in range(1): #len(L0dirs)):
     print("--------------------------------")
     print("Now Processing Directory: ", L0dirs[i])
     # the file structure of raw campbell data files
@@ -430,3 +430,5 @@ for i in range(len(L0dirs)):
 
     # clear dfm from memory before next station
     # del dfm
+
+    

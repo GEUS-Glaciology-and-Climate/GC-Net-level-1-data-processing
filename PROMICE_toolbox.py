@@ -692,21 +692,14 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             df1.loc[start:end, var_target+'_org'] = var_sec + note
 
         return df1[var_target].values
-    df["HW1_org"] = 'HW1'
-    df["HW2_org"] = 'HW2'
-    df["HW1"] = fill_gap_HW(df, df, "HW1", "HW2")
-    df["HW2"] = fill_gap_HW(df, df, "HW2", "HW1")
+    if df["HW1"].notnull().any():
+        df["HW1_org"] = 'HW1'
+        df["HW1"] = fill_gap_HW(df, df, "HW1", "HW2")
+    if df["HW2"].notnull().any():
+        df["HW2_org"] = 'HW2'
+        df["HW2"] = fill_gap_HW(df, df, "HW2", "HW1")
        
     # At swiss camp, using HW from tower to fill the gaps
-    # if site == 'Swiss Camp':
-    #     df2 = nead.read("L1/00-SwissCamp10m.csv").to_dataframe().reset_index(drop=True)
-    #     df2['timestamp'] = pd.to_datetime(df2.timestamp)
-    #     df2 = df2.set_index("timestamp").replace(-999, np.nan)
-        
-    #     df["HW1"] = fill_gap_HW(df, df2, "HW1", "HW1", note= ' tower')
-    #     df["HW1"] = fill_gap_HW(df, df2, "HW1", "HW2", note= ' tower')
-    #     df["HW2"] = fill_gap_HW(df, df2, "HW2", "HW2", note= ' tower')
-    #     df["HW2"] = fill_gap_HW(df, df2, "HW2", "HW1", note= ' tower')
     if site == 'Swiss Camp 10m':
         df2 = nead.read("L1/01-SwissCamp.csv").to_dataframe().reset_index(drop=True)
         df2['timestamp'] = pd.to_datetime(df2.timestamp)
@@ -717,16 +710,18 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         df["HW2"] = fill_gap_HW(df, df2, "HW2", "HW2", note= ' aws')
         df["HW2"] = fill_gap_HW(df, df2, "HW2", "HW1", note= ' aws')        
 
-    fig,ax = plt.subplots(2,1, figsize=(15,8))
-    for src in df.HW1_org.unique():
-        df.HW1.loc[df.HW1_org == src].plot(ax=ax[0], label=src, marker="o", linestyle="None")
-    for src in df.HW2_org.unique():
-        df.HW2.loc[df.HW2_org == src].plot(ax=ax[1], label=src, marker="o", linestyle="None")
-    ax[0].legend()
-    ax[1].legend()
-    fig.savefig("figures/L1_data_treatment/" + site + "_gap_filling_HW.png")
-
-    df = df.drop(columns=['HW1_org','HW2_org'])
+    if 'HW1_org' in df.columns:
+        fig,ax = plt.subplots(2,1, figsize=(15,8))
+        for src in df.HW1_org.unique():
+            df.HW1.loc[df.HW1_org == src].plot(ax=ax[0], label=src, marker="o", linestyle="None")
+        for src in df.HW2_org.unique():
+            df.HW2.loc[df.HW2_org == src].plot(ax=ax[1], label=src, marker="o", linestyle="None")
+        ax[0].legend()
+        ax[1].legend()
+        fig.savefig("figures/L1_data_treatment/" + site + "_gap_filling_HW.png")
+    
+        df = df.drop(columns=['HW1_org','HW2_org'])
+        
     # Creating surface height field
     if any(df.HW1.notnull()):
         ind1 = df.HW1.first_valid_index()
@@ -918,16 +913,16 @@ def extrapolate_temp(dataframe, var=["TA1", "TA2"], target_height=2, max_diff=5)
         & ((var_low - var_high) != 0)
         & ((ht_low - ht_high) != 0)
     )
-    surface_temp = ht_low * np.nan
+    target_temp = ht_low * np.nan
 
-    surface_temp.loc[msk] = var_low.loc[msk] + (
+    target_temp.loc[msk] = var_low.loc[msk] + (
         ((var_high.loc[msk] - var_low.loc[msk]) / (ht_high.loc[msk] - ht_low.loc[msk]))
         * (target_height - ht_low.loc[msk])
     )
-    diff_1 = (surface_temp - var_low).abs()
-    diff_2 = (surface_temp - var_high).abs()
-    surface_temp.loc[(diff_1 > max_diff) | (diff_2 > max_diff)] = np.nan
-    return surface_temp
+    diff_1 = (target_temp - var_low).abs()
+    diff_2 = (target_temp - var_high).abs()
+    target_temp.loc[(diff_1 > max_diff) | (diff_2 > max_diff)] = np.nan
+    return target_temp
 
 # Filter frozen values
 from scipy.ndimage import binary_dilation

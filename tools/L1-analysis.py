@@ -21,7 +21,7 @@ from matplotlib.dates import DateFormatter
 import matplotlib.dates as mdates
 import requests
 
-# Set the locator
+os.chdir('..')
 
 # %% L0 overview
 path_to_L0N = "L0M/"
@@ -168,6 +168,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
         if var[-5:] == "stdev":
             continue
         if var.endswith("std"):
+            continue
+        if var.endswith("V"):
             continue
         # print(var)
 
