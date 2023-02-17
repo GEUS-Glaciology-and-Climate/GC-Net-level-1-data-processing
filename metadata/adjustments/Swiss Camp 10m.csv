@@ -1,5 +1,6 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 2014-05-09T21:00:00+00:00,,HW2,add,9,upper level at 10m
+
 # shift in pressure compared to the other stations (SWC and SWC_v2)
 2014-01-01T00:00:00+00:00,2019-05-05T00:00:00+00:00,P,add,-96.5,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/50
 
@@ -16,3 +17,5 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 2014-01-01T00:00:00+00:00,,TA1,swap_with_TA2,0,Confirmed by bav
 
+1998-05-01T00:00:00+00:00, 2002-01-01T00:00:00+00:00, DW1, rotate, -100, adjusted by bav
+1998-05-01T00:00:00+00:00, 2002-01-01T00:00:00+00:00, DW2, rotate, -100, adjusted by bav

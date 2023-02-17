@@ -1,0 +1,5 @@
+t0,t1,variable,adjust_function,adjust_value,comment
+
+# Realtive humidity back to water
+,,RH1,ice_to_water,0, 
+,,RH2,ice_to_water,0, 

@@ -1,2 +1,5 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 20000101T00:00:00+00:00,20120101T00:00:00+00:00,ISWR,swap_with_OSWR,0,manual adjustment from bav
+# Realtive humidity back to water
+,,RH1,ice_to_water,0, 
+,,RH2,ice_to_water,0, 

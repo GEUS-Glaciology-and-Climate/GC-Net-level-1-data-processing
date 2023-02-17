@@ -8,7 +8,7 @@ site, variable, min, max
 *, VW2, 0, 40
 *, DW1, 0, 360
 *, DW2, 0, 360
-*, HW1, -2, 7
+*, HW1, -2, 15
 *, HW2, -2, 15
 *, RH1, 20, 130
 *, RH2, 20, 130
@@ -16,20 +16,24 @@ site, variable, min, max
 *, OSWR, 0, 950
 *, P, 610, 1000
 *, NR, -250, 250
+*, ^TS[^_]+$, -50, 0.1
+
 NASA-U, HW2, 0.01, 6
 DYE2, P, 720, 1000
 DYE2, HS1, -1, 1000
 DYE2, HS2, -1, 1000
-Crawford Point 1, P, 740, 820
+
 Petermann ELA,P, 850, 960
 NASA-SE, P, 680, 790
 NASA-E, P, 650, 760
 South Dome, P, 640, 760
+
 E-GRIP, P, 675, 750
 E-GRIP, TA1, -80, 10
 E-GRIP, TA2, -80, 10
 E-GRIP, TA3, -80, 10
 E-GRIP, TA4, -80, 10
+
 Humboldt, P, 734, 820
 JAR1, P, 840, 950
 DYE2, P, 710, 820
@@ -38,10 +42,37 @@ GITS, P, 710, 840
 GITS, RH1, 40, 110
 GITS, RH2, 40, 110
 Saddle, P, 680, 780
+
 Swiss Camp, P, 810, 920
+Swiss Camp, TA1, -50, 15
+Swiss Camp, TA2, -50, 15
+Swiss Camp, TA3, -50, 15
+Swiss Camp, TA4, -50, 15
+Swiss Camp, ^TS[^_]+$, -20, 0.1
+
 Swiss Camp 10m, P, 810, 920
+Swiss Camp 10m, TA1, -50, 15
+Swiss Camp 10m, TA2, -50, 15
+Swiss Camp 10m, TA3, -50, 15
+
 NEEM, RH1, 40, 115
 NEEM, RH2, 40, 115
+
 Summit, P, 620, 1000
 Summit, TA1, -80, 15
 Summit, TA2, -80, 15
+
+KAR, HW1, 0.5, 10
+KAR, HW2, 0.5, 10
+
+Petermann Glacier, P, 950, 1000
+
+Crawford Point 1, P, 740, 820
+Crawford Point 1, RH1, 20, 110
+Crawford Point 1, RH2, 20, 110
+Crawford Point 1, ^TS[^_]+$, -30, 0.1
+
+NASA-E, ^TS[^_]+$, -40, -20
+NASA-U, ^TS[^_]+$, -30, 0.1
+Tunu-N, ^TS[^_]+$, -45, 0.1
+South Dome, ^TS[^_]+$, -25, 0.1

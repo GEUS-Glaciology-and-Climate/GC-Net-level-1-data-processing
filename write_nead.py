@@ -58,7 +58,12 @@ def write_nead(data_frame, nead_config, output_path):
 
     for f in fields_list:
         if f not in data_frame.columns:
+            print(f, 'not in the dataframe')
             data_frame[f] = np.nan
+            
+    for f in data_frame.columns:
+        if f not in fields_list:
+            print(f, 'not in the header file')
 
     # Write conf into buffer
     buffer = StringIO()

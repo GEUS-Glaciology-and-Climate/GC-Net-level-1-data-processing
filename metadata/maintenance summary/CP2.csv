@@ -1,5 +1,5 @@
 ,date,Reported,SR1 before (cm),SR1 after (cm),SR2 before (cm),SR2 after (cm),T1 before (cm),T1 after (cm),T2 before (cm),T2 after (cm),W1 before (cm),W1 after (cm),W2 before (cm),W2 after (cm),NewDepth1 (m),NewDepth2 (m),NewDepth3 (m),NewDepth4 (m),NewDepth5 (m),NewDepth6 (m),NewDepth7 (m),NewDepth8 (m),NewDepth9 (m),NewDepth10 (m)
-0,1997-05-01 00:00,,,,,,,,,,,,,,,,,,,,,,,
+0,1997-05-01 00:00,,,,,,,,,,,,,,10.0,9.0,8.0,7.0,6.0,5.0,4.0,3.0,2.0,1.0
 1,1998-05-30 00:00,y,51.0,164.0,51.0,164.0,25.0,185.0,205.0,305.0,85.0,194.0,205.0,314.0,,,,,,,,,,
 2,1999-05-28 00:00,y,,,,,56.0,168.0,173.0,286.0,62.0,173.0,182.0,291.0,,,,,,,,,,
 3,2000-06-03 00:00,y,,,,,36.0,210.0,148.0,330.0,44.0,210.0,162.0,326.0,,,,,,,,,,

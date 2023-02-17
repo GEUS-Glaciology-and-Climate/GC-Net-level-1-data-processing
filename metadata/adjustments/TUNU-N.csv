@@ -19,6 +19,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2021-01-05T00:00:00+00:00,2022-09-09T00:00:00+00:00,P,grad_filter,5,
 1990-01-01T00:00:00+00:00,2012-01-01T00:00:00+00:00,RH1,swap_with_RH2,0,bav
 
+2011-06-01T00:00:00+00:00, 2012-06-01T00:00:00+00:00, DW1,rotate,90,bav
+2011-06-01T00:00:00+00:00, 2012-06-01T00:00:00+00:00, DW2,rotate,90,bav
+
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
 2009-05-15T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,

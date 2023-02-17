@@ -9,16 +9,12 @@ t0,t1,variable,flag,comment,URL_graphic
 2014-10-09T00:00:00+00:00,2016-05-15T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
 2017-08-16T00:00:00+00:00,2018-05-26T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
 
-2010-04-01T00:00:00+00:00,,TS1,CHECKME,Manually flagged by bav,
-2010-04-01T00:00:00+00:00,,TS2,CHECKME,Manually flagged by bav,
-2010-04-01T00:00:00+00:00,,TS3,CHECKME,Manually flagged by bav,
-2010-04-01T00:00:00+00:00,,TS4,CHECKME,Manually flagged by bav,
-2010-04-01T00:00:00+00:00,,TS5,CHECKME,Manually flagged by bav,
-2010-04-01T00:00:00+00:00,,TS6,CHECKME,Manually flagged by bav,
-2010-04-01T00:00:00+00:00,,TS7,CHECKME,Manually flagged by bav,
-2010-04-01T00:00:00+00:00,,TS8,CHECKME,Manually flagged by bav,
-2010-04-01T00:00:00+00:00,,TS9,CHECKME,Manually flagged by bav,
-2010-04-01T00:00:00+00:00,,TS10,CHECKME,Manually flagged by bav,
+2010-04-01T00:00:00+00:00,,TS*,CHECKME,Manually flagged by bav,
+
+1999-01-01T00:00:00+00:00, 2006-05-01T00:00:00+00:00, DW1, NAN, values not spanning 0-360 something wrong (bav)
+1999-01-01T00:00:00+00:00, 2006-05-01T00:00:00+00:00, DW2, NAN, values not spanning 0-360 something wrong (bav)
+2007-01-01T00:00:00+00:00, 2010-01-01T00:00:00+00:00, DW1, NAN, values not spanning 0-360 something wrong (bav)
+2007-01-01T00:00:00+00:00, 2010-01-01T00:00:00+00:00, DW2, NAN, values not spanning 0-360 something wrong (bav)
 
 2021-06-14T00:00:00+00:00, , TA1, NAN, Station getting buried (bav),
 2021-06-14T00:00:00+00:00, , TA2, NAN, Station getting buried (bav),
@@ -28,5 +24,6 @@ t0,t1,variable,flag,comment,URL_graphic
 2021-06-14T00:00:00+00:00, , DW1, NAN, Station getting buried (bav),
 
 2004-01-03, 2004-06-11, TA1,NAN, station buried (bav),
+2004-01-03, 2004-06-11, VW1,NAN, station buried (bav),
 2004-01-03, 2004-06-11, TA3,NAN, station buried (bav),
 2004-01-03, 2004-06-11, RH1,NAN, station buried (bav),

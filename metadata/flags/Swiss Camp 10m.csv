@@ -5,8 +5,11 @@ t0,t1,variable,flag,comment,URL_graphic
 2001-06-03T00:00:00+00:00,2002-05-11T00:00:00+00:00,OSWR,NAN,Manually flagged by bav,
 2001-06-03T00:00:00+00:00,2002-05-11T00:00:00+00:00,TA1,NAN,Manually flagged by bav,
 2001-06-03T00:00:00+00:00,2002-05-11T00:00:00+00:00,TA2,NAN,Manually flagged by bav,
+
 2001-06-03T00:00:00+00:00,2002-05-11T00:00:00+00:00,DW1,NAN,Manually flagged by bav,
 2001-06-03T00:00:00+00:00,2002-05-11T00:00:00+00:00,DW2,NAN,Manually flagged by bav,
+2011-01-01T00:00:00+00:00,2012-12-31T00:00:00+00:00,DW2,NAN,Manually flagged by bav,
+
 2001-06-03T00:00:00+00:00,2002-05-11T00:00:00+00:00,VW1,NAN,Manually flagged by bav,
 2001-06-03T00:00:00+00:00,2002-05-11T00:00:00+00:00,RH1,NAN,Manually flagged by bav,
 2001-06-03T00:00:00+00:00,2002-05-11T00:00:00+00:00,RH2,NAN,Manually flagged by bav,

@@ -35,7 +35,9 @@ else:
     print("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-for i in range(1): #len(L0dirs)):
+metadata = pd.read_csv('metadata/GC-Net_location.csv', skipinitialspace=True)
+
+for i in range(5,6): #len(L0dirs)):
     print("--------------------------------")
     print("Now Processing Directory: ", L0dirs[i])
     # the file structure of raw campbell data files
@@ -46,6 +48,7 @@ for i in range(1): #len(L0dirs)):
     cfiledir_jeb = path + "/C level Jason/" + cfilenum + "c.dat"
     cfiledir = path + L0dirs[i] + "/C file/" + cfilenum + "c.dat"
     configfile = l0inipath + L0dirs[i] + "_header.ini"
+    site = L0dirs[i][3:]
 
     # make path for merged C-level and Campbell nead file
     mcoutfile = mcpath + L0dirs[i]
@@ -298,9 +301,7 @@ for i in range(1): #len(L0dirs)):
         date_end = dfm.timestamp.iloc[-1].strftime("%Y-%m-%d")
         date_now = datetime.now().strftime("%Y-%m-%d")  # current date and time
                 
-        metadata = pd.read_csv('metadata/GC-Net_location.csv', skipinitialspace=True)
-        site = L0dirs[i][3:]
-
+        
         if date_end < metadata.loc[metadata.Name == site,'LastValidDate'].values[0]:
             print('Fetching latest transmission.')
             dfm = gc.get_transmission(site, 
@@ -365,11 +366,19 @@ for i in range(1): #len(L0dirs)):
     # read and merge historical c-level file
     print('\n\nLooking for C-level files to fill the gaps')
     if os.path.isfile(cfiledir):
+        cconfigfile = l0inipath + "c_file_header.ini"
+        c_file_header_str = write_nead.get_config_list_str(cconfigfile, "fields")
+        dfc = gc.read_c_file(cfiledir, c_file_header_str)
+        dfc.index = pd.to_datetime(dfc.index, utc=True)
+        
         if os.path.isfile(cfiledir_jeb):
             cconfigfile = "./L0//C level Jason/c_file_header_jeb.ini"
             c_file_header_str = write_nead.get_config_list_str(cconfigfile, "fields")
             dfc_jeb = gc.read_c_file(cfiledir_jeb, c_file_header_str)
             dfc_jeb.index = pd.to_datetime(dfc_jeb.index, utc=True)
+            
+            TS_col = [v for v in dfc_jeb.columns if 'TS' in v]
+            dfc_jeb[TS_col] = dfc.loc[dfc_jeb.index[0]:dfc_jeb.index[-1] , TS_col]
             if isinstance(starttime, datetime):
                 try:
                     starttime = pytz.utc.localize(starttime)
@@ -393,10 +402,6 @@ for i in range(1): #len(L0dirs)):
         else:
             end_c_file = []
 
-        cconfigfile = l0inipath + "c_file_header.ini"
-        c_file_header_str = write_nead.get_config_list_str(cconfigfile, "fields")
-        dfc = gc.read_c_file(cfiledir, c_file_header_str)
-        dfc.index = pd.to_datetime(dfc.index, utc=True)
         if not end_c_file:
             end_c_file = dfc.index[0]
         if isinstance(starttime, datetime):
@@ -406,14 +411,17 @@ for i in range(1): #len(L0dirs)):
 
         print("Using the following part of the C-file: ", needed_dfc)
         msk = needed_dfc.HS1.notnull() & needed_dfc.HW1.isnull()
-        needed_dfc.loc[msk, "HW1"] = -needed_dfc.loc[msk, "HS1"]
-        needed_dfc.loc[msk, "HW2"] = -needed_dfc.loc[msk, "HS2"]
+        needed_dfc.loc[msk, "HW1"] = needed_dfc.loc[msk, "HS1"].max()-needed_dfc.loc[msk, "HS1"]
+        needed_dfc.loc[msk, "HW2"] = needed_dfc.loc[msk, "HS2"].max()-needed_dfc.loc[msk, "HS2"]
 
         print("Merging with logger files dataframe:", dfm)
         if len(dfm) == 0:
             dfmc = needed_dfc
         elif os.path.isfile(cfiledir_jeb):
             dfm = dfm.set_index("timestamp")
+            dfm.index = pd.to_datetime(dfm.index,utc=True)
+            needed_dfc.index = pd.to_datetime(needed_dfc.index,utc=True)
+            needed_dfc_jeb.index = pd.to_datetime(needed_dfc_jeb.index,utc=True)
             dfmc = pd.concat([needed_dfc_jeb, needed_dfc, dfm])
             del needed_dfc_jeb
         else:
@@ -430,5 +438,4 @@ for i in range(1): #len(L0dirs)):
 
     # clear dfm from memory before next station
     # del dfm
-
     

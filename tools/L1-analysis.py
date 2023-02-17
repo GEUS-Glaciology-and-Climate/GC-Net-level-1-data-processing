@@ -171,6 +171,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
             continue
         if var.endswith("V"):
             continue
+        if var.endswith("TA5"):
+            continue
+        if df[var].isnull().all():
+            continue
         # print(var)
 
         df[var].plot(ax=ax[count])
@@ -277,7 +281,7 @@ fig.savefig(
 )
 # %% L1 temperature overview
 plt.close("all")
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[22:23]
 for site, ID in zip(site_list.Name, site_list.ID):
     variable_list = np.array(["TA1", "TA2", "TA3", "TA4"])
 

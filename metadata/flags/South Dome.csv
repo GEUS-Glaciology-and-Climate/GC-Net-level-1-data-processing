@@ -3,6 +3,7 @@ t0,t1,variable,flag,comment,URL_graphic
 
 1996-01-01T00:00:00+00:00,1999-06-01T00:00:00+00:00,TA4,CHECKME,Manually flagged by bav,
 2010-05-01T00:00:00+00:00,2011-06-01T00:00:00+00:00,TA4,CHECKME,Manually flagged by bav,
+2010-05-01T00:00:00+00:00,2011-06-01T00:00:00+00:00,TA1,CHECKME,Manually flagged by bav,
 2010-05-01T00:00:00+00:00,2011-06-01T00:00:00+00:00,TA2,CHECKME,Manually flagged by bav,
 
 2011-11-01T00:00:00+00:00,2012-03-12T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
@@ -18,15 +19,8 @@ t0,t1,variable,flag,comment,URL_graphic
 
 2020-11-01T00:00:00+00:00,,TA1,NAN, Buried,
 2020-11-01T00:00:00+00:00,,TA3,NAN, Buried,
+2019-03-01T00:00:00+00:00,,VW1,NAN, Buried,
+2019-03-01T00:00:00+00:00,,DW1,NAN, Buried,
 2019-03-01T00:00:00+00:00,2019-05-15T00:00:00+00:00,TA3,NAN, Buried,
 
-2008-07-01T00:00:00+00:00,,TS1,CHECKME,Manually flagged by bav,
-2008-07-01T00:00:00+00:00,,TS2,CHECKME,Manually flagged by bav,
-2008-07-01T00:00:00+00:00,,TS3,CHECKME,Manually flagged by bav,
-2008-07-01T00:00:00+00:00,,TS4,CHECKME,Manually flagged by bav,
-2008-07-01T00:00:00+00:00,,TS5,CHECKME,Manually flagged by bav,
-2008-07-01T00:00:00+00:00,,TS6,CHECKME,Manually flagged by bav,
-2008-07-01T00:00:00+00:00,,TS7,CHECKME,Manually flagged by bav,
-2008-07-01T00:00:00+00:00,,TS8,CHECKME,Manually flagged by bav,
-2008-07-01T00:00:00+00:00,,TS9,CHECKME,Manually flagged by bav,
-2008-07-01T00:00:00+00:00,,TS10,CHECKME,Manually flagged by bav,
+2008-07-01T00:00:00+00:00,,^TS[^_]+$,CHECKME,Manually flagged by bav,

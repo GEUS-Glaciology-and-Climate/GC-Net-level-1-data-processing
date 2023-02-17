@@ -10,6 +10,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # filters on HW1 and HW2
 2016-01-01T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.5,Manually filtered by bav
 2016-01-01T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.5,Manually filtered by bav
+2013-01-01T00:00:00+00:00, ,HW1,min_filter,1,Manually flagged by bav
 2016-01-01T00:00:00+00:00,2019-01-01T00:00:00+00:00,HW2,max_filter,3.12,Manually flagged by bav
 2016-01-01T00:00:00+00:00,2019-01-01T00:00:00+00:00,HW2,min_filter,2.4,Manually flagged by bav
 2015-07-01T00:00:00+00:00,2016-01-01T00:00:00+00:00,HW2,min_filter,1.4,Manually flagged by bav

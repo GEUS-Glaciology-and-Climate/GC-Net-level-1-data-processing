@@ -3,8 +3,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2010-05-29T00:00:00+00:00,,HS2,add,2.62,Not reported. Manual shift suggested by bav.
 
 
-1997-01-01T00:00:00+00:00,,HW1,add,-5.67,Not reported. Manual shift suggested by bav.
-1997-01-01T00:00:00+00:00,,HW2,add,-5.52,Not reported. Manual shift suggested by bav.
+1997-01-01T00:00:00+00:00,,HW1,add,-3,Not reported. Manual shift suggested by bav.
+1997-01-01T00:00:00+00:00,,HW2,add,-3,Not reported. Manual shift suggested by bav.
 1998-05-30T00:00:00+00:00,,HW1,add,+1,Not reported. Manual shift suggested by bav.
 1998-05-30T00:00:00+00:00,,HW2,add,+1,Not reported. Manual shift suggested by bav.
 1999-05-27T00:00:00+00:00,,HW1,add,+1,Not reported. Manual shift suggested by bav.
@@ -20,3 +20,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2000-06-02T00:00:00+00:00,,HS2,add,1.7,Not reported. Manual shift suggested by bav.
 
 1997-01-01T00:00:00+00:00,,TA1,swap_with_TA2,0,Confirmed by bav.
+
+# Realtive humidity back to water
+1995-01-01T00:00:00+00:00,2011-05-30T00:00:00+00:00,RH1,ice_to_water,0, 
+1995-01-01T00:00:00+00:00,2011-05-30T00:00:00+00:00,RH2,ice_to_water,0, 
