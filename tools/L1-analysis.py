@@ -233,7 +233,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %% data availability
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[:-3]
-fig, ax = plt.subplots(1,1, figsize=(7,10))
+fig, ax = plt.subplots(1,1, figsize=(9,8))
 plt.subplots_adjust(
         left=0.27, right=0.97, top=0.98, bottom=0.1, wspace=0.2, hspace=0.05
     )
@@ -256,7 +256,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df['t'] = df[['TA1','TA2','TA3','TA4']].mean(axis=1)
     df['rh'] = df[['RH1','RH2']].mean(axis=1)
     df['ws'] = df[['VW1','VW2']].mean(axis=1)
-
+    print(site, np.round(df['t'].notnull().sum()/df['t'].shape[0]*100, 1),
+          np.round(df['rh'].notnull().sum()/df['t'].shape[0]*100, 1),
+          np.round(df['ws'].notnull().sum()/df['t'].shape[0]*100, 1),
+          np.round(df['rad'].notnull().sum()/df['t'].shape[0]*100, 1))
     for i, var in enumerate(['rad','t','rh','ws']):
         # print(site, var,df[var].first_valid_index(), df[var].last_valid_index())
         tmp = df[var].notnull() *(-count + (i-1.5)/3)

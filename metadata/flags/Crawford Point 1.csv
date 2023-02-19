@@ -26,4 +26,4 @@ t0,t1,variable,flag,comment,URL_graphic
 2003-10-14T08:00:00+00:00,2004-04-21T00:00:00+00:00,TS3,CHECKME,Manually flagged by bav,
 2000-07-29T18:00:00+00:00,2000-08-10T00:00:00+00:00,TS1,CHECKME,Manually flagged by bav,
 2003-09-30T17:00:00+00:00,2003-12-13T00:00:00+00:00,TS7,CHECKME,Manually flagged by bav,
-2008-06-01T00:00:00+00:00,,TS*,CHECKME,Manually flagged by bav,
+2008-06-01T00:00:00+00:00,,^TS[^_]+$,CHECKME,Manually flagged by bav,

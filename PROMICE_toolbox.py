@@ -342,7 +342,7 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
         line_template = adj_info.loc[[ind], :].copy()
         for var in df_out.columns:
             line_template.variable = var
-            line_template.name = adj_info.index.max() + 1
+            line_template.index = [adj_info.index.max() + 1]
             adj_info = pd.concat((adj_info, line_template))
         adj_info = adj_info.drop(labels=ind, axis=0)
 

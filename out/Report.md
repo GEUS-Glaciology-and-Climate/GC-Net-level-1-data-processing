@@ -334,11 +334,6 @@ Flagging data:
 |2003-09-30 17:00:00+00:00|2003-12-13 00:00:00+00:00|TS7|
 |start time|end time|variable|
 |-|-|-|
-|2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TA1|
-|2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TA2|
-|2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TA3|
-|2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TA4|
-|2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TA5|
 |2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TS1|
 |2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TS2|
 |2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TS3|
@@ -350,6 +345,26 @@ Flagging data:
 |2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TS9|
 |2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TS10|
 ## Adjusting data at Crawford Point 1
+### Adjusting DW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|7|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6431|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_DW1.jpeg)
+ 
+### Adjusting DW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|7|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6431|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_DW2.jpeg)
+ 
 ### Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
@@ -358,6 +373,10 @@ Flagging data:
 |2009-05-15 00:00:00+00:00|2020-07-22 09:00:00+00:00|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2020-07-22 09:00:00+00:00|biweekly_upper_range_filter|0.5|19346|
 |2009-05-15 00:00:00+00:00|2020-07-22 09:00:00+00:00|hampel_filter|2.0|2185|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|25|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|24|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6431|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_HW1.jpeg)
  
@@ -368,43 +387,257 @@ Flagging data:
 |2009-05-15 00:00:00+00:00|2020-07-22 09:00:00+00:00|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2020-07-22 09:00:00+00:00|biweekly_upper_range_filter|0.5|6643|
 |2009-05-15 00:00:00+00:00|2020-07-22 09:00:00+00:00|hampel_filter|2.0|1943|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|25|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|24|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|5857|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_HW2.jpeg)
  
 ### Adjusting ISWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
 |2012-01-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|swap_with_OSWR|0.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|7|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|14|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_ISWR.jpeg)
+ 
+### Adjusting NR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|7|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|1769|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_NR.jpeg)
  
 ### Adjusting OSWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
 |2010-05-09 00:00:00+00:00|2020-07-22 09:00:00+00:00|multiply|0.934|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|7|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|22|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_OSWR.jpeg)
  
 ### Adjusting P
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|25|
 |1999-01-01 00:00:00+00:00|2010-05-09 19:00:00+00:00|add|-12.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|24|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|1|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6431|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_P.jpeg)
  
 ### Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
 |1996-01-01 00:00:00+00:00|2010-05-16 00:00:00+00:00|ice_to_water|0.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|7|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6419|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_RH1.jpeg)
  
 ### Adjusting RH2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
 |1996-01-01 00:00:00+00:00|2010-05-16 00:00:00+00:00|ice_to_water|0.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|4|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6431|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_RH2.jpeg)
+ 
+### Adjusting TA1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TA1.jpeg)
+ 
+### Adjusting TA2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TA2.jpeg)
+ 
+### Adjusting TA3
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6429|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TA3.jpeg)
+ 
+### Adjusting TA4
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6431|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TA4.jpeg)
+ 
+### Adjusting TA5
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|0|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|0|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TA5.jpeg)
+ 
+### Adjusting TS1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS1.jpeg)
+ 
+### Adjusting TS10
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS10.jpeg)
+ 
+### Adjusting TS2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS2.jpeg)
+ 
+### Adjusting TS3
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS3.jpeg)
+ 
+### Adjusting TS4
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS4.jpeg)
+ 
+### Adjusting TS5
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS5.jpeg)
+ 
+### Adjusting TS6
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS6.jpeg)
+ 
+### Adjusting TS7
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS7.jpeg)
+ 
+### Adjusting TS8
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS8.jpeg)
+ 
+### Adjusting TS9
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_TS9.jpeg)
+ 
+### Adjusting V
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|0|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|0|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6431|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_V.jpeg)
+ 
+### Adjusting VW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|7|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6431|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_VW1.jpeg)
+ 
+### Adjusting VW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|7|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|6431|
+ 
+![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_VW2.jpeg)
  
 ### Adjusting HS1
 |start time|end time|operation|value|number of removed samples|
@@ -419,6 +652,10 @@ Flagging data:
 |2010-05-08 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|0.7|0|
 |2011-01-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|3.5|0|
 |2017-05-21 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|3.0|0|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|25|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|24|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_HS1.jpeg)
  
@@ -435,6 +672,10 @@ Flagging data:
 |2010-05-11 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|-2.5|0|
 |2011-05-02 22:00:00+00:00|2020-07-22 09:00:00+00:00|add|3.5|0|
 |2017-05-21 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|2.2|0|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|25|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|24|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_HS2.jpeg)
  
@@ -497,11 +738,6 @@ Flagging data:
 |2010-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS10|
 |start time|end time|variable|
 |-|-|-|
-|1995-01-01 00:00:00+00:00|1999-05-21 00:00:00+00:00|TA1|
-|1995-01-01 00:00:00+00:00|1999-05-21 00:00:00+00:00|TA2|
-|1995-01-01 00:00:00+00:00|1999-05-21 00:00:00+00:00|TA3|
-|1995-01-01 00:00:00+00:00|1999-05-21 00:00:00+00:00|TA4|
-|1995-01-01 00:00:00+00:00|1999-05-21 00:00:00+00:00|TA5|
 |1995-01-01 00:00:00+00:00|1999-05-21 00:00:00+00:00|TS1|
 |1995-01-01 00:00:00+00:00|1999-05-21 00:00:00+00:00|TS2|
 |1995-01-01 00:00:00+00:00|1999-05-21 00:00:00+00:00|TS3|
@@ -514,11 +750,6 @@ Flagging data:
 |1995-01-01 00:00:00+00:00|1999-05-21 00:00:00+00:00|TS10|
 |start time|end time|variable|
 |-|-|-|
-|2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TA1|
-|2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TA2|
-|2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TA3|
-|2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TA4|
-|2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TA5|
 |2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TS1|
 |2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TS2|
 |2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TS3|
@@ -530,6 +761,20 @@ Flagging data:
 |2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TS9|
 |2006-04-26 00:00:00+00:00|2007-04-28 00:00:00+00:00|TS10|
 ## Adjusting data at NASA-U
+### Adjusting DW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_DW1.jpeg)
+ 
+### Adjusting DW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_DW2.jpeg)
+ 
 ### Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
@@ -542,6 +787,7 @@ Flagging data:
 |2011-04-01 00:00:00+00:00|2023-01-01 00:00:00+00:00|min_filter|1.39|8199|
 |2013-07-01 00:00:00+00:00|2014-07-01 00:00:00+00:00|min_filter|3.0|1|
 |2018-05-21 00:00:00+00:00|2022-10-07 05:00:00+00:00|biweekly_upper_range_filter|0.3|1424|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|3|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_HW1.jpeg)
  
@@ -556,14 +802,30 @@ Flagging data:
 |2009-05-15 00:00:00+00:00|2022-10-07 05:00:00+00:00|hampel_filter|2.0|3429|
 |2011-04-01 00:00:00+00:00|2023-01-01 00:00:00+00:00|min_filter|2.23|10|
 |2011-04-01 00:00:00+00:00|2023-01-01 00:00:00+00:00|max_filter|5.6|42|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|0|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_HW2.jpeg)
+ 
+### Adjusting ISWR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_ISWR.jpeg)
+ 
+### Adjusting NR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_NR.jpeg)
  
 ### Adjusting OSWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2003-01-01 00:00:00+00:00|2018-05-22 00:00:00+00:00|multiply|2.76205|0|
 |2011-05-31 00:00:00+00:00|2022-10-07 05:00:00+00:00|multiply|0.934|0|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_OSWR.jpeg)
  
@@ -574,6 +836,7 @@ Flagging data:
 |2000-01-01 00:00:00+00:00|2005-05-26 00:00:00+00:00|add|-15.0|0|
 |2016-07-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|add|-40.0|0|
 |2021-08-17 00:00:00+00:00|2022-05-17 00:00:00+00:00|add|45.0|0|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|0|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_P.jpeg)
  
@@ -581,6 +844,7 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|ice_to_water|0.0|0|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_RH1.jpeg)
  
@@ -588,8 +852,135 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|ice_to_water|0.0|0|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|0|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_RH2.jpeg)
+ 
+### Adjusting TA1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TA1.jpeg)
+ 
+### Adjusting TA2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TA2.jpeg)
+ 
+### Adjusting TA3
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TA3.jpeg)
+ 
+### Adjusting TA4
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|0|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TA4.jpeg)
+ 
+### Adjusting TA5
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|0|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TA5.jpeg)
+ 
+### Adjusting TS1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|0|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS1.jpeg)
+ 
+### Adjusting TS10
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS10.jpeg)
+ 
+### Adjusting TS2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|0|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS2.jpeg)
+ 
+### Adjusting TS3
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|0|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS3.jpeg)
+ 
+### Adjusting TS4
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS4.jpeg)
+ 
+### Adjusting TS5
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS5.jpeg)
+ 
+### Adjusting TS6
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS6.jpeg)
+ 
+### Adjusting TS7
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS7.jpeg)
+ 
+### Adjusting TS8
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS8.jpeg)
+ 
+### Adjusting TS9
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_TS9.jpeg)
+ 
+### Adjusting V
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_V.jpeg)
+ 
+### Adjusting VW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_VW1.jpeg)
+ 
+### Adjusting VW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
+ 
+![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_VW2.jpeg)
  
 ### Adjusting HS1
 |start time|end time|operation|value|number of removed samples|
@@ -602,6 +993,7 @@ Flagging data:
 |2011-05-31 22:00:00+00:00|2022-10-07 05:00:00+00:00|add|0.7|0|
 |2013-05-25 22:00:00+00:00|2022-10-07 05:00:00+00:00|add|2.3|0|
 |2018-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|add|2.7|0|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|48|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_HS1.jpeg)
  
@@ -616,6 +1008,7 @@ Flagging data:
 |2011-05-31 22:00:00+00:00|2022-10-07 05:00:00+00:00|add|0.58|0|
 |2013-06-04 00:00:00+00:00|2022-10-07 05:00:00+00:00|add|2.5|0|
 |2018-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|add|2.5|0|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|48|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_HS2.jpeg)
  
@@ -720,6 +1113,20 @@ Warning: HS2 not found
 |-|-|-|
 |2020-08-29 00:00:00+00:00|2021-08-13 12:00:00+00:00|RH2|
 ## Adjusting data at GITS
+### Adjusting DW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_DW1.jpeg)
+ 
+### Adjusting DW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_DW2.jpeg)
+ 
 ### Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
@@ -727,6 +1134,7 @@ Warning: HS2 not found
 |2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|biweekly_upper_range_filter|0.5|23462|
 |2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|hampel_filter|2.0|2683|
 |2019-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|max_filter|2.6|1197|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HW1.jpeg)
  
@@ -736,20 +1144,44 @@ Warning: HS2 not found
 |2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|biweekly_upper_range_filter|0.5|4776|
 |2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|hampel_filter|2.0|3173|
 |2019-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|max_filter|2.6|0|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|8|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HW2.jpeg)
+ 
+### Adjusting ISWR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_ISWR.jpeg)
+ 
+### Adjusting NR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_NR.jpeg)
  
 ### Adjusting OSWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2012-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|multiply|0.934|0|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_OSWR.jpeg)
+ 
+### Adjusting P
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_P.jpeg)
  
 ### Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |1995-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|ice_to_water|0.0|0|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_RH1.jpeg)
  
@@ -757,14 +1189,30 @@ Warning: HS2 not found
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |1995-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|ice_to_water|0.0|0|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_RH2.jpeg)
+ 
+### Adjusting TA1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TA1.jpeg)
+ 
+### Adjusting TA2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TA2.jpeg)
  
 ### Adjusting TA3
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |1990-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|min_filter|-39.4|7184|
 |2005-01-01 00:00:00+00:00|2008-01-01 00:00:00+00:00|add|-2.8|0|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TA3.jpeg)
  
@@ -773,8 +1221,107 @@ Warning: HS2 not found
 |-|-|-|-|-|
 |1990-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|min_filter|-39.4|5789|
 |2001-01-01 00:00:00+00:00|2008-01-01 00:00:00+00:00|add|-2.8|0|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TA4.jpeg)
+ 
+### Adjusting TA5
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TA5.jpeg)
+ 
+### Adjusting TS1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS1.jpeg)
+ 
+### Adjusting TS10
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS10.jpeg)
+ 
+### Adjusting TS2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS2.jpeg)
+ 
+### Adjusting TS3
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS3.jpeg)
+ 
+### Adjusting TS4
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS4.jpeg)
+ 
+### Adjusting TS5
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS5.jpeg)
+ 
+### Adjusting TS6
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS6.jpeg)
+ 
+### Adjusting TS7
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS7.jpeg)
+ 
+### Adjusting TS8
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS8.jpeg)
+ 
+### Adjusting TS9
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_TS9.jpeg)
+ 
+### Adjusting V
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_V.jpeg)
+ 
+### Adjusting VW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_VW1.jpeg)
+ 
+### Adjusting VW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+ 
+![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_VW2.jpeg)
  
 ### Adjusting HS1
 |start time|end time|operation|value|number of removed samples|
@@ -786,6 +1333,7 @@ Warning: HS2 not found
 |2010-05-03 00:00:00+00:00|2010-05-10 00:00:00+00:00|add|-2.5|0|
 |2014-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|2.25|0|
 |2016-05-23 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|2.0|0|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HS1.jpeg)
  
@@ -797,6 +1345,7 @@ Warning: HS2 not found
 |2010-05-03 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|9.0|0|
 |2014-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|1.25|0|
 |2016-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|3.0|0|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HS2.jpeg)
  
@@ -822,64 +1371,457 @@ Flagging data:
 |2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS9|
 |2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS10|
 ## Adjusting data at Humboldt
+### Adjusting DW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|2954|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_DW1.jpeg)
+ 
+### Adjusting DW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_DW2.jpeg)
+ 
 ### Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15 00:00:00+00:00|2022-02-23 06:00:00+00:00|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2022-02-23 06:00:00+00:00|biweekly_upper_range_filter|0.3|10801|
 |2009-05-15 00:00:00+00:00|2022-02-23 06:00:00+00:00|hampel_filter|2.0|2758|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|232|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|1012|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|1102|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|984|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1093|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|1242|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|785|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_HW1.jpeg)
  
 ### Adjusting HW2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
 |2009-05-15 00:00:00+00:00|2022-02-23 06:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15 00:00:00+00:00|2022-02-23 06:00:00+00:00|biweekly_upper_range_filter|0.3|9388|
+|2009-05-15 00:00:00+00:00|2022-02-23 06:00:00+00:00|biweekly_upper_range_filter|0.3|8817|
 |2009-05-15 00:00:00+00:00|2022-02-23 06:00:00+00:00|hampel_filter|2.0|3877|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|1545|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|1826|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1012|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1157|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2196|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|747|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_HW2.jpeg)
+ 
+### Adjusting ISWR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_ISWR.jpeg)
+ 
+### Adjusting NR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_NR.jpeg)
  
 ### Adjusting OSWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
 |2011-06-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|multiply|0.93|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_OSWR.jpeg)
+ 
+### Adjusting P
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_P.jpeg)
  
 ### Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
 |1995-01-01 00:00:00+00:00|2012-08-19 00:00:00+00:00|ice_to_water|0.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_RH1.jpeg)
  
 ### Adjusting RH2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
 |1995-01-01 00:00:00+00:00|2012-08-19 00:00:00+00:00|ice_to_water|0.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|0|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|0|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_RH2.jpeg)
+ 
+### Adjusting TA1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TA1.jpeg)
+ 
+### Adjusting TA2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TA2.jpeg)
+ 
+### Adjusting TA3
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|0|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|0|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TA3.jpeg)
+ 
+### Adjusting TA4
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TA4.jpeg)
+ 
+### Adjusting TS1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS1.jpeg)
+ 
+### Adjusting TS10
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS10.jpeg)
+ 
+### Adjusting TS2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS2.jpeg)
+ 
+### Adjusting TS3
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS3.jpeg)
+ 
+### Adjusting TS4
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS4.jpeg)
+ 
+### Adjusting TS5
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS5.jpeg)
+ 
+### Adjusting TS6
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS6.jpeg)
+ 
+### Adjusting TS7
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS7.jpeg)
+ 
+### Adjusting TS8
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS8.jpeg)
+ 
+### Adjusting TS9
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|0|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|0|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|0|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|0|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_TS9.jpeg)
+ 
+### Adjusting V
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_V.jpeg)
+ 
+### Adjusting VW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_VW1.jpeg)
+ 
+### Adjusting VW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+ 
+![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_VW2.jpeg)
  
 ### Adjusting HS1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|1999-05-03 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|1.2|0|
-|2003-05-22 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|3.0|0|
-|2007-05-13 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|1.0|0|
-|2010-03-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|3.0|0|
-|2015-03-26 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|2.0|0|
+|1999-05-03 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|1.2|0|
+|2003-05-22 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|3.0|0|
+|2007-05-13 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|1.0|0|
+|2010-03-01 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|3.0|0|
+|2015-03-26 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|2.0|0|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|1565|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|1318|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2704|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1299|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2858|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_HS1.jpeg)
  
 ### Adjusting HS2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|1999-05-03 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|0.6|0|
-|2003-05-22 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|3.0|0|
-|2010-03-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|3.0|0|
-|2011-02-25 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|-1.0|0|
-|2015-03-26 00:00:00+00:00|2022-02-23 06:00:00+00:00|add|2.0|0|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|1565|
+|1999-05-03 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|0.6|0|
+|2003-05-22 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|3.0|0|
+|2010-03-01 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|3.0|0|
+|2011-02-25 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|-1.0|0|
+|2015-03-26 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|2.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|1318|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2704|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1299|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2858|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_HS2.jpeg)
  
@@ -1228,11 +2170,6 @@ Warning: OSR not found
 |2017-06-15 00:00:00+00:00|2022-10-07 05:00:00+00:00|VW2|
 |start time|end time|variable|
 |-|-|-|
-|2010-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TA1|
-|2010-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TA2|
-|2010-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TA3|
-|2010-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TA4|
-|2010-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TA5|
 |2010-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS1|
 |2010-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS2|
 |2010-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS3|
@@ -1257,11 +2194,6 @@ Warning: OSR not found
 |2000-05-01 00:00:00+00:00|2001-04-17 00:00:00+00:00|TS10|
 |start time|end time|variable|
 |-|-|-|
-|2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TA1|
-|2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TA2|
-|2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TA3|
-|2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TA4|
-|2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TA5|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS1|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS2|
 |2000-05-12 00:00:00+00:00|2000-05-18 00:00:00+00:00|TS3|
@@ -1434,11 +2366,6 @@ Flagging data:
 |1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS10|
 |start time|end time|variable|
 |-|-|-|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TA1|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TA2|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TA3|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TA4|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TA5|
 |2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS1|
 |2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS2|
 |2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS3|
@@ -1450,11 +2377,26 @@ Flagging data:
 |2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS9|
 |2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS10|
 ## Adjusting data at JAR1
+### Adjusting DW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_DW1.jpeg)
+ 
+### Adjusting DW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_DW2.jpeg)
+ 
 ### Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|hampel_filter|2.0|3173|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_HW1.jpeg)
  
@@ -1463,20 +2405,72 @@ Flagging data:
 |-|-|-|-|-|
 |2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|hampel_filter|2.0|7573|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_HW2.jpeg)
+ 
+### Adjusting ISWR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|16|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_ISWR.jpeg)
+ 
+### Adjusting NR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|14|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_NR.jpeg)
  
 ### Adjusting OSWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-05-06 00:00:00+00:00|2019-09-08 01:00:00+00:00|multiply|0.934|0|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_OSWR.jpeg)
+ 
+### Adjusting P
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_P.jpeg)
+ 
+### Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|1|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_RH1.jpeg)
+ 
+### Adjusting RH2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|1|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_RH2.jpeg)
+ 
+### Adjusting TA1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TA1.jpeg)
+ 
+### Adjusting TA2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TA2.jpeg)
  
 ### Adjusting TA3
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2018-02-01 00:00:00+00:00|2019-12-20 00:00:00+00:00|max_filter|9.0|215|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|1|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TA3.jpeg)
  
@@ -1485,8 +2479,107 @@ Flagging data:
 |-|-|-|-|-|
 |2005-01-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|swap_with_TA3|0.0|654|
 |2013-02-01 00:00:00+00:00|2015-12-20 00:00:00+00:00|max_filter|9.0|3469|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|1|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TA4.jpeg)
+ 
+### Adjusting TA5
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|0|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TA5.jpeg)
+ 
+### Adjusting TS1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS1.jpeg)
+ 
+### Adjusting TS10
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS10.jpeg)
+ 
+### Adjusting TS2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS2.jpeg)
+ 
+### Adjusting TS3
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS3.jpeg)
+ 
+### Adjusting TS4
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS4.jpeg)
+ 
+### Adjusting TS5
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS5.jpeg)
+ 
+### Adjusting TS6
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS6.jpeg)
+ 
+### Adjusting TS7
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS7.jpeg)
+ 
+### Adjusting TS8
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS8.jpeg)
+ 
+### Adjusting TS9
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_TS9.jpeg)
+ 
+### Adjusting V
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_V.jpeg)
+ 
+### Adjusting VW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_VW1.jpeg)
+ 
+### Adjusting VW2
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|17|
+ 
+![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_VW2.jpeg)
  
 ### Adjusting HS1
 |start time|end time|operation|value|number of removed samples|
@@ -1504,6 +2597,7 @@ Flagging data:
 |2014-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
 |2015-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
 |2017-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|25|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_HS1.jpeg)
  
@@ -1522,6 +2616,7 @@ Flagging data:
 |2014-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
 |2015-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
 |2017-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|25|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_HS2.jpeg)
  
@@ -1551,11 +2646,6 @@ Flagging data:
 |2017-08-16 00:00:00+00:00|2018-05-26 00:00:00+00:00|HW1|
 |start time|end time|variable|
 |-|-|-|
-|2010-04-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TA1|
-|2010-04-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TA2|
-|2010-04-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TA3|
-|2010-04-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TA4|
-|2010-04-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TA5|
 |2010-04-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TS1|
 |2010-04-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TS2|
 |2010-04-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TS3|
@@ -2400,8 +3490,18 @@ Flagging data:
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|ice_to_water|0.0|0|
-# 21 Petermann Gl
-Warning: No file for station 21 Petermann Gl
+# 21 Petermann Glacier
+## Manual flagging of data at Petermann Glacier
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2005-06-19 00:00:00+00:00|2005-08-13 00:00:00+00:00|TA3|
+|start time|end time|variable|
+|-|-|-|
+|2005-06-19 00:00:00+00:00|2005-08-13 00:00:00+00:00|TA4|
+## Adjusting data at Petermann Glacier
+No data to fix at Petermann Glacier
+No data to fix at Petermann Glacier
 # 22 Petermann ELA
 ## Manual flagging of data at Petermann ELA
 Flagging data:

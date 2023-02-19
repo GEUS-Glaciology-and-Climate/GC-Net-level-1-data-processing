@@ -21,5 +21,5 @@ t0,t1,variable,flag,comment,URL_graphic
 2010-07-19T00:00:00+00:00,2011-01-01T00:00:00+00:00,OSWR,CHECKME,Manually flagged by bav,
 
 1999-06-01T00:00:00+00:00,2001-06-01T00:00:00+00:00,^TS[^_]+$,CHECKME,Manually flagged by bav,
-2003-06-01T00:00:00+00:00,,TS*,CHECKME,Manually flagged by bav,
+2003-06-01T00:00:00+00:00,,^TS[^_]+$,CHECKME,Manually flagged by bav,
 

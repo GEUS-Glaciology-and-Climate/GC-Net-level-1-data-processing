@@ -48,7 +48,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'JAR2',:]
+# site_list = site_list.loc[site_list.Name.values == 'Crawford Point 1',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -203,5 +203,5 @@ for site, ID in zip(site_list.Name, site_list.ID):
             "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_daily.csv",
         )
         
-tocgen.processFile("out/Report.md", "out/report_with_toc.md")
+# tocgen.processFile("out/Report.md", "out/report_with_toc.md")
 f.close()
