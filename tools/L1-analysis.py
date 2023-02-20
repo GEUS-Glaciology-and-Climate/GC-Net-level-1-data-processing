@@ -119,7 +119,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             + str(count_fig)
             + ".png)"
         )
-# %run tools/tocgen.py out/L0_overview.md out/L0_overview_toc.md
+%run tools/tocgen.py out/L0_overview.md out/L0_overview_toc.md
 
 # %% L1 overview
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
@@ -173,13 +173,43 @@ for site, ID in zip(site_list.Name, site_list.ID):
             continue
         if var.endswith("TA5"):
             continue
+        if var in ['IUVR','ILWR']:
+            continue
         if df[var].isnull().all():
             continue
+        
         # print(var)
+        if var == 'DTS1':
+            var = [v for v in df.columns if v.startswith('DTS')]
+        elif 'DTS' in var:
+            continue
+        elif var == 'TS1':
+            var = [v for v in df.columns if v.startswith('TS')]
+            var.remove('TS_10m')
+            var.reverse()
+        elif var.startswith('TS') & (var!='TS_10m'):
+            continue
+        elif var == 'HS1':
+            var = [v for v in ['HS1','HS2','HS_combined'] if v in df.columns]
+        elif var in ['HS2','HS_combined']:
+            continue
+        elif var == 'HW1':
+            var = ['HW1','HW2']
+        elif var in ['HW2']:
+            continue
 
-        df[var].plot(ax=ax[count])
-        df_d[var].plot(ax=ax[count], drawstyle="steps-post")
-        ax[count].set_ylabel(var)
+        if isinstance(var, str):
+            df[var].plot(ax=ax[count], label='hourly')
+            df_d[var].plot(ax=ax[count], drawstyle="steps-post", label='daily')
+            ax[count].set_ylabel(var)
+            ax[count].legend(fontsize="x-small")
+        else:
+            df[var].plot(ax=ax[count])
+            if len(var)>4:
+                ax[count].legend(fontsize="x-small", ncol=2)
+            else:
+                ax[count].legend(fontsize="x-small")
+        
         ax[count].grid()
         ax[count].set_xlim((df.index[0], df.index[-1]))
         count = count + 1
@@ -208,7 +238,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
                 count = 0
     if count < 6:
         ax[count].xaxis.set_tick_params(which="both", labelbottom=True)
-        for k in range(count + 1, len(ax)):
+        for k in range(count, len(ax)):
             ax[k].set_axis_off()
         plt.savefig(
             "figures/L1_overview/all_variables/"
@@ -229,7 +259,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             + ".png)"
         )
 
-# %run tools/tocgen.py out/L1_overview.md out/L1_overview_toc.md
+# %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
 # %% data availability
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[:-3]

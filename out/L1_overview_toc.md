@@ -11,21 +11,27 @@
 * [10 Saddle](#s11)
 * [11 South Dome](#s12)
 * [12 NASA-E](#s13)
-* [13  CP2](#s14)
+* [13 CP2](#s14)
 * [14 NGRIP](#s15)
 * [15 NASA-SE](#s16)
 * [16 KAR](#s17)
-* [17  JAR2](#s18)
-* [18  KULU](#s19)
-* [19  JAR3](#s20)
-* [20  Aurora](#s21)
-* [21  Petermann Glacier](#s22)
-* [22  Petermann ELA](#s23)
-* [23  NEEM](#s24)
-* [24  E-GRIP](#s25)
-* [30  LAR1](#s26)
-* [31  LAR2](#s27)
-* [32  LAR3](#s28)
+* [17 JAR2](#s18)
+* [18 KULU](#s19)
+* [19 JAR3](#s20)
+* [20 Aurora](#s21)
+* [21 Petermann Glacier](#s22)
+* [22 Petermann ELA](#s23)
+* [23 NEEM](#s24)
+* [24 E-GRIP](#s25)
+* [25 SMS1](#s26)
+* [26 SMS2](#s27)
+* [27 SMS3](#s28)
+* [28 SMS4](#s29)
+* [29 SMS5](#s30)
+* [30 LAR1](#s31)
+* [31 LAR2](#s32)
+* [32 LAR3](#s33)
+* [33 SMS-PET](#s34)
 # <a id='s1' />0 Swiss Camp 10m
 ![](../figures/L1_overview/all_variables/0_SwissCamp10m_0.png)
 ![](../figures/L1_overview/all_variables/0_SwissCamp10m_1.png)
@@ -39,8 +45,6 @@
 ![](../figures/L1_overview/all_variables/1_SwissCamp_3.png)
 ![](../figures/L1_overview/all_variables/1_SwissCamp_4.png)
 ![](../figures/L1_overview/all_variables/1_SwissCamp_5.png)
-![](../figures/L1_overview/all_variables/1_SwissCamp_6.png)
-![](../figures/L1_overview/all_variables/1_SwissCamp_7.png)
 # <a id='s3' />2 Crawford Point 1
 ![](../figures/L1_overview/all_variables/2_CrawfordPoint1_0.png)
 ![](../figures/L1_overview/all_variables/2_CrawfordPoint1_1.png)
@@ -48,8 +52,6 @@
 ![](../figures/L1_overview/all_variables/2_CrawfordPoint1_3.png)
 ![](../figures/L1_overview/all_variables/2_CrawfordPoint1_4.png)
 ![](../figures/L1_overview/all_variables/2_CrawfordPoint1_5.png)
-![](../figures/L1_overview/all_variables/2_CrawfordPoint1_6.png)
-![](../figures/L1_overview/all_variables/2_CrawfordPoint1_7.png)
 # <a id='s4' />3 NASA-U
 ![](../figures/L1_overview/all_variables/3_NASA-U_0.png)
 ![](../figures/L1_overview/all_variables/3_NASA-U_1.png)
@@ -57,8 +59,6 @@
 ![](../figures/L1_overview/all_variables/3_NASA-U_3.png)
 ![](../figures/L1_overview/all_variables/3_NASA-U_4.png)
 ![](../figures/L1_overview/all_variables/3_NASA-U_5.png)
-![](../figures/L1_overview/all_variables/3_NASA-U_6.png)
-![](../figures/L1_overview/all_variables/3_NASA-U_7.png)
 # <a id='s5' />4 GITS
 ![](../figures/L1_overview/all_variables/4_GITS_0.png)
 ![](../figures/L1_overview/all_variables/4_GITS_1.png)
@@ -66,14 +66,13 @@
 ![](../figures/L1_overview/all_variables/4_GITS_3.png)
 ![](../figures/L1_overview/all_variables/4_GITS_4.png)
 ![](../figures/L1_overview/all_variables/4_GITS_5.png)
-![](../figures/L1_overview/all_variables/4_GITS_6.png)
-![](../figures/L1_overview/all_variables/4_GITS_7.png)
 # <a id='s6' />5 Humboldt
 ![](../figures/L1_overview/all_variables/5_Humboldt_0.png)
 ![](../figures/L1_overview/all_variables/5_Humboldt_1.png)
 ![](../figures/L1_overview/all_variables/5_Humboldt_2.png)
 ![](../figures/L1_overview/all_variables/5_Humboldt_3.png)
 ![](../figures/L1_overview/all_variables/5_Humboldt_4.png)
+![](../figures/L1_overview/all_variables/5_Humboldt_5.png)
 # <a id='s7' />6 Summit
 ![](../figures/L1_overview/all_variables/6_Summit_0.png)
 ![](../figures/L1_overview/all_variables/6_Summit_1.png)
@@ -81,8 +80,6 @@
 ![](../figures/L1_overview/all_variables/6_Summit_3.png)
 ![](../figures/L1_overview/all_variables/6_Summit_4.png)
 ![](../figures/L1_overview/all_variables/6_Summit_5.png)
-![](../figures/L1_overview/all_variables/6_Summit_6.png)
-![](../figures/L1_overview/all_variables/6_Summit_7.png)
 # <a id='s8' />7 Tunu-N
 ![](../figures/L1_overview/all_variables/7_Tunu-N_0.png)
 ![](../figures/L1_overview/all_variables/7_Tunu-N_1.png)
@@ -90,8 +87,6 @@
 ![](../figures/L1_overview/all_variables/7_Tunu-N_3.png)
 ![](../figures/L1_overview/all_variables/7_Tunu-N_4.png)
 ![](../figures/L1_overview/all_variables/7_Tunu-N_5.png)
-![](../figures/L1_overview/all_variables/7_Tunu-N_6.png)
-![](../figures/L1_overview/all_variables/7_Tunu-N_7.png)
 # <a id='s9' />8 DYE2
 ![](../figures/L1_overview/all_variables/8_DYE2_0.png)
 ![](../figures/L1_overview/all_variables/8_DYE2_1.png)
@@ -99,8 +94,6 @@
 ![](../figures/L1_overview/all_variables/8_DYE2_3.png)
 ![](../figures/L1_overview/all_variables/8_DYE2_4.png)
 ![](../figures/L1_overview/all_variables/8_DYE2_5.png)
-![](../figures/L1_overview/all_variables/8_DYE2_6.png)
-![](../figures/L1_overview/all_variables/8_DYE2_7.png)
 # <a id='s10' />9 JAR1
 ![](../figures/L1_overview/all_variables/9_JAR1_0.png)
 ![](../figures/L1_overview/all_variables/9_JAR1_1.png)
@@ -108,8 +101,6 @@
 ![](../figures/L1_overview/all_variables/9_JAR1_3.png)
 ![](../figures/L1_overview/all_variables/9_JAR1_4.png)
 ![](../figures/L1_overview/all_variables/9_JAR1_5.png)
-![](../figures/L1_overview/all_variables/9_JAR1_6.png)
-![](../figures/L1_overview/all_variables/9_JAR1_7.png)
 # <a id='s11' />10 Saddle
 ![](../figures/L1_overview/all_variables/10_Saddle_0.png)
 ![](../figures/L1_overview/all_variables/10_Saddle_1.png)
@@ -117,8 +108,6 @@
 ![](../figures/L1_overview/all_variables/10_Saddle_3.png)
 ![](../figures/L1_overview/all_variables/10_Saddle_4.png)
 ![](../figures/L1_overview/all_variables/10_Saddle_5.png)
-![](../figures/L1_overview/all_variables/10_Saddle_6.png)
-![](../figures/L1_overview/all_variables/10_Saddle_7.png)
 # <a id='s12' />11 South Dome
 ![](../figures/L1_overview/all_variables/11_SouthDome_0.png)
 ![](../figures/L1_overview/all_variables/11_SouthDome_1.png)
@@ -126,8 +115,6 @@
 ![](../figures/L1_overview/all_variables/11_SouthDome_3.png)
 ![](../figures/L1_overview/all_variables/11_SouthDome_4.png)
 ![](../figures/L1_overview/all_variables/11_SouthDome_5.png)
-![](../figures/L1_overview/all_variables/11_SouthDome_6.png)
-![](../figures/L1_overview/all_variables/11_SouthDome_7.png)
 # <a id='s13' />12 NASA-E
 ![](../figures/L1_overview/all_variables/12_NASA-E_0.png)
 ![](../figures/L1_overview/all_variables/12_NASA-E_1.png)
@@ -135,9 +122,7 @@
 ![](../figures/L1_overview/all_variables/12_NASA-E_3.png)
 ![](../figures/L1_overview/all_variables/12_NASA-E_4.png)
 ![](../figures/L1_overview/all_variables/12_NASA-E_5.png)
-![](../figures/L1_overview/all_variables/12_NASA-E_6.png)
-![](../figures/L1_overview/all_variables/12_NASA-E_7.png)
-# <a id='s14' />13  CP2
+# <a id='s14' />13 CP2
 ![](../figures/L1_overview/all_variables/13_CP2_0.png)
 ![](../figures/L1_overview/all_variables/13_CP2_1.png)
 ![](../figures/L1_overview/all_variables/13_CP2_2.png)
@@ -150,7 +135,6 @@
 ![](../figures/L1_overview/all_variables/14_NGRIP_2.png)
 ![](../figures/L1_overview/all_variables/14_NGRIP_3.png)
 ![](../figures/L1_overview/all_variables/14_NGRIP_4.png)
-![](../figures/L1_overview/all_variables/14_NGRIP_5.png)
 # <a id='s16' />15 NASA-SE
 ![](../figures/L1_overview/all_variables/15_NASA-SE_0.png)
 ![](../figures/L1_overview/all_variables/15_NASA-SE_1.png)
@@ -158,8 +142,6 @@
 ![](../figures/L1_overview/all_variables/15_NASA-SE_3.png)
 ![](../figures/L1_overview/all_variables/15_NASA-SE_4.png)
 ![](../figures/L1_overview/all_variables/15_NASA-SE_5.png)
-![](../figures/L1_overview/all_variables/15_NASA-SE_6.png)
-![](../figures/L1_overview/all_variables/15_NASA-SE_7.png)
 # <a id='s17' />16 KAR
 ![](../figures/L1_overview/all_variables/16_KAR_0.png)
 ![](../figures/L1_overview/all_variables/16_KAR_1.png)
@@ -167,81 +149,76 @@
 ![](../figures/L1_overview/all_variables/16_KAR_3.png)
 ![](../figures/L1_overview/all_variables/16_KAR_4.png)
 ![](../figures/L1_overview/all_variables/16_KAR_5.png)
-# <a id='s18' />17  JAR2
+# <a id='s18' />17 JAR2
 ![](../figures/L1_overview/all_variables/17_JAR2_0.png)
 ![](../figures/L1_overview/all_variables/17_JAR2_1.png)
 ![](../figures/L1_overview/all_variables/17_JAR2_2.png)
 ![](../figures/L1_overview/all_variables/17_JAR2_3.png)
 ![](../figures/L1_overview/all_variables/17_JAR2_4.png)
 ![](../figures/L1_overview/all_variables/17_JAR2_5.png)
-# <a id='s19' />18  KULU
+# <a id='s19' />18 KULU
 ![](../figures/L1_overview/all_variables/18_KULU_0.png)
 ![](../figures/L1_overview/all_variables/18_KULU_1.png)
 ![](../figures/L1_overview/all_variables/18_KULU_2.png)
 ![](../figures/L1_overview/all_variables/18_KULU_3.png)
-![](../figures/L1_overview/all_variables/18_KULU_4.png)
-![](../figures/L1_overview/all_variables/18_KULU_5.png)
-# <a id='s20' />19  JAR3
+# <a id='s20' />19 JAR3
 ![](../figures/L1_overview/all_variables/19_JAR3_0.png)
 ![](../figures/L1_overview/all_variables/19_JAR3_1.png)
 ![](../figures/L1_overview/all_variables/19_JAR3_2.png)
 ![](../figures/L1_overview/all_variables/19_JAR3_3.png)
-![](../figures/L1_overview/all_variables/19_JAR3_4.png)
-![](../figures/L1_overview/all_variables/19_JAR3_5.png)
-# <a id='s21' />20  Aurora
+# <a id='s21' />20 Aurora
 ![](../figures/L1_overview/all_variables/20_Aurora_0.png)
 ![](../figures/L1_overview/all_variables/20_Aurora_1.png)
 ![](../figures/L1_overview/all_variables/20_Aurora_2.png)
 ![](../figures/L1_overview/all_variables/20_Aurora_3.png)
-![](../figures/L1_overview/all_variables/20_Aurora_4.png)
-![](../figures/L1_overview/all_variables/20_Aurora_5.png)
-# <a id='s22' />21  Petermann Glacier
+# <a id='s22' />21 Petermann Glacier
 ![](../figures/L1_overview/all_variables/21_PetermannGlacier_0.png)
 ![](../figures/L1_overview/all_variables/21_PetermannGlacier_1.png)
 ![](../figures/L1_overview/all_variables/21_PetermannGlacier_2.png)
 ![](../figures/L1_overview/all_variables/21_PetermannGlacier_3.png)
 ![](../figures/L1_overview/all_variables/21_PetermannGlacier_4.png)
-![](../figures/L1_overview/all_variables/21_PetermannGlacier_5.png)
-# <a id='s23' />22  Petermann ELA
+# <a id='s23' />22 Petermann ELA
 ![](../figures/L1_overview/all_variables/22_PetermannELA_0.png)
 ![](../figures/L1_overview/all_variables/22_PetermannELA_1.png)
 ![](../figures/L1_overview/all_variables/22_PetermannELA_2.png)
 ![](../figures/L1_overview/all_variables/22_PetermannELA_3.png)
 ![](../figures/L1_overview/all_variables/22_PetermannELA_4.png)
-# <a id='s24' />23  NEEM
+# <a id='s24' />23 NEEM
 ![](../figures/L1_overview/all_variables/23_NEEM_0.png)
 ![](../figures/L1_overview/all_variables/23_NEEM_1.png)
 ![](../figures/L1_overview/all_variables/23_NEEM_2.png)
 ![](../figures/L1_overview/all_variables/23_NEEM_3.png)
 ![](../figures/L1_overview/all_variables/23_NEEM_4.png)
-![](../figures/L1_overview/all_variables/23_NEEM_5.png)
-![](../figures/L1_overview/all_variables/23_NEEM_6.png)
-![](../figures/L1_overview/all_variables/23_NEEM_7.png)
-# <a id='s25' />24  E-GRIP
+# <a id='s25' />24 E-GRIP
 ![](../figures/L1_overview/all_variables/24_E-GRIP_0.png)
 ![](../figures/L1_overview/all_variables/24_E-GRIP_1.png)
 ![](../figures/L1_overview/all_variables/24_E-GRIP_2.png)
 ![](../figures/L1_overview/all_variables/24_E-GRIP_3.png)
-![](../figures/L1_overview/all_variables/24_E-GRIP_4.png)
-![](../figures/L1_overview/all_variables/24_E-GRIP_5.png)
-# <a id='s26' />30  LAR1
+# <a id='s26' />25 SMS1
+Warning: No file for station 25 SMS1
+# <a id='s27' />26 SMS2
+Warning: No file for station 26 SMS2
+# <a id='s28' />27 SMS3
+Warning: No file for station 27 SMS3
+# <a id='s29' />28 SMS4
+Warning: No file for station 28 SMS4
+# <a id='s30' />29 SMS5
+Warning: No file for station 29 SMS5
+# <a id='s31' />30 LAR1
 ![](../figures/L1_overview/all_variables/30_LAR1_0.png)
 ![](../figures/L1_overview/all_variables/30_LAR1_1.png)
 ![](../figures/L1_overview/all_variables/30_LAR1_2.png)
 ![](../figures/L1_overview/all_variables/30_LAR1_3.png)
-![](../figures/L1_overview/all_variables/30_LAR1_4.png)
-![](../figures/L1_overview/all_variables/30_LAR1_5.png)
-# <a id='s27' />31  LAR2
+# <a id='s32' />31 LAR2
 ![](../figures/L1_overview/all_variables/31_LAR2_0.png)
 ![](../figures/L1_overview/all_variables/31_LAR2_1.png)
 ![](../figures/L1_overview/all_variables/31_LAR2_2.png)
 ![](../figures/L1_overview/all_variables/31_LAR2_3.png)
 ![](../figures/L1_overview/all_variables/31_LAR2_4.png)
-![](../figures/L1_overview/all_variables/31_LAR2_5.png)
-# <a id='s28' />32  LAR3
+# <a id='s33' />32 LAR3
 ![](../figures/L1_overview/all_variables/32_LAR3_0.png)
 ![](../figures/L1_overview/all_variables/32_LAR3_1.png)
 ![](../figures/L1_overview/all_variables/32_LAR3_2.png)
 ![](../figures/L1_overview/all_variables/32_LAR3_3.png)
-![](../figures/L1_overview/all_variables/32_LAR3_4.png)
-![](../figures/L1_overview/all_variables/32_LAR3_5.png)
+# <a id='s34' />33 SMS-PET
+Warning: No file for station 33 SMS-PET
