@@ -1,0 +1,8 @@
+t0,t1,variable,adjust_function,adjust_value,comment
+2003-01-01T00:00:00+00:00,,HS1,add,-0.3,
+2003-01-01T00:00:00+00:00,,HS2,add,-0.3,
+
+
+# Realtive humidity back to water
+1995-01-01T00:00:00+00:00,2011-05-30T00:00:00+00:00,RH1,ice_to_water,0, 
+1995-01-01T00:00:00+00:00,2011-05-30T00:00:00+00:00,RH2,ice_to_water,0, 

@@ -11,6 +11,8 @@ tip list:
 """
 import os, sys
 import PROMICE_toolbox as ptb
+# import matplotlib
+# matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 import os.path

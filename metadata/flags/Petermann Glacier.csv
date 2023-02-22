@@ -1,3 +1,5 @@
 t0,t1,variable,flag,comment,URL_graphic
 2005-06-19T00:00:00+00:00,2005-08-13T00:00:00+00:00,TA3,NAN,Manually flagged by bav,
 2005-06-19T00:00:00+00:00,2005-08-13T00:00:00+00:00,TA4,NAN,Manually flagged by bav,
+
+2002-08-31T00:00:00+00:00,2002-09-06T00:00:00+00:00,^TS[^_]+$,NAN,Manually flagged by bav,

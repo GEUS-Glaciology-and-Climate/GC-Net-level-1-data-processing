@@ -193,6 +193,8 @@ def flag_data(df, site, var_list=["all"]):
         var_list = np.unique(flag_data.variable)
         
     Msg("Flagging data:")
+    Msg("|start time|end time|variable|")
+    Msg("|-|-|-|")
     for ind in flag_data.index:
         var = flag_data.loc[ind,'variable']
         t0 = flag_data.loc[ind,'t0']
@@ -202,9 +204,6 @@ def flag_data(df, site, var_list=["all"]):
         if (var not in df_out.columns) & ('*' not in var) & ('$' not in var):
             Msg("Warning: " + var + " not found")
             continue
-
-        Msg("|start time|end time|variable|")
-        Msg("|-|-|-|")
 
         if ('*' in var) |('$' in var):
             var_list = df_out.filter(regex=(var)).columns
@@ -877,7 +876,7 @@ def interpolate_temperature(
     return df_interp
 
 
-def therm_depth(df_in, site):
+def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     df_v6 = df_in.copy()
     
     # downloading metadata from online google sheet
@@ -996,10 +995,10 @@ def therm_depth(df_in, site):
         df_v6.index.values,
         df_v6[depth_cols_name].values.astype(float),
         df_v6[temp_cols_name].values.astype(float),
-        kind="linear",
+        kind=kind,
         title=site,
         plot=False,
-        min_diff_to_depth=1.5,
+        min_diff_to_depth=min_diff_to_depth,
     ).set_index('date').values
 
     # filtering
@@ -1025,18 +1024,20 @@ def therm_depth(df_in, site):
         date2 = index[index.get_indexer([date], method="nearest")[0]]
         if np.abs(date - date2) <= pd.Timedelta("7 days"):
             ax[0].axvline(np.datetime64(date), color='r')
+    depth_cols_name.reverse()
     for i, col in enumerate(depth_cols_name):
         (-df_v6[col] + df_v6["HS_combined"]).plot(
             ax=ax[0],
             label="_nolegend_",
         )
+    depth_cols_name.reverse()
 
     ax[0].set_ylim(
         df_v6["HS_combined"].min() - 11,
         df_v6["HS_combined"].max() + 1,
     )
 
-    for i in range(len(temp_cols_name)):
+    for i in reversed(range(len(temp_cols_name))):
         df_in[temp_cols_name[i]].interpolate(limit=14).plot(
             ax=ax[1], label="_nolegend_"
         )
@@ -1058,8 +1059,8 @@ def therm_depth(df_in, site):
         ind_filter.loc[np.isin(month, [5, 6, 7])] = False
         if any(ind_filter):
             tmp.loc[ind_filter].plot(
-                ax=ax[1], marker="o", linestyle="none",
-                color="lightgray", label="_nolegend_",
+                ax=ax[1], marker=".", linestyle="none",
+                color="lightgray", alpha=0.5,  label="_nolegend_",
             )
 
         # before and after maintenance_string adaptation filter
@@ -1071,14 +1072,14 @@ def therm_depth(df_in, site):
             if any(ind_adapt):
                 tmp.loc[ind_adapt].plot(
                     ax=ax[1], marker="o", linestyle="none",
-                    color="lightgray", label="_nolegend_",
+                    color="lightgray", alpha=0.5,  label="_nolegend_",
                 )
 
         # surfaced thermistor
         ind_pos = df_v6[depth_cols_name[i]] < 0.1
         if any(ind_pos):
             tmp.loc[ind_pos].plot(
-                ax=ax[1], marker="o", linestyle="none", color="lightgray",
+                ax=ax[1], marker=".", alpha=0.5, linestyle="none", color="lightgray",
                 label="_nolegend_",
             )
     if len(df_v6["TS_10m"]) == 0:
