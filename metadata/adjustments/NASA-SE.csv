@@ -2,12 +2,11 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2000-05-17T00:00:00+00:00,,HS1,add,2.4,Not reported. Manual shift suggested by bav.
 2002-05-17T00:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
 2003-05-10T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
-2005-05-27T00:00:00+00:00,,HS1,add,4.2,Not reported. Manual shift suggested by bav.
+2005-05-27T00:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
 2007-06-09T00:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
 2008-06-09T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
 2010-04-29T00:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
 2011-01-01T00:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
-2012-06-09T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
 2013-06-09T00:00:00+00:00,,HS1,add,3.5,Not reported. Manual shift suggested by bav.
 2016-06-09T00:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
 2018-06-09T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
@@ -15,13 +14,17 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2000-05-17T00:00:00+00:00,,HS2,add,2.4,Not reported. Manual shift suggested by bav.
 2002-05-17T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 2003-05-10T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
-2005-05-27T00:00:00+00:00,,HS2,add,4.2,Not reported. Manual shift suggested by bav.
+2005-05-27T00:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
 2007-06-09T00:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
 2008-06-09T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
 2010-04-29T00:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
-2013-06-09T00:00:00+00:00,,HS2,add,3.5,Not reported. Manual shift suggested by bav.
+2013-06-09T00:00:00+00:00,,HS2,add,1.5,Not reported. Manual shift suggested by bav.
+2014-05-25T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
 2016-06-09T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 2018-06-09T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
+
+2004-06-11T09:00:00+00:00,2005-05-27T09:00:00+00:00,HS1,add,3,
+2004-06-11T09:00:00+00:00,2005-05-27T09:00:00+00:00,HS2,add,3,
 
 
 # calibration of OSWR with LiCor offset
@@ -43,7 +46,12 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1996-01-01T00:00:00+00:00,2009-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 
 # instrument height adjustment
-2002-05-18T00:00:00+00:00,2005-05-27T09:00:00+00:00,HW1,add,3,
-2002-05-18T00:00:00+00:00,2005-05-27T09:00:00+00:00,HW2,add,3,
-2003-05-10T09:00:00+00:00,2005-05-27T09:00:00+00:00,HW1,add,8.26,
-2003-05-10T09:00:00+00:00,2005-05-27T09:00:00+00:00,HW2,add,9.56,
+2002-05-18T00:00:00+00:00,2003-05-10T09:00:00+00:00,HW1,add,3,
+2002-05-18T00:00:00+00:00,2003-05-10T09:00:00+00:00,HW2,add,3,
+2003-05-10T09:00:00+00:00,2004-06-11T09:00:00+00:00,HW1,add,0.5,
+2003-05-10T09:00:00+00:00,2004-06-11T09:00:00+00:00,HW2,add,1.5,
+2004-06-11T09:00:00+00:00,2005-05-27T09:00:00+00:00,HW1,add,3,
+2004-06-11T09:00:00+00:00,2005-05-27T09:00:00+00:00,HW2,add,4,
+2005-05-27T09:00:00+00:00,2009-05-27T09:00:00+00:00,HW1,add,-1,
+2005-05-27T09:00:00+00:00,2009-05-27T09:00:00+00:00,HW2,add,-1,
+

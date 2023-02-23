@@ -1,4 +1,6 @@
 t0,t1,variable,adjust_function,adjust_value,comment
+, ,ISWR,multiply,2.68, calibration constant D. McGrath
+, ,OSWR,multiply,2.88, calibration constant D. McGrath
 
 # Realtive humidity back to water
 ,,RH1,ice_to_water,0, 
