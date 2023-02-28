@@ -50,7 +50,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'Crawford Point 1',:]
+site_list = site_list.loc[site_list.Name.values == 'SMS1',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -78,9 +78,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
     if site == "Swiss Camp 10m":
         df["TA2"] = np.nan
         df["TA4"] = np.nan
+
     if "HW1" not in df.columns:
         df["HW1"] = 2 + df["HS1"].max() - df["HS1"]
-    if "HW2" not in df.columns:
+    if ("HW2" not in df.columns) & ('HS2' in df.columns):
         df["HW2"] = 3.4 + df["HS2"].max() - df["HS2"]
     df = df.resample("H").mean()
 
@@ -110,18 +111,21 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df_v5 = ptb.remove_flagged_data(df_v5)
 
     # interpolating short gaps and calculating added variables
-    df_v5b = ptb.augment_data(
-        df_v5,
-        site_list.loc[site_list.Name == site, "Northing"].values[0],
-        site_list.loc[site_list.Name == site, "Easting"].values[0],
-        site_list.loc[site_list.Name == site, "Elevationm"].values[0],
-        site,
-    )
-    
-    if df_v5b[[v for v in df_v5b.columns if 'TS' in v]].notnull().any().any():
-        df_v6 = ptb.therm_depth(df_v5b, site)
+    if 'SMS' not in site:
+        df_v5b = ptb.augment_data(
+            df_v5,
+            site_list.loc[site_list.Name == site, "Northing"].values[0],
+            site_list.loc[site_list.Name == site, "Easting"].values[0],
+            site_list.loc[site_list.Name == site, "Elevationm"].values[0],
+            site,
+        )
+        
+        if df_v5b[[v for v in df_v5b.columns if 'TS' in v]].notnull().any().any():
+            df_v6 = ptb.therm_depth(df_v5b, site)
+        else:
+            df_v6= df_v5b.copy()
     else:
-        df_v6= df_v5b.copy()
+        df_v6= df_v5.copy()
 
     # removing empty rows:
     useful_var_list = [

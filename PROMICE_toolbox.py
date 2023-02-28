@@ -1374,18 +1374,20 @@ def filter_data(df, site, plot=True, remove_data=False):
     msk4 = df_out.HW1.isnull().shift(-2).fillna(False)
     msk = (msk2 & msk3) | (msk1 & msk3) | (msk2 & msk4)
     df_out.loc[msk, "HW1"] = np.nan
-    msk1 = df_out.HW2.isnull().shift(2).fillna(False)
-    msk2 = df_out.HW2.isnull().shift(1).fillna(False)
-    msk3 = df_out.HW2.isnull().shift(-1).fillna(False)
-    msk4 = df_out.HW2.isnull().shift(-2).fillna(False)
-    msk = (msk2 & msk3) | (msk1 & msk3) | (msk2 & msk4)
-    df_out.loc[msk, "HW2"] = np.nan
+    if 'HW2' in df_out.columns:
+        msk1 = df_out.HW2.isnull().shift(2).fillna(False)
+        msk2 = df_out.HW2.isnull().shift(1).fillna(False)
+        msk3 = df_out.HW2.isnull().shift(-1).fillna(False)
+        msk4 = df_out.HW2.isnull().shift(-2).fillna(False)
+        msk = (msk2 & msk3) | (msk1 & msk3) | (msk2 & msk4)
+        df_out.loc[msk, "HW2"] = np.nan
     
     # Filtering DW for low or NaN values of VW
     msk = df_out.VW1.isnull() | df_out.VW1 < 0.5
     df_out.loc[msk, "DW1_qc"] = "IWS"
-    msk = df_out.VW2.isnull() | df_out.VW2 < 0.5
-    df_out.loc[msk, "DW2_qc"] = "IWS"
+    if 'VW2' in df_out.columns:
+        msk = df_out.VW2.isnull() | df_out.VW2 < 0.5
+        df_out.loc[msk, "DW2_qc"] = "IWS"
     
     return df_out
 
