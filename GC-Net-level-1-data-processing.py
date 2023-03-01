@@ -50,7 +50,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'SMS1',:]
+site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -109,6 +109,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df_v5 = ptb.filter_data(df_v4, site)
     ptb.plot_flagged_data(df_v5, site)
     df_v5 = ptb.remove_flagged_data(df_v5)
+
+    # correction of the net radiometer fro windspeed
+    if 'NR' in df_v5.columns:
+        df_v5 = ptb.correct_net_rad(df_v5,site)
 
     # interpolating short gaps and calculating added variables
     if 'SMS' not in site:
