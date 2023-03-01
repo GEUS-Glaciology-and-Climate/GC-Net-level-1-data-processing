@@ -1,6 +1,7 @@
 *.EXE
 *.OBJ
 figures/pub
+past releases
 old
 lazy_push.sh
 .DS*
