@@ -22,19 +22,19 @@ This repository contains scripts used to clean, adjust and interpolate GC-Net da
 [![image](https://user-images.githubusercontent.com/35140661/211565684-4101ca83-4440-4610-b9a5-621eda120ed5.png)](https://docs.google.com/presentation/d/1p9Z7g7ZOYZ3aiXRJMUF1gz6hb4260d0f4XUG64YiP4Y/edit?usp=sharing)
 
 ## Usage
-When using the L0 data please cite:
 
-Steffen (†), Konrad; Houtz, Derek; Vandecrux, Baptiste; Abdalati, Waleed; Bayou, Nicolas; Box, Jason; Colgan, William; Espona Pernas, Lucia; Griessinger, Nena; Haas-Artho, Dominik; Heilig, Achim; Hubert, Alain; Iosifescu Enescu, Ionuț; Johnson-Amin, Nighat; Karlsson, Nanna B.; Kurup, Rebecca; McGrath, Daniel; Naderpour, Reza; Pederson, Allan Østerby; Perren, Bianca; Phillips, Thomas; Plattner, Gian-Kasper; Proksch, Martin; Revheim, Maiken Kristiansen; Saettele, Martina; Schneebeli, Martin; Sampson, Kevin; Starkweather, Sandy; Steffen, Simon; Stroeve, Julienne; Walter, Benjamin; Winton, Øyvind Andreas; Zwally, Jay (2020). Greenland Climate Network (GC-Net) Data. EnviDat. doi:10.16904/envidat.1. 
+The last processing of the L1 dataset is available in the [L1 folder](L1).
+
+The last stable release is available at:
+
+Steffen, K.; Vandecrux, B.; Houtz, D.; Abdalati, W.; Bayou, N.; Box, J.; Colgan, L.; Espona Pernas, L.; Griessinger, N.; Haas-Artho, D.; Heilig, A.; Hubert, A.; Iosifescu Enescu, I.; Johnson-Amin, N.; Karlsson, N. B.; Kurup, R.; McGrath, D.; Naderpour, R.; Pederson, A. Ø.; Perren, B.; Philipps, T.; Plattner, G.K.; Proksch, M.; Revheim, M. K.; Særrelse, M.; Schneebli, M.; Sampson, K.; Starkweather, S.; Steffen, S.; Stroeve, J.; Watler, B.; Winton, Ø. A.; Zwally, J.; Ahlstrøm, A., 2023, "GC-Net Level 1 automated weather station data", https://doi.org/10.22008/FK2/VVXGUT, GEUS Dataverse, V2
+When using the L0 data please cite:
 
 When using the L1 data please additionally cite:
 
 Vandecrux, B., Box, J., Houtz, D.,  Revheim, M. K. (2022). The GC-Net level 1 dataset and processing scripts. https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing
 
 ## Dataset decription
-
-The L0 dataset is officially hosted at https://doi.org/10.16904/envidat.1
-
-The latest L1 dataset can be found on this repository and will be frequently 
 
 ### Background
 Starting with a single station in 1991, the Greenland Climate Network (commonly known as GC-Net) is a set of Automatic Weather Stations (AWS) set up and managed by the late Prof. Dr. Konrad (Koni) Steffen, and spanning the Greenland Ice Sheet (GrIS). This first station was "Swiss Camp" or the "ETH-CU" camp (GC-Net station #01) which was used as a field science and education site by Koni for years. The GC-Net was expanded with multiple NASA, NOAA, and NSF grants throughout the years, and then supported by WSL in the later years. These data (see "C-file" below) were previously hosted by the Cooperative Institute for Research in Environmental Sciences (CIRES) in Boulder, Colorado. 
