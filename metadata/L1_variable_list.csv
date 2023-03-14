@@ -6,6 +6,7 @@ ISWR_std,W/m^2,shortwave_incoming_radiation_stdev,swin_stdev,real
 OSWR,W/m^2,shortwave_outgoing_radiation,swout,real
 OSWR_max,W/m^2,shortwave_outgoing_radiation_max,swout_maximum,real
 NR,W/m^2,net_radiation,netrad,real
+NR_cor,W/m^2,net_radiation_corrected,netrad_cor,real
 NR_max,W/m^2,net_radiation_maximum,netrad_max,real
 NR_std,W/m^2,net_radiation_stdev,netrad_stdev,real
 TA1,DegreesC,air_temperature_1,airtemp1,real

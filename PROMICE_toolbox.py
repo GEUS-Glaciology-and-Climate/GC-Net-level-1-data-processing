@@ -620,7 +620,8 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
 
 def correct_net_rad(df_in, site):
     df_v5 = df_in.copy()
-    VW = df_v5[['VW1','VW2']].mean(axis=1)
+    df_v5['NR_cor'] = np.nan
+    VW = df_v5[[v for v in ['VW1','VW2'] if v in df_v5.columns]].mean(axis=1)
     C_pos = 1 + (0.066*0.2*VW)/(0.066+(0.2*VW))
     C_neg = (0.00174*VW)+0.99755
     C_pos.loc[C_pos.isnull()] = 1.045
@@ -631,14 +632,15 @@ def correct_net_rad(df_in, site):
         # made by multiplying the calculated irradiances with a factor
         # ( 1 + x • v**(3/4) ), where v is the windspeed in m/s, x is determined
         # empirically to be approximately 0.01
-        df_v5.loc['2000-06-01':, 'NR'] = df_v5.loc['2000-06-01':, 'NR'] * ( 1 + 0.01 * VW.loc['2000-06-01':]**(3/4) )
+        df_v5.loc['2000-06-01':, 'NR_cor'] = df_v5.loc['2000-06-01':, 'NR'] * \
+            ( 1 + 0.01 * VW.loc['2000-06-01':]**(3/4) )
         tmp = df_v5.loc[:'2000-06-01', 'NR'] 
         tmp.loc[tmp>0] = C_pos * tmp.loc[tmp>0] 
         tmp.loc[tmp<0] = C_neg * tmp.loc[tmp<0] 
-        df_v5.loc[:'2000-06-01', 'NR'] = tmp
+        df_v5.loc[:'2000-06-01', 'NR_cor'] = tmp
     else:
-        df_v5.loc[df_v5>0, 'NR'] = C_pos * df_v5.loc[df_v5.NR>0, 'NR'] 
-        df_v5.loc[df_v5<0, 'NR'] = C_neg * df_v5.loc[df_v5.NR<0, 'NR'] 
+        df_v5.loc[df_v5.NR>0, 'NR_cor'] = C_pos * df_v5.loc[df_v5.NR>0, 'NR'] 
+        df_v5.loc[df_v5.NR<0, 'NR_cor'] = C_neg * df_v5.loc[df_v5.NR<0, 'NR'] 
     return df_v5
     
 def augment_data(df_in, latitude, longitude, elevation, site):
