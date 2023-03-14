@@ -4,14 +4,14 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1999-05-09T15:00:00+00:00,,HS1,add,0.85,Not reported. Manual shift suggested by jeb
 2001-06-15T16:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
 2005-05-26T06:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
-2010-08-16T19:00:00+00:00,,HS1,add,3.6,Not reported. Manual shift suggested by bav.
+2010-08-16T19:00:00+00:00,,HS1,add,3.2,Not reported. Manual shift suggested by bav.
 2016-05-22T14:00:00+00:00,,HS1,add,2.6,Not reported. Manual shift suggested by bav.
 
 1999-01-01T14:00:00+00:00,,HS2,add,0.27,Not reported. Manual shift suggested by jeb
 1999-05-09T15:00:00+00:00,,HS2,add,0.93,Not reported. Manual shift suggested by jeb
 2001-06-15T15:00:00+00:00,,HS2,add,2.1,Not reported. Manual shift suggested by bav.
 2005-05-26T06:00:00+00:00,,HS2,add,3,Reported visit. SR1 height before/after (m): 0.0/-0.1
-2010-08-16T19:00:00+00:00,,HS2,add,3.05,Not reported. Manual shift suggested by bav.
+2010-08-16T19:00:00+00:00,,HS2,add,3.35,Not reported. Manual shift suggested by bav.
 2016-05-22T14:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 
 # calibration of OSWR with LiCor offset
@@ -48,3 +48,5 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-19T19:00:00+00:00,2010-08-06T23:05:00+00:00,HW1,add,-0.39,Shift to match photgrammetry!!
 2009-05-19T19:00:00+00:00,2010-08-06T23:05:00+00:00,HW2,add,-0.39,Shift to match photgrammetry!!
 2005-05-26T07:00:00+00:00,2010-08-06T23:05:00+00:00,HW2,add,0.39,Shift to match photgrammetry!!
+2010-08-16T19:00:00+00:00,,HW1,add,-0.4,Shift to match photgrammetry!!
+2010-08-16T19:00:00+00:00,,HW2,add,0.3,Shift to match photgrammetry!!

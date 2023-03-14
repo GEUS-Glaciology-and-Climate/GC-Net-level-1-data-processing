@@ -22,7 +22,7 @@ Provided in this dataset are the 25 two-level stations from 24 sites on the Gree
 
 Full dataset description publication will be forthcoming. The Geological Survey of Denmark and Greenland (GEUS) has undertaken the continuation of multiple GC-Net sites through the Programme for Monitoring of the Greenland Ice Sheet (PROMICE.dk).
 
-The level 1 data is provided in the newly described csv-compatible NEAD format, which is a csv file with added metadata header. The format is documented at https://doi.org/10.16904/envidat.187 and a python package is available to read and write NEAD files: https://github.com/GEUS-Glaciology-and-Climate/pyNEAD .
+The level 1 data is provided in NEAD format, which is a csv file with added metadata header. The format is documented at https://doi.org/10.16904/envidat.187 and a python package is available to read and write NEAD files: https://github.com/GEUS-Glaciology-and-Climate/pyNEAD .
 
 The GC-Net stations measure:
 

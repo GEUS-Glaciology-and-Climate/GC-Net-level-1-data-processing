@@ -47,7 +47,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'CP2',:]
+site_list = site_list.loc[site_list.Name.values == 'Summit',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
@@ -115,100 +115,110 @@ for site, ID in zip(site_list.Name, site_list.ID):
     )
 
     fig = plt.figure(figsize=(16, 10))
-    ax = plt.subplot(111)
+    ax = plt.subplot(1,2,1) 
 
-    sym_size = 20
-    mult = 0.6
+    sym_size = 10
+
+    plt.plot(np.nan,np.nan,'w',label='adjusted from sonic rangers:')
+    df["HW1"].plot(ax=ax, c="C0", label="HW1")
+    df["HW2"].plot(ax=ax, c="C1", label="HW2")
+    
     # Plotting observed instrument heights
     if obs_df[useful_columns].notnull().sum().sum() > 0:
+        plt.plot(np.nan,np.nan,'w',label='from field reports:')
         obs_df["W1 before (cm)"].plot(
             ax=ax,
             marker=">",
             linestyle="None",
-            markerfacecolor="none",
-            markersize=sym_size * mult,
-            c="C0",
-            label="HW1 obs before",
+            markerfacecolor="C0",
+            markersize=sym_size,
+            markeredgecolor='lightgray',
+            label="HW1 before maintenance",
         )
         obs_df["W2 before (cm)"].plot(
             ax=ax,
             marker=">",
             linestyle="None",
-            markerfacecolor="none",
-            markersize=sym_size * mult,
-            c="C1",
-            label="HW2 obs before",
+            markerfacecolor="C1",
+            markersize=sym_size,
+            markeredgecolor='lightgray',
+            label="HW2 before maintenance",
         )
         obs_df["W1 after (cm)"].plot(
             ax=ax,
             marker="<",
             linestyle="None",
-            markerfacecolor="none",
-            markersize=sym_size * mult,
-            c="C0",
-            label="HW1 obs after",
+            markerfacecolor="C0",
+            markersize=sym_size,
+            markeredgecolor='lightgray',
+            label="HW1 after maintenance",
         )
         obs_df["W2 after (cm)"].plot(
             ax=ax,
             marker="<",
             linestyle="None",
-            markerfacecolor="none",
-            markersize=sym_size * mult,
-            c="C1",
-            label="HW2 obs after",
+            markerfacecolor="C1",
+            markersize=sym_size,
+            markeredgecolor='lightgray',
+            label="HW2 after maintenance",
         )
 
-        obs_df["T1 before (cm)"].plot(
-            ax=ax,
-            marker=">",
-            linestyle="None",
-            markerfacecolor="none",
-            markersize=sym_size * mult,
-            c="C2",
-            label="HT1 obs before",
-        )
-        obs_df["T2 before (cm)"].plot(
-            ax=ax,
-            marker=">",
-            linestyle="None",
-            markerfacecolor="none",
-            markersize=sym_size * mult,
-            c="C3",
-            label="HT2 obs before",
-        )
-        obs_df["T1 after (cm)"].plot(
-            ax=ax,
-            marker="<",
-            linestyle="None",
-            markerfacecolor="none",
-            markersize=sym_size * mult,
-            c="C2",
-            label="HT1 obs afer",
-        )
-        obs_df["T2 after (cm)"].plot(
-            ax=ax,
-            marker="<",
-            linestyle="None",
-            markerfacecolor="none",
-            markersize=sym_size * mult,
-            c="C3",
-            label="HT2 obs after",
-        )
-
-    if df_photo[["Wz1", "Wz2", "THz1", "THz2"]].notnull().sum().sum() > 0:
-        df_photo[["Wz1", "Wz2", "THz1", "THz2"]].plot(
-            ax=ax, marker="o", linestyle="None"
-        )
+        # obs_df["T1 before (cm)"].plot(
+        #     ax=ax,
+        #     marker=">",
+        #     linestyle="None",
+        #     markerfacecolor="none",
+        #     markersize=sym_size * mult,
+        #     c="C2",
+        #     label="HT1 obs before",
+        # )
+        # obs_df["T2 before (cm)"].plot(
+        #     ax=ax,
+        #     marker=">",
+        #     linestyle="None",
+        #     markerfacecolor="none",
+        #     markersize=sym_size * mult,
+        #     c="C3",
+        #     label="HT2 obs before",
+        # )
+        # obs_df["T1 after (cm)"].plot(
+        #     ax=ax,
+        #     marker="<",
+        #     linestyle="None",
+        #     markerfacecolor="none",
+        #     markersize=sym_size * mult,
+        #     c="C2",
+        #     label="HT1 obs afer",
+        # )
+        # obs_df["T2 after (cm)"].plot(
+        #     ax=ax,
+        #     marker="<",
+        #     linestyle="None",
+        #     markerfacecolor="none",
+        #     markersize=sym_size * mult,
+        #     c="C3",
+        #     label="HT2 obs after",
+        # )
+    plt.plot(np.nan,np.nan,'w',label='from photos:')
+    if df_photo[["Wz1", "Wz2"]].notnull().sum().sum() > 0:
+        (df_photo.Wz1*0.45/0.277).plot(
+            ax=ax, marker="o", markerfacecolor="C0",
+            markeredgecolor='lightgray',  linestyle="None", label='HW1')
+        (df_photo.Wz2*0.45/0.277).plot(
+            ax=ax, marker="o", markerfacecolor="C1",
+            markeredgecolor='lightgray', linestyle="None", label='HW2')
+    # if df_photo[["THz1", "THz2"]].notnull().sum().sum() > 0:
+    #     (df_photo[["Wz1", "Wz2", "THz1", "THz2"]]*0.45/0.277).plot(
+    #         ax=ax, marker="o", linestyle="None"
+    #     )
     if df_photo_m[["Wz1", "Wz2", "THz1", "THz2"]].notnull().sum().sum() > 0:
         df_photo_m[["Wz1", "Wz2", "THz1", "THz2"]].plot(
             ax=ax, marker="x", linestyle="None"
         )
 
-    df["HW1"].plot(ax=ax, c="C0", label="HW1")
-    df["HW2"].plot(ax=ax, c="C1", label="HW2")
-
-    plt.ylabel("Height above surface (m)")
-    plt.title(site + " profile instrument heights")
+    plt.ylabel("Instrument heights (m)")
+    plt.xlabel("Year")
+    plt.title(site)
     plt.legend()
     ax.legend(loc="center left", bbox_to_anchor=(1, 0.5))
 
