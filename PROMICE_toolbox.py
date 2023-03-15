@@ -346,6 +346,8 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
         adj_info = adj_info.drop(labels=ind, axis=0)
 
     adj_info = adj_info.sort_values(by=["variable", "t0"])
+    adj_info = pd.concat((adj_info.loc[adj_info.adjust_function.str.startswith('swap'),:],
+                          adj_info.loc[~adj_info.adjust_function.str.startswith('swap'),:]))
 
     adj_info.loc[adj_info.adjust_function == "time_shift", :] = (
         adj_info.loc[adj_info.adjust_function == "time_shift", :]

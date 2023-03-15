@@ -455,61 +455,11 @@ for site, ID in zip(site_list.Name, site_list.ID):
         + "_temperature_diag.png)"
     )
 
-# %% RH1 vs RH2
-plt.close("all")
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
-for site, ID in zip(site_list.Name, site_list.ID):
-    print("# " + str(ID) + " " + site)
-    site = site.replace(" ", "")
-    filename = "L1/" + str(ID).zfill(2) + "-" + site + ".csv"
-    if not path.exists(filename):
-        print("Warning: No file for station " + str(ID) + " " + site)
-        continue
-
-    ds = nead.read(filename)
-    df = ds.to_dataframe()
-    df = df.reset_index(drop=True)
-    df.timestamp = pd.to_datetime(df.timestamp)
-    df = df.set_index("timestamp").replace(-999, np.nan)
-    if "RH2" not in df.columns:
-        df["RH2"] = np.nan
-    #  plotting variables
-    fig = plt.figure(figsize=(15, 7))
-    plt.suptitle(site)
-
-    ax1 = fig.add_axes([0.1, 0.15, 0.5, 0.8])
-    df["RH1"].plot(ax=ax1, label="RH1")
-    df["RH2"].plot(ax=ax1, label="RH2")
-    (df["RH1"] - df["RH2"]).plot(ax=ax1, label="RH1-RH2")
-    ax1.set_ylabel("Relative Humidity (%)")
-    ax1.grid()
-    ax1.legend()
-
-    ax2 = fig.add_axes([0.65, 0.15, 0.32, 0.8])
-    ax2.plot(df["RH1"], df["RH2"], marker=".", linestyle="None")
-    ax2.annotate(
-        "ME = %0.2f" % (df["RH1"] - df["RH2"]).mean(),
-        (0.05, 0.9),
-        xycoords="axes fraction",
-        fontweight="bold",
-    )
-    ax2.plot([20, 100], [20, 100], "k")
-    ax2.set_xlabel("RH1")
-    ax2.set_ylabel("RH2")
-    ax2.grid()
-
-    # break
-    fig.savefig(
-        "figures/L1_overview/" + str(ID) + "_" + site + "_RH_diag", bbox_inches="tight"
-    )
-    # print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature.png)')
-    
-# %% upper vs lower level test
-plt.close("all")
+# %% Compare two variables
 var1 = 'RH1'
 var2 = 'RH2'
-
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
+plt.close("all")
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[3:4]
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
     site = site.replace(" ", "")
@@ -523,7 +473,6 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df = df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp)
     df = df.set_index("timestamp").replace(-999, np.nan)
-    df = df[[var1,var2]].resample('D').mean()
     if var2 not in df.columns:
         df[var2] = np.nan
     #  plotting variables
@@ -533,8 +482,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
     ax1 = fig.add_axes([0.1, 0.15, 0.5, 0.8])
     df[var1].plot(ax=ax1, label=var1)
     df[var2].plot(ax=ax1, label=var2)
-    (df[var1] - df[var2]).plot(ax=ax1, label="TA1-TA2")
-    ax1.set_ylabel("Temperature (degC)")
+    (df[var1] - df[var2]).resample('W').mean().plot(ax=ax1, label=var1+"-"+var2)
+    ax1.set_ylabel("Relative Humidity (%)")
     ax1.grid()
     ax1.legend()
 
@@ -553,7 +502,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
     # break
     fig.savefig(
-        "figures/L1_overview/" + str(ID) + "_" + site + "_TA_diag", bbox_inches="tight"
+        "figures/L1_overview/" + str(ID) + "_" + site + "_"+var1+'_'+var2, bbox_inches="tight"
     )
     # print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature.png)')
 
