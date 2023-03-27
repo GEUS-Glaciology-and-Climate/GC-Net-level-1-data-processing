@@ -50,7 +50,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
+# site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -59,6 +59,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     if not path.exists(filename):
         Msg("Warning: No file for station " + str(ID) + " " + site)
         continue
+    
     ds = nead.read(filename)
     df = ds.to_dataframe()
     df = df.reset_index(drop=True)
@@ -129,6 +130,18 @@ for site, ID in zip(site_list.Name, site_list.ID):
         else:
             df_v6= df_v5b.copy()
     else:
+        # height processing for the SMS
+        thresh = 1
+        # plt.close('all')
+        plt.figure()
+        df_v5[['HW1']].plot(ax=plt.gca(),marker='.', linestyle='None')
+        df_v5[['HW1']].bfill().plot(ax=plt.gca(),marker='.', linestyle='None')
+        diff = df_v5['HW1'].bfill().diff()
+        diff.loc[diff.abs()<thresh] = 0
+        diff.loc[diff>0] = 0
+        diff.plot(ax=plt.gca(),marker='o', linestyle='None')
+        df_v5['HS1'] = -df_v5['HW1'] + diff.cumsum()
+        df_v5['HS1'].plot()
         df_v6= df_v5.copy()
 
     # removing empty rows:

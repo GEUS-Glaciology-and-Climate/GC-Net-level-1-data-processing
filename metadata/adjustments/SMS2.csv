@@ -1,0 +1,12 @@
+t0,t1,variable,adjust_function,adjust_value,comment
+# air temp correction on HW1 and HW2
+,,HW1,air_temp_sonic_correction,0,
+
+# filters on HW1 and HW2
+,,HW1,min_filter,0.1,Manually filtered by bav
+,,HW1,max_filter,5,Manually filtered by bav
+
+2003-08-01T00:00:00+00:00,2004-05-15T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.4,Manually filtered by bav
+2004-08-26T00:00:00+00:00,2005-05-15T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.4,Manually filtered by bav
+2005-09-01T00:00:00+00:00,2006-05-15T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.4,Manually filtered by bav
+
