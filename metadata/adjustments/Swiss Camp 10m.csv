@@ -19,3 +19,5 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 1998-05-01T00:00:00+00:00, 2002-01-01T00:00:00+00:00, DW1, rotate, -100, adjusted by bav
 1998-05-01T00:00:00+00:00, 2002-01-01T00:00:00+00:00, DW2, rotate, -100, adjusted by bav
+
+, 2005-01-01T00:00:00+00:00,RH1,swap_with_RH2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111

@@ -3,7 +3,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2007-11-16T12:00:00+00:00,2008-04-02T14:00:00+00:00,HS1,add,1.5,Not reported. Manual shift suggested by bav.
 2009-08-12T18:00:00+00:00,,HS1,add,1.5,Not reported. Manual shift suggested by bav.
 
-2005-07-01T00:00:00+00:00,2006-01-01T00:00:00+00:00,HS2,add,-0.5,Not reported. Manual shift suggested by bav.
+,2006-05-15T00:00:00+00:00,RH1,swap_with_RH2,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
 
 # Realtive humidity back to water
 1995-01-01T00:00:00+00:00,2011-05-30T00:00:00+00:00,RH1,ice_to_water,0, 

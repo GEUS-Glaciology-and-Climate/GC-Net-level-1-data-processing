@@ -1,88 +1,403 @@
 * [0 Swiss Camp 10m](#s1)
   * [Manual flagging of data at Swiss Camp 10m](#s1-1)
   * [Adjusting data at Swiss Camp 10m](#s1-2)
+      * [Adjusting DW1](#s1-2-1)
+      * [Adjusting DW2](#s1-2-2)
+      * [Adjusting HW1](#s1-2-3)
+      * [Adjusting HW2](#s1-2-4)
+      * [Adjusting P](#s1-2-5)
+      * [Adjusting RH1](#s1-2-6)
+      * [Adjusting TA1](#s1-2-7)
 * [1 Swiss Camp](#s2)
   * [Manual flagging of data at Swiss Camp](#s2-1)
   * [Adjusting data at Swiss Camp](#s2-2)
+      * [Adjusting HW1](#s2-2-1)
+      * [Adjusting HW2](#s2-2-2)
+      * [Adjusting ISWR](#s2-2-3)
+      * [Adjusting OSWR](#s2-2-4)
+      * [Adjusting P](#s2-2-5)
+      * [Adjusting RH1](#s2-2-6)
+      * [Adjusting RH2](#s2-2-7)
+      * [Adjusting HS1](#s2-2-8)
+      * [Adjusting HS2](#s2-2-9)
 * [2 Crawford Point 1](#s3)
   * [Manual flagging of data at Crawford Point 1](#s3-1)
   * [Adjusting data at Crawford Point 1](#s3-2)
+      * [Adjusting DW1](#s3-2-1)
+      * [Adjusting DW2](#s3-2-2)
+      * [Adjusting HW1](#s3-2-3)
+      * [Adjusting HW2](#s3-2-4)
+      * [Adjusting ISWR](#s3-2-5)
+      * [Adjusting NR](#s3-2-6)
+      * [Adjusting OSWR](#s3-2-7)
+      * [Adjusting P](#s3-2-8)
+      * [Adjusting RH1](#s3-2-9)
+      * [Adjusting RH2](#s3-2-10)
+      * [Adjusting TA1](#s3-2-11)
+      * [Adjusting TA2](#s3-2-12)
+      * [Adjusting TA3](#s3-2-13)
+      * [Adjusting TA4](#s3-2-14)
+      * [Adjusting TA5](#s3-2-15)
+      * [Adjusting TS1](#s3-2-16)
+      * [Adjusting TS10](#s3-2-17)
+      * [Adjusting TS2](#s3-2-18)
+      * [Adjusting TS3](#s3-2-19)
+      * [Adjusting TS4](#s3-2-20)
+      * [Adjusting TS5](#s3-2-21)
+      * [Adjusting TS6](#s3-2-22)
+      * [Adjusting TS7](#s3-2-23)
+      * [Adjusting TS8](#s3-2-24)
+      * [Adjusting TS9](#s3-2-25)
+      * [Adjusting V](#s3-2-26)
+      * [Adjusting VW1](#s3-2-27)
+      * [Adjusting VW2](#s3-2-28)
+      * [Adjusting HS1](#s3-2-29)
+      * [Adjusting HS2](#s3-2-30)
 * [3 NASA-U](#s4)
   * [Manual flagging of data at NASA-U](#s4-1)
   * [Adjusting data at NASA-U](#s4-2)
+      * [Adjusting DW1](#s4-2-1)
+      * [Adjusting DW2](#s4-2-2)
+      * [Adjusting HW1](#s4-2-3)
+      * [Adjusting HW2](#s4-2-4)
+      * [Adjusting ISWR](#s4-2-5)
+      * [Adjusting NR](#s4-2-6)
+      * [Adjusting OSWR](#s4-2-7)
+      * [Adjusting P](#s4-2-8)
+      * [Adjusting RH1](#s4-2-9)
+      * [Adjusting RH2](#s4-2-10)
+      * [Adjusting TA1](#s4-2-11)
+      * [Adjusting TA2](#s4-2-12)
+      * [Adjusting TA3](#s4-2-13)
+      * [Adjusting TA4](#s4-2-14)
+      * [Adjusting TA5](#s4-2-15)
+      * [Adjusting TS1](#s4-2-16)
+      * [Adjusting TS10](#s4-2-17)
+      * [Adjusting TS2](#s4-2-18)
+      * [Adjusting TS3](#s4-2-19)
+      * [Adjusting TS4](#s4-2-20)
+      * [Adjusting TS5](#s4-2-21)
+      * [Adjusting TS6](#s4-2-22)
+      * [Adjusting TS7](#s4-2-23)
+      * [Adjusting TS8](#s4-2-24)
+      * [Adjusting TS9](#s4-2-25)
+      * [Adjusting V](#s4-2-26)
+      * [Adjusting VW1](#s4-2-27)
+      * [Adjusting VW2](#s4-2-28)
+      * [Adjusting HS1](#s4-2-29)
+      * [Adjusting HS2](#s4-2-30)
 * [4 GITS](#s5)
   * [Manual flagging of data at GITS](#s5-1)
   * [Adjusting data at GITS](#s5-2)
+      * [Adjusting DW1](#s5-2-1)
+      * [Adjusting DW2](#s5-2-2)
+      * [Adjusting HW1](#s5-2-3)
+      * [Adjusting HW2](#s5-2-4)
+      * [Adjusting ISWR](#s5-2-5)
+      * [Adjusting NR](#s5-2-6)
+      * [Adjusting OSWR](#s5-2-7)
+      * [Adjusting P](#s5-2-8)
+      * [Adjusting RH1](#s5-2-9)
+      * [Adjusting RH2](#s5-2-10)
+      * [Adjusting TA1](#s5-2-11)
+      * [Adjusting TA2](#s5-2-12)
+      * [Adjusting TA3](#s5-2-13)
+      * [Adjusting TA4](#s5-2-14)
+      * [Adjusting TA5](#s5-2-15)
+      * [Adjusting TS1](#s5-2-16)
+      * [Adjusting TS10](#s5-2-17)
+      * [Adjusting TS2](#s5-2-18)
+      * [Adjusting TS3](#s5-2-19)
+      * [Adjusting TS4](#s5-2-20)
+      * [Adjusting TS5](#s5-2-21)
+      * [Adjusting TS6](#s5-2-22)
+      * [Adjusting TS7](#s5-2-23)
+      * [Adjusting TS8](#s5-2-24)
+      * [Adjusting TS9](#s5-2-25)
+      * [Adjusting V](#s5-2-26)
+      * [Adjusting VW1](#s5-2-27)
+      * [Adjusting VW2](#s5-2-28)
+      * [Adjusting HS1](#s5-2-29)
+      * [Adjusting HS2](#s5-2-30)
 * [5 Humboldt](#s6)
   * [Manual flagging of data at Humboldt](#s6-1)
   * [Adjusting data at Humboldt](#s6-2)
+      * [Adjusting DW1](#s6-2-1)
+      * [Adjusting DW2](#s6-2-2)
+      * [Adjusting HW1](#s6-2-3)
+      * [Adjusting HW2](#s6-2-4)
+      * [Adjusting ISWR](#s6-2-5)
+      * [Adjusting NR](#s6-2-6)
+      * [Adjusting OSWR](#s6-2-7)
+      * [Adjusting P](#s6-2-8)
+      * [Adjusting RH1](#s6-2-9)
+      * [Adjusting RH2](#s6-2-10)
+      * [Adjusting TA1](#s6-2-11)
+      * [Adjusting TA2](#s6-2-12)
+      * [Adjusting TA3](#s6-2-13)
+      * [Adjusting TA4](#s6-2-14)
+      * [Adjusting TS1](#s6-2-15)
+      * [Adjusting TS10](#s6-2-16)
+      * [Adjusting TS2](#s6-2-17)
+      * [Adjusting TS3](#s6-2-18)
+      * [Adjusting TS4](#s6-2-19)
+      * [Adjusting TS5](#s6-2-20)
+      * [Adjusting TS6](#s6-2-21)
+      * [Adjusting TS7](#s6-2-22)
+      * [Adjusting TS8](#s6-2-23)
+      * [Adjusting TS9](#s6-2-24)
+      * [Adjusting V](#s6-2-25)
+      * [Adjusting VW1](#s6-2-26)
+      * [Adjusting VW2](#s6-2-27)
+      * [Adjusting HS1](#s6-2-28)
+      * [Adjusting HS2](#s6-2-29)
 * [6 Summit](#s7)
   * [Manual flagging of data at Summit](#s7-1)
   * [Adjusting data at Summit](#s7-2)
+      * [Adjusting HW1](#s7-2-1)
+      * [Adjusting HW2](#s7-2-2)
+      * [Adjusting OSWR](#s7-2-3)
+      * [Adjusting P](#s7-2-4)
+      * [Adjusting RH1](#s7-2-5)
+      * [Adjusting RH2](#s7-2-6)
 * [7 Tunu-N](#s8)
   * [Manual flagging of data at Tunu-N](#s8-1)
   * [Adjusting data at Tunu-N](#s8-2)
+      * [Adjusting DW1](#s8-2-1)
+      * [Adjusting DW2](#s8-2-2)
+      * [Adjusting HW1](#s8-2-3)
+      * [Adjusting HW2](#s8-2-4)
+      * [Adjusting P](#s8-2-5)
+      * [Adjusting RH1](#s8-2-6)
+      * [Adjusting RH2](#s8-2-7)
 * [8 DYE2](#s9)
   * [Manual flagging of data at DYE2](#s9-1)
   * [Adjusting data at DYE2](#s9-2)
+      * [Adjusting HW1](#s9-2-1)
+      * [Adjusting HW2](#s9-2-2)
+      * [Adjusting OSWR](#s9-2-3)
+      * [Adjusting RH1](#s9-2-4)
+      * [Adjusting RH2](#s9-2-5)
+      * [Adjusting TA1](#s9-2-6)
+      * [Adjusting TA2](#s9-2-7)
+      * [Adjusting HS1](#s9-2-8)
+      * [Adjusting HS2](#s9-2-9)
 * [9 JAR1](#s10)
   * [Manual flagging of data at JAR1](#s10-1)
   * [Adjusting data at JAR1](#s10-2)
+      * [Adjusting DW1](#s10-2-1)
+      * [Adjusting DW2](#s10-2-2)
+      * [Adjusting HW1](#s10-2-3)
+      * [Adjusting HW2](#s10-2-4)
+      * [Adjusting ISWR](#s10-2-5)
+      * [Adjusting NR](#s10-2-6)
+      * [Adjusting OSWR](#s10-2-7)
+      * [Adjusting P](#s10-2-8)
+      * [Adjusting RH1](#s10-2-9)
+      * [Adjusting RH2](#s10-2-10)
+      * [Adjusting TA1](#s10-2-11)
+      * [Adjusting TA2](#s10-2-12)
+      * [Adjusting TA3](#s10-2-13)
+      * [Adjusting TA4](#s10-2-14)
+      * [Adjusting TA5](#s10-2-15)
+      * [Adjusting TS1](#s10-2-16)
+      * [Adjusting TS10](#s10-2-17)
+      * [Adjusting TS2](#s10-2-18)
+      * [Adjusting TS3](#s10-2-19)
+      * [Adjusting TS4](#s10-2-20)
+      * [Adjusting TS5](#s10-2-21)
+      * [Adjusting TS6](#s10-2-22)
+      * [Adjusting TS7](#s10-2-23)
+      * [Adjusting TS8](#s10-2-24)
+      * [Adjusting TS9](#s10-2-25)
+      * [Adjusting V](#s10-2-26)
+      * [Adjusting VW1](#s10-2-27)
+      * [Adjusting VW2](#s10-2-28)
+      * [Adjusting HS1](#s10-2-29)
+      * [Adjusting HS2](#s10-2-30)
 * [10 Saddle](#s11)
   * [Manual flagging of data at Saddle](#s11-1)
   * [Adjusting data at Saddle](#s11-2)
+      * [Adjusting HW1](#s11-2-1)
+      * [Adjusting HW2](#s11-2-2)
+      * [Adjusting OSWR](#s11-2-3)
+      * [Adjusting RH1](#s11-2-4)
+      * [Adjusting RH2](#s11-2-5)
+      * [Adjusting TA1](#s11-2-6)
+      * [Adjusting HS1](#s11-2-7)
+      * [Adjusting HS2](#s11-2-8)
 * [11 South Dome](#s12)
   * [Manual flagging of data at South Dome](#s12-1)
   * [Adjusting data at South Dome](#s12-2)
+      * [Adjusting HW1](#s12-2-1)
+      * [Adjusting HW2](#s12-2-2)
+      * [Adjusting OSWR](#s12-2-3)
+      * [Adjusting RH1](#s12-2-4)
+      * [Adjusting RH2](#s12-2-5)
+      * [Adjusting TS4](#s12-2-6)
+      * [Adjusting HS1](#s12-2-7)
+      * [Adjusting HS2](#s12-2-8)
 * [12 NASA-E](#s13)
   * [Manual flagging of data at NASA-E](#s13-1)
   * [Adjusting data at NASA-E](#s13-2)
+      * [Adjusting DW2](#s13-2-1)
+      * [Adjusting HW1](#s13-2-2)
+      * [Adjusting HW2](#s13-2-3)
+      * [Adjusting OSWR](#s13-2-4)
+      * [Adjusting RH1](#s13-2-5)
+      * [Adjusting RH2](#s13-2-6)
+      * [Adjusting HS1](#s13-2-7)
+      * [Adjusting HS2](#s13-2-8)
 * [13 CP2](#s14)
   * [Manual flagging of data at CP2](#s14-1)
   * [Adjusting data at CP2](#s14-2)
+      * [Adjusting HW1](#s14-2-1)
+      * [Adjusting HW2](#s14-2-2)
+      * [Adjusting RH1](#s14-2-3)
+      * [Adjusting RH2](#s14-2-4)
+      * [Adjusting TA1](#s14-2-5)
+      * [Adjusting HS1](#s14-2-6)
+      * [Adjusting HS2](#s14-2-7)
 * [14 NGRIP](#s15)
   * [Manual flagging of data at NGRIP](#s15-1)
   * [Adjusting data at NGRIP](#s15-2)
+      * [Adjusting RH1](#s15-2-1)
+      * [Adjusting RH2](#s15-2-2)
+      * [Adjusting HS1](#s15-2-3)
 * [15 NASA-SE](#s16)
   * [Manual flagging of data at NASA-SE](#s16-1)
   * [Adjusting data at NASA-SE](#s16-2)
+      * [Adjusting HW1](#s16-2-1)
+      * [Adjusting HW2](#s16-2-2)
+      * [Adjusting OSWR](#s16-2-3)
+      * [Adjusting RH1](#s16-2-4)
+      * [Adjusting RH2](#s16-2-5)
 * [16 KAR](#s17)
   * [Manual flagging of data at KAR](#s17-1)
   * [Adjusting data at KAR](#s17-2)
+      * [Adjusting RH1](#s17-2-1)
+      * [Adjusting RH2](#s17-2-2)
 * [17 JAR2](#s18)
   * [Manual flagging of data at JAR2](#s18-1)
   * [Adjusting data at JAR2](#s18-2)
+      * [Adjusting HW1](#s18-2-1)
+      * [Adjusting HW2](#s18-2-2)
+      * [Adjusting ISWR](#s18-2-3)
+      * [Adjusting OSWR](#s18-2-4)
+      * [Adjusting RH1](#s18-2-5)
+      * [Adjusting RH2](#s18-2-6)
+      * [Adjusting VW1](#s18-2-7)
+      * [Adjusting HS1](#s18-2-8)
+      * [Adjusting HS2](#s18-2-9)
 * [18 KULU](#s19)
   * [Manual flagging of data at KULU](#s19-1)
   * [Adjusting data at KULU](#s19-2)
+      * [Adjusting RH1](#s19-2-1)
+      * [Adjusting RH2](#s19-2-2)
 * [19 JAR3](#s20)
   * [Manual flagging of data at JAR3](#s20-1)
   * [Adjusting data at JAR3](#s20-2)
+      * [Adjusting P](#s20-2-1)
 * [20 Aurora](#s21)
   * [Manual flagging of data at Aurora](#s21-1)
   * [Adjusting data at Aurora](#s21-2)
+      * [Adjusting RH1](#s21-2-1)
+      * [Adjusting RH2](#s21-2-2)
 * [21 Petermann Glacier](#s22)
   * [Manual flagging of data at Petermann Glacier](#s22-1)
   * [Adjusting data at Petermann Glacier](#s22-2)
+      * [Adjusting RH1](#s22-2-1)
+      * [Adjusting RH2](#s22-2-2)
+      * [Adjusting HS1](#s22-2-3)
+      * [Adjusting HS2](#s22-2-4)
 * [22 Petermann ELA](#s23)
   * [Manual flagging of data at Petermann ELA](#s23-1)
   * [Adjusting data at Petermann ELA](#s23-2)
+      * [Adjusting HW1](#s23-2-1)
+      * [Adjusting HW2](#s23-2-2)
+      * [Adjusting TA2](#s23-2-3)
+      * [Adjusting TA3](#s23-2-4)
+      * [Adjusting TA4](#s23-2-5)
 * [23 NEEM](#s24)
   * [Manual flagging of data at NEEM](#s24-1)
   * [Adjusting data at NEEM](#s24-2)
+      * [Adjusting DW1](#s24-2-1)
+      * [Adjusting HW1](#s24-2-2)
+      * [Adjusting HW2](#s24-2-3)
+      * [Adjusting OSWR](#s24-2-4)
+      * [Adjusting RH1](#s24-2-5)
+      * [Adjusting RH2](#s24-2-6)
+      * [Adjusting HS1](#s24-2-7)
+      * [Adjusting HS2](#s24-2-8)
 * [24 E-GRIP](#s25)
   * [Manual flagging of data at E-GRIP](#s25-1)
   * [Adjusting data at E-GRIP](#s25-2)
-* [30 LAR1](#s31)
-  * [Manual flagging of data at LAR1](#s31-1)
-  * [Adjusting data at LAR1](#s31-2)
-* [31 LAR2](#s32)
-  * [Manual flagging of data at LAR2](#s32-1)
-  * [Adjusting data at LAR2](#s32-2)
-* [32 LAR3](#s33)
-  * [Manual flagging of data at LAR3](#s33-1)
-  * [Adjusting data at LAR3](#s33-2)
-
+      * [Adjusting DW1](#s25-2-1)
+      * [Adjusting HW1](#s25-2-2)
+      * [Adjusting HW2](#s25-2-3)
+      * [Adjusting P](#s25-2-4)
+      * [Adjusting TA1](#s25-2-5)
+      * [Adjusting HS1](#s25-2-6)
+      * [Adjusting HS2](#s25-2-7)
+* [25 SMS1](#s26)
+  * [Manual flagging of data at SMS1](#s26-1)
+  * [Adjusting data at SMS1](#s26-2)
+      * [Adjusting HW1](#s26-2-1)
+* [26 SMS2](#s27)
+  * [Manual flagging of data at SMS2](#s27-1)
+  * [Adjusting data at SMS2](#s27-2)
+      * [Adjusting HW1](#s27-2-1)
+* [27 SMS3](#s28)
+  * [Manual flagging of data at SMS3](#s28-1)
+  * [Adjusting data at SMS3](#s28-2)
+      * [Adjusting HW1](#s28-2-1)
+* [28 SMS4](#s29)
+  * [Manual flagging of data at SMS4](#s29-1)
+  * [Adjusting data at SMS4](#s29-2)
+* [29 SMS5](#s30)
+  * [Manual flagging of data at SMS5](#s30-1)
+  * [Adjusting data at SMS5](#s30-2)
+* [25 SMS1](#s31)
+  * [Manual flagging of data at SMS1](#s31-1)
+  * [Adjusting data at SMS1](#s31-2)
+      * [Adjusting HW1](#s31-2-1)
+* [26 SMS2](#s32)
+  * [Manual flagging of data at SMS2](#s32-1)
+  * [Adjusting data at SMS2](#s32-2)
+      * [Adjusting HW1](#s32-2-1)
+* [27 SMS3](#s33)
+  * [Manual flagging of data at SMS3](#s33-1)
+  * [Adjusting data at SMS3](#s33-2)
+      * [Adjusting HW1](#s33-2-1)
+* [28 SMS4](#s34)
+  * [Manual flagging of data at SMS4](#s34-1)
+  * [Adjusting data at SMS4](#s34-2)
+* [29 SMS5](#s35)
+  * [Manual flagging of data at SMS5](#s35-1)
+  * [Adjusting data at SMS5](#s35-2)
+* [30 LAR1](#s36)
+  * [Manual flagging of data at LAR1](#s36-1)
+  * [Adjusting data at LAR1](#s36-2)
+      * [Adjusting ISWR](#s36-2-1)
+      * [Adjusting OSWR](#s36-2-2)
+      * [Adjusting RH1](#s36-2-3)
+      * [Adjusting RH2](#s36-2-4)
+* [31 LAR2](#s37)
+  * [Manual flagging of data at LAR2](#s37-1)
+  * [Adjusting data at LAR2](#s37-2)
+      * [Adjusting ISWR](#s37-2-1)
+      * [Adjusting OSWR](#s37-2-2)
+      * [Adjusting RH1](#s37-2-3)
+      * [Adjusting RH2](#s37-2-4)
+* [32 LAR3](#s38)
+  * [Manual flagging of data at LAR3](#s38-1)
+  * [Adjusting data at LAR3](#s38-2)
+      * [Adjusting RH1](#s38-2-1)
+      * [Adjusting RH2](#s38-2-2)
+* [33 SMS-PET](#s39)
+  * [Manual flagging of data at SMS-PET](#s39-1)
+  * [Adjusting data at SMS-PET](#s39-2)
+      * [Adjusting HW1](#s39-2-1)
 # <a id='s1' />0 Swiss Camp 10m
 ## <a id='s1-1' />Manual flagging of data at Swiss Camp 10m
 Flagging data:
@@ -102,7 +417,7 @@ Flagging data:
 |2005-02-04 00:00:00+00:00|2005-05-15 00:00:00+00:00|RH1|
 |2016-05-01 00:00:00+00:00|2017-06-01 00:00:00+00:00|OSWR|
 |2015-05-15 00:00:00+00:00|2016-05-15 00:00:00+00:00|TA3|
-|2015-05-15 00:00:00+00:00|2016-05-15 00:00:00+00:00|TA2|
+|2015-05-15 00:00:00+00:00|2016-05-15 00:00:00+00:00|TA1|
 |2018-02-15 00:00:00+00:00|2018-05-05 00:00:00+00:00|P|
 |2017-08-21 00:00:00+00:00|2018-05-05 00:00:00+00:00|HW2|
 ## <a id='s1-2' />Adjusting data at Swiss Camp 10m
@@ -146,7 +461,14 @@ Flagging data:
  
 ![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_adj_P.jpeg)
  
-### <a id='s1-2-6' />Adjusting TA1
+### <a id='s1-2-6' />Adjusting RH1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|1990-06-01 01:00:00+00:00|2005-01-01 00:00:00+00:00|swap_with_RH2|0.0|38279|
+ 
+![Adjusted data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_adj_RH1.jpeg)
+ 
+### <a id='s1-2-7' />Adjusting TA1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2014-01-01 00:00:00+00:00|2020-11-03 21:00:00+00:00|swap_with_TA2|0.0|0|
@@ -158,7 +480,7 @@ Flagging data:
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
-|2015-06-01 00:00:00+00:00|2016-05-01 00:00:00+00:00|RH2|
+|2015-06-01 00:00:00+00:00|2016-05-01 00:00:00+00:00|RH1|
 |2009-07-01 00:00:00+00:00|2009-07-01 00:00:00+00:00|ISWR|
 |2009-07-01 00:00:00+00:00|2009-07-01 00:00:00+00:00|OSWR|
 |2011-02-15 00:00:00+00:00|2011-05-10 00:00:00+00:00|OSWR|
@@ -230,6 +552,7 @@ Warning: HS1 not found
 ### <a id='s2-2-6' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2005-05-09 00:00:00+00:00|2022-08-03 19:00:00+00:00|swap_with_RH2|0.0|0|
 |1996-01-01 00:00:00+00:00|2011-01-01 00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_adj_RH1.jpeg)
@@ -374,8 +697,8 @@ Flagging data:
 ### <a id='s3-2-5' />Adjusting ISWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
 |2012-01-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|swap_with_OSWR|0.0|0|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|19|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|7|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|14|
@@ -629,9 +952,9 @@ Flagging data:
 |2010-05-08 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|0.7|0|
 |2011-01-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|3.5|0|
 |2017-05-21 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|3.0|0|
-|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|25|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|24|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|24|
-|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|24|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_HS1.jpeg)
@@ -649,9 +972,9 @@ Flagging data:
 |2010-05-11 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|-2.5|0|
 |2011-05-02 22:00:00+00:00|2020-07-22 09:00:00+00:00|add|3.5|0|
 |2017-05-21 00:00:00+00:00|2020-07-22 09:00:00+00:00|add|2.2|0|
-|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|25|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|time_shift|24.0|24|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|time_shift|24.0|24|
-|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|25|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|time_shift|24.0|24|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|time_shift|180552.0|0|
  
 ![Adjusted data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_adj_HS2.jpeg)
@@ -665,7 +988,7 @@ Flagging data:
 |2011-01-01 00:00:00+00:00|2012-05-25 00:00:00+00:00|TA4|
 |2011-01-01 00:00:00+00:00|2016-07-01 00:00:00+00:00|P|
 |2017-08-01 00:00:00+00:00|2018-12-31 00:00:00+00:00|P|
-|2017-10-01 00:00:00+00:00|2018-07-01 00:00:00+00:00|RH1|
+|2017-10-01 00:00:00+00:00|2018-07-01 00:00:00+00:00|RH2|
 |2011-01-01 00:00:00+00:00|2012-07-01 00:00:00+00:00|RH2|
 |2013-09-01 00:00:00+00:00|2014-05-21 00:00:00+00:00|HW1|
 |2016-11-14 00:00:00+00:00|2018-07-01 00:00:00+00:00|HW1|
@@ -788,6 +1111,7 @@ Flagging data:
 ### <a id='s4-2-9' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2012-05-09 00:00:00+00:00|2022-10-07 05:00:00+00:00|swap_with_RH2|0.0|-362|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|ice_to_water|0.0|0|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|4|
  
@@ -953,7 +1277,7 @@ Flagging data:
 |2011-05-31 22:00:00+00:00|2022-10-07 05:00:00+00:00|add|0.58|0|
 |2013-06-04 00:00:00+00:00|2022-10-07 05:00:00+00:00|add|2.5|0|
 |2018-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|add|2.5|0|
-|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|48|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|time_shift|48.0|44|
  
 ![Adjusted data at NASA-U](../figures/L1_data_treatment/NASA-U_adj_HS2.jpeg)
  
@@ -1222,7 +1546,7 @@ Warning: HS2 not found
 |2010-05-03 00:00:00+00:00|2010-05-10 00:00:00+00:00|add|-2.5|0|
 |2014-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|2.25|0|
 |2016-05-23 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|2.0|0|
-|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|500|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HS1.jpeg)
  
@@ -1234,7 +1558,7 @@ Warning: HS2 not found
 |2010-05-03 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|9.0|0|
 |2014-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|1.25|0|
 |2016-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|add|3.0|0|
-|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|520|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|time_shift|520.0|0|
  
 ![Adjusted data at GITS](../figures/L1_data_treatment/GITS_adj_HS2.jpeg)
  
@@ -1386,6 +1710,7 @@ Flagging data:
 ### <a id='s6-2-9' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|1999-01-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|swap_with_RH2|0.0|26594|
 |2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|248|
 |2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|3220|
 |2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2824|
@@ -1394,8 +1719,8 @@ Flagging data:
 |2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
 |2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
-|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
-|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|0|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|0|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_RH1.jpeg)
  
@@ -1410,8 +1735,8 @@ Flagging data:
 |2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1272|
 |2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2802|
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|845|
-|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|0|
-|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|0|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_RH2.jpeg)
  
@@ -1678,12 +2003,12 @@ Flagging data:
 |2007-05-13 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|1.0|0|
 |2010-03-01 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|3.0|0|
 |2015-03-26 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|2.0|0|
-|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|1565|
-|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|1318|
-|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2704|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|1507|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|1058|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|1716|
 |2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
-|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1299|
-|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2858|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|781|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2327|
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
 |2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
 |2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
@@ -1693,20 +2018,20 @@ Flagging data:
 ### <a id='s6-2-29' />Adjusting HS2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|1565|
+|2021-12-01 00:00:00+00:00|2022-06-16 00:00:00+00:00|time_shift|2954.0|170|
 |1999-05-03 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|0.6|0|
 |2003-05-22 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|3.0|0|
 |2010-03-01 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|3.0|0|
 |2011-02-25 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|-1.0|0|
 |2015-03-26 00:00:00+00:00|2022-10-17 02:00:00+00:00|add|2.0|0|
-|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|1318|
-|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|2704|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|time_shift|5604.0|8|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|time_shift|2954.0|1348|
 |2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|time_shift|2954.0|0|
-|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1299|
-|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2858|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|time_shift|5611.0|1142|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|time_shift|2943.0|2546|
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|time_shift|2198.0|0|
-|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|48|
-|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|25|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|time_shift|-48.0|9|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|time_shift|-24.0|24|
  
 ![Adjusted data at Humboldt](../figures/L1_data_treatment/Humboldt_adj_HS2.jpeg)
  
@@ -1752,6 +2077,7 @@ Flagging data:
 |2009-05-15 00:00:00+00:00|2022-10-07 03:00:00+00:00|biweekly_upper_range_filter|0.3|13009|
 |2009-05-15 00:00:00+00:00|2022-10-07 03:00:00+00:00|hampel_filter|2.0|5776|
 |2009-05-19 19:00:00+00:00|2010-08-06 23:05:00+00:00|add|-0.39|0|
+|2010-08-16 19:00:00+00:00|2022-10-07 03:00:00+00:00|add|-0.4|0|
  
 ![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_HW1.jpeg)
  
@@ -1767,6 +2093,7 @@ Flagging data:
 |2009-05-15 00:00:00+00:00|2022-10-07 03:00:00+00:00|biweekly_upper_range_filter|0.3|18067|
 |2009-05-15 00:00:00+00:00|2022-10-07 03:00:00+00:00|hampel_filter|2.0|4119|
 |2009-05-19 19:00:00+00:00|2010-08-06 23:05:00+00:00|add|-0.39|0|
+|2010-08-16 19:00:00+00:00|2022-10-07 03:00:00+00:00|add|0.3|0|
  
 ![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_HW2.jpeg)
  
@@ -1790,6 +2117,7 @@ Flagging data:
 ### <a id='s7-2-5' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2018-05-15 00:00:00+00:00|2022-10-07 03:00:00+00:00|swap_with_RH2|0.0|7|
 |1996-01-01 00:00:00+00:00|2009-05-19 00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_RH1.jpeg)
@@ -1800,31 +2128,6 @@ Flagging data:
 |1996-01-01 00:00:00+00:00|2009-05-19 00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_RH2.jpeg)
- 
-### <a id='s7-2-7' />Adjusting HS1
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|1997-05-22 00:00:00+00:00|2022-10-07 03:00:00+00:00|add|0.12|0|
-|1999-01-01 14:00:00+00:00|2022-10-07 03:00:00+00:00|add|0.27|0|
-|1999-05-09 15:00:00+00:00|2022-10-07 03:00:00+00:00|add|0.85|0|
-|2001-06-15 16:00:00+00:00|2022-10-07 03:00:00+00:00|add|2.0|0|
-|2005-05-26 06:00:00+00:00|2022-10-07 03:00:00+00:00|add|3.0|0|
-|2010-08-16 19:00:00+00:00|2022-10-07 03:00:00+00:00|add|3.6|0|
-|2016-05-22 14:00:00+00:00|2022-10-07 03:00:00+00:00|add|2.6|0|
- 
-![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_HS1.jpeg)
- 
-### <a id='s7-2-8' />Adjusting HS2
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|1999-01-01 14:00:00+00:00|2022-10-07 03:00:00+00:00|add|0.27|0|
-|1999-05-09 15:00:00+00:00|2022-10-07 03:00:00+00:00|add|0.93|0|
-|2001-06-15 15:00:00+00:00|2022-10-07 03:00:00+00:00|add|2.1|0|
-|2005-05-26 06:00:00+00:00|2022-10-07 03:00:00+00:00|add|3.0|0|
-|2010-08-16 19:00:00+00:00|2022-10-07 03:00:00+00:00|add|3.05|0|
-|2016-05-22 14:00:00+00:00|2022-10-07 03:00:00+00:00|add|2.5|0|
- 
-![Adjusted data at Summit](../figures/L1_data_treatment/Summit_adj_HS2.jpeg)
  
 # <a id='s8' />7 Tunu-N
 ## <a id='s8-1' />Manual flagging of data at Tunu-N
@@ -1839,7 +2142,11 @@ Flagging data:
 |2014-01-01 00:00:00+00:00|2014-04-26 00:00:00+00:00|ISWR|
 |2014-01-01 00:00:00+00:00|2014-04-26 00:00:00+00:00|OSWR|
 |2011-06-10 00:00:00+00:00|2013-05-23 00:00:00+00:00|HW1|
+|2017-01-16 00:00:00+00:00|2017-01-30 00:00:00+00:00|HW1|
 |2011-06-10 00:00:00+00:00|2013-05-23 00:00:00+00:00|HW2|
+|2008-04-30 00:00:00+00:00|2008-05-01 00:00:00+00:00|HW2|
+|2013-12-07 00:00:00+00:00|2013-12-08 00:00:00+00:00|HW2|
+|2014-05-05 00:00:00+00:00|2014-05-19 00:00:00+00:00|HW2|
 |2013-01-10 00:00:00+00:00|2022-05-27 13:00:00+00:00|DW2|
 |2020-01-10 00:00:00+00:00|2022-05-27 13:00:00+00:00|HW1|
 |2020-01-10 00:00:00+00:00|2022-05-27 13:00:00+00:00|HW2|
@@ -1861,9 +2168,13 @@ Flagging data:
 ### <a id='s8-2-3' />Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2002-02-15 00:00:00+00:00|2002-02-16 00:00:00+00:00|max_filter|1.8|4|
+|2008-04-28 00:00:00+00:00|2008-05-12 00:00:00+00:00|min_filter|3.42|71|
 |2009-05-15 00:00:00+00:00|2022-05-27 13:00:00+00:00|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2022-05-27 13:00:00+00:00|biweekly_upper_range_filter|0.2|13942|
 |2009-05-15 00:00:00+00:00|2022-05-27 13:00:00+00:00|hampel_filter|2.0|3757|
+|2013-01-01 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|-0.2|0|
+|2017-01-01 00:00:00+00:00|2022-05-27 13:00:00+00:00|min_filter|0.6|23792|
  
 ![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_HW1.jpeg)
  
@@ -1873,6 +2184,10 @@ Flagging data:
 |2009-05-15 00:00:00+00:00|2022-05-27 13:00:00+00:00|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2022-05-27 13:00:00+00:00|biweekly_upper_range_filter|0.2|39546|
 |2009-05-15 00:00:00+00:00|2022-05-27 13:00:00+00:00|hampel_filter|2.0|1656|
+|2013-01-01 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|1.3|0|
+|2015-05-22 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|-0.4|0|
+|2017-01-01 00:00:00+00:00|2022-05-27 13:00:00+00:00|max_filter|3.01|6332|
+|2018-05-22 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|-0.3|0|
  
 ![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_HW2.jpeg)
  
@@ -1897,33 +2212,6 @@ Flagging data:
 |1996-01-01 00:00:00+00:00|2011-01-01 00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_RH2.jpeg)
- 
-### <a id='s8-2-8' />Adjusting HS1
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|2001-06-07 16:00:00+00:00|2022-05-27 13:00:00+00:00|add|1.7|0|
-|2002-02-27 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|0.9|0|
-|2008-04-26 16:00:00+00:00|2022-05-27 13:00:00+00:00|add|3.0|0|
-|2015-05-25 16:00:00+00:00|2022-05-27 13:00:00+00:00|add|1.0|0|
-|2018-05-19 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|2.5|0|
- 
-![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_HS1.jpeg)
- 
-### <a id='s8-2-9' />Adjusting HS2
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|2001-06-07 16:00:00+00:00|2022-05-27 13:00:00+00:00|add|1.5|0|
-|2002-02-27 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|0.6|0|
-|2002-06-26 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|-0.6|0|
-|2004-05-13 16:00:00+00:00|2022-05-27 13:00:00+00:00|add|1.0|0|
-|2007-04-05 16:00:00+00:00|2022-05-27 13:00:00+00:00|add|-0.5|0|
-|2008-05-01 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|3.2|0|
-|2012-01-01 16:00:00+00:00|2022-05-27 13:00:00+00:00|add|-0.8|0|
-|2013-02-13 16:00:00+00:00|2022-05-27 13:00:00+00:00|add|-0.5|0|
-|2015-05-25 16:00:00+00:00|2022-05-27 13:00:00+00:00|add|1.0|0|
-|2018-05-19 00:00:00+00:00|2022-05-27 13:00:00+00:00|add|2.5|0|
- 
-![Adjusted data at Tunu-N](../figures/L1_data_treatment/Tunu-N_adj_HS2.jpeg)
  
 # <a id='s9' />8 DYE2
 ## <a id='s9-1' />Manual flagging of data at DYE2
@@ -2188,6 +2476,7 @@ Flagging data:
 ### <a id='s10-2-9' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2012-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|swap_with_RH2|0.0|1670|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|1|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_RH1.jpeg)
@@ -2344,7 +2633,7 @@ Flagging data:
 |2014-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
 |2015-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
 |2017-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|25|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|24|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_HS1.jpeg)
  
@@ -2363,7 +2652,7 @@ Flagging data:
 |2014-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
 |2015-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
 |2017-04-24 00:00:00+00:00|2019-09-08 01:00:00+00:00|add|-2.0|0|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|25|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|time_shift|24.0|24|
  
 ![Adjusted data at JAR1](../figures/L1_data_treatment/JAR1_adj_HS2.jpeg)
  
@@ -2768,6 +3057,7 @@ Flagging data:
 ### <a id='s15-2-1' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2002-06-09 18:00:00+00:00|2006-05-15 00:00:00+00:00|swap_with_RH2|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at NGRIP](../figures/L1_data_treatment/NGRIP_adj_RH1.jpeg)
@@ -2787,13 +3077,6 @@ Flagging data:
 |2009-08-12 18:00:00+00:00|2010-05-08 13:00:00+00:00|add|1.5|0|
  
 ![Adjusted data at NGRIP](../figures/L1_data_treatment/NGRIP_adj_HS1.jpeg)
- 
-### <a id='s15-2-4' />Adjusting HS2
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|2005-07-01 00:00:00+00:00|2006-01-01 00:00:00+00:00|add|-0.5|0|
- 
-![Adjusted data at NGRIP](../figures/L1_data_treatment/NGRIP_adj_HS2.jpeg)
  
 # <a id='s16' />15 NASA-SE
 ## <a id='s16-1' />Manual flagging of data at NASA-SE
@@ -2821,26 +3104,38 @@ Flagging data:
 |2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS8|
 |2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS9|
 |2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS10|
+|2011-05-29 00:00:00+00:00|2011-05-30 00:00:00+00:00|HW1|
+|2003-05-10 08:00:00+00:00|2003-05-10 14:00:00+00:00|HW2|
+|2012-11-01 00:00:00+00:00|2013-07-01 00:00:00+00:00|HW2|
 ## <a id='s16-2' />Adjusting data at NASA-SE
 ### <a id='s16-2-1' />Adjusting HW1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2002-05-18 00:00:00+00:00|2005-05-27 09:00:00+00:00|add|3.0|0|
-|2003-05-10 09:00:00+00:00|2005-05-27 09:00:00+00:00|add|8.26|0|
+|1998-04-24 20:00:00+00:00|2019-09-26 09:00:00+00:00|min_filter|0.1|22161|
+|1998-04-24 20:00:00+00:00|2019-09-26 09:00:00+00:00|max_filter|5.8|18|
+|2002-05-18 00:00:00+00:00|2003-05-10 09:00:00+00:00|add|3.0|0|
+|2003-05-10 09:00:00+00:00|2004-06-11 09:00:00+00:00|add|0.5|0|
+|2004-06-11 09:00:00+00:00|2005-05-27 09:00:00+00:00|add|3.0|0|
+|2005-05-27 09:00:00+00:00|2009-05-27 09:00:00+00:00|add|-1.0|0|
 |2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|biweekly_upper_range_filter|0.5|20074|
-|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|hampel_filter|2.0|4380|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|biweekly_upper_range_filter|0.5|17037|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|hampel_filter|2.0|4303|
+|2013-05-01 00:00:00+00:00|2013-07-01 00:00:00+00:00|min_filter|1.4|0|
  
 ![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_HW1.jpeg)
  
 ### <a id='s16-2-2' />Adjusting HW2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2002-05-18 00:00:00+00:00|2005-05-27 09:00:00+00:00|add|3.0|0|
-|2003-05-10 09:00:00+00:00|2005-05-27 09:00:00+00:00|add|9.56|0|
+|1998-04-24 20:00:00+00:00|2019-09-26 09:00:00+00:00|min_filter|0.1|29460|
+|1998-04-24 20:00:00+00:00|2019-09-26 09:00:00+00:00|max_filter|5.8|0|
+|2002-05-18 00:00:00+00:00|2003-05-10 09:00:00+00:00|add|3.0|0|
+|2003-05-10 09:00:00+00:00|2004-06-11 09:00:00+00:00|add|1.5|0|
+|2004-06-11 09:00:00+00:00|2005-05-27 09:00:00+00:00|add|4.0|0|
+|2005-05-27 09:00:00+00:00|2009-05-27 09:00:00+00:00|add|-1.0|0|
 |2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|air_temp_sonic_correction|0.0|0|
-|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|biweekly_upper_range_filter|0.5|15533|
-|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|hampel_filter|2.0|2943|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|biweekly_upper_range_filter|0.5|4660|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|hampel_filter|2.0|2834|
  
 ![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_HW2.jpeg)
  
@@ -2854,6 +3149,7 @@ Flagging data:
 ### <a id='s16-2-4' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2015-01-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|swap_with_RH2|0.0|0|
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_RH1.jpeg)
@@ -2864,40 +3160,6 @@ Flagging data:
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_RH2.jpeg)
- 
-### <a id='s16-2-6' />Adjusting HS1
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|2000-05-17 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.4|0|
-|2002-05-17 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.5|0|
-|2003-05-10 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.0|0|
-|2005-05-27 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|4.2|0|
-|2007-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|3.0|0|
-|2008-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.0|0|
-|2010-04-29 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|3.0|0|
-|2011-01-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|3.0|0|
-|2012-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.0|0|
-|2013-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|3.5|0|
-|2016-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.5|0|
-|2018-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.0|0|
- 
-![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_HS1.jpeg)
- 
-### <a id='s16-2-7' />Adjusting HS2
-|start time|end time|operation|value|number of removed samples|
-|-|-|-|-|-|
-|2000-05-17 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.4|0|
-|2002-05-17 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.5|0|
-|2003-05-10 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.0|0|
-|2005-05-27 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|4.2|0|
-|2007-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|3.0|0|
-|2008-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.0|0|
-|2010-04-29 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|3.0|0|
-|2013-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|3.5|0|
-|2016-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.5|0|
-|2018-06-09 00:00:00+00:00|2019-09-26 09:00:00+00:00|add|2.0|0|
- 
-![Adjusted data at NASA-SE](../figures/L1_data_treatment/NASA-SE_adj_HS2.jpeg)
  
 # <a id='s17' />16 KAR
 ## <a id='s17-1' />Manual flagging of data at KAR
@@ -2979,6 +3241,7 @@ Flagging data:
 ### <a id='s18-2-5' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
+|2002-05-07 00:00:00+00:00|2013-06-16 08:00:00+00:00|swap_with_RH2|0.0|-19|
 |1999-06-02 03:00:00+00:00|2013-06-16 08:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at JAR2](../figures/L1_data_treatment/JAR2_adj_RH1.jpeg)
@@ -2990,7 +3253,14 @@ Flagging data:
  
 ![Adjusted data at JAR2](../figures/L1_data_treatment/JAR2_adj_RH2.jpeg)
  
-### <a id='s18-2-7' />Adjusting HS1
+### <a id='s18-2-7' />Adjusting VW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2004-05-07 00:00:00+00:00|2005-05-14 00:00:00+00:00|swap_with_VW2|0.0|-459|
+ 
+![Adjusted data at JAR2](../figures/L1_data_treatment/JAR2_adj_VW1.jpeg)
+ 
+### <a id='s18-2-8' />Adjusting HS1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2000-05-27 00:00:00+00:00|2013-06-16 08:00:00+00:00|add|-2.8|0|
@@ -3007,7 +3277,7 @@ Flagging data:
  
 ![Adjusted data at JAR2](../figures/L1_data_treatment/JAR2_adj_HS1.jpeg)
  
-### <a id='s18-2-8' />Adjusting HS2
+### <a id='s18-2-9' />Adjusting HS2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2000-05-27 00:00:00+00:00|2013-06-16 08:00:00+00:00|add|-2.8|0|
@@ -3252,8 +3522,8 @@ Flagging data:
 ### <a id='s24-2-5' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|1996-01-01 00:00:00+00:00|2009-05-15 00:00:00+00:00|ice_to_water|0.0|0|
 |2009-05-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|swap_with_RH2|0.0|-360|
+|1996-01-01 00:00:00+00:00|2009-05-15 00:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at NEEM](../figures/L1_data_treatment/NEEM_adj_RH1.jpeg)
  
@@ -3289,12 +3559,12 @@ Flagging data:
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
-Warning: ISWR not found
-Warning: OSWR not found
-|2022-04-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|RH1|
 |2022-04-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TA3|
+|2022-04-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|RH1|
 |2021-11-11 00:00:00+00:00|2022-10-07 05:00:00+00:00|VW1|
 |2021-11-11 00:00:00+00:00|2022-10-07 05:00:00+00:00|DW1|
+Warning: ISWR not found
+Warning: OSWR not found
 ## <a id='s25-2' />Adjusting data at E-GRIP
 ### <a id='s25-2-1' />Adjusting DW1
 |start time|end time|operation|value|number of removed samples|
@@ -3359,82 +3629,238 @@ Warning: OSWR not found
 ![Adjusted data at E-GRIP](../figures/L1_data_treatment/E-GRIP_adj_HS2.jpeg)
  
 # <a id='s26' />25 SMS1
-Warning: No file for station 25 SMS1
+## <a id='s26-1' />Manual flagging of data at SMS1
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2004-05-27 17:30:00+00:00|2004-05-27 19:30:00+00:00|HW1|
+## <a id='s26-2' />Adjusting data at SMS1
+### <a id='s26-2-1' />Adjusting HW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2001-09-01 00:00:00+00:00|2002-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|175|
+|2002-01-01 00:00:00+00:00|2006-01-15 03:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2002-01-01 00:00:00+00:00|2006-01-15 03:00:00+00:00|min_filter|0.9|211|
+|2002-01-01 00:00:00+00:00|2006-01-15 03:00:00+00:00|max_filter|3.75|18|
+|2002-09-01 00:00:00+00:00|2003-05-01 00:00:00+00:00|biweekly_upper_range_filter|0.4|7|
+|2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|max_filter|3.4|95|
+|2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|294|
+|2004-08-01 00:00:00+00:00|2005-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|1606|
+|2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|min_filter|2.9|290|
+ 
+![Adjusted data at SMS1](../figures/L1_data_treatment/SMS1_adj_HW1.jpeg)
+ 
 # <a id='s27' />26 SMS2
-Warning: No file for station 26 SMS2
+## <a id='s27-1' />Manual flagging of data at SMS2
+No erroneous data listed for SMS2
+## <a id='s27-2' />Adjusting data at SMS2
+### <a id='s27-2-1' />Adjusting HW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 04:00:00+00:00|2006-05-10 15:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2003-04-24 04:00:00+00:00|2006-05-10 15:00:00+00:00|min_filter|0.1|6660|
+|2003-04-24 04:00:00+00:00|2006-05-10 15:00:00+00:00|max_filter|5.0|0|
+|2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|447|
+|2004-08-26 00:00:00+00:00|2005-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|240|
+|2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|404|
+ 
+![Adjusted data at SMS2](../figures/L1_data_treatment/SMS2_adj_HW1.jpeg)
+ 
 # <a id='s28' />27 SMS3
-Warning: No file for station 27 SMS3
+## <a id='s28-1' />Manual flagging of data at SMS3
+No erroneous data listed for SMS3
+## <a id='s28-2' />Adjusting data at SMS3
+### <a id='s28-2-1' />Adjusting HW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2001-05-22 21:00:00+00:00|2006-05-10 15:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2001-05-22 21:00:00+00:00|2006-05-10 15:00:00+00:00|min_filter|0.5|5324|
+|2001-09-01 00:00:00+00:00|2002-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|254|
+|2002-07-15 00:00:00+00:00|2003-05-01 00:00:00+00:00|biweekly_upper_range_filter|0.4|1342|
+|2003-09-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|186|
+|2004-07-15 00:00:00+00:00|2005-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|189|
+|2005-07-11 00:00:00+00:00|2005-07-16 00:00:00+00:00|min_filter|1.8|3|
+|2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|223|
+ 
+![Adjusted data at SMS3](../figures/L1_data_treatment/SMS3_adj_HW1.jpeg)
+ 
 # <a id='s29' />28 SMS4
-Warning: No file for station 28 SMS4
+## <a id='s29-1' />Manual flagging of data at SMS4
+No erroneous data listed for SMS4
+## <a id='s29-2' />Adjusting data at SMS4
+No data to fix at SMS4
 # <a id='s30' />29 SMS5
-Warning: No file for station 29 SMS5
-# <a id='s31' />30 LAR1
-## <a id='s31-1' />Manual flagging of data at LAR1
+## <a id='s30-1' />Manual flagging of data at SMS5
+No erroneous data listed for SMS5
+## <a id='s30-2' />Adjusting data at SMS5
+No data to fix at SMS5
+
+# <a id='s31' />25 SMS1
+## <a id='s31-1' />Manual flagging of data at SMS1
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2004-05-27 17:30:00+00:00|2004-05-27 19:30:00+00:00|HW1|
+## <a id='s31-2' />Adjusting data at SMS1
+### <a id='s31-2-1' />Adjusting HW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2001-09-01 00:00:00+00:00|2002-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|175|
+|2002-01-01 00:00:00+00:00|2006-01-15 03:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2002-01-01 00:00:00+00:00|2006-01-15 03:00:00+00:00|min_filter|0.9|211|
+|2002-01-01 00:00:00+00:00|2006-01-15 03:00:00+00:00|max_filter|3.75|18|
+|2002-09-01 00:00:00+00:00|2003-05-01 00:00:00+00:00|biweekly_upper_range_filter|0.4|7|
+|2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|max_filter|3.4|95|
+|2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|294|
+|2004-08-01 00:00:00+00:00|2005-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|1606|
+|2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|min_filter|2.9|290|
+ 
+![Adjusted data at SMS1](../figures/L1_data_treatment/SMS1_adj_HW1.jpeg)
+ 
+# <a id='s32' />26 SMS2
+## <a id='s32-1' />Manual flagging of data at SMS2
+No erroneous data listed for SMS2
+## <a id='s32-2' />Adjusting data at SMS2
+### <a id='s32-2-1' />Adjusting HW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2003-04-24 04:00:00+00:00|2006-05-10 15:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2003-04-24 04:00:00+00:00|2006-05-10 15:00:00+00:00|min_filter|0.1|6660|
+|2003-04-24 04:00:00+00:00|2006-05-10 15:00:00+00:00|max_filter|5.0|0|
+|2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|447|
+|2004-08-26 00:00:00+00:00|2005-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|240|
+|2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|404|
+ 
+![Adjusted data at SMS2](../figures/L1_data_treatment/SMS2_adj_HW1.jpeg)
+ 
+# <a id='s33' />27 SMS3
+## <a id='s33-1' />Manual flagging of data at SMS3
+No erroneous data listed for SMS3
+## <a id='s33-2' />Adjusting data at SMS3
+### <a id='s33-2-1' />Adjusting HW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2001-05-22 21:00:00+00:00|2006-05-10 15:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2001-05-22 21:00:00+00:00|2006-05-10 15:00:00+00:00|min_filter|0.5|5324|
+|2001-09-01 00:00:00+00:00|2002-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|254|
+|2002-07-15 00:00:00+00:00|2003-05-01 00:00:00+00:00|biweekly_upper_range_filter|0.4|1342|
+|2003-09-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|186|
+|2004-07-15 00:00:00+00:00|2005-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|189|
+|2005-07-11 00:00:00+00:00|2005-07-16 00:00:00+00:00|min_filter|1.8|3|
+|2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|223|
+ 
+![Adjusted data at SMS3](../figures/L1_data_treatment/SMS3_adj_HW1.jpeg)
+ 
+# <a id='s34' />28 SMS4
+## <a id='s34-1' />Manual flagging of data at SMS4
+No erroneous data listed for SMS4
+## <a id='s34-2' />Adjusting data at SMS4
+No data to fix at SMS4
+# <a id='s35' />29 SMS5
+## <a id='s35-1' />Manual flagging of data at SMS5
+No erroneous data listed for SMS5
+## <a id='s35-2' />Adjusting data at SMS5
+No data to fix at SMS5
+# <a id='s36' />30 LAR1
+## <a id='s36-1' />Manual flagging of data at LAR1
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|HW1|
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|HW2|
-## <a id='s31-2' />Adjusting data at LAR1
-### <a id='s31-2-1' />Adjusting ISWR
+## <a id='s36-2' />Adjusting data at LAR1
+### <a id='s36-2-1' />Adjusting ISWR
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
-|2000-01-01 00:00:00+00:00|2012-01-01 00:00:00+00:00|swap_with_OSWR|0.0|0|
+|2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|multiply|2.688|0|
  
 ![Adjusted data at LAR1](../figures/L1_data_treatment/LAR1_adj_ISWR.jpeg)
  
-### <a id='s31-2-2' />Adjusting RH1
+### <a id='s36-2-2' />Adjusting OSWR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|multiply|2.2756|0|
+ 
+![Adjusted data at LAR1](../figures/L1_data_treatment/LAR1_adj_OSWR.jpeg)
+ 
+### <a id='s36-2-3' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at LAR1](../figures/L1_data_treatment/LAR1_adj_RH1.jpeg)
  
-### <a id='s31-2-3' />Adjusting RH2
+### <a id='s36-2-4' />Adjusting RH2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at LAR1](../figures/L1_data_treatment/LAR1_adj_RH2.jpeg)
  
-# <a id='s32' />31 LAR2
-## <a id='s32-1' />Manual flagging of data at LAR2
+# <a id='s37' />31 LAR2
+## <a id='s37-1' />Manual flagging of data at LAR2
 No erroneous data listed for LAR2
-## <a id='s32-2' />Adjusting data at LAR2
-### <a id='s32-2-1' />Adjusting RH1
+## <a id='s37-2' />Adjusting data at LAR2
+### <a id='s37-2-1' />Adjusting ISWR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|multiply|2.68|0|
+ 
+![Adjusted data at LAR2](../figures/L1_data_treatment/LAR2_adj_ISWR.jpeg)
+ 
+### <a id='s37-2-2' />Adjusting OSWR
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|multiply|2.88|0|
+ 
+![Adjusted data at LAR2](../figures/L1_data_treatment/LAR2_adj_OSWR.jpeg)
+ 
+### <a id='s37-2-3' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at LAR2](../figures/L1_data_treatment/LAR2_adj_RH1.jpeg)
  
-### <a id='s32-2-2' />Adjusting RH2
+### <a id='s37-2-4' />Adjusting RH2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at LAR2](../figures/L1_data_treatment/LAR2_adj_RH2.jpeg)
  
-# <a id='s33' />32 LAR3
-## <a id='s33-1' />Manual flagging of data at LAR3
+# <a id='s38' />32 LAR3
+## <a id='s38-1' />Manual flagging of data at LAR3
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
 |2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH2|
-## <a id='s33-2' />Adjusting data at LAR3
-### <a id='s33-2-1' />Adjusting RH1
+## <a id='s38-2' />Adjusting data at LAR3
+### <a id='s38-2-1' />Adjusting RH1
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at LAR3](../figures/L1_data_treatment/LAR3_adj_RH1.jpeg)
  
-### <a id='s33-2-2' />Adjusting RH2
+### <a id='s38-2-2' />Adjusting RH2
 |start time|end time|operation|value|number of removed samples|
 |-|-|-|-|-|
 |2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|ice_to_water|0.0|0|
  
 ![Adjusted data at LAR3](../figures/L1_data_treatment/LAR3_adj_RH2.jpeg)
  
-# <a id='s34' />33 SMS-PET
-Warning: No file for station 33 SMS-PET
+# <a id='s39' />33 SMS-PET
+## <a id='s39-1' />Manual flagging of data at SMS-PET
+No erroneous data listed for SMS-PET
+## <a id='s39-2' />Adjusting data at SMS-PET
+### <a id='s39-2-1' />Adjusting HW1
+|start time|end time|operation|value|number of removed samples|
+|-|-|-|-|-|
+|2002-06-02 02:00:00+00:00|2004-05-14 15:00:00+00:00|air_temp_sonic_correction|0.0|0|
+|2002-06-02 02:00:00+00:00|2004-05-14 15:00:00+00:00|min_filter|0.7|40|
+|2002-07-15 00:00:00+00:00|2003-05-07 15:30:00+00:00|biweekly_upper_range_filter|0.4|40|
+|2003-09-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|biweekly_upper_range_filter|0.4|96|
+ 
+![Adjusted data at SMS-PET](../figures/L1_data_treatment/SMS-PET_adj_HW1.jpeg)
+ 

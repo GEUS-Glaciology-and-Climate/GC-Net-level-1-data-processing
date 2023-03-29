@@ -45,5 +45,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
+2012-05-15T00:00:00+00:00, ,RH1,swap_with_RH2,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
+
 # time adjustments
 2003-04-24, 2005-05-07, *, time_shift,  24, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/60

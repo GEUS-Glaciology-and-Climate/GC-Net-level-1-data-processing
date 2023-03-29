@@ -28,6 +28,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1995-01-01T00:00:00+00:00,2012-08-19T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 1995-01-01T00:00:00+00:00,2012-08-19T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 
+1999-01-01T00:00:00+00:00, ,RH1,swap_with_RH2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
+
 # time shifts. For more info see: https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/62
 2004-08-08T00:00:00+00:00, 2005-01-01T00:00:00+00:00, *, time_shift, -24, 
 2005-01-02T00:00:00+00:00, 2006-05-04T00:00:00+00:00, *, time_shift, -48, 

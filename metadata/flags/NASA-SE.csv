@@ -15,3 +15,7 @@ t0,t1,variable,flag,comment,URL_graphic
 2017-11-01T00:00:00+00:00,2019-05-26T00:00:00+00:00,DW1,NAN, frozen anemometer (bav)
 
 2010-05-01T00:00:00+00:00,,^TS[^_]+$,CHECKME,Manually flagged by bav,
+
+2011-05-29T00:00:00+00:00,2011-05-30T00:00:00+00:00,HW1,NAN,Manually filtered by bav
+2003-05-10T08:00:00+00:00,2003-05-10T14:00:00+00:00,HW2,NAN,Manually filtered by bav
+2012-11-01T00:00:00+00:00,2013-07-01T00:00:00+00:00,HW2,NAN,Manually filtered by bav

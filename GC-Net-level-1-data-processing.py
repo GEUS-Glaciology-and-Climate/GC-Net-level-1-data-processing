@@ -41,8 +41,8 @@ def Msg(txt):
     print(txt)
     f.write(txt + "\n")
 
-path_to_L0N = "L0M/"
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)
+path_to_L0 = "L0M/"
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)[25:]
 # print(site_list)
 
 # uncomment for use at specific sites
@@ -55,7 +55,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
     Msg("# " + str(ID) + " " + site)
-    filename = path_to_L0N + str(ID).zfill(2) + "-" + site + ".csv"
+    filename = path_to_L0 + str(ID).zfill(2) + "-" + site + ".csv"
     if not path.exists(filename):
         Msg("Warning: No file for station " + str(ID) + " " + site)
         continue
@@ -75,7 +75,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         
     # uncomment for use on reduce time window to save computational time
     # df = df.loc['2000':'2005',:]
-
+    
     if site == "Swiss Camp 10m":
         df["TA2"] = np.nan
         df["TA4"] = np.nan
@@ -95,15 +95,12 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # flagging frozen values
     df_out = ptb.filter_zero_gradient(df_out)
 
-    # gap-filling the temperature TA1 and TA2 with the secondary sensors on the same levels
-    # df_out.loc[df.TA1.isnull(), 'TA1'] = df_out.loc[df_out.TA1.isnull(), 'TA3']
-    # df_out.loc[df.TA2.isnull(), 'TA2'] = df_out.loc[df_out.TA2.isnull(), 'TA4']
-
     Msg("## Adjusting data at " + site)
     # we start by adjusting and filtering all variables except surface height
     df_v4 = ptb.adjust_data(df_out, site,
                             # var_list=['HW1','HW2'], 
-                            skip_var=["HS1", "HS2"])
+                            skip_var=["HS1", "HS2"],
+                            plot=True)
 
     # Applying standard filters again
     df_v4 = df_v4.resample("H").asfreq()
@@ -116,38 +113,22 @@ for site, ID in zip(site_list.Name, site_list.ID):
         df_v5 = ptb.correct_net_rad(df_v5,site)
 
     # interpolating short gaps and calculating added variables
-    if 'SMS' not in site:
-        df_v5b = ptb.augment_data(
-            df_v5,
-            site_list.loc[site_list.Name == site, "Northing"].values[0],
-            site_list.loc[site_list.Name == site, "Easting"].values[0],
-            site_list.loc[site_list.Name == site, "Elevationm"].values[0],
-            site,
-        )
-        
-        if df_v5b[[v for v in df_v5b.columns if 'TS' in v]].notnull().any().any():
-            df_v6 = ptb.therm_depth(df_v5b, site)
-        else:
-            df_v6= df_v5b.copy()
+    df_v5b = ptb.augment_data(
+        df_v5,
+        site_list.loc[site_list.Name == site, "Northing"].values[0],
+        site_list.loc[site_list.Name == site, "Easting"].values[0],
+        site_list.loc[site_list.Name == site, "Elevationm"].values[0],
+        site,
+    )
+
+    if df_v5b[[v for v in df_v5b.columns if 'TS' in v]].notnull().any().any():
+        df_v6 = ptb.therm_depth(df_v5b, site)
     else:
-        # height processing for the SMS
-        thresh = 1
-        # plt.close('all')
-        plt.figure()
-        df_v5[['HW1']].plot(ax=plt.gca(),marker='.', linestyle='None')
-        df_v5[['HW1']].bfill().plot(ax=plt.gca(),marker='.', linestyle='None')
-        diff = df_v5['HW1'].bfill().diff()
-        diff.loc[diff.abs()<thresh] = 0
-        diff.loc[diff>0] = 0
-        diff.plot(ax=plt.gca(),marker='o', linestyle='None')
-        df_v5['HS1'] = -df_v5['HW1'] + diff.cumsum()
-        df_v5['HS1'].plot()
-        df_v6= df_v5.copy()
+        df_v6= df_v5b.copy()
 
     # removing empty rows:
     useful_var_list = [
-        "ISWR",  "OSWR", "NR", "TA1", "TA2", "TA3",
-        "TA4",  "RH1" "RH2", "P",
+        "ISWR",  "OSWR", "NR", "TA1", "TA2", "TA3", "TA4",  "RH1" "RH2", "P",
     ] + ["TS" + str(i) for i in range(1, 11)]
     ind_first = df_v6[
         [v for v in useful_var_list if v in df_v6.columns]
@@ -181,8 +162,9 @@ for site, ID in zip(site_list.Name, site_list.ID):
             header_obj,
             "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + ".csv",
         )
-        
+
         # daily average
+        # df_v7 = ptb.daily_average(df_v6)
         def limited_mean(array_like):
             if pd.isnull(array_like).sum()>6:
                 return np.nan

@@ -1,21 +1,4 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-20010607T16:00:00+00:00,,HS1,add,1.7,manual shift by bav
-20020227T00:00:00+00:00,,HS1,add,0.9,manual shift by bav
-20080426T16:00:00+00:00,,HS1,add,3,manual shift by bav
-20150525T16:00:00+00:00,,HS1,add,1,manual shift by bav
-20180519T00:00:00+00:00,,HS1,add,2.5,manual shift by bav
-
-20010607T16:00:00+00:00,,HS2,add,1.5,manual shift by bav
-20040513T16:00:00+00:00,,HS2,add,1,manual shift by bav
-20020227T00:00:00+00:00,,HS2,add,0.6,manual shift by bav
-20020626T00:00:00+00:00,,HS2,add,-0.6,manual shift by bav
-20070405T16:00:00+00:00,,HS2,add,-0.5,manual shift by bav
-20080501T00:00:00+00:00,,HS2,add,3.2,manual shift by bav
-20120101T16:00:00+00:00,,HS2,add,-0.8,manual shift by bav
-20130213T16:00:00+00:00,,HS2,add,-0.5,manual shift by bav
-20150525T16:00:00+00:00,,HS2,add,1,manual shift by bav
-20180519T00:00:00+00:00,,HS2,add,2.5,manual shift by bav
-
 2021-01-05T00:00:00+00:00,2022-09-09T00:00:00+00:00,P,grad_filter,5,
 1990-01-01T00:00:00+00:00,2012-01-01T00:00:00+00:00,RH1,swap_with_RH2,0,bav
 
@@ -33,6 +16,16 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
+2017-01-01T00:00:00+00:00,,HW1,min_filter,0.6,Manually filtered by bav
+2008-04-28T00:00:00+00:00,2008-05-12T00:00:00+00:00,HW1,min_filter,3.42,Manually filtered by bav
+2017-01-01T00:00:00+00:00,,HW2,max_filter,3.01,Manually filtered by bav
+2002-02-15T00:00:00+00:00,2002-02-16T00:00:00+00:00,HW1,max_filter,1.8,Manually filtered by bav
+
+# adjustments on HW
+2013-01-01T00:00:00+00:00,,HW1,add,-0.2,Manually filtered by bav
+2013-01-01T00:00:00+00:00,,HW2,add,1.3,Manually filtered by bav
+2015-05-22T00:00:00+00:00,,HW2,add,-0.4,Manually filtered by bav
+2018-05-22T00:00:00+00:00,,HW2,add,-0.3,Manually filtered by bav
 
 1996-01-01T00:00:00+00:00,2011-01-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 1996-01-01T00:00:00+00:00,2011-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43

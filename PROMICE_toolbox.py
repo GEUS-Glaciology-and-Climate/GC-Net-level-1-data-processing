@@ -320,7 +320,7 @@ def remove_flagged_data(df):
 import pytz
 
 
-def adjust_data(df, site, var_list=[], skip_var=[]):
+def adjust_data(df, site, var_list=[], skip_var=[], plot=True):
     df_out = df.copy()
     if not os.path.isfile("metadata/adjustments/" + site + ".csv"):
         Msg("No data to fix at " + site)
@@ -346,6 +346,10 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
         adj_info = adj_info.drop(labels=ind, axis=0)
 
     adj_info = adj_info.sort_values(by=["variable", "t0"])
+    # putting sonic correction first
+    adj_info = pd.concat((adj_info.loc[adj_info.adjust_function.str.startswith('sonic_correction'),:],
+                          adj_info.loc[~adj_info.adjust_function.str.startswith('sonic_correction'),:]))
+    # putting sensor swap first
     adj_info = pd.concat((adj_info.loc[adj_info.adjust_function.str.startswith('swap'),:],
                           adj_info.loc[~adj_info.adjust_function.str.startswith('swap'),:]))
 
@@ -476,10 +480,12 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
 
             if func == "air_temp_sonic_correction":
                 # finding the available air temp measurements
-                tmp = df_out.loc[t0:t1, "TA" + var[-1]]
-                tmp2 = df_out.loc[t0:t1, ["TA" + str(i) for i in range(1, 5)]].mean(
-                    axis=1
-                )
+                if "TA" + var[-1] in df_out.columns:
+                    tmp = df_out.loc[t0:t1, "TA" + var[-1]]
+                else:
+                    tmp = df_out.loc[t0:t1, "TA1"]
+                TA_var =  ["TA" + str(i) for i in range(1, 5) if "TA" + str(i) in df_out.columns]
+                tmp2 = df_out.loc[t0:t1, TA_var].mean(axis=1)
                 tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()]
                 tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
                 
@@ -489,10 +495,12 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
                 
             if func == "air_temp_sonic_anticorrection":
                 # finding the available air temp measurements
-                tmp = df_out.loc[t0:t1, "TA" + var[-1]]
-                tmp2 = df_out.loc[t0:t1, ["TA" + str(i) for i in range(1, 5)]].mean(
-                    axis=1
-                )
+                if "TA" + var[-1] in df_out.columns:
+                    tmp = df_out.loc[t0:t1, "TA" + var[-1]]
+                else:
+                    tmp = df_out.loc[t0:t1, "TA1"]
+                TA_var =  ["TA" + str(i) for i in range(1, 5) if "TA" + str(i) in df_out.columns]
+                tmp2 = df_out.loc[t0:t1, TA_var].mean(axis=1)
                 tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()]
                 tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
                 # plt.figure()
@@ -584,27 +592,28 @@ def adjust_data(df, site, var_list=[], skip_var=[]):
             & ("_adj_flag" not in var)
             & ("_min" not in var)
         ):
-            fig = plt.figure(figsize=(12, 8))
-            df[var].plot(style="o", label="before adjustment")
-            df_out[var].plot(style="o", label="after adjustment")
-            [
-                plt.axvline(t, linestyle="--", color="red")
-                for t in adj_info.loc[var].t0.values
-            ]
-            plt.axvline(np.nan, linestyle="--", color="red", label="Adjustment times")
-            plt.xlabel("Year")
-            plt.ylabel(var)
-            plt.legend()
-            plt.title(site)
-            fig.savefig(
-                "figures/L1_data_treatment/"
-                + site.replace(" ", "")
-                + "_adj_"
-                + var
-                + ".jpeg",
-                dpi=120,
-                bbox_inches="tight",
-            )
+            if plot:
+                fig = plt.figure(figsize=(12, 8))
+                df[var].plot(style="o", label="before adjustment")
+                df_out[var].plot(style="o", label="after adjustment")
+                [
+                    plt.axvline(t, linestyle="--", color="red")
+                    for t in adj_info.loc[var].t0.values
+                ]
+                plt.axvline(np.nan, linestyle="--", color="red", label="Adjustment times")
+                plt.xlabel("Year")
+                plt.ylabel(var)
+                plt.legend()
+                plt.title(site)
+                fig.savefig(
+                    "figures/L1_data_treatment/"
+                    + site.replace(" ", "")
+                    + "_adj_"
+                    + var
+                    + ".jpeg",
+                    dpi=120,
+                    bbox_inches="tight",
+                )
             Msg(" ")
             Msg(
                 "![Adjusted data at "
@@ -644,7 +653,52 @@ def correct_net_rad(df_in, site):
         df_v5.loc[df_v5.NR>0, 'NR_cor'] = C_pos * df_v5.loc[df_v5.NR>0, 'NR'] 
         df_v5.loc[df_v5.NR<0, 'NR_cor'] = C_neg * df_v5.loc[df_v5.NR<0, 'NR'] 
     return df_v5
+
+
+def fill_gap_HW(df1, df2, var_target="HW1", var_sec="HW2", note=''):
+    # Filling the gaps in HW1 with HW2
+    if var_target+'_org' not in df1.columns:
+        df1[var_target+'_org'] = ''
+    # Gap-filling HW using other sensor if available
+    prev_no_nan = df1[var_target].notnull().shift(1).fillna(False)
+    is_nan = df1[var_target].isnull()
+    list_start_gaps = df1.index[(prev_no_nan & is_nan)]
+
+    prev_nan = df1[var_target].isnull().shift(1).fillna(False)
+    no_nan = df1[var_target].notnull()
+    list_end_gaps = df1.index[(prev_nan & no_nan)]
+
+    list_start_gaps = list_start_gaps[list_start_gaps < df2.index[-1]]
+    list_start_gaps = list_start_gaps[list_start_gaps > df2.index[0]]
+    list_end_gaps = list_end_gaps[list_end_gaps < df2.index[-1]]
+    list_end_gaps = list_end_gaps[list_end_gaps > df2.index[0]]
     
+    if list_end_gaps[-1] < list_start_gaps[-1]:
+        list_end_gaps = np.append(list_end_gaps, min(df1.index[-1],df2.index[-1]))
+    if list_end_gaps[0] < list_start_gaps[0]:
+        list_start_gaps = np.append(max(df1.index[0],df2.index[0]), list_start_gaps)
+
+
+    for start, end in zip(list_start_gaps, list_end_gaps):
+        # we look at the month preceeding the gap
+        # calculate the mean difference between the two heights during that time
+        mean_diff = (
+            df1.loc[(start - pd.Timedelta(days=30)) : start, var_target]
+            - df2.loc[(start - pd.Timedelta(days=30)) : start, var_sec]
+        ).mean()
+        if np.isnan(mean_diff):
+            mean_diff = df1.loc[:, var_target].mean() - df2.loc[:, var_sec].mean()
+
+        # and use that difference to adjust the secondary height to the height
+        # that is to be gap-filled
+        df1.loc[start:end, var_target] = (
+            df2.loc[start:end, var_sec].values + mean_diff
+        )
+        df1.loc[start:end, var_target+'_org'] = var_sec + note
+
+    return df1[var_target].values
+
+
 def augment_data(df_in, latitude, longitude, elevation, site):
     # Interpolate small gaps in available variables
     # and add variables to the dataset:
@@ -656,81 +710,99 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     # for debug:
     # df_in = df_v5.copy()
     df = df_in.copy()
+            
+    # Interpolation over gaps smaller than two days
+    for var in ['HW1','HW2']:
+        if var not in df.columns:
+            print(var, 'not in dataframe')
+            continue
+           
+        if df[var].isnull().all():
+            print('No valid data for', var)
+            continue
+        
+        # Creating surface height field        
+        ind1 = df[var].first_valid_index()
+        var_HS = "HS"+var[-1]
+        df[var_HS] = df.loc[ind1, var] - df[var]
+
+        
+        if site in ['SMS1', 'SMS2', 'SMS3', 'SMS4', 'SMS5', 'SMS-PET', 'Summit', 
+                    'NASA-SE','Tunu-N']:
+            # height processing for the SMS
+            thresh = 0.7
+            if site == 'Tunu-N':
+                thresh=0.2
+            # plt.close('all')
+            fig, ax = plt.subplots(1,1)
+            df[var].bfill().plot(ax=ax,marker='.', linestyle='None', label=var+' backfilled')
+            df[var].plot(ax=ax,marker='.', linestyle='None', label=var)
+            
+            diff = df[var].bfill().diff()
+            diff.plot(ax=ax,marker='o', linestyle='None', label='all shifts')
+            diff.loc[diff.abs()<thresh] = 0
+            if 'SMS' in site:
+                diff.loc[diff>0] = 0
+            
+            for t in  diff.loc[diff.abs()>thresh].index.values:
+                # refining the diff value:
+                t = pd.to_datetime(t, utc=True)
+                one_week_before_gap = slice(t-pd.Timedelta(days=7), t)
+                one_week_after_gap = slice(t, t+pd.Timedelta(days=7))
+                if df.loc[one_week_after_gap, var].isnull().all() | df.loc[one_week_before_gap, var].isnull().all():
+                    # average daily accumulation
+                    if site == 'Tunu-N':
+                        avg_accum = 0.000784
+                    else:
+                        tmp = df[var].resample('D').mean().diff()
+                        avg_accum = -tmp.mean()
+                    last_good_index = df.loc[:t, var].last_valid_index()
+                    next_good_index = df.loc[t:, var].first_valid_index()
+                    diff.loc[t] = df.loc[next_good_index, var] - df.loc[last_good_index, var] + avg_accum * (next_good_index-last_good_index).total_seconds()/3600/24
+                else:
+                    diff.loc[t] = df.loc[one_week_after_gap, var].median() - df.loc[one_week_before_gap, var].median()
+                if t == diff.loc[diff.abs()>thresh].index.values[0]:
+                    ax.axvline(t, linestyle='--', label='shift applied')
+                else:
+                    ax.axvline(t, linestyle='--', label='_nolegend_')
+            df[var_HS] = df[var_HS] + diff.cumsum()
+            df[var_HS].plot(label=var_HS)
+            plt.legend()
+            fig.savefig("figures/L1_data_treatment/" + site + "_"+var_HS+"_adjust_auto.png")
+            x = df[var_HS].index.values.astype(float)/10**9/3600/24
+            y = df[var_HS].values
+            print(np.polyfit(x[~np.isnan(x+y)],
+                             y[~np.isnan(x+y)], 1)[-2])
+            df[var_HS]
+        else:
+            # we then adjust and filter all surface height (could be replaced by an automated adjustment)
+            df = adjust_data(df, site, var_HS)
+
+
+        # HW1 gapfilled with HW2 and inversely
+        var_sec = var[:-1]+str(int(var[-1])%2 +1)
+        if var_sec in df.columns:
+            if df[var].notnull().any():
+                df[var+'_org'] = var
+                df[var] = fill_gap_HW(df, df, var, var_sec)
+                df.loc[df[var]<0, var] = np.nan
+
+        # At swiss camp, using HW from tower to fill the gaps
+        if site == 'Swiss Camp 10m':
+            if var == 'HW1':
+                df_swc = nead.read("L1/01-SwissCamp.csv").to_dataframe().reset_index(drop=True)
+                df_swc['timestamp'] = pd.to_datetime(df_swc.timestamp)
+                df_swc = df_swc.set_index("timestamp").replace(-999, np.nan)
+            
+            df[var] = fill_gap_HW(df, df_swc, var, "HW1", note= ' aws')
+            df[var] = fill_gap_HW(df, df_swc, var, "HW2", note= ' aws')    
+            df.loc[df[var]<0, var] = np.nan
     
-    # Interpolation over gaps smaller than a week
-    mask = df[["HW1", "HW2"]].copy()
-    for i in ["HW1", "HW2"]:
-        tmp = pd.DataFrame(df[i])
-        tmp["new"] = (tmp.notnull() != tmp.shift().notnull()).cumsum()
-        tmp["ones"] = 1
-        mask[i] = (tmp.groupby("new")["ones"].transform("count") < 24 * 2) | df[
-            i
-        ].notnull()
-    df[["HW1", "HW2"]] = df[["HW1", "HW2"]].interpolate().values
-    df.loc[mask.HW1 == False, "HW1"] = np.nan
-    df.loc[mask.HW2 == False, "HW2"] = np.nan
+    # HS summary:
+    if 'HS2' in df.columns:
+        df['HS_combined'] = df[ ["HS1", "HS2"]].mean(axis=1)
 
-
-    def fill_gap_HW(df1, df2, var_target="HW1", var_sec="HW2", note=''):
-        if var_target+'_org' not in df1.columns:
-            df1[var_target+'_org'] = ''
-        # Gap-filling HW using other sensor if available
-        prev_no_nan = df1[var_target].notnull().shift(1).fillna(False)
-        is_nan = df1[var_target].isnull()
-        list_start_gaps = df1.index[(prev_no_nan & is_nan)]
-
-        prev_nan = df1[var_target].isnull().shift(1).fillna(False)
-        no_nan = df1[var_target].notnull()
-        list_end_gaps = df1.index[(prev_nan & no_nan)]
-
-        list_start_gaps = list_start_gaps[list_start_gaps < df2.index[-1]]
-        list_start_gaps = list_start_gaps[list_start_gaps > df2.index[0]]
-        list_end_gaps = list_end_gaps[list_end_gaps < df2.index[-1]]
-        list_end_gaps = list_end_gaps[list_end_gaps > df2.index[0]]
-        
-        if list_end_gaps[-1] < list_start_gaps[-1]:
-            list_end_gaps = np.append(list_end_gaps, min(df1.index[-1],df2.index[-1]))
-        if list_end_gaps[0] < list_start_gaps[0]:
-            list_start_gaps = np.append(max(df1.index[0],df2.index[0]), list_start_gaps)
-
-
-        for start, end in zip(list_start_gaps, list_end_gaps):
-            # we look at the month preceeding the gap
-            # calculate the mean difference between the two heights during that time
-            mean_diff = (
-                df1.loc[(start - pd.Timedelta(days=30)) : start, var_target]
-                - df2.loc[(start - pd.Timedelta(days=30)) : start, var_sec]
-            ).mean()
-            if np.isnan(mean_diff):
-                mean_diff = df1.loc[:, var_target].mean() - df2.loc[:, var_sec].mean()
-
-            # and use that difference to adjust the secondary height to the height
-            # that is to be gap-filled
-            df1.loc[start:end, var_target] = (
-                df2.loc[start:end, var_sec].values + mean_diff
-            )
-            df1.loc[start:end, var_target+'_org'] = var_sec + note
-
-        return df1[var_target].values
-    if df["HW1"].notnull().any():
-        df["HW1_org"] = 'HW1'
-        df["HW1"] = fill_gap_HW(df, df, "HW1", "HW2")
-        df["HW1"] = np.maximum(0, df["HW1"])
-    if df["HW2"].notnull().any():
-        df["HW2_org"] = 'HW2'
-        df["HW2"] = fill_gap_HW(df, df, "HW2", "HW1")
-        df["HW2"] = np.maximum(0, df["HW2"])
-    # At swiss camp, using HW from tower to fill the gaps
-    if site == 'Swiss Camp 10m':
-        df2 = nead.read("L1/01-SwissCamp.csv").to_dataframe().reset_index(drop=True)
-        df2['timestamp'] = pd.to_datetime(df2.timestamp)
-        df2 = df2.set_index("timestamp").replace(-999, np.nan)
-        
-        df["HW1"] = fill_gap_HW(df, df2, "HW1", "HW1", note= ' aws')
-        df["HW1"] = fill_gap_HW(df, df2, "HW1", "HW2", note= ' aws')
-        df["HW2"] = fill_gap_HW(df, df2, "HW2", "HW2", note= ' aws')
-        df["HW2"] = fill_gap_HW(df, df2, "HW2", "HW1", note= ' aws')        
-
+    # plotting gap-filling process
     fig,ax = plt.subplots(2,1, figsize=(15,8))
     if 'HW1_org' in df.columns:
         for src in df.HW1_org.unique():
@@ -746,43 +818,27 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     ax[1].legend()
     fig.savefig("figures/L1_data_treatment/" + site + "_gap_filling_HW.png")
 
+    if 'TA3' in df.columns:
+        # calculating SHF and LHF
+        df["SHF"], df["LHF"] = jaws_tools.gradient_fluxes(df.copy())
     
-        
-    # Creating surface height field
-    if any(df.HW1.notnull()):
-        ind1 = df.HW1.first_valid_index()
-        df["HS1"] = df.HW1[ind1] - df.HW1
-    if any(df.HW2.notnull()):
-        ind2 = df.HW2.first_valid_index()
-        df["HS2"] = df.HW2[ind2] - df.HW2
-
-    # we then adjust and filter all surface height (could be replaced by an automated adjustment)
-    df = adjust_data(df, site, ["HS1", "HS2"])
-
-    # HS summary:
-    df['HS_combined'] = df[ ["HS1", "HS2"]].mean(axis=1)
+        # interpolating variables at standard heights
+        df["TA2m"] = extrapolate_temp(
+            df, var=["TA1", "TA2"], target_height=2, max_diff=5
+        )
+        df["RH2m"] = extrapolate_temp(
+            df, var=["RH1", "RH2"], target_height=2, max_diff=10
+        )
+        df["VW10m"] = extrapolate_temp(
+            df, var=["VW1", "VW2"], target_height=10, max_diff=5
+        )
     
-    # calculating SHF and LHF
-    df["SHF"], df["LHF"] = jaws_tools.gradient_fluxes(df.copy())
-    
-    # interpolating variables at standard heights
-    df["TA2m"] = extrapolate_temp(
-        df, var=["TA1", "TA2"], target_height=2, max_diff=5
-    )
-    df["RH2m"] = extrapolate_temp(
-        df, var=["RH1", "RH2"], target_height=2, max_diff=10
-    )
-    df["VW10m"] = extrapolate_temp(
-        df, var=["VW1", "VW2"], target_height=10, max_diff=5
-    )
-
-    df.loc[df['TA2m']>20, 'TA2m'] = np.nan
-    df.loc[df['TA2m']<-80, 'TA2m'] = np.nan
-    df.loc[df['RH2m']>120, 'RH2m'] = np.nan
-    df.loc[df['RH2m']<20, 'RH2m'] = np.nan
-    df.loc[df['VW10m']>40, 'VW10m'] = np.nan
-    df.loc[df['VW10m']<0, 'VW10m'] = 0
-
+        df.loc[df['TA2m']>20, 'TA2m'] = np.nan
+        df.loc[df['TA2m']<-80, 'TA2m'] = np.nan
+        df.loc[df['RH2m']>120, 'RH2m'] = np.nan
+        df.loc[df['RH2m']<20, 'RH2m'] = np.nan
+        df.loc[df['VW10m']>40, 'VW10m'] = np.nan
+        df.loc[df['VW10m']<0, 'VW10m'] = 0
 
     # Solar zenith and azimuth angles
     df["SZA"], df["SAA"] = sza_saa(df, longitude, latitude)
@@ -793,16 +849,20 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     
     # Humidity with regard to ice and specific humidity
     T1 = df.TA1.copy()
-    T1.loc[df.TA1.isnull()] = df.loc[df.TA1.isnull(), 'TA3']
+    if 'TA3' in df.columns:
+        T1.loc[df.TA1.isnull()] = df.loc[df.TA1.isnull(), 'TA3']
     df['RH1_cor'] = correctHumidity(df.RH1, T1)
-    T2 = df.TA2.copy()
-    T2.loc[df.TA1.isnull()] = df.loc[df.TA2.isnull(), 'TA4']
-    df['RH2_cor'] = correctHumidity(df.RH2, T2)
+    if 'P' in df.columns:
+        df['Q1'] = calcHumid(T1, df.P, df.RH1_cor)  *1000
+        df.loc[df['Q1']>40, 'Q1'] = np.nan
 
-    df['Q1'] = calcHumid(T1, df.P, df.RH1_cor)  *1000
-    df['Q2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
-    df.loc[df['Q1']>40, 'Q1'] = np.nan
-    df.loc[df['Q2']>40, 'Q2'] = np.nan
+    if 'RH2' in df.columns:
+        T2 = df.TA2.copy()
+        T2.loc[df.TA1.isnull()] = df.loc[df.TA2.isnull(), 'TA4']
+        df['RH2_cor'] = correctHumidity(df.RH2, T2)
+
+        df['Q2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
+        df.loc[df['Q2']>40, 'Q2'] = np.nan
     return df
 
 from scipy.interpolate import interp1d
@@ -1589,3 +1649,37 @@ def SpecHum2RH(q, T, pres):
     # relative humidity
     RH = q / q_sat * 100
     return RH
+
+
+def limited_mean(array_like):
+    if pd.isnull(array_like).sum()>6:
+        return np.nan
+    else:
+        return array_like.mean()
+
+
+def limited_max(array_like):
+    if pd.isnull(array_like).sum()>6:
+        return np.nan
+    else:
+        return array_like.max()
+
+
+def limited_min(array_like):
+    if pd.isnull(array_like).sum()>6:
+        return np.nan
+    else:
+        return array_like.min()
+
+
+def daily_average(df_in):
+    df_v6 = df_in.copy()
+    df_v7 = df_v6.resample('D').apply(limited_mean)
+    max_vars = [var for var in df_v6.keys() if 'max' in var]
+    df_v7[max_vars] = df_v6[max_vars].resample('D').apply(limited_max)
+    min_vars = [var for var in df_v6.keys() if 'min' in var]
+    df_v7[min_vars] = df_v6[min_vars].resample('D').apply(limited_min)
+    flag_vars = [var for var in df_v6.keys() if 'adj_flag' in var]
+    df_v7[flag_vars] = df_v6[flag_vars].resample('D').apply(limited_max)
+    
+    df_v7.attrs['averaging'] = 'daily'
