@@ -22,3 +22,5 @@ t0,t1,variable,flag,comment,URL_graphic
 2018-02-15T00:00:00+00:00,2018-05-05T00:00:00+00:00,P,CHECKME,Manually flagged by bav,
 
 2017-08-21T00:00:00+00:00,2018-05-05T00:00:00+00:00,HW2,CHECKME,Manually flagged by bav,
+
+2012-07-11T00:00:00+00:00,2013-05-26T00:00:00+00:00,TA1 TA2 TA3 TA4 RH1 RH2 VW1 VW2 DW1 DW2 ISWR OSWR NR HW1 HW2,NAN,Manually flagged by bav,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/91
