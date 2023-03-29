@@ -20,7 +20,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20140521T16:00:00+00:00,,HS2,add,4,manual shift by bav
 20180301T16:00:00+00:00,,HS2,add,2,manual shift by bav
 
-19900101T00:00:00+00:00,,TA1,swap_with_TA2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/24
+1990-01-01T00:00:00+00:00,1999-01-01T00:00:00+00:00,TA1,swap_with_TA2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
+2000-06-01T00:00:00+00:00,,TA1,swap_with_TA2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/24
 
 # calibration of OSWR with LiCor offset
 2010-04-30T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
