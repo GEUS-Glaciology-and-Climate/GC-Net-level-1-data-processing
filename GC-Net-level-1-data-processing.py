@@ -42,15 +42,15 @@ def Msg(txt):
     f.write(txt + "\n")
 
 path_to_L0 = "L0M/"
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)[25:]
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)
 # print(site_list)
 
 # uncomment for use at specific sites
 # All station names: 'Swiss Camp 10m', 'Swiss Camp', 'Crawford Point 1', 'NASA-U',
-# 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
+# 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'Swiss Camp',:]
+site_list = site_list.loc[site_list.Name.values == 'DYE-2',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -100,12 +100,12 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df_v4 = ptb.adjust_data(df_out, site,
                             # var_list=['HW1','HW2'], 
                             skip_var=["HS1", "HS2"],
-                            plot=True)
+                            plot=False)
 
     # Applying standard filters again
     df_v4 = df_v4.resample("H").asfreq()
     df_v5 = ptb.filter_data(df_v4, site)
-    ptb.plot_flagged_data(df_v5, site)
+    # ptb.plot_flagged_data(df_v5, site)
     df_v5 = ptb.remove_flagged_data(df_v5)
 
     # correction of the net radiometer fro windspeed
