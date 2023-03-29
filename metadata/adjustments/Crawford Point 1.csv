@@ -45,6 +45,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 # ISWR and OSWR swapped
 2012-01-01T00:00:00+00:00,,ISWR,swap_with_OSWR,0,manual adjustment from bav
+,1999-01-01T00:00:00+00:00,TA3,swap_with_TA4,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
+2006-01-01T00:00:00+00:00,2007-04-26T00:00:00+00:00,TA3,swap_with_TA4,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
 
 # calibration of OSWR with LiCor offset
 2010-05-09T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
