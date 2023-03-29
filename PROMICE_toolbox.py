@@ -201,14 +201,14 @@ def flag_data(df, site, var_list=["all"]):
         t1 = flag_data.loc[ind,'t1']
         flag = flag_data.loc[ind,'flag']
 
-        if (var not in df_out.columns) & ('*' not in var) & ('$' not in var):
+        if (var not in df_out.columns) & ('*' not in var) & ('$' not in var) & (' ' not in var):
             Msg("Warning: " + var + " not found")
             continue
 
         if ('*' in var) |('$' in var):
             var_list = df_out.filter(regex=(var)).columns
         else:
-            var_list = [var]
+            var_list = var.split(' ')
         
         for var in var_list:
             if '_qc' in var: continue
@@ -728,7 +728,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
         
         if site in ['SMS1', 'SMS2', 'SMS3', 'SMS4', 'SMS5', 'SMS-PET', 'Summit', 
-                    'NASA-SE','Tunu-N']:
+                    'NASA-SE','Tunu-N', 'EastGRIP']:
             # height processing for the SMS
             thresh = 0.7
             if site == 'Tunu-N':
@@ -800,7 +800,9 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     
     # HS summary:
     if 'HS2' in df.columns:
-        df['HS_combined'] = df[ ["HS1", "HS2"]].mean(axis=1)
+        tmp = df[ ["HS1", "HS2"]].copy()
+        tmp.HS2 = tmp.HS2- (tmp.HS2-tmp.HS1).mean()
+        df['HS_combined'] = tmp[["HS1", "HS2"]].mean(axis=1)
 
     # plotting gap-filling process
     fig,ax = plt.subplots(2,1, figsize=(15,8))
@@ -1674,6 +1676,15 @@ def limited_min(array_like):
 
 def daily_average(df_in):
     df_v6 = df_in.copy()
+    
+    # caluclating directional wind speed
+    for i in ['1','2']:
+        if ('VW'+i  not in df_v6.columns) |('DW'+i not in df_v6.columns):
+            continue
+        df_v6['VW'+i+'_x'] = df_v6['VW'+i] * np.sin(df_v6['DW'+i] * np.pi/180)
+        df_v6['VW'+i+'_y'] = df_v6['VW'+i]  * np.cos(df_v6['DW'+i] * np.pi/180) 
+
+
     df_v7 = df_v6.resample('D').apply(limited_mean)
     max_vars = [var for var in df_v6.keys() if 'max' in var]
     df_v7[max_vars] = df_v6[max_vars].resample('D').apply(limited_max)
@@ -1682,4 +1693,14 @@ def daily_average(df_in):
     flag_vars = [var for var in df_v6.keys() if 'adj_flag' in var]
     df_v7[flag_vars] = df_v6[flag_vars].resample('D').apply(limited_max)
     
+    # calculating daily wind direction from daily mean directional wind speed
+    for i in ['1','2']:
+        if ('VW'+i+'_x' not in df_v6.columns )|('VW'+i+'_x' not in df_v6.columns):
+            continue
+        df_v7['DW'+i] = np.arctan2(df_v6['VW'+i+'_x'], df_v6['VW'+i+'_y'] ) * 180 / np.pi  
+        df_v7['DW'+i] = (df_v7['DW'+i] + 360) % 360  
+        df_v7 = df_v7.drop(columns='VW'+i+'_x')
+        df_v7 = df_v7.drop(columns='VW'+i+'_y')
+    
     df_v7.attrs['averaging'] = 'daily'
+    return df_v7

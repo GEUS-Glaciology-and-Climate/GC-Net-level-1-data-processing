@@ -50,7 +50,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'Swiss Camp 10m',:]
+# site_list = site_list.loc[site_list.Name.values == 'EastGRIP',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -164,32 +164,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         )
 
         # daily average
-        # df_v7 = ptb.daily_average(df_v6)
-        def limited_mean(array_like):
-            if pd.isnull(array_like).sum()>6:
-                return np.nan
-            else:
-                return array_like.mean()
-        def limited_max(array_like):
-            if pd.isnull(array_like).sum()>6:
-                return np.nan
-            else:
-                return array_like.max()
-        def limited_min(array_like):
-            if pd.isnull(array_like).sum()>6:
-                return np.nan
-            else:
-                return array_like.min()
-            
-        df_v7 = df_v6.resample('D').apply(limited_mean)
-        max_vars = [var for var in df_v6.keys() if 'max' in var]
-        df_v7[max_vars] = df_v6[max_vars].resample('D').apply(limited_max)
-        min_vars = [var for var in df_v6.keys() if 'min' in var]
-        df_v7[min_vars] = df_v6[min_vars].resample('D').apply(limited_min)
-        flag_vars = [var for var in df_v6.keys() if 'adj_flag' in var]
-        df_v7[flag_vars] = df_v6[flag_vars].resample('D').apply(limited_max)
-        
-        df_v7.attrs['averaging'] = 'daily'
+        df_v7 = ptb.daily_average(df_v6)
 
         # write ini file
         header_obj = nead.build_header_obj(

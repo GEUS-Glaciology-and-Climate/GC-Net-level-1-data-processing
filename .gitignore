@@ -9,7 +9,7 @@ lazy_push.sh
 __pycache__/
 *.py[cod]
 *$py.class
-
+figures/L1_overview/variable_comparisons
 # C extensions
 *.so
 ._*
