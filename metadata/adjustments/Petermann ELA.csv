@@ -11,9 +11,19 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2016-01-01T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.5,Manually filtered by bav
 2016-01-01T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.5,Manually filtered by bav
 2013-01-01T00:00:00+00:00, ,HW1,min_filter,1,Manually flagged by bav
+
+2007-03-01T00:00:00+00:00,2007-04-10T00:00:00+00:00,HW1,min_filter,2.26,Manually flagged by bav
+2007-03-01T00:00:00+00:00,2007-04-10T00:00:00+00:00,HW2,min_filter,2.26,Manually flagged by bav
 2016-01-01T00:00:00+00:00,2019-01-01T00:00:00+00:00,HW2,max_filter,3.12,Manually flagged by bav
 2016-01-01T00:00:00+00:00,2019-01-01T00:00:00+00:00,HW2,min_filter,2.4,Manually flagged by bav
 2015-07-01T00:00:00+00:00,2016-01-01T00:00:00+00:00,HW2,min_filter,1.4,Manually flagged by bav
+
+2012-08-16T00:00:00+00:00,2014-05-01T00:00:00+00:00,HW2,min_filter,1.55,Manually flagged by bav
+2012-08-16T00:00:00+00:00,2014-05-01T00:00:00+00:00,HW1,min_filter,1.37,Manually flagged by bav
+2012-08-16T00:00:00+00:00,2013-05-26T00:00:00+00:00,HW1,max_filter,1.43,Manually flagged by bav
+2014-01-01T00:00:00+00:00,2015-01-01T00:00:00+00:00,HW1,max_filter,2.17,Manually flagged by bav
+2011-09-01T00:00:00+00:00,2012-05-01T00:00:00+00:00,HW1,max_filter,0.81,Manually flagged by bav
+2014-01-01T00:00:00+00:00,2015-01-01T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.3,Manually flagged by bav
 
 2016-01-01T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2016-01-01T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav

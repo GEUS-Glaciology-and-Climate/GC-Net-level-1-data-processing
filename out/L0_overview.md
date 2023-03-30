@@ -9,7 +9,27 @@
 ![](../figures/L0_diagnostic/1_SwissCamp_3.png)
 ![](../figures/L0_diagnostic/1_SwissCamp_4.png)
 ![](../figures/L0_diagnostic/1_SwissCamp_5.png)
-![](../figures/L0_diagnostic/1_SwissCamp_6.png)
+# 9 JAR1
+![](../figures/L0_diagnostic/9_JAR1_0.png)
+![](../figures/L0_diagnostic/9_JAR1_1.png)
+![](../figures/L0_diagnostic/9_JAR1_2.png)
+![](../figures/L0_diagnostic/9_JAR1_3.png)
+![](../figures/L0_diagnostic/9_JAR1_4.png)
+![](../figures/L0_diagnostic/9_JAR1_5.png)
+# 17 JAR2
+![](../figures/L0_diagnostic/17_JAR2_0.png)
+![](../figures/L0_diagnostic/17_JAR2_1.png)
+![](../figures/L0_diagnostic/17_JAR2_2.png)
+![](../figures/L0_diagnostic/17_JAR2_3.png)
+![](../figures/L0_diagnostic/17_JAR2_4.png)
+![](../figures/L0_diagnostic/17_JAR2_5.png)
+# 19 JAR3
+![](../figures/L0_diagnostic/19_JAR3_0.png)
+![](../figures/L0_diagnostic/19_JAR3_1.png)
+![](../figures/L0_diagnostic/19_JAR3_2.png)
+![](../figures/L0_diagnostic/19_JAR3_3.png)
+![](../figures/L0_diagnostic/19_JAR3_4.png)
+![](../figures/L0_diagnostic/19_JAR3_5.png)
 # 2 Crawford Point 1
 ![](../figures/L0_diagnostic/2_CrawfordPoint1_0.png)
 ![](../figures/L0_diagnostic/2_CrawfordPoint1_1.png)
@@ -17,6 +37,13 @@
 ![](../figures/L0_diagnostic/2_CrawfordPoint1_3.png)
 ![](../figures/L0_diagnostic/2_CrawfordPoint1_4.png)
 ![](../figures/L0_diagnostic/2_CrawfordPoint1_5.png)
+# 13 CP2
+![](../figures/L0_diagnostic/13_CP2_0.png)
+![](../figures/L0_diagnostic/13_CP2_1.png)
+![](../figures/L0_diagnostic/13_CP2_2.png)
+![](../figures/L0_diagnostic/13_CP2_3.png)
+![](../figures/L0_diagnostic/13_CP2_4.png)
+![](../figures/L0_diagnostic/13_CP2_5.png)
 # 3 NASA-U
 ![](../figures/L0_diagnostic/3_NASA-U_0.png)
 ![](../figures/L0_diagnostic/3_NASA-U_1.png)
@@ -36,6 +63,8 @@
 ![](../figures/L0_diagnostic/5_Humboldt_1.png)
 ![](../figures/L0_diagnostic/5_Humboldt_2.png)
 ![](../figures/L0_diagnostic/5_Humboldt_3.png)
+![](../figures/L0_diagnostic/5_Humboldt_4.png)
+![](../figures/L0_diagnostic/5_Humboldt_5.png)
 # 6 Summit
 ![](../figures/L0_diagnostic/6_Summit_0.png)
 ![](../figures/L0_diagnostic/6_Summit_1.png)
@@ -50,20 +79,13 @@
 ![](../figures/L0_diagnostic/7_Tunu-N_3.png)
 ![](../figures/L0_diagnostic/7_Tunu-N_4.png)
 ![](../figures/L0_diagnostic/7_Tunu-N_5.png)
-# 8 DYE2
-![](../figures/L0_diagnostic/8_DYE2_0.png)
-![](../figures/L0_diagnostic/8_DYE2_1.png)
-![](../figures/L0_diagnostic/8_DYE2_2.png)
-![](../figures/L0_diagnostic/8_DYE2_3.png)
-![](../figures/L0_diagnostic/8_DYE2_4.png)
-![](../figures/L0_diagnostic/8_DYE2_5.png)
-# 9 JAR1
-![](../figures/L0_diagnostic/9_JAR1_0.png)
-![](../figures/L0_diagnostic/9_JAR1_1.png)
-![](../figures/L0_diagnostic/9_JAR1_2.png)
-![](../figures/L0_diagnostic/9_JAR1_3.png)
-![](../figures/L0_diagnostic/9_JAR1_4.png)
-![](../figures/L0_diagnostic/9_JAR1_5.png)
+# 8 DYE-2
+![](../figures/L0_diagnostic/8_DYE-2_0.png)
+![](../figures/L0_diagnostic/8_DYE-2_1.png)
+![](../figures/L0_diagnostic/8_DYE-2_2.png)
+![](../figures/L0_diagnostic/8_DYE-2_3.png)
+![](../figures/L0_diagnostic/8_DYE-2_4.png)
+![](../figures/L0_diagnostic/8_DYE-2_5.png)
 # 10 Saddle
 ![](../figures/L0_diagnostic/10_Saddle_0.png)
 ![](../figures/L0_diagnostic/10_Saddle_1.png)
@@ -85,16 +107,6 @@
 ![](../figures/L0_diagnostic/12_NASA-E_3.png)
 ![](../figures/L0_diagnostic/12_NASA-E_4.png)
 ![](../figures/L0_diagnostic/12_NASA-E_5.png)
-# 13 CP2
-![](../figures/L0_diagnostic/13_CP2_0.png)
-![](../figures/L0_diagnostic/13_CP2_1.png)
-![](../figures/L0_diagnostic/13_CP2_2.png)
-![](../figures/L0_diagnostic/13_CP2_3.png)
-# 14 NGRIP
-![](../figures/L0_diagnostic/14_NGRIP_0.png)
-![](../figures/L0_diagnostic/14_NGRIP_1.png)
-![](../figures/L0_diagnostic/14_NGRIP_2.png)
-![](../figures/L0_diagnostic/14_NGRIP_3.png)
 # 15 NASA-SE
 ![](../figures/L0_diagnostic/15_NASA-SE_0.png)
 ![](../figures/L0_diagnostic/15_NASA-SE_1.png)
@@ -102,41 +114,13 @@
 ![](../figures/L0_diagnostic/15_NASA-SE_3.png)
 ![](../figures/L0_diagnostic/15_NASA-SE_4.png)
 ![](../figures/L0_diagnostic/15_NASA-SE_5.png)
-# 16 KAR
-![](../figures/L0_diagnostic/16_KAR_0.png)
-![](../figures/L0_diagnostic/16_KAR_1.png)
-![](../figures/L0_diagnostic/16_KAR_2.png)
-![](../figures/L0_diagnostic/16_KAR_3.png)
-# 17 JAR2
-![](../figures/L0_diagnostic/17_JAR2_0.png)
-![](../figures/L0_diagnostic/17_JAR2_1.png)
-![](../figures/L0_diagnostic/17_JAR2_2.png)
-![](../figures/L0_diagnostic/17_JAR2_3.png)
-# 18 KULU
-![](../figures/L0_diagnostic/18_KULU_0.png)
-![](../figures/L0_diagnostic/18_KULU_1.png)
-![](../figures/L0_diagnostic/18_KULU_2.png)
-![](../figures/L0_diagnostic/18_KULU_3.png)
-# 19 JAR3
-![](../figures/L0_diagnostic/19_JAR3_0.png)
-![](../figures/L0_diagnostic/19_JAR3_1.png)
-![](../figures/L0_diagnostic/19_JAR3_2.png)
-![](../figures/L0_diagnostic/19_JAR3_3.png)
-# 20 Aurora
-![](../figures/L0_diagnostic/20_Aurora_0.png)
-![](../figures/L0_diagnostic/20_Aurora_1.png)
-![](../figures/L0_diagnostic/20_Aurora_2.png)
-![](../figures/L0_diagnostic/20_Aurora_3.png)
-# 21 Petermann Glacier
-![](../figures/L0_diagnostic/21_PetermannGlacier_0.png)
-![](../figures/L0_diagnostic/21_PetermannGlacier_1.png)
-![](../figures/L0_diagnostic/21_PetermannGlacier_2.png)
-![](../figures/L0_diagnostic/21_PetermannGlacier_3.png)
-# 22 Petermann ELA
-![](../figures/L0_diagnostic/22_PetermannELA_0.png)
-![](../figures/L0_diagnostic/22_PetermannELA_1.png)
-![](../figures/L0_diagnostic/22_PetermannELA_2.png)
-![](../figures/L0_diagnostic/22_PetermannELA_3.png)
+# 14 NGRIP
+![](../figures/L0_diagnostic/14_NGRIP_0.png)
+![](../figures/L0_diagnostic/14_NGRIP_1.png)
+![](../figures/L0_diagnostic/14_NGRIP_2.png)
+![](../figures/L0_diagnostic/14_NGRIP_3.png)
+![](../figures/L0_diagnostic/14_NGRIP_4.png)
+![](../figures/L0_diagnostic/14_NGRIP_5.png)
 # 23 NEEM
 ![](../figures/L0_diagnostic/23_NEEM_0.png)
 ![](../figures/L0_diagnostic/23_NEEM_1.png)
@@ -144,23 +128,46 @@
 ![](../figures/L0_diagnostic/23_NEEM_3.png)
 ![](../figures/L0_diagnostic/23_NEEM_4.png)
 ![](../figures/L0_diagnostic/23_NEEM_5.png)
-# 24 E-GRIP
-![](../figures/L0_diagnostic/24_E-GRIP_0.png)
-![](../figures/L0_diagnostic/24_E-GRIP_1.png)
-![](../figures/L0_diagnostic/24_E-GRIP_2.png)
-![](../figures/L0_diagnostic/24_E-GRIP_3.png)
-# 30 LAR1
-![](../figures/L0_diagnostic/30_LAR1_0.png)
-![](../figures/L0_diagnostic/30_LAR1_1.png)
-![](../figures/L0_diagnostic/30_LAR1_2.png)
-![](../figures/L0_diagnostic/30_LAR1_3.png)
-# 31 LAR2
-![](../figures/L0_diagnostic/31_LAR2_0.png)
-![](../figures/L0_diagnostic/31_LAR2_1.png)
-![](../figures/L0_diagnostic/31_LAR2_2.png)
-![](../figures/L0_diagnostic/31_LAR2_3.png)
-# 32 LAR3
-![](../figures/L0_diagnostic/32_LAR3_0.png)
-![](../figures/L0_diagnostic/32_LAR3_1.png)
-![](../figures/L0_diagnostic/32_LAR3_2.png)
-![](../figures/L0_diagnostic/32_LAR3_3.png)
+# 24 EastGRIP
+![](../figures/L0_diagnostic/24_EastGRIP_0.png)
+![](../figures/L0_diagnostic/24_EastGRIP_1.png)
+![](../figures/L0_diagnostic/24_EastGRIP_2.png)
+# 16 KAR
+![](../figures/L0_diagnostic/16_KAR_0.png)
+![](../figures/L0_diagnostic/16_KAR_1.png)
+![](../figures/L0_diagnostic/16_KAR_2.png)
+![](../figures/L0_diagnostic/16_KAR_3.png)
+![](../figures/L0_diagnostic/16_KAR_4.png)
+![](../figures/L0_diagnostic/16_KAR_5.png)
+# 18 KULU
+![](../figures/L0_diagnostic/18_KULU_0.png)
+![](../figures/L0_diagnostic/18_KULU_1.png)
+![](../figures/L0_diagnostic/18_KULU_2.png)
+![](../figures/L0_diagnostic/18_KULU_3.png)
+![](../figures/L0_diagnostic/18_KULU_4.png)
+![](../figures/L0_diagnostic/18_KULU_5.png)
+# 20 Aurora
+![](../figures/L0_diagnostic/20_Aurora_0.png)
+![](../figures/L0_diagnostic/20_Aurora_1.png)
+![](../figures/L0_diagnostic/20_Aurora_2.png)
+![](../figures/L0_diagnostic/20_Aurora_3.png)
+![](../figures/L0_diagnostic/20_Aurora_4.png)
+![](../figures/L0_diagnostic/20_Aurora_5.png)
+# 21 Petermann Glacier
+![](../figures/L0_diagnostic/21_PetermannGlacier_0.png)
+![](../figures/L0_diagnostic/21_PetermannGlacier_1.png)
+![](../figures/L0_diagnostic/21_PetermannGlacier_2.png)
+![](../figures/L0_diagnostic/21_PetermannGlacier_3.png)
+![](../figures/L0_diagnostic/21_PetermannGlacier_4.png)
+![](../figures/L0_diagnostic/21_PetermannGlacier_5.png)
+# 22 Petermann ELA
+![](../figures/L0_diagnostic/22_PetermannELA_0.png)
+![](../figures/L0_diagnostic/22_PetermannELA_1.png)
+![](../figures/L0_diagnostic/22_PetermannELA_2.png)
+![](../figures/L0_diagnostic/22_PetermannELA_3.png)
+![](../figures/L0_diagnostic/22_PetermannELA_4.png)
+![](../figures/L0_diagnostic/22_PetermannELA_5.png)
+# 33 SMS-PET
+![](../figures/L0_diagnostic/33_SMS-PET_0.png)
+![](../figures/L0_diagnostic/33_SMS-PET_1.png)
+# 25 SMS1

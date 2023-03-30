@@ -26,9 +26,15 @@ os.chdir('..')
 # %% L0 overview
 path_to_L0N = "L0M/"
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)
+f = open("out/L0_overview.md", "w")
+def Msg(txt):
+    f = open("out/L0_overview.md", "a")
+    print(txt)
+    f.write(txt + "\n")
+    
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
-    print("# " + str(ID) + " " + site)
+    Msg("# " + str(ID) + " " + site)
 
     filename = path_to_L0N + str(ID).zfill(2) + "-" + site + ".csv"
     if not path.exists(filename):
@@ -71,10 +77,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
         ax[count].set_ylabel(var)
         ax[count].grid()
-        # if site != 'E-GRIP':
-        #     ax[count].axes.xaxis.set_major_formatter(years_fmt)
-        #     ax[count].axes.xaxis.set_major_locator(years)
-        # ax[count].axes.xaxis.set_minor_locator(months)
+
         ax[count].set_xlim((df.index[0], df.index[-1]))
         count = count + 1
 
@@ -84,7 +87,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
                 "figures/L0_diagnostic/" + str(ID) + "_" + site + "_" + str(count_fig),
                 bbox_inches="tight",
             )
-            print(
+            Msg(
                 "![](../figures/L0_diagnostic/"
                 + str(ID)
                 + "_"
@@ -96,13 +99,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
             count_fig = count_fig + 1
             fig, ax = new_fig()
             count = 0
-    if count < 6:
+    if (count < 6) & (count>0):
         count = count - 1
         ax[count].xaxis.set_tick_params(which="both", labelbottom=True)
-        # if site != "E-GRIP":
-        #     ax[count].axes.xaxis.set_major_formatter(years_fmt)
-        #     ax[count].axes.xaxis.set_major_locator(years)
-            # ax[count].axes.xaxis.set_minor_locator(months)
+
         for k in range(count + 1, len(ax)):
             ax[k].set_axis_off()
         ax[0].set_title(site)
@@ -110,7 +110,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             "figures/L0_diagnostic/" + str(ID) + "_" + site + "_" + str(count_fig),
             bbox_inches="tight",
         )
-        print(
+        Msg(
             "![](../figures/L0_diagnostic/"
             + str(ID)
             + "_"
@@ -119,7 +119,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             + str(count_fig)
             + ".png)"
         )
-%run tools/tocgen.py out/L0_overview.md out/L0_overview_toc.md
+# %run tools/tocgen.py out/L0_overview.md out/L0_overview_toc.md
 
 # %% L1 overview
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
@@ -262,13 +262,13 @@ for site, ID in zip(site_list.Name, site_list.ID):
 # %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
 # %% data availability
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[:-3]
-fig, ax = plt.subplots(1,1, figsize=(9,8))
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
+fig, ax = plt.subplots(1,1, figsize=(9,12))
 plt.subplots_adjust(
         left=0.27, right=0.97, top=0.98, bottom=0.1, wspace=0.2, hspace=0.05
     )
 count = 0
-col = ['tab:red','tab:green','tab:blue','tab:orange']
+col = ['tab:orange', 'tab:red','tab:blue', 'tab:pink',]
 xtick_loc = np.array([1.5])
 for site, ID in zip(site_list.Name, site_list.ID):
     site = site.replace(" ", "")
@@ -283,35 +283,42 @@ for site, ID in zip(site_list.Name, site_list.ID):
         df['rad'] = df[['ISWR','OSWR']].mean(axis=1)
     else: 
         df['rad'] = np.nan
-    df['t'] = df[['TA1','TA2','TA3','TA4']].mean(axis=1)
-    df['rh'] = df[['RH1','RH2']].mean(axis=1)
-    df['ws'] = df[['VW1','VW2']].mean(axis=1)
+    df['t'] = df[['TA'+str(i) for i in range(1,5) if 'TA'+str(i) in df.columns]].mean(axis=1)
+    df['rh'] = df[['RH'+str(i) for i in range(1,3) if 'RH'+str(i) in df.columns]].mean(axis=1)
+    df['ws'] = df[['VW'+str(i) for i in range(1,3) if 'VW'+str(i) in df.columns]].mean(axis=1)
     print(site, np.round(df['t'].notnull().sum()/df['t'].shape[0]*100, 1),
           np.round(df['rh'].notnull().sum()/df['t'].shape[0]*100, 1),
           np.round(df['ws'].notnull().sum()/df['t'].shape[0]*100, 1),
           np.round(df['rad'].notnull().sum()/df['t'].shape[0]*100, 1))
     for i, var in enumerate(['rad','t','rh','ws']):
         # print(site, var,df[var].first_valid_index(), df[var].last_valid_index())
-        tmp = df[var].notnull() *(-count + (i-1.5)/3)
+        tmp = df[var].notnull() *(-count + (i-2)/8)
         tmp[tmp==0] = np.nan
-        plt.plot(tmp.index, tmp.values, color = col[i], marker='s',markersize=2.5)
+        plt.plot(tmp.index, tmp.values, color = col[i], marker='s',markersize=2)
         count = count+1
 plt.yticks(np.arange(len(site_list.Name))*(-4) - 1.5,
            site_list.Name)
-
+plt.xticks([pd.to_datetime(str(y)) for y in range(1990,2025,5)],
+           [(str(y)) for y in range(1990,2025,5)])
 plt.plot(np.nan,np.nan, color = col[0], label='radiation', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[1], label='temperature', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[2], label='humidity', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[3], label='wind', linewidth = 4.5)
 plt.legend(loc='lower left')
-
-plt.ylim(-count-1, 1)
+plt.grid(axis='x')
+plt.minorticks_on()
+plt.grid(which='minor', color='lightgray', linestyle=':')
+plt.ylim(-count+1/4, 1)
 plt.xlim(pd.to_datetime('1990'),pd.to_datetime('2023'))
-plt.grid()
+plt.xlabel('Year')
+plt.tick_params(labelbottom=True, which="both", labeltop=True, bottom=True, top=True)
+for y in np.arange(len(site_list.Name))*(-4) - 3.65:
+  ax.axhline(y=y, color='gray', alpha=0.5)
 fig.savefig(
     "figures/L1_overview/data_availability.png",
     bbox_inches="tight",
 )
+
 # %% L1 temperature overview
 plt.close("all")
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[22:23]
@@ -456,10 +463,11 @@ for site, ID in zip(site_list.Name, site_list.ID):
     )
 
 # %% Compare two variables
-var1 = 'RH1'
-var2 = 'RH2'
-plt.close("all")
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[3:4]
+var1 = 'VW1'
+var2 = 'VW2'
+# plt.close("all")
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
+site_list = site_list.loc[site_list.Name.values == 'NASA-E',:]
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
     site = site.replace(" ", "")
@@ -482,10 +490,16 @@ for site, ID in zip(site_list.Name, site_list.ID):
     ax1 = fig.add_axes([0.1, 0.15, 0.5, 0.8])
     df[var1].plot(ax=ax1, label=var1)
     df[var2].plot(ax=ax1, label=var2)
-    (df[var1] - df[var2]).resample('W').mean().plot(ax=ax1, label=var1+"-"+var2)
-    ax1.set_ylabel("Relative Humidity (%)")
+    if 'TA' in var1:
+        fact=100
+    else:
+        fact=100
+    ((df[var1] - df[var2])*fact).resample('W').mean().plot(ax=ax1, label="(%s-%s)x%i"%(var1,var2,fact))
+    ax1.set_ylabel(var1.replace('1','').replace('2',''))
     ax1.grid()
     ax1.legend()
+    # if var1=='RH1':
+    #     ax1.set_ylim(-10,120)
 
     ax2 = fig.add_axes([0.65, 0.15, 0.32, 0.8])
     ax2.plot(df[var1], df[var2], marker=".", linestyle="None")
@@ -502,7 +516,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
     # break
     fig.savefig(
-        "figures/L1_overview/" + str(ID) + "_" + site + "_"+var1+'_'+var2, bbox_inches="tight"
+        "figures/L1_overview/variable_comparisons/" + str(ID) + "_" + site + "_"+var1+'_'+var2, bbox_inches="tight"
     )
     # print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature.png)')
 
@@ -567,7 +581,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 # %% radiation overview
 plt.close("all")
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
-# site_list = site_list.loc[site_list.Name.values == 'Crawford Point 1',:]
+site_list = site_list.loc[site_list.Name.values == 'NASA-U',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
 
@@ -610,6 +624,9 @@ for site, ID in zip(site_list.Name, site_list.ID):
         if var in ["ISWR", "OSWR"]:
             df["isr_toa"].plot(ax=ax[count], color="r", alpha=0.5)
         df[var].plot(ax=ax[count])
+        if var =='albedo':
+            df[var].resample('D').mean().plot(ax=ax[count])
+
         ax[count].set_ylabel(var)
         ax[count].grid()
         ax[count].set_xlim((df.index[0], df.index[-1]))
@@ -636,16 +653,16 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 fig, ax = plt.subplots(4, 5, figsize=(17, 10))
 ax = ax.flatten()
 plt.subplots_adjust(
-    left=0.05, right=0.99, top=0.94, bottom=0.12, wspace=0.15, hspace=0.5
+    left=0.05, right=0.99, top=0.94, bottom=0.08, wspace=0.15, hspace=0.5
 )
 count = 0
+ABC = 'ABCDEFGHIJKLMNOPQRST'
 for site, ID in zip(site_list.Name, site_list.ID):
-    if site in ['Swiss Camp 10m', 'Aurora', 'KULU', 'JAR3', 'LAR1', 'LAR2', 'LAR3', 'KAR']:
-        continue
-    print("# " + str(ID) + " " + site)
+    # if site in ['Swiss Camp 10m', 'Aurora', 'KULU', 'JAR3', 'LAR1', 'LAR2', 'LAR3', 'KAR']:
+    #     continue
     site = site.replace(" ", "")
 
-    filename = "L1/" + str(ID).zfill(2) + "-" + site + ".csv"
+    filename = "L1/" + str(ID).zfill(2) + "-" + site + "_daily.csv"
     if not path.exists(filename):
         print("Warning: No file " + filename)
         continue
@@ -653,27 +670,104 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df = ds.to_dataframe()
     df = df.reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp)
+    if df.loc[df.HS1.last_valid_index(),'HS1']<0:
+        continue
+    print("# " + str(ID) + " " + site)
+
     df = (
         df.set_index("timestamp")
         .replace(-999, np.nan)
-        .interpolate(limit=24 * 7)
-        .resample("D")
-        .mean()
+        .interpolate(limit=7)
     )
     # plotting height
-    df.HS1.plot(ax=ax[count])
-    df.HS2.plot(ax=ax[count])
-    ax[count].set_title(str(ID) + " " + site)
+    df.HS1.plot(ax=ax[count], label='Surface height 1')
+    df.HS2.plot(ax=ax[count], label='Surface height 2')
+    ax[count].set_title(ABC[count] + ". " + site)
+    ax[count].set_xlabel("")
+    if count == 12:
+        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2025,3)],
+                             [(str(y)) for y in range(2000,2025,3)])
+        from matplotlib.ticker import AutoMinorLocator
+        minor_locator = AutoMinorLocator(3)
+        ax[count].xaxis.set_minor_locator(minor_locator)
+    if count == 13:
+        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2025,5)],
+                             [(str(y)) for y in range(2000,2025,5)])
+        from matplotlib.ticker import AutoMinorLocator
+        minor_locator = AutoMinorLocator(5)
+        ax[count].xaxis.set_minor_locator(minor_locator)
+    if count == 14:
+        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2022,2)])
+        from matplotlib.ticker import AutoMinorLocator
+        minor_locator = AutoMinorLocator(2)
+        ax[count].xaxis.set_minor_locator(minor_locator)
+
+    ax[count].grid()
+    ax[count].set_xlim(df.HS1.first_valid_index(), df.HS1.last_valid_index())
+    count = count + 1
+ax[0].legend(loc='upper center', bbox_to_anchor=(2.7,1.5), ncol=2, fontsize =12)
+fig.text(0.5, 0.02, "Year", ha="center", va="center", fontsize=14)
+fig.text(0.02, 0.5,
+    "Surface height relative to installation (m)",
+    fontsize=14,
+    ha="center",
+    va="center",
+    rotation="vertical",
+)
+fig.savefig("figures/L1_overview/HS_overview_accum.png", bbox_inches="tight")
+
+#%%
+plt.close('all')
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
+
+fig, ax = plt.subplots(3, 4, figsize=(17, 10))
+ax = ax.flatten()
+plt.subplots_adjust(
+    left=0.05, right=0.99, top=0.92, bottom=0.08, wspace=0.15, hspace=0.5
+)
+count = 0
+ABC = 'ABCDEFGHIJKLMNOPQRST'
+for site, ID in zip(site_list.Name, site_list.ID):
+    if site in [ 'KULU', 'KAR', 'SMS5']:
+        continue
+    site = site.replace(" ", "")
+
+    filename = "L1/" + str(ID).zfill(2) + "-" + site + "_daily.csv"
+    if not path.exists(filename):
+        print("Warning: No file " + filename)
+        continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df = df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    if df.loc[df.HS1.last_valid_index(),'HS1']>0:
+        continue
+    print("# " + str(ID) + " " + site)
+
+    df = (
+        df.set_index("timestamp")
+        .replace(-999, np.nan)
+        .interpolate(limit=7)
+    )
+    # plotting height
+    df.HS1.plot(ax=ax[count], label='Surface height 1')
+    if 'HS2' in df.columns:
+        df.HS2.plot(ax=ax[count], label='Surface height 2')
+    ax[count].set_title(ABC[count] + ". " + site)
     ax[count].set_xlabel("")
     ax[count].grid()
-    if ID == 0:
-        ax[count].set_xlim('2010','2020')
+    ax[count].set_xlim(df.HS1.first_valid_index(), df.HS1.last_valid_index())
     count = count + 1
-for k in range(count, len(ax)):
-    ax[k].set_axis_off()
-for k in [13,17,18,19]:
-    ax[k].tick_params('x', labelrotation=45)
-fig.savefig("figures/L1_overview/HS_overview.png", bbox_inches="tight")
+ax[0].legend(loc='upper center', bbox_to_anchor=(2.2,1.4), ncol=2, fontsize =12)
+fig.text(0.5, 0.02, "Year", ha="center", va="center", fontsize=14)
+fig.text(0.02, 0.5,
+    "Surface height relative to installation (m)",
+    fontsize=14,
+    ha="center",
+    va="center",
+    rotation="vertical",
+)
+fig.savefig("figures/L1_overview/HS_overview_abl.png", bbox_inches="tight")
 
 
 #%% Data availability

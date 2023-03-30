@@ -4,6 +4,8 @@ t0,t1,variable,flag,comment,URL_graphic
 2011-01-01T00:00:00+00:00, ,DW1, NAN, Manually flagged by bav,
 2012-07-15T00:00:00+00:00, 2012-07-17T00:00:00+00:00,HW2, NAN, Manually flagged by bav,
 2012-08-16T00:00:00+00:00, ,HW2, NAN, Manually flagged by bav,
+2002-05-07T00:00:00+00:00, 2002-05-07T08:00:00+00:00,HW1, NAN, Manually flagged by bav,
+2002-05-07T00:00:00+00:00, 2002-05-07T08:00:00+00:00,HW2, NAN, Manually flagged by bav,
 
 2004-05-01T00:00:00+00:00,2004-05-27T11:00:00+00:00 ,HW1, NAN, Manually flagged by bav,
 2004-05-01T00:00:00+00:00,2004-05-27T11:00:00+00:00 ,HW2, NAN, Manually flagged by bav,

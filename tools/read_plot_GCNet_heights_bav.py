@@ -16,6 +16,7 @@ import pandas as pd
 from datetime import datetime
 import os
 from os import path
+os.chdir('..')
 
 name_alias = {
     "CP1": "Crawford Point 1",
@@ -47,7 +48,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'Summit',:]
+site_list = site_list.loc[site_list.Name.values == 'Tunu-N',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
@@ -163,48 +164,15 @@ for site, ID in zip(site_list.Name, site_list.ID):
             label="HW2 after maintenance",
         )
 
-        # obs_df["T1 before (cm)"].plot(
-        #     ax=ax,
-        #     marker=">",
-        #     linestyle="None",
-        #     markerfacecolor="none",
-        #     markersize=sym_size * mult,
-        #     c="C2",
-        #     label="HT1 obs before",
-        # )
-        # obs_df["T2 before (cm)"].plot(
-        #     ax=ax,
-        #     marker=">",
-        #     linestyle="None",
-        #     markerfacecolor="none",
-        #     markersize=sym_size * mult,
-        #     c="C3",
-        #     label="HT2 obs before",
-        # )
-        # obs_df["T1 after (cm)"].plot(
-        #     ax=ax,
-        #     marker="<",
-        #     linestyle="None",
-        #     markerfacecolor="none",
-        #     markersize=sym_size * mult,
-        #     c="C2",
-        #     label="HT1 obs afer",
-        # )
-        # obs_df["T2 after (cm)"].plot(
-        #     ax=ax,
-        #     marker="<",
-        #     linestyle="None",
-        #     markerfacecolor="none",
-        #     markersize=sym_size * mult,
-        #     c="C3",
-        #     label="HT2 obs after",
-        # )
+    scale = 0.45/0.277
+    if site == 'Tunu-N':
+        scale = 1.1
     plt.plot(np.nan,np.nan,'w',label='from photos:')
     if df_photo[["Wz1", "Wz2"]].notnull().sum().sum() > 0:
-        (df_photo.Wz1*0.45/0.277).plot(
+        (df_photo.Wz1*scale).plot(
             ax=ax, marker="o", markerfacecolor="C0",
             markeredgecolor='lightgray',  linestyle="None", label='HW1')
-        (df_photo.Wz2*0.45/0.277).plot(
+        (df_photo.Wz2*scale).plot(
             ax=ax, marker="o", markerfacecolor="C1",
             markeredgecolor='lightgray', linestyle="None", label='HW2')
     # if df_photo[["THz1", "THz2"]].notnull().sum().sum() > 0:

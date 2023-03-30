@@ -83,3 +83,8 @@ LAR1,HS2,0, 15
 SMS5, HW1, 3.4, 4
 EastGRIP, HW1, 0.2,
 EastGRIP, HW2, 1.54, 4
+Petermann ELA,HW1, 0.2, 3.1
+Petermann ELA,HW2, 0.2, 3.1
+Swiss Camp,HW1, 0.1, 
+Swiss Camp,HW2, 0.35, 
+

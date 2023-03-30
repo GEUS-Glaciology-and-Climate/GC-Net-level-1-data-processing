@@ -11,8 +11,8 @@ tip list:
 """
 import os, sys
 import PROMICE_toolbox as ptb
-# import matplotlib
-# matplotlib.use('Agg')
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 import os.path
@@ -50,7 +50,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-# site_list = site_list.loc[site_list.Name.values == 'EastGRIP',:]
+site_list = site_list.loc[site_list.Name.values == 'Swiss Camp 10m',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -81,8 +81,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
         df["TA4"] = np.nan
 
     if "HW1" not in df.columns:
+        df.loc[df.HS1>900,"HS1"] = np.nan
         df["HW1"] = 2 + df["HS1"].max() - df["HS1"]
     if ("HW2" not in df.columns) & ('HS2' in df.columns):
+        df.loc[df.HS2>900,"HS2"] = np.nan
         df["HW2"] = 3.4 + df["HS2"].max() - df["HS2"]
     df = df.resample("H").mean()
 
@@ -100,12 +102,12 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df_v4 = ptb.adjust_data(df_out, site,
                             # var_list=['HW1','HW2'], 
                             skip_var=["HS1", "HS2"],
-                            plot=False)
+                            plot=True)
 
     # Applying standard filters again
     df_v4 = df_v4.resample("H").asfreq()
     df_v5 = ptb.filter_data(df_v4, site)
-    # ptb.plot_flagged_data(df_v5, site)
+    ptb.plot_flagged_data(df_v5, site)
     df_v5 = ptb.remove_flagged_data(df_v5)
 
     # correction of the net radiometer fro windspeed

@@ -728,11 +728,14 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
         
         if site in ['SMS1', 'SMS2', 'SMS3', 'SMS4', 'SMS5', 'SMS-PET', 'Summit', 
-                    'NASA-SE','Tunu-N', 'EastGRIP']:
+                    'NASA-SE','Tunu-N', 'EastGRIP', 'LAR1', 'JAR2', 'JAR1',
+                    'Petermann ELA']:
             # height processing for the SMS
             thresh = 0.7
             if site == 'Tunu-N':
                 thresh=0.2
+            if site == 'JAR1':
+                thresh=0.8
             # plt.close('all')
             fig, ax = plt.subplots(1,1)
             df[var].bfill().plot(ax=ax,marker='.', linestyle='None', label=var+' backfilled')
@@ -753,18 +756,26 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                     # average daily accumulation
                     if site == 'Tunu-N':
                         avg_accum = 0.000784
+                    elif site == 'JAR1':
+                        avg_accum = -.0043
                     else:
                         tmp = df[var].resample('D').mean().diff()
                         avg_accum = -tmp.mean()
                     last_good_index = df.loc[:t, var].last_valid_index()
                     next_good_index = df.loc[t:, var].first_valid_index()
                     diff.loc[t] = df.loc[next_good_index, var] - df.loc[last_good_index, var] + avg_accum * (next_good_index-last_good_index).total_seconds()/3600/24
+                    if (site =='JAR1'):
+                        if (t.year == 2018):
+                            diff.loc[t] = 0
+                        if ((t.year==2012) & (t.month==7)):
+                            diff.loc[t] = 0
                 else:
                     diff.loc[t] = df.loc[one_week_after_gap, var].median() - df.loc[one_week_before_gap, var].median()
-                if t == diff.loc[diff.abs()>thresh].index.values[0]:
-                    ax.axvline(t, linestyle='--', label='shift applied')
-                else:
-                    ax.axvline(t, linestyle='--', label='_nolegend_')
+                if  (diff.loc[t]!=0):
+                    if t == diff.loc[diff.abs()>thresh].index.values[0]:
+                        ax.axvline(t, linestyle='--', label='shift applied')
+                    else:
+                        ax.axvline(t, linestyle='--', label='_nolegend_')
             df[var_HS] = df[var_HS] + diff.cumsum()
             df[var_HS].plot(label=var_HS)
             plt.legend()
@@ -773,7 +784,6 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             y = df[var_HS].values
             print(np.polyfit(x[~np.isnan(x+y)],
                              y[~np.isnan(x+y)], 1)[-2])
-            df[var_HS]
         else:
             # we then adjust and filter all surface height (could be replaced by an automated adjustment)
             df = adjust_data(df, site, var_HS)
@@ -800,6 +810,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     
     # HS summary:
     if 'HS2' in df.columns:
+        df[['HS1','HS2']].plot()
         tmp = df[ ["HS1", "HS2"]].copy()
         tmp.HS2 = tmp.HS2- (tmp.HS2-tmp.HS1).mean()
         df['HS_combined'] = tmp[["HS1", "HS2"]].mean(axis=1)

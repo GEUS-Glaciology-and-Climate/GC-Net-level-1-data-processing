@@ -1,30 +1,4 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-2000-05-27T00:00:00+00:00,,HS1,add,-2.8, continuity of surface height (bav)
-2000-05-27T00:00:00+00:00,,HS2,add,-2.8, continuity of surface height (bav)
-2001-05-26T00:00:00+00:00,,HS1,add,-3.2, continuity of surface height (bav)
-2001-05-26T00:00:00+00:00,,HS2,add,-3.2, continuity of surface height (bav)
-2001-08-26T00:00:00+00:00,,HS2,add,-1.3, continuity of surface height (bav)
-2002-05-06T00:00:00+00:00,,HS1,add,-3, continuity of surface height (bav)
-2002-05-06T00:00:00+00:00,,HS2,add,-3, continuity of surface height (bav)
-
-2003-05-01T00:00:00+00:00,,HS1,add,-3.5, continuity of surface height (bav)
-2003-05-01T00:00:00+00:00,,HS2,add,-3, continuity of surface height (bav)
-
-2005-05-01T00:00:00+00:00,,HS1,add,-5, continuity of surface height (bav)
-2005-05-01T00:00:00+00:00,,HS2,add,-2, continuity of surface height (bav)
-
-2004-05-01T00:00:00+00:00,,HS1,add,-1, continuity of surface height (bav)
-2004-05-01T00:00:00+00:00,,HS1,add,-1, continuity of surface height (bav)
-2006-05-01T00:00:00+00:00,,HS1,add,-2, continuity of surface height (bav)
-
-2007-05-21T00:00:00+00:00,,HS1,add,-3.5, continuity of surface height (bav)
-2007-05-21T00:00:00+00:00,,HS2,add,-2, continuity of surface height (bav)
-
-2009-04-19T00:00:00+00:00,,HS1,add,-1.8, continuity of surface height (bav)
-2009-04-19T00:00:00+00:00,,HS2,add,-2.8, continuity of surface height (bav)
-2011-04-19T00:00:00+00:00,,HS1,add,-6, continuity of surface height (bav)
-2011-04-19T00:00:00+00:00,,HS2,add,-4, continuity of surface height (bav)
-
 1999-04-19T00:00:00+00:00,2000-01-01T00:00:00+00:00,HW1,min_filter,0.5, continuity of surface height (bav)
 1999-04-19T00:00:00+00:00,2000-01-01T00:00:00+00:00,HW2,min_filter,0.5, continuity of surface height (bav)
 2008-01-01T00:00:00+00:00, ,HW1,min_filter,1.05, unlikely values (bav)
