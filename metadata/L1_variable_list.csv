@@ -72,3 +72,5 @@ RH2_cor,%/100,relative_humidity_2_cor,rh2_cor,real
 Q1,g/kg,specific_humidity_1,q1,real
 Q2,g/kg,specific_humidity_2,q2,real
 Alb,-,surface_albedo,alb,real
+Lat,degN,latitude,lat,real
+Lon,degE,longitude,lon,real

@@ -16,7 +16,7 @@ import pandas as pd
 from datetime import datetime
 import os
 from os import path
-os.chdir('..')
+# os.chdir('..')
 
 name_alias = {
     "CP1": "Crawford Point 1",
@@ -48,7 +48,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'Tunu-N',:]
+site_list = site_list.loc[site_list.Name.values == 'Humboldt',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
@@ -115,7 +115,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         columns=["site", "year", "month", "day"]
     )
 
-    fig = plt.figure(figsize=(16, 10))
+    fig = plt.figure(figsize=(20, 8))
     ax = plt.subplot(1,2,1) 
 
     sym_size = 10
@@ -133,7 +133,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             linestyle="None",
             markerfacecolor="C0",
             markersize=sym_size,
-            markeredgecolor='lightgray',
+            markeredgecolor='k',
             label="HW1 before maintenance",
         )
         obs_df["W2 before (cm)"].plot(
@@ -142,7 +142,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             linestyle="None",
             markerfacecolor="C1",
             markersize=sym_size,
-            markeredgecolor='lightgray',
+            markeredgecolor='k',
             label="HW2 before maintenance",
         )
         obs_df["W1 after (cm)"].plot(
@@ -151,7 +151,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             linestyle="None",
             markerfacecolor="C0",
             markersize=sym_size,
-            markeredgecolor='lightgray',
+            markeredgecolor='k',
             label="HW1 after maintenance",
         )
         obs_df["W2 after (cm)"].plot(
@@ -160,21 +160,33 @@ for site, ID in zip(site_list.Name, site_list.ID):
             linestyle="None",
             markerfacecolor="C1",
             markersize=sym_size,
-            markeredgecolor='lightgray',
+            markeredgecolor='k',
             label="HW2 after maintenance",
         )
 
     scale = 0.45/0.277
     if site == 'Tunu-N':
         scale = 1.1
+    if site == 'NASA-U':
+        scale = 1.3
+    if site == 'Humboldt':
+        scale = 1.3
     plt.plot(np.nan,np.nan,'w',label='from photos:')
     if df_photo[["Wz1", "Wz2"]].notnull().sum().sum() > 0:
+        if site == 'Summit':
+            df_photo.loc[df_photo.Wz1*scale>5.2, 'Wz1'] = np.nan
+            df_photo.loc[df_photo.Wz2*scale>5.2, 'Wz2'] = np.nan
+            df_photo.loc['1999', 'Wz1'] = np.nan
+            df_photo.loc['1999', 'Wz2'] = np.nan
+            ind =  (df_photo.index.year == 2005) & (df_photo.Wz2<0.6)
+            df_photo.loc[ind, 'Wz2'] = np.nan
+
         (df_photo.Wz1*scale).plot(
             ax=ax, marker="o", markerfacecolor="C0",
-            markeredgecolor='lightgray',  linestyle="None", label='HW1')
+            markeredgecolor='k',  linestyle="None", label='HW1')
         (df_photo.Wz2*scale).plot(
             ax=ax, marker="o", markerfacecolor="C1",
-            markeredgecolor='lightgray', linestyle="None", label='HW2')
+            markeredgecolor='k', linestyle="None", label='HW2')
     # if df_photo[["THz1", "THz2"]].notnull().sum().sum() > 0:
     #     (df_photo[["Wz1", "Wz2", "THz1", "THz2"]]*0.45/0.277).plot(
     #         ax=ax, marker="o", linestyle="None"
@@ -185,9 +197,11 @@ for site, ID in zip(site_list.Name, site_list.ID):
         )
 
     plt.ylabel("Instrument heights (m)")
+    plt.ylim(0, df[["HW1","HW2"]].max().max()*1.2)
     plt.xlabel("Year")
     plt.title(site)
     plt.legend()
+    plt.grid()
     ax.legend(loc="center left", bbox_to_anchor=(1, 0.5))
 
     plt.savefig(

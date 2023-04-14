@@ -123,14 +123,18 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %% L1 overview
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
-
+f = open("out/L1_overview.md", "w")
+def Msg(txt):
+    f = open("out/L1_overview.md", "a")
+    print(txt)
+    f.write(txt + "\n")
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
-    print("# " + str(ID) + " " + site)
+    Msg("# " + str(ID) + " " + site)
     site = site.replace(" ", "")
     filename = "L1/" + str(ID).zfill(2) + "-" + site + ".csv"
     if not path.exists(filename):
-        print("Warning: No file for station " + str(ID) + " " + site)
+        Msg("Warning: No file for station " + str(ID) + " " + site)
         continue
     df = nead.read(filename).to_dataframe().reset_index(drop=True)
     df.timestamp = pd.to_datetime(df.timestamp)
@@ -140,10 +144,6 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df_d.timestamp = pd.to_datetime(df_d.timestamp)
     df_d = df_d.set_index("timestamp").replace(-999, np.nan)
     
-    # df =df.loc['2019':,:]
-    if df.shape[0] == 0:
-        print("no data since 2019")
-        continue
     # % plotting variables
     def new_fig():
         fig, ax = plt.subplots(6, 1, sharex=True, figsize=(15, 15))
@@ -185,9 +185,11 @@ for site, ID in zip(site_list.Name, site_list.ID):
             continue
         elif var == 'TS1':
             var = [v for v in df.columns if v.startswith('TS')]
-            var.remove('TS_10m')
             var.reverse()
-        elif var.startswith('TS') & (var!='TS_10m'):
+            if var[0] == 'TS_10m':
+                var = var[1:]
+                var.append('TS_10m')
+        elif var.startswith('TS'):
             continue
         elif var == 'HS1':
             var = [v for v in ['HS1','HS2','HS_combined'] if v in df.columns]
@@ -223,7 +225,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
                 + str(count_fig),
                 bbox_inches="tight",
             )
-            print(
+            Msg(
                 "![](../figures/L1_overview/all_variables/"
                 + str(ID)
                 + "_"
@@ -249,7 +251,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             + str(count_fig),
             bbox_inches="tight",
         )
-        print(
+        Msg(
             "![](../figures/L1_overview/all_variables/"
             + str(ID)
             + "_"
@@ -259,7 +261,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             + ".png)"
         )
 
-# %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
+%run tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
 # %% data availability
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
@@ -300,7 +302,7 @@ plt.yticks(np.arange(len(site_list.Name))*(-4) - 1.5,
            site_list.Name)
 plt.xticks([pd.to_datetime(str(y)) for y in range(1990,2025,5)],
            [(str(y)) for y in range(1990,2025,5)])
-plt.plot(np.nan,np.nan, color = col[0], label='radiation', linewidth = 4.5)
+plt.plot(np.nan,np.nan, color = col[0], label='shortwave irradiance', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[1], label='temperature', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[2], label='humidity', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[3], label='wind', linewidth = 4.5)
@@ -656,7 +658,7 @@ plt.subplots_adjust(
     left=0.05, right=0.99, top=0.94, bottom=0.08, wspace=0.15, hspace=0.5
 )
 count = 0
-ABC = 'ABCDEFGHIJKLMNOPQRST'
+ABC = 'ABCDEFGHIJKLMNOPQRST'.lower()
 for site, ID in zip(site_list.Name, site_list.ID):
     # if site in ['Swiss Camp 10m', 'Aurora', 'KULU', 'JAR3', 'LAR1', 'LAR2', 'LAR3', 'KAR']:
     #     continue
@@ -682,7 +684,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # plotting height
     df.HS1.plot(ax=ax[count], label='Surface height 1')
     df.HS2.plot(ax=ax[count], label='Surface height 2')
-    ax[count].set_title(ABC[count] + ". " + site)
+    ax[count].set_title("("+ABC[count] + ") " + site)
     ax[count].set_xlabel("")
     if count == 12:
         ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2025,3)],
@@ -716,7 +718,6 @@ fig.text(0.02, 0.5,
 )
 fig.savefig("figures/L1_overview/HS_overview_accum.png", bbox_inches="tight")
 
-#%%
 plt.close('all')
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
 
@@ -726,7 +727,6 @@ plt.subplots_adjust(
     left=0.05, right=0.99, top=0.92, bottom=0.08, wspace=0.15, hspace=0.5
 )
 count = 0
-ABC = 'ABCDEFGHIJKLMNOPQRST'
 for site, ID in zip(site_list.Name, site_list.ID):
     if site in [ 'KULU', 'KAR', 'SMS5']:
         continue
@@ -753,7 +753,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df.HS1.plot(ax=ax[count], label='Surface height 1')
     if 'HS2' in df.columns:
         df.HS2.plot(ax=ax[count], label='Surface height 2')
-    ax[count].set_title(ABC[count] + ". " + site)
+    ax[count].set_title("("+ABC[count] + ") " + site)
     ax[count].set_xlabel("")
     ax[count].grid()
     ax[count].set_xlim(df.HS1.first_valid_index(), df.HS1.last_valid_index())

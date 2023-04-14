@@ -49,8 +49,8 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # All station names: 'Swiss Camp 10m', 'Swiss Camp', 'Crawford Point 1', 'NASA-U',
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
-# 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'Swiss Camp 10m',:]
+# 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
+# site_list = site_list.loc[site_list.Name.values == 'Swiss Camp 10m',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -158,9 +158,17 @@ for site, ID in zip(site_list.Name, site_list.ID):
             database_fields_data_types=database_fields_data_types,
         )
 
-        # saving to file
+
+        # formatting and saving to file
+        df_v6_formatted = df_v6.copy()
+        col = [c for c in df_v6_formatted.columns if c not in ['Lat','Lon','timestamp']]
+        df_v6_formatted[col] = df_v6_formatted[col].applymap(lambda x: \
+                                         '' if np.isnan(x) \
+                                             else '0' if abs(x)<0.005 \
+                                             else '1' if abs(x-1)<0.005 \
+                                             else '%0.2f'%x)
         nead.write(
-            df_v6.reset_index(),
+            df_v6_formatted.reset_index(),
             header_obj,
             "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + ".csv",
         )
@@ -177,8 +185,14 @@ for site, ID in zip(site_list.Name, site_list.ID):
             database_fields=database_fields,
             database_fields_data_types=database_fields_data_types,
         )
-
-        # saving to file
+        
+        # formatting and saving to file
+        col = [c for c in df_v7.columns if c not in ['Lat','Lon','timestamp']]
+        df_v7[col] = df_v7[col].applymap(lambda x: \
+                                         '' if np.isnan(x) \
+                                             else '0' if abs(x)<0.005 \
+                                             else '1' if abs(x-1)<0.005 \
+                                             else '%0.2f'%x)
         nead.write(
             df_v7.reset_index(),
             header_obj,

@@ -2,16 +2,17 @@ t0,t1,variable,adjust_function,adjust_value,comment
 19960507T00:00:00+00:00,,HS1,add,0.8,Not reported. Manual shift suggested by bav.
 19970501T11:00:00+00:00,,HS1,add,1,Not reported. Manual shift suggested by bav.
 19990501T00:00:00+00:00,,HS1,add,3.5,Not reported. Manual shift suggested by bav.
-20100503T00:00:00+00:00,,HS1,add,12.25,Not reported. Manual shift suggested by bav.
-20100503T00:00:00+00:00,20100510T00:00:00+00:00,HS1,add,-2.5,Not reported. Manual shift suggested by bav.
-20140515T00:00:00+00:00,,HS1,add,2.25,Not reported. Manual shift suggested by bav.
-20160523T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
+20100503T00:00:00+00:00,,HS1,add,9,Not reported. Manual shift suggested by bav.
+20140515T00:00:00+00:00,,HS1,add,1.25,Not reported. Manual shift suggested by bav.
+20160515T00:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
+
 
 19970501T00:00:00+00:00,,HS2,add,1,Not reported. Manual shift suggested by bav.
 19990501T00:00:00+00:00,,HS2,add,3.5,Not reported. Manual shift suggested by bav.
-20100503T00:00:00+00:00,,HS2,add,9,Not reported. Manual shift suggested by bav.
-20140515T00:00:00+00:00,,HS2,add,1.25,Not reported. Manual shift suggested by bav.
-20160515T00:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
+20100503T00:00:00+00:00,,HS2,add,12.25,Not reported. Manual shift suggested by bav.
+20100503T00:00:00+00:00,20100510T00:00:00+00:00,HS2,add,-2.5,Not reported. Manual shift suggested by bav.
+20140515T00:00:00+00:00,,HS2,add,2.25,Not reported. Manual shift suggested by bav.
+20160523T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
 
 20050101T00:00:00+00:00,20080101T00:00:00+00:00,TA3,add,-2.8, Manual adj suggested by bav.
 20010101T00:00:00+00:00,20080101T00:00:00+00:00,TA4,add,-2.8, Manual adj suggested by bav.
@@ -23,6 +24,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
 
 # filters on HW1 and HW2
+2009-05-15T00:00:00+00:00,,HW1,swap_with_HW2,0.5,Manually filtered by bav
+
 2009-05-15T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.5,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.5,Manually filtered by bav
 

@@ -876,6 +876,20 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
         df['Q2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
         df.loc[df['Q2']>40, 'Q2'] = np.nan
+        
+    # adding latitude and longitude fields
+    try:
+        df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv')
+        df_pos.date = pd.to_datetime(df_pos.date, utc=True)
+        df_pos = df_pos.set_index('date')
+        df['Lat'] = df_pos.loc[df.index,'lat']
+        df['Lon'] = df_pos.loc[df.index,'lon']
+    except:
+        df_pos = pd.read_csv( 'metadata/GC-Net_location.csv', skipinitialspace=True)
+        df_pos['Name'] = df_pos.Name.str.replace(' ','')
+        df['Lat'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Northing'].values[0]
+        df['Lon'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Easting'].values[0]
+        
     return df
 
 from scipy.interpolate import interp1d
@@ -1275,13 +1289,13 @@ def correctHumidity(rh, T, T_0=273.15, T_100=373.15, ews=1013.246, ei0=6.1071):
     return rh_cor  
 
 
-def calcAlbedo(usr, dsr_cor, ZenithAngle_deg):
+def calcAlbedo(usr, dsr, ZenithAngle_deg):
     '''Calculate surface albedo based on upwelling and downwelling shorwave 
     flux, the angle between the sun and sensor, and the sun zenith'''
-    albedo = usr / dsr_cor    
+    albedo = usr / dsr    
     
     # NaN bad data
-    OKalbedos = (ZenithAngle_deg < 70) & (albedo < 1) & (albedo > 0)    
+    OKalbedos = (ZenithAngle_deg < 70) & (albedo < 1) & (albedo > 0) & (usr >100) & (dsr>100)
     albedo[~OKalbedos] = np.nan             
     
     # Interpolate all. Note "use_coordinate=False" is used here to force 
