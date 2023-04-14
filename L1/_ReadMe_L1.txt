@@ -8,7 +8,7 @@ Last update: 23-02-2023
 
 # Citation
 
-Steffen, K.; Vandecrux, B.; Houtz, D.; Abdalati, W.; Bayou, N.; Box, J.; Colgan, L.; Espona Pernas, L.; Griessinger, N.; Haas-Artho, D.; Heilig, A.; Hubert, A.; Iosifescu Enescu, I.; Johnson-Amin, N.; Karlsson, N. B.; Kurup, R.; McGrath, D.; Naderpour, R.; Pederson, A. Ø.; Perren, B.; Philipps, T.; Plattner, G.K.; Proksch, M.; Revheim, M. K.; Særrelse, M.; Schneebli, M.; Sampson, K.; Starkweather, S.; Steffen, S.; Stroeve, J.; Watler, B.; Winton, Ø. A.; Zwally, J.; Ahlstrøm, A., 2023, "GC-Net Level 1 automated weather station data", https://doi.org/10.22008/FK2/VVXGUT, GEUS Dataverse, V2
+Steffen, K.; Vandecrux, B.; Houtz, D.; Abdalati, W.; Bayou, N.; Box, J.; Colgan, L.; Espona Pernas, L.; Griessinger, N.; Haas-Artho, D.; Heilig, A.; Hubert, A.; Iosifescu Enescu, I.; Johnson-Amin, N.; Karlsson, N. B.; Kurup Buchholz, R.; McGrath, D.; Cullen, N.J.; Naderpour, R.; Molotch, N.P.; Pederson, A. Ø.; Perren, B.; Philipps, T.; Plattner, G.K.; Proksch, M.; Revheim, M. K.; Særrelse, M.; Schneebli, M.; Sampson, K.; Starkweather, S.; Steffen, S.; Stroeve, J.; Watler, B.; Winton, Ø. A.; Zwally, J.; Ahlstrøm, A., 2023, "GC-Net Level 1 automated weather station data", https://doi.org/10.22008/FK2/VVXGUT, GEUS Dataverse, V3
 
 as processed by:
 
@@ -46,6 +46,7 @@ Additionally, the L1 dataset contains the following derived variables:
 	- Interpolated firn or ice temperature at 10 m below the surface
 	- Calculated solar an azimuth angles
 	- Sensible and latent heat fluxes calculated after Steffen and Demaria (1996)
+	- Inter- or extrapolated latitude and longitude based on multi-year GPS measurements (only possible at Swiss Camp, Crawford Point 1, NASA-U, GITS, Tunu-N, DYE-2, JAR1, NASA-E, NASA-SE and Petermann-ELA)
 
 Important links:
 
@@ -53,7 +54,15 @@ Important links:
 
 - The level 0 data (from which the L1 data was built from) is available at: https://www.doi.org/10.16904/envidat.1.
 
-- The stations have moved significantly over the years due to ice motion. A compilation of handheld GPS coordinates for each site and for multiple years is available here: https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/blob/4680ecefce71dbc38d89a264e7b2cc156ff51ad1/metadata/GC-Net%20historical%20position.csv
+- The compilation of handheld GPS coordinates for each site and for multiple years is available here:  Vandecrux, B. and Box, J.E.: GC-Net AWS observed and estimated positions (Version v1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7729070, 2023c.
+
+- The compilation of field pictures is available at: Box, J.E., Vandecrux, B., Houtz, D., Steffen, K.: GC-Net historical photo archive, https://geusgitlab.geus.dk/glaciology-and-climate/promice/historical_GC-Net_photos, 2023b
+
+- The compilaiton of useful metadata (reports, field notes...) is available at: Vandecrux, B., Houtz, D., Box, J.E.: GC-Net historical metadata compilation [Data set]. Zenodo, https://doi.org/10.5281/zenodo.7728549, 2023b.
+
+Acknowledgments
+In addition to the support from several past NASA and NSF grants awarded to K. Steffen (grant nr. NAPW-2158, NAG51-1612, NAG5-10600, NAG5-10857, NNG06GB08G, OPP-9423530), financial support of the 2020 transition came from the DANCEA (Danish Cooperation for Environment in the Arctic) under the Danish Ministry of Energy, Buildings and Climate. The Danish Finance Law currently supports the GC-Net field and data activities. We acknowledge the key contributions from all the people that have participated in the GC-Net project, assisted Konrad Steffen through the years and contributed to the longevity of GC-Net. In particular, we acknowledge (in alphabetical order) the support from Robin Abbott, Waleed Abdalati, Todd Albert, Kate Daniels, Lucia Espona Pernas, Nena Griessinger, Alain Hubert, Russell Huff, Nighat Johnson-Amin, Mike MacFerrin, Molly McCallister, Reza Naderpour, Atsumu Ohmura, Allan Ø. Pedersen, Thomas, Philipps, Gian-Kasper Plattner, Kim Petersen, Martin Proksch, Christian Schneeberger, Christopher Shields, Martina Særrelse, Julienne Stroeve, Benjamin Walter, Øyvind A. Winton and many others.
+
 
 References:
 
