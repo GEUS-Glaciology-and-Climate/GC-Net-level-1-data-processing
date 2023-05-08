@@ -22,6 +22,10 @@ t0,t1,variable,flag,comment,URL_graphic
 2007-01-01T00:00:00+00:00,2014-05-01T00:00:00+00:00,P,CHECKME,Manually flagged by bav,
 1995-01-01T00:00:00+00:00,1996-05-01T00:00:00+00:00,P,CHECKME,Manually flagged by bav,
 
+2016-11-22T00:00:00+00:00,2016-12-29T00:00:00+00:00,VW2,CHECKME,Manually flagged by bav,
+2016-11-22T00:00:00+00:00,2016-12-07T00:00:00+00:00,VW1,CHECKME,Manually flagged by bav,
+2016-11-22T00:00:00+00:00,2017-01-02T00:00:00+00:00,VW1,CHECKME,Manually flagged by bav,
+
 2012-01-01, 2014-06-01, DW2, NAN,confirmed by bav,
 2014-01-01T00:00:00+00:00,2014-04-26T00:00:00+00:00,ISWR,CHECKME,Manually flagged by bav,
 

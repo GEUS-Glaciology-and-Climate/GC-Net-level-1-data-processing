@@ -10,8 +10,18 @@ t0,t1,variable,flag,comment,URL_graphic
 2013-02-05T00:00:00+00:00,2013-03-17T00:00:00+00:00,HW2,CHECKME,Manually flagged by bav,
 2017-12-26T00:00:00+00:00,2018-04-01T00:00:00+00:00,HW2,CHECKME,Manually flagged by bav,
 2019-01-01T00:00:00+00:00,2019-04-10T00:00:00+00:00,HW2,CHECKME,Manually flagged by bav,
-
+2010-08-06T00:00:00+00:00,2012-06-18T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
 2007-06-01T00:00:00+00:00,,^TS[^_]+$,CHECKME,Manually flagged by bav,
+
+2011-01-01T00:00:00+00:00,2011-05-19T00:00:00+00:00, ISWR OSWR, NAN, ,
+2014-01-01T00:00:00+00:00,2014-05-06T00:00:00+00:00, ISWR OSWR, NAN, ,
+2016-01-01T00:00:00+00:00,2016-04-16T00:00:00+00:00, ISWR OSWR, NAN, ,
+
+2011-06-08T00:00:00+00:00,2011-07-04T00:00:00+00:00, VW2, NAN, lower than VW1 only during that period, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/123
+2011-11-05T00:00:00+00:00,2011-11-13T00:00:00+00:00, VW1 VW2, NAN,both sensor showing decreasing wind speed due to frost, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/123
+2011-11-21T00:00:00+00:00,2012-02-10T00:00:00+00:00, VW1 VW2, NAN,both sensor showing decreasing wind speed due to frost, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/123
+2017-01-01T00:00:00+00:00,2017-04-01T00:00:00+00:00, VW1 VW2, NAN,both sensor frozen, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/123
+2018-01-01T00:00:00+00:00,2018-04-01T00:00:00+00:00, VW2, NAN, frozen, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/123
 
 2022-01-01T00:00:00+00:00, ,RH2,NAN, buried (bav),
 2020-11-01T00:00:00+00:00,, TA1, NAN, buried (bav),
@@ -20,3 +30,4 @@ t0,t1,variable,flag,comment,URL_graphic
 2020-11-01T00:00:00+00:00,, VW2, NAN, buried (bav),
 2020-11-01T00:00:00+00:00,, DW2, NAN, buried (bav),
 2015-01-01T00:00:00+00:00, 2018-05-01T00:00:00+00:00, TA4, NAN, bav,
+

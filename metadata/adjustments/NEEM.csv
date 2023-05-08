@@ -1,25 +1,29 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 20080813T00:00:00+00:00,,HS1,add,1.8,Not reported. Manual shift suggested by bav.
-20090530T00:00:00+00:00,,HS1,add,0.5,Not reported. Manual shift suggested by bav.
+20090530T00:00:00+00:00,,HS1,add,-0.5,Not reported. Manual shift suggested by bav.
 20110706T00:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
-20160523T00:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
+20160523T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
 
+20090530T00:00:00+00:00,,HS2,add,-0.5,Not reported. Manual shift suggested by bav.
+20110706T00:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
+20160523T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 20080813T00:00:00+00:00,,HS2,add,1.8,Not reported. Manual shift suggested by bav.
-20090530T00:00:00+00:00,,HS2,add,-1.5,Not reported. Manual shift suggested by bav.
-20110706T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
-20160523T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
 
 # calibration of OSWR with LiCor offset
 2009-05-30T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
+
+2009-05-30T23:00:00+00:00,,HW1,swap_with_HW2, ,
 
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
 2009-05-15T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,
 
 # filters on HW1 and HW2
-2009-05-15T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.5,Manually filtered by bav
-2009-05-15T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.5,Manually filtered by bav
+2009-05-15T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.3,Manually filtered by bav
+2009-05-15T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.3,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW1,min_filter,0.1,Manually filtered by bav
+2013-01-01T00:00:00+00:00,2015-07-01T00:00:00+00:00,HW1,min_filter,0.5,Manually filtered by bav
+2011-01-01T00:00:00+00:00,2011-07-01T00:00:00+00:00,HW1,max_filter,0.6,Manually filtered by bav
 
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav

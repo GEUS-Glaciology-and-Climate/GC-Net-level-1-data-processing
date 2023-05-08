@@ -1,24 +1,27 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-19980421T16:00:00+00:00,,HS1,add,0.4,manual shift by bav
-19990420T16:00:00+00:00,,HS1,add,1.9,manual shift by bav
+19980417T14:00:00+00:00,,HS1,add,0.4,manual shift by bav
+19990416T16:00:00+00:00,,HS1,add,2.1,manual shift by bav
 20010605T16:00:00+00:00,,HS1,add,2.6,manual shift by bav
 20020607T16:00:00+00:00,,HS1,add,0.5,manual shift by bav
-20040611T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
-20050530T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
-20070522T16:00:00+00:00,,HS1,add,-2.5,manual shift by bav
+20040612T13:00:00+00:00,,HS1,add,2.5,manual shift by bav
 20080428T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
 20100107T16:00:00+00:00,,HS1,add,4,manual shift by bav
-20140521T16:00:00+00:00,,HS1,add,1.5,manual shift by bav
+20140521T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
 20180424T16:00:00+00:00,,HS1,add,1.5,manual shift by bav
 
-19990416T11:00:00+00:00,,HS2,add,2.5,manual shift by bav
-20010523T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
-20020101T16:00:00+00:00,,HS2,add,-1,manual shift by bav
-20040614T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
-20050327T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
+19990416T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
+20010605T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
+2001-12-25T01:00:00+00:00,,HS2,add,-1,manual shift by bav
+20040612T08:00:00+00:00,,HS2,add,5,manual shift by bav
+#2004-06-12T08:00:00+00:00,2004-10-14T13:00:00+00:00,HS2,add,2.5,manual shift by bav
 20100107T16:00:00+00:00,,HS2,add,4,manual shift by bav
-20140521T16:00:00+00:00,,HS2,add,4,manual shift by bav
+20140524T16:00:00+00:00,,HS2,add,4,manual shift by bav
 20180301T16:00:00+00:00,,HS2,add,2,manual shift by bav
+
+2004-06-12T08:00:00+00:00,2004-10-14T13:00:00+00:00,HW2,add,2.5,manual shift by bav
+2005-01-30T16:00:00+00:00,2005-03-28T15:00:00+00:00,HW2,add,2.5,manual shift by bav
+
+2005-05-26T17:00:00+00:00,2007-05-27T17:00:00+00:00,HW1,add,-2.5,manual shift by bav
 
 1990-01-01T00:00:00+00:00,1999-01-01T00:00:00+00:00,TA1,swap_with_TA2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
 2000-06-01T00:00:00+00:00,,TA1,swap_with_TA2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/24
@@ -29,6 +32,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
 2009-05-15T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,
+2019-05-15T00:00:00+00:00,,HW2,min_filter,0.5,
 
 # filters on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.5,Manually filtered by bav

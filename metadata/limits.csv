@@ -23,6 +23,9 @@ DYE2, P, 720, 1000
 DYE2, HS1, -1, 1000
 DYE2, HS2, -1, 1000
 
+NASA-SE, HW1, 0, 5.35
+NASA-SE, HW2, 0, 5.49
+
 Petermann ELA,P, 850, 960
 NASA-SE, P, 680, 790
 NASA-E, P, 650, 760
@@ -36,6 +39,7 @@ EastGRIP, TA4, -80, 10
 
 Humboldt, P, 734, 820
 JAR1, P, 840, 950
+JAR2, P, 890, 975
 DYE-2, P, 710, 820
 Tunu-N, P, 710, 820
 GITS, P, 710, 840
@@ -87,4 +91,10 @@ Petermann ELA,HW1, 0.2, 3.1
 Petermann ELA,HW2, 0.2, 3.1
 Swiss Camp,HW1, 0.1, 
 Swiss Camp,HW2, 0.35, 
+NASA-E,HW2, 0.2, 
+NASA-E,HW1, 0.2, 
+GITS,HW1, 0.2, 
+NEEM,HW2, 1, 
+Saddle,HW1, 0, 
+Saddle,HW2, 0,6 
 

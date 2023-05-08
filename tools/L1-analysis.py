@@ -299,9 +299,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
         plt.plot(tmp.index, tmp.values, color = col[i], marker='s',markersize=2)
         count = count+1
 plt.yticks(np.arange(len(site_list.Name))*(-4) - 1.5,
-           site_list.Name)
+           site_list.Name, fontsize=18)
 plt.xticks([pd.to_datetime(str(y)) for y in range(1990,2025,5)],
-           [(str(y)) for y in range(1990,2025,5)])
+           [(str(y)) for y in range(1990,2025,5)], 
+           fontsize=18)
 plt.plot(np.nan,np.nan, color = col[0], label='shortwave irradiance', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[1], label='temperature', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[2], label='humidity', linewidth = 4.5)
@@ -319,6 +320,7 @@ for y in np.arange(len(site_list.Name))*(-4) - 3.65:
 fig.savefig(
     "figures/L1_overview/data_availability.png",
     bbox_inches="tight",
+    dpi=300
 )
 
 # %% L1 temperature overview
@@ -583,7 +585,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 # %% radiation overview
 plt.close("all")
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
-site_list = site_list.loc[site_list.Name.values == 'NASA-U',:]
+site_list = site_list.loc[site_list.Name.values == 'JAR2',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
 
@@ -648,23 +650,41 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
 
+# %% Plot some variables
+plt.close('all')
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
+site_list = site_list.loc[site_list.Name == 'JAR2']
+
+for site, ID in zip(site_list.Name, site_list.ID):
+
+    filename = "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + ".csv"
+    filename = "L0M/" + str(ID).zfill(2) + "-" + site + ".csv"
+    if not path.exists(filename):
+        print("Warning: No file " + filename)
+        continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df = df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index('timestamp')
+    print("# " + str(ID) + " " + site)
+    df[['TA1','TA2']].plot()
 #%% Surface height overview
 plt.close('all')
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
 
-fig, ax = plt.subplots(4, 5, figsize=(17, 10))
+fig, ax = plt.subplots(4, 5, figsize=(13, 14))
 ax = ax.flatten()
 plt.subplots_adjust(
-    left=0.05, right=0.99, top=0.94, bottom=0.08, wspace=0.15, hspace=0.5
+    left=0.08, right=0.99, top=0.97, bottom=0.05, wspace=0.33, hspace=0.27
 )
 count = 0
 ABC = 'ABCDEFGHIJKLMNOPQRST'.lower()
 for site, ID in zip(site_list.Name, site_list.ID):
     # if site in ['Swiss Camp 10m', 'Aurora', 'KULU', 'JAR3', 'LAR1', 'LAR2', 'LAR3', 'KAR']:
     #     continue
-    site = site.replace(" ", "")
 
-    filename = "L1/" + str(ID).zfill(2) + "-" + site + "_daily.csv"
+    filename = "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_daily.csv"
     if not path.exists(filename):
         print("Warning: No file " + filename)
         continue
@@ -684,30 +704,51 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # plotting height
     df.HS1.plot(ax=ax[count], label='Surface height 1')
     df.HS2.plot(ax=ax[count], label='Surface height 2')
-    ax[count].set_title("("+ABC[count] + ") " + site)
+    ax[count].set_title("("+ABC[count] + ") " + site, fontsize=14)
     ax[count].set_xlabel("")
-    if count == 12:
-        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2025,3)],
-                             [(str(y)) for y in range(2000,2025,3)])
+    # if count == 12:
+    #     ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2025,3)],
+    #                          [(str(y)) for y in range(2000,2025,3)])
+    #     from matplotlib.ticker import AutoMinorLocator
+    #     minor_locator = AutoMinorLocator(3)
+    #     ax[count].xaxis.set_minor_locator(minor_locator)
+    # if count == 13:
+    #     ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2025,5)],
+    #                          [(str(y)) for y in range(2000,2025,5)])
+    #     from matplotlib.ticker import AutoMinorLocator
+    #     minor_locator = AutoMinorLocator(5)
+    #     ax[count].xaxis.set_minor_locator(minor_locator)
+    ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(1990,2022,10)])
+    from matplotlib.ticker import AutoMinorLocator
+    minor_locator = AutoMinorLocator(10)
+    ax[count].xaxis.set_minor_locator(minor_locator)
+    if count in [16]:
+        ax[count].set_xticks(pd.to_datetime(['2000','2000-07-01','2001','2001-07-01']))
         from matplotlib.ticker import AutoMinorLocator
-        minor_locator = AutoMinorLocator(3)
+        minor_locator = AutoMinorLocator(6)
         ax[count].xaxis.set_minor_locator(minor_locator)
-    if count == 13:
-        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2025,5)],
-                             [(str(y)) for y in range(2000,2025,5)])
+    if count in [1, 12, 13, 14]:
+        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(1990,2022,5)])
         from matplotlib.ticker import AutoMinorLocator
         minor_locator = AutoMinorLocator(5)
         ax[count].xaxis.set_minor_locator(minor_locator)
-    if count == 14:
-        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2022,2)])
+    if count in [17]:
+        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(1990,2022,2)])
         from matplotlib.ticker import AutoMinorLocator
         minor_locator = AutoMinorLocator(2)
+        ax[count].xaxis.set_minor_locator(minor_locator)
+    if count in [15, 18,19,20]:
+        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(2000,2022,1)])
+        from matplotlib.ticker import AutoMinorLocator
+        minor_locator = AutoMinorLocator(12)
         ax[count].xaxis.set_minor_locator(minor_locator)
 
     ax[count].grid()
     ax[count].set_xlim(df.HS1.first_valid_index(), df.HS1.last_valid_index())
+    ax[count].tick_params(axis='both', which='major', labelsize=14)
+    ax[count].xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
     count = count + 1
-ax[0].legend(loc='upper center', bbox_to_anchor=(2.7,1.5), ncol=2, fontsize =12)
+ax[0].legend(loc='upper center', bbox_to_anchor=(2.7,1.4), ncol=2, fontsize =14)
 fig.text(0.5, 0.02, "Year", ha="center", va="center", fontsize=14)
 fig.text(0.02, 0.5,
     "Surface height relative to installation (m)",
@@ -716,23 +757,22 @@ fig.text(0.02, 0.5,
     va="center",
     rotation="vertical",
 )
-fig.savefig("figures/L1_overview/HS_overview_accum.png", bbox_inches="tight")
-
+fig.savefig("figures/L1_overview/HS_overview_accum.png", bbox_inches="tight", dpi=300)
+#%%
 plt.close('all')
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
 
-fig, ax = plt.subplots(3, 4, figsize=(17, 10))
+fig, ax = plt.subplots(4, 3, figsize=(12, 10))
 ax = ax.flatten()
 plt.subplots_adjust(
-    left=0.05, right=0.99, top=0.92, bottom=0.08, wspace=0.15, hspace=0.5
+    left=0.08, right=0.99, top=0.97, bottom=0.06, wspace=0.27, hspace=0.35
 )
 count = 0
 for site, ID in zip(site_list.Name, site_list.ID):
     if site in [ 'KULU', 'KAR', 'SMS5']:
         continue
-    site = site.replace(" ", "")
 
-    filename = "L1/" + str(ID).zfill(2) + "-" + site + "_daily.csv"
+    filename = "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_daily.csv"
     if not path.exists(filename):
         print("Warning: No file " + filename)
         continue
@@ -753,12 +793,24 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df.HS1.plot(ax=ax[count], label='Surface height 1')
     if 'HS2' in df.columns:
         df.HS2.plot(ax=ax[count], label='Surface height 2')
-    ax[count].set_title("("+ABC[count] + ") " + site)
+    ax[count].set_title("("+ABC[count] + ") " + site, fontsize=14)
     ax[count].set_xlabel("")
     ax[count].grid()
+    
+    ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(1990,2022,5)])
+    from matplotlib.ticker import AutoMinorLocator
+    minor_locator = AutoMinorLocator(5)
+    ax[count].xaxis.set_minor_locator(minor_locator)
+    if count in [0, 4,5,7,8,9,10,11]:
+        ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(1990,2022,1)])
+        from matplotlib.ticker import AutoMinorLocator
+        minor_locator = AutoMinorLocator(12)
+        ax[count].xaxis.set_minor_locator(minor_locator)
+    ax[count].tick_params(axis='both', which='major', labelsize=14)
+    ax[count].xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
     ax[count].set_xlim(df.HS1.first_valid_index(), df.HS1.last_valid_index())
     count = count + 1
-ax[0].legend(loc='upper center', bbox_to_anchor=(2.2,1.4), ncol=2, fontsize =12)
+ax[0].legend(loc='upper center', bbox_to_anchor=(1.9,1.5), ncol=2, fontsize =14)
 fig.text(0.5, 0.02, "Year", ha="center", va="center", fontsize=14)
 fig.text(0.02, 0.5,
     "Surface height relative to installation (m)",
@@ -767,7 +819,66 @@ fig.text(0.02, 0.5,
     va="center",
     rotation="vertical",
 )
-fig.savefig("figures/L1_overview/HS_overview_abl.png", bbox_inches="tight")
+fig.savefig("figures/L1_overview/HS_overview_abl.png", bbox_inches="tight", dpi=300)
+
+# %% Ablation JAR transect
+
+plt.close('all')
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
+
+fig, ax = plt.subplots(1, 1, figsize=(17, 10))
+# ax = ax.flatten()
+ax = [ax]
+# plt.subplots_adjust(
+#     left=0.05, right=0.99, top=0.92, bottom=0.08, wspace=0.15, hspace=0.5
+# )
+count = 0
+import matplotlib
+cmap = matplotlib.cm.get_cmap('tab10')
+
+i = 0
+for site, ID in zip(site_list.Name, site_list.ID):
+    if site not in [ 'Swiss Camp', 'JAR1','JAR2','JAR3', 'SMS1','SMS2','SMS3','SMS4']:
+        continue
+    site = site.replace(" ", "")
+
+    filename = "L1/" + str(ID).zfill(2) + "-" + site + "_daily.csv"
+    if not path.exists(filename):
+        print("Warning: No file " + filename)
+        continue
+    ds = nead.read(filename)
+    df = ds.to_dataframe()
+    df = df.reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+
+    print("# " + str(ID) + " " + site)
+    
+    try:
+        df = (
+            df.set_index("timestamp")
+            .replace(-999, np.nan)
+            .interpolate(limit=7)
+        ).loc['2002-02-01':'2002-12-01',:]
+    except:
+        continue
+    if df.size==0:
+        print('no data for ',site)
+        continue
+    # plotting height
+    (df.HS1 - df.loc[df.HS1.first_valid_index(), 'HS1']).plot(ax=ax[count], c=cmap(i/7), label=site)
+    if ('HS2' in df.columns):
+        if df.HS2.first_valid_index() is not None:
+            (df.HS2 - df.loc[df.HS2.first_valid_index(), 'HS2']).plot(ax=ax[count], c=cmap(i/7), label='_nolegend:_')
+    i = i+1
+    ax[count].set_xlabel("Year", fontsize =14)
+    ax[count].set_ylabel("Surface height relative to installation (m)", fontsize =14)
+    ax[count].grid()
+    ax[count].set_xlim(df.HS1.first_valid_index(), df.HS1.last_valid_index())
+plt.yticks(fontsize=14)
+plt.xticks(fontsize=14)
+ax[0].legend(loc='lower left', fontsize =14)
+fig.savefig("figures/L1_overview/HS_JAR_transect.png", bbox_inches="tight")
+
 
 
 #%% Data availability
@@ -836,7 +947,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 
 #%% Data quantity
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)  # .iloc[7:,:]
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0).iloc[:-3,:]
 plt.close("all")
 df_all =pd.DataFrame()
 for site, ID in zip(site_list.Name, site_list.ID):
@@ -855,11 +966,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
         "site",
         "ISWR",
         "OSWR",
-        "NR",
         "TA1",
         "TA2",
-        "TA3",
-        "TA4",
         "RH1",
         "RH2",
         "VW1",
@@ -867,8 +975,6 @@ for site, ID in zip(site_list.Name, site_list.ID):
         "VW2",
         "DW2",
         "P",
-        "HW1",
-        "HW2",
     ]
     for col in cols:
         if col not in df.columns:

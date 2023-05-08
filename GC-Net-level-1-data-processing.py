@@ -48,7 +48,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # uncomment for use at specific sites
 # All station names: 'Swiss Camp 10m', 'Swiss Camp', 'Crawford Point 1', 'NASA-U',
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
-# 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
+# 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
 # site_list = site_list.loc[site_list.Name.values == 'Swiss Camp 10m',:]
 
@@ -94,16 +94,12 @@ for site, ID in zip(site_list.Name, site_list.ID):
                             # var_list=['HW1','HW2'], 
                            )
 
-    # flagging frozen values
-    df_out = ptb.filter_zero_gradient(df_out)
-
     Msg("## Adjusting data at " + site)
     # we start by adjusting and filtering all variables except surface height
     df_v4 = ptb.adjust_data(df_out, site,
                             # var_list=['HW1','HW2'], 
                             skip_var=["HS1", "HS2"],
                             plot=True)
-
     # Applying standard filters again
     df_v4 = df_v4.resample("H").asfreq()
     df_v5 = ptb.filter_data(df_v4, site)

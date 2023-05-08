@@ -10,4 +10,7 @@ t0,t1,variable,flag,comment,URL_graphic
 2004-05-01T00:00:00+00:00,2004-05-27T11:00:00+00:00 ,HW1, NAN, Manually flagged by bav,
 2004-05-01T00:00:00+00:00,2004-05-27T11:00:00+00:00 ,HW2, NAN, Manually flagged by bav,
 
+2010-07-01T00:00:00+00:00,2011-06-10T11:00:00+00:00 ,TA1 TA2 TA3 HW1 HW2 RH1 RH2 VW1 VW2 DW1 DW2 ISWR OSWR NR, NAN, looks like the station fell, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/120
+2008-05-07T00:00:00+00:00,2011-06-10T11:00:00+00:00 ,TA4 TA3, NAN, Manually flagged by bav,
+
 2007-01-01T00:00:00+00:00, ,^TS[^_]+$, NAN, Manually flagged by bav,

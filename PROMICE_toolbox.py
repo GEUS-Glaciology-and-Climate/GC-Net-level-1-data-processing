@@ -20,56 +20,6 @@ import nead
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 
-def name_alias(name_in):
-
-    promice_names = [
-        "AirTemperature1C",
-        "AirTemperature2C",
-        "AirTemperature3C",
-        "AirTemperature4C",
-        "RelativeHumidity1Perc",
-        "RelativeHumidity2Perc",
-        "AirPressurehPa",
-        "ShortwaveRadiationDownWm2",
-        "ShortwaveRadiationUpWm2",
-        "WindSpeed1ms",
-        "WindSpeed2ms",
-        "WindDirection1deg",
-        "WindDirection2deg",
-        "SnowHeight(m)",
-        "SurfaceHeight(m)",
-        "SnowHeight1m",
-        "SnowHeight2m",
-        "NetRadiationWm2",
-    ]
-    gcnet_names = [
-        "TA1",
-        "TA2",
-        "TA3",
-        "TA4",
-        "RH1",
-        "RH2",
-        "P",
-        "ISWR",
-        "OSWR",
-        "VW1",
-        "VW2",
-        "DW1",
-        "DW2",
-        "HS1",
-        "HS2",
-        "HS1",
-        "HS2",
-        "NR",
-    ]
-
-    try:
-        index = promice_names.index(name_in)
-        return gcnet_names[index]
-    except:
-        return None
-
-
 def field_info(fields):
     tmp =pd.read_csv('metadata/L1_variable_list.csv', skipinitialspace=True)
     field_list = tmp.fields.tolist()
@@ -108,48 +58,6 @@ def field_info(fields):
         [database_fields[i] for i in ind],
         [database_fields_data_types[i] for i in ind],
     )
-
-
-def load_promice(path_promice):
-    """
-    Loading PROMICE data for a given path into a DataFrame.
-    + adding time index
-    + calculating albedo
-    + (optional) calculate RH with regard to water
-
-    INTPUTS:
-        path_promice: Path to the desired file containing PROMICE data [string]
-
-    OUTPUTS:
-        df: Dataframe containing PROMICE data for the desired settings [DataFrame]
-    """
-
-    df = pd.read_csv(path_promice, delim_whitespace=True)
-    df["time"] = df.Year * np.nan
-
-    df["time"] = [
-        datetime.datetime(y, m, d, h).replace(tzinfo=pytz.UTC)
-        for y, m, d, h in zip(
-            df["Year"].values,
-            df["MonthOfYear"].values,
-            df["DayOfMonth"].values,
-            df["HourOfDay(UTC)"].values,
-        )
-    ]
-    df.set_index("time", inplace=True, drop=False)
-
-    # set invalid values (-999) to nan
-    df[df == -999.0] = np.nan
-    df["Albedo"] = df["ShortwaveRadiationUp(W/m2)"] / df["ShortwaveRadiationDown(W/m2)"]
-    df.loc[df["Albedo"] > 1, "Albedo"] = np.nan
-    df.loc[df["Albedo"] < 0, "Albedo"] = np.nan
-    df["SnowHeight(m)"] = 2.6 - df["HeightSensorBoom(m)"]
-    df["SurfaceHeight(m)"] = 1 - df["HeightStakes(m)"]
-
-    # df['RelativeHumidity_w'] = RH_ice2water(df['RelativeHumidity(%)'] ,
-    #                                                    df['AirTemperature(C)'])
-
-    return df
 
 
 def Msg(txt):
@@ -730,7 +638,6 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         if site in ['SMS1', 'SMS2', 'SMS3', 'SMS4', 'SMS5', 'SMS-PET', 'Summit', 
                     'NASA-SE','Tunu-N', 'EastGRIP', 'LAR1', 'JAR2', 'JAR1',
                     'Petermann ELA']:
-            # height processing for the SMS
             thresh = 0.7
             if site == 'Tunu-N':
                 thresh=0.2
@@ -1388,20 +1295,8 @@ def filter_zero_gradient(df_out):
     length_frozen = 6
     not_in_dark_season = False
     var_list = [
-        "VW1",
-        "VW2",
-        "DW1",
-        "DW2",
-        "TA1",
-        "TA1",
-        "TA2",
-        "TA3",
-        "TA4",
-        "P",
-        "HW1",
-        "HW2",
-        "ISWR",
-        "OSWR",
+        "VW1", "VW2", "DW1", "DW2", "TA1", "TA1", "TA2",
+        "TA3", "TA4", "P", "HW1", "HW2", "ISWR", "OSWR",
     ]
     for var in var_list:
         if var not in df_out.columns:
@@ -1459,7 +1354,10 @@ def filter_data(df, site, plot=True, remove_data=False):
         promice_data: Dataframe containing PROMICE data for the desired settings [DataFrame]
     """
     df_out = df.copy()
-
+    
+    # flagging frozen values
+    df_out = filter_zero_gradient(df_out)
+    
     # Limits filter:
     df_lim = pd.read_csv("metadata/limits.csv",comment="#",  skipinitialspace=True)
     df_lim.columns = ["site", "var_lim", "var_min", "var_max"]

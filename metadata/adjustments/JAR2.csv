@@ -14,6 +14,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2002-05-07T00:00:00+00:00,,RH1,swap_with_RH2, 0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/110
 2004-05-07T00:00:00+00:00,2005-05-14T00:00:00+00:00,VW1,swap_with_VW2, 0, VW1 always higher during that period.
 
+2011-05-01T00:00:00+00:00,, *, time_shift, -749, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/115
+2008-01-01T00:00:00+00:00,2009-01-01T00:00:00+00:00, *, time_shift, 63, 
+
 # Realtive humidity back to water
 ,,RH1,ice_to_water,0, 
 ,,RH2,ice_to_water,0, 

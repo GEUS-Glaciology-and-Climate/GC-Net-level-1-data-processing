@@ -1,15 +1,18 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-2001-06-09T00:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
-2006-05-09T00:00:00+00:00,,HS1,add,2.4,Not reported. Manual shift suggested by bav.
+2001-06-08T16:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
+2006-05-03T17:00:00+00:00,,HS1,add,2.4,Not reported. Manual shift suggested by bav.
 2009-05-09T00:00:00+00:00,,HS1,add,-1,Not reported. Manual shift suggested by bav.
-2011-06-09T00:00:00+00:00,,HS1,add,1.5,Not reported. Manual shift suggested by bav.
-2015-06-09T00:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
+2009-05-09T00:00:00+00:00,2010-04-29T00:00:00+00:00,HS1,add,-0.5,Not reported. Manual shift suggested by bav.
+2015-05-26T03:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
+2021-07-01T00:00:00+00:00,,HS1,add,0.9,Not reported. Manual shift suggested by bav.
 
-2001-06-09T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
-2006-05-09T00:00:00+00:00,,HS2,add,2.4,Not reported. Manual shift suggested by bav.
-2009-05-09T00:00:00+00:00,,HS2,add,-1,Not reported. Manual shift suggested by bav.
-2011-06-09T00:00:00+00:00,,HS2,add,-1,Not reported. Manual shift suggested by bav.
-2015-06-09T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
+2001-06-08T16:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
+2006-05-03T18:00:00+00:00,,HS2,add,2.4,Not reported. Manual shift suggested by bav.
+2009-05-09T00:00:00+00:00,,HS2,add,-1.6,Not reported. Manual shift suggested by bav.
+2011-06-02T00:00:00+00:00,,HS2,add,.7,Not reported. Manual shift suggested by bav.
+2015-05-26T03:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
+
+2017-12-06T00:00:00+00:00,2018-03-25T00:00:00+00:00,HW2,add,2.5,Not reported. Manual shift suggested by bav.
 
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
@@ -17,17 +20,21 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # calibration of OSWR with LiCor offset
 2011-06-02T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
 
+2011-06-02T00:00:00+00:00,,HW1,swap_with_HW2,,
+
 # air temp correction on HW1 and HW2
-2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
-2009-05-15T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,
+2011-06-02T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
+2011-06-02T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,
 
 # filters on HW1 and HW2
-2009-05-15T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.2,Manually filtered by bav
-2009-05-15T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.2,Manually filtered by bav
+2011-06-02T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.2,Manually filtered by bav
+2011-06-02T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.2,Manually filtered by bav
 2011-05-15T00:00:00+00:00,2019-05-15T00:00:00+00:00,HW1,min_filter,1.5,Manually filtered by bav
+2019-01-15T00:00:00+00:00,2019-09-15T00:00:00+00:00,HW1,max_filter,1.5,Manually filtered by bav
+2014-01-15T00:00:00+00:00,2014-09-15T00:00:00+00:00,HW2,min_filter,1.5,Manually filtered by bav
 
-2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
-2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
+2011-06-02T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
+2011-06-02T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
 1996-01-01T00:00:00+00:00,2011-06-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 1996-01-01T00:00:00+00:00,2011-06-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
