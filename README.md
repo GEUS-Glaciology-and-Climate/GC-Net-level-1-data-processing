@@ -11,9 +11,9 @@ This repository contains scripts used to clean, adjust and interpolate GC-Net da
 
 - [Overview of the L0 data](out/L0_overview_toc.md)
 - [Overview of the L1 data](out/L1_overview_toc.md)
-- [Overview of the L1 data availability](out/L1_data_availability.md)
+- [Overview of the L1 data availability](out/L1_overview/data_availability.png)
 - [Overview of the L1 air temperature](out/L1_air_temperature_overview_toc.md)
-- [Overview of the surface height data](figures/L1_overview/HS_overview.png)
+- Overview of the surface height data for the [accumulation sites](figures/L1_overview/HS_overview_accum.png) and for the [ablation sites](figures/L1_overview/HS_overview_abl.png)
 - [Report of the data treatment](out/report_with_toc.md)
 - [Air temperature diagnostic](out/L1_air_temperature_diagnostic_toc.md)
 - [Instrument height assessment](out/L1_intrument_heights_toc.md)
