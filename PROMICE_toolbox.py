@@ -770,7 +770,9 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     # Humidity with regard to ice and specific humidity
     T1 = df.TA1.copy()
     if 'TA3' in df.columns:
-        T1.loc[df.TA1.isnull()] = df.loc[df.TA1.isnull(), 'TA3']
+        T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA3']
+        T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA2']
+        T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA4']
     df['RH1_cor'] = correctHumidity(df.RH1, T1)
     if 'P' in df.columns:
         df['Q1'] = calcHumid(T1, df.P, df.RH1_cor)  *1000
@@ -778,7 +780,10 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
     if 'RH2' in df.columns:
         T2 = df.TA2.copy()
-        T2.loc[df.TA1.isnull()] = df.loc[df.TA2.isnull(), 'TA4']
+        T2.loc[T2.isnull()] = df.loc[T2.isnull(), 'TA4']
+        T2.loc[T2.isnull()] = df.loc[T2.isnull(), 'TA1']
+        T2.loc[T2.isnull()] = df.loc[T2.isnull(), 'TA3']
+
         df['RH2_cor'] = correctHumidity(df.RH2, T2)
 
         df['Q2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
