@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send repo to GEUS Dataverse 
-        uses: BaptisteVandecrux/dataverse-uploader@main
+        uses: BaptisteVandecrux/dataverse-uploader@master
         with:
           DATAVERSE_TOKEN: ${{secrets.DATAVERSE_TOKEN}}
           DATAVERSE_SERVER: https://dataverse.geus.dk
