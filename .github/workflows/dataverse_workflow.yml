@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send repo to GEUS Dataverse 
-        uses: IQSS/dataverse-uploader@v1.3
+        uses:  BaptisteVandecrux/dataverse-uploader
         with:
           DATAVERSE_TOKEN: ${{secrets.DATAVERSE_TOKEN}}
           DATAVERSE_SERVER: https://dataverse.geus.dk
           DATAVERSE_DATASET_DOI: doi:10.22008/FK2/VVXGUT
-          GITHUB_DIR: L1/.
+          GITHUB_DIR: L1
           DELETE: True
           PUBLISH: False
