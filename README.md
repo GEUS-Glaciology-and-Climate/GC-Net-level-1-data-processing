@@ -1,7 +1,7 @@
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues-raw/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing)](https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing)](https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/releases/)
-
+[![](<https://img.shields.io/badge/Dataverse DOI-10.22008/FK2/VVXGUT-orange>)](https://doi.org/10.22008/FK2/VVXGUT)
 
 # The GC-Net level 1 dataset and processing scripts
 
