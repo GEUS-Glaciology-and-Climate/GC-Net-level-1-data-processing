@@ -32,9 +32,11 @@ When using the L0 data please cite:
 
 When using the L1 data please additionally cite:
 
-Vandecrux, B., Box, J., Houtz, D.,  Revheim, M. K. (2022). The GC-Net level 1 dataset and processing scripts. https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing
+Vandecrux, B., Box, J. E., Ahlstrøm, A. P., Andersen, S. B., Bayou, N., Colgan, W. T., Cullen, N. J., Fausto, R. S., Haas-Artho, D., Heilig, A., Houtz, D. A., How, P., Iosifescu Enescu, I., Karlsson, N. B., Kurup Buchholz, R., Mankoff, K. D., McGrath, D., Molotch, N. P., Perren, B., Revheim, M. K., Rutishauser, A., Sampson, K., Schneebeli, M., Starkweather, S., Steffen, S., Weber, J., Wright, P. J., Zwally, H. J., and Steffen, K.: The historical Greenland Climate Network (GC-Net) curated and augmented Level 1 dataset, Earth Syst. Sci. Data Discuss. [preprint], https://doi.org/10.5194/essd-2023-147, in review, 2023. 
 
 ## Dataset decription
+
+A complete description of the GC-Net history and instrumentation is available at https://doi.org/10.5194/essd-2023-147.
 
 ### Background
 Starting with a single station in 1991, the Greenland Climate Network (commonly known as GC-Net) is a set of Automatic Weather Stations (AWS) set up and managed by the late Prof. Dr. Konrad (Koni) Steffen, and spanning the Greenland Ice Sheet (GrIS). This first station was "Swiss Camp" or the "ETH-CU" camp (GC-Net station #01) which was used as a field science and education site by Koni for years. The GC-Net was expanded with multiple NASA, NOAA, and NSF grants throughout the years, and then supported by WSL in the later years. These data (see "C-file" below) were previously hosted by the Cooperative Institute for Research in Environmental Sciences (CIRES) in Boulder, Colorado. 
