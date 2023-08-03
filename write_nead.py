@@ -86,7 +86,7 @@ def write_nead(data_frame, nead_config, output_path):
             index=False,
             header=False,
             columns=fields_list,
-            line_terminator="\n",
+            lineterminator="\n",
             float_format="%.2f",
         )
 
