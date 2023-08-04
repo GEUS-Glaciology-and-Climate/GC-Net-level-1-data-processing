@@ -3,14 +3,17 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2010-05-29T00:00:00+00:00,,HS2,add,2.62,Not reported. Manual shift suggested by bav.
 
 
-1997-01-01T00:00:00+00:00,,HW1,add,-3,Not reported. Manual shift suggested by bav.
-1997-01-01T00:00:00+00:00,,HW2,add,-3,Not reported. Manual shift suggested by bav.
+1997-01-01T00:00:00+00:00,,HW1,add,-4,Not reported. Manual shift suggested by bav.
+1997-01-01T00:00:00+00:00,,HW2,add,-2.2,Not reported. Manual shift suggested by bav.
 1998-05-30T00:00:00+00:00,,HW1,add,+1,Not reported. Manual shift suggested by bav.
-1998-05-30T00:00:00+00:00,,HW2,add,+1,Not reported. Manual shift suggested by bav.
+1998-05-30T00:00:00+00:00,,HW2,add,0.5,Not reported. Manual shift suggested by bav.
 1999-05-27T00:00:00+00:00,,HW1,add,+1,Not reported. Manual shift suggested by bav.
 1999-05-27T00:00:00+00:00,,HW2,add,+1,Not reported. Manual shift suggested by bav.
 2000-06-02T00:00:00+00:00,,HW1,add,+1.7,Not reported. Manual shift suggested by bav.
 2000-06-02T00:00:00+00:00,,HW2,add,+1.7,Not reported. Manual shift suggested by bav.
+
+1997-11-01T00:00:00+00:00,1998-04-01T00:00:00+00:00, HW1, biweekly_upper_range_filter, 0.2,Not reported. Manual shift suggested by bav.
+1998-01-01T00:00:00+00:00,1998-03-01T00:00:00+00:00, HW2, biweekly_upper_range_filter, 0.1,Not reported. Manual shift suggested by bav.
 
 1998-05-30T00:00:00+00:00,,HS1,add,1,Not reported. Manual shift suggested by bav.
 1998-05-30T00:00:00+00:00,,HS2,add,1,Not reported. Manual shift suggested by bav.

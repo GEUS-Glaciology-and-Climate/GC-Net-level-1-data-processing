@@ -1,4 +1,5 @@
 t0,t1,variable,flag,comment,URL_graphic
+2002-01-06T19:00:00+00:00,2002-01-07T05:00:00+00:00,TA1,CHECKME,Manually flagged by bav,
 2017-12-11T00:00:00+00:00,2019-07-01T00:00:00+00:00,TA3,CHECKME,Manually flagged by bav,
 2011-01-01T00:00:00+00:00,2012-05-25T00:00:00+00:00,TA4,CHECKME,Manually flagged by bav,
 
@@ -7,6 +8,9 @@ t0,t1,variable,flag,comment,URL_graphic
 2017-10-01T00:00:00+00:00,2018-07-01T00:00:00+00:00,RH2,CHECKME,Manually flagged by bav,
 2011-01-01T00:00:00+00:00,2012-07-01T00:00:00+00:00,RH2,CHECKME,Manually flagged by bav,
 
+
+2009-04-01T00:00:00+00:00,2009-04-24T21:00:00+00:00,HW1,NAN,Manually flagged by bav,
+2009-04-01T00:00:00+00:00,2009-04-25T01:00:00+00:00,HW2,NAN,Manually flagged by bav,
 
 2013-09-01T00:00:00+00:00,2014-05-21T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
 2016-11-14T00:00:00+00:00,2018-07-01T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
@@ -17,10 +21,14 @@ t0,t1,variable,flag,comment,URL_graphic
 
 2017-01-01T00:00:00+00:00,2017-04-09T00:00:00+00:00,ISWR,CHECKME,Manually flagged by bav,
 
-
 2022-01-01T00:00:00+00:00,,DW1,CHECKME,Manually flagged by bav,
 2022-01-01T00:00:00+00:00,,DW2,CHECKME,Manually flagged by bav,
 
-2010-01-01T00:00:00+00:00,,^TS[^_]+$,CHECKME,Manually flagged by bav,
+2010-01-01T00:00:00+00:00,,TS1 TS2 TS3,NAN,Manually flagged by bav,
+2013-05-26T00:00:00+00:00,,^TS[^_]+$,NAN,Manually flagged by bav,
+
 1995-01-01T00:00:00+00:00,1999-05-21T00:00:00+00:00,^TS[^_]+$,CHECKME,Manually flagged by bav,
 2006-04-26T00:00:00+00:00,2007-04-28T00:00:00+00:00,^TS[^_]+$,CHECKME,Manually flagged by bav,
+
+2002-01-01T00:00:00+00:00, ,NR, NAN, unrealisitic values (bav),
+

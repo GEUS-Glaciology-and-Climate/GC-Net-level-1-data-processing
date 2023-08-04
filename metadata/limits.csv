@@ -17,8 +17,12 @@ site, variable, min, max
 *, P, 610, 1030
 *, NR, -250, 250
 *, ^TS[^_]+$, -50, 0.1
+*, V, 0, 15.5
 
 NASA-U, HW2, 0.01, 6
+NASA-U, RH1, 36.9, 130
+NASA-U, TA2, -56.6, 7
+
 DYE2, P, 720, 1000
 DYE2, HS1, -1, 1000
 DYE2, HS2, -1, 1000
@@ -38,6 +42,10 @@ EastGRIP, TA3, -80, 10
 EastGRIP, TA4, -80, 10
 
 Humboldt, P, 734, 820
+Humboldt,HW1, 0, 10
+Humboldt,HW2, 0, 10
+
+
 JAR1, P, 840, 950
 JAR2, P, 890, 975
 DYE-2, P, 710, 820
@@ -45,6 +53,9 @@ Tunu-N, P, 710, 820
 GITS, P, 710, 840
 GITS, RH1, 40, 110
 GITS, RH2, 40, 110
+GITS,HW1, 0.3, 
+GITS,HW2, 0.3, 
+
 Saddle, P, 680, 780
 
 Swiss Camp, P, 810, 920
@@ -93,7 +104,7 @@ Swiss Camp,HW1, 0.1,
 Swiss Camp,HW2, 0.35, 
 NASA-E,HW2, 0.2, 
 NASA-E,HW1, 0.2, 
-GITS,HW1, 0.2, 
+
 NEEM,HW2, 1, 
 Saddle,HW1, 0, 
 Saddle,HW2, 0,6 

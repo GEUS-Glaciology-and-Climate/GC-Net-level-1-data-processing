@@ -1,23 +1,25 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 19970101T00:00:00+00:00,,HS1,add,1.7,Not reported. Manual shift suggested by bav.
-19990514T16:00:00+00:00,,HS1,add,2.3,Not reported. Manual shift suggested by bav.
-20030602T17:00:00+00:00,,HS1,add,4.0,Not reported. Manual shift suggested by bav.
-20050525T00:00:00+00:00,,HS1,add,2.8,Not reported. Manual shift suggested by bav.
+19990513T16:00:00+00:00,,HS1,add,2.3,Not reported. Manual shift suggested by bav.
+20030602T15:00:00+00:00,,HS1,add,4.0,Not reported. Manual shift suggested by bav.
+20050525T21:00:00+00:00,,HS1,add,2.8,Not reported. Manual shift suggested by bav.
 20090420T16:00:00+00:00,,HS1,add,1.8,Not reported. Manual shift suggested by bav.
 20110531T22:00:00+00:00,,HS1,add,0.7,Not reported. Manual shift suggested by bav.
 20130525T22:00:00+00:00,,HS1,add,2.3,Not reported. Manual shift suggested by bav.
 20180101T00:00:00+00:00,,HS1,add,2.7,Not reported. Manual shift suggested by bav.
 
 19970101T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
-19990514T16:00:00+00:00,,HS2,add,1.9,Not reported. Manual shift suggested by bav.
-20030602T17:00:00+00:00,,HS2,add,4.0,Not reported. Manual shift suggested by bav.
-20050525T00:00:00+00:00,,HS2,add,2.7,Not reported. Manual shift suggested by bav.
+19990513T16:00:00+00:00,,HS2,add,1.9,Not reported. Manual shift suggested by bav.
+20030602T15:00:00+00:00,,HS2,add,4.0,Not reported. Manual shift suggested by bav.
+20050525T21:00:00+00:00,,HS2,add,2.7,Not reported. Manual shift suggested by bav.
 20090420T16:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
 20110531T22:00:00+00:00,,HS2,add,0.58,Not reported. Manual shift suggested by bav.
 20130604T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 20180101T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 
 2012-05-09T00:00:00+00:00,,RH1,swap_with_RH2, 0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/110
+
+2017-12-15T00:00:00+00:00, 2018-02-16T00:00:00+00:00,TA1, min_filter, -56.6, Manually filtered by bav
 
 # Realtive humidity back to water
 1995-01-01T00:00:00+00:00,2011-05-30T00:00:00+00:00,RH1,ice_to_water,0, 
@@ -32,8 +34,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2021-08-17T00:00:00+00:00,2022-05-17T00:00:00+00:00,P,add,45,to ensure continuity
 
 # air temp correction on HW1 and HW2
-2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
-2009-05-15T00:00:00+00:00,,HW2,air_temp_sonic_correction,0,
+2011-05-31T21:00:00+00:00,,HW1,air_temp_sonic_correction,0,
+2011-05-31T21:00:00+00:00,,HW2,air_temp_sonic_correction,0,
 
 # filters on HW1 and HW2
 2007-02-12T00:00:00+00:00, 2007-04-16T00:00:00+00:00,HW1, min_filter, 3.2,Manually filtered by bav
@@ -41,22 +43,38 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2008-02-01T00:00:00+00:00, 2008-04-30T00:00:00+00:00,HW1, min_filter, 2.46,Manually filtered by bav
 2013-07-01T00:00:00+00:00, 2014-07-01T00:00:00+00:00,HW1, min_filter, 3,Manually filtered by bav
 2011-04-01T00:00:00+00:00, 2023-01-01T00:00:00+00:00,HW1, min_filter, 1.39,Manually filtered by bav
+2016-10-15T00:00:00+00:00, 2016-11-15T00:00:00+00:00,HW1, min_filter, 1.78,Manually filtered by bav
+2016-10-15T00:00:00+00:00, 2016-11-15T00:00:00+00:00,HW1, max_filter, 1.87,Manually filtered by bav
 
 2007-02-12T00:00:00+00:00, 2007-04-16T00:00:00+00:00,HW2, min_filter, 4.3, Manually filtered by bav
 2007-08-01T00:00:00+00:00, 2007-12-16T00:00:00+00:00,HW2, min_filter, 3.72, Manually filtered by bav
 2008-02-01T00:00:00+00:00, 2008-04-30T00:00:00+00:00,HW2, min_filter, 3.44, Manually filtered by bav
-2011-04-01T00:00:00+00:00, 2023-01-01T00:00:00+00:00,HW2, min_filter, 2.23, Manually filtered by bav
-2011-04-01T00:00:00+00:00, 2023-01-01T00:00:00+00:00,HW2, max_filter, 5.6, Manually filtered by bav
+2011-05-31T21:00:00+00:00, 2023-01-01T00:00:00+00:00,HW2, min_filter, 2.23, Manually filtered by bav
+2011-05-31T21:00:00+00:00, 2023-01-01T00:00:00+00:00,HW2, max_filter, 5.6, Manually filtered by bav
 
-2009-05-15T00:00:00+00:00,2016-10-09T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.3,Manually filtered by bav
+2011-05-31T21:00:00+00:00,2016-10-09T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.3,Manually filtered by bav
 2018-05-21T00:00:00+00:00, ,HW1,biweekly_upper_range_filter,0.3,Manually filtered by bav
-2009-05-15T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.3,Manually filtered by bav
+2011-05-31T21:00:00+00:00,,HW2,biweekly_upper_range_filter,0.3,Manually filtered by bav
 
-2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
-2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
+2001-05-31T21:00:00+00:00,,HW1,hampel_filter,3,Manually filtered by bav
+2001-05-31T21:00:00+00:00,,HW2,hampel_filter,3,Manually filtered by bav
 
 2003-01-01T00:00:00+00:00,2018-05-22T00:00:00+00:00,OSWR,multiply,2.76205,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/55
 
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS10, max_filter, -22.6, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS10, min_filter, -24.5, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS9, max_filter, -22.6, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS9, min_filter, -24.5, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS8, max_filter, -22.6, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS8, min_filter, -24.5, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS7, max_filter, -22.6, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS7, min_filter, -24.5, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS6, max_filter, -22.6, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS6, min_filter, -24.5, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS5, max_filter, -22.6, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS5, min_filter, -24.5, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS4, max_filter, -22.6, Manually filtered by bav
+2007-01-01T00:00:00+00:00, 2013-05-28T00:00:00+00:00, TS4, min_filter, -24.5,Manually filtered by bav
 
 # time shift
 2010-03-20, 2010-10-11, *, time_shift, 48, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/63

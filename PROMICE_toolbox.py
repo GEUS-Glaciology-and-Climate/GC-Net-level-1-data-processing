@@ -21,7 +21,7 @@ warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 
 def field_info(fields):
-    tmp =pd.read_csv('metadata/L1_variable_list.csv', skipinitialspace=True)
+    tmp =pd.read_csv('L1/L1_variable_list.csv', skipinitialspace=True)
     field_list = tmp.fields.tolist()
     units = tmp.units.tolist()
     display_description = tmp.display_description.tolist()
@@ -91,8 +91,8 @@ def flag_data(df, site, var_list=["all"]):
                             comment="#", 
                             skipinitialspace=True)
 
-    flag_data.t0 = pd.to_datetime(flag_data.t0, utc=True)
-    flag_data.t1 = pd.to_datetime(flag_data.t1, utc= True)
+    flag_data.t0 = pd.to_datetime(flag_data.t0, format='mixed', utc=True)
+    flag_data.t1 = pd.to_datetime(flag_data.t1, format='mixed', utc= True)
 
     flag_data.loc[flag_data.t0.isnull(), "t0"] = df_out.index[0]
     flag_data.loc[flag_data.t1.isnull(), "t1"] = df_out.index[-1]
@@ -132,7 +132,7 @@ def flag_data(df, site, var_list=["all"]):
     return df_out
 
 
-def plot_flagged_data(df, site, tag=""):
+def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
     """
     Replace data within a specified variable, between specified dates by NaN.
     Reads from file "metadata/flags/<site>.csv".
@@ -147,68 +147,123 @@ def plot_flagged_data(df, site, tag=""):
     OUTPUTS:
         promice_data: Dataframe containing PROMICE data for the desired settings [DataFrame]
     """
+    
+    df = df1.copy()
+    df_out = df2.copy()
+    
+    if not os.path.isfile("metadata/adjustments/" + site + ".csv"):
+        Msg("No data to fix at " + site)
+        return []
 
-    for var in df.columns:
-        if var[-3:] == "_qc":
-            df[var].values[df[var].isnull()] = "OK"
-            flags_uni = np.unique(df[var].values.astype(str))
-            if len(flags_uni) > 1:
-                fig = plt.figure(figsize=(12, 8))
-                for flag in flags_uni:
-                    if flag == "OK":
-                        df.loc[df[var] == flag, var[:-3]].plot(
-                            marker="o", linestyle="none", color="green", label=flag
+    adj_info = pd.read_csv("metadata/adjustments/" + site + ".csv",
+        comment="#", skipinitialspace=True)
+
+    adj_info.t0 = pd.to_datetime(adj_info.t0, format='mixed', utc=True)
+    adj_info.t1 = pd.to_datetime(adj_info.t1, format='mixed', utc= True)
+    adj_info.loc[adj_info.t0.isnull(), "t0"] = df_out.index[0]
+    adj_info.loc[adj_info.t1.isnull(), "t1"] = df_out.index[-1]
+
+    # if "*" is given as variable then we append this adjustement for all variables
+    for ind in adj_info.loc[adj_info.variable == "*", :].index:
+        line_template = adj_info.loc[[ind], :].copy()
+        for var in df_out.columns:
+            line_template.variable = var
+            line_template.index = [adj_info.index.max() + 1]
+            adj_info = pd.concat((adj_info, line_template))
+        adj_info = adj_info.drop(labels=ind, axis=0)
+
+    adj_info.set_index(["variable", "t0"], drop=False, inplace=True)
+
+    if len(var_list) == 0:
+        var_list = df.columns
+    else:
+        adj_info = adj_info.loc[np.isin(adj_info.variable, var_list), :]
+        var_list = np.unique(adj_info.variable)
+
+    for var in var_list:
+        plot = False
+        if (df[var].isnull().all() | ("_qc" in var)
+            | ("_min" in var) | ("_max" in var)
+            | ("_std" in var) | ("_adj_flag" in var)
+            | ("_min" in var) ):
+            print('not plotting',var)
+            continue
+        if var in var_list: plot=True
+        if var+"_qc" in df.columns:
+            var_qc = var+"_qc"
+            df[var_qc].values[df[var_qc].isnull()] = "OK"
+            flags_uni = np.unique(df[var_qc].values.astype(str))
+            if len(flags_uni) > 1: plot=True
+        else:
+            if plot:
+                flags_uni = ["OK"]
+                var_qc = var+"_qc"
+                df[var_qc] = "OK"
+
+        if plot:
+            print(var)
+            fig = plt.figure(figsize=(12, 8))
+            
+            df_out[var].plot(style=".",color='gray', label="before adjustment or filtering")
+
+            for flag in flags_uni:
+                if flag == "OK":
+                    df.loc[df[var_qc] == flag, var].plot(
+                        marker="o", linestyle="none", color="green", label=flag
+                    )
+                elif flag == "CHECKME":
+                    df.loc[df[var_qc] == flag, var].plot(
+                        marker="o", linestyle="none", color="orange", label=flag
+                    )
+                elif flag == "NAN":
+                    df.loc[df[var_qc] == flag, var].plot(
+                        marker="o", linestyle="none", color="violet", label=flag
+                    )
+                elif flag == "CONFIRMED":
+                    df.loc[df[var_qc] == flag, var].plot(
+                        marker="o", linestyle="none", color="tab:brown", label=flag
+                    )
+                elif flag == "OOL":
+                    df.loc[df[var_qc] == flag, var].plot(
+                        marker="o", linestyle="none", color="red", label=flag
+                    )
+                elif flag == "IWS":
+                    df.loc[df[var_qc] == flag, var].plot(
+                        marker="o", linestyle="none", color="cyan", label=flag
+                    )
+                elif flag == "FROZEN":
+                    df.loc[df[var_qc] == flag, var].plot(
+                        marker="o", linestyle="none", color="blue", label=flag
+                    )
+                elif flag == "FROZEN_WS":
+                    df.loc[df[var_qc] == flag, var].plot(
+                        marker="o", linestyle="none", color="lightblue", label=flag
+                    )
+                else:
+                    try:
+                        df.loc[df[var_qc] == flag, var].plot(
+                            marker="o", linestyle="none", label=flag
                         )
-                    elif flag == "CHECKME":
-                        df.loc[df[var] == flag, var[:-3]].plot(
-                            marker="o", linestyle="none", color="orange", label=flag
-                        )
-                    elif flag == "NAN":
-                        df.loc[df[var] == flag, var[:-3]].plot(
-                            marker="o", linestyle="none", color="violet", label=flag
-                        )
-                    elif flag == "CONFIRMED":
-                        df.loc[df[var] == flag, var[:-3]].plot(
-                            marker="o", linestyle="none", color="tab:brown", label=flag
-                        )
-                    elif flag == "OOL":
-                        df.loc[df[var] == flag, var[:-3]].plot(
-                            marker="o", linestyle="none", color="red", label=flag
-                        )
-                    elif flag == "IWS":
-                        df.loc[df[var] == flag, var[:-3]].plot(
-                            marker="o", linestyle="none", color="cyan", label=flag
-                        )
-                    elif flag == "FROZEN":
-                        df.loc[df[var] == flag, var[:-3]].plot(
-                            marker="o", linestyle="none", color="blue", label=flag
-                        )
-                    elif flag == "FROZEN_WS":
-                        df.loc[df[var] == flag, var[:-3]].plot(
-                            marker="o", linestyle="none", color="lightblue", label=flag
-                        )
-                    else:
-                        try:
-                            df.loc[df[var] == flag, var[:-3]].plot(
-                                marker="o", linestyle="none", label=flag
-                            )
-                        except:
-                            Msg("Could not plot flag: ", flag)
-                plt.title(site)
-                plt.xlabel("Year")
-                plt.ylabel(var[:-3])
-                plt.legend()
-                plt.title(site)
-                fig.savefig(
-                    "figures/L1_data_treatment/"
-                    + site.replace(" ", "")
-                    + "_"
-                    + var[:-3]
-                    + "_data_flagging"
-                    + tag
-                    + ".png",
-                    dpi=70,
-                )
+                    except:
+                        Msg("Could not plot flag: ", flag)
+                        
+            if var in adj_info.index.get_level_values(0).unique():
+                [
+                    plt.axvline(t, linestyle="--", color="red")
+                    for t in adj_info.loc[var].t0.values
+                ]
+                plt.axvline(np.nan, linestyle="--", color="red", label="Adjustment times")
+            plt.xlabel("Year")
+            plt.ylabel(var)
+            plt.legend()
+            plt.title(site)
+            fig.savefig("figures/L1_data_treatment/" + site.replace(" ", "")
+                + "_" + var + ".jpeg",
+                dpi=120, bbox_inches="tight")
+    
+            Msg("![Adjusted and flagged data at " + site
+                + "](../figures/L1_data_treatment/" + site.replace(" ", "")
+                + "_" + var + ".jpeg)")
 
 
 def remove_flagged_data(df):
@@ -228,7 +283,7 @@ def remove_flagged_data(df):
 import pytz
 
 
-def adjust_data(df, site, var_list=[], skip_var=[], plot=True):
+def adjust_data(df, site, var_list=[], skip_var=[], skip_time_shifts=False):
     df_out = df.copy()
     if not os.path.isfile("metadata/adjustments/" + site + ".csv"):
         Msg("No data to fix at " + site)
@@ -239,8 +294,8 @@ def adjust_data(df, site, var_list=[], skip_var=[], plot=True):
         comment="#", skipinitialspace=True
     )
 
-    adj_info.t0 = pd.to_datetime(adj_info.t0, utc=True)
-    adj_info.t1 = pd.to_datetime(adj_info.t1, utc= True)
+    adj_info.t0 = pd.to_datetime(adj_info.t0, format='mixed', utc=True)
+    adj_info.t1 = pd.to_datetime(adj_info.t1, format='mixed', utc= True)
     adj_info.loc[adj_info.t0.isnull(), "t0"] = df_out.index[0]
     adj_info.loc[adj_info.t1.isnull(), "t1"] = df_out.index[-1]
 
@@ -266,7 +321,8 @@ def adjust_data(df, site, var_list=[], skip_var=[], plot=True):
         .sort_values(by="t0", ascending=False)
         .values
     )
-
+    if skip_time_shifts:
+        adj_info = adj_info.loc[adj_info.adjust_function != "time_shift", :]
     adj_info.set_index(["variable", "t0"], drop=False, inplace=True)
 
     if len(var_list) == 0:
@@ -279,19 +335,9 @@ def adjust_data(df, site, var_list=[], skip_var=[], plot=True):
         adj_info = adj_info.loc[~np.isin(adj_info.variable, skip_var), :]
         var_list = np.unique(adj_info.variable)
 
+    Msg("|start time|end time|variable|operation|value|number of removed samples|")
+    Msg("|-|-|-|-|-|-|")
     for var in var_list:
-        if (
-            ("_qc" not in var)
-            & ("_min" not in var)
-            & ("_max" not in var)
-            & ("_std" not in var)
-            & ("_adj_flag" not in var)
-            & ("_min" not in var)
-        ):
-            Msg("### Adjusting " + var)
-            Msg("|start time|end time|operation|value|number of removed samples|")
-            Msg("|-|-|-|-|-|")
-
         for t0, t1, func, val in zip(
             adj_info.loc[var].t0,
             adj_info.loc[var].t1,
@@ -469,71 +515,13 @@ def adjust_data(df, site, var_list=[], skip_var=[], plot=True):
                     df_out.loc[t1 + pd.Timedelta(hours=val) : t1, var] = np.nan
 
             if (
-                ("_qc" not in var)
-                & ("_min" not in var)
-                & ("_max" not in var)
-                & ("_std" not in var)
-                & ("_adj_flag" not in var)
-                & ("_min" not in var)
+                ("_qc" not in var) & ("_min" not in var) & ("_max" not in var)
+                & ("_std" not in var)  & ("_adj_flag" not in var) & ("_min" not in var)
             ):
                 nan_count_2 = np.sum(np.isnan(df_out.loc[t0:t1, var].values))
-                Msg(
-                    "|"
-                    + str(t0)
-                    + "|"
-                    + str(t1)
-                    + "|"
-                    + func
-                    + "|"
-                    + str(val)
-                    + "|"
-                    + str(nan_count_2 - nan_count_1)
-                    + "|"
+                Msg("|" + str(t0) + "|" + str(t1)  + "|" + var +"|" + func
+                    + "|" + str(val) + "|" + str(nan_count_2 - nan_count_1) + "|"
                 )
-
-        if (
-            df[var].notna().any()
-            & ("_qc" not in var)
-            & ("_min" not in var)
-            & ("_max" not in var)
-            & ("_std" not in var)
-            & ("_adj_flag" not in var)
-            & ("_min" not in var)
-        ):
-            if plot:
-                fig = plt.figure(figsize=(12, 8))
-                df[var].plot(style="o", label="before adjustment")
-                df_out[var].plot(style="o", label="after adjustment")
-                [
-                    plt.axvline(t, linestyle="--", color="red")
-                    for t in adj_info.loc[var].t0.values
-                ]
-                plt.axvline(np.nan, linestyle="--", color="red", label="Adjustment times")
-                plt.xlabel("Year")
-                plt.ylabel(var)
-                plt.legend()
-                plt.title(site)
-                fig.savefig(
-                    "figures/L1_data_treatment/"
-                    + site.replace(" ", "")
-                    + "_adj_"
-                    + var
-                    + ".jpeg",
-                    dpi=120,
-                    bbox_inches="tight",
-                )
-            Msg(" ")
-            Msg(
-                "![Adjusted data at "
-                + site
-                + "](../figures/L1_data_treatment/"
-                + site.replace(" ", "")
-                + "_adj_"
-                + var
-                + ".jpeg)"
-            )
-            Msg(" ")
-
     return df_out
 
 
@@ -693,7 +681,10 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                              y[~np.isnan(x+y)], 1)[-2])
         else:
             # we then adjust and filter all surface height (could be replaced by an automated adjustment)
-            df = adjust_data(df, site, var_HS)
+            df_save=df.copy()
+            df = adjust_data(df, site, var_HS, skip_time_shifts=True)
+            plot_flagged_data(df, df_save, site, var_list=var_HS)
+
 
 
         # HW1 gapfilled with HW2 and inversely
@@ -701,13 +692,13 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         if var_sec in df.columns:
             if df[var].notnull().any():
                 df[var+'_org'] = var
-                df[var] = fill_gap_HW(df, df, var, var_sec)
+                # df[var] = fill_gap_HW(df, df, var, var_sec)
                 df.loc[df[var]<0, var] = np.nan
 
         # At swiss camp, using HW from tower to fill the gaps
         if site == 'Swiss Camp 10m':
             if var == 'HW1':
-                df_swc = nead.read("L1/01-SwissCamp.csv").to_dataframe().reset_index(drop=True)
+                df_swc = nead.read("L1/hourly/SwissCamp.csv").to_dataframe().reset_index(drop=True)
                 df_swc['timestamp'] = pd.to_datetime(df_swc.timestamp)
                 df_swc = df_swc.set_index("timestamp").replace(-999, np.nan)
             
@@ -725,11 +716,13 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     # plotting gap-filling process
     fig,ax = plt.subplots(2,1, figsize=(15,8))
     if 'HW1_org' in df.columns:
+        df.HW2.plot(ax=ax[0], marker='.',color='gray')
         for src in df.HW1_org.unique():
             df.HW1.loc[df.HW1_org == src].plot(ax=ax[0], label=src, marker="o", linestyle="None")
         df = df.drop(columns=['HW1_org'])
         ax[0].set_ylabel('HW1')
     if 'HW2_org' in df.columns:
+        df.HW1.plot(ax=ax[1], marker='.',color='gray')
         for src in df.HW2_org.unique():
             df.HW2.loc[df.HW2_org == src].plot(ax=ax[1], label=src, marker="o", linestyle="None")
         df = df.drop(columns=['HW2_org'])
@@ -743,15 +736,9 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         df["SHF"], df["LHF"] = jaws_tools.gradient_fluxes(df.copy())
     
         # interpolating variables at standard heights
-        df["TA2m"] = extrapolate_temp(
-            df, var=["TA1", "TA2"], target_height=2, max_diff=5
-        )
-        df["RH2m"] = extrapolate_temp(
-            df, var=["RH1", "RH2"], target_height=2, max_diff=10
-        )
-        df["VW10m"] = extrapolate_temp(
-            df, var=["VW1", "VW2"], target_height=10, max_diff=5
-        )
+        df["TA2m"] = extrapolate_temp(df, var=["TA1", "TA2"], target_height=2, max_diff=5)
+        df["RH2m"] = extrapolate_temp(df, var=["RH1", "RH2"], target_height=2, max_diff=10)
+        df["VW10m"] = extrapolate_temp(df, var=["VW1", "VW2"], target_height=10, max_diff=5)
     
         df.loc[df['TA2m']>20, 'TA2m'] = np.nan
         df.loc[df['TA2m']<-80, 'TA2m'] = np.nan
@@ -797,7 +784,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         df['Lat'] = df_pos.loc[df.index,'lat']
         df['Lon'] = df_pos.loc[df.index,'lon']
     except:
-        df_pos = pd.read_csv( 'metadata/GC-Net_location.csv', skipinitialspace=True)
+        df_pos = pd.read_csv( 'L1/GC-Net_location.csv', skipinitialspace=True)
         df_pos['Name'] = df_pos.Name.str.replace(' ','')
         df['Lat'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Northing'].values[0]
         df['Lon'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Easting'].values[0]
@@ -926,7 +913,8 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
         print('No installtion depth reported, using default')
         maintenance_string['date'] = [df_v6.index[0]]
         maintenance_string[col_depth_installation] = [np.arange(1,11)]
-    maintenance_string.date = pd.to_datetime(maintenance_string.date, utc=True)
+    maintenance_string.date = pd.to_datetime(maintenance_string.date, 
+                                             format='mixed', utc=True)
     maintenance_string = maintenance_string.set_index('date')
     maintenance_string = maintenance_string[col_depth_installation]
     msk = maintenance_string[col_depth_installation].notnull().all(axis=1)
@@ -1289,6 +1277,34 @@ def extrapolate_temp(dataframe, var=["TA1", "TA2"], target_height=2, max_diff=5)
     diff_2 = (target_temp - var_high).abs()
     target_temp.loc[(diff_1 > max_diff) | (diff_2 > max_diff)] = np.nan
     return target_temp
+# def WindProfile(Z1, Z2, U1, U2):
+
+#     MaxWindSPD = 35    # Maximum Wind Speed allowed on Synthetic Wind Speed (m/s).
+#     Z0 = 0.01          # Surface Roughness (m)
+#     U0 = 0             # Wind velocity @ Z0 (m/sec)
+#     R2Limit = 0.97     # R^2 Limit for the acceptance of the logarithmic wind profile.
+    
+#     WindSlope = 0.12
+#     WindOffset = 0.4
+        
+#     # case when U2 is missing
+#     U2m = U1 * log(2/Z0)/log(Z1/Z0)
+#     U10m = U1 * log(10/Z0)/log(Z1/Z0)
+    
+#     # case when U1 is missing
+#     U2m = U2 * log(2/Z0)/log(Z2/Z0)
+#     U10m = U2 * log(10/Z0)/log(Z2/Z0)
+
+#     #case where both are available
+#     x = np.array([Z0, Z1, Z2])
+#     y = np.array([U0, U1, U2])
+
+#     slope, intercept, R2, _, _ = scipy.stats.linregress(np.log(x), y)
+    
+#     # Step 4: Calculates the 2m & 10m Wind Velocities
+#     if R2 >= R2Limit
+#         U2m = slope*log(2)+intercept
+#         U10m = slope*log(10)+intercept
 
 # Filter frozen values
 from scipy.ndimage import binary_dilation
@@ -1301,7 +1317,7 @@ def filter_zero_gradient(df_out):
     not_in_dark_season = False
     var_list = [
         "VW1", "VW2", "DW1", "DW2", "TA1", "TA1", "TA2",
-        "TA3", "TA4", "P", "HW1", "HW2", "ISWR", "OSWR",
+        "TA3", "TA4", "P", "ISWR", "OSWR",
     ]
     for var in var_list:
         if var not in df_out.columns:
@@ -1334,7 +1350,7 @@ def filter_zero_gradient(df_out):
                         else:
                             # too long period without wind, leaving flags up
                             no_wind_count = 0
-            ind = binary_dilation(ind)
+            # ind = binary_dilation(ind)
 
             if var + "_qc" in df_out.columns:
                 df_out.loc[ind, var + "_qc"] = "FROZEN"
@@ -1615,11 +1631,11 @@ def daily_average(df_in):
 
     df_v7 = df_v6.resample('D').apply(limited_mean)
     max_vars = [var for var in df_v6.keys() if 'max' in var]
-    df_v7[max_vars] = df_v6[max_vars].resample('D').apply(limited_max)
+    if len(max_vars)>0: df_v7[max_vars] = df_v6[max_vars].resample('D').apply(limited_max)
     min_vars = [var for var in df_v6.keys() if 'min' in var]
-    df_v7[min_vars] = df_v6[min_vars].resample('D').apply(limited_min)
+    if len(min_vars)>0: df_v7[min_vars] = df_v6[min_vars].resample('D').apply(limited_min)
     flag_vars = [var for var in df_v6.keys() if 'adj_flag' in var]
-    df_v7[flag_vars] = df_v6[flag_vars].resample('D').apply(limited_max)
+    if len(flag_vars)>0: df_v7[flag_vars] = df_v6[flag_vars].resample('D').apply(limited_max)
     
     # calculating daily wind direction from daily mean directional wind speed
     for i in ['1','2']:

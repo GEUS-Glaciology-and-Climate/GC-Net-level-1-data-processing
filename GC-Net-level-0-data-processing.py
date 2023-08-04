@@ -35,9 +35,9 @@ else:
     print("Successfully created the directory %s " % mcpath)
 
 # %% Loop through each station, read pandas dataframe and do the merging
-metadata = pd.read_csv('metadata/GC-Net_location.csv', skipinitialspace=True)
+metadata = pd.read_csv('L1/GC-Net_location.csv', skipinitialspace=True)
 
-for i in range(5,6): #len(L0dirs)):
+for i in len(L0dirs)):  #range(8,9):
     print("--------------------------------")
     print("Now Processing Directory: ", L0dirs[i])
     # the file structure of raw campbell data files

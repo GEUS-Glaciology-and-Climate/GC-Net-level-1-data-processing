@@ -11,8 +11,8 @@ tip list:
 """
 import os, sys
 import PROMICE_toolbox as ptb
-import matplotlib
-matplotlib.use('Agg')
+# import matplotlib
+# matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 import os.path
@@ -42,7 +42,7 @@ def Msg(txt):
     f.write(txt + "\n")
 
 path_to_L0 = "L0M/"
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=True)
 # print(site_list)
 
 # uncomment for use at specific sites
@@ -50,7 +50,7 @@ site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspa
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
-# site_list = site_list.loc[site_list.Name.values == 'Swiss Camp 10m',:]
+site_list = site_list.loc[site_list.Name.values == 'DYE-2',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -91,19 +91,20 @@ for site, ID in zip(site_list.Name, site_list.ID):
     Msg("## Manual flagging of data at " + site)
     df_out = ptb.flag_data(df,
                            site,
-                            # var_list=['HW1','HW2'], 
+                            var_list=['HW1','HW2'], 
                            )
 
     Msg("## Adjusting data at " + site)
     # we start by adjusting and filtering all variables except surface height
     df_v4 = ptb.adjust_data(df_out, site,
-                            # var_list=['HW1','HW2'], 
-                            skip_var=["HS1", "HS2"],
-                            plot=True)
+                            var_list=['HW1','HW2'], 
+                            skip_var=["HS1", "HS2"])
     # Applying standard filters again
     df_v4 = df_v4.resample("H").asfreq()
     df_v5 = ptb.filter_data(df_v4, site)
-    ptb.plot_flagged_data(df_v5, site)
+    ptb.plot_flagged_data(df_v5, df_out, site,
+                            var_list=['HW1','HW2'], 
+                            )
     df_v5 = ptb.remove_flagged_data(df_v5)
 
     # correction of the net radiometer fro windspeed
@@ -118,6 +119,13 @@ for site, ID in zip(site_list.Name, site_list.ID):
         site_list.loc[site_list.Name == site, "Elevationm"].values[0],
         site,
     )
+    plt.figure()
+    ax1=plt.subplot(2,1,1)
+    df_v5b[['HW1','HW2']].plot(ax=ax1)
+    ax2=plt.subplot(2,1,2)
+    df_v5b[['HS1','HS2']].plot(ax=ax2)
+    ax1.set_title(site)
+    print(wtf)
 
     if df_v5b[[v for v in df_v5b.columns if 'TS' in v]].notnull().any().any():
         df_v6 = ptb.therm_depth(df_v5b, site)
@@ -163,13 +171,15 @@ for site, ID in zip(site_list.Name, site_list.ID):
                                              else '0' if abs(x)<0.005 \
                                              else '1' if abs(x-1)<0.005 \
                                              else '%0.2f'%x)
+        print('writing hourly values')
         nead.write(
             df_v6_formatted.reset_index(),
             header_obj,
-            "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + ".csv",
+            "L1/hourly/" + site.replace(" ", "") + ".csv",
         )
 
         # daily average
+        print('calculating daily averages')
         df_v7 = ptb.daily_average(df_v6)
 
         # write ini file
@@ -189,11 +199,12 @@ for site, ID in zip(site_list.Name, site_list.ID):
                                              else '0' if abs(x)<0.005 \
                                              else '1' if abs(x-1)<0.005 \
                                              else '%0.2f'%x)
+        print('writing daily averages')
         nead.write(
             df_v7.reset_index(),
             header_obj,
-            "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_daily.csv",
+            "L1/daily/" + site.replace(" ", "") + "_daily.csv",
         )
         
-# tocgen.processFile("out/Report.md", "out/report_with_toc.md")
+tocgen.processFile("out/Report.md", "out/report_with_toc.md")
 f.close()

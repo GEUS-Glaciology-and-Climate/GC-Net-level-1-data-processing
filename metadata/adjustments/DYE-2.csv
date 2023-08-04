@@ -25,15 +25,12 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # calibration of OSWR
 2009-05-16T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
 
-2022-06-14T00:00:00+00:00,,TA1,min_filter,-25, confirmed bav
-2022-06-14T00:00:00+00:00,,TA2,min_filter,-25, confirmed bav
-
 # filters on HW1 and HW2
 2009-05-16T00:00:00+00:00,2010-01-01T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.15,Manually filtered by bav
 2010-01-01T00:00:00+00:00,2010-05-12T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.3,Manually filtered by bav
-2010-05-12T00:00:00+00:00,2020-09-20T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.4,Manually filtered by bav
+2010-05-12T00:00:00+00:00,2023-09-20T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.4,Manually filtered by bav
 2009-05-16T00:00:00+00:00,2010-05-12T00:00:00+00:00,HW2,biweekly_upper_range_filter,0.2,Manually filtered by bav
-2010-05-12T00:00:00+00:00,2020-09-20T00:00:00+00:00,HW2,biweekly_upper_range_filter,0.4,Manually filtered by bav
+2010-05-12T00:00:00+00:00,2023-09-20T00:00:00+00:00,HW2,biweekly_upper_range_filter,0.4,Manually filtered by bav
 
 2010-05-10T00:00:00+00:00,2022-09-20T00:00:00+00:00,HW1, min_filter,1.4, Manually filtered by bav
 2017-05-21T00:00:00+00:00,2022-09-20T00:00:00+00:00,HW2, min_filter,1.8, Manually filtered by bav

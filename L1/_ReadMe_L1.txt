@@ -10,13 +10,9 @@ Last update: 23-02-2023
 
 Steffen, K.; Vandecrux, B.; Houtz, D.; Abdalati, W.; Bayou, N.; Box, J.; Colgan, L.; Espona Pernas, L.; Griessinger, N.; Haas-Artho, D.; Heilig, A.; Hubert, A.; Iosifescu Enescu, I.; Johnson-Amin, N.; Karlsson, N. B.; Kurup Buchholz, R.; McGrath, D.; Cullen, N.J.; Naderpour, R.; Molotch, N.P.; Pederson, A. Ø.; Perren, B.; Philipps, T.; Plattner, G.K.; Proksch, M.; Revheim, M. K.; Særrelse, M.; Schneebli, M.; Sampson, K.; Starkweather, S.; Steffen, S.; Stroeve, J.; Watler, B.; Winton, Ø. A.; Zwally, J.; Ahlstrøm, A., 2023, "GC-Net Level 1 automated weather station data", https://doi.org/10.22008/FK2/VVXGUT, GEUS Dataverse, V3
 
-as described in:
+as described and processed by:
 
-Vandecrux, B., Box, J.E., Ahlstrøm, A.P., Andersen, S.B., Bayou, N., Colgan, W.T., Cullen, N.J., Fausto, R.S., Haas-Artho, D., Heilig, A., Houtz, D.A., How, P., Iosifescu Enescu , I., Karlsson, N.B., Kurup Buchholz, R., Mankoff, K.D., McGrath, D., Molotch, N.P., Perren, B., Revheim, M.K., Rutishauser, A., Sampson, K., Schneebeli, M., Starkweather, S., Steffen, S., Weber, J., Wright, P.J., Zwally, J., Steffen, K.: The historical Greenland Climate Network (GC-Net) curated and augmented Level 1 dataset, Submitted to ESSD, 2023
-
-as processed by:
-
-Vandecrux, B., Box, J., Houtz, D., & Revheim, M. K. The GC-Net level 1 dataset and processing scripts (Version 1) [Computer software]. https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing
+Vandecrux, B., Box, J. E., Ahlstrøm, A. P., Andersen, S. B., Bayou, N., Colgan, W. T., Cullen, N. J., Fausto, R. S., Haas-Artho, D., Heilig, A., Houtz, D. A., How, P., Iosifescu Enescu, I., Karlsson, N. B., Kurup Buchholz, R., Mankoff, K. D., McGrath, D., Molotch, N. P., Perren, B., Revheim, M. K., Rutishauser, A., Sampson, K., Schneebeli, M., Starkweather, S., Steffen, S., Weber, J., Wright, P. J., Zwally, H. J., and Steffen, K.: The historical Greenland Climate Network (GC-Net) curated and augmented Level 1 dataset, Earth Syst. Sci. Data Discuss. [preprint], https://doi.org/10.5194/essd-2023-147, in review, 2023. 
 
 # Description
 

@@ -20,6 +20,7 @@ from os import path
 from matplotlib.dates import DateFormatter
 import matplotlib.dates as mdates
 import requests
+import tocgen
 
 os.chdir('..')
 
@@ -119,11 +120,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
             + str(count_fig)
             + ".png)"
         )
-# %run tools/tocgen.py out/L0_overview.md out/L0_overview_toc.md
-
+tocgen.processFile("out/L0_overview.md", "out/L0_overview_toc.md")
 # %% L1 overview
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
-f = open("out/L1_overview.md", "w")
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)[24:25]
+# f = open("out/L1_overview.md", "w")
 def Msg(txt):
     f = open("out/L1_overview.md", "a")
     print(txt)
@@ -132,7 +132,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
     Msg("# " + str(ID) + " " + site)
     site = site.replace(" ", "")
-    filename = "L1/" + str(ID).zfill(2) + "-" + site + ".csv"
+    filename = "L1/hourly/" + site + ".csv"
+    filename_d = "L1/daily/" + site + "_daily.csv"
     if not path.exists(filename):
         Msg("Warning: No file for station " + str(ID) + " " + site)
         continue
@@ -140,7 +141,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df.timestamp = pd.to_datetime(df.timestamp)
     df = df.set_index("timestamp").replace(-999, np.nan)
 
-    df_d = nead.read(filename[:-4]+'_daily.csv').to_dataframe().reset_index(drop=True)
+    df_d = nead.read(filename_d).to_dataframe().reset_index(drop=True)
     df_d.timestamp = pd.to_datetime(df_d.timestamp)
     df_d = df_d.set_index("timestamp").replace(-999, np.nan)
     
@@ -195,7 +196,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             var = [v for v in ['HS1','HS2','HS_combined'] if v in df.columns]
         elif var in ['HS2','HS_combined']:
             continue
-        elif var == 'HW1':
+        elif (var == 'HW1') & ('HW2' in df.columns):
             var = ['HW1','HW2']
         elif var in ['HW2']:
             continue
@@ -261,7 +262,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             + ".png)"
         )
 
-%run tocgen.py out/L1_overview.md out/L1_overview_toc.md
+# tocgen.processFile("out/L1_overview.md", "out/L1_overview_toc.md")
 
 # %% data availability
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
@@ -325,7 +326,7 @@ fig.savefig(
 
 # %% L1 temperature overview
 plt.close("all")
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[22:23]
+site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
 for site, ID in zip(site_list.Name, site_list.ID):
     variable_list = np.array(["TA1", "TA2", "TA3", "TA4"])
 
@@ -371,13 +372,13 @@ for site, ID in zip(site_list.Name, site_list.ID):
         bbox_inches="tight",
     )
     print(
-        "![](figures/L1_overview/air_temperature_diagnostic/"
+        "![](../figures/L1_overview/air_temperature_diagnostic/"
         + str(ID)
         + "_"
         + site
         + "_temperature.png)"
     )
-# %run tocgen.py out/L1_overview.md out/L1_overview_toc.md
+tocgen.processFile("out/L1_air_temperature_overview.md", "out/L1_air_temperature_overview_toc.md")
 
 # %% L1 temperature TC vs C1000 comp
 # plt.close('all')
@@ -672,6 +673,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 #%% Surface height overview
 plt.close('all')
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
+from sklearn.linear_model import LinearRegression
 
 fig, ax = plt.subplots(4, 5, figsize=(13, 14))
 ax = ax.flatten()
@@ -704,6 +706,18 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # plotting height
     df.HS1.plot(ax=ax[count], label='Surface height 1')
     df.HS2.plot(ax=ax[count], label='Surface height 2')
+    
+    for var in  ['HS1','HS2']:
+        X = df.index.values.astype(float)
+        Y = df[var].values
+        linear_regressor = LinearRegression()  # create object for the class
+        linear_regressor.fit(X[~np.isnan(X+Y)].reshape(-1, 1),
+                             Y[~np.isnan(X+Y)].reshape(-1, 1))  # perform linear regression
+        Y_pred = linear_regressor.predict(pd.DatetimeIndex(['2000-01-01', '2001-01-01']).values.astype(float).reshape(-1,1))
+        print(-Y_pred[0] + Y_pred[-1])
+        df[var+'_fit'] = linear_regressor.predict(X.reshape(-1,1))
+        # df[var+'_fit'].plot(lw=0.5, ax=ax[count])
+
     ax[count].set_title("("+ABC[count] + ") " + site, fontsize=14)
     ax[count].set_xlabel("")
     # if count == 12:
@@ -758,7 +772,7 @@ fig.text(0.02, 0.5,
     rotation="vertical",
 )
 fig.savefig("figures/L1_overview/HS_overview_accum.png", bbox_inches="tight", dpi=300)
-#%%
+
 plt.close('all')
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
 
