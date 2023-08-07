@@ -653,6 +653,8 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                         avg_accum = 0.000784
                     elif site == 'JAR1':
                         avg_accum = -.0043
+                    elif site == 'NASA-SE':
+                        avg_accum = 0.003
                     else:
                         tmp = df[var].resample('D').mean().diff()
                         avg_accum = -tmp.mean()
@@ -1246,9 +1248,14 @@ def sza_saa(df, longitude, latitude):
     return ZenithAngle_deg, DirectionSun_deg
 
 
-def extrapolate_temp(dataframe, var=["TA1", "TA2"], target_height=2, max_diff=5):
+def extrapolate_temp(dataframe, var=["TA1", "TA2"], log=False,
+                     target_height=2, max_diff=5):
     ht_low = dataframe["HW1"].copy()
     ht_high = dataframe["HW2"].copy()
+    if log:
+        ht_low = np.log(ht_low)
+        ht_high = np.log(ht_high) 
+        target_height = np.log(target_height)
     var_low = dataframe[var[0]].copy()
     var_high = dataframe[var[1]].copy()
 
