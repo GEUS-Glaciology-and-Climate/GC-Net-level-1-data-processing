@@ -27,8 +27,8 @@ DYE2, P, 720, 1000
 DYE2, HS1, -1, 1000
 DYE2, HS2, -1, 1000
 
-NASA-SE, HW1, 0, 5.35
-NASA-SE, HW2, 0, 5.49
+NASA-SE, HW1, 0, 6
+NASA-SE, HW2, 0, 8
 
 Petermann ELA,P, 850, 960
 NASA-SE, P, 680, 790
@@ -63,6 +63,7 @@ Swiss Camp, TA1, -50, 15
 Swiss Camp, TA2, -50, 15
 Swiss Camp, TA3, -50, 15
 Swiss Camp, TA4, -50, 15
+Swiss Camp,HW2, 0.35, 7
 Swiss Camp, ^TS[^_]+$, -20, 0.1
 
 Swiss Camp 10m, P, 810, 920
@@ -85,6 +86,7 @@ Petermann Glacier, P, 950, 1000
 Crawford Point 1, P, 740, 820
 Crawford Point 1, RH1, 20, 110
 Crawford Point 1, RH2, 20, 110
+Crawford Point 1, HW1, 0.02, 10
 Crawford Point 1, ^TS[^_]+$, -30, 0.1
 
 NASA-E, ^TS[^_]+$, -40, -20
@@ -100,8 +102,7 @@ EastGRIP, HW1, 0.2,
 EastGRIP, HW2, 1.54, 4
 Petermann ELA,HW1, 0.2, 3.1
 Petermann ELA,HW2, 0.2, 3.1
-Swiss Camp,HW1, 0.1, 
-Swiss Camp,HW2, 0.35, 
+
 NASA-E,HW2, 0.2, 
 NASA-E,HW1, 0.2, 
 

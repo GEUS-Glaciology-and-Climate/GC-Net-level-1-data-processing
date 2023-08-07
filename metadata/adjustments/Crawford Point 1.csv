@@ -17,6 +17,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20080505T14:00:00+00:00,,HS2,add,3,manual shift by bav
 20091210T00:00:00+00:00,,HS2,add,0.3,manual shift by bav
 20110502T18:00:00+00:00,,HS2,add,2.8,manual shift by bav
+2016-01-01T00:00:00+00:00,,HS2,add,-0.7,manual shift by bav
 20170521T00:00:00+00:00,,HS2,add,2.2,manual shift by bav
 
 # air temp correction on HW1 and HW2

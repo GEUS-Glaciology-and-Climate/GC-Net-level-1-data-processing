@@ -5,6 +5,10 @@ t0,t1,variable,flag,comment,URL_graphic
 2008-01-01T00:00:00+00:00,,VW1,NAN,lower level getting buried (bav),
 2008-01-01T00:00:00+00:00,,RH1,NAN,lower level getting buried (bav),
 
+2005-11-20T12:00:00+00:00, 2005-11-20T13:00:00+00:00,HW1,NAN, ,
+2010-01-27T00:00:00+00:00, 2010-04-16T00:00:00+00:00,HW1,NAN, ,
+2010-01-27T00:00:00+00:00, 2010-04-16T00:00:00+00:00,HW2,NAN, ,
+
 2002-10-01T00:00:00+00:00, 2003-04-01T00:00:00+00:00,VW1,NAN, frozen anemometer (bav),
 2002-10-01T00:00:00+00:00, 2003-04-01T00:00:00+00:00,VW2,NAN, frozen anemometer (bav),
 2002-10-01T00:00:00+00:00, 2003-04-01T00:00:00+00:00,DW1,NAN, frozen anemometer (bav),

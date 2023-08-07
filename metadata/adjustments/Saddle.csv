@@ -35,7 +35,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2019-05-15T00:00:00+00:00,,HW2,min_filter,0.5,
 
 # filters on HW1 and HW2
-2009-05-15T00:00:00+00:00,,HW1,biweekly_upper_range_filter,0.5,Manually filtered by bav
+2019-09-03T00:00:00+00:00,,HW1,max_filter,1.4,Manually filtered by bav
+2019-09-03T00:00:00+00:00,,HW1,min_filter,1.08,Manually filtered by bav
+2009-05-15T00:00:00+00:00,2019-09-03T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.5,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.5,Manually filtered by bav
 
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav

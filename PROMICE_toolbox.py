@@ -176,9 +176,8 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
 
     if len(var_list) == 0:
         var_list = df.columns
-    else:
-        adj_info = adj_info.loc[np.isin(adj_info.variable, var_list), :]
-        var_list = np.unique(adj_info.variable)
+    if isinstance(var_list,str):
+        var_list = [var_list]
 
     for var in var_list:
         plot = False
@@ -201,7 +200,6 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
                 df[var_qc] = "OK"
 
         if plot:
-            print(var)
             fig = plt.figure(figsize=(12, 8))
             
             df_out[var].plot(style=".",color='gray', label="before adjustment or filtering")
@@ -625,12 +623,13 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         
         if site in ['SMS1', 'SMS2', 'SMS3', 'SMS4', 'SMS5', 'SMS-PET', 'Summit', 
                     'NASA-SE','Tunu-N', 'EastGRIP', 'LAR1', 'JAR2', 'JAR1',
-                    'Petermann ELA']:
+                    'Petermann ELA', 'NGRIP']:
             thresh = 0.7
             if site == 'Tunu-N':
-                thresh=0.2
+                thresh=0.173
             if site == 'JAR1':
                 thresh=0.8
+
             # plt.close('all')
             fig, ax = plt.subplots(1,1)
             df[var].bfill().plot(ax=ax,marker='.', linestyle='None', label=var+' backfilled')
@@ -643,6 +642,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                 diff.loc[diff>0] = 0
             
             for t in  diff.loc[diff.abs()>thresh].index.values:
+                print(t)
                 # refining the diff value:
                 t = pd.to_datetime(t, utc=True)
                 one_week_before_gap = slice(t-pd.Timedelta(days=7), t)
@@ -685,6 +685,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             # we then adjust and filter all surface height (could be replaced by an automated adjustment)
             df_save=df.copy()
             df = adjust_data(df, site, var_HS, skip_time_shifts=True)
+            print(var_HS)
             plot_flagged_data(df, df_save, site, var_list=var_HS)
 
 

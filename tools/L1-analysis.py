@@ -672,7 +672,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df[['TA1','TA2']].plot()
 #%% Surface height overview
 plt.close('all')
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=(True))
 from sklearn.linear_model import LinearRegression
 
 fig, ax = plt.subplots(4, 5, figsize=(13, 14))
@@ -686,7 +686,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # if site in ['Swiss Camp 10m', 'Aurora', 'KULU', 'JAR3', 'LAR1', 'LAR2', 'LAR3', 'KAR']:
     #     continue
 
-    filename = "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_daily.csv"
+    filename = "L1/daily/" + site.replace(" ", "") + "_daily.csv"
     if not path.exists(filename):
         print("Warning: No file " + filename)
         continue
@@ -737,7 +737,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     minor_locator = AutoMinorLocator(10)
     ax[count].xaxis.set_minor_locator(minor_locator)
     if count in [16]:
-        ax[count].set_xticks(pd.to_datetime(['2000','2000-07-01','2001','2001-07-01']))
+        ax[count].set_xticks(pd.to_datetime(['2000','2000-07-01','2001','2001-07-01'], format='mixed'))
         from matplotlib.ticker import AutoMinorLocator
         minor_locator = AutoMinorLocator(6)
         ax[count].xaxis.set_minor_locator(minor_locator)
@@ -773,8 +773,8 @@ fig.text(0.02, 0.5,
 )
 fig.savefig("figures/L1_overview/HS_overview_accum.png", bbox_inches="tight", dpi=300)
 
-plt.close('all')
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
+# plt.close('all')
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=(True))
 
 fig, ax = plt.subplots(4, 3, figsize=(12, 10))
 ax = ax.flatten()
@@ -786,7 +786,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     if site in [ 'KULU', 'KAR', 'SMS5']:
         continue
 
-    filename = "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + "_daily.csv"
+    filename = "L1/daily/" + site.replace(" ", "") + "_daily.csv"
     if not path.exists(filename):
         print("Warning: No file " + filename)
         continue

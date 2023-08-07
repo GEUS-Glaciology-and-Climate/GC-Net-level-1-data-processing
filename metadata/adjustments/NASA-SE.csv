@@ -15,10 +15,6 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
 2013-05-01T00:00:00+00:00,2013-07-01T00:00:00+00:00,HW1,min_filter,1.4,Manually filtered by bav
-,,HW2,min_filter,0.1,Manually filtered by bav
-,,HW1,min_filter,0.1,Manually filtered by bav
-,,HW1,max_filter,5.8,Manually filtered by bav
-,,HW2,max_filter,5.8,Manually filtered by bav
 
 1996-01-01T00:00:00+00:00,2009-01-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
 1996-01-01T00:00:00+00:00,2009-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
@@ -27,10 +23,11 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-01-01T00:00:00+00:00,,VW1, swap_with_VW2,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
 
 # instrument height adjustment
-2002-05-18T00:00:00+00:00,2003-05-10T09:00:00+00:00,HW1,add,3,
-2002-05-18T00:00:00+00:00,2003-05-10T09:00:00+00:00,HW2,add,3,
-2003-05-10T09:00:00+00:00,2004-06-11T09:00:00+00:00,HW1,add,0.5,
-2003-05-10T09:00:00+00:00,2004-06-11T09:00:00+00:00,HW2,add,1.5,
+2000-05-16T16:00:00+00:00,2003-05-21T09:00:00+00:00,HW1,add,3,
+2000-05-16T16:00:00+00:00,2003-05-21T09:00:00+00:00,HW2,add,3,
+2002-05-18T00:00:00+00:00,2003-05-10T14:00:00+00:00,HW1,add,3,
+2002-05-18T00:00:00+00:00,2003-05-10T14:00:00+00:00,HW2,add,3,
+2003-05-10T14:00:00+00:00,2004-06-11T09:00:00+00:00,HW2,add,1.5,
 2004-06-11T09:00:00+00:00,2005-05-27T09:00:00+00:00,HW1,add,3,
 2004-06-11T09:00:00+00:00,2005-05-27T09:00:00+00:00,HW2,add,4,
 2005-05-27T09:00:00+00:00,2009-05-27T09:00:00+00:00,HW1,add,-1,

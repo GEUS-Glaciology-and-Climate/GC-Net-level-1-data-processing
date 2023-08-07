@@ -16,7 +16,7 @@ import pandas as pd
 from datetime import datetime
 import os
 from os import path
-# os.chdir('..')
+os.chdir('..')
 
 name_alias = {
     "CP1": "Crawford Point 1",
@@ -42,17 +42,17 @@ name_alias = {
     "CP2": "CP2",
 }
 
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=True)
 # uncomment for use at specific sites
 # All station names: 'Swiss Camp 10m', 'Swiss Camp', 'Crawford Point 1', 'NASA-U',
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'Saddle',:]
+site_list = site_list.loc[site_list.Name.values == 'NASA-SE',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
-    filename = "L1/" + str(ID).zfill(2) + "-" + site.replace(" ", "") + ".csv"
+    filename = "L1/hourly/" + site.replace(" ", "") + ".csv"
     if not path.exists(filename):
         print("Warning: No file for station " + str(ID) + " " + site)
         # continue
@@ -75,7 +75,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         pass
 
     obs_df = pd.read_csv("metadata/maintenance summary/" + site + ".csv")
-    obs_df["date"] = pd.to_datetime(obs_df["date"], utc=True)
+    obs_df["date"] = pd.to_datetime(obs_df["date"], format='mixed', utc=True)
     obs_df = obs_df.set_index("date")
     useful_columns = [
         "W1 before (cm)",
@@ -115,7 +115,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         columns=["site", "year", "month", "day"]
     )
 
-    fig = plt.figure(figsize=(20, 8))
+    fig = plt.figure(figsize=(20, 6))
     ax = plt.subplot(1,2,1) 
 
     sym_size = 10
