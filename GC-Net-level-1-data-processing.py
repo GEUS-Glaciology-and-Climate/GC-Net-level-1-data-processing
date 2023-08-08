@@ -11,8 +11,8 @@ tip list:
 """
 import os, sys
 import PROMICE_toolbox as ptb
-# import matplotlib
-# matplotlib.use('Agg')
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 import os.path
@@ -94,13 +94,13 @@ for site, ID in zip(site_list.Name, site_list.ID):
     Msg("## Adjusting data at " + site)
     # we start by adjusting and filtering all variables except surface height
     df_v4 = ptb.adjust_data(df_out, site,
-                            var_list=['HW1','HW2'], 
+                            # var_list=['HW1','HW2'], 
                             skip_var=["HS1", "HS2"])
     # Applying standard filters again
     df_v4 = df_v4.resample("H").asfreq()
     df_v5 = ptb.filter_data(df_v4, site)
     ptb.plot_flagged_data(df_v5, df_out, site,
-                            var_list=['HW1','HW2'], 
+                            # var_list=['HW1','HW2'], 
                             )
     df_v5 = ptb.remove_flagged_data(df_v5)
 
@@ -116,13 +116,13 @@ for site, ID in zip(site_list.Name, site_list.ID):
         site_list.loc[site_list.Name == site, "Elevationm"].values[0],
         site,
     )
-    plt.figure()
-    ax1=plt.subplot(2,1,1)
-    df_v5b[['HW1','HW2']].plot(ax=ax1)
-    ax2=plt.subplot(2,1,2)
-    df_v5b[['HS1','HS2']].plot(ax=ax2)
-    ax1.set_title(site)
-    print(wtf)
+    # plt.figure()
+    # ax1=plt.subplot(2,1,1)
+    # df_v5b[['HW1','HW2']].plot(ax=ax1)
+    # ax2=plt.subplot(2,1,2)
+    # df_v5b[['HS1','HS2']].plot(ax=ax2)
+    # ax1.set_title(site)
+    # print(wtf)
 
     if df_v5b[[v for v in df_v5b.columns if 'TS' in v]].notnull().any().any():
         df_v6 = ptb.therm_depth(df_v5b, site)
