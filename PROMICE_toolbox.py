@@ -739,9 +739,18 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         df["SHF"], df["LHF"] = jaws_tools.gradient_fluxes(df.copy())
     
         # interpolating variables at standard heights
-        df["TA2m"] = extrapolate_temp(df, var=["TA1", "TA2"], target_height=2, max_diff=5)
-        df["RH2m"] = extrapolate_temp(df, var=["RH1", "RH2"], target_height=2, max_diff=10)
-        df["VW10m"] = extrapolate_temp(df, var=["VW1", "VW2"], target_height=10, max_diff=5)
+        df["TA2m"] = extrapolate_variable_standard_height(df, 
+                                                          var=["TA1", "TA2"], 
+                                                          target_height=2, 
+                                                          max_diff=5)
+        df["RH2m"] = extrapolate_variable_standard_height(df, 
+                                                          var=["RH1", "RH2"], 
+                                                          target_height=2, 
+                                                          max_diff=10)
+        df["VW10m"] = extrapolate_variable_standard_height(df, 
+                                                           var=["VW1", "VW2"],
+                                                           target_height=10, 
+                                                           max_diff=10)
     
         df.loc[df['TA2m']>20, 'TA2m'] = np.nan
         df.loc[df['TA2m']<-80, 'TA2m'] = np.nan
@@ -796,17 +805,9 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
 from scipy.interpolate import interp1d
 
-def interpolate_temperature(
-    dates,
-    depth_cor,
-    temp,
-    depth=10,
-    min_diff_to_depth=2,
-    kind="quadratic",
-    title="",
-    plot=True,
-    surface_height=[],
-):
+def interpolate_temperature(dates, depth_cor, temp, depth=10, 
+                            min_diff_to_depth=2, kind="quadratic", title="", 
+                            plot=True, surface_height=[]):
     depth_cor = depth_cor.astype(float)
     df_interp = pd.DataFrame()
     df_interp["date"] = dates
@@ -1249,76 +1250,69 @@ def sza_saa(df, longitude, latitude):
     return ZenithAngle_deg, DirectionSun_deg
 
 
-def extrapolate_temp(dataframe, var=["TA1", "TA2"], log=False,
+def extrapolate_variable_standard_height(df, var=["TA1", "TA2"], log=False,
                      target_height=2, max_diff=5):
-    ht_low = dataframe["HW1"].copy()
-    ht_high = dataframe["HW2"].copy()
+    ht_low = df["HW1"].copy()  # height of lower level
+    ht_high = df["HW2"].copy()  # height of upper level
     if log:
         ht_low = np.log(ht_low)
         ht_high = np.log(ht_high) 
         target_height = np.log(target_height)
-    var_low = dataframe[var[0]].copy()
-    var_high = dataframe[var[1]].copy()
+    var_low = df[var[0]].copy()
+    var_high = df[var[1]].copy()
 
     # making sure the level 1 is the lowest and 2 the highest
     ind = ht_high < ht_low
-    ht_low.loc[ind] = dataframe["HW2"].values[ind]
-    ht_high.loc[ind] = dataframe["HW1"].values[ind]
-    var_low.loc[ind] = dataframe[var[1]].values[ind]
-    var_high.loc[ind] = dataframe[var[0]].values[ind]
+    ht_low.loc[ind] = df["HW2"].values[ind]
+    ht_high.loc[ind] = df["HW1"].values[ind]
+    var_low.loc[ind] = df[var[1]].values[ind]
+    var_high.loc[ind] = df[var[0]].values[ind]
 
     msk = (
-        var_low.notnull()
-        & var_high.notnull()
-        & ht_low.notnull()
-        & ht_high.notnull()
+        (var_low+var_high+ht_low+ht_high).notnull()
         & ((var_low - var_high) != 0)
         & ((ht_low - ht_high) != 0)
     )
-    target_temp = ht_low * np.nan
+    if log:
+        # if we assume a logarithmic profile, then we can only use timestamps
+        # where wind speed is lower at the lower level than at the upper level 
+        msk = msk & (var_low <= var_high)
+    extrapolated_var = ht_low * np.nan
 
-    target_temp.loc[msk] = var_low.loc[msk] + (
+    extrapolated_var.loc[msk] = var_low.loc[msk] + (
         ((var_high.loc[msk] - var_low.loc[msk]) / (ht_high.loc[msk] - ht_low.loc[msk]))
         * (target_height - ht_low.loc[msk])
     )
-    diff_1 = (target_temp - var_low).abs()
-    diff_2 = (target_temp - var_high).abs()
-    target_temp.loc[(diff_1 > max_diff) | (diff_2 > max_diff)] = np.nan
-    return target_temp
-# def WindProfile(Z1, Z2, U1, U2):
-
-#     MaxWindSPD = 35    # Maximum Wind Speed allowed on Synthetic Wind Speed (m/s).
-#     Z0 = 0.01          # Surface Roughness (m)
-#     U0 = 0             # Wind velocity @ Z0 (m/sec)
-#     R2Limit = 0.97     # R^2 Limit for the acceptance of the logarithmic wind profile.
     
-#     WindSlope = 0.12
-#     WindOffset = 0.4
+    extrapolated_var.loc[extrapolated_var<0] = np.nan   
+    extrapolated_var.loc[extrapolated_var>35] = np.nan   
+    # filter on difference between the extrapolated value and the original measurement
+    diff_1 = (extrapolated_var - var_low).abs()
+    diff_2 = (extrapolated_var - var_high).abs()
+    extrapolated_var.loc[(diff_1 > max_diff) | (diff_2 > max_diff)] = np.nan   
+    
+    if log & (target_height == np.log(10)):
+        # if we deal with wind extrapolation, we fill the gaps in extrapolated
+        # 10 m wind speed by a theoretical extrapolation to 10 m using a log
+        # profile and a roughness length of 0.01 m
+        Z0 = 0.01          # Surface Roughness (m)
+        # theoretical U10m from lower level
+        U10m_theoretical = pd.DataFrame()
+        U10m_theoretical['from_low'] = var_low * np.log(10/Z0)/np.log(np.exp(ht_low)/Z0)
+        # theoretical U10m from upper level
+        U10m_theoretical['from_high'] = var_high * np.log(10/Z0)/np.log(np.exp(ht_high)/Z0)
+        U10m_theoretical.loc[U10m_theoretical.from_low<0, 'from_low'] = np.nan
+        U10m_theoretical.loc[U10m_theoretical.from_low>35, 'from_low'] = np.nan
+        U10m_theoretical.loc[U10m_theoretical.from_high<0, 'from_high'] = np.nan
+        U10m_theoretical.loc[U10m_theoretical.from_high>35, 'from_high'] = np.nan
         
-#     # case when U2 is missing
-#     U2m = U1 * log(2/Z0)/log(Z1/Z0)
-#     U10m = U1 * log(10/Z0)/log(Z1/Z0)
-    
-#     # case when U1 is missing
-#     U2m = U2 * log(2/Z0)/log(Z2/Z0)
-#     U10m = U2 * log(10/Z0)/log(Z2/Z0)
-
-#     #case where both are available
-#     x = np.array([Z0, Z1, Z2])
-#     y = np.array([U0, U1, U2])
-
-#     slope, intercept, R2, _, _ = scipy.stats.linregress(np.log(x), y)
-    
-#     # Step 4: Calculates the 2m & 10m Wind Velocities
-#     if R2 >= R2Limit
-#         U2m = slope*log(2)+intercept
-#         U10m = slope*log(10)+intercept
-
-# Filter frozen values
-from scipy.ndimage import binary_dilation
+        extrapolated_var.loc[extrapolated_var.isnull()] = \
+            U10m_theoretical.from_high.combine_first(U10m_theoretical.from_low).loc[extrapolated_var.isnull()]
+    return extrapolated_var
 
 
 def filter_zero_gradient(df_out):
+    # Filter frozen values
     # default settings:
     thresh = 0.000001
     length_frozen = 6
