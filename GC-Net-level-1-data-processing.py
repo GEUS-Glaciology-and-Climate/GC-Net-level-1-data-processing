@@ -50,7 +50,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
-site_list = site_list.loc[site_list.Name.values == 'NASA-SE',:]
+# site_list = site_list.loc[site_list.Name.values == 'NASA-SE',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")

@@ -19,27 +19,16 @@ from os import path
 os.chdir('..')
 
 name_alias = {
-    "CP1": "Crawford Point 1",
-    "DY2": "DYE2",
-    "EGP": "E-GRIP",
-    "NAU": "NASA-U",
-    "HUM": "Humboldt",
-    "SUM": "Summit",
-    "GIT": "GITS",
-    "JR3": "JAR3",
-    "NSE": "NASA-SE",
-    "TUN": "Tunu-N",
-    "JAR": "JAR1",
-    "JR2": "JAR2",
-    "NAE": "NASA-E",
-    "SDM": "South Dome",
-    "NEM": "NEEM",
-    "SWC": "Swiss Camp",
-    "SW1": "Swiss Camp 10m",
-    "SDL": "Saddle",
-    "NGP": "NGRIP",
-    "PET": "Petermann ELA",
-    "CP2": "CP2",
+    "CP1": "Crawford Point 1", "DY2": "DYE2",
+    "EGP": "E-GRIP", "NAU": "NASA-U",
+    "HUM": "Humboldt", "SUM": "Summit",
+    "GIT": "GITS", "JR3": "JAR3",
+    "NSE": "NASA-SE", "TUN": "Tunu-N",
+    "JAR": "JAR1", "JR2": "JAR2",
+    "NAE": "NASA-E", "SDM": "South Dome",
+    "NEM": "NEEM", "SWC": "Swiss Camp",
+    "SW1": "Swiss Camp 10m", "SDL": "Saddle",
+    "NGP": "NGRIP", "PET": "Petermann ELA", "CP2": "CP2",
 }
 
 site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=True)

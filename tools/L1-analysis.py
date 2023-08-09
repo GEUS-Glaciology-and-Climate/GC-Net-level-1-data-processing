@@ -20,13 +20,13 @@ from os import path
 from matplotlib.dates import DateFormatter
 import matplotlib.dates as mdates
 import requests
-import tocgen
 
 os.chdir('..')
+import tocgen
 
 # %% L0 overview
 path_to_L0N = "L0M/"
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=True)
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=True)
 f = open("out/L0_overview.md", "w")
 def Msg(txt):
     f = open("out/L0_overview.md", "a")
