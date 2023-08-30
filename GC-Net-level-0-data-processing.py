@@ -37,7 +37,7 @@ else:
 # %% Loop through each station, read pandas dataframe and do the merging
 metadata = pd.read_csv('L1/GC-Net_location.csv', skipinitialspace=True)
 
-for i in len(L0dirs)):  #range(8,9):
+for i in range(len(L0dirs)):
     print("--------------------------------")
     print("Now Processing Directory: ", L0dirs[i])
     # the file structure of raw campbell data files
