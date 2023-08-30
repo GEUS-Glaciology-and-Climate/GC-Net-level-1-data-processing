@@ -122,7 +122,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         )
 tocgen.processFile("out/L0_overview.md", "out/L0_overview_toc.md")
 # %% L1 overview
-site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)[24:25]
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)
 # f = open("out/L1_overview.md", "w")
 def Msg(txt):
     f = open("out/L1_overview.md", "a")
@@ -265,7 +265,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 # tocgen.processFile("out/L1_overview.md", "out/L1_overview_toc.md")
 
 # %% data availability
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)
 fig, ax = plt.subplots(1,1, figsize=(9,12))
 plt.subplots_adjust(
         left=0.27, right=0.97, top=0.98, bottom=0.1, wspace=0.2, hspace=0.05
@@ -275,7 +275,7 @@ col = ['tab:orange', 'tab:red','tab:blue', 'tab:pink',]
 xtick_loc = np.array([1.5])
 for site, ID in zip(site_list.Name, site_list.ID):
     site = site.replace(" ", "")
-    filename = "L1/" + str(ID).zfill(2) + "-" + site + "_daily.csv"
+    filename = "L1/daily/" + site + "_daily.csv"
     if not path.exists(filename):
         print("Warning: No file for station " + str(ID) + " " + site)
         continue
