@@ -147,7 +147,7 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
     OUTPUTS:
         promice_data: Dataframe containing PROMICE data for the desired settings [DataFrame]
     """
-    
+    Msg(" ")
     df = df1.copy()
     df_out = df2.copy()
     
@@ -263,6 +263,7 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
                 + "](../figures/L1_data_treatment/" + site.replace(" ", "")
                 + "_" + var + ".jpeg)")
 
+    Msg(" ")
 
 def remove_flagged_data(df):
     """
