@@ -9,6 +9,20 @@
 ![](../figures/L0_diagnostic/1_SwissCamp_3.png)
 ![](../figures/L0_diagnostic/1_SwissCamp_4.png)
 ![](../figures/L0_diagnostic/1_SwissCamp_5.png)
+# 2 Crawford Point 1
+![](../figures/L0_diagnostic/2_CrawfordPoint1_0.png)
+![](../figures/L0_diagnostic/2_CrawfordPoint1_1.png)
+![](../figures/L0_diagnostic/2_CrawfordPoint1_2.png)
+![](../figures/L0_diagnostic/2_CrawfordPoint1_3.png)
+![](../figures/L0_diagnostic/2_CrawfordPoint1_4.png)
+![](../figures/L0_diagnostic/2_CrawfordPoint1_5.png)
+# 13 CP2
+![](../figures/L0_diagnostic/13_CP2_0.png)
+![](../figures/L0_diagnostic/13_CP2_1.png)
+![](../figures/L0_diagnostic/13_CP2_2.png)
+![](../figures/L0_diagnostic/13_CP2_3.png)
+![](../figures/L0_diagnostic/13_CP2_4.png)
+![](../figures/L0_diagnostic/13_CP2_5.png)
 # 9 JAR1
 ![](../figures/L0_diagnostic/9_JAR1_0.png)
 ![](../figures/L0_diagnostic/9_JAR1_1.png)
@@ -30,20 +44,6 @@
 ![](../figures/L0_diagnostic/19_JAR3_3.png)
 ![](../figures/L0_diagnostic/19_JAR3_4.png)
 ![](../figures/L0_diagnostic/19_JAR3_5.png)
-# 2 Crawford Point 1
-![](../figures/L0_diagnostic/2_CrawfordPoint1_0.png)
-![](../figures/L0_diagnostic/2_CrawfordPoint1_1.png)
-![](../figures/L0_diagnostic/2_CrawfordPoint1_2.png)
-![](../figures/L0_diagnostic/2_CrawfordPoint1_3.png)
-![](../figures/L0_diagnostic/2_CrawfordPoint1_4.png)
-![](../figures/L0_diagnostic/2_CrawfordPoint1_5.png)
-# 13 CP2
-![](../figures/L0_diagnostic/13_CP2_0.png)
-![](../figures/L0_diagnostic/13_CP2_1.png)
-![](../figures/L0_diagnostic/13_CP2_2.png)
-![](../figures/L0_diagnostic/13_CP2_3.png)
-![](../figures/L0_diagnostic/13_CP2_4.png)
-![](../figures/L0_diagnostic/13_CP2_5.png)
 # 3 NASA-U
 ![](../figures/L0_diagnostic/3_NASA-U_0.png)
 ![](../figures/L0_diagnostic/3_NASA-U_1.png)
