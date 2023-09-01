@@ -22,11 +22,4 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2014-01-01T00:00:00+00:00,,DW1,rotate,30,Manually filtered by bav
 2019-05-22T00:00:00+00:00,,DW1,rotate,185,Manually filtered by bav
 
-2016-04-01T00:00:00+00:00, 2016-10-01T00:00:00+00:00, P, biweekly_upper_range_filter,0.8,Manually filtered by bav
-2017-04-01T00:00:00+00:00, 2017-10-01T00:00:00+00:00, P, biweekly_upper_range_filter,0.8,Manually filtered by bav
-2018-04-01T00:00:00+00:00, 2018-10-01T00:00:00+00:00, P, biweekly_upper_range_filter,0.8,Manually filtered by bav
-2019-04-01T00:00:00+00:00, 2019-10-01T00:00:00+00:00, P, biweekly_upper_range_filter,0.8,Manually filtered by bav
-2020-04-01T00:00:00+00:00, 2020-10-01T00:00:00+00:00, P, biweekly_upper_range_filter,0.8,Manually filtered by bav
-2021-04-01T00:00:00+00:00, 2021-10-01T00:00:00+00:00, P, biweekly_upper_range_filter,0.8,Manually filtered by bav
-
-2021-11-01T00:00:00+00:00, 2022-04-20T00:00:00+00:00, TA1, min_filter,-40, Comfirmed bav
+2016-04-01T00:00:00+00:00, 2021-10-01T00:00:00+00:00, P, hampel_filter,10,Manually filtered by bav

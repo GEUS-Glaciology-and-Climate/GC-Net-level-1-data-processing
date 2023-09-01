@@ -5,8 +5,8 @@ t0,t1,variable,flag,comment,URL_graphic
 
 2011-01-01T00:00:00+00:00,2016-07-01T00:00:00+00:00,P,CHECKME,Manually flagged by bav,
 2017-08-01T00:00:00+00:00,2018-12-31T00:00:00+00:00,P,CHECKME,Manually flagged by bav,
-2017-10-01T00:00:00+00:00,2018-07-01T00:00:00+00:00,RH2,CHECKME,Manually flagged by bav,
-2011-01-01T00:00:00+00:00,2012-07-01T00:00:00+00:00,RH2,CHECKME,Manually flagged by bav,
+2011-01-01T00:00:00+00:00,2012-05-09T00:00:00+00:00,RH2,CHECKME,Manually flagged by bav,
+2017-12-12T00:00:00+00:00,2018-05-23T00:00:00+00:00,RH2,CHECKME,Manually flagged by bav,
 
 
 2009-04-01T00:00:00+00:00,2009-04-24T21:00:00+00:00,HW1,NAN,Manually flagged by bav,
@@ -31,4 +31,10 @@ t0,t1,variable,flag,comment,URL_graphic
 2006-04-26T00:00:00+00:00,2007-04-28T00:00:00+00:00,^TS[^_]+$,CHECKME,Manually flagged by bav,
 
 2002-01-01T00:00:00+00:00, ,NR, NAN, unrealisitic values (bav),
+
+# lower boom buried, one sonic ranger at the upper boom and another one at the top of the station
+2022-09-24T00:00:00+00:00, ,TA1 TA3 RH1 VW1 DW1 VW2 DW2, NAN, lower boom buried (bav),
+
+
+
 

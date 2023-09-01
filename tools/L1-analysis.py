@@ -526,8 +526,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # print('![](figures/L1_overview/air temperature diagnostic/'+str(ID)+'_'+site+'_temperature.png)')
 
     # %% Time shift search
-plt.close("all")
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)
+# plt.close("all")
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)
 from pandas.tseries.offsets import DateOffset
 
 for site, ID in zip(site_list.Name, site_list.ID):

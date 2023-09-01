@@ -17,7 +17,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20130604T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 20180101T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 
-2012-05-09T00:00:00+00:00,,RH1,swap_with_RH2, 0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/110
+2012-05-09T00:00:00+00:00, 2018-05-23T00:00:00+00:00,RH1,swap_with_RH2, 0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/110
 
 2017-12-15T00:00:00+00:00, 2018-02-16T00:00:00+00:00,TA1, min_filter, -56.6, Manually filtered by bav
 
@@ -30,33 +30,36 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 1999-05-14T00:00+00:00,2000-01-01T00:00+00:00,P,add,-30,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
 2000-01-01T00:00+00:00,2005-05-26T00:00+00:00,P,add,-15,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
-2016-07-01T00:00+00:00,,P,add,-40,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
-2021-08-17T00:00:00+00:00,2022-05-17T00:00:00+00:00,P,add,45,to ensure continuity
+2016-07-01T00:00+00:00, ,P,add,-40,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
 
 # air temp correction on HW1 and HW2
 2011-05-31T21:00:00+00:00,,HW1,air_temp_sonic_correction,0,
 2011-05-31T21:00:00+00:00,,HW2,air_temp_sonic_correction,0,
 
+# SR50 are respectively 80cm and 50 cm higher than their respective level
+1990-01-01T00:00:00+00:00, , HW1, add,-0.8, Manually adjusted by bav
+1990-01-01T00:00:00+00:00, , HW2, add,-0.5, Manually adjusted by bav
+
 # filters on HW1 and HW2
-2007-02-12T00:00:00+00:00, 2007-04-16T00:00:00+00:00,HW1, min_filter, 3.2,Manually filtered by bav
-2007-08-01T00:00:00+00:00, 2007-12-16T00:00:00+00:00,HW1, min_filter, 2.75,Manually filtered by bav
-2008-02-01T00:00:00+00:00, 2008-04-30T00:00:00+00:00,HW1, min_filter, 2.46,Manually filtered by bav
-2013-07-01T00:00:00+00:00, 2014-07-01T00:00:00+00:00,HW1, min_filter, 3,Manually filtered by bav
-2011-04-01T00:00:00+00:00, 2023-01-01T00:00:00+00:00,HW1, min_filter, 1.39,Manually filtered by bav
-2016-10-15T00:00:00+00:00, 2016-11-15T00:00:00+00:00,HW1, min_filter, 1.78,Manually filtered by bav
-2016-10-15T00:00:00+00:00, 2016-11-15T00:00:00+00:00,HW1, max_filter, 1.87,Manually filtered by bav
+2007-02-12T00:00:00+00:00, 2007-04-16T00:00:00+00:00,HW1, min_filter, 2.4,Manually filtered by bav
+2007-08-01T00:00:00+00:00, 2007-12-16T00:00:00+00:00,HW1, min_filter, 1.95,Manually filtered by bav
+2008-02-01T00:00:00+00:00, 2008-04-30T00:00:00+00:00,HW1, min_filter, 1.66,Manually filtered by bav
+2013-07-01T00:00:00+00:00, 2014-07-01T00:00:00+00:00,HW1, min_filter, 3, Manually filtered by bav
+2016-10-15T00:00:00+00:00, 2016-11-15T00:00:00+00:00,HW1, min_filter, 0.98,Manually filtered by bav
+2016-10-15T00:00:00+00:00, 2016-11-15T00:00:00+00:00,HW1, max_filter, 1.07,Manually filtered by bav
+2021-10-15T00:00:00+00:00, ,HW1, max_filter, 1.5,Manually filtered by bav
 
-2007-02-12T00:00:00+00:00, 2007-04-16T00:00:00+00:00,HW2, min_filter, 4.3, Manually filtered by bav
-2007-08-01T00:00:00+00:00, 2007-12-16T00:00:00+00:00,HW2, min_filter, 3.72, Manually filtered by bav
-2008-02-01T00:00:00+00:00, 2008-04-30T00:00:00+00:00,HW2, min_filter, 3.44, Manually filtered by bav
-2011-05-31T21:00:00+00:00, 2023-01-01T00:00:00+00:00,HW2, min_filter, 2.23, Manually filtered by bav
-2011-05-31T21:00:00+00:00, 2023-01-01T00:00:00+00:00,HW2, max_filter, 5.6, Manually filtered by bav
+2007-02-12T00:00:00+00:00, 2007-04-16T00:00:00+00:00,HW2, min_filter, 3.2, Manually filtered by bav
+2007-08-01T00:00:00+00:00, 2007-12-16T00:00:00+00:00,HW2, min_filter, 3.22, Manually filtered by bav
+2008-02-01T00:00:00+00:00, 2008-04-30T00:00:00+00:00,HW2, min_filter, 3, Manually filtered by bav
+2011-05-31T21:00:00+00:00, 2023-01-01T00:00:00+00:00,HW2, min_filter, 1, Manually filtered by bav
+2011-05-31T21:00:00+00:00, 2023-01-01T00:00:00+00:00,HW2, max_filter, 5.1, Manually filtered by bav
 
-2011-05-31T21:00:00+00:00,2016-10-09T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.3,Manually filtered by bav
+2011-05-31T21:00:00+00:00, 2016-10-09T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.3,Manually filtered by bav
 2018-05-21T00:00:00+00:00, ,HW1,biweekly_upper_range_filter,0.3,Manually filtered by bav
-2011-05-31T21:00:00+00:00,,HW2,biweekly_upper_range_filter,0.3,Manually filtered by bav
+2011-05-31T21:00:00+00:00, ,HW2,biweekly_upper_range_filter,0.3,Manually filtered by bav
 
-2001-05-31T21:00:00+00:00,,HW1,hampel_filter,3,Manually filtered by bav
+2001-05-31T21:00:00+00:00, ,HW1,hampel_filter,3,Manually filtered by bav
 2001-05-31T21:00:00+00:00,,HW2,hampel_filter,3,Manually filtered by bav
 
 2003-01-01T00:00:00+00:00,2018-05-22T00:00:00+00:00,OSWR,multiply,2.76205,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/55

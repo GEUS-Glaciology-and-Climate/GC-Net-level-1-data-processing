@@ -6,7 +6,6 @@ t0,t1,variable,flag,comment,URL_graphic
 2011-01-01T00:00:00+00:00,2013-01-01T00:00:00+00:00,TA4,CHECKME,Manually flagged by bav,
 
 2014-01-01T00:00:00+00:00,2014-04-26T00:00:00+00:00,ISWR,CHECKME,Manually flagged by bav,
-2014-01-01T00:00:00+00:00,2014-04-26T00:00:00+00:00,OSWR,CHECKME,Manually flagged by bav,
 
 2011-06-10T00:00:00+00:00,2013-05-23T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
 2017-01-16T00:00:00+00:00,2017-01-30T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
@@ -20,3 +19,6 @@ t0,t1,variable,flag,comment,URL_graphic
 
 2020-01-10T00:00:00+00:00, , HW1,CHECKME,Manually flagged by bav,
 2020-01-10T00:00:00+00:00, , HW2,CHECKME,Manually flagged by bav,
+2015-05-21T00:00:00+00:00, , NR, NAN, unlikely values and found broken in 2023 (bav),
+
+, 1996-05-18T12:00:00+00:00, ^TS[^_]+$, NAN, intruments equilibrating with firn (bav),
