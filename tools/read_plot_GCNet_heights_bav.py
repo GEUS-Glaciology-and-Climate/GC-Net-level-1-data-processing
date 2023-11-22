@@ -37,7 +37,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'NASA-SE',:]
+site_list = site_list.loc[site_list.Name.values == 'Summit',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
@@ -202,6 +202,11 @@ for site, ID in zip(site_list.Name, site_list.ID):
         bbox_inches="tight",
         dpi=250,
     )
+    plt.savefig(
+        "./" + site.replace(" ", "") + "_height_comparison.pdf", format='pdf',
+        bbox_inches="tight",
+    )
+    
     print(
         "![](../figures/L1_overview/instrument_height_assessment/"
         + site.replace(" ", "")

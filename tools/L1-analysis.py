@@ -21,7 +21,7 @@ from matplotlib.dates import DateFormatter
 import matplotlib.dates as mdates
 import requests
 
-os.chdir('..')
+# os.chdir('..')
 import tocgen
 
 # %% L0 overview
@@ -299,21 +299,24 @@ for site, ID in zip(site_list.Name, site_list.ID):
         tmp[tmp==0] = np.nan
         plt.plot(tmp.index, tmp.values, color = col[i], marker='s',markersize=2)
         count = count+1
+
 plt.yticks(np.arange(len(site_list.Name))*(-4) - 1.5,
            site_list.Name, fontsize=18)
 plt.xticks([pd.to_datetime(str(y)) for y in range(1990,2025,5)],
            [(str(y)) for y in range(1990,2025,5)], 
            fontsize=18)
+from matplotlib.ticker import (MultipleLocator, AutoMinorLocator)
 plt.plot(np.nan,np.nan, color = col[0], label='shortwave irradiance', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[1], label='temperature', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[2], label='humidity', linewidth = 4.5)
 plt.plot(np.nan,np.nan, color = col[3], label='wind', linewidth = 4.5)
 plt.legend(loc='lower left')
 plt.grid(axis='x')
-plt.minorticks_on()
+plt.gca().xaxis.set_minor_locator(AutoMinorLocator(5))
+
 plt.grid(which='minor', color='lightgray', linestyle=':')
 plt.ylim(-count+1/4, 1)
-plt.xlim(pd.to_datetime('1990'),pd.to_datetime('2023'))
+plt.xlim(pd.to_datetime('1990'),pd.to_datetime('2024'))
 plt.xlabel('Year')
 plt.tick_params(labelbottom=True, which="both", labeltop=True, bottom=True, top=True)
 for y in np.arange(len(site_list.Name))*(-4) - 3.65:
@@ -322,6 +325,10 @@ fig.savefig(
     "figures/L1_overview/data_availability.png",
     bbox_inches="tight",
     dpi=300
+)
+fig.savefig(
+    "./Figure8.tif",dpi=900,
+    bbox_inches="tight",
 )
 
 # %% L1 temperature overview
@@ -772,6 +779,7 @@ fig.text(0.02, 0.5,
     rotation="vertical",
 )
 fig.savefig("figures/L1_overview/HS_overview_accum.png", bbox_inches="tight", dpi=300)
+fig.savefig("./HS_overview_accum.pdf", bbox_inches="tight")
 
 # plt.close('all')
 site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=(True))
@@ -834,6 +842,7 @@ fig.text(0.02, 0.5,
     rotation="vertical",
 )
 fig.savefig("figures/L1_overview/HS_overview_abl.png", bbox_inches="tight", dpi=300)
+fig.savefig("./HS_overview_abl.pdf", bbox_inches="tight")
 
 # %% Ablation JAR transect
 
