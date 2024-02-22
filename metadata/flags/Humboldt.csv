@@ -1,5 +1,5 @@
 t0,t1,variable,flag,comment,URL_graphic
-1990-01-01T00:00:00+00:00,1996-07-01T00:00:00+00:00,TA1,CHECKME,Manually flagged by bav,
+1990-01-01T00:00:00+00:00,1996-07-01T00:00:00+00:00,TA1 RH1 RH2,CHECKME,Manually flagged by bav,
 2007-03-01T00:00:00+00:00,2007-05-04T00:00:00+00:00,TA3,CHECKME,Manually flagged by bav,
 2007-01-01T00:00:00+00:00,2009-01-01T00:00:00+00:00,HW1,CHECKME,Manually flagged by bav,
 2007-01-01T00:00:00+00:00,2009-01-01T00:00:00+00:00,HW2,CHECKME,Manually flagged by bav,
@@ -7,4 +7,4 @@ t0,t1,variable,flag,comment,URL_graphic
 2020-02-17T18:00:00+00:00, ,HW2,CHECKME,Manually flagged by bav,
 2019-01-01T00:00:00+00:00, ,NR,NAN,Manually flagged by bav,
 
-2010-05-18T00:00:00+00:00,2022-01-01T00:00:00+00:00,^TS[^_]+$,CHECKME,Manually flagged by bav,
+2010-01-01T00:00:00+00:00,2022-01-01T00:00:00+00:00,^TS[^_]+$,CHECKME,Manually flagged by bav,

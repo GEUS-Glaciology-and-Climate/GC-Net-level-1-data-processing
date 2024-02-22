@@ -50,7 +50,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
-# site_list = site_list.loc[site_list.Name.values == 'DYE-2',:]
+site_list = site_list.loc[site_list.Name.values == 'Humboldt',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -111,9 +111,9 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # interpolating short gaps and calculating added variables
     df_v5b = ptb.augment_data(
         df_v5,
-        site_list.loc[site_list.Name == site, "Northing"].values[0],
-        site_list.loc[site_list.Name == site, "Easting"].values[0],
-        site_list.loc[site_list.Name == site, "Elevationm"].values[0],
+        site_list.loc[site_list.Name == site, "Latitude (°N)"].values[0],
+        site_list.loc[site_list.Name == site, "Longitude (°E)"].values[0],
+        site_list.loc[site_list.Name == site, "Elevation (wgs84 m)"].values[0],
         site,
     )
     # plt.figure()

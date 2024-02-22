@@ -799,8 +799,8 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     except:
         df_pos = pd.read_csv( 'L1/GC-Net_location.csv', skipinitialspace=True)
         df_pos['Name'] = df_pos.Name.str.replace(' ','')
-        df['Lat'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Northing'].values[0]
-        df['Lon'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Easting'].values[0]
+        df['Lat'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Latitude (°N)'].values[0]
+        df['Lon'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Longitude (°E)'].values[0]
         
     return df
 
