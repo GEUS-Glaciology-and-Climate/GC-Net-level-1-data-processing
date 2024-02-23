@@ -11,16 +11,13 @@ t0,t1,variable,flag,comment,URL_graphic
 2016-10-11T00:00:00+00:00,2018-05-15T00:00:00+00:00,HW2,NAN,Manually flagged by bav,
 2018-09-15T00:00:00+00:00, ,HW1,NAN,Manually flagged by bav,
 
+1999-01-01T00:00:00+00:00,2002-01-01T00:00:00+00:00,P,NAN,Manually flagged by bav,
 2011-05-25T00:00:00+00:00,2013-01-01T00:00:00+00:00,P,NAN,Manually flagged by bav,
 
-2006-06-28T00:00:00+00:00, 2007-07-05T00:00:00+00:00,TA1,NAN,Manually flagged by bav,
-2006-06-28T00:00:00+00:00, 2007-07-05T00:00:00+00:00,TA3,NAN,Manually flagged by bav,
-2006-06-28T00:00:00+00:00, 2007-07-05T00:00:00+00:00,RH1,NAN,Manually flagged by bav,
+1990-01-01T00:00:00+00:00,1996-07-01T00:00:00+00:00,TA1 RH1 RH2,CHECKME,Manually flagged by bav,
+2006-06-28T00:00:00+00:00,2007-07-05T00:00:00+00:00,TA1 TA2 RH1,NAN,Manually flagged by bav,
 2013-09-04T00:00:00+00:00,2014-05-21T00:00:00+00:00,TA1,NAN,Manually flagged by bav,
-
-2010-01-01T00:00:00+00:00,2012-05-26T00:00:00+00:00,TA1,NAN,Manually flagged by bav,
-2010-01-01T00:00:00+00:00,2012-05-26T00:00:00+00:00,TA2,NAN,Manually flagged by bav,
-2010-01-01T00:00:00+00:00,2012-05-26T00:00:00+00:00,TA3,NAN,Manually flagged by bav,
+2010-01-01T00:00:00+00:00,2012-05-26T00:00:00+00:00,TA1 TA2 TA3,NAN,Manually flagged by bav,
 2014-04-15T00:00:00+00:00,2014-05-21T00:00:00+00:00,TA3,NAN,Manually flagged by bav,
 
 2010-01-01T00:00:00+00:00,2012-05-26T00:00:00+00:00,RH1,NAN,Manually flagged by bav,
@@ -37,13 +34,10 @@ t0,t1,variable,flag,comment,URL_graphic
 2014-01-01T00:00:00+00:00,2014-04-26T00:00:00+00:00,ISWR,NAN,Manually flagged by bav,
 
 2010-01-01T00:00:00+00:00, ,^TS[^_]+$,NAN,Manually flagged by bav,
+2005-01-01T00:00:00+00:00, ,TS2 TS3 TS4,NAN,Manually flagged by bav,
 
 2019-10-28T00:00:00+00:00,,DW2,NAN,Manually flagged by bav,
-2020-08-10T00:00:00+00:00,,ISWR,NAN,Manually flagged by bav,
-2020-08-10T00:00:00+00:00,,OSWR,NAN,Manually flagged by bav,
+2020-08-10T00:00:00+00:00,,ISWR OSWR,NAN,Manually flagged by bav,
 
-2020-08-29T00:00:00+00:00,,TA1,NAN,TA1 and TA2 dampened,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/94
-2020-08-29T00:00:00+00:00,,TA2,NAN,TA1 and TA2 dampened,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/94
-2020-08-29T00:00:00+00:00,,TA3,NAN,TA1 and TA2 dampened,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/94
-2020-08-29T00:00:00+00:00,,RH2,NAN,TA1 and TA2 dampened,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/94
+2020-08-29T00:00:00+00:00,,TA1 TA2 TA3 RH2,NAN,TA1 and TA2 dampened,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/94
 
