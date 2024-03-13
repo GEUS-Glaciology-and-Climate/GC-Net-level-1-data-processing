@@ -18,6 +18,7 @@ import warnings
 import jaws_tools
 import nead
 warnings.filterwarnings("ignore", category=RuntimeWarning)
+from sklearn.linear_model import LinearRegression
 
 
 def field_info(fields):
@@ -792,7 +793,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     # adding latitude and longitude fields           
     try:
         if os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv'):
-            df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv')
+            df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated_with_elev.csv')
         else:
             df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv')
         df_pos.date = pd.to_datetime(df_pos.date, utc=True)
@@ -800,7 +801,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         
         df['latitude'] =np.nan
         df['longitude'] =np.nan
-        # df['latitude'] =np.nan
+        df['elevation'] =np.nan
         
         if (df_pos.index[-1] < df.index[-1]) | (df_pos.index[0] > df.index[0]):
             df_pos = pd.concat((df.loc[df.index[0]:df_pos.index[0]-pd.to_timedelta('1H'), df.columns[0]],
@@ -808,7 +809,6 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                         df.loc[df_pos.index[-1]+pd.to_timedelta('1H'):df.index[-1], 
                               df.columns[0]]))[df_pos.columns]
             
-            from sklearn.linear_model import LinearRegression
             def extrapolate(df, y_col):
                 df_ = df[[y_col]].dropna()
                 return LinearRegression().fit(
@@ -832,10 +832,9 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         
     except Exception as e:
         print(e)
-        df_pos = pd.read_csv( 'L1/GC-Net_location.csv', skipinitialspace=True)
-        df_pos['Name'] = df_pos.Name.str.replace(' ','')
-        df['Lat'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Latitude (°N)'].values[0]
-        df['Lon'] = df_pos.loc[df_pos.Name==site.replace(' ',''),'Longitude (°E)'].values[0]
+        df['latitude'] = latitude
+        df['longitude'] = longitude
+        df['elevation'] = elevation
         
     return df
 

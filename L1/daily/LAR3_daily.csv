@@ -11,7 +11,7 @@
 # field_delimiter = ,
 # 
 # [FIELDS]
-# fields = timestamp,ISWR,OSWR,NR,TA1,TA2,TA3,TA4,RH1,RH2,VW1,VW2,DW1,DW2,P,HS1,HS2,V,TA5,HW1,HW2,NR_cor,HS_combined,SHF,LHF,TA2m,RH2m,VW10m,SZA,SAA,Alb,RH1_cor,Q1,RH2_cor,Q2,Lat,Lon
+# fields = timestamp,ISWR,OSWR,NR,TA1,TA2,TA3,TA4,RH1,RH2,VW1,VW2,DW1,DW2,P,HS1,HS2,V,TA5,HW1,HW2,NR_cor,HS_combined,SHF,LHF,TA2m,RH2m,VW10m,SZA,SAA,Alb,RH1_cor,Q1,RH2_cor,Q2,latitude,longitude
 # add_value = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 # scale_factor = 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 # units = time,W/m^2,W/m^2,W/m^2,DegreesC,DegreesC,DegreesC,DegreesC,%/100,%/100,m/s,m/s,Degrees,Degrees,mbar,m,m,V,DegreesC,m,m,W/m^2,m,W/m^2,W/m^2,DegreesC,%/100,m/s,Degrees,Degrees,-,%/100,g/kg,%/100,g/kg,degN,degE

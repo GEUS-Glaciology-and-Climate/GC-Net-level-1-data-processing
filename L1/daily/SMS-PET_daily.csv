@@ -12,7 +12,7 @@
 # field_delimiter = ,
 # 
 # [FIELDS]
-# fields = timestamp,TA1,TA2,RH1,VW1,DW1,HW1,V,ISWR,OSWR,NR,NR_cor,HS1,SZA,SAA,Alb,RH1_cor,Lat,Lon
+# fields = timestamp,TA1,TA2,RH1,VW1,DW1,HW1,V,ISWR,OSWR,NR,NR_cor,HS1,SZA,SAA,Alb,RH1_cor,latitude,longitude
 # add_value = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 # scale_factor = 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 # units = time,DegreesC,DegreesC,%/100,m/s,Degrees,m,V,W/m^2,W/m^2,W/m^2,W/m^2,m,Degrees,Degrees,-,%/100,degN,degE

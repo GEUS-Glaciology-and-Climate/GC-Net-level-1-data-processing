@@ -162,7 +162,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
         # formatting and saving to file
         df_v6_formatted = df_v6.copy()
-        col = [c for c in df_v6_formatted.columns if c not in ['Lat','Lon','timestamp']]
+        col = [c for c in df_v6_formatted.columns if c not in ['latitude','longitude','timestamp']]
         df_v6_formatted[col] = df_v6_formatted[col].applymap(lambda x: \
                                          '' if np.isnan(x) \
                                              else '0' if abs(x)<0.005 \
@@ -190,7 +190,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         )
         
         # formatting and saving to file
-        col = [c for c in df_v7.columns if c not in ['Lat','Lon','timestamp']]
+        col = [c for c in df_v7.columns if c not in ['latitude','longitude','timestamp']]
         df_v7[col] = df_v7[col].applymap(lambda x: \
                                          '' if np.isnan(x) \
                                              else '0' if abs(x)<0.005 \

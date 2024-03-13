@@ -11,7 +11,7 @@
 # field_delimiter = ,
 # 
 # [FIELDS]
-# fields = timestamp,ISWR,OSWR,NR,TA1,TA2,TA3,TA4,RH1,RH2,VW1,VW2,DW1,DW2,P,HS1,HS2,V,TA5,HW1,HW2,TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8,TS9,TS10,HW1_adj_flag,HW2_adj_flag,NR_cor,HS_combined,SHF,LHF,TA2m,RH2m,VW10m,SZA,SAA,Alb,RH1_cor,Q1,RH2_cor,Q2,Lat,Lon,DTS1,DTS2,DTS3,DTS4,DTS5,DTS6,DTS7,DTS8,DTS9,DTS10,TS_10m
+# fields = timestamp,ISWR,OSWR,NR,TA1,TA2,TA3,TA4,RH1,RH2,VW1,VW2,DW1,DW2,P,HS1,HS2,V,TA5,HW1,HW2,TS1,TS2,TS3,TS4,TS5,TS6,TS7,TS8,TS9,TS10,HW1_adj_flag,HW2_adj_flag,NR_cor,HS_combined,SHF,LHF,TA2m,RH2m,VW10m,SZA,SAA,Alb,RH1_cor,Q1,RH2_cor,Q2,latitude,longitude,DTS1,DTS2,DTS3,DTS4,DTS5,DTS6,DTS7,DTS8,DTS9,DTS10,TS_10m
 # add_value = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 # scale_factor = 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 # units = time,W/m^2,W/m^2,W/m^2,DegreesC,DegreesC,DegreesC,DegreesC,%/100,%/100,m/s,m/s,Degrees,Degrees,mbar,m,m,V,DegreesC,m,m,DegreesC,DegreesC,DegreesC,DegreesC,DegreesC,DegreesC,DegreesC,DegreesC,DegreesC,DegreesC,-,-,W/m^2,m,W/m^2,W/m^2,DegreesC,%/100,m/s,Degrees,Degrees,-,%/100,g/kg,%/100,g/kg,degN,degE,m,m,m,m,m,m,m,m,m,m,DegreesC
