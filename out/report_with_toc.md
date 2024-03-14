@@ -4,21 +4,21 @@
 * [1 Swiss Camp](#s2)
   * [Manual flagging of data at Swiss Camp](#s2-1)
   * [Adjusting data at Swiss Camp](#s2-2)
-* [9 JAR1](#s3)
-  * [Manual flagging of data at JAR1](#s3-1)
-  * [Adjusting data at JAR1](#s3-2)
-* [17 JAR2](#s4)
-  * [Manual flagging of data at JAR2](#s4-1)
-  * [Adjusting data at JAR2](#s4-2)
-* [19 JAR3](#s5)
-  * [Manual flagging of data at JAR3](#s5-1)
-  * [Adjusting data at JAR3](#s5-2)
-* [2 Crawford Point 1](#s6)
-  * [Manual flagging of data at Crawford Point 1](#s6-1)
-  * [Adjusting data at Crawford Point 1](#s6-2)
-* [13 CP2](#s7)
-  * [Manual flagging of data at CP2](#s7-1)
-  * [Adjusting data at CP2](#s7-2)
+* [2 Crawford Point 1](#s3)
+  * [Manual flagging of data at Crawford Point 1](#s3-1)
+  * [Adjusting data at Crawford Point 1](#s3-2)
+* [13 CP2](#s4)
+  * [Manual flagging of data at CP2](#s4-1)
+  * [Adjusting data at CP2](#s4-2)
+* [9 JAR1](#s5)
+  * [Manual flagging of data at JAR1](#s5-1)
+  * [Adjusting data at JAR1](#s5-2)
+* [17 JAR2](#s6)
+  * [Manual flagging of data at JAR2](#s6-1)
+  * [Adjusting data at JAR2](#s6-2)
+* [19 JAR3](#s7)
+  * [Manual flagging of data at JAR3](#s7-1)
+  * [Adjusting data at JAR3](#s7-2)
 * [3 NASA-U](#s8)
   * [Manual flagging of data at NASA-U](#s8-1)
   * [Adjusting data at NASA-U](#s8-2)
@@ -152,7 +152,7 @@ Flagging data:
 |2014-01-01 00:00:00+00:00|2019-05-05 00:00:00+00:00|P|add|-96.5|0|
 |1990-06-01 01:00:00+00:00|2005-01-01 00:00:00+00:00|RH1|swap_with_RH2|0.0|38279|
 |2014-01-01 00:00:00+00:00|2020-11-03 21:00:00+00:00|TA1|swap_with_TA2|0.0|0|
-
+ 
 ![Adjusted and flagged data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_ISWR.jpeg)
 ![Adjusted and flagged data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_OSWR.jpeg)
 ![Adjusted and flagged data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_NR.jpeg)
@@ -169,16 +169,17 @@ Flagging data:
 ![Adjusted and flagged data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_HW2.jpeg)
 ![Adjusted and flagged data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_V.jpeg)
 ![Adjusted and flagged data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_TA2.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at Swiss Camp 10m](../figures/L1_data_treatment/SwissCamp10m_HS2.jpeg)
+ 
 # <a id='s2' />1 Swiss Camp
 ## <a id='s2-1' />Manual flagging of data at Swiss Camp
 Flagging data:
@@ -230,7 +231,7 @@ Warning: HS1 not found
 |2005-05-09 00:00:00+00:00|2022-08-03 19:00:00+00:00|RH1|swap_with_RH2|0.0|0|
 |1996-01-01 00:00:00+00:00|2011-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2011-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_ISWR.jpeg)
 ![Adjusted and flagged data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_OSWR.jpeg)
 ![Adjusted and flagged data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_NR.jpeg)
@@ -263,7 +264,7 @@ Warning: HS1 not found
 ![Adjusted and flagged data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_ILWR.jpeg)
 ![Adjusted and flagged data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_Tsurf1.jpeg)
 ![Adjusted and flagged data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_Tsurf2.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1999-01-01 00:00:00+00:00|2022-08-03 19:00:00+00:00|HS1|add|-0.75|0|
@@ -275,367 +276,20 @@ Warning: HS1 not found
 |2004-01-01 00:00:00+00:00|2022-08-03 19:00:00+00:00|HS1|add|-0.5|0|
 |2011-08-01 00:00:00+00:00|2022-08-03 19:00:00+00:00|HS1|add|-3.0|0|
 |2014-05-08 00:00:00+00:00|2022-08-03 19:00:00+00:00|HS1|add|-2.0|0|
-
+ 
 ![Adjusted and flagged data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |2000-12-31 08:00:00+00:00|2022-08-03 19:00:00+00:00|HS2|add|-0.8|0|
 |2001-05-17 17:00:00+00:00|2022-08-03 19:00:00+00:00|HS2|add|-0.3|0|
 |2011-08-01 00:00:00+00:00|2022-08-03 19:00:00+00:00|HS2|add|-3.0|0|
 |2014-05-08 00:00:00+00:00|2022-08-03 19:00:00+00:00|HS2|add|-2.0|0|
-
+ 
 ![Adjusted and flagged data at Swiss Camp](../figures/L1_data_treatment/SwissCamp_HS2.jpeg)
-# <a id='s3' />9 JAR1
-## <a id='s3-1' />Manual flagging of data at JAR1
-Flagging data:
-|start time|end time|variable|
-|-|-|-|
-|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|TA1|
-|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|TA2|
-|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|TA3|
-|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|TA4|
-|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|RH1|
-|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|RH2|
-|2010-10-01 00:00:00+00:00|2011-05-04 00:00:00+00:00|RH1|
-|2010-10-01 00:00:00+00:00|2011-05-04 00:00:00+00:00|RH2|
-|2010-10-01 00:00:00+00:00|2012-05-04 00:00:00+00:00|TA2|
-|2010-10-01 00:00:00+00:00|2011-06-05 00:00:00+00:00|TA4|
-|2010-10-01 00:00:00+00:00|2011-06-05 00:00:00+00:00|TA3|
-|2013-10-01 00:00:00+00:00|2014-10-05 00:00:00+00:00|TA4|
-|2005-05-08 00:00:00+00:00|2005-05-08 21:00:00+00:00|HW2|
-|2011-09-06 00:00:00+00:00|2012-01-30 00:00:00+00:00|HW2|
-|2012-08-01 00:00:00+00:00|2012-08-13 00:00:00+00:00|HW2|
-|2015-08-24 00:00:00+00:00|2015-08-30 00:00:00+00:00|HW2|
-|2011-05-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|HW1|
-|2011-09-09 00:00:00+00:00|2012-01-01 00:00:00+00:00|HW1|
-|2013-07-01 00:00:00+00:00|2013-08-01 00:00:00+00:00|HW1|
-|2011-08-16 00:00:00+00:00|2012-01-01 00:00:00+00:00|ISWR|
-|2011-08-16 00:00:00+00:00|2012-01-01 00:00:00+00:00|OSWR|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|TA1|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|TA2|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|TA3|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|TA4|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|RH1|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|RH2|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|VW1|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|VW2|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|DW1|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|DW2|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|HW1|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|HW2|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|ISWR|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|OSWR|
-|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|NR|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS1|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS2|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS3|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS4|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS5|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS6|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS7|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS8|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS9|
-|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS10|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS1|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS2|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS3|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS4|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS5|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS6|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS7|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS8|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS9|
-|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS10|
-## <a id='s3-2' />Adjusting data at JAR1
-|start time|end time|variable|operation|value|number of removed samples|
-|-|-|-|-|-|-|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|DW1|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|DW1|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|DW2|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|DW2|time_shift|24.0|17|
-|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
-|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW1|hampel_filter|2.0|3173|
-|2009-08-14 00:00:00+00:00|2010-05-01 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.3|468|
-|2010-06-11 00:00:00+00:00|2010-06-21 00:00:00+00:00|HW1|min_filter|2.21|12|
-|2010-07-08 00:00:00+00:00|2010-07-19 00:00:00+00:00|HW1|min_filter|3.35|31|
-|2018-10-01 00:00:00+00:00|2018-10-10 00:00:00+00:00|HW1|min_filter|2.17|16|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|HW1|time_shift|-745.0|553|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|HW1|time_shift|24.0|17|
-|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
-|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|16888|
-|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|hampel_filter|2.0|533|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|HW2|time_shift|-745.0|518|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|HW2|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|ISWR|time_shift|-745.0|554|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|ISWR|time_shift|24.0|16|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|NR|time_shift|-745.0|553|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|NR|time_shift|24.0|14|
-|2009-05-06 00:00:00+00:00|2019-09-08 01:00:00+00:00|OSWR|multiply|0.934|0|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|OSWR|time_shift|-745.0|553|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|OSWR|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|P|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|P|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|RH1|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|RH1|time_shift|24.0|1|
-|2012-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|RH2|swap_with_RH1|0.0|-1670|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|RH2|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|RH2|time_shift|24.0|1|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA1|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA1|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA2|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA2|time_shift|24.0|17|
-|2005-01-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|TA3|swap_with_TA4|0.0|-654|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA3|time_shift|-745.0|555|
-|2018-02-01 00:00:00+00:00|2019-12-20 00:00:00+00:00|TA3|max_filter|9.0|215|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA3|time_shift|24.0|1|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA4|time_shift|-745.0|555|
-|2013-02-01 00:00:00+00:00|2015-12-20 00:00:00+00:00|TA4|max_filter|9.0|3469|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA4|time_shift|24.0|1|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA5|time_shift|-745.0|338|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA5|time_shift|24.0|0|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS1|time_shift|-745.0|211|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS1|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS10|time_shift|-745.0|23|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS10|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS2|time_shift|-745.0|231|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS2|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS3|time_shift|-745.0|4|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS3|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS4|time_shift|-745.0|110|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS4|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS5|time_shift|-745.0|123|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS5|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS6|time_shift|-745.0|19|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS6|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS7|time_shift|-745.0|34|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS7|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS8|time_shift|-745.0|13|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS8|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS9|time_shift|-745.0|60|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS9|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|V|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|V|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|VW1|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|VW1|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|VW2|time_shift|-745.0|555|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|VW2|time_shift|24.0|17|
-
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_ISWR.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_OSWR.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_NR.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA1.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA2.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA3.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA4.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_RH1.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_RH2.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_VW1.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_VW2.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_DW1.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_DW2.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_P.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_HW1.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_HW2.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_V.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA5.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS1.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS2.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS3.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS4.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS5.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS6.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS7.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS8.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS9.jpeg)
-![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS10.jpeg)
-# <a id='s4' />17 JAR2
-## <a id='s4-1' />Manual flagging of data at JAR2
-Flagging data:
-|start time|end time|variable|
-|-|-|-|
-|2011-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|VW1|
-|2011-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|DW1|
-|2012-07-15 00:00:00+00:00|2012-07-17 00:00:00+00:00|HW2|
-|2012-08-16 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|
-|2002-05-07 00:00:00+00:00|2002-05-07 08:00:00+00:00|HW1|
-|2002-05-07 00:00:00+00:00|2002-05-07 08:00:00+00:00|HW2|
-|2004-05-01 00:00:00+00:00|2004-05-27 11:00:00+00:00|HW1|
-|2004-05-01 00:00:00+00:00|2004-05-27 11:00:00+00:00|HW2|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA1|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA2|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA3|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|HW1|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|HW2|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|RH1|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|RH2|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|VW1|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|VW2|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|DW1|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|DW2|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|ISWR|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|OSWR|
-|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|NR|
-|2008-05-07 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA4|
-|2008-05-07 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA3|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS1|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS2|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS3|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS4|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS5|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS6|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS7|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS8|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS9|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS10|
-## <a id='s4-2' />Adjusting data at JAR2
-|start time|end time|variable|operation|value|number of removed samples|
-|-|-|-|-|-|-|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|DW1|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|DW1|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|DW2|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|DW2|time_shift|63.0|0|
-|1999-04-19 00:00:00+00:00|2000-01-01 00:00:00+00:00|HW1|min_filter|0.5|10|
-|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|max_filter|5.9|520|
-|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|min_filter|1.05|4183|
-|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|biweekly_upper_range_filter|0.7|732|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|time_shift|-749.0|1|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|HW1|time_shift|63.0|0|
-|1999-04-19 00:00:00+00:00|2000-01-01 00:00:00+00:00|HW2|min_filter|0.5|10|
-|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|min_filter|0.5|9993|
-|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|max_filter|7.5|58|
-|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|biweekly_upper_range_filter|0.7|3917|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|time_shift|-749.0|1|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|HW2|time_shift|63.0|0|
-|2009-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|ISWR|multiply|0.5|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|ISWR|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|ISWR|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|NR|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|NR|time_shift|63.0|0|
-|2009-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|OSWR|multiply|0.5|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|OSWR|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|OSWR|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|P|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|P|time_shift|63.0|0|
-|2002-05-07 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|swap_with_RH2|0.0|-19|
-|1999-06-02 03:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|ice_to_water|0.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH1|time_shift|63.0|0|
-|1999-06-02 03:00:00+00:00|2013-06-16 08:00:00+00:00|RH2|ice_to_water|0.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH2|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH2|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA1|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA1|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA2|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA2|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA3|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA3|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA4|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA4|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA5|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA5|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS1|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS1|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS10|time_shift|-749.0|0|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS10|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS2|time_shift|-749.0|1|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS2|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS3|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS3|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS4|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS4|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS5|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS5|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS6|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS6|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS7|time_shift|-749.0|0|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS7|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS8|time_shift|-749.0|0|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS8|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS9|time_shift|-749.0|0|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS9|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|V|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|V|time_shift|63.0|0|
-|2004-05-07 00:00:00+00:00|2005-05-14 00:00:00+00:00|VW1|swap_with_VW2|0.0|-459|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|VW1|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|VW1|time_shift|63.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|VW2|time_shift|-749.0|3|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|VW2|time_shift|63.0|0|
-
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_ISWR.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_OSWR.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_NR.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA1.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA2.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA3.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA4.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_RH1.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_RH2.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_VW1.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_VW2.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_DW1.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_DW2.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_P.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_HW1.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_HW2.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_V.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA5.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS1.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS2.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS3.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS4.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS5.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS6.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS7.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS8.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS9.jpeg)
-![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS10.jpeg)
-# <a id='s5' />19 JAR3
-## <a id='s5-1' />Manual flagging of data at JAR3
-Flagging data:
-|start time|end time|variable|
-|-|-|-|
-|2011-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|VW1|
-|2011-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|DW1|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS1|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS2|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS3|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS4|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS5|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS6|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS7|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS8|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS9|
-|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS10|
-## <a id='s5-2' />Adjusting data at JAR3
-|start time|end time|variable|operation|value|number of removed samples|
-|-|-|-|-|-|-|
-|2002-05-06 15:00:00+00:00|2004-05-25 13:00:00+00:00|P|add|70.0|0|
-
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_ISWR.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_OSWR.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_NR.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_TA1.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_TA2.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_TA3.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_TA4.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_RH1.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_RH2.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_VW1.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_VW2.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_DW1.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_DW2.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_P.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_HS1.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_V.jpeg)
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_HW1.jpeg)
-
-|start time|end time|variable|operation|value|number of removed samples|
-|-|-|-|-|-|-|
-
-![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_HS1.jpeg)
-# <a id='s6' />2 Crawford Point 1
-## <a id='s6-1' />Manual flagging of data at Crawford Point 1
+ 
+# <a id='s3' />2 Crawford Point 1
+## <a id='s3-1' />Manual flagging of data at Crawford Point 1
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
@@ -693,7 +347,7 @@ Flagging data:
 |2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TS8|
 |2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TS9|
 |2008-06-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|TS10|
-## <a id='s6-2' />Adjusting data at Crawford Point 1
+## <a id='s3-2' />Adjusting data at Crawford Point 1
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|DW1|time_shift|24.0|19|
@@ -835,7 +489,7 @@ Flagging data:
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|VW2|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|VW2|time_shift|24.0|7|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|VW2|time_shift|180552.0|6431|
-
+ 
 ![Adjusted and flagged data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_ISWR.jpeg)
 ![Adjusted and flagged data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_OSWR.jpeg)
 ![Adjusted and flagged data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_NR.jpeg)
@@ -864,7 +518,7 @@ Flagging data:
 ![Adjusted and flagged data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_TS8.jpeg)
 ![Adjusted and flagged data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_TS9.jpeg)
 ![Adjusted and flagged data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1997-05-13 09:00:00+00:00|2020-07-22 09:00:00+00:00|HS1|add|2.5|0|
@@ -875,9 +529,9 @@ Flagging data:
 |2008-05-05 14:00:00+00:00|2020-07-22 09:00:00+00:00|HS1|add|2.7|0|
 |2011-05-02 23:00:00+00:00|2020-07-22 09:00:00+00:00|HS1|add|2.8|0|
 |2017-05-21 00:00:00+00:00|2020-07-22 09:00:00+00:00|HS1|add|2.0|0|
-
+ 
 ![Adjusted and flagged data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1997-05-13 09:00:00+00:00|2020-07-22 09:00:00+00:00|HS2|add|2.5|0|
@@ -891,15 +545,16 @@ Flagging data:
 |2011-05-02 18:00:00+00:00|2020-07-22 09:00:00+00:00|HS2|add|2.8|0|
 |2016-01-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|HS2|add|-0.7|0|
 |2017-05-21 00:00:00+00:00|2020-07-22 09:00:00+00:00|HS2|add|2.2|0|
-
+ 
 ![Adjusted and flagged data at Crawford Point 1](../figures/L1_data_treatment/CrawfordPoint1_HS2.jpeg)
-# <a id='s7' />13 CP2
-## <a id='s7-1' />Manual flagging of data at CP2
+ 
+# <a id='s4' />13 CP2
+## <a id='s4-1' />Manual flagging of data at CP2
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
 |1999-02-07 00:00:00+00:00|1999-07-01 00:00:00+00:00|RH2|
-## <a id='s7-2' />Adjusting data at CP2
+## <a id='s4-2' />Adjusting data at CP2
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1997-01-01 00:00:00+00:00|2001-05-29 13:00:00+00:00|HW1|add|-4.0|0|
@@ -915,7 +570,7 @@ Flagging data:
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |1997-01-01 00:00:00+00:00|2001-05-29 13:00:00+00:00|TA1|swap_with_TA2|0.0|0|
-
+ 
 ![Adjusted and flagged data at CP2](../figures/L1_data_treatment/CP2_ISWR.jpeg)
 ![Adjusted and flagged data at CP2](../figures/L1_data_treatment/CP2_OSWR.jpeg)
 ![Adjusted and flagged data at CP2](../figures/L1_data_treatment/CP2_NR.jpeg)
@@ -945,22 +600,374 @@ Flagging data:
 ![Adjusted and flagged data at CP2](../figures/L1_data_treatment/CP2_TS8.jpeg)
 ![Adjusted and flagged data at CP2](../figures/L1_data_treatment/CP2_TS9.jpeg)
 ![Adjusted and flagged data at CP2](../figures/L1_data_treatment/CP2_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1998-05-30 00:00:00+00:00|2001-05-29 13:00:00+00:00|HS1|add|1.0|0|
 |1999-05-27 00:00:00+00:00|2001-05-29 13:00:00+00:00|HS1|add|1.0|0|
 |2000-06-02 00:00:00+00:00|2001-05-29 13:00:00+00:00|HS1|add|1.7|0|
-
+ 
 ![Adjusted and flagged data at CP2](../figures/L1_data_treatment/CP2_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1998-05-30 00:00:00+00:00|2001-05-29 13:00:00+00:00|HS2|add|1.0|0|
 |1999-05-27 00:00:00+00:00|2001-05-29 13:00:00+00:00|HS2|add|1.0|0|
 |2000-06-02 00:00:00+00:00|2001-05-29 13:00:00+00:00|HS2|add|1.7|0|
-
+ 
 ![Adjusted and flagged data at CP2](../figures/L1_data_treatment/CP2_HS2.jpeg)
+ 
+# <a id='s5' />9 JAR1
+## <a id='s5-1' />Manual flagging of data at JAR1
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|TA1|
+|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|TA2|
+|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|TA3|
+|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|TA4|
+|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|RH1|
+|2007-09-02 00:00:00+00:00|2008-05-08 00:00:00+00:00|RH2|
+|2010-10-01 00:00:00+00:00|2011-05-04 00:00:00+00:00|RH1|
+|2010-10-01 00:00:00+00:00|2011-05-04 00:00:00+00:00|RH2|
+|2010-10-01 00:00:00+00:00|2012-05-04 00:00:00+00:00|TA2|
+|2010-10-01 00:00:00+00:00|2011-06-05 00:00:00+00:00|TA4|
+|2010-10-01 00:00:00+00:00|2011-06-05 00:00:00+00:00|TA3|
+|2013-10-01 00:00:00+00:00|2014-10-05 00:00:00+00:00|TA4|
+|2005-05-08 00:00:00+00:00|2005-05-08 21:00:00+00:00|HW2|
+|2011-09-06 00:00:00+00:00|2012-01-30 00:00:00+00:00|HW2|
+|2012-08-01 00:00:00+00:00|2012-08-13 00:00:00+00:00|HW2|
+|2015-08-24 00:00:00+00:00|2015-08-30 00:00:00+00:00|HW2|
+|2011-05-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|HW1|
+|2011-09-09 00:00:00+00:00|2012-01-01 00:00:00+00:00|HW1|
+|2013-07-01 00:00:00+00:00|2013-08-01 00:00:00+00:00|HW1|
+|2011-08-16 00:00:00+00:00|2012-01-01 00:00:00+00:00|ISWR|
+|2011-08-16 00:00:00+00:00|2012-01-01 00:00:00+00:00|OSWR|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|TA1|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|TA2|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|TA3|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|TA4|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|RH1|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|RH2|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|VW1|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|VW2|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|DW1|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|DW2|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|HW1|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|HW2|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|ISWR|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|OSWR|
+|2010-07-19 00:00:00+00:00|2011-05-06 00:00:00+00:00|NR|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS1|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS2|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS3|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS4|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS5|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS6|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS7|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS8|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS9|
+|1999-06-01 00:00:00+00:00|2001-06-01 00:00:00+00:00|TS10|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS1|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS2|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS3|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS4|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS5|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS6|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS7|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS8|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS9|
+|2003-06-01 00:00:00+00:00|2019-09-08 01:00:00+00:00|TS10|
+## <a id='s5-2' />Adjusting data at JAR1
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|DW1|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|DW1|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|DW2|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|DW2|time_shift|24.0|17|
+|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW1|hampel_filter|2.0|3173|
+|2009-08-14 00:00:00+00:00|2010-05-01 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.3|468|
+|2010-06-11 00:00:00+00:00|2010-06-21 00:00:00+00:00|HW1|min_filter|2.21|12|
+|2010-07-08 00:00:00+00:00|2010-07-19 00:00:00+00:00|HW1|min_filter|3.35|31|
+|2018-10-01 00:00:00+00:00|2018-10-10 00:00:00+00:00|HW1|min_filter|2.17|16|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|HW1|time_shift|-745.0|553|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|HW1|time_shift|24.0|17|
+|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|16888|
+|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|hampel_filter|2.0|533|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|HW2|time_shift|-745.0|518|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|HW2|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|ISWR|time_shift|-745.0|554|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|ISWR|time_shift|24.0|16|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|NR|time_shift|-745.0|553|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|NR|time_shift|24.0|14|
+|2009-05-06 00:00:00+00:00|2019-09-08 01:00:00+00:00|OSWR|multiply|0.934|0|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|OSWR|time_shift|-745.0|553|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|OSWR|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|P|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|P|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|RH1|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|RH1|time_shift|24.0|1|
+|2012-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|RH2|swap_with_RH1|0.0|-1670|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|RH2|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|RH2|time_shift|24.0|1|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA1|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA1|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA2|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA2|time_shift|24.0|17|
+|2005-01-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|TA3|swap_with_TA4|0.0|-654|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA3|time_shift|-745.0|555|
+|2018-02-01 00:00:00+00:00|2019-12-20 00:00:00+00:00|TA3|max_filter|9.0|215|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA3|time_shift|24.0|1|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA4|time_shift|-745.0|555|
+|2013-02-01 00:00:00+00:00|2015-12-20 00:00:00+00:00|TA4|max_filter|9.0|3469|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA4|time_shift|24.0|1|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA5|time_shift|-745.0|338|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA5|time_shift|24.0|0|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS1|time_shift|-745.0|211|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS1|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS10|time_shift|-745.0|23|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS10|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS2|time_shift|-745.0|231|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS2|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS3|time_shift|-745.0|4|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS3|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS4|time_shift|-745.0|110|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS4|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS5|time_shift|-745.0|123|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS5|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS6|time_shift|-745.0|19|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS6|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS7|time_shift|-745.0|34|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS7|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS8|time_shift|-745.0|13|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS8|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS9|time_shift|-745.0|60|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TS9|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|V|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|V|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|VW1|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|VW1|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|VW2|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|VW2|time_shift|24.0|17|
+ 
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_ISWR.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_OSWR.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_NR.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA1.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA2.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA3.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA4.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_RH1.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_RH2.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_VW1.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_VW2.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_DW1.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_DW2.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_P.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_HW1.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_HW2.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_V.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TA5.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS1.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS2.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS3.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS4.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS5.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS6.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS7.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS8.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS9.jpeg)
+![Adjusted and flagged data at JAR1](../figures/L1_data_treatment/JAR1_TS10.jpeg)
+ 
+# <a id='s6' />17 JAR2
+## <a id='s6-1' />Manual flagging of data at JAR2
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2011-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|VW1|
+|2011-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|DW1|
+|2012-07-15 00:00:00+00:00|2012-07-17 00:00:00+00:00|HW2|
+|2012-08-16 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|
+|2002-05-07 00:00:00+00:00|2002-05-07 08:00:00+00:00|HW1|
+|2002-05-07 00:00:00+00:00|2002-05-07 08:00:00+00:00|HW2|
+|2004-05-01 00:00:00+00:00|2004-05-27 11:00:00+00:00|HW1|
+|2004-05-01 00:00:00+00:00|2004-05-27 11:00:00+00:00|HW2|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA1|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA2|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA3|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|HW1|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|HW2|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|RH1|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|RH2|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|VW1|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|VW2|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|DW1|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|DW2|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|ISWR|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|OSWR|
+|2010-07-01 00:00:00+00:00|2011-06-10 11:00:00+00:00|NR|
+|2008-05-07 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA4|
+|2008-05-07 00:00:00+00:00|2011-06-10 11:00:00+00:00|TA3|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS1|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS2|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS3|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS4|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS5|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS6|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS7|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS8|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS9|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS10|
+## <a id='s6-2' />Adjusting data at JAR2
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|DW1|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|DW1|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|DW2|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|DW2|time_shift|63.0|0|
+|1999-04-19 00:00:00+00:00|2000-01-01 00:00:00+00:00|HW1|min_filter|0.5|10|
+|2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|max_filter|5.9|520|
+|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|min_filter|1.05|4183|
+|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|biweekly_upper_range_filter|0.7|732|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|time_shift|-749.0|1|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|HW1|time_shift|63.0|0|
+|1999-04-19 00:00:00+00:00|2000-01-01 00:00:00+00:00|HW2|min_filter|0.5|10|
+|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|min_filter|0.5|9993|
+|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|max_filter|7.5|58|
+|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|biweekly_upper_range_filter|0.7|3917|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|time_shift|-749.0|1|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|HW2|time_shift|63.0|0|
+|2009-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|ISWR|multiply|0.5|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|ISWR|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|ISWR|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|NR|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|NR|time_shift|63.0|0|
+|2009-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|OSWR|multiply|0.5|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|OSWR|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|OSWR|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|P|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|P|time_shift|63.0|0|
+|2002-05-07 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|swap_with_RH2|0.0|-19|
+|1999-06-02 03:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|ice_to_water|0.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH1|time_shift|63.0|0|
+|1999-06-02 03:00:00+00:00|2013-06-16 08:00:00+00:00|RH2|ice_to_water|0.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH2|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH2|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA1|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA1|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA2|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA2|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA3|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA3|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA4|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA4|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA5|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA5|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS1|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS1|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS10|time_shift|-749.0|0|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS10|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS2|time_shift|-749.0|1|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS2|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS3|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS3|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS4|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS4|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS5|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS5|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS6|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS6|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS7|time_shift|-749.0|0|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS7|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS8|time_shift|-749.0|0|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS8|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TS9|time_shift|-749.0|0|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS9|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|V|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|V|time_shift|63.0|0|
+|2004-05-07 00:00:00+00:00|2005-05-14 00:00:00+00:00|VW1|swap_with_VW2|0.0|-459|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|VW1|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|VW1|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|VW2|time_shift|-749.0|3|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|VW2|time_shift|63.0|0|
+ 
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_ISWR.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_OSWR.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_NR.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA1.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA2.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA3.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA4.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_RH1.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_RH2.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_VW1.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_VW2.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_DW1.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_DW2.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_P.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_HW1.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_HW2.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_V.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TA5.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS1.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS2.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS3.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS4.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS5.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS6.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS7.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS8.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS9.jpeg)
+![Adjusted and flagged data at JAR2](../figures/L1_data_treatment/JAR2_TS10.jpeg)
+ 
+# <a id='s7' />19 JAR3
+## <a id='s7-1' />Manual flagging of data at JAR3
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2011-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|VW1|
+|2011-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|DW1|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS1|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS2|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS3|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS4|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS5|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS6|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS7|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS8|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS9|
+|2007-01-01 00:00:00+00:00|2004-05-25 13:00:00+00:00|TS10|
+## <a id='s7-2' />Adjusting data at JAR3
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2002-05-06 15:00:00+00:00|2004-05-25 13:00:00+00:00|P|add|70.0|0|
+ 
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_ISWR.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_OSWR.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_NR.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_TA1.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_TA2.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_TA3.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_TA4.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_RH1.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_RH2.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_VW1.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_VW2.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_DW1.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_DW2.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_P.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_HS1.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_V.jpeg)
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_HW1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at JAR3](../figures/L1_data_treatment/JAR3_HS1.jpeg)
+ 
 # <a id='s8' />3 NASA-U
 ## <a id='s8-1' />Manual flagging of data at NASA-U
 Flagging data:
@@ -1099,7 +1106,7 @@ Flagging data:
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|V|time_shift|48.0|4|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|VW1|time_shift|48.0|4|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|VW2|time_shift|48.0|4|
-
+ 
 ![Adjusted and flagged data at NASA-U](../figures/L1_data_treatment/NASA-U_ISWR.jpeg)
 ![Adjusted and flagged data at NASA-U](../figures/L1_data_treatment/NASA-U_OSWR.jpeg)
 ![Adjusted and flagged data at NASA-U](../figures/L1_data_treatment/NASA-U_NR.jpeg)
@@ -1128,7 +1135,7 @@ Flagging data:
 ![Adjusted and flagged data at NASA-U](../figures/L1_data_treatment/NASA-U_TS8.jpeg)
 ![Adjusted and flagged data at NASA-U](../figures/L1_data_treatment/NASA-U_TS9.jpeg)
 ![Adjusted and flagged data at NASA-U](../figures/L1_data_treatment/NASA-U_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1997-01-01 00:00:00+00:00|2023-06-18 15:00:00+00:00|HS1|add|1.7|0|
@@ -1139,9 +1146,9 @@ Flagging data:
 |2011-05-31 22:00:00+00:00|2023-06-18 15:00:00+00:00|HS1|add|0.7|0|
 |2013-05-25 22:00:00+00:00|2023-06-18 15:00:00+00:00|HS1|add|2.3|0|
 |2018-01-01 00:00:00+00:00|2023-06-18 15:00:00+00:00|HS1|add|2.7|0|
-
+ 
 ![Adjusted and flagged data at NASA-U](../figures/L1_data_treatment/NASA-U_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1997-01-01 00:00:00+00:00|2023-06-18 15:00:00+00:00|HS2|add|2.0|0|
@@ -1152,8 +1159,9 @@ Flagging data:
 |2011-05-31 22:00:00+00:00|2023-06-18 15:00:00+00:00|HS2|add|0.58|0|
 |2013-06-04 00:00:00+00:00|2023-06-18 15:00:00+00:00|HS2|add|2.5|0|
 |2018-01-01 00:00:00+00:00|2023-06-18 15:00:00+00:00|HS2|add|2.5|0|
-
+ 
 ![Adjusted and flagged data at NASA-U](../figures/L1_data_treatment/NASA-U_HS2.jpeg)
+ 
 # <a id='s9' />4 GITS
 ## <a id='s9-1' />Manual flagging of data at GITS
 Flagging data:
@@ -1169,9 +1177,13 @@ Flagging data:
 |2015-08-23 00:00:00+00:00|2016-04-06 00:00:00+00:00|HW2|
 |2016-10-11 00:00:00+00:00|2018-05-15 00:00:00+00:00|HW2|
 |2018-09-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW1|
+|1999-01-01 00:00:00+00:00|2002-01-01 00:00:00+00:00|P|
 |2011-05-25 00:00:00+00:00|2013-01-01 00:00:00+00:00|P|
+|1990-01-01 00:00:00+00:00|1996-07-01 00:00:00+00:00|TA1|
+|1990-01-01 00:00:00+00:00|1996-07-01 00:00:00+00:00|RH1|
+|1990-01-01 00:00:00+00:00|1996-07-01 00:00:00+00:00|RH2|
 |2006-06-28 00:00:00+00:00|2007-07-05 00:00:00+00:00|TA1|
-|2006-06-28 00:00:00+00:00|2007-07-05 00:00:00+00:00|TA3|
+|2006-06-28 00:00:00+00:00|2007-07-05 00:00:00+00:00|TA2|
 |2006-06-28 00:00:00+00:00|2007-07-05 00:00:00+00:00|RH1|
 |2013-09-04 00:00:00+00:00|2014-05-21 00:00:00+00:00|TA1|
 |2010-01-01 00:00:00+00:00|2012-05-26 00:00:00+00:00|TA1|
@@ -1198,6 +1210,9 @@ Flagging data:
 |2010-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|TS8|
 |2010-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|TS9|
 |2010-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|TS10|
+|2005-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|TS2|
+|2005-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|TS3|
+|2005-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|TS4|
 |2019-10-28 00:00:00+00:00|2021-08-13 12:00:00+00:00|DW2|
 |2020-08-10 00:00:00+00:00|2021-08-13 12:00:00+00:00|ISWR|
 |2020-08-10 00:00:00+00:00|2021-08-13 12:00:00+00:00|OSWR|
@@ -1254,8 +1269,10 @@ Flagging data:
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TS9|time_shift|520.0|0|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|V|time_shift|520.0|520|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|VW1|time_shift|520.0|520|
+|1990-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|VW1|max_filter|28.0|3|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|VW2|time_shift|520.0|520|
-
+|1990-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|VW2|max_filter|28.0|3|
+ 
 ![Adjusted and flagged data at GITS](../figures/L1_data_treatment/GITS_ISWR.jpeg)
 ![Adjusted and flagged data at GITS](../figures/L1_data_treatment/GITS_OSWR.jpeg)
 ![Adjusted and flagged data at GITS](../figures/L1_data_treatment/GITS_NR.jpeg)
@@ -1284,7 +1301,7 @@ Flagging data:
 ![Adjusted and flagged data at GITS](../figures/L1_data_treatment/GITS_TS8.jpeg)
 ![Adjusted and flagged data at GITS](../figures/L1_data_treatment/GITS_TS9.jpeg)
 ![Adjusted and flagged data at GITS](../figures/L1_data_treatment/GITS_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1996-05-07 00:00:00+00:00|2021-08-13 12:00:00+00:00|HS1|add|0.8|0|
@@ -1293,9 +1310,9 @@ Flagging data:
 |2010-05-03 00:00:00+00:00|2021-08-13 12:00:00+00:00|HS1|add|9.0|0|
 |2014-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HS1|add|1.25|0|
 |2016-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HS1|add|2.0|0|
-
+ 
 ![Adjusted and flagged data at GITS](../figures/L1_data_treatment/GITS_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1996-05-07 00:00:00+00:00|2021-08-13 12:00:00+00:00|HS2|add|0.2|0|
@@ -1305,30 +1322,33 @@ Flagging data:
 |2010-05-03 00:00:00+00:00|2021-08-13 12:00:00+00:00|HS2|add|9.25|0|
 |2014-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HS2|add|2.25|0|
 |2016-05-23 00:00:00+00:00|2021-08-13 12:00:00+00:00|HS2|add|2.0|0|
-
+ 
 ![Adjusted and flagged data at GITS](../figures/L1_data_treatment/GITS_HS2.jpeg)
+ 
 # <a id='s10' />5 Humboldt
 ## <a id='s10-1' />Manual flagging of data at Humboldt
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
 |1990-01-01 00:00:00+00:00|1996-07-01 00:00:00+00:00|TA1|
+|1990-01-01 00:00:00+00:00|1996-07-01 00:00:00+00:00|RH1|
+|1990-01-01 00:00:00+00:00|1996-07-01 00:00:00+00:00|RH2|
 |2007-03-01 00:00:00+00:00|2007-05-04 00:00:00+00:00|TA3|
 |2007-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|HW1|
 |2007-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|HW2|
 |2003-05-27 18:00:00+00:00|2003-05-28 14:00:00+00:00|HW2|
 |2020-02-17 18:00:00+00:00|2023-03-05 08:00:00+00:00|HW2|
 |2019-01-01 00:00:00+00:00|2023-03-05 08:00:00+00:00|NR|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS1|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS2|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS3|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS4|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS5|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS6|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS7|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS8|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS9|
-|2010-05-18 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS10|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS1|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS2|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS3|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS4|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS5|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS6|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS7|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS8|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS9|
+|2010-01-01 00:00:00+00:00|2022-01-01 00:00:00+00:00|TS10|
 ## <a id='s10-2' />Adjusting data at Humboldt
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
@@ -1618,7 +1638,7 @@ Flagging data:
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|VW2|time_shift|2198.0|845|
 |2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|VW2|time_shift|-48.0|48|
 |2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|VW2|time_shift|-24.0|25|
-
+ 
 ![Adjusted and flagged data at Humboldt](../figures/L1_data_treatment/Humboldt_ISWR.jpeg)
 ![Adjusted and flagged data at Humboldt](../figures/L1_data_treatment/Humboldt_OSWR.jpeg)
 ![Adjusted and flagged data at Humboldt](../figures/L1_data_treatment/Humboldt_NR.jpeg)
@@ -1646,16 +1666,16 @@ Flagging data:
 ![Adjusted and flagged data at Humboldt](../figures/L1_data_treatment/Humboldt_TS8.jpeg)
 ![Adjusted and flagged data at Humboldt](../figures/L1_data_treatment/Humboldt_TS9.jpeg)
 ![Adjusted and flagged data at Humboldt](../figures/L1_data_treatment/Humboldt_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1999-05-04 18:00:00+00:00|2023-10-11 07:00:00+00:00|HS1|add|1.2|0|
 |2003-05-22 00:00:00+00:00|2023-10-11 07:00:00+00:00|HS1|add|3.0|0|
 |2010-03-01 00:00:00+00:00|2023-10-11 07:00:00+00:00|HS1|add|3.0|0|
 |2015-05-20 00:00:00+00:00|2023-10-11 07:00:00+00:00|HS1|add|2.45|0|
-
+ 
 ![Adjusted and flagged data at Humboldt](../figures/L1_data_treatment/Humboldt_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1999-05-04 18:00:00+00:00|2023-10-11 07:00:00+00:00|HS2|add|0.6|0|
@@ -1664,8 +1684,9 @@ Flagging data:
 |2011-02-25 00:00:00+00:00|2023-10-11 07:00:00+00:00|HS2|add|-1.0|0|
 |2011-05-15 00:00:00+00:00|2023-10-11 07:00:00+00:00|HS2|add|1.0|0|
 |2015-05-20 21:00:00+00:00|2023-10-11 07:00:00+00:00|HS2|add|2.45|0|
-
+ 
 ![Adjusted and flagged data at Humboldt](../figures/L1_data_treatment/Humboldt_HS2.jpeg)
+ 
 # <a id='s11' />6 Summit
 ## <a id='s11-1' />Manual flagging of data at Summit
 Flagging data:
@@ -1730,7 +1751,7 @@ Flagging data:
 |2018-05-15 00:00:00+00:00|2022-10-07 03:00:00+00:00|RH1|swap_with_RH2|0.0|7|
 |1996-01-01 00:00:00+00:00|2009-05-19 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2009-05-19 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at Summit](../figures/L1_data_treatment/Summit_ISWR.jpeg)
 ![Adjusted and flagged data at Summit](../figures/L1_data_treatment/Summit_OSWR.jpeg)
 ![Adjusted and flagged data at Summit](../figures/L1_data_treatment/Summit_NR.jpeg)
@@ -1759,6 +1780,7 @@ Flagging data:
 ![Adjusted and flagged data at Summit](../figures/L1_data_treatment/Summit_TS8.jpeg)
 ![Adjusted and flagged data at Summit](../figures/L1_data_treatment/Summit_TS9.jpeg)
 ![Adjusted and flagged data at Summit](../figures/L1_data_treatment/Summit_TS10.jpeg)
+ 
 # <a id='s12' />7 Tunu-N
 ## <a id='s12-1' />Manual flagging of data at Tunu-N
 Flagging data:
@@ -1814,7 +1836,7 @@ Flagging data:
 |1990-01-01 00:00:00+00:00|2012-01-01 00:00:00+00:00|RH1|swap_with_RH2|0.0|2656|
 |1996-01-01 00:00:00+00:00|2011-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2011-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at Tunu-N](../figures/L1_data_treatment/Tunu-N_ISWR.jpeg)
 ![Adjusted and flagged data at Tunu-N](../figures/L1_data_treatment/Tunu-N_OSWR.jpeg)
 ![Adjusted and flagged data at Tunu-N](../figures/L1_data_treatment/Tunu-N_NR.jpeg)
@@ -1842,6 +1864,7 @@ Flagging data:
 ![Adjusted and flagged data at Tunu-N](../figures/L1_data_treatment/Tunu-N_TS8.jpeg)
 ![Adjusted and flagged data at Tunu-N](../figures/L1_data_treatment/Tunu-N_TS9.jpeg)
 ![Adjusted and flagged data at Tunu-N](../figures/L1_data_treatment/Tunu-N_TS10.jpeg)
+ 
 # <a id='s13' />8 DYE-2
 ## <a id='s13-1' />Manual flagging of data at DYE-2
 Flagging data:
@@ -1934,7 +1957,7 @@ Warning: OSR not found
 |1990-01-01 00:00:00+00:00|2023-06-14 12:00:00+00:00|TA1|min_filter|-80.0|10|
 |2019-10-01 00:00:00+00:00|2022-12-31 00:00:00+00:00|TA1|max_filter|4.0|19|
 |2019-10-01 00:00:00+00:00|2022-12-31 00:00:00+00:00|TA2|max_filter|4.0|17|
-
+ 
 ![Adjusted and flagged data at DYE-2](../figures/L1_data_treatment/DYE-2_ISWR.jpeg)
 ![Adjusted and flagged data at DYE-2](../figures/L1_data_treatment/DYE-2_OSWR.jpeg)
 ![Adjusted and flagged data at DYE-2](../figures/L1_data_treatment/DYE-2_NR.jpeg)
@@ -1963,7 +1986,7 @@ Warning: OSR not found
 ![Adjusted and flagged data at DYE-2](../figures/L1_data_treatment/DYE-2_TS8.jpeg)
 ![Adjusted and flagged data at DYE-2](../figures/L1_data_treatment/DYE-2_TS9.jpeg)
 ![Adjusted and flagged data at DYE-2](../figures/L1_data_treatment/DYE-2_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1998-04-26 17:00:00+00:00|2023-06-14 12:00:00+00:00|HS1|add|1.24|0|
@@ -1974,9 +1997,9 @@ Warning: OSR not found
 |2010-05-01 03:00:00+00:00|2023-06-14 12:00:00+00:00|HS1|add|2.6|0|
 |2017-05-22 20:00:00+00:00|2023-06-14 12:00:00+00:00|HS1|add|2.3|0|
 |2021-06-15 10:00:00+00:00|2023-06-14 12:00:00+00:00|HS1|add|2.1|0|
-
+ 
 ![Adjusted and flagged data at DYE-2](../figures/L1_data_treatment/DYE-2_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1998-04-26 17:00:00+00:00|2023-06-14 12:00:00+00:00|HS2|add|0.9|0|
@@ -1986,8 +2009,9 @@ Warning: OSR not found
 |2010-05-01 03:00:00+00:00|2023-06-14 12:00:00+00:00|HS2|add|2.6|0|
 |2017-05-22 20:00:00+00:00|2023-06-14 12:00:00+00:00|HS2|add|2.5|0|
 |2021-06-15 10:00:00+00:00|2023-06-14 12:00:00+00:00|HS2|add|2.1|0|
-
+ 
 ![Adjusted and flagged data at DYE-2](../figures/L1_data_treatment/DYE-2_HS2.jpeg)
+ 
 # <a id='s14' />10 Saddle
 ## <a id='s14-1' />Manual flagging of data at Saddle
 Flagging data:
@@ -2047,7 +2071,7 @@ Flagging data:
 |1996-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |1990-01-01 00:00:00+00:00|1999-01-01 00:00:00+00:00|TA1|swap_with_TA2|0.0|0|
 |2000-06-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TA1|swap_with_TA2|0.0|0|
-
+ 
 ![Adjusted and flagged data at Saddle](../figures/L1_data_treatment/Saddle_ISWR.jpeg)
 ![Adjusted and flagged data at Saddle](../figures/L1_data_treatment/Saddle_OSWR.jpeg)
 ![Adjusted and flagged data at Saddle](../figures/L1_data_treatment/Saddle_NR.jpeg)
@@ -2076,7 +2100,7 @@ Flagging data:
 ![Adjusted and flagged data at Saddle](../figures/L1_data_treatment/Saddle_TS8.jpeg)
 ![Adjusted and flagged data at Saddle](../figures/L1_data_treatment/Saddle_TS9.jpeg)
 ![Adjusted and flagged data at Saddle](../figures/L1_data_treatment/Saddle_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1998-04-17 14:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|0.4|0|
@@ -2088,9 +2112,9 @@ Flagging data:
 |2010-01-07 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|4.0|0|
 |2014-05-21 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|2.5|0|
 |2018-04-24 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|1.5|0|
-
+ 
 ![Adjusted and flagged data at Saddle](../figures/L1_data_treatment/Saddle_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1999-04-16 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|2.5|0|
@@ -2100,8 +2124,9 @@ Flagging data:
 |2010-01-07 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|4.0|0|
 |2014-05-24 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|4.0|0|
 |2018-03-01 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|2.0|0|
-
+ 
 ![Adjusted and flagged data at Saddle](../figures/L1_data_treatment/Saddle_HS2.jpeg)
+ 
 # <a id='s15' />11 South Dome
 ## <a id='s15-1' />Manual flagging of data at South Dome
 Flagging data:
@@ -2150,7 +2175,7 @@ Flagging data:
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2007-06-13 16:00:00+00:00|2008-07-01 00:00:00+00:00|TS4|biweekly_upper_range_filter|1.3|1600|
-
+ 
 ![Adjusted and flagged data at South Dome](../figures/L1_data_treatment/SouthDome_ISWR.jpeg)
 ![Adjusted and flagged data at South Dome](../figures/L1_data_treatment/SouthDome_OSWR.jpeg)
 ![Adjusted and flagged data at South Dome](../figures/L1_data_treatment/SouthDome_NR.jpeg)
@@ -2179,7 +2204,7 @@ Flagging data:
 ![Adjusted and flagged data at South Dome](../figures/L1_data_treatment/SouthDome_TS8.jpeg)
 ![Adjusted and flagged data at South Dome](../figures/L1_data_treatment/SouthDome_TS9.jpeg)
 ![Adjusted and flagged data at South Dome](../figures/L1_data_treatment/SouthDome_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1998-04-17 17:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.35|0|
@@ -2194,9 +2219,9 @@ Flagging data:
 |2015-05-25 20:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.5|0|
 |2017-05-22 15:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.3|0|
 |2019-05-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.0|0|
-
+ 
 ![Adjusted and flagged data at South Dome](../figures/L1_data_treatment/SouthDome_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |1998-04-17 17:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|2.4|0|
@@ -2210,8 +2235,9 @@ Flagging data:
 |2015-05-23 00:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|3.0|0|
 |2017-05-22 15:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|2.3|0|
 |2019-05-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|2.0|0|
-
+ 
 ![Adjusted and flagged data at South Dome](../figures/L1_data_treatment/SouthDome_HS2.jpeg)
+ 
 # <a id='s16' />12 NASA-E
 ## <a id='s16-1' />Manual flagging of data at NASA-E
 Flagging data:
@@ -2250,7 +2276,7 @@ Flagging data:
 |2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|OSWR|multiply|0.934|0|
 |1996-01-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at NASA-E](../figures/L1_data_treatment/NASA-E_ISWR.jpeg)
 ![Adjusted and flagged data at NASA-E](../figures/L1_data_treatment/NASA-E_OSWR.jpeg)
 ![Adjusted and flagged data at NASA-E](../figures/L1_data_treatment/NASA-E_NR.jpeg)
@@ -2279,7 +2305,7 @@ Flagging data:
 ![Adjusted and flagged data at NASA-E](../figures/L1_data_treatment/NASA-E_TS8.jpeg)
 ![Adjusted and flagged data at NASA-E](../figures/L1_data_treatment/NASA-E_TS9.jpeg)
 ![Adjusted and flagged data at NASA-E](../figures/L1_data_treatment/NASA-E_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |2001-06-08 16:00:00+00:00|2022-10-07 06:00:00+00:00|HS1|add|2.5|0|
@@ -2288,9 +2314,9 @@ Flagging data:
 |2009-05-09 00:00:00+00:00|2010-04-29 00:00:00+00:00|HS1|add|-0.5|0|
 |2015-05-26 03:00:00+00:00|2022-10-07 06:00:00+00:00|HS1|add|2.0|0|
 |2021-07-01 00:00:00+00:00|2022-10-07 06:00:00+00:00|HS1|add|0.9|0|
-
+ 
 ![Adjusted and flagged data at NASA-E](../figures/L1_data_treatment/NASA-E_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |2001-06-08 16:00:00+00:00|2022-10-07 06:00:00+00:00|HS2|add|2.5|0|
@@ -2298,8 +2324,9 @@ Flagging data:
 |2009-05-09 00:00:00+00:00|2022-10-07 06:00:00+00:00|HS2|add|-1.6|0|
 |2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|HS2|add|0.7|0|
 |2015-05-26 03:00:00+00:00|2022-10-07 06:00:00+00:00|HS2|add|2.5|0|
-
+ 
 ![Adjusted and flagged data at NASA-E](../figures/L1_data_treatment/NASA-E_HS2.jpeg)
+ 
 # <a id='s17' />15 NASA-SE
 ## <a id='s17-1' />Manual flagging of data at NASA-SE
 Flagging data:
@@ -2353,7 +2380,7 @@ Flagging data:
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2009-01-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|VW1|swap_with_VW2|0.0|0|
-
+ 
 ![Adjusted and flagged data at NASA-SE](../figures/L1_data_treatment/NASA-SE_ISWR.jpeg)
 ![Adjusted and flagged data at NASA-SE](../figures/L1_data_treatment/NASA-SE_OSWR.jpeg)
 ![Adjusted and flagged data at NASA-SE](../figures/L1_data_treatment/NASA-SE_NR.jpeg)
@@ -2382,6 +2409,7 @@ Flagging data:
 ![Adjusted and flagged data at NASA-SE](../figures/L1_data_treatment/NASA-SE_TS8.jpeg)
 ![Adjusted and flagged data at NASA-SE](../figures/L1_data_treatment/NASA-SE_TS9.jpeg)
 ![Adjusted and flagged data at NASA-SE](../figures/L1_data_treatment/NASA-SE_TS10.jpeg)
+ 
 # <a id='s18' />14 NGRIP
 ## <a id='s18-1' />Manual flagging of data at NGRIP
 Flagging data:
@@ -2410,7 +2438,7 @@ Flagging data:
 |2002-06-09 18:00:00+00:00|2006-05-15 00:00:00+00:00|RH1|swap_with_RH2|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at NGRIP](../figures/L1_data_treatment/NGRIP_ISWR.jpeg)
 ![Adjusted and flagged data at NGRIP](../figures/L1_data_treatment/NGRIP_OSWR.jpeg)
 ![Adjusted and flagged data at NGRIP](../figures/L1_data_treatment/NGRIP_NR.jpeg)
@@ -2437,6 +2465,7 @@ Flagging data:
 ![Adjusted and flagged data at NGRIP](../figures/L1_data_treatment/NGRIP_TS8.jpeg)
 ![Adjusted and flagged data at NGRIP](../figures/L1_data_treatment/NGRIP_TS9.jpeg)
 ![Adjusted and flagged data at NGRIP](../figures/L1_data_treatment/NGRIP_TS10.jpeg)
+ 
 # <a id='s19' />23 NEEM
 ## <a id='s19-1' />Manual flagging of data at NEEM
 Flagging data:
@@ -2504,7 +2533,7 @@ Flagging data:
 |2009-05-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|RH1|swap_with_RH2|0.0|-360|
 |1996-01-01 00:00:00+00:00|2009-05-15 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2009-05-15 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at NEEM](../figures/L1_data_treatment/NEEM_ISWR.jpeg)
 ![Adjusted and flagged data at NEEM](../figures/L1_data_treatment/NEEM_OSWR.jpeg)
 ![Adjusted and flagged data at NEEM](../figures/L1_data_treatment/NEEM_NR.jpeg)
@@ -2533,24 +2562,25 @@ Flagging data:
 ![Adjusted and flagged data at NEEM](../figures/L1_data_treatment/NEEM_TS8.jpeg)
 ![Adjusted and flagged data at NEEM](../figures/L1_data_treatment/NEEM_TS9.jpeg)
 ![Adjusted and flagged data at NEEM](../figures/L1_data_treatment/NEEM_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |2008-08-13 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS1|add|1.8|0|
 |2009-05-30 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS1|add|-0.5|0|
 |2011-07-06 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS1|add|3.0|0|
 |2016-05-23 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS1|add|2.2|0|
-
+ 
 ![Adjusted and flagged data at NEEM](../figures/L1_data_treatment/NEEM_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |2008-08-13 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS2|add|1.8|0|
 |2009-05-30 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS2|add|-0.5|0|
 |2011-07-06 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS2|add|3.0|0|
 |2016-05-23 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS2|add|2.5|0|
-
+ 
 ![Adjusted and flagged data at NEEM](../figures/L1_data_treatment/NEEM_HS2.jpeg)
+ 
 # <a id='s20' />24 EastGRIP
 ## <a id='s20-1' />Manual flagging of data at EastGRIP
 Flagging data:
@@ -2586,7 +2616,7 @@ Warning: OSWR not found
 |2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW2|hampel_filter|3.0|3159|
 |2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW2|add|1.2|0|
 |2016-04-01 00:00:00+00:00|2021-10-01 00:00:00+00:00|P|hampel_filter|10.0|920|
-
+ 
 ![Adjusted and flagged data at EastGRIP](../figures/L1_data_treatment/EastGRIP_TA1.jpeg)
 ![Adjusted and flagged data at EastGRIP](../figures/L1_data_treatment/EastGRIP_TA2.jpeg)
 ![Adjusted and flagged data at EastGRIP](../figures/L1_data_treatment/EastGRIP_TA3.jpeg)
@@ -2602,6 +2632,7 @@ Warning: OSWR not found
 ![Adjusted and flagged data at EastGRIP](../figures/L1_data_treatment/EastGRIP_HW2.jpeg)
 ![Adjusted and flagged data at EastGRIP](../figures/L1_data_treatment/EastGRIP_V.jpeg)
 ![Adjusted and flagged data at EastGRIP](../figures/L1_data_treatment/EastGRIP_TA5.jpeg)
+ 
 # <a id='s21' />16 KAR
 ## <a id='s21-1' />Manual flagging of data at KAR
 Flagging data:
@@ -2613,7 +2644,7 @@ Flagging data:
 |-|-|-|-|-|-|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at KAR](../figures/L1_data_treatment/KAR_ISWR.jpeg)
 ![Adjusted and flagged data at KAR](../figures/L1_data_treatment/KAR_OSWR.jpeg)
 ![Adjusted and flagged data at KAR](../figures/L1_data_treatment/KAR_NR.jpeg)
@@ -2643,16 +2674,17 @@ Flagging data:
 ![Adjusted and flagged data at KAR](../figures/L1_data_treatment/KAR_TS8.jpeg)
 ![Adjusted and flagged data at KAR](../figures/L1_data_treatment/KAR_TS9.jpeg)
 ![Adjusted and flagged data at KAR](../figures/L1_data_treatment/KAR_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at KAR](../figures/L1_data_treatment/KAR_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at KAR](../figures/L1_data_treatment/KAR_HS2.jpeg)
+ 
 # <a id='s22' />18 KULU
 ## <a id='s22-1' />Manual flagging of data at KULU
 No erroneous data listed for KULU
@@ -2661,7 +2693,7 @@ No erroneous data listed for KULU
 |-|-|-|-|-|-|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at KULU](../figures/L1_data_treatment/KULU_ISWR.jpeg)
 ![Adjusted and flagged data at KULU](../figures/L1_data_treatment/KULU_OSWR.jpeg)
 ![Adjusted and flagged data at KULU](../figures/L1_data_treatment/KULU_NR.jpeg)
@@ -2680,16 +2712,17 @@ No erroneous data listed for KULU
 ![Adjusted and flagged data at KULU](../figures/L1_data_treatment/KULU_V.jpeg)
 ![Adjusted and flagged data at KULU](../figures/L1_data_treatment/KULU_HW1.jpeg)
 ![Adjusted and flagged data at KULU](../figures/L1_data_treatment/KULU_HW2.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at KULU](../figures/L1_data_treatment/KULU_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at KULU](../figures/L1_data_treatment/KULU_HS2.jpeg)
+ 
 # <a id='s23' />20 Aurora
 ## <a id='s23-1' />Manual flagging of data at Aurora
 Flagging data:
@@ -2701,7 +2734,7 @@ Flagging data:
 |-|-|-|-|-|-|
 |2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at Aurora](../figures/L1_data_treatment/Aurora_ISWR.jpeg)
 ![Adjusted and flagged data at Aurora](../figures/L1_data_treatment/Aurora_OSWR.jpeg)
 ![Adjusted and flagged data at Aurora](../figures/L1_data_treatment/Aurora_NR.jpeg)
@@ -2718,16 +2751,17 @@ Flagging data:
 ![Adjusted and flagged data at Aurora](../figures/L1_data_treatment/Aurora_V.jpeg)
 ![Adjusted and flagged data at Aurora](../figures/L1_data_treatment/Aurora_HW1.jpeg)
 ![Adjusted and flagged data at Aurora](../figures/L1_data_treatment/Aurora_HW2.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at Aurora](../figures/L1_data_treatment/Aurora_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at Aurora](../figures/L1_data_treatment/Aurora_HS2.jpeg)
+ 
 # <a id='s24' />21 Petermann Glacier
 ## <a id='s24-1' />Manual flagging of data at Petermann Glacier
 Flagging data:
@@ -2750,7 +2784,7 @@ Flagging data:
 |-|-|-|-|-|-|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_ISWR.jpeg)
 ![Adjusted and flagged data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_OSWR.jpeg)
 ![Adjusted and flagged data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_NR.jpeg)
@@ -2780,18 +2814,19 @@ Flagging data:
 ![Adjusted and flagged data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_TS8.jpeg)
 ![Adjusted and flagged data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_TS9.jpeg)
 ![Adjusted and flagged data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_TS10.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |2003-01-01 00:00:00+00:00|2006-05-01 11:00:00+00:00|HS1|add|-0.3|0|
-
+ 
 ![Adjusted and flagged data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
 |2003-01-01 00:00:00+00:00|2006-05-01 11:00:00+00:00|HS2|add|-0.3|0|
-
+ 
 ![Adjusted and flagged data at Petermann Glacier](../figures/L1_data_treatment/PetermannGlacier_HS2.jpeg)
+ 
 # <a id='s25' />22 Petermann ELA
 ## <a id='s25-1' />Manual flagging of data at Petermann ELA
 Flagging data:
@@ -2828,7 +2863,7 @@ Flagging data:
 |2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA2|max_filter|11.0|20|
 |2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA3|max_filter|11.0|9|
 |2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA4|max_filter|11.0|9|
-
+ 
 ![Adjusted and flagged data at Petermann ELA](../figures/L1_data_treatment/PetermannELA_ISWR.jpeg)
 ![Adjusted and flagged data at Petermann ELA](../figures/L1_data_treatment/PetermannELA_OSWR.jpeg)
 ![Adjusted and flagged data at Petermann ELA](../figures/L1_data_treatment/PetermannELA_NR.jpeg)
@@ -2856,6 +2891,7 @@ Flagging data:
 ![Adjusted and flagged data at Petermann ELA](../figures/L1_data_treatment/PetermannELA_TS8.jpeg)
 ![Adjusted and flagged data at Petermann ELA](../figures/L1_data_treatment/PetermannELA_TS9.jpeg)
 ![Adjusted and flagged data at Petermann ELA](../figures/L1_data_treatment/PetermannELA_TS10.jpeg)
+ 
 # <a id='s26' />33 SMS-PET
 ## <a id='s26-1' />Manual flagging of data at SMS-PET
 No erroneous data listed for SMS-PET
@@ -2866,7 +2902,7 @@ No erroneous data listed for SMS-PET
 |2002-06-02 02:00:00+00:00|2004-05-14 15:00:00+00:00|HW1|min_filter|0.7|40|
 |2002-07-15 00:00:00+00:00|2003-05-07 15:30:00+00:00|HW1|biweekly_upper_range_filter|0.4|40|
 |2003-09-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|96|
-
+ 
 ![Adjusted and flagged data at SMS-PET](../figures/L1_data_treatment/SMS-PET_TA1.jpeg)
 ![Adjusted and flagged data at SMS-PET](../figures/L1_data_treatment/SMS-PET_TA2.jpeg)
 ![Adjusted and flagged data at SMS-PET](../figures/L1_data_treatment/SMS-PET_RH1.jpeg)
@@ -2877,6 +2913,7 @@ No erroneous data listed for SMS-PET
 ![Adjusted and flagged data at SMS-PET](../figures/L1_data_treatment/SMS-PET_ISWR.jpeg)
 ![Adjusted and flagged data at SMS-PET](../figures/L1_data_treatment/SMS-PET_OSWR.jpeg)
 ![Adjusted and flagged data at SMS-PET](../figures/L1_data_treatment/SMS-PET_NR.jpeg)
+ 
 # <a id='s27' />25 SMS1
 ## <a id='s27-1' />Manual flagging of data at SMS1
 Flagging data:
@@ -2895,13 +2932,14 @@ Flagging data:
 |2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|294|
 |2004-08-01 00:00:00+00:00|2005-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|1606|
 |2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|HW1|min_filter|2.9|290|
-
+ 
 ![Adjusted and flagged data at SMS1](../figures/L1_data_treatment/SMS1_TA1.jpeg)
 ![Adjusted and flagged data at SMS1](../figures/L1_data_treatment/SMS1_TA2.jpeg)
 ![Adjusted and flagged data at SMS1](../figures/L1_data_treatment/SMS1_RH1.jpeg)
 ![Adjusted and flagged data at SMS1](../figures/L1_data_treatment/SMS1_VW1.jpeg)
 ![Adjusted and flagged data at SMS1](../figures/L1_data_treatment/SMS1_DW1.jpeg)
 ![Adjusted and flagged data at SMS1](../figures/L1_data_treatment/SMS1_HW1.jpeg)
+ 
 # <a id='s28' />26 SMS2
 ## <a id='s28-1' />Manual flagging of data at SMS2
 No erroneous data listed for SMS2
@@ -2914,7 +2952,7 @@ No erroneous data listed for SMS2
 |2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|447|
 |2004-08-26 00:00:00+00:00|2005-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|240|
 |2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|404|
-
+ 
 ![Adjusted and flagged data at SMS2](../figures/L1_data_treatment/SMS2_TA1.jpeg)
 ![Adjusted and flagged data at SMS2](../figures/L1_data_treatment/SMS2_TA2.jpeg)
 ![Adjusted and flagged data at SMS2](../figures/L1_data_treatment/SMS2_RH1.jpeg)
@@ -2922,6 +2960,7 @@ No erroneous data listed for SMS2
 ![Adjusted and flagged data at SMS2](../figures/L1_data_treatment/SMS2_DW1.jpeg)
 ![Adjusted and flagged data at SMS2](../figures/L1_data_treatment/SMS2_HW1.jpeg)
 ![Adjusted and flagged data at SMS2](../figures/L1_data_treatment/SMS2_V.jpeg)
+ 
 # <a id='s29' />27 SMS3
 ## <a id='s29-1' />Manual flagging of data at SMS3
 No erroneous data listed for SMS3
@@ -2936,7 +2975,7 @@ No erroneous data listed for SMS3
 |2004-07-15 00:00:00+00:00|2005-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|189|
 |2005-07-11 00:00:00+00:00|2005-07-16 00:00:00+00:00|HW1|min_filter|1.8|3|
 |2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|223|
-
+ 
 ![Adjusted and flagged data at SMS3](../figures/L1_data_treatment/SMS3_TA1.jpeg)
 ![Adjusted and flagged data at SMS3](../figures/L1_data_treatment/SMS3_TA2.jpeg)
 ![Adjusted and flagged data at SMS3](../figures/L1_data_treatment/SMS3_RH1.jpeg)
@@ -2944,17 +2983,20 @@ No erroneous data listed for SMS3
 ![Adjusted and flagged data at SMS3](../figures/L1_data_treatment/SMS3_DW1.jpeg)
 ![Adjusted and flagged data at SMS3](../figures/L1_data_treatment/SMS3_HW1.jpeg)
 ![Adjusted and flagged data at SMS3](../figures/L1_data_treatment/SMS3_V.jpeg)
+ 
 # <a id='s30' />28 SMS4
 ## <a id='s30-1' />Manual flagging of data at SMS4
 No erroneous data listed for SMS4
 ## <a id='s30-2' />Adjusting data at SMS4
 No data to fix at SMS4
+ 
 No data to fix at SMS4
 # <a id='s31' />29 SMS5
 ## <a id='s31-1' />Manual flagging of data at SMS5
 No erroneous data listed for SMS5
 ## <a id='s31-2' />Adjusting data at SMS5
 No data to fix at SMS5
+ 
 No data to fix at SMS5
 # <a id='s32' />30 LAR1
 ## <a id='s32-1' />Manual flagging of data at LAR1
@@ -2968,7 +3010,7 @@ Flagging data:
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|OSWR|multiply|2.2756|0|
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at LAR1](../figures/L1_data_treatment/LAR1_ISWR.jpeg)
 ![Adjusted and flagged data at LAR1](../figures/L1_data_treatment/LAR1_OSWR.jpeg)
 ![Adjusted and flagged data at LAR1](../figures/L1_data_treatment/LAR1_NR.jpeg)
@@ -2989,6 +3031,7 @@ Flagging data:
 ![Adjusted and flagged data at LAR1](../figures/L1_data_treatment/LAR1_TA5.jpeg)
 ![Adjusted and flagged data at LAR1](../figures/L1_data_treatment/LAR1_HW1.jpeg)
 ![Adjusted and flagged data at LAR1](../figures/L1_data_treatment/LAR1_HW2.jpeg)
+ 
 # <a id='s33' />31 LAR2
 ## <a id='s33-1' />Manual flagging of data at LAR2
 No erroneous data listed for LAR2
@@ -2999,7 +3042,7 @@ No erroneous data listed for LAR2
 |2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|OSWR|multiply|2.88|0|
 |2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at LAR2](../figures/L1_data_treatment/LAR2_ISWR.jpeg)
 ![Adjusted and flagged data at LAR2](../figures/L1_data_treatment/LAR2_OSWR.jpeg)
 ![Adjusted and flagged data at LAR2](../figures/L1_data_treatment/LAR2_NR.jpeg)
@@ -3020,16 +3063,17 @@ No erroneous data listed for LAR2
 ![Adjusted and flagged data at LAR2](../figures/L1_data_treatment/LAR2_TA5.jpeg)
 ![Adjusted and flagged data at LAR2](../figures/L1_data_treatment/LAR2_HW1.jpeg)
 ![Adjusted and flagged data at LAR2](../figures/L1_data_treatment/LAR2_HW2.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at LAR2](../figures/L1_data_treatment/LAR2_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at LAR2](../figures/L1_data_treatment/LAR2_HS2.jpeg)
+ 
 # <a id='s34' />32 LAR3
 ## <a id='s34-1' />Manual flagging of data at LAR3
 Flagging data:
@@ -3042,7 +3086,7 @@ Flagging data:
 |-|-|-|-|-|-|
 |2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH2|ice_to_water|0.0|0|
-
+ 
 ![Adjusted and flagged data at LAR3](../figures/L1_data_treatment/LAR3_ISWR.jpeg)
 ![Adjusted and flagged data at LAR3](../figures/L1_data_treatment/LAR3_OSWR.jpeg)
 ![Adjusted and flagged data at LAR3](../figures/L1_data_treatment/LAR3_NR.jpeg)
@@ -3063,13 +3107,14 @@ Flagging data:
 ![Adjusted and flagged data at LAR3](../figures/L1_data_treatment/LAR3_TA5.jpeg)
 ![Adjusted and flagged data at LAR3](../figures/L1_data_treatment/LAR3_HW1.jpeg)
 ![Adjusted and flagged data at LAR3](../figures/L1_data_treatment/LAR3_HW2.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at LAR3](../figures/L1_data_treatment/LAR3_HS1.jpeg)
-
+ 
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-
+ 
 ![Adjusted and flagged data at LAR3](../figures/L1_data_treatment/LAR3_HS2.jpeg)
+ 

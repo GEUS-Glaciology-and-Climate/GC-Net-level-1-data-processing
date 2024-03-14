@@ -74,3 +74,4 @@ Q2,g/kg,specific_humidity_2,q2,real
 Alb,-,surface_albedo,alb,real
 latitude,degN,latitude,lat,real
 longitude,degE,longitude,lon,real
+elevation,m a.s.l.,elevation,elev,real
