@@ -790,18 +790,30 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         df['Q2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
         df.loc[df['Q2']>40, 'Q2'] = np.nan
         
-    # adding latitude and longitude fields           
+    # adding latitude and longitude fields          
     try:
-        if os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv'):
+        if os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated_with_elev.csv'):
             df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated_with_elev.csv')
-        else:
+        elif os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv'):
             df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv')
+        elif os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_info.csv'):
+            df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_info.csv')
+            df_pos['date'] = df_pos.time_elev_approximation.astype(str) + '-08-01'
+            df_pos['elev'] = df_pos.elev_approximation
+            df_pos['lat'] = latitude
+            df_pos['lon'] = longitude      
+            
         df_pos.date = pd.to_datetime(df_pos.date, utc=True)
         df_pos = df_pos.set_index('date')
+        df_pos_save = df_pos.copy()
+        offset = pd.DateOffset(months=7) 
+        df_pos = df_pos.shift(freq=-offset).resample('YS').first().shift(freq=offset)
         
         df['latitude'] =np.nan
         df['longitude'] =np.nan
         df['elevation'] =np.nan
+        
+        df_pos = df_pos.resample('H').first().interpolate()
         
         if (df_pos.index[-1] < df.index[-1]) | (df_pos.index[0] > df.index[0]):
             df_pos = pd.concat((df.loc[df.index[0]:df_pos.index[0]-pd.to_timedelta('1H'), df.columns[0]],
@@ -809,14 +821,14 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                         df.loc[df_pos.index[-1]+pd.to_timedelta('1H'):df.index[-1], 
                               df.columns[0]]))[df_pos.columns]
             
-            def extrapolate(df, y_col):
-                df_ = df[[y_col]].dropna()
-                return LinearRegression().fit(
-                    df_.index.values.astype(float).reshape(-1,1), df_[y_col]).predict(
-                    df.index.values.astype(float).reshape(-1,1))
-            for var in df_pos.columns:
-                df_pos[var+'_interp'] = extrapolate(df_pos,var)
-                df_pos[var] = df_pos[var].fillna(df_pos[var+'_interp'])
+        def extrapolate(df, y_col):
+            df_ = df[[y_col]].dropna()
+            return LinearRegression().fit(
+                df_.index.values.astype(float).reshape(-1,1), df_[y_col]).predict(
+                df.index.values.astype(float).reshape(-1,1))
+        for var in df_pos.columns:
+            df_pos[var+'_interp'] = extrapolate(df_pos,var)
+            df_pos[var] = df_pos[var].fillna(df_pos[var+'_interp'])
                 
 
         df['latitude'] = df_pos.loc[df.index,'lat']
@@ -824,10 +836,14 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         if 'elev' in df_pos.columns:
             df['elevation'] = df_pos.loc[df.index,'elev']
         fig, ax = plt.subplots(3,1,sharex=True)
+        df_pos_save.lat.plot(ax=ax[0], marker='o', ls='None')
         df[['latitude']].plot(ax=ax[0])
+        df_pos_save.lon.plot(ax=ax[1], marker='o', ls='None')
         df[['longitude']].plot(ax=ax[1])
         if 'elev' in df_pos.columns:
+            df_pos_save.elev.plot(ax=ax[2], marker='o', ls='None')
             df[['elevation']].plot(ax=ax[2])
+        fig.suptitle(site)
         fig.savefig("figures/positions/" + site + "_positions.png")
         
     except Exception as e:

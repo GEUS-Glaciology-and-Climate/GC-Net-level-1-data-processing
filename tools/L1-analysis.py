@@ -592,17 +592,17 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %% radiation overview
 plt.close("all")
-site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0, skipinitialspace=(True))
-site_list = site_list.loc[site_list.Name.values == 'JAR2',:]
+site_list = pd.read_csv("./L1/GC-Net_location.csv", header=0, skipinitialspace=(True))[19:]
+# site_list = site_list.loc[site_list.Name.values == 'JAR2',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
 
     print("# " + str(ID) + " " + site)
     site_org = site
     site = site.replace(" ", "")
-    filename = "L1/" + str(ID).zfill(2) + "-" + site + ".csv"
+    filename = "./L1/hourly/" + site + ".csv"
     if not path.exists(filename):
-        print("Warning: No file for station " + str(ID) + " " + site)
+        print("Warning: No file for station " + site)
         continue
     ds = nead.read(filename)
     df = ds.to_dataframe()
@@ -611,6 +611,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df = df.set_index("timestamp").replace(-999, np.nan)
     if 'OSWR' not in df.columns:
         print('No radiation measurement')
+        continue
+    
     df["albedo"] = df.OSWR / df.ISWR
     msk = (df.OSWR < 100) | (df.ISWR < 100)
     df.loc[msk, "albedo"] = np.nan
@@ -634,13 +636,18 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
     for count, var in enumerate(["ISWR", "OSWR", "albedo"]):
         if var in ["ISWR", "OSWR"]:
-            df["isr_toa"].plot(ax=ax[count], color="r", alpha=0.5)
-        df[var].plot(ax=ax[count])
+            df["isr_toa"].plot(ax=ax[count], color="r", alpha=0.5,
+                               label='Incoming shortware radiation \nat the top of the atmosphere\n(1372 * cos(SZA))')
         if var =='albedo':
-            df[var].resample('D').mean().plot(ax=ax[count])
+            df[var].plot(ax=ax[count],label='hourly values')
+            df[var].resample('D').mean().plot(ax=ax[count],label='daily average')
+            df[var].resample('M').mean().plot(ax=ax[count],label='monthly average')
+        else:
+            df[var].plot(ax=ax[count])
 
         ax[count].set_ylabel(var)
         ax[count].grid()
+        ax[count].legend()
         ax[count].set_xlim((df.index[0], df.index[-1]))
         count = count + 1
     plt.savefig(
