@@ -613,10 +613,6 @@ for site, ID in zip(site_list.Name, site_list.ID):
         print('No radiation measurement')
         continue
     
-    df["albedo"] = df.OSWR / df.ISWR
-    msk = (df.OSWR < 100) | (df.ISWR < 100)
-    df.loc[msk, "albedo"] = np.nan
-
     # Calculating zenith and hour angle of the sun
     deg2rad = np.pi / 180
     ZenithAngle_rad = df.SZA * deg2rad
@@ -634,11 +630,11 @@ for site, ID in zip(site_list.Name, site_list.ID):
     )
     plt.suptitle(site)
 
-    for count, var in enumerate(["ISWR", "OSWR", "albedo"]):
+    for count, var in enumerate(["ISWR", "OSWR", "Alb"]):
         if var in ["ISWR", "OSWR"]:
             df["isr_toa"].plot(ax=ax[count], color="r", alpha=0.5,
                                label='Incoming shortware radiation \nat the top of the atmosphere\n(1372 * cos(SZA))')
-        if var =='albedo':
+        if var =='Alb':
             df[var].plot(ax=ax[count],label='hourly values')
             df[var].resample('D').mean().plot(ax=ax[count],label='daily average')
             df[var].resample('M').mean().plot(ax=ax[count],label='monthly average')
