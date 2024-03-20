@@ -592,7 +592,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %% radiation overview
 plt.close("all")
-site_list = pd.read_csv("./L1/GC-Net_location.csv", header=0, skipinitialspace=(True))[19:]
+site_list = pd.read_csv("./L1/GC-Net_location.csv", header=0, skipinitialspace=(True))
 # site_list = site_list.loc[site_list.Name.values == 'JAR2',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
