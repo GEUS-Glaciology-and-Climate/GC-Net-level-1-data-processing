@@ -121,6 +121,60 @@ for site, ID in zip(site_list.Name, site_list.ID):
             + ".png)"
         )
 tocgen.processFile("out/L0_overview.md", "out/L0_overview_toc.md")
+# %% plotting postions
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)
+# f = open("out/L1_overview.md", "w")
+def Msg(txt):
+    f = open("out/positions.md", "a")
+    print(txt)
+    f.write(txt + "\n")
+for site, ID in zip(site_list.Name, site_list.ID):
+    Msg("# " + str(ID) + " " + site)
+    site = site.replace(" ", "")
+    filename = "L1/hourly/" + site + ".csv"
+    filename_d = "L1/daily/" + site + "_daily.csv"
+    if not path.exists(filename):
+        Msg("Warning: No file for station " + str(ID) + " " + site)
+        continue
+    df = nead.read(filename).to_dataframe().reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index("timestamp").replace(-999, np.nan)
+
+    df_d = nead.read(filename_d).to_dataframe().reset_index(drop=True)
+    df_d.timestamp = pd.to_datetime(df_d.timestamp)
+    df_d = df_d.set_index("timestamp").replace(-999, np.nan)
+    
+    # % plotting variables
+    def new_fig():
+        fig, ax = plt.subplots(3, 1, sharex=True, figsize=(7, 7))
+        plt.subplots_adjust(
+            left=0.1, right=0.9, top=0.95, bottom=0.1, wspace=0.2, hspace=0.05
+        )
+        plt.suptitle(site)
+        return fig, ax
+
+    fig, ax = new_fig()
+    count = 0
+    for i, var in enumerate(['latitude','longitude','elevation']):
+        df[var].plot(ax=ax[count], label='hourly')
+        df_d[var].plot(ax=ax[count], drawstyle="steps-post", label='daily')
+        ax[count].set_ylabel(var)
+        ax[count].legend(fontsize="x-small")
+        
+        ax[count].grid()
+        ax[count].set_xlim((df.index[0], df.index[-1]))
+        count = count + 1
+    plt.savefig(
+        "figures/positions/"
+        + site + "_position.png",
+        bbox_inches="tight", dpi=300,
+    )
+    Msg(
+        "![](../figures/positions/"
+        + site + "_position.png)"
+    )
+
+# tocgen.processFile("out/L1_overview.md", "out/L1_overview_toc.md")
 # %% L1 overview
 site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)
 # f = open("out/L1_overview.md", "w")

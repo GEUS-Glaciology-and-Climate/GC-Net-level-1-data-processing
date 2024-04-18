@@ -820,7 +820,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                                 df_pos,
                         df.loc[df_pos.index[-1]+pd.to_timedelta('1H'):df.index[-1], 
                               df.columns[0]]))[df_pos.columns]
-            
+
         def extrapolate(df, y_col):
             df_ = df[[y_col]].dropna()
             return LinearRegression().fit(
@@ -828,13 +828,19 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                 df.index.values.astype(float).reshape(-1,1))
         for var in df_pos.columns:
             df_pos[var+'_interp'] = extrapolate(df_pos,var)
-            df_pos[var] = df_pos[var].fillna(df_pos[var+'_interp'])
+            if site != 'Swiss Camp':
+                df_pos[var] = df_pos[var].fillna(df_pos[var+'_interp'])
+            else:
+                df_pos[var] = df_pos[var].fillna(
+                    df_pos.loc[df_pos[var].last_valid_index(),
+                               var])
                 
 
         df['latitude'] = df_pos.loc[df.index,'lat']
         df['longitude'] = df_pos.loc[df.index,'lon']
         if 'elev' in df_pos.columns:
             df['elevation'] = df_pos.loc[df.index,'elev']
+            
         fig, ax = plt.subplots(3,1,sharex=True)
         df_pos_save.lat.plot(ax=ax[0], marker='o', ls='None')
         df[['latitude']].plot(ax=ax[0])
@@ -844,8 +850,8 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             df_pos_save.elev.plot(ax=ax[2], marker='o', ls='None')
             df[['elevation']].plot(ax=ax[2])
         fig.suptitle(site)
-        fig.savefig("figures/positions/" + site + "_positions.png")
-        
+        fig.savefig("figures/positions/" + site + "_positions.png", dpi=300)
+
     except Exception as e:
         print(e)
         df['latitude'] = latitude
