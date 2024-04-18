@@ -162,18 +162,18 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
         # formatting and saving to file
         df_v6_formatted = df_v6.copy()
-        col = [c for c in df_v6_formatted.columns if c not in ['latitude','longitude', 'elevation','timestamp']]
-        df_v6_formatted[col] = df_v6_formatted[col].map(lambda x: \
-                                         '' if np.isnan(x) \
-                                             else '0' if abs(x)<0.005 \
-                                             else '1' if abs(x-1)<0.005 \
-                                             else '%0.2f'%x)
+        for col in [c for c in df_v6_formatted.columns if c not in ['latitude','longitude', 'elevation','timestamp']]:
+            df_v6_formatted[col] = df_v6_formatted[col].map(lambda x: \
+                                             '' if np.isnan(x) \
+                                                 else '0' if abs(x)<0.005 \
+                                                 else '1' if abs(x-1)<0.005 \
+                                                 else '%0.2f'%x)
             
         df_v6_formatted['elevation'] = df_v6_formatted['elevation'].map(lambda x: \
                                          '' if np.isnan(x) else '%0.0f'%x)
         for col in ['latitude','longitude']:
             df_v6_formatted[col] = df_v6_formatted[col].map(lambda x: \
-                                             '' if np.isnan(x) else '%0.3f'%x)
+                                             '' if np.isnan(x) else '%0.4f'%x)
         print('writing hourly values')
         nead.write(
             df_v6_formatted.reset_index(),
@@ -196,17 +196,17 @@ for site, ID in zip(site_list.Name, site_list.ID):
         )
         
         # formatting and saving to file
-        col = [c for c in df_v7.columns if c not in ['latitude','longitude', 'elevation','timestamp']]
-        df_v7[col] = df_v7[col].map(lambda x: \
-                                         '' if np.isnan(x) \
-                                             else '0' if abs(x)<0.005 \
-                                             else '1' if abs(x-1)<0.005 \
-                                             else '%0.2f'%x)
+        for col in [c for c in df_v7.columns if c not in ['latitude','longitude', 'elevation','timestamp']]:
+            df_v7[col] = df_v7[col].map(lambda x: \
+                                             '' if np.isnan(x) \
+                                                 else '0' if abs(x)<0.005 \
+                                                 else '1' if abs(x-1)<0.005 \
+                                                 else '%0.2f'%x)
 
         df_v7['elevation'] = df_v7['elevation'].map(lambda x: \
                                          '' if np.isnan(x) else '%0.0f'%x)
         for col in ['latitude','longitude']:
-            df_v7[col] = df_v7[col].map(lambda x: '' if np.isnan(x) else '%0.3f'%x)
+            df_v7[col] = df_v7[col].map(lambda x: '' if np.isnan(x) else '%0.4f'%x)
         print('writing daily averages')
         nead.write(
             df_v7.reset_index(),
