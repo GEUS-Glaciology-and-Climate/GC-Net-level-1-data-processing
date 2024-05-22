@@ -50,7 +50,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
-# site_list = site_list.loc[site_list.Name.values == 'JAR1',:]
+site_list = site_list.loc[site_list.Name.values == 'JAR1',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -147,12 +147,21 @@ for site, ID in zip(site_list.Name, site_list.ID):
             database_fields_data_types,
         ) = ptb.field_info(df_v6.reset_index().columns)
         
-        df_v6.attrs['averaging'] = 'hourly'
+        hourly_attrs = ds.attrs
+        hourly_attrs['station_name'] = site
+        hourly_attrs['geometry'] = 'POINTZ (%0.4f %0.4f %0.0f)'%(df_v6.longitude.mean(),
+                                                                df_v6.latitude.mean(),
+                                                                df_v6.elevation.mean())
+        
+        hourly_attrs['reference'] = 'Steffen, K.; Vandecrux, B.; Houtz, D.; Abdalati, W.; Bayou, N.; Box, J.E.; Colgan, W.T.; Espona Pernas, L.; Griessinger, N.; Haas-Artho, D.; Heilig, A.; Hubert, A.; Iosifescu Enescu, I.; Johnson-Amin, N.; Karlsson, N.B.; Kurup Buchholz, R.; McGrath, D.; Cullen, N.J.; Naderpour, R.; Molotch, N.P.; Pedersen, A.Ø.; Perren, B.; Philipps, T.; Plattner, G.-K.; Proksch, M.; Revheim, M.K.; Særrelse, M.; Schneebli, M.; Sampson, K.; Starkweather, S.; Steffen, S.; Stroeve, J.; Watler, B.; Winton, Ø.A.; Zwally, J.; Ahlstrøm, A., 2022, "GC-Net Level 1 historical automated weather station data", https://doi.org/10.22008/FK2/VVXGUT, GEUS Dataverse'
+        hourly_attrs['doi'] = '10.22008/FK2/VVXGUT'
+        hourly_attrs['dataset_description'] = 'Vandecrux, B., Box, J. E., Ahlstrøm, A. P., Andersen, S. B., Bayou, N., Colgan, W. T., Cullen, N. J., Fausto, R. S., Haas-Artho, D., Heilig, A., Houtz, D. A., How, P., Iosifescu Enescu, I., Karlsson, N. B., Kurup Buchholz, R., Mankoff, K. D., McGrath, D., Molotch, N. P., Perren, B., Revheim, M. K., Rutishauser, A., Sampson, K., Schneebeli, M., Starkweather, S., Steffen, S., Weber, J., Wright, P. J., Zwally, H. J., and Steffen, K.: The historical Greenland Climate Network (GC-Net) curated and augmented level-1 dataset, Earth Syst. Sci. Data, 15, 5467–5489, https://doi.org/10.5194/essd-15-5467-2023, 2023. '
+        hourly_attrs['averaging'] = 'hourly'
 
         # build header object
         header_obj = nead.build_header_obj(
             df_v6.reset_index(),
-            metadata=ds.attrs,
+            metadata=hourly_attrs,
             units=units,
             display_description=display_description,
             database_fields=database_fields,
@@ -184,6 +193,9 @@ for site, ID in zip(site_list.Name, site_list.ID):
         # daily average
         print('calculating daily averages')
         df_v7 = ptb.daily_average(df_v6)
+        
+        daily_attrs = hourly_attrs
+        daily_attrs['averaging'] = 'daily'
 
         # write ini file
         header_obj = nead.build_header_obj(
