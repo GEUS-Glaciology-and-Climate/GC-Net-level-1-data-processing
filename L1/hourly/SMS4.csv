@@ -1,15 +1,17 @@
 # NEAD 1.0 UTF-8
 # [METADATA]
-# doi = https://doi.org/10.16904/envidat.1
-# reference = "Steffen, K. (2020). Greenland Climate Network (GC-Net) Data. EnviDat. doi: doi:10.16904/envidat.1"
+# doi = 10.22008/FK2/VVXGUT
+# reference = Steffen, K.; Vandecrux, B.; Houtz, D.; Abdalati, W.; Bayou, N.; Box, J.E.; Colgan, W.T.; Espona Pernas, L.; Griessinger, N.; Haas-Artho, D.; Heilig, A.; Hubert, A.; Iosifescu Enescu, I.; Johnson-Amin, N.; Karlsson, N.B.; Kurup Buchholz, R.; McGrath, D.; Cullen, N.J.; Naderpour, R.; Molotch, N.P.; Pedersen, A.Ø.; Perren, B.; Philipps, T.; Plattner, G.-K.; Proksch, M.; Revheim, M.K.; Særrelse, M.; Schneebli, M.; Sampson, K.; Starkweather, S.; Steffen, S.; Stroeve, J.; Watler, B.; Winton, Ø.A.; Zwally, J.; Ahlstrøm, A., 2022, "GC-Net Level 1 historical automated weather station data", https://doi.org/10.22008/FK2/VVXGUT, GEUS Dataverse
 # station_id = 107282
-# station_name = GC-NET station SMS4
+# station_name = SMS4
 # srid = EPSG:4326
-# geometry = POINTZ ()
+# geometry = POINTZ (-50.2108 69.4013 387)
 # nodata = 
 # timestamp_meaning = end
 # timezone = 0
 # field_delimiter = ,
+# dataset_description = Vandecrux, B., Box, J. E., Ahlstrøm, A. P., Andersen, S. B., Bayou, N., Colgan, W. T., Cullen, N. J., Fausto, R. S., Haas-Artho, D., Heilig, A., Houtz, D. A., How, P., Iosifescu Enescu, I., Karlsson, N. B., Kurup Buchholz, R., Mankoff, K. D., McGrath, D., Molotch, N. P., Perren, B., Revheim, M. K., Rutishauser, A., Sampson, K., Schneebeli, M., Starkweather, S., Steffen, S., Weber, J., Wright, P. J., Zwally, H. J., and Steffen, K.: The historical Greenland Climate Network (GC-Net) curated and augmented level-1 dataset, Earth Syst. Sci. Data, 15, 5467–5489, https://doi.org/10.5194/essd-15-5467-2023, 2023. 
+# averaging = hourly
 # 
 # [FIELDS]
 # fields = timestamp,TA1,TA2,RH1,VW1,DW1,HW1,V,HS1,SZA,SAA,RH1_cor,latitude,longitude,elevation
