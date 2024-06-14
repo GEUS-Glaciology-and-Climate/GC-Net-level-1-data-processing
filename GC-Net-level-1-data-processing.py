@@ -50,7 +50,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
-# site_list = site_list.loc[site_list.Name.values == 'JAR1',:]
+# site_list = site_list.loc[site_list.Name.values == 'Saddle',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -99,9 +99,9 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # Applying standard filters again
     df_v4 = df_v4.resample("H").asfreq()
     df_v5 = ptb.filter_data(df_v4, site)
-    # ptb.plot_flagged_data(df_v5, df_out, site,
-    #                         # var_list=['HW1','HW2'], 
-    #                         )
+    ptb.plot_flagged_data(df_v5, df_out, site,
+                            # var_list=['HW1','HW2'], 
+                            )
     df_v5 = ptb.remove_flagged_data(df_v5)
 
     # correction of the net radiometer for windspeed
@@ -173,16 +173,16 @@ for site, ID in zip(site_list.Name, site_list.ID):
         df_v6_formatted = df_v6.copy()
         for col in [c for c in df_v6_formatted.columns if c not in ['latitude','longitude', 'elevation','timestamp']]:
             df_v6_formatted[col] = df_v6_formatted[col].map(lambda x: \
-                                             '' if np.isnan(x) \
-                                                 else '0' if abs(x)<0.005 \
-                                                 else '1' if abs(x-1)<0.005 \
-                                                 else '%0.2f'%x)
+                                              '' if np.isnan(x) \
+                                                  else '0' if abs(x)<0.005 \
+                                                  else '1' if abs(x-1)<0.005 \
+                                                  else '%0.2f'%x)
             
         df_v6_formatted['elevation'] = df_v6_formatted['elevation'].map(lambda x: \
-                                         '' if np.isnan(x) else '%0.0f'%x)
+                                          '' if np.isnan(x) else '%0.0f'%x)
         for col in ['latitude','longitude']:
             df_v6_formatted[col] = df_v6_formatted[col].map(lambda x: \
-                                             '' if np.isnan(x) else '%0.4f'%x)
+                                              '' if np.isnan(x) else '%0.4f'%x)
         print('writing hourly values')
         nead.write(
             df_v6_formatted.reset_index(),
@@ -210,13 +210,13 @@ for site, ID in zip(site_list.Name, site_list.ID):
         # formatting and saving to file
         for col in [c for c in df_v7.columns if c not in ['latitude','longitude', 'elevation','timestamp']]:
             df_v7[col] = df_v7[col].map(lambda x: \
-                                             '' if np.isnan(x) \
-                                                 else '0' if abs(x)<0.005 \
-                                                 else '1' if abs(x-1)<0.005 \
-                                                 else '%0.2f'%x)
+                                              '' if np.isnan(x) \
+                                                  else '0' if abs(x)<0.005 \
+                                                  else '1' if abs(x-1)<0.005 \
+                                                  else '%0.2f'%x)
 
         df_v7['elevation'] = df_v7['elevation'].map(lambda x: \
-                                         '' if np.isnan(x) else '%0.0f'%x)
+                                          '' if np.isnan(x) else '%0.0f'%x)
         for col in ['latitude','longitude']:
             df_v7[col] = df_v7[col].map(lambda x: '' if np.isnan(x) else '%0.4f'%x)
         print('writing daily averages')

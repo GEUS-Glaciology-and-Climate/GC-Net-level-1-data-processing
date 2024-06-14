@@ -32,7 +32,8 @@ t0,t1,variable,flag,comment,URL_graphic
 
 2002-01-01T00:00:00+00:00, ,NR, NAN, unrealisitic values (bav),
 
-, 1997-01-01T00:00:00+00:00,RH, NAN, unrealisitic values (bav),
+,1997-01-01T00:00:00+00:00,RH1, NAN, unrealisitic values (bav),
+,1997-01-01T00:00:00+00:00,RH2, NAN, unrealisitic values (bav),
 
 # lower boom buried, one sonic ranger at the upper boom and another one at the top of the station
 2022-09-24T00:00:00+00:00, ,TA1 TA3 RH1 VW1 DW1 VW2 DW2, NAN, lower boom buried (bav),

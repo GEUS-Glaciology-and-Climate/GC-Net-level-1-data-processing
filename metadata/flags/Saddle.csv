@@ -1,4 +1,6 @@
 t0,t1,variable,flag,comment,URL_graphic
+2010-01-01T00:00:00+00:00,,RH1 RH2,NAN,Manually flagged by bav,
+
 2010-01-01T00:00:00+00:00,2016-01-01T00:00:00+00:00,TA1,CHECKME,Manually flagged by bav,
 
 2010-01-01T00:00:00+00:00,,RH2,CHECKME,Manually flagged by bav,
