@@ -179,10 +179,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
                                                   else '%0.2f'%x)
             
         df_v6_formatted['elevation'] = df_v6_formatted['elevation'].map(lambda x: \
-                                          '' if np.isnan(x) else '%0.0f'%x)
+                                          '' if np.isnan(x) else '%0.2f'%x)
         for col in ['latitude','longitude']:
             df_v6_formatted[col] = df_v6_formatted[col].map(lambda x: \
-                                              '' if np.isnan(x) else '%0.4f'%x)
+                                              '' if np.isnan(x) else '%0.6f'%x)
         print('writing hourly values')
         nead.write(
             df_v6_formatted.reset_index(),
@@ -216,9 +216,9 @@ for site, ID in zip(site_list.Name, site_list.ID):
                                                   else '%0.2f'%x)
 
         df_v7['elevation'] = df_v7['elevation'].map(lambda x: \
-                                          '' if np.isnan(x) else '%0.0f'%x)
+                                          '' if np.isnan(x) else '%0.2f'%x)
         for col in ['latitude','longitude']:
-            df_v7[col] = df_v7[col].map(lambda x: '' if np.isnan(x) else '%0.4f'%x)
+            df_v7[col] = df_v7[col].map(lambda x: '' if np.isnan(x) else '%0.6f'%x)
         print('writing daily averages')
         nead.write(
             df_v7.reset_index(),
