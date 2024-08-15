@@ -22,3 +22,4 @@ t0,t1,variable,flag,comment,URL_graphic
 2015-05-21T00:00:00+00:00, , NR, NAN, unlikely values and found broken in 2023 (bav),
 
 , 1996-05-18T12:00:00+00:00, ^TS[^_]+$, NAN, intruments equilibrating with firn (bav),
+, 1996-05-16T20:00:00+00:00, ^TA[^_]+$, NAN, intruments very warm at installation (bav),

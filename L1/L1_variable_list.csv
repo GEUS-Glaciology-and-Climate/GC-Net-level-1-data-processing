@@ -15,8 +15,8 @@ TA1_min,DegreesC,air_temperature_1_min,airtemp1_minimum,real
 TA2,DegreesC,air_temperature_2,airtemp2,real
 TA2_max,DegreesC,air_temperature_2_max,airtemp2_maximum,real
 TA2_min,DegreesC,air_temperature_2_min,airtemp2_minimum,real
-TA3,DegreesC,air_temperature_cs500_air1,airtemp_cs500air1,real
-TA4,DegreesC,air_temperature_cs500_air2,airtemp_cs500air2,real
+TA3,DegreesC,air_temperature_cs500_1,airtemp_cs500_1,real
+TA4,DegreesC,air_temperature_cs500_2,airtemp_cs500_2,real
 RH1,%/100,relative_humidity_1,rh1,real
 RH2,%/100,relative_humidity_2,rh2,real
 VW1,m/s,wind_speed_1,windspeed1,real
