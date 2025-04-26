@@ -677,3 +677,54 @@ Warning: No file for station 22 PetermannELA
 # 21 Petermann Glacier
 # 22 Petermann ELA
 # 33 SMS-PET
+# 0 Swiss Camp 10m
+![](../figures/L1_overview/all_variables/0_SwissCamp10m_0.png)
+![](../figures/L1_overview/all_variables/0_SwissCamp10m_1.png)
+![](../figures/L1_overview/all_variables/0_SwissCamp10m_2.png)
+![](../figures/L1_overview/all_variables/0_SwissCamp10m_3.png)
+![](../figures/L1_overview/all_variables/0_SwissCamp10m_4.png)
+![](../figures/L1_overview/all_variables/0_SwissCamp10m_5.png)
+# 1 Swiss Camp
+![](../figures/L1_overview/all_variables/1_SwissCamp_0.png)
+![](../figures/L1_overview/all_variables/1_SwissCamp_1.png)
+![](../figures/L1_overview/all_variables/1_SwissCamp_2.png)
+![](../figures/L1_overview/all_variables/1_SwissCamp_3.png)
+![](../figures/L1_overview/all_variables/1_SwissCamp_4.png)
+![](../figures/L1_overview/all_variables/1_SwissCamp_5.png)
+# 2 Crawford Point 1
+![](../figures/L1_overview/all_variables/2_CrawfordPoint1_0.png)
+![](../figures/L1_overview/all_variables/2_CrawfordPoint1_1.png)
+![](../figures/L1_overview/all_variables/2_CrawfordPoint1_2.png)
+![](../figures/L1_overview/all_variables/2_CrawfordPoint1_3.png)
+![](../figures/L1_overview/all_variables/2_CrawfordPoint1_4.png)
+![](../figures/L1_overview/all_variables/2_CrawfordPoint1_5.png)
+# 13 CP2
+![](../figures/L1_overview/all_variables/13_CP2_0.png)
+![](../figures/L1_overview/all_variables/13_CP2_1.png)
+![](../figures/L1_overview/all_variables/13_CP2_2.png)
+![](../figures/L1_overview/all_variables/13_CP2_3.png)
+![](../figures/L1_overview/all_variables/13_CP2_4.png)
+![](../figures/L1_overview/all_variables/13_CP2_5.png)
+# 9 JAR1
+![](../figures/L1_overview/all_variables/9_JAR1_0.png)
+![](../figures/L1_overview/all_variables/9_JAR1_1.png)
+![](../figures/L1_overview/all_variables/9_JAR1_2.png)
+![](../figures/L1_overview/all_variables/9_JAR1_3.png)
+![](../figures/L1_overview/all_variables/9_JAR1_4.png)
+![](../figures/L1_overview/all_variables/9_JAR1_5.png)
+# 17 JAR2
+![](../figures/L1_overview/all_variables/17_JAR2_0.png)
+![](../figures/L1_overview/all_variables/17_JAR2_1.png)
+![](../figures/L1_overview/all_variables/17_JAR2_2.png)
+![](../figures/L1_overview/all_variables/17_JAR2_3.png)
+![](../figures/L1_overview/all_variables/17_JAR2_4.png)
+![](../figures/L1_overview/all_variables/17_JAR2_5.png)
+# 19 JAR3
+![](../figures/L1_overview/all_variables/19_JAR3_0.png)
+![](../figures/L1_overview/all_variables/19_JAR3_1.png)
+![](../figures/L1_overview/all_variables/19_JAR3_2.png)
+![](../figures/L1_overview/all_variables/19_JAR3_3.png)
+![](../figures/L1_overview/all_variables/19_JAR3_4.png)
+# 3 NASA-U
+![](../figures/L1_overview/all_variables/3_NASA-U_0.png)
+![](../figures/L1_overview/all_variables/3_NASA-U_1.png)
