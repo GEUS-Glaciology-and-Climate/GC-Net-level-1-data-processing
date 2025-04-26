@@ -32,7 +32,7 @@ def Msg(txt):
     f = open("out/L0_overview.md", "a")
     print(txt)
     f.write(txt + "\n")
-    
+
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
     Msg("# " + str(ID) + " " + site)
@@ -143,7 +143,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df_d = nead.read(filename_d).to_dataframe().reset_index(drop=True)
     df_d.timestamp = pd.to_datetime(df_d.timestamp)
     df_d = df_d.set_index("timestamp").replace(-999, np.nan)
-    
+
     # % plotting variables
     def new_fig():
         fig, ax = plt.subplots(3, 1, sharex=True, figsize=(7, 7))
@@ -160,7 +160,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
         df_d[var].plot(ax=ax[count], drawstyle="steps-post", label='daily')
         ax[count].set_ylabel(var)
         ax[count].legend(fontsize="x-small")
-        
+
         ax[count].grid()
         ax[count].set_xlim((df.index[0], df.index[-1]))
         count = count + 1
@@ -198,7 +198,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df_d = nead.read(filename_d).to_dataframe().reset_index(drop=True)
     df_d.timestamp = pd.to_datetime(df_d.timestamp)
     df_d = df_d.set_index("timestamp").replace(-999, np.nan)
-    
+
     # % plotting variables
     def new_fig():
         fig, ax = plt.subplots(6, 1, sharex=True, figsize=(15, 15))
@@ -232,7 +232,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
             continue
         if df[var].isnull().all():
             continue
-        
+
         # print(var)
         if var == 'DTS1':
             var = [v for v in df.columns if v.startswith('DTS')]
@@ -266,7 +266,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
                 ax[count].legend(fontsize="x-small", ncol=2)
             else:
                 ax[count].legend(fontsize="x-small")
-        
+
         ax[count].grid()
         ax[count].set_xlim((df.index[0], df.index[-1]))
         count = count + 1
@@ -338,7 +338,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df = df.set_index("timestamp").replace(-999, np.nan)
     if 'ISWR' in df.columns:
         df['rad'] = df[['ISWR','OSWR']].mean(axis=1)
-    else: 
+    else:
         df['rad'] = np.nan
     df['t'] = df[['TA'+str(i) for i in range(1,5) if 'TA'+str(i) in df.columns]].mean(axis=1)
     df['rh'] = df[['RH'+str(i) for i in range(1,3) if 'RH'+str(i) in df.columns]].mean(axis=1)
@@ -357,7 +357,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 plt.yticks(np.arange(len(site_list.Name))*(-4) - 1.5,
            site_list.Name, fontsize=18)
 plt.xticks([pd.to_datetime(str(y)) for y in range(1990,2025,5)],
-           [(str(y)) for y in range(1990,2025,5)], 
+           [(str(y)) for y in range(1990,2025,5)],
            fontsize=18)
 from matplotlib.ticker import (MultipleLocator, AutoMinorLocator)
 plt.plot(np.nan,np.nan, color = col[0], label='shortwave irradiance', linewidth = 4.5)
@@ -666,7 +666,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     if 'OSWR' not in df.columns:
         print('No radiation measurement')
         continue
-    
+
     # Calculating zenith and hour angle of the sun
     deg2rad = np.pi / 180
     ZenithAngle_rad = df.SZA * deg2rad
@@ -770,7 +770,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # plotting height
     df.HS1.plot(ax=ax[count], label='Surface height 1')
     df.HS2.plot(ax=ax[count], label='Surface height 2')
-    
+
     for var in  ['HS1','HS2']:
         X = df.index.values.astype(float)
         Y = df[var].values
@@ -875,7 +875,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     ax[count].set_title("("+ABC[count] + ") " + site, fontsize=14)
     ax[count].set_xlabel("")
     ax[count].grid()
-    
+
     ax[count].set_xticks([pd.to_datetime(str(y)) for y in range(1990,2022,5)])
     from matplotlib.ticker import AutoMinorLocator
     minor_locator = AutoMinorLocator(5)
@@ -932,7 +932,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df.timestamp = pd.to_datetime(df.timestamp)
 
     print("# " + str(ID) + " " + site)
-    
+
     try:
         df = (
             df.set_index("timestamp")
@@ -1126,3 +1126,75 @@ for site, ID in zip(site_list.Name, site_list.ID):
     )  #'--rigb', '--merra'])
     jaws.main(args)
     stations = jaws.get_stations()
+
+# %%
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from os import path
+import nead
+
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)
+
+# Helper function for logging
+def Msg(txt):
+    with open("out/L1_overview.md", "a") as f:
+        print(txt)
+        f.write(txt + "\n")
+
+plt.close("all")
+for site, ID in zip(site_list.Name, site_list.ID):
+    Msg("# " + str(ID) + " " + site)
+    site = site.replace(" ", "")
+    filename = "L1/hourly/" + site + ".csv"
+
+    if not path.exists(filename):
+        Msg("Warning: No file for station " + str(ID) + " " + site)
+        continue
+
+    # Load hourly and daily data
+    df = nead.read(filename).to_dataframe().reset_index(drop=True)
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+    df = df.set_index("timestamp").replace(-999, np.nan)
+
+    # Create plot
+    fig, ax = plt.subplots(2, 1, sharex=True,sharey=True, figsize=(10,10))
+
+    # Extract year for color coding
+    years = df.index.year
+
+    # Scatter plot of RH2 vs temperature (hourly data)
+    sc = ax[0].scatter(df["TA2"], df["RH2"],
+                       c=years, cmap='viridis', s=0.5, marker='.')
+
+    sc2 = ax[1].scatter(df["TA2"], df["RH2_cor"],
+                        c=years, cmap='viridis', s=0.5, marker='.')
+
+    # Calculate and plot 0.99 percentile for each 1-degree temperature bin
+    temp_bins = np.arange(-70, 11, 1)
+    binned_data = df.groupby(pd.cut(df["TA2"], bins=temp_bins))
+
+    temp_bin_centers = []
+    rh_percentiles = []
+    for temp_bin, group in binned_data:
+        if not group["RH2_cor"].dropna().empty:
+            temp_bin_centers.append(temp_bin.mid)
+            rh_percentiles.append(np.percentile(group["RH2_cor"].dropna(), 99))
+
+    ax[1].plot(temp_bin_centers, rh_percentiles, color='red', label="0.99 Percentile")
+
+    # Set limits and labels
+    ax[0].set_ylim(0, 120)
+    ax[0].set_xlim(-70, 10)
+    ax[0].grid()
+    ax[1].grid()
+
+    # Add colorbars and titles
+    fig.colorbar(sc, ax=ax[0], label="Year")
+    fig.colorbar(sc2, ax=ax[1], label="Year")
+    fig.suptitle(f"{ID} {site}")
+    ax[1].legend()
+    fig.savefig(
+        "figures/rh_diagnostic/" + site.replace(" ", "_") + ".png",
+        bbox_inches="tight", dpi=300,
+    )

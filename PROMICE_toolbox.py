@@ -556,11 +556,11 @@ def fill_gap_HW(df1, df2, var_target="HW1", var_sec="HW2", note=''):
     if var_target+'_org' not in df1.columns:
         df1[var_target+'_org'] = ''
     # Gap-filling HW using other sensor if available
-    prev_no_nan = df1[var_target].notnull().shift(1).fillna(False)
+    prev_no_nan = df1[var_target].notnull().shift(1, fill_value=False)
     is_nan = df1[var_target].isnull()
     list_start_gaps = df1.index[(prev_no_nan & is_nan)]
 
-    prev_nan = df1[var_target].isnull().shift(1).fillna(False)
+    prev_nan = df1[var_target].isnull().shift(1, fill_value=False)
     no_nan = df1[var_target].notnull()
     list_end_gaps = df1.index[(prev_nan & no_nan)]
 
@@ -813,12 +813,12 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         df['longitude'] =np.nan
         df['elevation'] =np.nan
         
-        df_pos = df_pos.resample('H').first().interpolate()
+        df_pos = df_pos.resample('h').first().interpolate()
         
         if (df_pos.index[-1] < df.index[-1]) | (df_pos.index[0] > df.index[0]):
-            df_pos = pd.concat((df.loc[df.index[0]:df_pos.index[0]-pd.to_timedelta('1H'), df.columns[0]],
+            df_pos = pd.concat((df.loc[df.index[0]:df_pos.index[0]-pd.to_timedelta('1h'), df.columns[0]],
                                 df_pos,
-                        df.loc[df_pos.index[-1]+pd.to_timedelta('1H'):df.index[-1], 
+                        df.loc[df_pos.index[-1]+pd.to_timedelta('1h'):df.index[-1], 
                               df.columns[0]]))[df_pos.columns]
 
         def extrapolate(df, y_col):
@@ -948,6 +948,24 @@ def interpolate_temperature(dates, depth_cor, temp, depth=10,
         newax.axes.yaxis.set_visible(False)
         fig.savefig("figures/string processing/interp_" + title + ".png", dpi=300)
     return df_interp
+
+
+def calcAlbedo(usr, dsr, ZenithAngle_deg):
+    '''Calculate surface albedo based on upwelling and downwelling shorwave 
+    flux, the angle between the sun and sensor, and the sun zenith'''
+    albedo = usr / dsr    
+    
+    # NaN bad data
+    OKalbedos = (ZenithAngle_deg < 70) & (albedo < 1) & (albedo > 0) & (usr >100) & (dsr>100)
+    albedo[~OKalbedos] = np.nan             
+    
+    # Interpolate all. Note "use_coordinate=False" is used here to force 
+    # comparison against the GDL code when that is run with *only* a TX file. 
+    # Should eventually set to default (True) and interpolate based on time, 
+    # not index.                                           
+    # albedo = albedo.interpolate_na(dim='time', use_coordinate=False)           
+    # albedo = albedo.ffill(dim='time').bfill(dim='time')                        #TODO remove this line and one above?
+    return albedo
 
 
 def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
@@ -1250,24 +1268,6 @@ def correctHumidity(rh, T, T_0=273.15, T_100=373.15, ews=1013.246, ei0=6.1071):
     return rh_cor  
 
 
-def calcAlbedo(usr, dsr, ZenithAngle_deg):
-    '''Calculate surface albedo based on upwelling and downwelling shorwave 
-    flux, the angle between the sun and sensor, and the sun zenith'''
-    albedo = usr / dsr    
-    
-    # NaN bad data
-    OKalbedos = (ZenithAngle_deg < 70) & (albedo < 1) & (albedo > 0) & (usr >100) & (dsr>100)
-    albedo[~OKalbedos] = np.nan             
-    
-    # Interpolate all. Note "use_coordinate=False" is used here to force 
-    # comparison against the GDL code when that is run with *only* a TX file. 
-    # Should eventually set to default (True) and interpolate based on time, 
-    # not index.                                           
-    # albedo = albedo.interpolate_na(dim='time', use_coordinate=False)           
-    # albedo = albedo.ffill(dim='time').bfill(dim='time')                        #TODO remove this line and one above?
-    return albedo
-
-
 def sza_saa(df, longitude, latitude):
         # calculatin SZA and SAA with same script as for PROMICE stations
     doy = df.index.dayofyear.values
@@ -1419,7 +1419,7 @@ def filter_zero_gradient(df_out):
     return df_out
 
 
-def filter_data(df, site, plot=True, remove_data=False):
+def filter_data(df, site, lat, lon, plot=True):
     """
     Applies standard filter on data.
 
@@ -1460,17 +1460,17 @@ def filter_data(df, site, plot=True, remove_data=False):
                         df_out.loc[ind, var + "_qc"] = "OOL"
 
     # Isolated measurements filter
-    msk1 = df_out.HW1.isnull().shift(2).fillna(False)
-    msk2 = df_out.HW1.isnull().shift(1).fillna(False)
-    msk3 = df_out.HW1.isnull().shift(-1).fillna(False)
-    msk4 = df_out.HW1.isnull().shift(-2).fillna(False)
+    msk1 = df_out.HW1.isnull().shift(2, fill_value=False)
+    msk2 = df_out.HW1.isnull().shift(1, fill_value=False)
+    msk3 = df_out.HW1.isnull().shift(-1, fill_value=False)
+    msk4 = df_out.HW1.isnull().shift(-2, fill_value=False)
     msk = (msk2 & msk3) | (msk1 & msk3) | (msk2 & msk4)
     df_out.loc[msk, "HW1"] = np.nan
     if 'HW2' in df_out.columns:
-        msk1 = df_out.HW2.isnull().shift(2).fillna(False)
-        msk2 = df_out.HW2.isnull().shift(1).fillna(False)
-        msk3 = df_out.HW2.isnull().shift(-1).fillna(False)
-        msk4 = df_out.HW2.isnull().shift(-2).fillna(False)
+        msk1 = df_out.HW2.isnull().shift(2, fill_value=False)
+        msk2 = df_out.HW2.isnull().shift(1, fill_value=False)
+        msk3 = df_out.HW2.isnull().shift(-1, fill_value=False)
+        msk4 = df_out.HW2.isnull().shift(-2, fill_value=False)
         msk = (msk2 & msk3) | (msk1 & msk3) | (msk2 & msk4)
         df_out.loc[msk, "HW2"] = np.nan
     
@@ -1480,9 +1480,69 @@ def filter_data(df, site, plot=True, remove_data=False):
     if 'VW2' in df_out.columns:
         msk = df_out.VW2.isnull() | df_out.VW2 < 0.5
         df_out.loc[msk, "DW2_qc"] = "IWS"
+        
+    # filtering radiation
+    if 'ISWR' in df.columns:
+        ZenithAngle_deg, _ = sza_saa(df_out, lon, lat)
+        ZenithAngle_rad = np.deg2rad(ZenithAngle_deg)
     
+        # Setting to zero when sun below the horizon.
+        bad = ZenithAngle_deg > 95
+        df_out.loc[bad & df['ISWR'].notnull(), 'ISWR'] = 0
+        df_out.loc[bad & df_out['OSWR'].notnull(), 'OSWR'] = 0
+    
+        # Calculate angle between sun and sensor
+        # AngleDif_deg = calcAngleDiff(ZenithAngle_rad, HourAngle_rad,
+        #                              phi_sensor_rad, theta_sensor_rad)
+    
+        # Filtering OSWR and ISWR for sun on lower dome
+        # in theory, this is not a problem in cloudy conditions, but the cloud cover
+        # index is too uncertain at this point to be used
+        # sunonlowerdome = (AngleDif_deg >= 90) & (ZenithAngle_deg <= 90)
+        # mask = ~sunonlowerdome | AngleDif_deg.isnull()                             # relaxing the filter for cases where sensor tilt is unknown
+        # df_out['ISWR'] = df_out['ISWR'].where(mask)
+        # df_out['OSWR'] = df_out['OSWR'].where(mask)
+    
+        # Filter ISWR values that are greater than top of the atmosphere irradiance
+        # Case where no tilt is available. If it is, then the same filter is used
+        # after tilt correction.
+        isr_toa = calcTOA(ZenithAngle_deg, ZenithAngle_rad)                        # Calculate TOA shortwave radiation
+        TOA_crit_nopass = (df_out['ISWR'] > (1.2 * isr_toa + 20))
+        
+        # plt.figure()
+        # ax=plt.gca()
+        # ax.plot(df_out.index,  (1.1 * isr_toa + 20), c='k', alpha=0.6)
+        # ax.plot(df_out.index, df_out.ISWR.values)
+        # ax.plot(df_out.index[TOA_crit_nopass], df_out.ISWR.values[TOA_crit_nopass], marker='.', ls='None')
+
+        df_out.loc[TOA_crit_nopass, "ISWR_qc"] = "OOL"
+        df_out.loc[TOA_crit_nopass, "OSWR_qc"] = "OOL"
+        
+
     return df_out
 
+def calcTOA(ZenithAngle_deg, ZenithAngle_rad):
+    '''Calculate incoming shortwave radiation at the top of the atmosphere,
+    accounting for sunset periods
+
+    Parameters
+    ----------
+    ZenithAngle_deg : float
+        Zenith angle in degrees
+    ZenithAngle_rad : float
+        Zenith angle in radians
+
+    Returns
+    -------
+    isr_toa : float
+        Incoming shortwave radiation at the top of the atmosphere
+    '''
+    sundown = ZenithAngle_deg >= 90
+
+    # Incoming shortware radiation at the top of the atmosphere
+    isr_toa = 1372 * np.cos(ZenithAngle_rad)
+    isr_toa[sundown] = 0
+    return isr_toa
 
 def hampel(vals_orig, k=7, t0=3):
     """

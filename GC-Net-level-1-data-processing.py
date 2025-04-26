@@ -97,8 +97,10 @@ for site, ID in zip(site_list.Name, site_list.ID):
                             # var_list=['HW1','HW2'], 
                             skip_var=["HS1", "HS2"])
     # Applying standard filters again
-    df_v4 = df_v4.resample("H").asfreq()
-    df_v5 = ptb.filter_data(df_v4, site)
+    df_v4 = df_v4.resample("h").asfreq()
+    df_v5 = ptb.filter_data(df_v4, site, 
+                            site_list.loc[site_list.Name == site, "Latitude (°N)"].values[0], 
+                            site_list.loc[site_list.Name == site, "Longitude (°E)"].values[0])
     ptb.plot_flagged_data(df_v5, df_out, site,
                             # var_list=['HW1','HW2'], 
                             )

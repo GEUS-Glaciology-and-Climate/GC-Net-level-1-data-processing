@@ -637,3 +637,43 @@ Warning: No file for station 22 PetermannELA
 ![](../figures/L1_overview/all_variables/32_LAR3_2.png)
 ![](../figures/L1_overview/all_variables/32_LAR3_3.png)
 ![](../figures/L1_overview/all_variables/32_LAR3_4.png)
+# 0 Swiss Camp 10m
+# 0 Swiss Camp 10m
+# 0 Swiss Camp 10m
+# 0 Swiss Camp 10m
+# 1 Swiss Camp
+# 2 Crawford Point 1
+# 13 CP2
+# 9 JAR1
+# 17 JAR2
+# 0 Swiss Camp 10m
+# 0 Swiss Camp 10m
+# 0 Swiss Camp 10m
+# 1 Swiss Camp
+# 2 Crawford Point 1
+# 0 Swiss Camp 10m
+# 1 Swiss Camp
+# 2 Crawford Point 1
+# 13 CP2
+# 9 JAR1
+# 17 JAR2
+# 19 JAR3
+# 3 NASA-U
+# 4 GITS
+# 5 Humboldt
+# 6 Summit
+# 7 Tunu-N
+# 8 DYE-2
+# 10 Saddle
+# 11 South Dome
+# 12 NASA-E
+# 15 NASA-SE
+# 14 NGRIP
+# 23 NEEM
+# 24 EastGRIP
+# 16 KAR
+# 18 KULU
+# 20 Aurora
+# 21 Petermann Glacier
+# 22 Petermann ELA
+# 33 SMS-PET
