@@ -130,4 +130,4 @@ def gradient_fluxes(df):  # This method is very sensitive to input data quality
     dnm[dnm == 0] = np.nan
     lh = num / dnm
     lh[np.abs(lh) >= 100] = np.nan
-    return sh, lh
+    return -sh, -lh
