@@ -14,3 +14,4 @@ t0,t1,variable,flag,comment,URL_graphic
 2008-05-07T00:00:00+00:00,2011-06-10T11:00:00+00:00 ,TA4 TA3, NAN, Manually flagged by bav,
 
 2007-01-01T00:00:00+00:00, ,^TS[^_]+$, NAN, Manually flagged by bav,
+2002-06-26T00:00:00+00:00, 2003-05-06T00:00:00+00:00,^TS[^_]+$, NAN, Manually flagged by bav,
