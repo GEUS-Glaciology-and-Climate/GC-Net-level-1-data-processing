@@ -19,6 +19,7 @@ import jaws_tools
 import nead
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 from sklearn.linear_model import LinearRegression
+from pypromice.core.qc.percentiles.outlier_detector import ThresholdBasedOutlierDetector
 
 
 def field_info(fields):
@@ -88,8 +89,8 @@ def flag_data(df, site, var_list=["all"]):
         Msg("No erroneous data listed for " + site)
         return df
 
-    flag_data = pd.read_csv("metadata/flags/" + site + ".csv", 
-                            comment="#", 
+    flag_data = pd.read_csv("metadata/flags/" + site + ".csv",
+                            comment="#",
                             skipinitialspace=True)
 
     flag_data.t0 = pd.to_datetime(flag_data.t0, format='mixed', utc=True)
@@ -100,7 +101,7 @@ def flag_data(df, site, var_list=["all"]):
 
     if var_list[0] == "all":
         var_list = np.unique(flag_data.variable)
-        
+
     Msg("Flagging data:")
     Msg("|start time|end time|variable|")
     Msg("|-|-|-|")
@@ -118,7 +119,7 @@ def flag_data(df, site, var_list=["all"]):
             var_list = df_out.filter(regex=(var)).columns
         else:
             var_list = var.split(' ')
-        
+
         for var in var_list:
             if '_qc' in var: continue
             Msg("|" + str(t0) + "|" + str(t1) + "|" + var + "|")
@@ -132,139 +133,113 @@ def flag_data(df, site, var_list=["all"]):
 
     return df_out
 
-
 def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
-    """
-    Replace data within a specified variable, between specified dates by NaN.
-    Reads from file "metadata/flags/<site>.csv".
-
-    INTPUTS:
-        df: PROMICE data with time index
-        site: string of PROMICE site
-        var_list: list of the variables for which data removal should be
-            conducted (default: all)
-        plot: whether data removal should be plotted
-
-    OUTPUTS:
-        promice_data: Dataframe containing PROMICE data for the desired settings [DataFrame]
-    """
     Msg(" ")
     df = df1.copy()
     df_out = df2.copy()
-    
-    if not os.path.isfile("metadata/adjustments/" + site + ".csv"):
-        Msg("No data to fix at " + site)
+    adj_path = f"metadata/adjustments/{site}.csv"
+
+    if not os.path.isfile(adj_path):
+        Msg(f"No data to fix at {site}")
         return []
 
-    adj_info = pd.read_csv("metadata/adjustments/" + site + ".csv",
-        comment="#", skipinitialspace=True)
+    # ---- Load adjustments ----
+    adj_info = pd.read_csv(adj_path, comment="#", skipinitialspace=True)
+    adj_info["t0"] = pd.to_datetime(adj_info["t0"], format="mixed", utc=True)
+    adj_info["t1"] = pd.to_datetime(adj_info["t1"], format="mixed", utc=True)
 
-    adj_info.t0 = pd.to_datetime(adj_info.t0, format='mixed', utc=True)
-    adj_info.t1 = pd.to_datetime(adj_info.t1, format='mixed', utc= True)
     adj_info.loc[adj_info.t0.isnull(), "t0"] = df_out.index[0]
     adj_info.loc[adj_info.t1.isnull(), "t1"] = df_out.index[-1]
 
-    # if "*" is given as variable then we append this adjustement for all variables
-    for ind in adj_info.loc[adj_info.variable == "*", :].index:
-        line_template = adj_info.loc[[ind], :].copy()
-        for var in df_out.columns:
-            line_template.variable = var
-            line_template.index = [adj_info.index.max() + 1]
-            adj_info = pd.concat((adj_info, line_template))
-        adj_info = adj_info.drop(labels=ind, axis=0)
+    # Wildcard "*" expands to all variables
+    if "*" in adj_info.variable.values:
+        all_vars = df_out.columns
+        template = adj_info[adj_info.variable == "*"].copy()
+        adj_info = adj_info[adj_info.variable != "*"]
+        for var in all_vars:
+            t = template.copy()
+            t["variable"] = var
+            adj_info = pd.concat([adj_info, t], ignore_index=True)
 
     adj_info.set_index(["variable", "t0"], drop=False, inplace=True)
 
-    if len(var_list) == 0:
+    # Default: plot all variables from df
+    if not var_list:
         var_list = df.columns
-    if isinstance(var_list,str):
+    if isinstance(var_list, str):
         var_list = [var_list]
 
+    flag_colors = {
+        "OK": "green",
+        "CHECKME": "orange",
+        "NAN": "violet",
+        "CONFIRMED": "tab:brown",
+        "OOL": "red",
+        "OOP": "magenta",
+        "IWS": "cyan",
+        "FROZEN": "blue",
+        "FROZEN_WS": "lightblue",
+    }
+
+
+    excluded_substrings = ["_qc", "_min", "_max", "_std", "_adj_flag"]
+
     for var in var_list:
-        plot = False
-        if (df[var].isnull().all() | ("_qc" in var)
-            | ("_min" in var) | ("_max" in var)
-            | ("_std" in var) | ("_adj_flag" in var)
-            | ("_min" in var) ):
-            print('not plotting',var)
+        if (df[var].isnull().all() or
+            any(s in var for s in excluded_substrings)):
+            print("not plotting", var)
             continue
-        if var in var_list: plot=True
-        if var+"_qc" in df.columns:
-            var_qc = var+"_qc"
-            df[var_qc].values[df[var_qc].isnull()] = "OK"
-            flags_uni = np.unique(df[var_qc].values.astype(str))
-            if len(flags_uni) > 1: plot=True
-        else:
-            if plot:
-                flags_uni = ["OK"]
-                var_qc = var+"_qc"
-                df[var_qc] = "OK"
 
-        if plot:
-            fig = plt.figure(figsize=(12, 8))
-            
-            df_out[var].plot(style=".",color='gray', label="before adjustment or filtering")
+        qc_var = var + "_qc"
+        if qc_var not in df.columns: df[qc_var] = "OK"
 
-            for flag in flags_uni:
-                if flag == "OK":
-                    df.loc[df[var_qc] == flag, var].plot(
-                        marker="o", linestyle="none", color="green", label=flag
-                    )
-                elif flag == "CHECKME":
-                    df.loc[df[var_qc] == flag, var].plot(
-                        marker="o", linestyle="none", color="orange", label=flag
-                    )
-                elif flag == "NAN":
-                    df.loc[df[var_qc] == flag, var].plot(
-                        marker="o", linestyle="none", color="violet", label=flag
-                    )
-                elif flag == "CONFIRMED":
-                    df.loc[df[var_qc] == flag, var].plot(
-                        marker="o", linestyle="none", color="tab:brown", label=flag
-                    )
-                elif flag == "OOL":
-                    df.loc[df[var_qc] == flag, var].plot(
-                        marker="o", linestyle="none", color="red", label=flag
-                    )
-                elif flag == "IWS":
-                    df.loc[df[var_qc] == flag, var].plot(
-                        marker="o", linestyle="none", color="cyan", label=flag
-                    )
-                elif flag == "FROZEN":
-                    df.loc[df[var_qc] == flag, var].plot(
-                        marker="o", linestyle="none", color="blue", label=flag
-                    )
-                elif flag == "FROZEN_WS":
-                    df.loc[df[var_qc] == flag, var].plot(
-                        marker="o", linestyle="none", color="lightblue", label=flag
-                    )
-                else:
-                    try:
-                        df.loc[df[var_qc] == flag, var].plot(
-                            marker="o", linestyle="none", label=flag
-                        )
-                    except:
-                        Msg("Could not plot flag: ", flag)
-                        
-            if var in adj_info.index.get_level_values(0).unique():
-                [
-                    plt.axvline(t, linestyle="--", color="red")
-                    for t in adj_info.loc[var].t0.values
-                ]
-                plt.axvline(np.nan, linestyle="--", color="red", label="Adjustment times")
-            plt.xlabel("Year")
-            plt.ylabel(var)
-            plt.legend()
-            plt.title(site)
-            fig.savefig("figures/L1_data_treatment/" + site.replace(" ", "")
-                + "_" + var + ".jpeg",
-                dpi=120, bbox_inches="tight")
-    
-            Msg("![Adjusted and flagged data at " + site
-                + "](../figures/L1_data_treatment/" + site.replace(" ", "")
-                + "_" + var + ".jpeg)")
+        flags_uni = np.unique(df[qc_var].astype(str).fillna("OK"))
+        if len(flags_uni) <= 1 and df[var].isnull().all(): continue
+
+        fig, ax = plt.subplots(figsize=(10, 7))
+        plt.subplots_adjust(top=0.95, bottom=0.08, left=0.1, right=0.98)
+
+        ax.scatter(df_out.index, df_out[var], s=8, color="gray", label="before adjustment or filtering")
+
+        # flagged points
+        for flag in flags_uni:
+            mask = df[qc_var] == flag
+            color = flag_colors.get(flag, None)
+            ax.scatter(df.index[mask], df[var][mask], s=12, color=color, label=flag)
+
+        if var in adj_info.index.get_level_values(0).unique():
+            for t in adj_info.loc[var].t0.values:
+                ax.axvline(t, linestyle="--", color="red")
+            ax.axvline(np.nan, linestyle="--", color="red", label="Adjustment times")
+
+        # robust x-limits
+        try:
+            ax.set_xlim(df_out.index.min(), df_out.index.max())
+        except:
+            pass
+
+        vals = df.loc[df[qc_var] == "OK", var].astype(float)
+        vals = vals.replace([np.inf, -np.inf], np.nan).dropna()
+
+        if len(vals) > 0:
+            vmin, vmax = vals.min(), vals.max()
+            if np.isfinite(vmin) and np.isfinite(vmax) and vmax > vmin:
+                pad = 0.05 * (vmax - vmin)
+                ax.set_ylim(vmin - pad, vmax + pad)
+
+        ax.set_xlabel("Year")
+        ax.set_ylabel(var)
+        ax.set_title(site)
+        ax.legend(frameon=False, loc="upper left")
+
+        fname = f"figures/L1_data_treatment/{site.replace(' ', '')}_{var}.jpeg"
+        fig.savefig(fname, dpi=120)
+
+        Msg(f"![Adjusted and flagged data at {site}]({fname})")
+        plt.close(fig)
 
     Msg(" ")
+
 
 def remove_flagged_data(df):
     """
@@ -442,11 +417,11 @@ def adjust_data(df, site, var_list=[], skip_var=[], skip_time_shifts=False):
                 tmp2 = df_out.loc[t0:t1, TA_var].mean(axis=1)
                 tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()]
                 tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
-                
+
                 df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values * np.sqrt(
                     (tmp.values + 273.15) / 273.15
                 )
-                
+
             if func == "air_temp_sonic_anticorrection":
                 # finding the available air temp measurements
                 if "TA" + var[-1] in df_out.columns:
@@ -541,13 +516,13 @@ def correct_net_rad(df_in, site):
         # empirically to be approximately 0.01
         df_v5.loc['2000-06-01':, 'NR_cor'] = df_v5.loc['2000-06-01':, 'NR'] * \
             ( 1 + 0.01 * VW.loc['2000-06-01':]**(3/4) )
-        tmp = df_v5.loc[:'2000-06-01', 'NR'] 
-        tmp.loc[tmp>0] = C_pos * tmp.loc[tmp>0] 
-        tmp.loc[tmp<0] = C_neg * tmp.loc[tmp<0] 
+        tmp = df_v5.loc[:'2000-06-01', 'NR']
+        tmp.loc[tmp>0] = C_pos * tmp.loc[tmp>0]
+        tmp.loc[tmp<0] = C_neg * tmp.loc[tmp<0]
         df_v5.loc[:'2000-06-01', 'NR_cor'] = tmp
     else:
-        df_v5.loc[df_v5.NR>0, 'NR_cor'] = C_pos * df_v5.loc[df_v5.NR>0, 'NR'] 
-        df_v5.loc[df_v5.NR<0, 'NR_cor'] = C_neg * df_v5.loc[df_v5.NR<0, 'NR'] 
+        df_v5.loc[df_v5.NR>0, 'NR_cor'] = C_pos * df_v5.loc[df_v5.NR>0, 'NR']
+        df_v5.loc[df_v5.NR<0, 'NR_cor'] = C_neg * df_v5.loc[df_v5.NR<0, 'NR']
     return df_v5
 
 
@@ -568,7 +543,7 @@ def fill_gap_HW(df1, df2, var_target="HW1", var_sec="HW2", note=''):
     list_start_gaps = list_start_gaps[list_start_gaps > df2.index[0]]
     list_end_gaps = list_end_gaps[list_end_gaps < df2.index[-1]]
     list_end_gaps = list_end_gaps[list_end_gaps > df2.index[0]]
-    
+
     if list_end_gaps[-1] < list_start_gaps[-1]:
         list_end_gaps = np.append(list_end_gaps, min(df1.index[-1],df2.index[-1]))
     if list_end_gaps[0] < list_start_gaps[0]:
@@ -602,28 +577,28 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     # Sensible and Latent Heat Fluxes SHF & LHF
     # Solar azimuth and zenith angles
     # albedo
-    
+
     # for debug:
     # df_in = df_v5.copy()
     df = df_in.copy()
-            
+
     # Interpolation over gaps smaller than two days
     for var in ['HW1','HW2']:
         if var not in df.columns:
             print(var, 'not in dataframe')
             continue
-           
+
         if df[var].isnull().all():
             print('No valid data for', var)
             continue
-        
-        # Creating surface height field        
+
+        # Creating surface height field
         ind1 = df[var].first_valid_index()
         var_HS = "HS"+var[-1]
         df[var_HS] = df.loc[ind1, var] - df[var]
 
-        
-        if site in ['SMS1', 'SMS2', 'SMS3', 'SMS4', 'SMS5', 'SMS-PET', 'Summit', 
+
+        if site in ['SMS1', 'SMS2', 'SMS3', 'SMS4', 'SMS5', 'SMS-PET', 'Summit',
                     'NASA-SE','Tunu-N', 'EastGRIP', 'LAR1', 'JAR2', 'JAR1',
                     'Petermann ELA', 'NGRIP']:
             thresh = 0.7
@@ -636,13 +611,13 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             fig, ax = plt.subplots(1,1)
             df[var].bfill().plot(ax=ax,marker='.', linestyle='None', label=var+' backfilled')
             df[var].plot(ax=ax,marker='.', linestyle='None', label=var)
-            
+
             diff = df[var].bfill().diff()
             diff.plot(ax=ax,marker='o', linestyle='None', label='all shifts')
             diff.loc[diff.abs()<thresh] = 0
             if 'SMS' in site:
                 diff.loc[diff>0] = 0
-            
+
             for t in  diff.loc[diff.abs()>thresh].index.values:
                 print(t)
                 # refining the diff value:
@@ -706,11 +681,11 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                 df_swc = nead.read("L1/hourly/SwissCamp.csv").to_dataframe().reset_index(drop=True)
                 df_swc['timestamp'] = pd.to_datetime(df_swc.timestamp)
                 df_swc = df_swc.set_index("timestamp").replace(-999, np.nan)
-            
+
             df[var] = fill_gap_HW(df, df_swc, var, "HW1", note= ' aws')
-            df[var] = fill_gap_HW(df, df_swc, var, "HW2", note= ' aws')    
+            df[var] = fill_gap_HW(df, df_swc, var, "HW2", note= ' aws')
             df.loc[df[var]<0, var] = np.nan
-    
+
     # HS summary:
     if 'HS2' in df.columns:
         df[['HS1','HS2']].plot()
@@ -739,21 +714,21 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     if 'TA3' in df.columns:
         # calculating SHF and LHF
         df["SHF"], df["LHF"] = jaws_tools.gradient_fluxes(df.copy())
-    
+
         # interpolating variables at standard heights
-        df["TA2m"] = extrapolate_variable_standard_height(df, 
-                                                          var=["TA1", "TA2"], 
-                                                          target_height=2, 
+        df["TA2m"] = extrapolate_variable_standard_height(df,
+                                                          var=["TA1", "TA2"],
+                                                          target_height=2,
                                                           max_diff=5)
-        df["RH2m"] = extrapolate_variable_standard_height(df, 
-                                                          var=["RH1", "RH2"], 
-                                                          target_height=2, 
+        df["RH2m"] = extrapolate_variable_standard_height(df,
+                                                          var=["RH1", "RH2"],
+                                                          target_height=2,
                                                           max_diff=10)
-        df["VW10m"] = extrapolate_variable_standard_height(df, 
+        df["VW10m"] = extrapolate_variable_standard_height(df,
                                                            var=["VW1", "VW2"],
-                                                           target_height=10, 
+                                                           target_height=10,
                                                            max_diff=10)
-    
+
         df.loc[df['TA2m']>20, 'TA2m'] = np.nan
         df.loc[df['TA2m']<-80, 'TA2m'] = np.nan
         df.loc[df['RH2m']>120, 'RH2m'] = np.nan
@@ -763,11 +738,11 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
     # Solar zenith and azimuth angles
     df["SZA"], df["SAA"] = sza_saa(df, longitude, latitude)
-    
+
     # Albedo
     if 'OSWR' in df.columns:
         df['Alb'] = calcAlbedo(df.OSWR, df.ISWR, df.SZA)
-    
+
     # Humidity with regard to ice and specific humidity
     T1 = df.TA1.copy()
     if 'TA3' in df.columns:
@@ -789,8 +764,8 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
         df['Q2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
         df.loc[df['Q2']>40, 'Q2'] = np.nan
-        
-    # adding latitude and longitude fields          
+
+    # adding latitude and longitude fields
     try:
         if os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated_with_elev.csv'):
             df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated_with_elev.csv')
@@ -801,24 +776,24 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             df_pos['date'] = df_pos.time_elev_approximation.astype(str) + '-08-01'
             df_pos['elev'] = df_pos.elev_approximation
             df_pos['lat'] = latitude
-            df_pos['lon'] = longitude      
-            
+            df_pos['lon'] = longitude
+
         df_pos.date = pd.to_datetime(df_pos.date, utc=True)
         df_pos = df_pos.set_index('date')
         df_pos_save = df_pos.copy()
-        offset = pd.DateOffset(months=7) 
+        offset = pd.DateOffset(months=7)
         df_pos = df_pos.shift(freq=-offset).resample('YS').first().shift(freq=offset)
-        
+
         df['latitude'] =np.nan
         df['longitude'] =np.nan
         df['elevation'] =np.nan
-        
+
         df_pos = df_pos.resample('h').first().interpolate()
-        
+
         if (df_pos.index[-1] < df.index[-1]) | (df_pos.index[0] > df.index[0]):
             df_pos = pd.concat((df.loc[df.index[0]:df_pos.index[0]-pd.to_timedelta('1h'), df.columns[0]],
                                 df_pos,
-                        df.loc[df_pos.index[-1]+pd.to_timedelta('1h'):df.index[-1], 
+                        df.loc[df_pos.index[-1]+pd.to_timedelta('1h'):df.index[-1],
                               df.columns[0]]))[df_pos.columns]
 
         def extrapolate(df, y_col):
@@ -834,13 +809,13 @@ def augment_data(df_in, latitude, longitude, elevation, site):
                 df_pos[var] = df_pos[var].fillna(
                     df_pos.loc[df_pos[var].last_valid_index(),
                                var])
-                
+
 
         df['latitude'] = df_pos.loc[df.index,'lat']
         df['longitude'] = df_pos.loc[df.index,'lon']
         if 'elev' in df_pos.columns:
             df['elevation'] = df_pos.loc[df.index,'elev']
-            
+
         fig, ax = plt.subplots(3,1,sharex=True)
         df_pos_save.lat.plot(ax=ax[0], marker='o', ls='None')
         df[['latitude']].plot(ax=ax[0])
@@ -857,13 +832,13 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         df['latitude'] = latitude
         df['longitude'] = longitude
         df['elevation'] = elevation
-        
+
     return df
 
 from scipy.interpolate import interp1d
 
-def interpolate_temperature(dates, depth_cor, temp, depth=10, 
-                            min_diff_to_depth=2, kind="quadratic", title="", 
+def interpolate_temperature(dates, depth_cor, temp, depth=10,
+                            min_diff_to_depth=2, kind="quadratic", title="",
                             plot=True, surface_height=[]):
     depth_cor = depth_cor.astype(float)
     df_interp = pd.DataFrame()
@@ -951,26 +926,26 @@ def interpolate_temperature(dates, depth_cor, temp, depth=10,
 
 
 def calcAlbedo(usr, dsr, ZenithAngle_deg):
-    '''Calculate surface albedo based on upwelling and downwelling shorwave 
+    '''Calculate surface albedo based on upwelling and downwelling shorwave
     flux, the angle between the sun and sensor, and the sun zenith'''
-    albedo = usr / dsr    
-    
+    albedo = usr / dsr
+
     # NaN bad data
     OKalbedos = (ZenithAngle_deg < 70) & (albedo < 1) & (albedo > 0) & (usr >100) & (dsr>100)
-    albedo[~OKalbedos] = np.nan             
-    
-    # Interpolate all. Note "use_coordinate=False" is used here to force 
-    # comparison against the GDL code when that is run with *only* a TX file. 
-    # Should eventually set to default (True) and interpolate based on time, 
-    # not index.                                           
-    # albedo = albedo.interpolate_na(dim='time', use_coordinate=False)           
+    albedo[~OKalbedos] = np.nan
+
+    # Interpolate all. Note "use_coordinate=False" is used here to force
+    # comparison against the GDL code when that is run with *only* a TX file.
+    # Should eventually set to default (True) and interpolate based on time,
+    # not index.
+    # albedo = albedo.interpolate_na(dim='time', use_coordinate=False)
     # albedo = albedo.ffill(dim='time').bfill(dim='time')                        #TODO remove this line and one above?
     return albedo
 
 
 def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     df_v6 = df_in.copy()
-    
+
     # downloading metadata from online google sheet
     try:
         url = (
@@ -981,32 +956,32 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     except:
         print("Cannot download maintenance summary. Using local file.")
         pass
-    
+
     maintenance_string = pd.read_csv("metadata/maintenance summary/" + site + ".csv")
-    
+
     col_depth_installation = ['NewDepth1 (m)', 'NewDepth2 (m)', 'NewDepth3 (m)',
                           'NewDepth4 (m)', 'NewDepth5 (m)', 'NewDepth6 (m)',
-                          'NewDepth7 (m)', 'NewDepth8 (m)', 'NewDepth9 (m)', 
+                          'NewDepth7 (m)', 'NewDepth8 (m)', 'NewDepth9 (m)',
                           'NewDepth10 (m)']
     if maintenance_string.shape[0] == 0:
         print('No installtion depth reported, using default')
         maintenance_string['date'] = [df_v6.index[0]]
         maintenance_string[col_depth_installation] = [np.arange(1,11)]
-    maintenance_string.date = pd.to_datetime(maintenance_string.date, 
+    maintenance_string.date = pd.to_datetime(maintenance_string.date,
                                              format='mixed', utc=True)
     maintenance_string = maintenance_string.set_index('date')
     maintenance_string = maintenance_string[col_depth_installation]
     msk = maintenance_string[col_depth_installation].notnull().all(axis=1)
     maintenance_string = maintenance_string.loc[msk, :]
-    
+
     temp_cols_name = [v for v in df_v6.columns if 'TS' in v]
     num_therm = len(temp_cols_name)
     depth_cols_name = ['DTS'+str(i) for i in range(1,num_therm+1)]
 
     df_v6[depth_cols_name] = np.nan
-    
+
     ini_depth = np.arange(1,11)
-    
+
     # filtering the surface height
     surface_height = df_v6["HS_combined"].copy()
     ind_filter = surface_height.rolling(window=14, center=True).var() > 0.1
@@ -1046,7 +1021,7 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
                 ]
             )
             df_v6[col] = tmp.values
-    
+
     # % Filtering thermistor data
     for i in range(len(temp_cols_name)):
         tmp = df_v6[temp_cols_name[i]].copy()
@@ -1082,7 +1057,7 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
             tmp.loc[ind_pos] = np.nan
         # copying the filtered values to the original table
         df_v6[temp_cols_name[i]] = tmp.values
-            
+
     # interpolating 10 m firn/ice temp
     df_v6['TS_10m'] = interpolate_temperature(
         df_v6.index.values,
@@ -1099,16 +1074,16 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     ind_low = df_v6["TS_10m"] < -70
     df_v6.loc[ind_pos, "TS_10m"] = np.nan
     df_v6.loc[ind_low, "TS_10m"] = np.nan
-    
+
     #  Plotting
     fig, ax = plt.subplots(1, 2, figsize=(15, 6),sharex=True)
     plt.subplots_adjust(left=0.05, right=0.95, wspace=0.15, top=0.95)
-    
+
     df_v6["HS_combined"].plot(
         ax=ax[0], color="black", label="surface", linewidth=3
     )
     (df_v6["HS_combined"] - 10).plot(
-        ax=ax[0],  color="red", linestyle="-", linewidth=4,  
+        ax=ax[0],  color="red", linestyle="-", linewidth=4,
         label="10 m depth",
     )
 
@@ -1178,9 +1153,9 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     if len(df_v6["TS_10m"]) == 0:
         print("No 10m temp for ", site)
     else:
-        df_v6["TS_10m"].resample("D").mean().plot(ax=ax[1], 
-                                                               color="red", 
-                                                               linewidth=5, 
+        df_v6["TS_10m"].resample("D").mean().plot(ax=ax[1],
+                                                               color="red",
+                                                               linewidth=5,
                                                                label="10 m temperature")
     ax[1].plot(
         np.nan, np.nan,  marker="o", linestyle="none", color="lightgray",
@@ -1204,7 +1179,7 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
 
 def calcHumid(T_h, p_h, RH_cor_h, T_0=273.15, T_100=373.15,
               es_0=6.1071, es_100=1013.246, eps=0.622):
-    '''Calculate specific humidity'''                                                         
+    '''Calculate specific humidity'''
     # Saturation vapour pressure above 0 C (hPa)
     es_wtr = 10**(-7.90298 * (T_100 / (T_h + T_0) - 1) + 5.02808 * np.log10(T_100 / (T_h + T_0))
                   - 1.3816E-7 * (10**(11.344 * (1 - (T_h + T_0) / T_100)) - 1)
@@ -1214,17 +1189,17 @@ def calcHumid(T_h, p_h, RH_cor_h, T_0=273.15, T_100=373.15,
     es_ice = 10**(-9.09718 * (T_0 / (T_h + T_0) - 1) - 3.56654
                   * np.log10(T_0 / (T_h + T_0)) + 0.876793
                   * (1 - (T_h + T_0) / T_0)
-                  + np.log10(es_0)) 
+                  + np.log10(es_0))
 
     # Specific humidity at saturation (incorrect below melting point)
-    q_sat = eps * es_wtr / (p_h - (1 - eps) * es_wtr) 
-    
+    q_sat = eps * es_wtr / (p_h - (1 - eps) * es_wtr)
+
     # Replace saturation specific humidity values below melting point
-    freezing = T_h < 0  
+    freezing = T_h < 0
     q_sat[freezing] = eps * es_ice[freezing] / (p_h[freezing] - (1 - eps) * es_ice[freezing])
-    
+
     # Convert to kg/kg
-    return RH_cor_h * q_sat / 100 
+    return RH_cor_h * q_sat / 100
 
 
 def correctHumidity(rh, T, T_0=273.15, T_100=373.15, ews=1013.246, ei0=6.1071):
@@ -1243,15 +1218,15 @@ def correctHumidity(rh, T, T_0=273.15, T_100=373.15, ews=1013.246, ei0=6.1071):
         Saturation pressure (normal atmosphere) at steam point temperature
     ei0 : int
         DESCRIPTION
-        
+
     Returns
     -------
     xarray.DataArray
         Corrected relative humidity
-    '''                                            
-    # Convert to hPa (Groff & Gratch)   
+    '''
+    # Convert to hPa (Groff & Gratch)
     e_s_wtr = 10**(-7.90298 * (T_100 / (T + T_0) - 1)
-                   + 5.02808 * np.log10(T_100 / (T + T_0)) 
+                   + 5.02808 * np.log10(T_100 / (T + T_0))
                    - 1.3816E-7 * (10**(11.344 * (1 - (T + T_0) / T_100)) - 1)
                    + 8.1328E-3 * (10**(-3.49149 * (T_100/(T + T_0) - 1)) -1)
                    + np.log10(ews))
@@ -1259,13 +1234,13 @@ def correctHumidity(rh, T, T_0=273.15, T_100=373.15, ews=1013.246, ei0=6.1071):
                    - 3.56654 * np.log10(T_0 / (T + T_0))
                    + 0.876793 * (1 - (T + T_0) / T_0)
                    + np.log10(ei0))
-    
-    # Define freezing point. Why > -100?  
-    freezing = (T < 0) & (T > -100).values 
 
-    # Set to Groff & Gratch values when freezing, otherwise just rh                         
-    rh_cor = rh.where(~freezing, other = rh*(e_s_wtr / e_s_ice)) 
-    return rh_cor  
+    # Define freezing point. Why > -100?
+    freezing = (T < 0) & (T > -100).values
+
+    # Set to Groff & Gratch values when freezing, otherwise just rh
+    rh_cor = rh.where(~freezing, other = rh*(e_s_wtr / e_s_ice))
+    return rh_cor
 
 
 def sza_saa(df, longitude, latitude):
@@ -1313,7 +1288,7 @@ def extrapolate_variable_standard_height(df, var=["TA1", "TA2"], log=False,
     ht_high = df["HW2"].copy()  # height of upper level
     if log:
         ht_low = np.log(ht_low)
-        ht_high = np.log(ht_high) 
+        ht_high = np.log(ht_high)
         target_height = np.log(target_height)
     var_low = df[var[0]].copy()
     var_high = df[var[1]].copy()
@@ -1332,7 +1307,7 @@ def extrapolate_variable_standard_height(df, var=["TA1", "TA2"], log=False,
     )
     if log:
         # if we assume a logarithmic profile, then we can only use timestamps
-        # where wind speed is lower at the lower level than at the upper level 
+        # where wind speed is lower at the lower level than at the upper level
         msk = msk & (var_low <= var_high)
     extrapolated_var = ht_low * np.nan
 
@@ -1340,14 +1315,14 @@ def extrapolate_variable_standard_height(df, var=["TA1", "TA2"], log=False,
         ((var_high.loc[msk] - var_low.loc[msk]) / (ht_high.loc[msk] - ht_low.loc[msk]))
         * (target_height - ht_low.loc[msk])
     )
-    
-    extrapolated_var.loc[extrapolated_var<0] = np.nan   
-    extrapolated_var.loc[extrapolated_var>35] = np.nan   
+
+    extrapolated_var.loc[extrapolated_var<0] = np.nan
+    extrapolated_var.loc[extrapolated_var>35] = np.nan
     # filter on difference between the extrapolated value and the original measurement
     diff_1 = (extrapolated_var - var_low).abs()
     diff_2 = (extrapolated_var - var_high).abs()
-    extrapolated_var.loc[(diff_1 > max_diff) | (diff_2 > max_diff)] = np.nan   
-    
+    extrapolated_var.loc[(diff_1 > max_diff) | (diff_2 > max_diff)] = np.nan
+
     if log & (target_height == np.log(10)):
         # if we deal with wind extrapolation, we fill the gaps in extrapolated
         # 10 m wind speed by a theoretical extrapolation to 10 m using a log
@@ -1362,7 +1337,7 @@ def extrapolate_variable_standard_height(df, var=["TA1", "TA2"], log=False,
         U10m_theoretical.loc[U10m_theoretical.from_low>35, 'from_low'] = np.nan
         U10m_theoretical.loc[U10m_theoretical.from_high<0, 'from_high'] = np.nan
         U10m_theoretical.loc[U10m_theoretical.from_high>35, 'from_high'] = np.nan
-        
+
         extrapolated_var.loc[extrapolated_var.isnull()] = \
             U10m_theoretical.from_high.combine_first(U10m_theoretical.from_low).loc[extrapolated_var.isnull()]
     return extrapolated_var
@@ -1434,10 +1409,10 @@ def filter_data(df, site, lat, lon, plot=True):
         promice_data: Dataframe containing PROMICE data for the desired settings [DataFrame]
     """
     df_out = df.copy()
-    
+
     # flagging frozen values
     df_out = filter_zero_gradient(df_out)
-    
+
     # Limits filter:
     df_lim = pd.read_csv("metadata/limits.csv",comment="#",  skipinitialspace=True)
     df_lim.columns = ["site", "var_lim", "var_min", "var_max"]
@@ -1473,28 +1448,28 @@ def filter_data(df, site, lat, lon, plot=True):
         msk4 = df_out.HW2.isnull().shift(-2, fill_value=False)
         msk = (msk2 & msk3) | (msk1 & msk3) | (msk2 & msk4)
         df_out.loc[msk, "HW2"] = np.nan
-    
+
     # Filtering DW for low or NaN values of VW
     msk = df_out.VW1.isnull() | df_out.VW1 < 0.5
     df_out.loc[msk, "DW1_qc"] = "IWS"
     if 'VW2' in df_out.columns:
         msk = df_out.VW2.isnull() | df_out.VW2 < 0.5
         df_out.loc[msk, "DW2_qc"] = "IWS"
-        
+
     # filtering radiation
     if 'ISWR' in df.columns:
         ZenithAngle_deg, _ = sza_saa(df_out, lon, lat)
         ZenithAngle_rad = np.deg2rad(ZenithAngle_deg)
-    
+
         # Setting to zero when sun below the horizon.
         bad = ZenithAngle_deg > 95
         df_out.loc[bad & df['ISWR'].notnull(), 'ISWR'] = 0
         df_out.loc[bad & df_out['OSWR'].notnull(), 'OSWR'] = 0
-    
+
         # Calculate angle between sun and sensor
         # AngleDif_deg = calcAngleDiff(ZenithAngle_rad, HourAngle_rad,
         #                              phi_sensor_rad, theta_sensor_rad)
-    
+
         # Filtering OSWR and ISWR for sun on lower dome
         # in theory, this is not a problem in cloudy conditions, but the cloud cover
         # index is too uncertain at this point to be used
@@ -1502,13 +1477,13 @@ def filter_data(df, site, lat, lon, plot=True):
         # mask = ~sunonlowerdome | AngleDif_deg.isnull()                             # relaxing the filter for cases where sensor tilt is unknown
         # df_out['ISWR'] = df_out['ISWR'].where(mask)
         # df_out['OSWR'] = df_out['OSWR'].where(mask)
-    
+
         # Filter ISWR values that are greater than top of the atmosphere irradiance
         # Case where no tilt is available. If it is, then the same filter is used
         # after tilt correction.
         isr_toa = calcTOA(ZenithAngle_deg, ZenithAngle_rad)                        # Calculate TOA shortwave radiation
         TOA_crit_nopass = (df_out['ISWR'] > (1.2 * isr_toa + 20))
-        
+
         # plt.figure()
         # ax=plt.gca()
         # ax.plot(df_out.index,  (1.1 * isr_toa + 20), c='k', alpha=0.6)
@@ -1517,9 +1492,57 @@ def filter_data(df, site, lat, lon, plot=True):
 
         df_out.loc[TOA_crit_nopass, "ISWR_qc"] = "OOL"
         df_out.loc[TOA_crit_nopass, "OSWR_qc"] = "OOL"
-        
+
+        df_threshold = pd.read_csv('metadata/thresholds.csv')
+
+        mask = detect_outliers(df_out, df_threshold.loc[(df_threshold.stid==site)])
+
+        for var in mask.columns:
+            if var in df_out.columns:
+                var_qc= var+"_qc"
+                if var_qc not in df_out.columns: df_out[var_qc]= 'OK'
+                df_out.loc[mask[var], var_qc] = "OOP"
 
     return df_out
+
+
+def detect_outliers(data_set: pd.DataFrame, thresholds: pd.DataFrame) -> pd.DataFrame:
+    masks = []
+
+    idx_month = data_set.index.tz_localize(None).month
+    month_masks = {m: (idx_month == m)
+                   for m in thresholds["month"].dropna().unique()}
+
+    for var, cfg in thresholds.groupby("variable_pattern"):
+        series = data_set[var].astype(float)
+        mask = np.zeros(len(series), dtype=bool)
+
+        for _, row in cfg.iterrows():
+            if pd.isna(row.month):      # global threshold
+                thr_mask = (series < row.lo) | (series > row.hi)
+            else:                       # monthly threshold
+                thr_mask = ((series < row.lo) | (series > row.hi)) & month_masks[int(row.month)]
+
+            mask |= thr_mask
+
+        masks.append(pd.Series(mask, index=data_set.index, name=var))
+
+    return pd.concat(masks, axis=1)
+
+
+
+def get_season_index_mask(data_set: pd.DataFrame, season: str) -> np.ndarray:
+    season_month_map = {
+        "winter": {12, 1, 2},
+        "spring": {3, 4, 5},
+        "summer": {6, 7, 8},
+        "fall": {9, 10, 11},
+    }
+    season_months = season_month_map.get(
+        season, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+    )
+    return data_set.index.month.isin(season_months)[:, None]
+
 
 def calcTOA(ZenithAngle_deg, ZenithAngle_rad):
     '''Calculate incoming shortwave radiation at the top of the atmosphere,
@@ -1739,13 +1762,13 @@ def limited_min(array_like):
 
 def daily_average(df_in):
     df_v6 = df_in.copy()
-    
+
     # caluclating directional wind speed
     for i in ['1','2']:
         if ('VW'+i  not in df_v6.columns) |('DW'+i not in df_v6.columns):
             continue
         df_v6['VW'+i+'_x'] = df_v6['VW'+i] * np.sin(df_v6['DW'+i] * np.pi/180)
-        df_v6['VW'+i+'_y'] = df_v6['VW'+i]  * np.cos(df_v6['DW'+i] * np.pi/180) 
+        df_v6['VW'+i+'_y'] = df_v6['VW'+i]  * np.cos(df_v6['DW'+i] * np.pi/180)
 
 
     df_v7 = df_v6.resample('D').apply(limited_mean)
@@ -1755,15 +1778,169 @@ def daily_average(df_in):
     if len(min_vars)>0: df_v7[min_vars] = df_v6[min_vars].resample('D').apply(limited_min)
     flag_vars = [var for var in df_v6.keys() if 'adj_flag' in var]
     if len(flag_vars)>0: df_v7[flag_vars] = df_v6[flag_vars].resample('D').apply(limited_max)
-    
+
     # calculating daily wind direction from daily mean directional wind speed
     for i in ['1','2']:
         if ('VW'+i+'_x' not in df_v6.columns )|('VW'+i+'_x' not in df_v6.columns):
             continue
-        df_v7['DW'+i] = np.arctan2(df_v6['VW'+i+'_x'], df_v6['VW'+i+'_y'] ) * 180 / np.pi  
-        df_v7['DW'+i] = (df_v7['DW'+i] + 360) % 360  
+        df_v7['DW'+i] = np.arctan2(df_v6['VW'+i+'_x'], df_v6['VW'+i+'_y'] ) * 180 / np.pi
+        df_v7['DW'+i] = (df_v7['DW'+i] + 360) % 360
         df_v7 = df_v7.drop(columns='VW'+i+'_x')
         df_v7 = df_v7.drop(columns='VW'+i+'_y')
-    
+
     df_v7.attrs['averaging'] = 'daily'
     return df_v7
+# %%
+import sys
+from datetime import datetime
+import pandas as pd
+from pypromice.pipeline.aws import AWS
+from pathlib import Path
+from os import path
+import logging
+from pypromice.core.qc.github_data_issues import adjustTime, flagNAN, adjustData
+logger = logging.getLogger("ComputeThreshold")
+import argparse
+import nead
+
+logging.basicConfig(
+    format="%(asctime)s; %(levelname)s; %(name)s; %(message)s",
+    level=logging.INFO,
+    stream=sys.stdout,
+)
+
+
+
+# %%
+def compute_all_thresholds():
+    # %%
+    thresholds_output_path=Path(__file__).parent.joinpath("metadata/thresholds.csv")
+    station_thresholds_root=Path(__file__).parent.joinpath("metadata/station_thresholds")
+
+    logger.info("Computing all thresholds for stations available in the L0 repository")
+    logger.info(f"station_thresholds_root: {station_thresholds_root}")
+    logger.info(f"thresholds_output_path:  {thresholds_output_path}")
+
+
+    station_thresholds_root.mkdir(parents=True, exist_ok=True)
+    output_paths = []
+    site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=(True))
+    # site_list = site_list.loc[site_list.Name == 'Swiss Camp 10m']
+
+    for stid in site_list.Name:
+        logger.info(f"Processing {stid}")
+        output_path = station_thresholds_root.joinpath(f"{stid}.csv")
+        threshold = find_thresholds(stid)
+        threshold.to_csv(
+            path_or_buf=output_path, index=False, float_format="{:.2f}".format
+        )
+        output_paths.append(output_path)
+
+    logger.info("Merge threshold files")
+    pd.concat(pd.read_csv(p) for p in output_paths).to_csv(
+        thresholds_output_path, index=False, float_format="{:.2f}".format
+    )
+
+# %%
+def find_thresholds(stid: str) -> pd.DataFrame:
+
+    var_list = ["P","VW1","VW2","RH1","RH2","TA1","TA2","TA3","TA4"]
+    stid_logger = logger.getChild(stid)
+    stid_logger.info("Read AWS data and get L1")
+    filename = "L1/hourly/" + stid.replace(" ", "") + ".csv"
+
+    ds = nead.read(filename)
+    df_aws = ds.to_dataframe().reset_index(drop=True)
+    df_aws.timestamp = pd.to_datetime(df_aws.timestamp, utc=False)
+    df_aws = df_aws.set_index("timestamp")
+
+    stid_logger.info("Determine thresholds")
+
+    df = df_aws[[v for v in var_list if v in df_aws.columns]].copy()
+    df["month"] = df.index.month
+
+    threshold_rows = []
+
+    # ---- GLOBAL THRESHOLDS (P, VW1, VW2, RH1, RH2) ----
+    for var in ["P","VW1","VW2","RH1","RH2"]:
+        if var in df.columns:
+            lo, hi = df[var].quantile([0.005, 0.995]) + [-12, 12]
+            threshold_rows.append(dict(
+                stid=stid, variable_pattern=var,
+                lo=lo, hi=hi
+            ))
+
+    # ---- MONTHLY TEMPERATURE THRESHOLDS ----
+    for var in ["TA1","TA2","TA3","TA4"]:
+        if var not in df.columns:
+            continue
+
+        for month, sdf in df[[var,"month"]].groupby("month"):
+            lo, hi = sdf[var].quantile([0.005, 0.995]) + [-9, 9]
+
+            threshold_rows.append(dict(
+                stid=stid,
+                variable_pattern=var,
+                month=int(month),
+                lo=lo, hi=hi
+            ))
+
+    threshold = pd.DataFrame(threshold_rows)
+    stid_logger.info(threshold)
+
+    # ---- PLOTTING ----
+    import matplotlib.pyplot as plt
+    from pathlib import Path
+
+    out = Path("figures/thresholds")
+    out.mkdir(parents=True, exist_ok=True)
+
+    for var in ["P","VW1","VW2","TA1","TA2","TA3","TA4"]:
+        if var not in df.columns:
+            continue
+
+        plt.close("all")
+        fig, ax = plt.subplots(figsize=(12,4))
+
+        # monthly min/max gray band
+        m = df[var].resample("M")
+        lo_band = m.min()
+        hi_band = m.max()
+        ax.fill_between(lo_band.index, lo_band, hi_band,
+                        color="lightgray", alpha=0.6, step="mid")
+
+        # global thresholds
+        g = threshold[
+            (threshold.stid==stid) &
+            (threshold.variable_pattern==var) &
+            (threshold.month.isna())
+        ]
+        if len(g):
+            lo, hi = g.iloc[0][["lo","hi"]]
+            ax.axhline(lo, color="black", linestyle="--")
+            ax.axhline(hi, color="black", linestyle="--")
+
+        # monthly temperature thresholds
+        s = threshold[
+            (threshold.stid==stid) &
+            (threshold.variable_pattern==var) &
+            (threshold.month.notna())
+        ]
+
+        if len(s):
+            lo = lo_band.index.map(
+                lambda t: s.loc[s.month == t.month, "lo"].iloc[0]
+            )
+            hi = lo_band.index.map(
+                lambda t: s.loc[s.month == t.month, "hi"].iloc[0]
+            )
+
+            ax.step(lo_band.index, lo, where="post", color="blue", linestyle="--")
+            ax.step(lo_band.index, hi, where="post", color="blue", linestyle="--")
+
+        ax.set_title(f"{stid} — {var}")
+        fig.autofmt_xdate()
+        fig.savefig(out / f"{stid}_{var}.png", dpi=120)
+        print(out / f"{stid}_{var}.png")
+
+    return threshold
