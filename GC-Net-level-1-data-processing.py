@@ -49,7 +49,8 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
-site_list = site_list.loc[site_list.Name.values == 'Tunu-N',:]
+# site_list = site_list.loc[site_list.Name.values == 'JAR3',:]
+# site_list = site_list[17:]
 # %
 for site, ID in zip(site_list.Name, site_list.ID):
     plt.close("all")
@@ -91,19 +92,19 @@ for site, ID in zip(site_list.Name, site_list.ID):
     Msg("## Manual flagging of data at " + site)
     df_out = ptb.flag_data(df_roc,
                            site,
-                            var_list=['HW1','HW2'],
                            )
 
     Msg("## Adjusting data at " + site)
     # we start by adjusting and filtering all variables except surface height
     df_v4 = ptb.adjust_data(df_out, site,
-                            # var_list=['HW1','HW2'],
                             skip_var=["HS1", "HS2"])
     # Applying standard filters again
     df_v4 = df_v4.resample("h").asfreq()
     df_v5 = ptb.filter_data(df_v4, site,
-                            site_list.loc[site_list.Name == site, "Latitude (°N)"].values[0],
-                            site_list.loc[site_list.Name == site, "Longitude (°E)"].values[0])
+                            site_list.loc[site_list.Name == site,
+                                          "Latitude (°N)"].values[0],
+                            site_list.loc[site_list.Name == site,
+                                          "Longitude (°E)"].values[0])
     ptb.plot_flagged_data(df_v5, df_out, site)
     df_v5 = ptb.remove_flagged_data(df_v5)
 

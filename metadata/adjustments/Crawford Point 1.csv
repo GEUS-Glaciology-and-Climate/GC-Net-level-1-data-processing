@@ -55,6 +55,28 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # pressure shift
 1999-01-01,2010-05-09T22:00:00,P,add,-12,Adjustment based on continuity
 
+# TS
+,,TS1,min_filter,-20,
+,,TS1,max_filter,-15,
+,2005-01-01,TS2,min_filter,-20,
+,2005-01-01,TS2,max_filter,-15,
+1997-01-01,2005-01-01,TS3,min_filter,-20,
+1997-01-01,2005-01-01,TS3,max_filter,-15,
+1997-01-01,2005-01-01,TS4,min_filter,-20,
+1997-01-01,2005-01-01,TS4,max_filter,-15,
+2000-03-01,2005-01-01,TS5,min_filter,-20,
+2000-03-01,2005-01-01,TS5,max_filter,-15,
+2000-03-01,2005-01-01,TS6,min_filter,-20,
+2000-03-01,2005-01-01,TS6,max_filter,-15,
+2000-03-01,2005-01-01,TS7,min_filter,-20,
+2000-03-01,2005-01-01,TS7,max_filter,-15,
+,,TS8,min_filter,-26,
+,,TS8,max_filter,-10,
+,,TS9,min_filter,-26,
+,,TS9,max_filter,-10,
+,,TS10,min_filter,-26,
+,,TS10,max_filter,-10,
+
 # ISWR and OSWR swapped
 2012-01-01T00:00:00+00:00,,ISWR,swap_with_OSWR,0,manual adjustment from bav
 ,1999-01-01T00:00:00+00:00,TA3,swap_with_TA4,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111

@@ -426,7 +426,9 @@ def flag_data(df, site, var_list=["all"]):
 
     df_out = df.copy()
     if not os.path.isfile("metadata/flags/" + site + ".csv"):
+        Msg("===============")
         Msg("No erroneous data listed for " + site)
+        Msg("===============")
         return df
 
     flag_data = pd.read_csv("metadata/flags/" + site + ".csv",
@@ -480,7 +482,9 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
     adj_path = f"metadata/adjustments/{site}.csv"
 
     if not os.path.isfile(adj_path):
+        Msg("===============")
         Msg(f"No data to fix at {site}")
+        Msg("===============")
         return []
 
     # ---- Load adjustments ----
@@ -529,7 +533,6 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
     for var in var_list:
         if (df[var].isnull().all() or
             any(s in var for s in excluded_substrings)):
-            print("not plotting", var)
             continue
 
         qc_var = var + "_qc"
@@ -583,11 +586,13 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
     Msg(" ")
 
 
-def flag_linear_interp_runs(df: pd.DataFrame, N: int = 3) -> pd.DataFrame:
+def flag_linear_interp_runs(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     var_list = df.columns
-
+    VAR_SKIP = ["HW1", "HW2", "V"]
     for var in var_list:
+        if var in VAR_SKIP: continue
+
         if "TS" in var:
             N=10
         else:
@@ -612,23 +617,25 @@ def flag_linear_interp_runs(df: pd.DataFrame, N: int = 3) -> pd.DataFrame:
 
         nflag = int(np.sum(flag))
         if nflag > 0:
-            print(f"{var}: {nflag} samples flagged")
+            Msg(f"{var}: {nflag} samples flagged")
 
         df.loc[flag, qc] = "LIN"
 
     return df
 
 def remove_flagged_data(df):
-    """
-    Remove flagged data
-    """
-    for var in df.columns:
-        if var[-3:] == "_qc":
-            df[var].values[df[var].isnull()] = "OK"
-            if len(np.unique(df[var].values)) > 1:
-                msk = (df[var].values == "OK") | (df[var].values == "")
-                df.loc[~msk, var[:-3]] = np.nan
-            df = df.drop(columns=[var])
+    df = df.copy()
+    qc_cols = [c for c in df.columns if c.endswith("_qc")]
+
+    for qc in qc_cols:
+        s = df[qc].astype(object).fillna("OK")
+        if s.nunique(dropna=False) > 1:
+            msk = s.isin(["OK", ""])
+            base = qc[:-3]
+            if base in df.columns:
+                df.loc[~msk, base] = np.nan
+        df = df.drop(columns=[qc])
+
     return df
 
 
@@ -668,11 +675,9 @@ def adjust_data(df_in, site, var_list=[], skip_var=[], skip_time_shifts=False):
     adj_info = pd.concat((adj_info.loc[adj_info.adjust_function.str.startswith('swap'),:],
                           adj_info.loc[~adj_info.adjust_function.str.startswith('swap'),:]))
 
-    adj_info.loc[adj_info.adjust_function == "time_shift", :] = (
-        adj_info.loc[adj_info.adjust_function == "time_shift", :]
-        .sort_values(by="t0", ascending=False)
-        .values
-    )
+    msk = adj_info["adjust_function"].eq("time_shift")
+    adj_info = pd.concat([adj_info.loc[msk].sort_values("t0", ascending=False),
+                          adj_info.loc[~msk]], axis=0)
     if skip_time_shifts:
         adj_info = adj_info.loc[adj_info.adjust_function != "time_shift", :]
     adj_info.set_index(["variable", "t0"], drop=False, inplace=True)
@@ -859,10 +864,22 @@ def adjust_data(df_in, site, var_list=[], skip_var=[], skip_time_shifts=False):
                 if val > 0:
                     if val < 10000:
                         # errasing data that existed during the time shift
-                        df_out.loc[t0 : t0 + pd.Timedelta(hours=val), var] = np.nan
+                        col = df_out[var]
+                        if pd.api.types.is_numeric_dtype(col):
+                            df_out[var] = col.astype("float64")
+                            df_out.loc[t0:t0 + pd.Timedelta(hours=val), var] = np.nan
+                        else:
+                            df_out[var] = col.astype(object)
+                            df_out.loc[t0:t0 + pd.Timedelta(hours=val), var] = None
                     else:
                         # case of Crawford Point where only the shifted data should be errased
-                        df_out.loc[t0:t1, var] = np.nan
+                        col = df_out[var]
+                        if pd.api.types.is_numeric_dtype(col):
+                            df_out[var] = col.astype("float64")
+                            df_out.loc[t0:t1, var] = np.nan
+                        else:
+                            df_out[var] = col.astype(object)
+                            df_out.loc[t0:t1, var] = None
                 else:
                     df_out.loc[t1 + pd.Timedelta(hours=val) : t1, var] = np.nan
 
@@ -962,11 +979,11 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     # Interpolation over gaps smaller than two days
     for var in ['HW1','HW2']:
         if var not in df.columns:
-            print(var, 'not in dataframe')
+            Msg(var+' '+ 'not in dataframe')
             continue
 
         if df[var].isnull().all():
-            print('No valid data for', var)
+            Msg('No valid data for '+var)
             continue
 
         # Creating surface height field
@@ -991,27 +1008,34 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
             diff = df[var].bfill().diff()
             diff.plot(ax=ax,marker='o', linestyle='None', label='all shifts')
+            if (diff.abs()>thresh).any():
+                diff.loc[diff.abs()>thresh].plot(ax=ax, marker='o',
+                                                 linestyle='None',
+                                                 label='selected shifts')
             diff.loc[diff.abs()<thresh] = 0
             if 'SMS' in site:
                 diff.loc[diff>0] = 0
 
-            for t in  diff.loc[diff.abs()>thresh].index.values:
-                # print(t)
-                # refining the diff value:
-                t = pd.to_datetime(t, utc=True)
-                one_week_before_gap = slice(t-pd.Timedelta(days=7), t)
-                one_week_after_gap = slice(t, t+pd.Timedelta(days=7))
-                if df.loc[one_week_after_gap, var].isnull().all() | df.loc[one_week_before_gap, var].isnull().all():
-                    # average daily accumulation
-                    if site == 'Tunu-N':
-                        avg_accum = 0.000784
-                    elif site == 'JAR1':
-                        avg_accum = -.0043
-                    elif site == 'NASA-SE':
-                        avg_accum = 0.003
-                    else:
-                        tmp = df[var].resample('D').mean().diff()
-                        avg_accum = -tmp.mean()
+            # average daily accumulation
+            if site == 'Tunu-N':
+                avg_accum = 0.000784
+            elif site == 'JAR1':
+                avg_accum = -.0043
+            elif site == 'NASA-SE':
+                avg_accum = 0.003
+            else:
+                avg_accum = -df[var].resample('D').mean().diff().mean()
+
+            large_diff_times = pd.to_datetime(diff.loc[diff.abs() > thresh].index.values, utc=True)
+
+            for i, t in enumerate(large_diff_times):
+                t_prev = large_diff_times[i-1] if i > 0 else pd.Timestamp.min.tz_localize("UTC")
+                t_next = large_diff_times[i+1] if i < len(large_diff_times)-1 else pd.Timestamp.max.tz_localize("UTC")
+
+                one_week_before_gap = slice(max(t - pd.Timedelta(days=7), t_prev), t)
+                one_week_after_gap  = slice(t, min(t + pd.Timedelta(days=7), t_next))
+                no_values_before_or_after = df.loc[one_week_after_gap, var].isnull().all() | df.loc[one_week_before_gap, var].isnull().all()
+                if no_values_before_or_after:
                     last_good_index = df.loc[:t, var].last_valid_index()
                     next_good_index = df.loc[t:, var].first_valid_index()
                     diff.loc[t] = df.loc[next_good_index, var] - df.loc[last_good_index, var] + avg_accum * (next_good_index-last_good_index).total_seconds()/3600/24
@@ -1033,13 +1057,10 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             fig.savefig("figures/L1_data_treatment/" + site + "_"+var_HS+"_adjust_auto.png")
             # x = df[var_HS].index.values.astype(float)/10**9/3600/24
             # y = df[var_HS].values
-            # print(np.polyfit(x[~np.isnan(x+y)],
-            #                  y[~np.isnan(x+y)], 1)[-2])
         else:
             # we then adjust and filter all surface height (could be replaced by an automated adjustment)
             df_save=df.copy()
             df = adjust_data(df, site, var_HS, skip_time_shifts=True)
-            # print(var_HS)
             plot_flagged_data(df, df_save, site, var_list=var_HS)
 
 
@@ -1144,16 +1165,22 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
     # adding latitude and longitude fields
     try:
-        if os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated_with_elev.csv'):
-            df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated_with_elev.csv')
-        elif os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv'):
-            df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv')
-        elif os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_info.csv'):
-            df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_info.csv')
-            df_pos['date'] = df_pos.time_elev_approximation.astype(str) + '-08-01'
-            df_pos['elev'] = df_pos.elev_approximation
-            df_pos['lat'] = latitude
-            df_pos['lon'] = longitude
+        base = f"metadata/interpolated positions/{site.replace(' ','')}"
+        paths = [
+            base + "_position_interpolated_with_elev.csv",
+            base + "_position_interpolated.csv",
+            base + "_position_info.csv",
+        ]
+
+        for p in paths:
+            if os.path.isfile(p):
+                df_pos = pd.read_csv(p)
+                if p.endswith("_position_info.csv"):
+                    df_pos["date"] = df_pos.time_elev_approximation.astype(str) + "-08-01"
+                    df_pos["elev"] = df_pos.elev_approximation
+                    df_pos["lat"] = latitude
+                    df_pos["lon"] = longitude
+                break
 
         df_pos.date = pd.to_datetime(df_pos.date, utc=True)
         df_pos = df_pos.set_index('date')
@@ -1335,7 +1362,7 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
         )
         pd.read_csv(url).to_csv("metadata/maintenance summary/" + site + ".csv")
     except:
-        print("Cannot download maintenance summary. Using local file.")
+        Msg("Cannot download maintenance summary. Using local file.")
         pass
 
     maintenance_string = pd.read_csv("metadata/maintenance summary/" + site + ".csv")
@@ -1345,7 +1372,7 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
                           'NewDepth7 (m)', 'NewDepth8 (m)', 'NewDepth9 (m)',
                           'NewDepth10 (m)']
     if maintenance_string.shape[0] == 0:
-        print('No installtion depth reported, using default')
+        Msg('No installtion depth reported, using default')
         maintenance_string['date'] = [df_v6.index[0]]
         maintenance_string[col_depth_installation] = [np.arange(1,11)]
     maintenance_string.date = pd.to_datetime(maintenance_string.date,
@@ -1369,8 +1396,11 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     if any(ind_filter):
         surface_height[ind_filter] = np.nan
     df_v6["HS_combined"] = surface_height.values
+    start = df_v6["HS_combined"].first_valid_index()
+    end = df_v6["HS_combined"].last_valid_index()
     df_v6["HS_combined"] = df_v6["HS_combined"].interpolate().values
-
+    df_v6.loc[slice(None,start), "HS_combined"] = np.nan
+    df_v6.loc[slice(end,None), "HS_combined"] = np.nan
     # first initialization of the depths
     for i, col in enumerate(depth_cols_name):
         df_v6[col] = (
@@ -1532,7 +1562,7 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
                 label="_nolegend_",
             )
     if len(df_v6["TS_10m"]) == 0:
-        print("No 10m temp for ", site)
+        Msg("No 10m temp for "+site)
     else:
         df_v6["TS_10m"].resample("D").mean().plot(ax=ax[1],
                                                                color="red",
@@ -1549,8 +1579,8 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     ax[1].plot(
         np.nan, np.nan, marker="o", linestyle="none", color="pink", label="var filter"
     )
-    ax[1].legend(loc='top center')
-    ax[0].legend(loc='top right')
+    ax[1].legend(loc='upper center')
+    ax[0].legend(loc='upper right')
     ax[0].set_ylabel("Height (m)")
     ax[1].set_ylabel("Subsurface temperature ($^o$C)")
     fig.suptitle(site)
@@ -2322,6 +2352,6 @@ def find_thresholds(stid: str) -> pd.DataFrame:
         ax.set_title(f"{stid} — {var}")
         fig.autofmt_xdate()
         fig.savefig(out / f"{stid}_{var}.png", dpi=120)
-        print(out / f"{stid}_{var}.png")
+        Msg(f"![]({out}/{stid}_{var}.png)")
 
     return threshold
