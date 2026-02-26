@@ -20,15 +20,49 @@ warnings.filterwarnings("ignore", category=RuntimeWarning)
 from sklearn.linear_model import LinearRegression
 import xarray as xr
 import re
-from pypromice.core.qc.common import set_flag
 
 
 DEFAULT_VARIABLE_THRESHOLDS = {
     r"^TA[1234]$": {"tol": 3, "factor": 2.2},
-    r"^P$": {"tol": 1.0, "factor": 2.0},
+    r"^P$": {"tol": 5.0, "factor": 0.5},
     r"^RH[12]$": {"tol": 2.0, "factor": 3.5},
     r"^TS(?:10|[1-9])$": {"tol": 0.5, "factor": 1.5},
 }
+
+
+NO_QC_VAR = ['time','rec']
+
+
+def set_flag(ds: xr.Dataset, v: str, flag: str, index_slice=None, mask=None) -> xr.Dataset:
+    if v in NO_QC_VAR: return ds
+
+    if index_slice is None:
+        index_slice = {"time": slice(None, None)}
+
+    vqc = f"{v}_qc"
+    if vqc not in ds:
+        ds[vqc] = xr.DataArray(
+            np.full(ds[v].shape, "OK", dtype=object),
+            coords=ds[v].coords,
+            dims=ds[v].dims,
+        )
+    else:
+        if ds[vqc].dtype.kind in ("U", "S"):
+            ds[vqc] = ds[vqc].astype(object)
+
+    q = ds[vqc].loc[index_slice]
+    x = ds[v].loc[index_slice]
+    if q.size == 0:
+        return ds
+
+    m = xr.ones_like(x, dtype=bool) if mask is None else (
+        mask.loc[index_slice] if isinstance(mask, xr.DataArray) else mask
+    )
+
+    cond = m & x.notnull() & (q == "OK")
+
+    ds[vqc].loc[index_slice] = xr.where(cond, str(flag), q)
+    return ds
 
 def _get_params(var, tol=None, factor=None):
     if tol is not None and factor is not None:
@@ -259,8 +293,7 @@ def flag_high_rate_of_change(ds, var, window="7D", time="time",
     """
     tol, factor = _get_params(var, tol=tol, factor=factor)
 
-    da = ds[var].dropna(time)
-
+    da = ds[var].where(ds[f"{var}_qc"] == "OK").dropna(dim=time)
     roc_ds, fwd_full, bwd_full = rate_of_change_fwd_bwd_and_thresholds(
         da, var, window=window, time=time, per=per, min_periods=min_periods, factor=factor, tol=tol
     )
@@ -324,7 +357,7 @@ def rate_of_change_filter(ds):
         if any(p.match(v) for p in patterns)
     ]
 
-    max_iter = 5
+    max_iter = 20
     thr_new_flags = 10
 
     for var in vars_with_thresholds:
@@ -354,7 +387,8 @@ def rate_of_change_filter(ds):
 
     return ds
 
-def roc_filter_dataframe(df_in):
+def roc_filter_dataframe(df):
+    df_in = df.copy()
     df_in.index = df_in.index.tz_convert(None)
     df_in.index.name = "time"
     df_out = rate_of_change_filter(df_in.to_xarray()).to_dataframe()
@@ -734,6 +768,7 @@ def adjust_data(df_in, site, var_list=[], skip_var=[], skip_time_shifts=False):
             if func == "min_filter":
                 tmp = df_out.loc[t0:t1, var].to_numpy(copy=True)
                 tmp[tmp < val] = np.nan
+                df_out.loc[t0:t1, var] = tmp
             if func == "max_filter":
                 tmp = df_out.loc[t0:t1, var].to_numpy(copy=True)
                 tmp[tmp > val] = np.nan
@@ -1147,9 +1182,9 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA3']
         T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA2']
         T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA4']
-    df['RH1_cor'] = correctHumidity(df.RH1, T1)
+    df['RH1_wrt_ice'] = correctHumidity(df.RH1, T1)
     if 'P' in df.columns:
-        df['Q1'] = calcHumid(T1, df.P, df.RH1_cor)  *1000
+        df['Q1'] = calcHumid(T1, df.P, df.RH1_wrt_ice)  *1000
         df.loc[df['Q1']>40, 'Q1'] = np.nan
 
     if 'RH2' in df.columns:
@@ -1158,88 +1193,81 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         T2.loc[T2.isnull()] = df.loc[T2.isnull(), 'TA1']
         T2.loc[T2.isnull()] = df.loc[T2.isnull(), 'TA3']
 
-        df['RH2_cor'] = correctHumidity(df.RH2, T2)
+        df['RH2_wrt_ice'] = correctHumidity(df.RH2, T2)
 
-        df['Q2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
+        df['Q2'] = calcHumid(T2, df.P, df.RH2_wrt_ice)  *1000
         df.loc[df['Q2']>40, 'Q2'] = np.nan
 
-    # adding latitude and longitude fields
-    try:
-        base = f"metadata/interpolated positions/{site.replace(' ','')}"
-        paths = [
-            base + "_position_interpolated_with_elev.csv",
-            base + "_position_interpolated.csv",
-            base + "_position_info.csv",
-        ]
+    # %% adding latitude and longitude fields
+    # initialization
+    df['latitude'] = latitude
+    df['longitude'] = longitude
+    df['elevation'] = elevation
 
-        for p in paths:
-            if os.path.isfile(p):
-                df_pos = pd.read_csv(p)
-                if p.endswith("_position_info.csv"):
-                    df_pos["date"] = df_pos.time_elev_approximation.astype(str) + "-08-01"
-                    df_pos["elev"] = df_pos.elev_approximation
-                    df_pos["lat"] = latitude
-                    df_pos["lon"] = longitude
-                break
+    # filling lat lon if available
+    p = f"metadata/interpolated positions/{site.replace(' ','')}_position_interpolated.csv"
+    def extrapolate(df, y_col):
+        df_ = df[[y_col]].dropna()
+        return LinearRegression().fit(
+            df_.index.values.astype(float).reshape(-1,1), df_[y_col]).predict(
+            df.index.values.astype(float).reshape(-1,1))
 
-        df_pos.date = pd.to_datetime(df_pos.date, utc=True)
-        df_pos = df_pos.set_index('date')
-        df_pos_save = df_pos.copy()
+    df_pos = None
+    if os.path.isfile(p):
+        Msg(f'Using {p} for variable latitude and longitude')
+        df_pos = pd.read_csv(p, index_col=0, parse_dates=[0]).sort_index()
+        df_pos.index = pd.to_datetime(df_pos.index, utc=True)
+
+        # keep only anchor points (interpolate needs non-NaN anchors)
+        df_pos = df_pos[["lon", "lat"]].dropna(how="any")
+        if len(df_pos) < 2:
+            raise ValueError("Need at least two non-NaN lon/lat points to interpolate/extrapolate.")
+
         offset = pd.DateOffset(months=7)
-        df_pos = df_pos.shift(freq=-offset).resample('YS').first().shift(freq=offset)
+        df_pos = df_pos.shift(freq=-offset).resample("YS").first().shift(freq=offset).sort_index()
 
-        df['latitude'] =np.nan
-        df['longitude'] =np.nan
-        df['elevation'] =np.nan
+        full_index = pd.to_datetime(df_pos.index.union(df.index), utc=True).drop_duplicates().sort_values()
+        x = df_pos.reindex(full_index).interpolate(method="time")
+        t0, t1 = df_pos.index.min(), df_pos.index.max()
+        x = x.loc[(x.index >= t0) & (x.index <= t1)]
 
-        df_pos = df_pos.resample('h').first().interpolate()
+        df_pos_resampled = x.reindex(df.index)
 
-        if (df_pos.index[-1] < df.index[-1]) | (df_pos.index[0] > df.index[0]):
-            df_pos = pd.concat((df.loc[df.index[0]:df_pos.index[0]-pd.to_timedelta('1h'), df.columns[0]],
-                                df_pos,
-                        df.loc[df_pos.index[-1]+pd.to_timedelta('1h'):df.index[-1],
-                              df.columns[0]]))[df_pos.columns]
+        df_pos_resampled['lat'] = extrapolate(df_pos_resampled, 'lat')
+        df_pos_resampled['lon'] = extrapolate(df_pos_resampled, 'lon')
 
-        def extrapolate(df, y_col):
-            df_ = df[[y_col]].dropna()
-            return LinearRegression().fit(
-                df_.index.values.astype(float).reshape(-1,1), df_[y_col]).predict(
-                df.index.values.astype(float).reshape(-1,1))
-        for var in df_pos.columns:
-            df_pos[var+'_interp'] = extrapolate(df_pos,var)
-            if site != 'Swiss Camp':
-                df_pos[var] = df_pos[var].fillna(df_pos[var+'_interp'])
-            else:
-                df_pos[var] = df_pos[var].fillna(
-                    df_pos.loc[df_pos[var].last_valid_index(),
-                               var])
+        df["latitude"] = df_pos_resampled["lat"]
+        df["longitude"] = df_pos_resampled["lon"]
 
+    df_elev = None
+    if site in ['JAR1','Swiss Camp 10m', 'Swiss Camp', 'JAR2','JAR3']:
+        p='metadata/interpolated positions/GC-Net_elevation_tie_points.csv'
+        Msg(f'Using {p} for variable elevation')
+        df_elev = pd.read_csv(p)
+        site_tmp = 'Swiss Camp' if site=='Swiss Camp 10m' else site
+        df_elev = df_elev.loc[df_elev["site"].eq(site_tmp)].drop(columns="site")
+        df_elev["time"] = pd.to_datetime(df_elev["year"].astype(int).astype(str) + "-01-01", utc=True) + pd.to_timedelta((df_elev["year"] % 1) * 365, unit="D")
+        df_elev = df_elev.set_index('time')
 
-        df['latitude'] = df_pos.loc[df.index,'lat']
-        df['longitude'] = df_pos.loc[df.index,'lon']
-        if 'elev' in df_pos.columns:
-            if site in ['JAR1','Swiss Camp 10m', 'Swiss Camp']:
-                df['elevation'] = df_pos.loc[df.index,'elev']
-            else:
-                df['elevation'] = df_pos.loc[df.index,'elev'].mean()
+        full_index = pd.to_datetime(df_elev.index.union(df.index), utc=True).drop_duplicates().sort_values()
+        x = df_elev.reindex(full_index).interpolate(method="time")
+        t0, t1 = df_elev.index.min(), df_elev.index.max()
+        x = x.loc[(x.index >= t0) & (x.index <= t1)]
 
+        df_elev_resampled = x.reindex(df.index)
+        df["elevation"] = df_elev_resampled["altitude"]
 
-        fig, ax = plt.subplots(3,1,sharex=True)
-        df_pos_save.lat.plot(ax=ax[0], marker='o', ls='None')
-        df[['latitude']].plot(ax=ax[0])
-        df_pos_save.lon.plot(ax=ax[1], marker='o', ls='None')
-        df[['longitude']].plot(ax=ax[1])
-        if 'elev' in df_pos.columns:
-            df_pos_save.elev.plot(ax=ax[2], marker='o', ls='None')
-            df[['elevation']].plot(ax=ax[2])
-        fig.suptitle(site)
-        fig.savefig("figures/positions/" + site + "_positions.png", dpi=300)
-
-    except Exception as e:
-        print(e)
-        df['latitude'] = latitude
-        df['longitude'] = longitude
-        df['elevation'] = elevation
+    fig, ax = plt.subplots(3,1,sharex=True)
+    df[['latitude']].plot(ax=ax[0])
+    df[['longitude']].plot(ax=ax[1])
+    if df_pos is not None:
+        df_pos.lat.plot(ax=ax[0], marker='o',ls='None', label='anchor points')
+        df_pos.lon.plot(ax=ax[1], marker='o',ls='None', label='anchor points')
+    df[['elevation']].plot(ax=ax[2])
+    if df_elev is not None:
+        df_elev.altitude.plot(ax=ax[2], marker='o',ls='None', label='anchor points')
+    fig.suptitle(site)
+    fig.savefig("figures/positions/" + site + "_positions.png", dpi=120)
 
     return df
 

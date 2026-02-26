@@ -1,3 +1,6 @@
 t0,t1,variable,flag,comment,URL_graphic
-2000-05-01, ,TA1 TA2, NAN, bad values (bav),
+2000-05-01, ,TA1 TA2 P, NAN, bad values (bav),
+1999-09-28, ,DW1 DW2, NAN, bad values (bav),
+1999-09-30,1999-12-01 ,TA3, NAN, bad values (bav),
+2000-03-28, 2000-06-21,ISWR OSWR, NAN, bad values (bav),
 1999-10-01,2000-05-01,TA3 TA4, NAN, bad values (bav),
