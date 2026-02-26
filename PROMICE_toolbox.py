@@ -1205,7 +1205,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     df['elevation'] = elevation
 
     # filling lat lon if available
-    p = f"metadata/interpolated positions/{site.replace(' ','')}_position_interpolated.csv"
+    p = f"metadata/interpolated positions/{site}_position_interpolated.csv"
     def extrapolate(df, y_col):
         df_ = df[[y_col]].dropna()
         return LinearRegression().fit(
