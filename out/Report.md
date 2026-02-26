@@ -2397,3 +2397,1387 @@ Flagging data:
 ![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_ISWR.jpeg)
 ![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_OSWR.jpeg)
 ![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_NR.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TA1.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TA2.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TA3.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TA4.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_RH1.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_RH2.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_VW1.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_VW2.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_DW1.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_DW2.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_P.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_HW1.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_HW2.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_V.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TA5.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS1.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS2.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS3.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS4.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS5.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS6.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS7.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS8.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS9.jpeg)
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_TS10.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|1998-04-17 14:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|0.4|0|
+|1999-04-16 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|2.1|0|
+|2001-06-05 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|2.6|0|
+|2002-06-07 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|0.5|0|
+|2004-06-12 13:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|2.5|0|
+|2008-04-28 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|2.5|0|
+|2010-01-07 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|4.0|0|
+|2014-05-21 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|2.5|0|
+|2018-04-24 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS1|add|1.5|0|
+ 
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|1999-04-16 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|2.5|0|
+|2001-06-05 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|2.5|0|
+|2001-12-25 01:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|-1.0|0|
+|2004-06-12 08:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|5.0|0|
+|2010-01-07 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|4.0|0|
+|2014-05-24 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|4.0|0|
+|2018-03-01 16:00:00+00:00|2021-10-16 17:00:00+00:00|HS2|add|2.0|0|
+ 
+![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_HS2.jpeg)
+ 
+# 11 South Dome
+## Interpolated values filter at South Dome
+ISWR: 293 samples flagged
+OSWR: 191 samples flagged
+NR: 278 samples flagged
+TA1: 3096 samples flagged
+TA2: 678 samples flagged
+TA3: 1505 samples flagged
+TA4: 483 samples flagged
+RH1: 1261 samples flagged
+RH2: 685 samples flagged
+VW1: 4044 samples flagged
+VW2: 3703 samples flagged
+DW1: 694 samples flagged
+DW2: 565 samples flagged
+P: 8046 samples flagged
+TA5: 1983 samples flagged
+TS1: 397 samples flagged
+TS2: 105 samples flagged
+TS3: 49 samples flagged
+TS4: 485 samples flagged
+TS5: 38 samples flagged
+TS6: 164 samples flagged
+TS7: 40 samples flagged
+TS8: 11 samples flagged
+TS9: 157 samples flagged
+TS10: 112 samples flagged
+## Manual flagging of data at South Dome
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2000-10-01 00:00:00+00:00|2013-05-21 00:00:00+00:00|P|
+|1996-01-01 00:00:00+00:00|1999-06-01 00:00:00+00:00|TA4|
+|2010-05-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|TA4|
+|2010-12-18 00:00:00+00:00|2011-06-01 00:00:00+00:00|TA1|
+|2010-05-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|TA2|
+|2011-11-01 00:00:00+00:00|2012-03-12 00:00:00+00:00|HW1|
+|2012-09-01 00:00:00+00:00|2014-05-12 00:00:00+00:00|HW1|
+|2018-01-01 00:00:00+00:00|2018-05-12 00:00:00+00:00|HW1|
+|1996-01-01 00:00:00+00:00|1999-06-01 00:00:00+00:00|RH2|
+|2010-05-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|RH2|
+|2017-08-26 00:00:00+00:00|2021-06-21 16:00:00+00:00|HW1|
+|2010-10-01 00:00:00+00:00|2010-12-01 00:00:00+00:00|HW1|
+|2011-10-13 00:00:00+00:00|2012-10-01 00:00:00+00:00|HW1|
+|2020-11-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TA1|
+|2020-11-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TA3|
+|2019-03-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|VW1|
+|2019-03-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|DW1|
+|2019-03-01 00:00:00+00:00|2019-05-15 00:00:00+00:00|TA3|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS1|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS2|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS3|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS4|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS5|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS6|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS7|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS8|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS9|
+|2008-07-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|TS10|
+## Adjusting data at South Dome
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|1995-05-26 20:00:00+00:00|2021-06-21 16:00:00+00:00|HW1|max_filter|20.0|1|
+|1996-05-15 00:00:00+00:00|2021-06-21 16:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2021-06-21 16:00:00+00:00|HW1|biweekly_upper_range_filter|0.3|58166|
+|2009-05-15 00:00:00+00:00|2021-06-21 16:00:00+00:00|HW1|hampel_filter|2.0|1032|
+|1995-05-26 20:00:00+00:00|2021-06-21 16:00:00+00:00|HW2|max_filter|20.0|1|
+|1996-05-15 00:00:00+00:00|2021-06-21 16:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2021-06-21 16:00:00+00:00|HW2|biweekly_upper_range_filter|0.3|11549|
+|2009-05-15 00:00:00+00:00|2021-06-21 16:00:00+00:00|HW2|hampel_filter|2.0|82|
+|2009-05-15 00:00:00+00:00|2021-06-21 16:00:00+00:00|OSWR|multiply|0.934|0|
+|1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
+|1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+|2007-06-13 16:00:00+00:00|2008-07-01 00:00:00+00:00|TS4|biweekly_upper_range_filter|1.3|1600|
+## ROC filter at South Dome
+ 
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_ISWR.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_OSWR.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_NR.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TA1.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TA2.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TA3.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TA4.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_RH1.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_RH2.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_VW1.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_VW2.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_DW1.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_DW2.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_P.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_HW1.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_HW2.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_V.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TA5.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS1.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS2.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS3.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS4.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS5.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS6.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS7.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS8.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS9.jpeg)
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_TS10.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|1998-04-17 17:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.35|0|
+|1999-04-22 21:30:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|1.55|0|
+|2001-06-07 11:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|3.0|0|
+|2005-05-26 20:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|6.0|0|
+|2006-07-20 21:30:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.1|0|
+|2007-04-23 01:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|3.4|0|
+|2009-05-15 22:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.0|0|
+|2011-05-28 18:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|3.0|0|
+|2013-05-19 20:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.6|0|
+|2015-05-25 20:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.5|0|
+|2017-05-22 15:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.3|0|
+|2019-05-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|HS1|add|2.0|0|
+ 
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|1998-04-17 17:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|2.4|0|
+|1999-04-22 21:30:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|1.55|0|
+|2001-06-07 11:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|3.0|0|
+|2005-05-26 20:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|6.0|0|
+|2007-04-23 01:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|3.4|0|
+|2009-05-15 22:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|1.5|0|
+|2011-05-28 18:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|3.0|0|
+|2013-05-19 18:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|3.0|0|
+|2015-05-23 00:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|3.0|0|
+|2017-05-22 15:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|2.3|0|
+|2019-05-01 00:00:00+00:00|2021-06-21 16:00:00+00:00|HS2|add|2.0|0|
+ 
+![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_HS2.jpeg)
+ 
+# 12 NASA-E
+## Interpolated values filter at NASA-E
+ISWR: 18 samples flagged
+OSWR: 21 samples flagged
+NR: 170 samples flagged
+TA1: 823 samples flagged
+TA2: 726 samples flagged
+TA3: 50 samples flagged
+TA4: 41 samples flagged
+RH1: 140 samples flagged
+RH2: 493 samples flagged
+VW1: 4196 samples flagged
+VW2: 3765 samples flagged
+DW1: 922 samples flagged
+DW2: 425 samples flagged
+P: 4013 samples flagged
+TA5: 72 samples flagged
+TS1: 678 samples flagged
+TS2: 415 samples flagged
+TS3: 297 samples flagged
+TS4: 407 samples flagged
+TS5: 323 samples flagged
+TS6: 383 samples flagged
+TS7: 356 samples flagged
+TS8: 337 samples flagged
+TS9: 229 samples flagged
+TS10: 302 samples flagged
+## Manual flagging of data at NASA-E
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2012-02-01 00:00:00+00:00|2013-06-01 00:00:00+00:00|TA3|
+|2012-02-01 00:00:00+00:00|2013-06-01 00:00:00+00:00|RH1|
+|1998-04-12 00:00:00+00:00|1998-11-15 00:00:00+00:00|TA3|
+|2001-06-07 00:00:00+00:00|2001-06-08 00:00:00+00:00|TA4|
+|2015-09-29 00:00:00+00:00|2019-07-01 00:00:00+00:00|HW1|
+|2016-08-29 00:00:00+00:00|2019-01-01 00:00:00+00:00|HW1|
+|2011-06-05 00:00:00+00:00|2019-05-22 00:00:00+00:00|DW2|
+|2013-03-14 00:00:00+00:00|2019-05-22 00:00:00+00:00|DW1|
+|2013-03-14 00:00:00+00:00|2022-10-07 06:00:00+00:00|VW1|
+|2012-12-05 00:00:00+00:00|2013-02-01 00:00:00+00:00|VW2|
+|2019-05-22 00:00:00+00:00|2022-10-07 06:00:00+00:00|DW1|
+|2011-06-05 00:00:00+00:00|2022-10-07 06:00:00+00:00|TS9|
+|2011-06-05 00:00:00+00:00|2022-10-07 06:00:00+00:00|TS10|
+## Adjusting data at NASA-E
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2019-05-22 00:00:00+00:00|2022-10-07 06:00:00+00:00|DW2|swap_with_DW1|0.0|1|
+|2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|HW1|swap_with_HW2|nan|-2108|
+|2009-05-15 00:00:00+00:00|2022-10-07 06:00:00+00:00|HW1|hampel_filter|2.0|13735|
+|2011-05-15 00:00:00+00:00|2019-05-15 00:00:00+00:00|HW1|min_filter|1.5|35174|
+|2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|HW1|biweekly_upper_range_filter|0.2|14933|
+|2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|HW1|hampel_filter|2.0|19|
+|2019-01-15 00:00:00+00:00|2019-09-15 00:00:00+00:00|HW1|max_filter|1.5|54|
+|2009-05-15 00:00:00+00:00|2022-10-07 06:00:00+00:00|HW2|hampel_filter|2.0|11655|
+|2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
+|2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|HW2|biweekly_upper_range_filter|0.2|3669|
+|2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|HW2|hampel_filter|2.0|288|
+|2014-01-15 00:00:00+00:00|2014-09-15 00:00:00+00:00|HW2|min_filter|1.5|33|
+|2017-12-06 00:00:00+00:00|2018-03-25 00:00:00+00:00|HW2|add|2.5|0|
+|2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|OSWR|multiply|0.934|0|
+|1996-01-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
+|1996-01-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at NASA-E
+ 
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_ISWR.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_OSWR.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_NR.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TA1.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TA2.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TA3.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TA4.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_RH1.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_RH2.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_VW1.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_VW2.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_DW1.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_DW2.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_P.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_HW1.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_HW2.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_V.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TA5.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS1.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS2.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS3.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS4.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS5.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS6.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS7.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS8.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS9.jpeg)
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_TS10.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2001-06-08 16:00:00+00:00|2022-10-07 06:00:00+00:00|HS1|add|2.5|0|
+|2006-05-03 17:00:00+00:00|2022-10-07 06:00:00+00:00|HS1|add|2.4|0|
+|2009-05-09 00:00:00+00:00|2022-10-07 06:00:00+00:00|HS1|add|-1.0|0|
+|2009-05-09 00:00:00+00:00|2010-04-29 00:00:00+00:00|HS1|add|-0.5|0|
+|2015-05-26 03:00:00+00:00|2022-10-07 06:00:00+00:00|HS1|add|2.0|0|
+|2021-07-01 00:00:00+00:00|2022-10-07 06:00:00+00:00|HS1|add|0.9|0|
+ 
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2001-06-08 16:00:00+00:00|2022-10-07 06:00:00+00:00|HS2|add|2.5|0|
+|2006-05-03 18:00:00+00:00|2022-10-07 06:00:00+00:00|HS2|add|2.4|0|
+|2009-05-09 00:00:00+00:00|2022-10-07 06:00:00+00:00|HS2|add|-1.6|0|
+|2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|HS2|add|0.7|0|
+|2015-05-26 03:00:00+00:00|2022-10-07 06:00:00+00:00|HS2|add|2.5|0|
+ 
+![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_HS2.jpeg)
+ 
+Using metadata/interpolated positions/NASA-E_position_interpolated.csv for variable latitude and longitude
+# 15 NASA-SE
+## Interpolated values filter at NASA-SE
+ISWR: 979 samples flagged
+OSWR: 482 samples flagged
+NR: 35 samples flagged
+TA1: 847 samples flagged
+TA2: 137 samples flagged
+TA3: 749 samples flagged
+TA4: 124 samples flagged
+RH1: 2475 samples flagged
+RH2: 2358 samples flagged
+VW1: 5060 samples flagged
+VW2: 4357 samples flagged
+DW1: 834 samples flagged
+DW2: 748 samples flagged
+P: 2852 samples flagged
+TA5: 380 samples flagged
+TS1: 435 samples flagged
+TS2: 77 samples flagged
+TS3: 13 samples flagged
+TS4: 91 samples flagged
+TS5: 225 samples flagged
+TS6: 106 samples flagged
+TS7: 167 samples flagged
+TS8: 154 samples flagged
+TS9: 109 samples flagged
+TS10: 187 samples flagged
+## Manual flagging of data at NASA-SE
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2012-01-08 00:00:00+00:00|2021-06-01 00:00:00+00:00|TA1|
+|2012-01-08 00:00:00+00:00|2021-06-01 00:00:00+00:00|TA2|
+|2018-02-15 00:00:00+00:00|2018-05-31 00:00:00+00:00|TA3|
+|2009-01-01 00:00:00+00:00|2011-05-19 00:00:00+00:00|HW1|
+|2015-07-01 00:00:00+00:00|2016-05-19 00:00:00+00:00|HW1|
+|2011-05-29 00:00:00+00:00|2011-05-30 00:00:00+00:00|HW1|
+|2011-01-01 00:00:00+00:00|2011-05-29 00:00:00+00:00|HW2|
+|2011-11-07 00:00:00+00:00|2011-12-26 00:00:00+00:00|HW2|
+|2012-04-01 00:00:00+00:00|2014-05-25 21:00:00+00:00|HW2|
+|2016-01-15 00:00:00+00:00|2016-05-19 00:00:00+00:00|HW2|
+|2017-08-25 00:00:00+00:00|2018-05-26 00:00:00+00:00|HW2|
+|2009-11-01 00:00:00+00:00|2010-04-30 00:00:00+00:00|VW1|
+|2019-01-01 00:00:00+00:00|2019-05-26 00:00:00+00:00|VW2|
+|2017-11-01 00:00:00+00:00|2019-05-26 00:00:00+00:00|VW1|
+|2017-11-01 00:00:00+00:00|2019-05-26 00:00:00+00:00|DW1|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS1|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS2|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS3|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS4|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS5|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS6|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS7|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS8|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS9|
+|2010-05-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|TS10|
+## Adjusting data at NASA-SE
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2000-05-16 16:00:00+00:00|2003-05-10 14:00:00+00:00|HW1|add|3.0|0|
+|2003-05-10 14:00:00+00:00|2005-05-27 09:00:00+00:00|HW1|add|3.0|0|
+|2005-05-27 09:00:00+00:00|2009-05-27 09:00:00+00:00|HW1|add|-1.0|0|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|HW1|biweekly_upper_range_filter|0.5|20073|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|HW1|hampel_filter|2.0|4380|
+|2010-04-30 00:00:00+00:00|2019-09-26 09:00:00+00:00|HW1|add|-0.8|0|
+|2013-05-01 00:00:00+00:00|2013-07-01 00:00:00+00:00|HW1|min_filter|1.4|216|
+|2000-05-16 16:00:00+00:00|2003-05-10 14:00:00+00:00|HW2|add|3.0|0|
+|2003-05-10 14:00:00+00:00|2005-05-27 09:00:00+00:00|HW2|add|4.0|0|
+|2005-05-27 09:00:00+00:00|2009-04-01 09:00:00+00:00|HW2|add|-1.0|0|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|15533|
+|2009-05-15 00:00:00+00:00|2019-09-26 09:00:00+00:00|HW2|hampel_filter|2.0|2943|
+|2010-04-30 00:00:00+00:00|2019-09-26 09:00:00+00:00|HW2|add|1.5|0|
+|2009-04-26 00:00:00+00:00|2019-09-26 09:00:00+00:00|OSWR|multiply|0.934|0|
+|2015-01-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|RH1|swap_with_RH2|0.0|0|
+|1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
+|1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+|2009-01-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|VW1|swap_with_VW2|0.0|0|
+## ROC filter at NASA-SE
+ 
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_ISWR.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_OSWR.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_NR.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TA1.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TA2.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TA3.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TA4.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_RH1.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_RH2.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_VW1.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_VW2.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_DW1.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_DW2.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_P.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_HW1.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_HW2.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_V.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TA5.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS1.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS2.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS3.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS4.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS5.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS6.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS7.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS8.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS9.jpeg)
+![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS10.jpeg)
+ 
+Using metadata/interpolated positions/NASA-SE_position_interpolated.csv for variable latitude and longitude
+# 14 NGRIP
+## Interpolated values filter at NGRIP
+ISWR: 18 samples flagged
+NR: 1399 samples flagged
+TA1: 5502 samples flagged
+TA2: 3 samples flagged
+RH1: 528 samples flagged
+RH2: 25 samples flagged
+VW1: 31 samples flagged
+VW2: 9 samples flagged
+DW1: 6 samples flagged
+DW2: 3 samples flagged
+P: 520 samples flagged
+HS1: 2238 samples flagged
+HS2: 2844 samples flagged
+TS1: 55 samples flagged
+TS2: 37 samples flagged
+TS3: 58 samples flagged
+TS4: 77 samples flagged
+TS5: 64 samples flagged
+TS6: 32 samples flagged
+TS7: 110 samples flagged
+TS8: 68 samples flagged
+TS9: 42 samples flagged
+TS10: 56 samples flagged
+## Manual flagging of data at NGRIP
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2005-09-01 00:00:00+00:00|2006-01-01 00:00:00+00:00|HS1|
+|2005-09-01 00:00:00+00:00|2006-01-01 00:00:00+00:00|HS2|
+|2008-01-01 00:00:00+00:00|2010-05-08 13:00:00+00:00|TA1|
+|2008-01-01 00:00:00+00:00|2010-05-08 13:00:00+00:00|VW1|
+|2008-01-01 00:00:00+00:00|2010-05-08 13:00:00+00:00|RH1|
+|2005-11-20 12:00:00+00:00|2005-11-20 13:00:00+00:00|HW1|
+|2010-01-27 00:00:00+00:00|2010-04-16 00:00:00+00:00|HW1|
+|2010-01-27 00:00:00+00:00|2010-04-16 00:00:00+00:00|HW2|
+|2002-10-01 00:00:00+00:00|2003-04-01 00:00:00+00:00|VW1|
+|2002-10-01 00:00:00+00:00|2003-04-01 00:00:00+00:00|VW2|
+|2002-10-01 00:00:00+00:00|2003-04-01 00:00:00+00:00|DW1|
+|2002-10-01 00:00:00+00:00|2003-04-01 00:00:00+00:00|DW2|
+## Adjusting data at NGRIP
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2001-07-01 00:00:00+00:00|2010-05-08 13:00:00+00:00|HW1|add|-1.5|0|
+|2005-09-01 00:00:00+00:00|2006-01-01 00:00:00+00:00|HW1|add|0.3|0|
+|2007-11-16 13:00:00+00:00|2008-04-02 15:00:00+00:00|HW1|add|-1.5|0|
+|2009-08-12 19:00:00+00:00|2010-05-08 13:00:00+00:00|HW1|add|-1.5|0|
+|2005-09-01 00:00:00+00:00|2006-01-01 00:00:00+00:00|HW2|add|0.3|0|
+|2002-06-09 18:00:00+00:00|2006-05-15 00:00:00+00:00|RH1|swap_with_RH2|0.0|0|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at NGRIP
+ 
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_ISWR.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_OSWR.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_NR.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TA1.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TA2.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_RH1.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_RH2.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_VW1.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_VW2.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_DW1.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_DW2.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_P.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_HS1.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_HS2.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_HW1.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_HW2.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS1.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS2.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS3.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS4.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS5.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS6.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS7.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS8.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS9.jpeg)
+![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS10.jpeg)
+ 
+# 23 NEEM
+## Interpolated values filter at NEEM
+ISWR: 12 samples flagged
+NR: 114 samples flagged
+TA1: 2010 samples flagged
+TA2: 78 samples flagged
+TA3: 1154 samples flagged
+TA4: 112 samples flagged
+RH1: 403 samples flagged
+RH2: 107 samples flagged
+VW1: 78 samples flagged
+VW2: 47 samples flagged
+DW1: 28 samples flagged
+DW2: 134 samples flagged
+P: 180 samples flagged
+TA5: 289 samples flagged
+## Manual flagging of data at NEEM
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2009-01-01 00:00:00+00:00|2017-01-01 00:00:00+00:00|P|
+|2017-02-01 00:00:00+00:00|2018-05-01 00:00:00+00:00|RH1|
+|2017-02-01 00:00:00+00:00|2018-05-01 00:00:00+00:00|RH2|
+|2017-02-01 00:00:00+00:00|2018-05-09 00:00:00+00:00|TA3|
+|2018-05-04 00:00:00+00:00|2018-05-24 00:00:00+00:00|TA4|
+|2010-07-15 00:00:00+00:00|2010-12-01 00:00:00+00:00|HW1|
+|2010-08-06 00:00:00+00:00|2012-06-18 00:00:00+00:00|HW1|
+|2020-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|HW1|
+|2006-10-04 14:00:00+00:00|2006-10-21 16:00:00+00:00|HW2|
+|2010-07-15 00:00:00+00:00|2011-09-24 00:00:00+00:00|HW2|
+|2013-02-05 00:00:00+00:00|2013-03-17 00:00:00+00:00|HW2|
+|2017-12-26 00:00:00+00:00|2018-04-01 00:00:00+00:00|HW2|
+|2019-01-01 00:00:00+00:00|2019-04-10 00:00:00+00:00|HW2|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS1|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS2|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS3|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS4|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS5|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS6|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS7|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS8|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS9|
+|2007-06-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TS10|
+|2011-01-01 00:00:00+00:00|2011-05-19 00:00:00+00:00|ISWR|
+|2011-01-01 00:00:00+00:00|2011-05-19 00:00:00+00:00|OSWR|
+|2014-01-01 00:00:00+00:00|2014-05-06 00:00:00+00:00|ISWR|
+|2014-01-01 00:00:00+00:00|2014-05-06 00:00:00+00:00|OSWR|
+|2016-01-01 00:00:00+00:00|2016-04-16 00:00:00+00:00|ISWR|
+|2016-01-01 00:00:00+00:00|2016-04-16 00:00:00+00:00|OSWR|
+|2011-06-08 00:00:00+00:00|2011-07-04 00:00:00+00:00|VW2|
+|2011-11-05 00:00:00+00:00|2011-11-13 00:00:00+00:00|VW1|
+|2011-11-05 00:00:00+00:00|2011-11-13 00:00:00+00:00|VW2|
+|2011-11-21 00:00:00+00:00|2012-02-10 00:00:00+00:00|VW1|
+|2011-11-21 00:00:00+00:00|2012-02-10 00:00:00+00:00|VW2|
+|2017-01-01 00:00:00+00:00|2017-04-01 00:00:00+00:00|VW1|
+|2017-01-01 00:00:00+00:00|2017-04-01 00:00:00+00:00|VW2|
+|2018-01-01 00:00:00+00:00|2018-04-01 00:00:00+00:00|VW2|
+|2022-01-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|RH2|
+|2020-11-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TA1|
+|2020-11-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|TA3|
+|2020-11-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|RH1|
+|2020-11-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|VW2|
+|2020-11-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|DW2|
+|2015-01-01 00:00:00+00:00|2018-05-01 00:00:00+00:00|TA4|
+## Adjusting data at NEEM
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2022-04-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|DW1|rotate|-185.0|0|
+|2009-05-30 23:00:00+00:00|2022-10-07 05:00:00+00:00|HW1|swap_with_HW2|nan|8|
+|2009-05-15 00:00:00+00:00|2022-10-07 05:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2022-10-07 05:00:00+00:00|HW1|biweekly_upper_range_filter|0.3|31041|
+|2009-05-15 00:00:00+00:00|2022-10-07 05:00:00+00:00|HW1|min_filter|0.1|5797|
+|2009-05-15 00:00:00+00:00|2022-10-07 05:00:00+00:00|HW1|hampel_filter|2.0|5643|
+|2011-01-01 00:00:00+00:00|2011-07-01 00:00:00+00:00|HW1|max_filter|0.6|65|
+|2013-01-01 00:00:00+00:00|2015-07-01 00:00:00+00:00|HW1|min_filter|0.5|105|
+|2009-05-15 00:00:00+00:00|2022-10-07 05:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2022-10-07 05:00:00+00:00|HW2|biweekly_upper_range_filter|0.3|16989|
+|2009-05-15 00:00:00+00:00|2022-10-07 05:00:00+00:00|HW2|hampel_filter|2.0|6258|
+|2009-05-30 00:00:00+00:00|2022-10-07 05:00:00+00:00|OSWR|multiply|0.934|0|
+|2009-05-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|RH1|swap_with_RH2|0.0|-360|
+|1996-01-01 00:00:00+00:00|2009-05-15 00:00:00+00:00|RH1|ice_to_water|0.0|0|
+|1996-01-01 00:00:00+00:00|2009-05-15 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at NEEM
+ 
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_ISWR.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_OSWR.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_NR.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TA1.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TA2.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TA3.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TA4.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_RH1.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_RH2.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_VW1.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_VW2.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_DW1.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_DW2.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_P.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_HW1.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_HW2.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_V.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TA5.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS1.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS2.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS3.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS4.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS5.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS6.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS7.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS8.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS9.jpeg)
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_TS10.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2008-08-13 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS1|add|1.8|0|
+|2009-05-30 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS1|add|-0.5|0|
+|2011-07-06 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS1|add|3.0|0|
+|2016-05-23 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS1|add|2.2|0|
+ 
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2008-08-13 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS2|add|1.8|0|
+|2009-05-30 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS2|add|-0.5|0|
+|2011-07-06 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS2|add|3.0|0|
+|2016-05-23 00:00:00+00:00|2022-10-07 05:00:00+00:00|HS2|add|2.5|0|
+ 
+![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_HS2.jpeg)
+ 
+Using metadata/interpolated positions/NEEM_position_interpolated.csv for variable latitude and longitude
+# 24 EastGRIP
+## Interpolated values filter at EastGRIP
+TA1: 1572 samples flagged
+TA2: 6 samples flagged
+TA3: 1134 samples flagged
+RH1: 1237 samples flagged
+RH2: 13 samples flagged
+VW1: 12 samples flagged
+VW2: 6 samples flagged
+DW1: 6 samples flagged
+P: 2305 samples flagged
+TA5: 146 samples flagged
+## Manual flagging of data at EastGRIP
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2021-11-11 00:00:00+00:00|2023-06-22 12:00:00+00:00|VW1|
+|2021-11-11 00:00:00+00:00|2023-06-22 12:00:00+00:00|DW1|
+|2022-04-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|TA1|
+|2022-04-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|RH1|
+|2022-04-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|TA3|
+|2014-05-17 20:00:00+00:00|2014-05-17 21:00:00+00:00|HW2|
+|2021-04-24 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW2|
+|2016-04-15 00:00:00+00:00|2016-05-15 00:00:00+00:00|HW1|
+|2020-12-05 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW1|
+Warning: ISWR not found
+Warning: OSWR not found
+## Adjusting data at EastGRIP
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|DW1|multiply|-1.0|0|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|DW1|rotate|20.0|0|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|DW1|rotate|30.0|0|
+|2019-05-22 00:00:00+00:00|2023-06-22 12:00:00+00:00|DW1|rotate|185.0|0|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|16699|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW1|hampel_filter|3.0|2394|
+|2014-10-01 00:00:00+00:00|2015-06-01 00:00:00+00:00|HW1|max_filter|0.7|161|
+|2014-10-01 00:00:00+00:00|2015-06-01 00:00:00+00:00|HW1|min_filter|0.5|799|
+|2016-05-15 00:00:00+00:00|2016-06-25 00:00:00+00:00|HW1|max_filter|2.36|68|
+|2016-05-15 00:00:00+00:00|2016-06-25 00:00:00+00:00|HW1|min_filter|2.2|63|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW2|biweekly_upper_range_filter|0.4|7452|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW2|hampel_filter|3.0|3159|
+|2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW2|add|1.2|0|
+|2016-04-01 00:00:00+00:00|2021-10-01 00:00:00+00:00|P|hampel_filter|10.0|920|
+## ROC filter at EastGRIP
+ 
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_TA1.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_TA2.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_TA3.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_TA4.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_RH1.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_RH2.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_VW1.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_VW2.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_DW1.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_DW2.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_P.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_HW1.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_HW2.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_V.jpeg)
+![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_TA5.jpeg)
+ 
+# 16 KAR
+## Interpolated values filter at KAR
+NR: 12 samples flagged
+TA1: 6 samples flagged
+TA2: 3 samples flagged
+TA3: 3 samples flagged
+RH1: 214 samples flagged
+VW1: 2199 samples flagged
+VW2: 2055 samples flagged
+DW1: 310 samples flagged
+DW2: 288 samples flagged
+P: 225 samples flagged
+HS1: 43 samples flagged
+HS2: 51 samples flagged
+TS4: 10 samples flagged
+TS10: 57 samples flagged
+## Manual flagging of data at KAR
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|1999-05-17 17:00:00+00:00|2001-06-07 13:00:00+00:00|RH2|
+|1999-05-17 17:00:00+00:00|2001-06-07 13:00:00+00:00|TA4|
+## Adjusting data at KAR
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0|0|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0|0|
+## ROC filter at KAR
+ 
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_ISWR.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_OSWR.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_NR.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TA1.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TA2.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TA3.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TA4.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_RH1.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_RH2.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_VW1.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_VW2.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_DW1.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_DW2.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_P.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_HS1.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_HS2.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_V.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_HW1.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_HW2.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS1.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS2.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS3.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS4.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS5.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS6.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS7.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS8.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS9.jpeg)
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_TS10.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_HS2.jpeg)
+ 
+# 18 KULU
+## Interpolated values filter at KULU
+ISWR: 73 samples flagged
+OSWR: 61 samples flagged
+NR: 123 samples flagged
+TA1: 212 samples flagged
+TA2: 207 samples flagged
+TA3: 591 samples flagged
+TA4: 510 samples flagged
+RH1: 680 samples flagged
+RH2: 451 samples flagged
+VW1: 953 samples flagged
+VW2: 995 samples flagged
+DW1: 183 samples flagged
+DW2: 134 samples flagged
+P: 368 samples flagged
+HS1: 9 samples flagged
+## Manual flagging of data at KULU
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2000-05-01 00:00:00+00:00|2000-09-14 22:00:00+00:00|TA1|
+|2000-05-01 00:00:00+00:00|2000-09-14 22:00:00+00:00|TA2|
+|2000-05-01 00:00:00+00:00|2000-09-14 22:00:00+00:00|P|
+|1999-09-28 00:00:00+00:00|2000-09-14 22:00:00+00:00|DW1|
+|1999-09-28 00:00:00+00:00|2000-09-14 22:00:00+00:00|DW2|
+|1999-09-30 00:00:00+00:00|1999-12-01 00:00:00+00:00|TA3|
+|2000-03-28 00:00:00+00:00|2000-06-21 00:00:00+00:00|ISWR|
+|2000-03-28 00:00:00+00:00|2000-06-21 00:00:00+00:00|OSWR|
+|1999-10-01 00:00:00+00:00|2000-05-01 00:00:00+00:00|TA3|
+|1999-10-01 00:00:00+00:00|2000-05-01 00:00:00+00:00|TA4|
+## Adjusting data at KULU
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0|0|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0|0|
+## ROC filter at KULU
+ 
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_ISWR.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_OSWR.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_NR.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_TA1.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_TA2.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_TA3.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_TA4.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_RH1.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_RH2.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_VW1.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_VW2.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_DW1.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_DW2.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_P.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_HS1.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_V.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_HW1.jpeg)
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_HW2.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_HS2.jpeg)
+ 
+# 20 Aurora
+## Interpolated values filter at Aurora
+ISWR: 12 samples flagged
+TA3: 24 samples flagged
+RH1: 89 samples flagged
+VW1: 942 samples flagged
+VW2: 835 samples flagged
+DW1: 120 samples flagged
+DW2: 100 samples flagged
+P: 31 samples flagged
+HS1: 21 samples flagged
+## Manual flagging of data at Aurora
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|OSWR|
+## Adjusting data at Aurora
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|RH1|ice_to_water|0|0|
+|2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|RH2|ice_to_water|0|0|
+|2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|TA3|min_filter|-20|3711|
+## ROC filter at Aurora
+ 
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_ISWR.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_OSWR.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_NR.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_TA1.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_TA3.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_RH1.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_VW1.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_VW2.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_DW1.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_DW2.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_P.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_HS1.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_V.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_HW1.jpeg)
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_HW2.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_HS2.jpeg)
+ 
+# 21 Petermann Glacier
+## Interpolated values filter at Petermann Glacier
+ISWR: 34 samples flagged
+OSWR: 34 samples flagged
+NR: 91 samples flagged
+TA1: 449 samples flagged
+TA2: 434 samples flagged
+TA3: 905 samples flagged
+TA4: 997 samples flagged
+RH1: 453 samples flagged
+RH2: 556 samples flagged
+VW1: 475 samples flagged
+VW2: 521 samples flagged
+DW1: 378 samples flagged
+DW2: 298 samples flagged
+P: 540 samples flagged
+HS1: 54 samples flagged
+HS2: 9 samples flagged
+TS1: 379 samples flagged
+TS2: 587 samples flagged
+TS3: 739 samples flagged
+TS4: 299 samples flagged
+TS5: 960 samples flagged
+TS6: 2200 samples flagged
+TS7: 3659 samples flagged
+TS8: 2641 samples flagged
+TS9: 1023 samples flagged
+TS10: 952 samples flagged
+## Manual flagging of data at Petermann Glacier
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2005-06-19 00:00:00+00:00|2005-08-13 00:00:00+00:00|TA3|
+|2005-06-19 00:00:00+00:00|2005-08-13 00:00:00+00:00|TA4|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS1|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS2|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS3|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS4|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS5|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS6|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS7|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS8|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS9|
+|2002-08-31 00:00:00+00:00|2002-09-06 00:00:00+00:00|TS10|
+## Adjusting data at Petermann Glacier
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at Petermann Glacier
+ 
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_ISWR.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_OSWR.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_NR.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TA1.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TA2.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TA3.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TA4.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_RH1.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_RH2.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_VW1.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_VW2.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_DW1.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_DW2.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_P.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_HS1.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_HS2.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_V.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_HW1.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_HW2.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS1.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS2.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS3.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS4.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS5.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS6.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS7.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS8.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS9.jpeg)
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_TS10.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2003-01-01 00:00:00+00:00|2006-05-01 11:00:00+00:00|HS1|add|-0.3|0|
+ 
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2003-01-01 00:00:00+00:00|2006-05-01 11:00:00+00:00|HS2|add|-0.3|0|
+ 
+![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_HS2.jpeg)
+ 
+# 22 Petermann ELA
+## Interpolated values filter at Petermann ELA
+ISWR: 16 samples flagged
+NR: 18 samples flagged
+TA1: 413 samples flagged
+TA2: 404 samples flagged
+TA3: 67 samples flagged
+TA4: 53 samples flagged
+RH1: 71 samples flagged
+RH2: 44 samples flagged
+VW1: 6 samples flagged
+DW1: 22 samples flagged
+P: 1567 samples flagged
+TS1: 548 samples flagged
+TS2: 1826 samples flagged
+TS3: 84 samples flagged
+TS4: 27 samples flagged
+TS5: 27 samples flagged
+TS6: 42 samples flagged
+TS7: 42 samples flagged
+TS8: 42 samples flagged
+TS9: 38 samples flagged
+TS10: 27 samples flagged
+## Manual flagging of data at Petermann ELA
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2003-01-01 00:00:00+00:00|2011-05-23 00:00:00+00:00|RH1|
+|2003-01-01 00:00:00+00:00|2011-05-01 00:00:00+00:00|RH2|
+|2011-01-01 00:00:00+00:00|2015-01-01 00:00:00+00:00|TA1|
+|2011-01-01 00:00:00+00:00|2015-01-01 00:00:00+00:00|TA2|
+|2010-01-01 00:00:00+00:00|2022-04-12 18:00:00+00:00|VW1|
+|2011-06-01 00:00:00+00:00|2011-07-04 00:00:00+00:00|HW1|
+|2011-06-01 00:00:00+00:00|2012-05-25 00:00:00+00:00|HW2|
+## Adjusting data at Petermann ELA
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2007-03-01 00:00:00+00:00|2007-04-10 00:00:00+00:00|HW1|min_filter|2.26|10|
+|2009-05-15 00:00:00+00:00|2022-04-12 18:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2011-09-01 00:00:00+00:00|2012-05-01 00:00:00+00:00|HW1|max_filter|0.81|129|
+|2012-08-16 00:00:00+00:00|2014-05-01 00:00:00+00:00|HW1|min_filter|1.37|1903|
+|2012-08-16 00:00:00+00:00|2013-05-26 00:00:00+00:00|HW1|max_filter|1.43|810|
+|2013-01-01 00:00:00+00:00|2022-04-12 18:00:00+00:00|HW1|min_filter|1.0|10480|
+|2014-01-01 00:00:00+00:00|2015-01-01 00:00:00+00:00|HW1|max_filter|2.17|21|
+|2014-01-01 00:00:00+00:00|2015-01-01 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.3|849|
+|2016-01-01 00:00:00+00:00|2022-04-12 18:00:00+00:00|HW1|biweekly_upper_range_filter|0.5|5|
+|2016-01-01 00:00:00+00:00|2022-04-12 18:00:00+00:00|HW1|hampel_filter|2.0|1515|
+|2007-03-01 00:00:00+00:00|2007-04-10 00:00:00+00:00|HW2|min_filter|2.26|21|
+|2009-05-15 00:00:00+00:00|2022-04-12 18:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
+|2012-08-16 00:00:00+00:00|2014-05-01 00:00:00+00:00|HW2|min_filter|1.55|92|
+|2015-07-01 00:00:00+00:00|2016-01-01 00:00:00+00:00|HW2|min_filter|1.4|3|
+|2016-01-01 00:00:00+00:00|2022-04-12 18:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|7096|
+|2016-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|HW2|max_filter|3.12|156|
+|2016-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|HW2|min_filter|2.4|928|
+|2016-01-01 00:00:00+00:00|2022-04-12 18:00:00+00:00|HW2|hampel_filter|2.0|22|
+|2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA2|max_filter|11.0|10|
+|2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA3|max_filter|11.0|9|
+|2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA4|max_filter|11.0|9|
+## ROC filter at Petermann ELA
+ 
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_ISWR.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_OSWR.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_NR.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TA1.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TA2.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TA3.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TA4.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_RH1.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_RH2.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_VW1.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_VW2.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_DW1.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_DW2.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_P.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_HW1.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_HW2.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_V.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS1.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS2.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS3.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS4.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS5.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS6.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS7.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS8.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS9.jpeg)
+![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS10.jpeg)
+ 
+# 33 SMS-PET
+## Interpolated values filter at SMS-PET
+TA1: 3 samples flagged
+ISWR: 268 samples flagged
+OSWR: 384 samples flagged
+NR: 57 samples flagged
+## Manual flagging of data at SMS-PET
+===============
+No erroneous data listed for SMS-PET
+===============
+## Adjusting data at SMS-PET
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2002-06-02 02:00:00+00:00|2004-05-14 15:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2002-06-02 02:00:00+00:00|2004-05-14 15:00:00+00:00|HW1|min_filter|0.7|40|
+|2002-07-15 00:00:00+00:00|2003-05-07 15:30:00+00:00|HW1|biweekly_upper_range_filter|0.4|40|
+|2003-09-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|96|
+## ROC filter at SMS-PET
+ 
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_TA1.jpeg)
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_TA2.jpeg)
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_RH1.jpeg)
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_VW1.jpeg)
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_DW1.jpeg)
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_HW1.jpeg)
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_V.jpeg)
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_ISWR.jpeg)
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_OSWR.jpeg)
+![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_NR.jpeg)
+ 
+HW2 not in dataframe
+# 25 SMS1
+## Interpolated values filter at SMS1
+TA1: 19 samples flagged
+RH1: 16 samples flagged
+## Manual flagging of data at SMS1
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2004-05-27 17:30:00+00:00|2004-05-27 19:30:00+00:00|HW1|
+## Adjusting data at SMS1
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2001-09-01 00:00:00+00:00|2002-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|175|
+|2002-01-01 00:00:00+00:00|2006-01-15 03:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2002-01-01 00:00:00+00:00|2006-01-15 03:00:00+00:00|HW1|min_filter|0.9|211|
+|2002-01-01 00:00:00+00:00|2006-01-15 03:00:00+00:00|HW1|max_filter|3.75|18|
+|2002-09-01 00:00:00+00:00|2003-05-01 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|7|
+|2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|max_filter|3.4|95|
+|2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|294|
+|2004-08-01 00:00:00+00:00|2005-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|1606|
+|2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|HW1|min_filter|2.9|290|
+## ROC filter at SMS1
+ 
+![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_TA1.jpeg)
+![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_TA2.jpeg)
+![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_RH1.jpeg)
+![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_VW1.jpeg)
+![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_DW1.jpeg)
+![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_HW1.jpeg)
+ 
+HW2 not in dataframe
+# 26 SMS2
+## Interpolated values filter at SMS2
+TA1: 3 samples flagged
+TA2: 11 samples flagged
+RH1: 15 samples flagged
+## Manual flagging of data at SMS2
+===============
+No erroneous data listed for SMS2
+===============
+## Adjusting data at SMS2
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2003-04-24 04:00:00+00:00|2006-05-10 15:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2003-04-24 04:00:00+00:00|2006-05-10 15:00:00+00:00|HW1|min_filter|0.1|6660|
+|2003-04-24 04:00:00+00:00|2006-05-10 15:00:00+00:00|HW1|max_filter|5.0|0|
+|2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|447|
+|2004-08-26 00:00:00+00:00|2005-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|240|
+|2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|404|
+## ROC filter at SMS2
+ 
+![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_TA1.jpeg)
+![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_TA2.jpeg)
+![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_RH1.jpeg)
+![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_VW1.jpeg)
+![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_DW1.jpeg)
+![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_HW1.jpeg)
+![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_V.jpeg)
+ 
+HW2 not in dataframe
+# 27 SMS3
+## Interpolated values filter at SMS3
+TA1: 15 samples flagged
+TA2: 9 samples flagged
+RH1: 26 samples flagged
+## Manual flagging of data at SMS3
+===============
+No erroneous data listed for SMS3
+===============
+## Adjusting data at SMS3
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2001-05-22 21:00:00+00:00|2006-05-10 15:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2001-05-22 21:00:00+00:00|2006-05-10 15:00:00+00:00|HW1|min_filter|0.5|5324|
+|2001-09-01 00:00:00+00:00|2002-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|254|
+|2002-07-15 00:00:00+00:00|2003-05-01 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|1342|
+|2003-09-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|186|
+|2004-07-15 00:00:00+00:00|2005-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|189|
+|2005-07-11 00:00:00+00:00|2005-07-16 00:00:00+00:00|HW1|min_filter|1.8|3|
+|2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|223|
+## ROC filter at SMS3
+ 
+![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_TA1.jpeg)
+![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_TA2.jpeg)
+![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_RH1.jpeg)
+![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_VW1.jpeg)
+![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_DW1.jpeg)
+![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_HW1.jpeg)
+![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_V.jpeg)
+ 
+HW2 not in dataframe
+# 28 SMS4
+## Interpolated values filter at SMS4
+TA2: 3 samples flagged
+RH1: 10 samples flagged
+DW1: 3 samples flagged
+## Manual flagging of data at SMS4
+===============
+No erroneous data listed for SMS4
+===============
+## Adjusting data at SMS4
+No data to fix at SMS4
+## ROC filter at SMS4
+ 
+===============
+No data to fix at SMS4
+===============
+HW2 not in dataframe
+# 29 SMS5
+## Interpolated values filter at SMS5
+## Manual flagging of data at SMS5
+===============
+No erroneous data listed for SMS5
+===============
+## Adjusting data at SMS5
+No data to fix at SMS5
+## ROC filter at SMS5
+ 
+===============
+No data to fix at SMS5
+===============
+HW2 not in dataframe
+# 30 LAR1
+## Interpolated values filter at LAR1
+ISWR: 36 samples flagged
+OSWR: 36 samples flagged
+NR: 115 samples flagged
+TA1: 2439 samples flagged
+TA2: 2392 samples flagged
+TA3: 2116 samples flagged
+TA4: 2154 samples flagged
+RH1: 968 samples flagged
+RH2: 1098 samples flagged
+VW2: 6 samples flagged
+P: 590 samples flagged
+HS1: 109 samples flagged
+HS2: 155 samples flagged
+TA5: 67 samples flagged
+## Manual flagging of data at LAR1
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+## Adjusting data at LAR1
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|ISWR|multiply|2.688|0|
+|2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|OSWR|multiply|2.2756|0|
+|2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|RH1|ice_to_water|0.0|0|
+|2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at LAR1
+ 
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_ISWR.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_OSWR.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_NR.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_TA1.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_TA2.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_TA3.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_TA4.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_RH1.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_RH2.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_VW1.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_VW2.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_DW1.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_DW2.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_P.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_HS1.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_HS2.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_V.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_TA5.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_HW1.jpeg)
+![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_HW2.jpeg)
+ 
+# 31 LAR2
+## Interpolated values filter at LAR2
+ISWR: 15 samples flagged
+OSWR: 15 samples flagged
+NR: 68 samples flagged
+TA1: 1239 samples flagged
+TA2: 1250 samples flagged
+TA3: 1209 samples flagged
+TA4: 1219 samples flagged
+RH1: 671 samples flagged
+RH2: 545 samples flagged
+P: 465 samples flagged
+HS1: 66 samples flagged
+HS2: 82 samples flagged
+TA5: 9 samples flagged
+## Manual flagging of data at LAR2
+===============
+No erroneous data listed for LAR2
+===============
+## Adjusting data at LAR2
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|ISWR|multiply|2.68|0|
+|2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|OSWR|multiply|2.88|0|
+|2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|RH1|ice_to_water|0.0|0|
+|2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at LAR2
+ 
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_ISWR.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_OSWR.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_NR.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_TA1.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_TA2.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_TA3.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_TA4.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_RH1.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_RH2.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_VW1.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_VW2.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_DW1.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_DW2.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_P.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_HS1.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_HS2.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_V.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_TA5.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_HW1.jpeg)
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_HW2.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_HS2.jpeg)
+ 
+# 32 LAR3
+## Interpolated values filter at LAR3
+ISWR: 267 samples flagged
+OSWR: 326 samples flagged
+NR: 37 samples flagged
+TA1: 966 samples flagged
+TA2: 948 samples flagged
+TA3: 986 samples flagged
+TA4: 585 samples flagged
+RH1: 513 samples flagged
+RH2: 355 samples flagged
+VW1: 3 samples flagged
+P: 324 samples flagged
+HS1: 400 samples flagged
+HS2: 535 samples flagged
+TA5: 6 samples flagged
+## Manual flagging of data at LAR3
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH2|
+|2009-08-10 14:00:00+00:00|2009-08-10 16:00:00+00:00|HW1|
+## Adjusting data at LAR3
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH1|ice_to_water|0|0|
+|2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH2|ice_to_water|0|0|
+## ROC filter at LAR3
+ 
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_ISWR.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_OSWR.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_NR.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_TA1.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_TA2.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_TA3.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_TA4.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_RH1.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_RH2.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_VW1.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_VW2.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_DW1.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_DW2.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_P.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_HS1.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_HS2.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_V.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_TA5.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_HW1.jpeg)
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_HW2.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_HS1.jpeg)
+ 
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+ 
+![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_HS2.jpeg)
+ 
