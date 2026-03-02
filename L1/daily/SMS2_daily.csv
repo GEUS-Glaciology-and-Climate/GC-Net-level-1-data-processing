@@ -14,12 +14,12 @@
 # averaging = daily
 # 
 # [FIELDS]
-# fields = timestamp,TA1,TA2,RH1,VW1,DW1,HW1,V,HS1,SZA,SAA,RH1_wrt_ice,latitude,longitude,elevation
+# fields = timestamp,TA1,TA2,RH1,VW1,DW1,HW1,V,HS1,SZA,SAA,RH1_wrt_ice_or_water,latitude,longitude,elevation
 # add_value = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 # scale_factor = 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 # units = time,DegreesC,DegreesC,%/100,m/s,Degrees,m,V,m,Degrees,Degrees,%/100,degN,degE,m a.s.l.
 # display_description = timestamp_iso,air_temperature_1,air_temperature_2,relative_humidity_with_respect_to_water_1,wind_speed_1,wind_from_direction_1,height_wind_sensor_1,battery_voltage,surface_height_1,solar_zenith_angle,solar_azimuth_angle,relative_humidity_with_respect_to_ice_when_subfreezing_1,latitude,longitude,elevation
-# database_fields = timestamp_iso,airtemp1,airtemp2,rh1,windspeed1,winddir1,hw1,battvolt,hs1,solar_zenith_angle,solar_azimuth_angle,rh1_wrt_ice,lat,lon,elev
+# database_fields = timestamp_iso,airtemp1,airtemp2,rh1,windspeed1,winddir1,hw1,battvolt,hs1,solar_zenith_angle,solar_azimuth_angle,rh1_wrt_ice_or_water,lat,lon,elev
 # database_fields_data_types = timestamp,real,real,real,real,real,real,real,real,real,real,real,real,real,int
 # 
 # [DATA]

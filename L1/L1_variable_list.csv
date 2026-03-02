@@ -67,8 +67,8 @@ RH2m,%/100,relative_humidity_2m,rh_2m,real
 VW10m,m/s,wind_speed_10m,windspeed_10m,real
 SZA,Degrees,solar_zenith_angle,solar_zenith_angle,real
 SAA,Degrees,solar_azimuth_angle,solar_azimuth_angle,real
-RH1_wrt_ice,%/100,relative_humidity_with_respect_to_ice_when_subfreezing_1,rh1_wrt_ice,real
-RH2_wrt_ice,%/100,relative_humidity_with_respect_to_ice_when_subfreezing_2,rh2_wrt_ice,real
+RH1_wrt_ice_or_water,%/100,relative_humidity_with_respect_to_ice_when_subfreezing_1,rh1_wrt_ice_or_water,real
+RH2_wrt_ice_or_water,%/100,relative_humidity_with_respect_to_ice_when_subfreezing_2,rh2_wrt_ice_or_water,real
 Q1,g/kg,specific_humidity_1,q1,real
 Q2,g/kg,specific_humidity_2,q2,real
 Alb,-,surface_albedo,alb,real

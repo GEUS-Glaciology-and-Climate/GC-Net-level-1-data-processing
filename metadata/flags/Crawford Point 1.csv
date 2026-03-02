@@ -7,6 +7,8 @@ t0,t1,variable,flag,comment,URL_graphic
 
 2008-06-01T00:00:00+00:00,2013-01-01T00:00:00+00:00,DW1 DW2,NAN,Manually flagged by bav,
 ,1992-01-01T00:00:00+00:00,DW1 DW2,NAN,Manually flagged by bav,
+1995-01-01T00:00:00+00:00,1996-06-12T00:00:00+00:00,VW1 VW2,NAN,Manually flagged by bav,
+2019-11-17T00:00:00+00:00,2020-03-26T22:00:00+00:00,VW1,NAN,Manually flagged by bav,
 
 2004-11-16T00:00:00+00:00,2005-05-04T00:00:00+00:00,RH1,NAN,Manually flagged by bav,
 2004-11-16T00:00:00+00:00,2005-05-04T00:00:00+00:00,RH2,NAN,Manually flagged by bav,

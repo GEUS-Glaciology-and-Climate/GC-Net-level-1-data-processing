@@ -49,7 +49,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
-# site_list = site_list.loc[site_list.Name.values == 'Crawford Point 1',:]
+# site_list = site_list.loc[site_list.Name.values == 'Humboldt',:]
 # site_list = site_list[17:]
 # %
 for site, ID in zip(site_list.Name, site_list.ID):
@@ -126,8 +126,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
     # removing empty rows:
     useful_var_list = [
-        "ISWR",  "OSWR", "NR", "TA1", "TA2", "TA3", "TA4",  "RH1" "RH2", "P",
-    ] + ["TS" + str(i) for i in range(1, 11)]
+        "ISWR",  "OSWR", "NR", "TA1", "TA2", "TA3", "TA4",  "RH1" "RH2",
+        "P","VW1","VW2"] + ["TS" + str(i) for i in range(1, 11)]
     ind_first = df_v6[
         [v for v in useful_var_list if v in df_v6.columns]
     ].first_valid_index()

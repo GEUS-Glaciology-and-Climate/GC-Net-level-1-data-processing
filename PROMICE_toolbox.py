@@ -1182,9 +1182,9 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA3']
         T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA2']
         T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA4']
-    df['RH1_wrt_ice'] = correctHumidity(df.RH1, T1)
+    df['RH1_wrt_ice_or_water'] = correctHumidity(df.RH1, T1)
     if 'P' in df.columns:
-        df['Q1'] = calcHumid(T1, df.P, df.RH1_wrt_ice)  *1000
+        df['Q1'] = calcHumid(T1, df.P, df.RH1_wrt_ice_or_water)  *1000
         df.loc[df['Q1']>40, 'Q1'] = np.nan
 
     if 'RH2' in df.columns:
@@ -1193,9 +1193,9 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         T2.loc[T2.isnull()] = df.loc[T2.isnull(), 'TA1']
         T2.loc[T2.isnull()] = df.loc[T2.isnull(), 'TA3']
 
-        df['RH2_wrt_ice'] = correctHumidity(df.RH2, T2)
+        df['RH2_wrt_ice_or_water'] = correctHumidity(df.RH2, T2)
 
-        df['Q2'] = calcHumid(T2, df.P, df.RH2_wrt_ice)  *1000
+        df['Q2'] = calcHumid(T2, df.P, df.RH2_wrt_ice_or_water)  *1000
         df.loc[df['Q2']>40, 'Q2'] = np.nan
 
     # %% adding latitude and longitude fields
