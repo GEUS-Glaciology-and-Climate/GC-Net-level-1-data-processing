@@ -17,9 +17,20 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
 2017-01-01T00:00:00+00:00,,HW1,min_filter,0.6,Manually filtered by bav
+,,HW1,min_filter,0.05,Manually filtered by bav
+,,HW2,min_filter,0.05,Manually filtered by bav
 2008-04-28T00:00:00+00:00,2008-05-12T00:00:00+00:00,HW1,min_filter,3.42,Manually filtered by bav
 2017-01-01T00:00:00+00:00,,HW2,max_filter,3.01,Manually filtered by bav
 2002-02-15T00:00:00+00:00,2002-02-16T00:00:00+00:00,HW1,max_filter,1.8,Manually filtered by bav
+
+
+,,TS1,min_filter,-30,Manually filtered by bav
+,,TS2,min_filter,-30,Manually filtered by bav
+,,TS3,min_filter,-30,Manually filtered by bav
+,,TS1,min_filter,-30,Manually filtered by bav
+2004-01-01T00:00:00+00:00,,TS7,min_filter,-32,Manually filtered by bav
+2000-01-01T00:00:00+00:00,,TS8,min_filter,-34,Manually filtered by bav
+2004-01-01T00:00:00+00:00,,TS9,min_filter,-34,Manually filtered by bav
 
 # adjustments on HW
 2013-01-01T00:00:00+00:00,,HW1,add,-0.2,Manually filtered by bav

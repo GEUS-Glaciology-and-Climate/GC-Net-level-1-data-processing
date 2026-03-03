@@ -1,4 +1,17 @@
 # 0 Swiss Camp 10m
+## Interpolated values filter at Swiss Camp 10m
+ISWR: 3 samples flagged
+OSWR: 3 samples flagged
+NR: 4 samples flagged
+TA1: 197 samples flagged
+TA3: 7 samples flagged
+RH1: 260 samples flagged
+RH2: 245 samples flagged
+VW1: 3 samples flagged
+VW2: 10 samples flagged
+DW1: 9 samples flagged
+DW2: 35 samples flagged
+P: 1013 samples flagged
 ## Manual flagging of data at Swiss Camp 10m
 Flagging data:
 |start time|end time|variable|
@@ -49,7 +62,8 @@ Flagging data:
 |2014-05-09 21:00:00+00:00|2020-11-03 21:00:00+00:00|HW2|add|9.0|0|
 |2014-01-01 00:00:00+00:00|2019-05-05 00:00:00+00:00|P|add|-96.5|0|
 |1990-06-01 01:00:00+00:00|2005-01-01 00:00:00+00:00|RH1|swap_with_RH2|0.0|38279|
-|2014-01-01 00:00:00+00:00|2020-11-03 21:00:00+00:00|TA1|swap_with_TA2|0.0|0|
+|2014-01-01 00:00:00+00:00|2020-11-03 21:00:00+00:00|TA1|swap_with_TA2|0.0|47821|
+## ROC filter at Swiss Camp 10m
  
 ![Adjusted and flagged data at Swiss Camp 10m](figures/L1_data_treatment/SwissCamp10m_ISWR.jpeg)
 ![Adjusted and flagged data at Swiss Camp 10m](figures/L1_data_treatment/SwissCamp10m_OSWR.jpeg)
@@ -78,7 +92,38 @@ Flagging data:
  
 ![Adjusted and flagged data at Swiss Camp 10m](figures/L1_data_treatment/SwissCamp10m_HS2.jpeg)
  
+Using metadata/interpolated positions/GC-Net_elevation_tie_points.csv for variable elevation
 # 1 Swiss Camp
+## Interpolated values filter at Swiss Camp
+ISWR: 27 samples flagged
+OSWR: 59 samples flagged
+NR: 446 samples flagged
+TA1: 2973 samples flagged
+TA2: 3607 samples flagged
+TA3: 1242 samples flagged
+TA4: 1207 samples flagged
+RH1: 1171 samples flagged
+RH2: 1225 samples flagged
+VW1: 6133 samples flagged
+VW2: 5798 samples flagged
+DW1: 983 samples flagged
+DW2: 975 samples flagged
+P: 2842 samples flagged
+TA5: 2563 samples flagged
+TS1: 58 samples flagged
+TS2: 67 samples flagged
+TS3: 78 samples flagged
+TS4: 204 samples flagged
+TS5: 232 samples flagged
+TS6: 1044 samples flagged
+TS7: 804 samples flagged
+TS8: 1203 samples flagged
+TS9: 739 samples flagged
+TS10: 2531 samples flagged
+IUVR: 99 samples flagged
+ILWR: 24 samples flagged
+Tsurf1: 34 samples flagged
+Tsurf2: 18 samples flagged
 ## Manual flagging of data at Swiss Camp
 Flagging data:
 |start time|end time|variable|
@@ -140,6 +185,7 @@ Warning: HS1 not found
 |1997-05-18 00:00:00+00:00|1999-06-18 00:00:00+00:00|TS7|max_filter|-1.0|1|
 |1997-05-18 00:00:00+00:00|1999-06-18 00:00:00+00:00|TS8|max_filter|-1.0|1|
 |1997-05-18 00:00:00+00:00|1999-06-18 00:00:00+00:00|TS9|max_filter|-1.0|1|
+## ROC filter at Swiss Camp
  
 ![Adjusted and flagged data at Swiss Camp](figures/L1_data_treatment/SwissCamp_ISWR.jpeg)
 ![Adjusted and flagged data at Swiss Camp](figures/L1_data_treatment/SwissCamp_OSWR.jpeg)
@@ -197,7 +243,35 @@ Warning: HS1 not found
  
 ![Adjusted and flagged data at Swiss Camp](figures/L1_data_treatment/SwissCamp_HS2.jpeg)
  
+Using metadata/interpolated positions/Swiss Camp_position_interpolated.csv for variable latitude and longitude
+Using metadata/interpolated positions/GC-Net_elevation_tie_points.csv for variable elevation
 # 2 Crawford Point 1
+## Interpolated values filter at Crawford Point 1
+ISWR: 42 samples flagged
+OSWR: 22 samples flagged
+NR: 537 samples flagged
+TA1: 2221 samples flagged
+TA2: 1892 samples flagged
+TA3: 1630 samples flagged
+TA4: 1954 samples flagged
+RH1: 849 samples flagged
+RH2: 659 samples flagged
+VW1: 6061 samples flagged
+VW2: 5704 samples flagged
+DW1: 758 samples flagged
+DW2: 792 samples flagged
+P: 6440 samples flagged
+TA5: 222 samples flagged
+TS1: 302 samples flagged
+TS2: 234 samples flagged
+TS3: 2799 samples flagged
+TS4: 768 samples flagged
+TS5: 572 samples flagged
+TS6: 741 samples flagged
+TS7: 2711 samples flagged
+TS8: 551 samples flagged
+TS9: 462 samples flagged
+TS10: 386 samples flagged
 ## Manual flagging of data at Crawford Point 1
 Flagging data:
 |start time|end time|variable|
@@ -209,6 +283,11 @@ Flagging data:
 |2011-05-25 00:00:00+00:00|2012-11-01 00:00:00+00:00|P|
 |2008-06-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|DW1|
 |2008-06-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|DW2|
+|1990-01-01 16:00:00+00:00|1992-01-01 00:00:00+00:00|DW1|
+|1990-01-01 16:00:00+00:00|1992-01-01 00:00:00+00:00|DW2|
+|1995-01-01 00:00:00+00:00|1996-06-12 00:00:00+00:00|VW1|
+|1995-01-01 00:00:00+00:00|1996-06-12 00:00:00+00:00|VW2|
+|2019-11-17 00:00:00+00:00|2020-03-26 22:00:00+00:00|VW1|
 |2004-11-16 00:00:00+00:00|2005-05-04 00:00:00+00:00|RH1|
 |2004-11-16 00:00:00+00:00|2005-05-04 00:00:00+00:00|RH2|
 |2005-01-01 00:00:00+00:00|2007-05-10 00:00:00+00:00|TA1|
@@ -269,23 +348,27 @@ Flagging data:
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|DW2|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|DW2|time_shift|24.0|7|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|DW2|time_shift|180552.0|6431|
-|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW1|swap_with_HW2|0.0|574|
-|2010-05-09 22:00:00+00:00|2010-08-07 00:00:00+00:00|HW1|swap_with_HW2|0.0|38|
-|2011-05-02 14:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|swap_with_HW2|0.0|5157|
-|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
-|2001-12-31 14:00:00+00:00|2002-12-31 14:00:00+00:00|HW1|add|-0.3|0|
-|2002-09-24 13:00:00+00:00|2002-12-31 14:00:00+00:00|HW1|add|-0.94|0|
-|2009-05-10 00:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|hampel_filter|2.0|4333|
-|2009-12-14 15:00:00+00:00|2010-05-09 22:00:00+00:00|HW1|add|-1.1|0|
-|2010-05-09 22:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
-|2010-05-09 22:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|min_filter|0.1|8873|
-|2010-05-09 22:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|biweekly_upper_range_filter|0.5|1363|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|HW1|time_shift|24.0|25|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|HW1|time_shift|24.0|24|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|HW1|time_shift|24.0|25|
-|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW1|time_shift|180552.0|5857|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW1|time_shift|180552.0|6431|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW1|swap_with_HW2|0.0|-5857|
+|2010-05-09 22:00:00+00:00|2010-08-07 00:00:00+00:00|HW1|swap_with_HW2|0.0|38|
+|2011-05-02 14:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|swap_with_HW2|0.0|5158|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2001-12-31 14:00:00+00:00|2002-12-31 14:00:00+00:00|HW1|add|-0.3|0|
+|2002-09-24 13:00:00+00:00|2002-12-31 14:00:00+00:00|HW1|add|-0.94|0|
+|2009-05-10 00:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|hampel_filter|2.0|5199|
+|2009-12-14 15:00:00+00:00|2010-05-09 22:00:00+00:00|HW1|add|-1.1|0|
+|2010-05-09 22:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2010-05-09 22:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|min_filter|0.1|8880|
+|2010-05-09 22:00:00+00:00|2020-07-22 09:00:00+00:00|HW1|biweekly_upper_range_filter|0.5|2068|
+|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|HW2|time_shift|24.0|25|
+|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|HW2|time_shift|24.0|24|
+|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|HW2|time_shift|24.0|25|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW2|time_shift|180552.0|0|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
-|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|809|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|0|
 |2002-12-31 14:00:00+00:00|2002-12-31 14:00:00+00:00|HW2|add|-1.0|0|
 |2009-05-10 00:00:00+00:00|2020-07-22 09:00:00+00:00|HW2|hampel_filter|2.0|7126|
 |2010-05-09 22:00:00+00:00|2020-07-22 09:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
@@ -293,57 +376,53 @@ Flagging data:
 |2010-05-09 22:00:00+00:00|2020-07-22 09:00:00+00:00|HW2|min_filter|0.1|1535|
 |2010-05-09 22:00:00+00:00|2020-07-22 09:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|12382|
 |2017-05-10 00:00:00+00:00|2020-07-22 09:00:00+00:00|HW2|biweekly_upper_range_filter|0.2|1502|
-|2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|HW2|time_shift|24.0|25|
-|2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|HW2|time_shift|24.0|24|
-|1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|HW2|time_shift|24.0|25|
-|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|HW2|time_shift|180552.0|5622|
-|2012-01-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|ISWR|swap_with_OSWR|0.0|0|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|ISWR|time_shift|24.0|19|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|ISWR|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|ISWR|time_shift|24.0|7|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|ISWR|time_shift|180552.0|14|
+|2012-01-01 00:00:00+00:00|2020-07-22 09:00:00+00:00|ISWR|swap_with_OSWR|0.0|0|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|NR|time_shift|24.0|19|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|NR|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|NR|time_shift|24.0|7|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|NR|time_shift|180552.0|1769|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|OSWR|time_shift|24.0|19|
-|2010-05-09 00:00:00+00:00|2020-07-22 09:00:00+00:00|OSWR|multiply|0.934|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|OSWR|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|OSWR|time_shift|24.0|7|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|OSWR|time_shift|180552.0|22|
+|2010-05-09 00:00:00+00:00|2020-07-22 09:00:00+00:00|OSWR|multiply|0.934|0|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|P|time_shift|24.0|25|
-|1999-01-01 00:00:00+00:00|2010-05-09 22:00:00+00:00|P|add|-12.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|P|time_shift|24.0|24|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|P|time_shift|24.0|1|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|P|time_shift|180552.0|6431|
+|1999-01-01 00:00:00+00:00|2010-05-09 22:00:00+00:00|P|add|-12.0|0|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|RH1|time_shift|24.0|19|
-|1996-01-01 00:00:00+00:00|2010-05-16 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|RH1|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|RH1|time_shift|24.0|7|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|RH1|time_shift|180552.0|6419|
+|1996-01-01 00:00:00+00:00|2010-05-16 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|RH2|time_shift|24.0|19|
-|1996-01-01 00:00:00+00:00|2010-05-16 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|RH2|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|RH2|time_shift|24.0|4|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|RH2|time_shift|180552.0|6431|
+|1996-01-01 00:00:00+00:00|2010-05-16 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TA1|time_shift|24.0|19|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TA1|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TA1|time_shift|24.0|25|
-|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TA1|time_shift|180552.0|6431|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TA1|time_shift|180552.0|0|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TA2|time_shift|24.0|19|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TA2|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TA2|time_shift|24.0|25|
-|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TA2|time_shift|180552.0|6431|
-|1990-01-01 16:00:00+00:00|1999-01-01 00:00:00+00:00|TA3|swap_with_TA4|0.0|45|
-|2006-01-01 00:00:00+00:00|2007-04-26 00:00:00+00:00|TA3|swap_with_TA4|0.0|3087|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TA2|time_shift|180552.0|0|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TA3|time_shift|24.0|19|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TA3|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TA3|time_shift|24.0|25|
-|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TA3|time_shift|180552.0|6431|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TA3|time_shift|180552.0|6429|
+|1990-01-01 16:00:00+00:00|1999-01-01 00:00:00+00:00|TA3|swap_with_TA4|0.0|-6384|
+|2006-01-01 00:00:00+00:00|2007-04-26 00:00:00+00:00|TA3|swap_with_TA4|0.0|3087|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TA4|time_shift|24.0|19|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TA4|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TA4|time_shift|24.0|25|
-|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TA4|time_shift|180552.0|6429|
+|1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TA4|time_shift|180552.0|0|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TA5|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TA5|time_shift|24.0|0|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TA5|time_shift|24.0|0|
@@ -352,42 +431,62 @@ Flagging data:
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS1|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS1|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS1|time_shift|180552.0|0|
+|1990-01-01 16:00:00+00:00|2020-07-22 09:00:00+00:00|TS1|min_filter|-20.0|6189|
+|1990-01-01 16:00:00+00:00|2020-07-22 09:00:00+00:00|TS1|max_filter|-15.0|5999|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TS10|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS10|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS10|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS10|time_shift|180552.0|0|
+|1990-01-01 16:00:00+00:00|2020-07-22 09:00:00+00:00|TS10|min_filter|-26.0|908|
+|1990-01-01 16:00:00+00:00|2020-07-22 09:00:00+00:00|TS10|max_filter|-10.0|10572|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TS2|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS2|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS2|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS2|time_shift|180552.0|0|
+|1990-01-01 16:00:00+00:00|2005-01-01 00:00:00+00:00|TS2|min_filter|-20.0|66|
+|1990-01-01 16:00:00+00:00|2005-01-01 00:00:00+00:00|TS2|max_filter|-15.0|562|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TS3|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS3|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS3|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS3|time_shift|180552.0|0|
+|1997-01-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS3|min_filter|-20.0|1606|
+|1997-01-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS3|max_filter|-15.0|948|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TS4|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS4|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS4|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS4|time_shift|180552.0|0|
+|1997-01-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS4|min_filter|-20.0|89|
+|1997-01-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS4|max_filter|-15.0|988|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TS5|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS5|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS5|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS5|time_shift|180552.0|0|
+|2000-03-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS5|min_filter|-20.0|72|
+|2000-03-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS5|max_filter|-15.0|894|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TS6|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS6|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS6|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS6|time_shift|180552.0|0|
+|2000-03-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS6|min_filter|-20.0|73|
+|2000-03-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS6|max_filter|-15.0|925|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TS7|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS7|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS7|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS7|time_shift|180552.0|0|
+|2000-03-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS7|min_filter|-20.0|1141|
+|2000-03-01 00:00:00+00:00|2005-01-01 00:00:00+00:00|TS7|max_filter|-15.0|3089|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TS8|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS8|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS8|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS8|time_shift|180552.0|0|
+|1990-01-01 16:00:00+00:00|2020-07-22 09:00:00+00:00|TS8|min_filter|-26.0|4939|
+|1990-01-01 16:00:00+00:00|2020-07-22 09:00:00+00:00|TS8|max_filter|-10.0|5472|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|TS9|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|TS9|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|TS9|time_shift|24.0|25|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|TS9|time_shift|180552.0|0|
+|1990-01-01 16:00:00+00:00|2020-07-22 09:00:00+00:00|TS9|min_filter|-26.0|5663|
+|1990-01-01 16:00:00+00:00|2020-07-22 09:00:00+00:00|TS9|max_filter|-10.0|11795|
 |2008-06-12 00:00:00+00:00|2009-04-27 00:00:00+00:00|V|time_shift|24.0|0|
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|V|time_shift|24.0|0|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|V|time_shift|24.0|25|
@@ -400,6 +499,7 @@ Flagging data:
 |2003-04-19 14:00:00+00:00|2004-06-09 00:00:00+00:00|VW2|time_shift|24.0|25|
 |1999-08-09 00:00:00+00:00|2000-06-04 06:00:00+00:00|VW2|time_shift|24.0|7|
 |1990-01-01 16:00:00+00:00|1990-09-26 14:00:00+00:00|VW2|time_shift|180552.0|6431|
+## ROC filter at Crawford Point 1
  
 ![Adjusted and flagged data at Crawford Point 1](figures/L1_data_treatment/CrawfordPoint1_ISWR.jpeg)
 ![Adjusted and flagged data at Crawford Point 1](figures/L1_data_treatment/CrawfordPoint1_OSWR.jpeg)
@@ -459,12 +559,46 @@ Flagging data:
  
 ![Adjusted and flagged data at Crawford Point 1](figures/L1_data_treatment/CrawfordPoint1_HS2.jpeg)
  
+Using metadata/interpolated positions/Crawford Point 1_position_interpolated.csv for variable latitude and longitude
 # 13 CP2
+## Interpolated values filter at CP2
+ISWR: 6 samples flagged
+OSWR: 7 samples flagged
+NR: 55 samples flagged
+TA1: 122 samples flagged
+TA2: 115 samples flagged
+TA3: 42 samples flagged
+TA4: 76 samples flagged
+RH1: 15 samples flagged
+RH2: 20 samples flagged
+VW1: 3 samples flagged
+P: 403 samples flagged
+HS1: 98 samples flagged
+HS2: 103 samples flagged
+TS1: 104 samples flagged
+TS2: 46 samples flagged
+TS3: 54 samples flagged
+TS4: 23 samples flagged
+TS5: 10 samples flagged
+TS6: 25 samples flagged
+TS7: 21 samples flagged
+TS8: 27 samples flagged
+TS9: 23 samples flagged
+TS10: 74 samples flagged
 ## Manual flagging of data at CP2
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
 |1999-02-07 00:00:00+00:00|1999-07-01 00:00:00+00:00|RH2|
+|1997-08-12 00:00:00+00:00|1997-10-01 00:00:00+00:00|TS1|
+|1997-08-12 00:00:00+00:00|1997-10-01 00:00:00+00:00|TS2|
+|1997-08-12 00:00:00+00:00|1997-10-01 00:00:00+00:00|TS3|
+|1997-08-12 00:00:00+00:00|1997-10-01 00:00:00+00:00|TS4|
+|1997-08-12 00:00:00+00:00|1997-10-01 00:00:00+00:00|TS5|
+|1997-08-12 00:00:00+00:00|1997-10-01 00:00:00+00:00|TS6|
+|1997-08-12 00:00:00+00:00|1997-10-01 00:00:00+00:00|TS7|
+|1997-08-12 00:00:00+00:00|1997-10-01 00:00:00+00:00|TS8|
+|1997-08-12 00:00:00+00:00|1997-10-01 00:00:00+00:00|TS9|
 ## Adjusting data at CP2
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
@@ -481,6 +615,7 @@ Flagging data:
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |1997-01-01 00:00:00+00:00|2001-05-29 13:00:00+00:00|TA1|swap_with_TA2|0.0|0|
+## ROC filter at CP2
  
 ![Adjusted and flagged data at CP2](figures/L1_data_treatment/CP2_ISWR.jpeg)
 ![Adjusted and flagged data at CP2](figures/L1_data_treatment/CP2_OSWR.jpeg)
@@ -529,6 +664,32 @@ Flagging data:
 ![Adjusted and flagged data at CP2](figures/L1_data_treatment/CP2_HS2.jpeg)
  
 # 9 JAR1
+## Interpolated values filter at JAR1
+ISWR: 154 samples flagged
+OSWR: 72 samples flagged
+NR: 353 samples flagged
+TA1: 4207 samples flagged
+TA2: 3126 samples flagged
+TA3: 1598 samples flagged
+TA4: 1143 samples flagged
+RH1: 1075 samples flagged
+RH2: 1120 samples flagged
+VW1: 4713 samples flagged
+VW2: 4524 samples flagged
+DW1: 805 samples flagged
+DW2: 916 samples flagged
+P: 4587 samples flagged
+TA5: 476 samples flagged
+TS1: 1288 samples flagged
+TS2: 4387 samples flagged
+TS3: 3101 samples flagged
+TS4: 2964 samples flagged
+TS5: 2929 samples flagged
+TS6: 3259 samples flagged
+TS7: 2577 samples flagged
+TS8: 35 samples flagged
+TS9: 1620 samples flagged
+TS10: 2715 samples flagged
 ## Manual flagging of data at JAR1
 Flagging data:
 |start time|end time|variable|
@@ -596,44 +757,44 @@ Flagging data:
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|DW1|time_shift|24.0|17|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|DW2|time_shift|-745.0|555|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|DW2|time_shift|24.0|17|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|HW1|time_shift|-745.0|555|
+|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|HW1|time_shift|24.0|17|
 |2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
-|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW1|hampel_filter|2.0|3173|
+|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW1|hampel_filter|2.0|3234|
 |2009-08-14 00:00:00+00:00|2010-05-01 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.3|468|
 |2010-06-11 00:00:00+00:00|2010-06-21 00:00:00+00:00|HW1|min_filter|2.21|12|
 |2010-07-08 00:00:00+00:00|2010-07-19 00:00:00+00:00|HW1|min_filter|3.35|31|
 |2018-10-01 00:00:00+00:00|2018-10-10 00:00:00+00:00|HW1|min_filter|2.17|16|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|HW1|time_shift|-745.0|553|
-|2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|HW1|time_shift|24.0|17|
-|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
-|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|16888|
-|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|hampel_filter|2.0|533|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|HW2|time_shift|-745.0|518|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|HW2|time_shift|-745.0|555|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|HW2|time_shift|24.0|17|
+|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|17052|
+|2009-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|HW2|hampel_filter|2.0|544|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|ISWR|time_shift|-745.0|554|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|ISWR|time_shift|24.0|16|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|NR|time_shift|-745.0|553|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|NR|time_shift|24.0|14|
-|2009-05-06 00:00:00+00:00|2019-09-08 01:00:00+00:00|OSWR|multiply|0.934|0|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|OSWR|time_shift|-745.0|553|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|OSWR|time_shift|24.0|17|
+|2009-05-06 00:00:00+00:00|2019-09-08 01:00:00+00:00|OSWR|multiply|0.934|0|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|P|time_shift|-745.0|555|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|P|time_shift|24.0|17|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|RH1|time_shift|-745.0|555|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|RH1|time_shift|24.0|1|
-|2012-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|RH2|swap_with_RH1|0.0|-1670|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|RH2|time_shift|-745.0|555|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|RH2|time_shift|24.0|1|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA1|time_shift|-745.0|555|
+|2012-05-15 00:00:00+00:00|2019-09-08 01:00:00+00:00|RH2|swap_with_RH1|0.0|-1670|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA1|time_shift|-745.0|337|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA1|time_shift|24.0|17|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA2|time_shift|-745.0|555|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA2|time_shift|-745.0|0|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA2|time_shift|24.0|17|
-|2005-01-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|TA3|swap_with_TA4|0.0|-654|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA3|time_shift|-745.0|555|
-|2018-02-01 00:00:00+00:00|2019-12-20 00:00:00+00:00|TA3|max_filter|9.0|215|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA3|time_shift|24.0|1|
-|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA4|time_shift|-745.0|555|
-|2013-02-01 00:00:00+00:00|2015-12-20 00:00:00+00:00|TA4|max_filter|9.0|3469|
+|2005-01-01 00:00:00+00:00|2013-01-01 00:00:00+00:00|TA3|swap_with_TA4|0.0|-841|
+|2018-02-01 00:00:00+00:00|2019-12-20 00:00:00+00:00|TA3|max_filter|9.0|215|
+|2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA4|time_shift|-745.0|745|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA4|time_shift|24.0|1|
+|2013-02-01 00:00:00+00:00|2015-12-20 00:00:00+00:00|TA4|max_filter|9.0|3469|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TA5|time_shift|-745.0|338|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|TA5|time_shift|24.0|0|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|TS1|time_shift|-745.0|211|
@@ -662,6 +823,7 @@ Flagging data:
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|VW1|time_shift|24.0|17|
 |2011-06-01 00:00:00+00:00|2012-05-09 00:00:00+00:00|VW2|time_shift|-745.0|555|
 |2003-04-24 00:00:00+00:00|2005-05-07 00:00:00+00:00|VW2|time_shift|24.0|17|
+## ROC filter at JAR1
  
 ![Adjusted and flagged data at JAR1](figures/L1_data_treatment/JAR1_ISWR.jpeg)
 ![Adjusted and flagged data at JAR1](figures/L1_data_treatment/JAR1_OSWR.jpeg)
@@ -692,7 +854,36 @@ Flagging data:
 ![Adjusted and flagged data at JAR1](figures/L1_data_treatment/JAR1_TS9.jpeg)
 ![Adjusted and flagged data at JAR1](figures/L1_data_treatment/JAR1_TS10.jpeg)
  
+Using metadata/interpolated positions/JAR1_position_interpolated.csv for variable latitude and longitude
+Using metadata/interpolated positions/GC-Net_elevation_tie_points.csv for variable elevation
+Cannot download maintenance summary. Using local file.
 # 17 JAR2
+## Interpolated values filter at JAR2
+ISWR: 50 samples flagged
+OSWR: 71 samples flagged
+NR: 238 samples flagged
+TA1: 359 samples flagged
+TA2: 344 samples flagged
+TA3: 271 samples flagged
+TA4: 266 samples flagged
+RH1: 476 samples flagged
+RH2: 567 samples flagged
+VW1: 3101 samples flagged
+VW2: 2808 samples flagged
+DW1: 413 samples flagged
+DW2: 406 samples flagged
+P: 1467 samples flagged
+TA5: 6 samples flagged
+TS1: 313 samples flagged
+TS2: 4076 samples flagged
+TS3: 448 samples flagged
+TS4: 529 samples flagged
+TS5: 707 samples flagged
+TS6: 777 samples flagged
+TS7: 601 samples flagged
+TS8: 1581 samples flagged
+TS9: 1756 samples flagged
+TS10: 805 samples flagged
 ## Manual flagging of data at JAR2
 Flagging data:
 |start time|end time|variable|
@@ -748,35 +939,35 @@ Flagging data:
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|DW1|time_shift|63.0|0|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|DW2|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|DW2|time_shift|63.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|time_shift|-749.0|2|
+|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|HW1|time_shift|63.0|0|
 |1999-04-19 00:00:00+00:00|2000-01-01 00:00:00+00:00|HW1|min_filter|0.5|10|
 |2007-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|max_filter|5.9|520|
 |2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|min_filter|1.05|4183|
-|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|biweekly_upper_range_filter|0.7|732|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|time_shift|-749.0|1|
-|2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|HW1|time_shift|63.0|0|
-|1999-04-19 00:00:00+00:00|2000-01-01 00:00:00+00:00|HW2|min_filter|0.5|10|
-|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|min_filter|0.5|9993|
-|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|max_filter|7.5|58|
-|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|biweekly_upper_range_filter|0.7|3917|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|time_shift|-749.0|1|
+|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW1|biweekly_upper_range_filter|0.7|792|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|time_shift|-749.0|2|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|HW2|time_shift|63.0|0|
-|2009-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|ISWR|multiply|0.5|0|
+|1999-04-19 00:00:00+00:00|2000-01-01 00:00:00+00:00|HW2|min_filter|0.5|10|
+|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|min_filter|0.5|9992|
+|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|max_filter|7.5|58|
+|2008-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|HW2|biweekly_upper_range_filter|0.7|3911|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|ISWR|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|ISWR|time_shift|63.0|0|
+|2009-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|ISWR|multiply|0.5|0|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|NR|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|NR|time_shift|63.0|0|
-|2009-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|OSWR|multiply|0.5|0|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|OSWR|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|OSWR|time_shift|63.0|0|
+|2009-01-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|OSWR|multiply|0.5|0|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|P|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|P|time_shift|63.0|0|
-|2002-05-07 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|swap_with_RH2|0.0|-19|
-|1999-06-02 03:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH1|time_shift|63.0|0|
-|1999-06-02 03:00:00+00:00|2013-06-16 08:00:00+00:00|RH2|ice_to_water|0.0|0|
-|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH2|time_shift|-749.0|3|
+|2002-05-07 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|swap_with_RH2|0.0|-20|
+|1999-06-02 03:00:00+00:00|2013-06-16 08:00:00+00:00|RH1|ice_to_water|0.0|0|
+|2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|RH2|time_shift|-749.0|518|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH2|time_shift|63.0|0|
+|1999-06-02 03:00:00+00:00|2013-06-16 08:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA1|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TA1|time_shift|63.0|0|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|TA2|time_shift|-749.0|3|
@@ -809,11 +1000,12 @@ Flagging data:
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|TS9|time_shift|63.0|0|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|V|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|V|time_shift|63.0|0|
-|2004-05-07 00:00:00+00:00|2005-05-14 00:00:00+00:00|VW1|swap_with_VW2|0.0|-459|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|VW1|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|VW1|time_shift|63.0|0|
+|2004-05-07 00:00:00+00:00|2005-05-14 00:00:00+00:00|VW1|swap_with_VW2|0.0|-459|
 |2011-05-01 00:00:00+00:00|2013-06-16 08:00:00+00:00|VW2|time_shift|-749.0|3|
 |2008-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|VW2|time_shift|63.0|0|
+## ROC filter at JAR2
  
 ![Adjusted and flagged data at JAR2](figures/L1_data_treatment/JAR2_ISWR.jpeg)
 ![Adjusted and flagged data at JAR2](figures/L1_data_treatment/JAR2_OSWR.jpeg)
@@ -844,7 +1036,21 @@ Flagging data:
 ![Adjusted and flagged data at JAR2](figures/L1_data_treatment/JAR2_TS9.jpeg)
 ![Adjusted and flagged data at JAR2](figures/L1_data_treatment/JAR2_TS10.jpeg)
  
+Using metadata/interpolated positions/GC-Net_elevation_tie_points.csv for variable elevation
+Cannot download maintenance summary. Using local file.
 # 19 JAR3
+## Interpolated values filter at JAR3
+ISWR: 9 samples flagged
+NR: 35 samples flagged
+TA1: 18 samples flagged
+TA2: 15 samples flagged
+TA3: 12 samples flagged
+TA4: 32 samples flagged
+RH1: 5 samples flagged
+RH2: 7 samples flagged
+VW1: 3 samples flagged
+P: 1059 samples flagged
+HS1: 46 samples flagged
 ## Manual flagging of data at JAR3
 Flagging data:
 |start time|end time|variable|
@@ -864,7 +1070,8 @@ Flagging data:
 ## Adjusting data at JAR3
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-|2002-05-06 15:00:00+00:00|2004-05-25 13:00:00+00:00|P|add|70.0|0|
+|2002-05-06 15:00:00+00:00|2004-05-25 13:00:00+00:00|P|add|70|0|
+## ROC filter at JAR3
  
 ![Adjusted and flagged data at JAR3](figures/L1_data_treatment/JAR3_ISWR.jpeg)
 ![Adjusted and flagged data at JAR3](figures/L1_data_treatment/JAR3_OSWR.jpeg)
@@ -889,7 +1096,32 @@ Flagging data:
  
 ![Adjusted and flagged data at JAR3](figures/L1_data_treatment/JAR3_HS1.jpeg)
  
+No valid data for HW2
+Using metadata/interpolated positions/GC-Net_elevation_tie_points.csv for variable elevation
 # 3 NASA-U
+## Interpolated values filter at NASA-U
+ISWR: 320 samples flagged
+OSWR: 374 samples flagged
+NR: 9937 samples flagged
+TA1: 12596 samples flagged
+TA2: 12115 samples flagged
+TA3: 11712 samples flagged
+TA4: 218 samples flagged
+RH1: 1813 samples flagged
+RH2: 621 samples flagged
+VW1: 14637 samples flagged
+VW2: 14587 samples flagged
+DW1: 2713 samples flagged
+DW2: 2746 samples flagged
+P: 3304 samples flagged
+TA5: 190 samples flagged
+TS1: 926 samples flagged
+TS2: 255 samples flagged
+TS3: 10 samples flagged
+TS4: 173 samples flagged
+TS5: 172 samples flagged
+TS7: 103 samples flagged
+TS10: 97 samples flagged
 ## Manual flagging of data at NASA-U
 Flagging data:
 |start time|end time|variable|
@@ -959,6 +1191,7 @@ Flagging data:
 |-|-|-|-|-|-|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|DW1|time_shift|48.0|4|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|DW2|time_shift|48.0|4|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|HW1|time_shift|48.0|4|
 |1990-01-01 00:00:00+00:00|2023-06-18 15:00:00+00:00|HW1|add|-0.8|0|
 |2001-05-31 21:00:00+00:00|2023-06-18 15:00:00+00:00|HW1|hampel_filter|3.0|11514|
 |2007-02-12 00:00:00+00:00|2007-04-16 00:00:00+00:00|HW1|min_filter|2.4|164|
@@ -971,7 +1204,7 @@ Flagging data:
 |2016-10-15 00:00:00+00:00|2016-11-15 00:00:00+00:00|HW1|max_filter|1.07|106|
 |2018-05-21 00:00:00+00:00|2023-06-18 15:00:00+00:00|HW1|biweekly_upper_range_filter|0.3|4260|
 |2021-10-15 00:00:00+00:00|2023-06-18 15:00:00+00:00|HW1|max_filter|1.5|11|
-|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|HW1|time_shift|48.0|4|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|HW2|time_shift|48.0|4|
 |1990-01-01 00:00:00+00:00|2023-06-18 15:00:00+00:00|HW2|add|-0.5|0|
 |2001-05-31 21:00:00+00:00|2023-06-18 15:00:00+00:00|HW2|hampel_filter|3.0|14235|
 |2007-02-12 00:00:00+00:00|2007-04-16 00:00:00+00:00|HW2|min_filter|3.2|86|
@@ -981,23 +1214,22 @@ Flagging data:
 |2011-05-31 21:00:00+00:00|2023-01-01 00:00:00+00:00|HW2|min_filter|1.0|9987|
 |2011-05-31 21:00:00+00:00|2023-01-01 00:00:00+00:00|HW2|max_filter|5.1|30|
 |2011-05-31 21:00:00+00:00|2023-06-18 15:00:00+00:00|HW2|biweekly_upper_range_filter|0.3|6875|
-|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|HW2|time_shift|48.0|0|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|ISWR|time_shift|48.0|4|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|NR|time_shift|48.0|4|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|OSWR|time_shift|48.0|4|
 |2003-01-01 00:00:00+00:00|2018-05-22 00:00:00+00:00|OSWR|multiply|2.76205|0|
 |2011-05-31 00:00:00+00:00|2023-06-18 15:00:00+00:00|OSWR|multiply|0.934|0|
-|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|OSWR|time_shift|48.0|4|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|P|time_shift|48.0|0|
 |1999-05-14 00:00:00+00:00|2000-01-01 00:00:00+00:00|P|add|-30.0|0|
 |2000-01-01 00:00:00+00:00|2005-05-26 00:00:00+00:00|P|add|-15.0|0|
 |2016-07-01 00:00:00+00:00|2023-06-18 15:00:00+00:00|P|add|-40.0|0|
-|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|P|time_shift|48.0|0|
+|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|RH1|time_shift|48.0|4|
 |2012-05-09 00:00:00+00:00|2018-05-23 00:00:00+00:00|RH1|swap_with_RH2|0.0|-360|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
-|2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|RH1|time_shift|48.0|4|
-|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|RH2|time_shift|48.0|0|
-|2017-12-15 00:00:00+00:00|2018-02-16 00:00:00+00:00|TA1|min_filter|-56.6|18|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|TA1|time_shift|48.0|4|
+|2017-12-15 00:00:00+00:00|2018-02-16 00:00:00+00:00|TA1|min_filter|-56.6|0|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|TA2|time_shift|48.0|4|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|TA3|time_shift|48.0|4|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|TA4|time_shift|48.0|0|
@@ -1029,6 +1261,7 @@ Flagging data:
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|V|time_shift|48.0|4|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|VW1|time_shift|48.0|4|
 |2010-03-20 00:00:00+00:00|2010-10-11 00:00:00+00:00|VW2|time_shift|48.0|4|
+## ROC filter at NASA-U
  
 ![Adjusted and flagged data at NASA-U](figures/L1_data_treatment/NASA-U_ISWR.jpeg)
 ![Adjusted and flagged data at NASA-U](figures/L1_data_treatment/NASA-U_OSWR.jpeg)
@@ -1085,7 +1318,26 @@ Flagging data:
  
 ![Adjusted and flagged data at NASA-U](figures/L1_data_treatment/NASA-U_HS2.jpeg)
  
+Using metadata/interpolated positions/NASA-U_position_interpolated.csv for variable latitude and longitude
+Cannot download maintenance summary. Using local file.
 # 4 GITS
+## Interpolated values filter at GITS
+ISWR: 259 samples flagged
+OSWR: 325 samples flagged
+NR: 2279 samples flagged
+TA1: 6821 samples flagged
+TA2: 3130 samples flagged
+TA3: 6668 samples flagged
+TA4: 3687 samples flagged
+RH1: 2266 samples flagged
+RH2: 916 samples flagged
+VW1: 5519 samples flagged
+VW2: 5238 samples flagged
+DW1: 201 samples flagged
+DW2: 1454 samples flagged
+P: 2629 samples flagged
+TS1: 30 samples flagged
+TS7: 20 samples flagged
 ## Manual flagging of data at GITS
 Flagging data:
 |start time|end time|variable|
@@ -1102,6 +1354,7 @@ Flagging data:
 |2018-09-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW1|
 |1999-01-01 00:00:00+00:00|2002-01-01 00:00:00+00:00|P|
 |2011-05-25 00:00:00+00:00|2013-01-01 00:00:00+00:00|P|
+|1995-06-07 13:00:00+00:00|2021-08-13 12:00:00+00:00|TS8|
 |1995-06-07 13:00:00+00:00|1997-01-01 00:00:00+00:00|RH1|
 |1995-06-07 13:00:00+00:00|1997-01-01 00:00:00+00:00|RH2|
 |1990-01-01 00:00:00+00:00|1996-07-01 00:00:00+00:00|TA1|
@@ -1148,37 +1401,37 @@ Flagging data:
 |-|-|-|-|-|-|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|DW1|time_shift|520.0|520|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|DW2|time_shift|520.0|520|
-|2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW1|swap_with_HW2|0.5|15892|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|HW1|time_shift|520.0|520|
+|2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW1|swap_with_HW2|0.5|15891|
 |2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW1|biweekly_upper_range_filter|0.5|5688|
 |2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW1|hampel_filter|2.0|2284|
 |2019-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW1|max_filter|2.6|0|
-|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|HW1|time_shift|520.0|8|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|HW2|time_shift|520.0|503|
 |2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW2|max_filter|4.8|496|
-|2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|21457|
-|2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW2|hampel_filter|2.0|2664|
-|2016-05-21 00:00:00+00:00|2019-10-22 00:00:00+00:00|HW2|biweekly_upper_range_filter|0.2|1062|
+|2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW2|biweekly_upper_range_filter|0.5|21456|
+|2009-05-15 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW2|hampel_filter|2.0|2735|
+|2016-05-21 00:00:00+00:00|2019-10-22 00:00:00+00:00|HW2|biweekly_upper_range_filter|0.2|1083|
 |2016-05-21 00:00:00+00:00|2016-10-22 00:00:00+00:00|HW2|biweekly_upper_range_filter|0.1|255|
-|2019-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW2|max_filter|2.6|1193|
-|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|HW2|time_shift|520.0|519|
+|2019-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|HW2|max_filter|2.6|1232|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|ISWR|time_shift|520.0|520|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|NR|time_shift|520.0|520|
-|2012-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|OSWR|multiply|0.934|0|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|OSWR|time_shift|520.0|520|
+|2012-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|OSWR|multiply|0.934|0|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|P|time_shift|520.0|520|
-|1995-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|RH1|time_shift|520.0|520|
-|1995-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+|1995-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|RH2|time_shift|520.0|520|
+|1995-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TA1|time_shift|520.0|520|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TA2|time_shift|520.0|520|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TA3|time_shift|520.0|520|
 |1990-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|TA3|min_filter|-39.4|7184|
 |2005-01-01 00:00:00+00:00|2008-01-01 00:00:00+00:00|TA3|add|-2.8|0|
-|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TA3|time_shift|520.0|520|
+|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TA4|time_shift|520.0|520|
 |1990-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|TA4|min_filter|-39.4|5789|
 |2001-01-01 00:00:00+00:00|2008-01-01 00:00:00+00:00|TA4|add|-2.8|0|
-|2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TA4|time_shift|520.0|520|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TA5|time_shift|520.0|0|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TS1|time_shift|520.0|0|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|TS10|time_shift|520.0|0|
@@ -1195,6 +1448,7 @@ Flagging data:
 |1990-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|VW1|max_filter|28.0|3|
 |2019-03-14 00:00:00+00:00|2019-04-29 01:00:00+00:00|VW2|time_shift|520.0|520|
 |1990-01-01 00:00:00+00:00|2021-08-13 12:00:00+00:00|VW2|max_filter|28.0|3|
+## ROC filter at GITS
  
 ![Adjusted and flagged data at GITS](figures/L1_data_treatment/GITS_ISWR.jpeg)
 ![Adjusted and flagged data at GITS](figures/L1_data_treatment/GITS_OSWR.jpeg)
@@ -1248,7 +1502,30 @@ Flagging data:
  
 ![Adjusted and flagged data at GITS](figures/L1_data_treatment/GITS_HS2.jpeg)
  
+Cannot download maintenance summary. Using local file.
 # 5 Humboldt
+## Interpolated values filter at Humboldt
+ISWR: 148 samples flagged
+OSWR: 204 samples flagged
+NR: 4156 samples flagged
+TA1: 6233 samples flagged
+TA2: 6251 samples flagged
+TA3: 2590 samples flagged
+TA4: 7662 samples flagged
+RH1: 499 samples flagged
+RH2: 929 samples flagged
+VW1: 10619 samples flagged
+VW2: 10364 samples flagged
+DW1: 534 samples flagged
+DW2: 1826 samples flagged
+P: 8062 samples flagged
+TS1: 70 samples flagged
+TS2: 470 samples flagged
+TS3: 10 samples flagged
+TS4: 10 samples flagged
+TS7: 10 samples flagged
+TS9: 11 samples flagged
+TS10: 55 samples flagged
 ## Manual flagging of data at Humboldt
 Flagging data:
 |start time|end time|variable|
@@ -1297,38 +1574,39 @@ Flagging data:
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|DW2|time_shift|2198.0|845|
 |2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|DW2|time_shift|-48.0|48|
 |2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|DW2|time_shift|-24.0|25|
+|2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|HW1|time_shift|2815.0|351|
+|2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|HW1|time_shift|2954.0|1938|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|HW1|time_shift|5604.0|3220|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|HW1|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|HW1|time_shift|2954.0|1047|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|HW1|time_shift|5611.0|1270|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|HW1|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|HW1|time_shift|2198.0|840|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|HW1|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|HW1|time_shift|-24.0|25|
 |2002-06-02 04:00:00+00:00|2023-03-05 08:00:00+00:00|HW1|add|-0.5|0|
 |2003-05-22 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW1|add|1.0|0|
 |2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW1|add|-1.8|0|
-|2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW1|biweekly_upper_range_filter|0.3|11228|
-|2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW1|hampel_filter|2.0|2845|
-|2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|HW1|time_shift|2815.0|316|
-|2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|HW1|time_shift|2954.0|1751|
-|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|HW1|time_shift|5604.0|1011|
-|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|HW1|time_shift|2954.0|1108|
-|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|HW1|time_shift|2954.0|987|
-|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|HW1|time_shift|5611.0|1098|
-|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|HW1|time_shift|2943.0|1266|
-|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|HW1|time_shift|2198.0|798|
-|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|HW1|time_shift|-48.0|48|
-|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|HW1|time_shift|-24.0|25|
+|2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW1|biweekly_upper_range_filter|0.3|11560|
+|2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW1|hampel_filter|2.0|2382|
+|2023-01-01 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW1|add|-1.2|0|
 |2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|HW2|time_shift|2815.0|351|
+|2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|HW2|time_shift|2954.0|1936|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|HW2|time_shift|5604.0|3216|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|HW2|time_shift|2954.0|2824|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|HW2|time_shift|2954.0|1045|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|HW2|time_shift|5611.0|1269|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|HW2|time_shift|2943.0|2802|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|HW2|time_shift|2198.0|839|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|HW2|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|HW2|time_shift|-24.0|25|
 |2002-03-01 12:00:00+00:00|2023-03-05 08:00:00+00:00|HW2|add|0.4|0|
 |2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
 |2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW2|add|-1.0|0|
-|2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW2|biweekly_upper_range_filter|0.3|10833|
-|2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW2|hampel_filter|2.0|3836|
+|2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW2|biweekly_upper_range_filter|0.3|10463|
+|2009-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW2|hampel_filter|2.0|3776|
 |2011-05-15 00:00:00+00:00|2023-03-05 08:00:00+00:00|HW2|add|1.0|0|
-|2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|HW2|time_shift|2954.0|1455|
-|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|HW2|time_shift|5604.0|1501|
-|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|HW2|time_shift|2954.0|1812|
-|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|HW2|time_shift|2954.0|1028|
-|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|HW2|time_shift|5611.0|1171|
-|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|HW2|time_shift|2943.0|2237|
-|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|HW2|time_shift|2198.0|751|
-|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|HW2|time_shift|-48.0|48|
-|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|HW2|time_shift|-24.0|25|
 |2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|ISWR|time_shift|2815.0|351|
 |2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|ISWR|time_shift|2954.0|1938|
 |2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|ISWR|time_shift|5604.0|3220|
@@ -1351,7 +1629,6 @@ Flagging data:
 |2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|NR|time_shift|-24.0|25|
 |2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|OSWR|time_shift|2815.0|351|
 |2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|OSWR|time_shift|2954.0|1938|
-|2011-06-01 00:00:00+00:00|2023-03-05 08:00:00+00:00|OSWR|multiply|0.93|0|
 |2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|OSWR|time_shift|5604.0|3220|
 |2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|OSWR|time_shift|2954.0|2824|
 |2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|OSWR|time_shift|2954.0|1047|
@@ -1360,6 +1637,7 @@ Flagging data:
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|OSWR|time_shift|2198.0|845|
 |2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|OSWR|time_shift|-48.0|48|
 |2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|OSWR|time_shift|-24.0|25|
+|2011-06-01 00:00:00+00:00|2023-03-05 08:00:00+00:00|OSWR|multiply|0.93|0|
 |2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|P|time_shift|2815.0|351|
 |2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|P|time_shift|2954.0|1938|
 |2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|P|time_shift|5604.0|3220|
@@ -1370,29 +1648,29 @@ Flagging data:
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|P|time_shift|2198.0|845|
 |2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|P|time_shift|-48.0|48|
 |2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|P|time_shift|-24.0|25|
-|1999-01-01 00:00:00+00:00|2023-03-05 08:00:00+00:00|RH1|swap_with_RH2|0.0|26594|
 |2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|RH1|time_shift|2815.0|351|
 |2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|RH1|time_shift|2954.0|1938|
 |2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|RH1|time_shift|5604.0|3220|
-|1995-01-01 00:00:00+00:00|2012-08-19 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|RH1|time_shift|2954.0|2824|
 |2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|RH1|time_shift|2954.0|1047|
 |2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|RH1|time_shift|5611.0|1272|
 |2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|RH1|time_shift|2943.0|2802|
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|RH1|time_shift|2198.0|845|
-|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|RH1|time_shift|-48.0|0|
-|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|RH1|time_shift|-24.0|0|
-|2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|RH2|time_shift|2815.0|351|
-|2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|RH2|time_shift|2954.0|1938|
-|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|RH2|time_shift|5604.0|3220|
-|1995-01-01 00:00:00+00:00|2012-08-19 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|RH2|time_shift|2954.0|2824|
-|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|RH2|time_shift|2954.0|1047|
-|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|RH2|time_shift|5611.0|1272|
-|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|RH2|time_shift|2943.0|2802|
-|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|RH2|time_shift|2198.0|845|
+|2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|RH1|time_shift|-48.0|48|
+|2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|RH1|time_shift|-24.0|25|
+|1999-01-01 00:00:00+00:00|2023-03-05 08:00:00+00:00|RH1|swap_with_RH2|0.0|24306|
+|1995-01-01 00:00:00+00:00|2012-08-19 00:00:00+00:00|RH1|ice_to_water|0.0|0|
+|2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|RH2|time_shift|2815.0|0|
+|2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|RH2|time_shift|2954.0|0|
+|2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|RH2|time_shift|5604.0|2825|
+|2019-12-10 00:00:00+00:00|2020-08-10 00:00:00+00:00|RH2|time_shift|2954.0|2872|
+|2018-12-06 00:00:00+00:00|2019-01-19 20:00:00+00:00|RH2|time_shift|2954.0|0|
+|2017-08-10 00:00:00+00:00|2017-10-04 00:00:00+00:00|RH2|time_shift|5611.0|1321|
+|2016-12-03 00:00:00+00:00|2017-08-10 00:00:00+00:00|RH2|time_shift|2943.0|2929|
+|2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|RH2|time_shift|2198.0|0|
 |2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|RH2|time_shift|-48.0|48|
 |2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|RH2|time_shift|-24.0|25|
+|1995-01-01 00:00:00+00:00|2012-08-19 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2022-12-01 00:00:00+00:00|2023-06-16 00:00:00+00:00|TA1|time_shift|2815.0|351|
 |2021-12-01 00:00:00+00:00|2022-02-23 06:00:00+00:00|TA1|time_shift|2954.0|1938|
 |2020-08-10 00:00:00+00:00|2020-12-24 12:00:00+00:00|TA1|time_shift|5604.0|3220|
@@ -1563,6 +1841,7 @@ Flagging data:
 |2015-01-01 00:00:00+00:00|2015-02-18 06:00:00+00:00|VW2|time_shift|2198.0|845|
 |2005-01-02 00:00:00+00:00|2006-05-04 00:00:00+00:00|VW2|time_shift|-48.0|48|
 |2004-08-08 00:00:00+00:00|2005-01-01 00:00:00+00:00|VW2|time_shift|-24.0|25|
+## ROC filter at Humboldt
  
 ![Adjusted and flagged data at Humboldt](figures/L1_data_treatment/Humboldt_ISWR.jpeg)
 ![Adjusted and flagged data at Humboldt](figures/L1_data_treatment/Humboldt_OSWR.jpeg)
@@ -1612,7 +1891,35 @@ Flagging data:
  
 ![Adjusted and flagged data at Humboldt](figures/L1_data_treatment/Humboldt_HS2.jpeg)
  
+Using metadata/interpolated positions/Humboldt_position_interpolated.csv for variable latitude and longitude
+Cannot download maintenance summary. Using local file.
 # 6 Summit
+## Interpolated values filter at Summit
+ISWR: 207 samples flagged
+OSWR: 186 samples flagged
+NR: 406 samples flagged
+TA1: 3750 samples flagged
+TA2: 3417 samples flagged
+TA3: 1326 samples flagged
+TA4: 1784 samples flagged
+RH1: 2035 samples flagged
+RH2: 2035 samples flagged
+VW1: 9026 samples flagged
+VW2: 8195 samples flagged
+DW1: 774 samples flagged
+DW2: 888 samples flagged
+P: 4710 samples flagged
+TA5: 13 samples flagged
+TS1: 1452 samples flagged
+TS2: 1034 samples flagged
+TS3: 1075 samples flagged
+TS4: 1063 samples flagged
+TS5: 1010 samples flagged
+TS6: 1075 samples flagged
+TS7: 909 samples flagged
+TS8: 950 samples flagged
+TS9: 995 samples flagged
+TS10: 1019 samples flagged
 ## Manual flagging of data at Summit
 Flagging data:
 |start time|end time|variable|
@@ -1676,6 +1983,7 @@ Flagging data:
 |2018-05-15 00:00:00+00:00|2022-10-07 03:00:00+00:00|RH1|swap_with_RH2|0.0|7|
 |1996-01-01 00:00:00+00:00|2009-05-19 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2009-05-19 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at Summit
  
 ![Adjusted and flagged data at Summit](figures/L1_data_treatment/Summit_ISWR.jpeg)
 ![Adjusted and flagged data at Summit](figures/L1_data_treatment/Summit_OSWR.jpeg)
@@ -1706,7 +2014,33 @@ Flagging data:
 ![Adjusted and flagged data at Summit](figures/L1_data_treatment/Summit_TS9.jpeg)
 ![Adjusted and flagged data at Summit](figures/L1_data_treatment/Summit_TS10.jpeg)
  
+Cannot download maintenance summary. Using local file.
 # 7 Tunu-N
+## Interpolated values filter at Tunu-N
+ISWR: 115 samples flagged
+OSWR: 110 samples flagged
+NR: 1543 samples flagged
+TA1: 3171 samples flagged
+TA2: 3053 samples flagged
+TA3: 1956 samples flagged
+TA4: 2268 samples flagged
+RH1: 480 samples flagged
+RH2: 460 samples flagged
+VW1: 8563 samples flagged
+VW2: 8087 samples flagged
+DW1: 1065 samples flagged
+DW2: 1195 samples flagged
+P: 5143 samples flagged
+TS1: 562 samples flagged
+TS2: 897 samples flagged
+TS3: 150 samples flagged
+TS4: 283 samples flagged
+TS5: 186 samples flagged
+TS6: 161 samples flagged
+TS7: 374 samples flagged
+TS8: 967 samples flagged
+TS9: 734 samples flagged
+TS10: 2437 samples flagged
 ## Manual flagging of data at Tunu-N
 Flagging data:
 |start time|end time|variable|
@@ -1744,10 +2078,96 @@ Flagging data:
 |1996-05-16 18:00:00+00:00|1996-05-16 20:00:00+00:00|TA4|
 |1996-05-16 18:00:00+00:00|1996-05-16 20:00:00+00:00|TA5|
 ## Adjusting data at Tunu-N
-No data to fix at Tunu-N
+|start time|end time|variable|operation|value|number of removed samples|
+|-|-|-|-|-|-|
+|2011-06-01 00:00:00+00:00|2012-06-01 00:00:00+00:00|DW1|rotate|90.0|0|
+|2011-06-01 00:00:00+00:00|2012-06-01 00:00:00+00:00|DW2|rotate|90.0|0|
+|1996-05-16 18:00:00+00:00|2023-06-20 13:00:00+00:00|HW1|min_filter|0.05|37053|
+|2002-02-15 00:00:00+00:00|2002-02-16 00:00:00+00:00|HW1|max_filter|1.8|4|
+|2008-04-28 00:00:00+00:00|2008-05-12 00:00:00+00:00|HW1|min_filter|3.42|71|
+|2009-05-15 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW1|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW1|biweekly_upper_range_filter|0.2|9155|
+|2009-05-15 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW1|hampel_filter|2.0|3757|
+|2013-01-01 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW1|add|-0.2|0|
+|2017-01-01 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW1|min_filter|0.6|584|
+|1996-05-16 18:00:00+00:00|2023-06-20 13:00:00+00:00|HW2|min_filter|0.05|8682|
+|2009-05-15 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW2|air_temp_sonic_correction|0.0|0|
+|2009-05-15 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW2|biweekly_upper_range_filter|0.2|40663|
+|2009-05-15 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW2|hampel_filter|2.0|1656|
+|2013-01-01 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW2|add|1.3|0|
+|2015-05-22 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW2|add|-0.4|0|
+|2017-01-01 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW2|max_filter|3.01|6374|
+|2018-05-22 00:00:00+00:00|2023-06-20 13:00:00+00:00|HW2|add|-0.3|0|
+|2021-01-05 00:00:00+00:00|2022-09-09 00:00:00+00:00|P|grad_filter|5.0|0|
+|1990-01-01 00:00:00+00:00|2012-01-01 00:00:00+00:00|RH1|swap_with_RH2|0.0|2656|
+|1996-01-01 00:00:00+00:00|2011-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
+|1996-01-01 00:00:00+00:00|2011-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+|1996-05-16 18:00:00+00:00|2023-06-20 13:00:00+00:00|TS1|min_filter|-30.0|856|
+|1996-05-16 18:00:00+00:00|2023-06-20 13:00:00+00:00|TS1|min_filter|-30.0|0|
+|1996-05-16 18:00:00+00:00|2023-06-20 13:00:00+00:00|TS2|min_filter|-30.0|1456|
+|1996-05-16 18:00:00+00:00|2023-06-20 13:00:00+00:00|TS3|min_filter|-30.0|482|
+|2004-01-01 00:00:00+00:00|2023-06-20 13:00:00+00:00|TS7|min_filter|-32.0|0|
+|2000-01-01 00:00:00+00:00|2023-06-20 13:00:00+00:00|TS8|min_filter|-34.0|287|
+|2004-01-01 00:00:00+00:00|2023-06-20 13:00:00+00:00|TS9|min_filter|-34.0|45|
+## ROC filter at Tunu-N
  
-No data to fix at Tunu-N
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_ISWR.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_OSWR.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_NR.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TA1.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TA2.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TA3.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TA4.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_RH1.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_RH2.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_VW1.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_VW2.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_DW1.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_DW2.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_P.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_HW1.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_HW2.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_V.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS1.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS2.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS3.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS4.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS5.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS6.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS7.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS8.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS9.jpeg)
+![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS10.jpeg)
+ 
+Using metadata/interpolated positions/Tunu-N_position_interpolated.csv for variable latitude and longitude
+Cannot download maintenance summary. Using local file.
 # 8 DYE-2
+## Interpolated values filter at DYE-2
+ISWR: 194 samples flagged
+OSWR: 55 samples flagged
+NR: 176 samples flagged
+TA1: 142 samples flagged
+TA2: 123 samples flagged
+TA3: 398 samples flagged
+TA4: 171 samples flagged
+RH1: 762 samples flagged
+RH2: 1045 samples flagged
+VW1: 5570 samples flagged
+VW2: 5018 samples flagged
+DW1: 631 samples flagged
+DW2: 642 samples flagged
+P: 2918 samples flagged
+TA5: 31 samples flagged
+TS1: 274 samples flagged
+TS2: 208 samples flagged
+TS3: 110 samples flagged
+TS4: 82 samples flagged
+TS5: 43 samples flagged
+TS6: 31 samples flagged
+TS7: 10 samples flagged
+TS8: 12 samples flagged
+TS9: 999 samples flagged
+TS10: 131 samples flagged
 ## Manual flagging of data at DYE-2
 Flagging data:
 |start time|end time|variable|
@@ -1837,8 +2257,10 @@ Warning: OSR not found
 |1996-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |1990-01-01 00:00:00+00:00|2023-06-14 12:00:00+00:00|TA1|min_filter|-80.0|10|
-|2019-10-01 00:00:00+00:00|2022-12-31 00:00:00+00:00|TA1|max_filter|4.0|19|
-|2019-10-01 00:00:00+00:00|2022-12-31 00:00:00+00:00|TA2|max_filter|4.0|17|
+|2019-10-01 00:00:00+00:00|2022-12-31 00:00:00+00:00|TA1|max_filter|4.0|0|
+|2019-10-01 00:00:00+00:00|2022-12-31 00:00:00+00:00|TA2|max_filter|4.0|0|
+|1990-01-01 00:00:00+00:00|2023-06-14 12:00:00+00:00|TS9|min_filter|-20.0|51355|
+## ROC filter at DYE-2
  
 ![Adjusted and flagged data at DYE-2](figures/L1_data_treatment/DYE-2_ISWR.jpeg)
 ![Adjusted and flagged data at DYE-2](figures/L1_data_treatment/DYE-2_OSWR.jpeg)
@@ -1894,7 +2316,35 @@ Warning: OSR not found
  
 ![Adjusted and flagged data at DYE-2](figures/L1_data_treatment/DYE-2_HS2.jpeg)
  
+Using metadata/interpolated positions/DYE-2_position_interpolated.csv for variable latitude and longitude
+Cannot download maintenance summary. Using local file.
 # 10 Saddle
+## Interpolated values filter at Saddle
+ISWR: 31 samples flagged
+OSWR: 43 samples flagged
+NR: 402 samples flagged
+TA1: 598 samples flagged
+TA2: 1702 samples flagged
+TA3: 1231 samples flagged
+TA4: 549 samples flagged
+RH1: 821 samples flagged
+RH2: 841 samples flagged
+VW1: 5200 samples flagged
+VW2: 4708 samples flagged
+DW1: 752 samples flagged
+DW2: 873 samples flagged
+P: 3822 samples flagged
+TA5: 24 samples flagged
+TS1: 261 samples flagged
+TS2: 220 samples flagged
+TS3: 237 samples flagged
+TS4: 62 samples flagged
+TS5: 32 samples flagged
+TS6: 20 samples flagged
+TS7: 21 samples flagged
+TS8: 10 samples flagged
+TS9: 21 samples flagged
+TS10: 96 samples flagged
 ## Manual flagging of data at Saddle
 Flagging data:
 |start time|end time|variable|
@@ -1953,8 +2403,9 @@ Flagging data:
 |2010-04-30 00:00:00+00:00|2021-10-16 17:00:00+00:00|OSWR|multiply|0.934|0|
 |1996-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2010-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
-|1990-01-01 00:00:00+00:00|1999-01-01 00:00:00+00:00|TA1|swap_with_TA2|0.0|0|
-|2000-06-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TA1|swap_with_TA2|0.0|0|
+|1990-01-01 00:00:00+00:00|1999-01-01 00:00:00+00:00|TA1|swap_with_TA2|0.0|-8682|
+|2000-06-01 00:00:00+00:00|2021-10-16 17:00:00+00:00|TA1|swap_with_TA2|0.0|-30509|
+## ROC filter at Saddle
  
 ![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_ISWR.jpeg)
 ![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_OSWR.jpeg)
@@ -2011,7 +2462,34 @@ Flagging data:
  
 ![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_HS2.jpeg)
  
+Cannot download maintenance summary. Using local file.
 # 11 South Dome
+## Interpolated values filter at South Dome
+ISWR: 293 samples flagged
+OSWR: 191 samples flagged
+NR: 278 samples flagged
+TA1: 3096 samples flagged
+TA2: 678 samples flagged
+TA3: 1505 samples flagged
+TA4: 483 samples flagged
+RH1: 1261 samples flagged
+RH2: 685 samples flagged
+VW1: 4044 samples flagged
+VW2: 3703 samples flagged
+DW1: 694 samples flagged
+DW2: 565 samples flagged
+P: 8046 samples flagged
+TA5: 1983 samples flagged
+TS1: 397 samples flagged
+TS2: 105 samples flagged
+TS3: 49 samples flagged
+TS4: 485 samples flagged
+TS5: 38 samples flagged
+TS6: 164 samples flagged
+TS7: 40 samples flagged
+TS8: 11 samples flagged
+TS9: 157 samples flagged
+TS10: 112 samples flagged
 ## Manual flagging of data at South Dome
 Flagging data:
 |start time|end time|variable|
@@ -2059,6 +2537,7 @@ Flagging data:
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2007-06-13 16:00:00+00:00|2008-07-01 00:00:00+00:00|TS4|biweekly_upper_range_filter|1.3|1600|
+## ROC filter at South Dome
  
 ![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_ISWR.jpeg)
 ![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_OSWR.jpeg)
@@ -2122,7 +2601,34 @@ Flagging data:
  
 ![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_HS2.jpeg)
  
+Cannot download maintenance summary. Using local file.
 # 12 NASA-E
+## Interpolated values filter at NASA-E
+ISWR: 18 samples flagged
+OSWR: 21 samples flagged
+NR: 170 samples flagged
+TA1: 823 samples flagged
+TA2: 726 samples flagged
+TA3: 50 samples flagged
+TA4: 41 samples flagged
+RH1: 140 samples flagged
+RH2: 493 samples flagged
+VW1: 4196 samples flagged
+VW2: 3765 samples flagged
+DW1: 922 samples flagged
+DW2: 425 samples flagged
+P: 4013 samples flagged
+TA5: 72 samples flagged
+TS1: 678 samples flagged
+TS2: 415 samples flagged
+TS3: 297 samples flagged
+TS4: 407 samples flagged
+TS5: 323 samples flagged
+TS6: 383 samples flagged
+TS7: 356 samples flagged
+TS8: 337 samples flagged
+TS9: 229 samples flagged
+TS10: 302 samples flagged
 ## Manual flagging of data at NASA-E
 Flagging data:
 |start time|end time|variable|
@@ -2160,6 +2666,7 @@ Flagging data:
 |2011-06-02 00:00:00+00:00|2022-10-07 06:00:00+00:00|OSWR|multiply|0.934|0|
 |1996-01-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2011-06-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at NASA-E
  
 ![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_ISWR.jpeg)
 ![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_OSWR.jpeg)
@@ -2211,7 +2718,35 @@ Flagging data:
  
 ![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_HS2.jpeg)
  
+Using metadata/interpolated positions/NASA-E_position_interpolated.csv for variable latitude and longitude
+Cannot download maintenance summary. Using local file.
 # 15 NASA-SE
+## Interpolated values filter at NASA-SE
+ISWR: 979 samples flagged
+OSWR: 482 samples flagged
+NR: 35 samples flagged
+TA1: 847 samples flagged
+TA2: 137 samples flagged
+TA3: 749 samples flagged
+TA4: 124 samples flagged
+RH1: 2475 samples flagged
+RH2: 2358 samples flagged
+VW1: 5060 samples flagged
+VW2: 4357 samples flagged
+DW1: 834 samples flagged
+DW2: 748 samples flagged
+P: 2852 samples flagged
+TA5: 380 samples flagged
+TS1: 435 samples flagged
+TS2: 77 samples flagged
+TS3: 13 samples flagged
+TS4: 91 samples flagged
+TS5: 225 samples flagged
+TS6: 106 samples flagged
+TS7: 167 samples flagged
+TS8: 154 samples flagged
+TS9: 109 samples flagged
+TS10: 187 samples flagged
 ## Manual flagging of data at NASA-SE
 Flagging data:
 |start time|end time|variable|
@@ -2264,6 +2799,7 @@ Flagging data:
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2009-01-01 00:00:00+00:00|RH2|ice_to_water|0.0|0|
 |2009-01-01 00:00:00+00:00|2019-09-26 09:00:00+00:00|VW1|swap_with_VW2|0.0|0|
+## ROC filter at NASA-SE
  
 ![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_ISWR.jpeg)
 ![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_OSWR.jpeg)
@@ -2294,7 +2830,33 @@ Flagging data:
 ![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS9.jpeg)
 ![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS10.jpeg)
  
+Using metadata/interpolated positions/NASA-SE_position_interpolated.csv for variable latitude and longitude
+Cannot download maintenance summary. Using local file.
 # 14 NGRIP
+## Interpolated values filter at NGRIP
+ISWR: 18 samples flagged
+NR: 1399 samples flagged
+TA1: 5502 samples flagged
+TA2: 3 samples flagged
+RH1: 528 samples flagged
+RH2: 25 samples flagged
+VW1: 31 samples flagged
+VW2: 9 samples flagged
+DW1: 6 samples flagged
+DW2: 3 samples flagged
+P: 520 samples flagged
+HS1: 2238 samples flagged
+HS2: 2844 samples flagged
+TS1: 55 samples flagged
+TS2: 37 samples flagged
+TS3: 58 samples flagged
+TS4: 77 samples flagged
+TS5: 64 samples flagged
+TS6: 32 samples flagged
+TS7: 110 samples flagged
+TS8: 68 samples flagged
+TS9: 42 samples flagged
+TS10: 56 samples flagged
 ## Manual flagging of data at NGRIP
 Flagging data:
 |start time|end time|variable|
@@ -2322,6 +2884,7 @@ Flagging data:
 |2002-06-09 18:00:00+00:00|2006-05-15 00:00:00+00:00|RH1|swap_with_RH2|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at NGRIP
  
 ![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_ISWR.jpeg)
 ![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_OSWR.jpeg)
@@ -2350,7 +2913,23 @@ Flagging data:
 ![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS9.jpeg)
 ![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS10.jpeg)
  
+Cannot download maintenance summary. Using local file.
 # 23 NEEM
+## Interpolated values filter at NEEM
+ISWR: 12 samples flagged
+NR: 114 samples flagged
+TA1: 2010 samples flagged
+TA2: 78 samples flagged
+TA3: 1154 samples flagged
+TA4: 112 samples flagged
+RH1: 403 samples flagged
+RH2: 107 samples flagged
+VW1: 78 samples flagged
+VW2: 47 samples flagged
+DW1: 28 samples flagged
+DW2: 134 samples flagged
+P: 180 samples flagged
+TA5: 289 samples flagged
 ## Manual flagging of data at NEEM
 Flagging data:
 |start time|end time|variable|
@@ -2417,6 +2996,7 @@ Flagging data:
 |2009-05-01 00:00:00+00:00|2022-10-07 05:00:00+00:00|RH1|swap_with_RH2|0.0|-360|
 |1996-01-01 00:00:00+00:00|2009-05-15 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1996-01-01 00:00:00+00:00|2009-05-15 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at NEEM
  
 ![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_ISWR.jpeg)
 ![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_OSWR.jpeg)
@@ -2465,7 +3045,19 @@ Flagging data:
  
 ![Adjusted and flagged data at NEEM](figures/L1_data_treatment/NEEM_HS2.jpeg)
  
+Using metadata/interpolated positions/NEEM_position_interpolated.csv for variable latitude and longitude
 # 24 EastGRIP
+## Interpolated values filter at EastGRIP
+TA1: 1572 samples flagged
+TA2: 6 samples flagged
+TA3: 1134 samples flagged
+RH1: 1237 samples flagged
+RH2: 13 samples flagged
+VW1: 12 samples flagged
+VW2: 6 samples flagged
+DW1: 6 samples flagged
+P: 2305 samples flagged
+TA5: 146 samples flagged
 ## Manual flagging of data at EastGRIP
 Flagging data:
 |start time|end time|variable|
@@ -2500,6 +3092,7 @@ Warning: OSWR not found
 |2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW2|hampel_filter|3.0|3159|
 |2014-01-01 00:00:00+00:00|2023-06-22 12:00:00+00:00|HW2|add|1.2|0|
 |2016-04-01 00:00:00+00:00|2021-10-01 00:00:00+00:00|P|hampel_filter|10.0|920|
+## ROC filter at EastGRIP
  
 ![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_TA1.jpeg)
 ![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_TA2.jpeg)
@@ -2517,17 +3110,35 @@ Warning: OSWR not found
 ![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_V.jpeg)
 ![Adjusted and flagged data at EastGRIP](figures/L1_data_treatment/EastGRIP_TA5.jpeg)
  
+Using metadata/interpolated positions/EastGRIP_position_interpolated.csv for variable latitude and longitude
 # 16 KAR
+## Interpolated values filter at KAR
+NR: 12 samples flagged
+TA1: 6 samples flagged
+TA2: 3 samples flagged
+TA3: 3 samples flagged
+RH1: 214 samples flagged
+VW1: 2199 samples flagged
+VW2: 2055 samples flagged
+DW1: 310 samples flagged
+DW2: 288 samples flagged
+P: 225 samples flagged
+HS1: 43 samples flagged
+HS2: 51 samples flagged
+TS4: 10 samples flagged
+TS10: 57 samples flagged
 ## Manual flagging of data at KAR
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
 |1999-05-17 17:00:00+00:00|2001-06-07 13:00:00+00:00|RH2|
+|1999-05-17 17:00:00+00:00|2001-06-07 13:00:00+00:00|TA4|
 ## Adjusting data at KAR
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
-|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0|0|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0|0|
+## ROC filter at KAR
  
 ![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_ISWR.jpeg)
 ![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_OSWR.jpeg)
@@ -2569,14 +3180,44 @@ Flagging data:
  
 ![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_HS2.jpeg)
  
+Cannot download maintenance summary. Using local file.
 # 18 KULU
+## Interpolated values filter at KULU
+ISWR: 73 samples flagged
+OSWR: 61 samples flagged
+NR: 123 samples flagged
+TA1: 212 samples flagged
+TA2: 207 samples flagged
+TA3: 591 samples flagged
+TA4: 510 samples flagged
+RH1: 680 samples flagged
+RH2: 451 samples flagged
+VW1: 953 samples flagged
+VW2: 995 samples flagged
+DW1: 183 samples flagged
+DW2: 134 samples flagged
+P: 368 samples flagged
+HS1: 9 samples flagged
 ## Manual flagging of data at KULU
-No erroneous data listed for KULU
+Flagging data:
+|start time|end time|variable|
+|-|-|-|
+|2000-05-01 00:00:00+00:00|2000-09-14 22:00:00+00:00|TA1|
+|2000-05-01 00:00:00+00:00|2000-09-14 22:00:00+00:00|TA2|
+|2000-05-01 00:00:00+00:00|2000-09-14 22:00:00+00:00|P|
+|1999-09-28 00:00:00+00:00|2000-09-14 22:00:00+00:00|DW1|
+|1999-09-28 00:00:00+00:00|2000-09-14 22:00:00+00:00|DW2|
+|1999-09-30 00:00:00+00:00|1999-12-01 00:00:00+00:00|TA3|
+|2000-03-28 00:00:00+00:00|2000-06-21 00:00:00+00:00|ISWR|
+|2000-03-28 00:00:00+00:00|2000-06-21 00:00:00+00:00|OSWR|
+|1999-10-01 00:00:00+00:00|2000-05-01 00:00:00+00:00|TA3|
+|1999-10-01 00:00:00+00:00|2000-05-01 00:00:00+00:00|TA4|
 ## Adjusting data at KULU
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
-|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0|0|
+|1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0|0|
+## ROC filter at KULU
  
 ![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_ISWR.jpeg)
 ![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_OSWR.jpeg)
@@ -2608,6 +3249,16 @@ No erroneous data listed for KULU
 ![Adjusted and flagged data at KULU](figures/L1_data_treatment/KULU_HS2.jpeg)
  
 # 20 Aurora
+## Interpolated values filter at Aurora
+ISWR: 12 samples flagged
+TA3: 24 samples flagged
+RH1: 89 samples flagged
+VW1: 942 samples flagged
+VW2: 835 samples flagged
+DW1: 120 samples flagged
+DW2: 100 samples flagged
+P: 31 samples flagged
+HS1: 21 samples flagged
 ## Manual flagging of data at Aurora
 Flagging data:
 |start time|end time|variable|
@@ -2616,14 +3267,15 @@ Flagging data:
 ## Adjusting data at Aurora
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-|2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|RH1|ice_to_water|0.0|0|
-|2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+|2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|RH1|ice_to_water|0|0|
+|2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|RH2|ice_to_water|0|0|
+|2000-06-24 14:00:00+00:00|2001-05-06 00:00:00+00:00|TA3|min_filter|-20|3711|
+## ROC filter at Aurora
  
 ![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_ISWR.jpeg)
 ![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_OSWR.jpeg)
 ![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_NR.jpeg)
 ![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_TA1.jpeg)
-![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_TA2.jpeg)
 ![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_TA3.jpeg)
 ![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_RH1.jpeg)
 ![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_VW1.jpeg)
@@ -2647,6 +3299,33 @@ Flagging data:
 ![Adjusted and flagged data at Aurora](figures/L1_data_treatment/Aurora_HS2.jpeg)
  
 # 21 Petermann Glacier
+## Interpolated values filter at Petermann Glacier
+ISWR: 34 samples flagged
+OSWR: 34 samples flagged
+NR: 91 samples flagged
+TA1: 449 samples flagged
+TA2: 434 samples flagged
+TA3: 905 samples flagged
+TA4: 997 samples flagged
+RH1: 453 samples flagged
+RH2: 556 samples flagged
+VW1: 475 samples flagged
+VW2: 521 samples flagged
+DW1: 378 samples flagged
+DW2: 298 samples flagged
+P: 540 samples flagged
+HS1: 54 samples flagged
+HS2: 9 samples flagged
+TS1: 379 samples flagged
+TS2: 587 samples flagged
+TS3: 739 samples flagged
+TS4: 299 samples flagged
+TS5: 960 samples flagged
+TS6: 2200 samples flagged
+TS7: 3659 samples flagged
+TS8: 2641 samples flagged
+TS9: 1023 samples flagged
+TS10: 952 samples flagged
 ## Manual flagging of data at Petermann Glacier
 Flagging data:
 |start time|end time|variable|
@@ -2668,6 +3347,7 @@ Flagging data:
 |-|-|-|-|-|-|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH1|ice_to_water|0.0|0|
 |1995-01-01 00:00:00+00:00|2011-05-30 00:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at Petermann Glacier
  
 ![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_ISWR.jpeg)
 ![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_OSWR.jpeg)
@@ -2711,7 +3391,30 @@ Flagging data:
  
 ![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_HS2.jpeg)
  
+Cannot download maintenance summary. Using local file.
 # 22 Petermann ELA
+## Interpolated values filter at Petermann ELA
+ISWR: 16 samples flagged
+NR: 18 samples flagged
+TA1: 413 samples flagged
+TA2: 404 samples flagged
+TA3: 67 samples flagged
+TA4: 53 samples flagged
+RH1: 71 samples flagged
+RH2: 44 samples flagged
+VW1: 6 samples flagged
+DW1: 22 samples flagged
+P: 1567 samples flagged
+TS1: 548 samples flagged
+TS2: 1826 samples flagged
+TS3: 84 samples flagged
+TS4: 27 samples flagged
+TS5: 27 samples flagged
+TS6: 42 samples flagged
+TS7: 42 samples flagged
+TS8: 42 samples flagged
+TS9: 38 samples flagged
+TS10: 27 samples flagged
 ## Manual flagging of data at Petermann ELA
 Flagging data:
 |start time|end time|variable|
@@ -2744,9 +3447,10 @@ Flagging data:
 |2016-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|HW2|max_filter|3.12|156|
 |2016-01-01 00:00:00+00:00|2019-01-01 00:00:00+00:00|HW2|min_filter|2.4|928|
 |2016-01-01 00:00:00+00:00|2022-04-12 18:00:00+00:00|HW2|hampel_filter|2.0|22|
-|2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA2|max_filter|11.0|20|
+|2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA2|max_filter|11.0|10|
 |2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA3|max_filter|11.0|9|
 |2003-05-23 07:00:00+00:00|2022-04-12 18:00:00+00:00|TA4|max_filter|11.0|9|
+## ROC filter at Petermann ELA
  
 ![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_ISWR.jpeg)
 ![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_OSWR.jpeg)
@@ -2776,9 +3480,18 @@ Flagging data:
 ![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS9.jpeg)
 ![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS10.jpeg)
  
+Using metadata/interpolated positions/Petermann ELA_position_interpolated.csv for variable latitude and longitude
+Cannot download maintenance summary. Using local file.
 # 33 SMS-PET
+## Interpolated values filter at SMS-PET
+TA1: 3 samples flagged
+ISWR: 268 samples flagged
+OSWR: 384 samples flagged
+NR: 57 samples flagged
 ## Manual flagging of data at SMS-PET
+===============
 No erroneous data listed for SMS-PET
+===============
 ## Adjusting data at SMS-PET
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
@@ -2786,6 +3499,7 @@ No erroneous data listed for SMS-PET
 |2002-06-02 02:00:00+00:00|2004-05-14 15:00:00+00:00|HW1|min_filter|0.7|40|
 |2002-07-15 00:00:00+00:00|2003-05-07 15:30:00+00:00|HW1|biweekly_upper_range_filter|0.4|40|
 |2003-09-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|96|
+## ROC filter at SMS-PET
  
 ![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_TA1.jpeg)
 ![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_TA2.jpeg)
@@ -2798,7 +3512,11 @@ No erroneous data listed for SMS-PET
 ![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_OSWR.jpeg)
 ![Adjusted and flagged data at SMS-PET](figures/L1_data_treatment/SMS-PET_NR.jpeg)
  
+HW2 not in dataframe
 # 25 SMS1
+## Interpolated values filter at SMS1
+TA1: 19 samples flagged
+RH1: 16 samples flagged
 ## Manual flagging of data at SMS1
 Flagging data:
 |start time|end time|variable|
@@ -2816,6 +3534,7 @@ Flagging data:
 |2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|294|
 |2004-08-01 00:00:00+00:00|2005-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|1606|
 |2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|HW1|min_filter|2.9|290|
+## ROC filter at SMS1
  
 ![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_TA1.jpeg)
 ![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_TA2.jpeg)
@@ -2824,9 +3543,16 @@ Flagging data:
 ![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_DW1.jpeg)
 ![Adjusted and flagged data at SMS1](figures/L1_data_treatment/SMS1_HW1.jpeg)
  
+HW2 not in dataframe
 # 26 SMS2
+## Interpolated values filter at SMS2
+TA1: 3 samples flagged
+TA2: 11 samples flagged
+RH1: 15 samples flagged
 ## Manual flagging of data at SMS2
+===============
 No erroneous data listed for SMS2
+===============
 ## Adjusting data at SMS2
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
@@ -2836,6 +3562,7 @@ No erroneous data listed for SMS2
 |2003-08-01 00:00:00+00:00|2004-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|447|
 |2004-08-26 00:00:00+00:00|2005-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|240|
 |2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|404|
+## ROC filter at SMS2
  
 ![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_TA1.jpeg)
 ![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_TA2.jpeg)
@@ -2845,9 +3572,16 @@ No erroneous data listed for SMS2
 ![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_HW1.jpeg)
 ![Adjusted and flagged data at SMS2](figures/L1_data_treatment/SMS2_V.jpeg)
  
+HW2 not in dataframe
 # 27 SMS3
+## Interpolated values filter at SMS3
+TA1: 15 samples flagged
+TA2: 9 samples flagged
+RH1: 26 samples flagged
 ## Manual flagging of data at SMS3
+===============
 No erroneous data listed for SMS3
+===============
 ## Adjusting data at SMS3
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
@@ -2859,6 +3593,7 @@ No erroneous data listed for SMS3
 |2004-07-15 00:00:00+00:00|2005-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|189|
 |2005-07-11 00:00:00+00:00|2005-07-16 00:00:00+00:00|HW1|min_filter|1.8|3|
 |2005-09-01 00:00:00+00:00|2006-05-15 00:00:00+00:00|HW1|biweekly_upper_range_filter|0.4|223|
+## ROC filter at SMS3
  
 ![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_TA1.jpeg)
 ![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_TA2.jpeg)
@@ -2868,21 +3603,54 @@ No erroneous data listed for SMS3
 ![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_HW1.jpeg)
 ![Adjusted and flagged data at SMS3](figures/L1_data_treatment/SMS3_V.jpeg)
  
+HW2 not in dataframe
 # 28 SMS4
+## Interpolated values filter at SMS4
+TA2: 3 samples flagged
+RH1: 10 samples flagged
+DW1: 3 samples flagged
 ## Manual flagging of data at SMS4
+===============
 No erroneous data listed for SMS4
+===============
 ## Adjusting data at SMS4
 No data to fix at SMS4
+## ROC filter at SMS4
  
+===============
 No data to fix at SMS4
+===============
+HW2 not in dataframe
 # 29 SMS5
+## Interpolated values filter at SMS5
 ## Manual flagging of data at SMS5
+===============
 No erroneous data listed for SMS5
+===============
 ## Adjusting data at SMS5
 No data to fix at SMS5
+## ROC filter at SMS5
  
+===============
 No data to fix at SMS5
+===============
+HW2 not in dataframe
 # 30 LAR1
+## Interpolated values filter at LAR1
+ISWR: 36 samples flagged
+OSWR: 36 samples flagged
+NR: 115 samples flagged
+TA1: 2439 samples flagged
+TA2: 2392 samples flagged
+TA3: 2116 samples flagged
+TA4: 2154 samples flagged
+RH1: 968 samples flagged
+RH2: 1098 samples flagged
+VW2: 6 samples flagged
+P: 590 samples flagged
+HS1: 109 samples flagged
+HS2: 155 samples flagged
+TA5: 67 samples flagged
 ## Manual flagging of data at LAR1
 Flagging data:
 |start time|end time|variable|
@@ -2894,6 +3662,7 @@ Flagging data:
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|OSWR|multiply|2.2756|0|
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2008-12-23 00:00:00+00:00|2012-12-25 23:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at LAR1
  
 ![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_ISWR.jpeg)
 ![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_OSWR.jpeg)
@@ -2917,8 +3686,24 @@ Flagging data:
 ![Adjusted and flagged data at LAR1](figures/L1_data_treatment/LAR1_HW2.jpeg)
  
 # 31 LAR2
+## Interpolated values filter at LAR2
+ISWR: 15 samples flagged
+OSWR: 15 samples flagged
+NR: 68 samples flagged
+TA1: 1239 samples flagged
+TA2: 1250 samples flagged
+TA3: 1209 samples flagged
+TA4: 1219 samples flagged
+RH1: 671 samples flagged
+RH2: 545 samples flagged
+P: 465 samples flagged
+HS1: 66 samples flagged
+HS2: 82 samples flagged
+TA5: 9 samples flagged
 ## Manual flagging of data at LAR2
+===============
 No erroneous data listed for LAR2
+===============
 ## Adjusting data at LAR2
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
@@ -2926,6 +3711,7 @@ No erroneous data listed for LAR2
 |2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|OSWR|multiply|2.88|0|
 |2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|RH1|ice_to_water|0.0|0|
 |2008-12-22 20:00:00+00:00|2011-11-15 13:00:00+00:00|RH2|ice_to_water|0.0|0|
+## ROC filter at LAR2
  
 ![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_ISWR.jpeg)
 ![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_OSWR.jpeg)
@@ -2959,6 +3745,21 @@ No erroneous data listed for LAR2
 ![Adjusted and flagged data at LAR2](figures/L1_data_treatment/LAR2_HS2.jpeg)
  
 # 32 LAR3
+## Interpolated values filter at LAR3
+ISWR: 267 samples flagged
+OSWR: 326 samples flagged
+NR: 37 samples flagged
+TA1: 966 samples flagged
+TA2: 948 samples flagged
+TA3: 986 samples flagged
+TA4: 585 samples flagged
+RH1: 513 samples flagged
+RH2: 355 samples flagged
+VW1: 3 samples flagged
+P: 324 samples flagged
+HS1: 400 samples flagged
+HS2: 535 samples flagged
+TA5: 6 samples flagged
 ## Manual flagging of data at LAR3
 Flagging data:
 |start time|end time|variable|
@@ -2968,8 +3769,9 @@ Flagging data:
 ## Adjusting data at LAR3
 |start time|end time|variable|operation|value|number of removed samples|
 |-|-|-|-|-|-|
-|2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH1|ice_to_water|0.0|0|
-|2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH2|ice_to_water|0.0|0|
+|2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH1|ice_to_water|0|0|
+|2009-08-10 14:00:00+00:00|2011-11-08 14:00:00+00:00|RH2|ice_to_water|0|0|
+## ROC filter at LAR3
  
 ![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_ISWR.jpeg)
 ![Adjusted and flagged data at LAR3](figures/L1_data_treatment/LAR3_OSWR.jpeg)

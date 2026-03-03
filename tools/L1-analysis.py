@@ -717,7 +717,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # %% Plot some variables
 site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=(True))
-site_list = site_list.loc[site_list.Name == 'Swiss Camp 10m']
+site_list = site_list.loc[site_list.Name == 'Crawford Point 1']
 
 for site, ID in zip(site_list.Name, site_list.ID):
 
@@ -734,14 +734,18 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df = df.set_index('timestamp')
     print("# " + str(ID) + " " + site)
 
-    var_list = ['TS1','TS2','TS3','TS4','TS5','TS6','TS7','TS8','TS9','TS10']
+    # var_list = ['TS1','TS2','TS3','TS4',]#
+    var_list = ['TS5','TS6','TS7','TS8','TS9','TS10']
 
     fig, axs = plt.subplots(len(var_list), 1, figsize=(13, 13), sharex=True)
 
     for ax, v in zip(axs, var_list):
-        df['TA1'].plot(ax=ax, color='lightgray')
+        # df['TA1'].plot(ax=ax, color='lightgray')
         df[v].plot(ax=ax, marker='o')
+        df.loc[df[v]>-15,v].plot(ax=ax, marker='o')
+        df.loc[df[v]<-20,v].plot(ax=ax, marker='o')
         ax.set_ylabel(v)
+        ax.grid()
 
     plt.tight_layout()
 #%% Surface height overview

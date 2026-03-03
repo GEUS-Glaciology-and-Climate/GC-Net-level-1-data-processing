@@ -2,7 +2,7 @@
 """
 Functions adapted from JAWS:
     https://github.com/jaws/jaws/blob/master/jaws/gcnet2nc.py
-    
+
 """
 import numpy as np
 import pandas as pd
@@ -53,25 +53,35 @@ def gradient_fluxes(df):  # This method is very sensitive to input data quality
     ta1 = ta1.mean(axis=1)
     ta2 = ta2.mean(axis=1)
 
-    ht_low = df["HW1"].values
-    ht_high = df["HW2"].values
-    ta_low = ta1.values
-    ta_high = ta2.values
-    VW_low = df["VW1"].values
-    VW_high = df["VW2"].values
-    RH_low = df["RH1"].values
-    RH_high = df["RH2"].values
-    P = df["P"].values
+    ht_low  = np.array(df["HW1"], dtype=float, copy=True)
+    ht_high = np.array(df["HW2"], dtype=float, copy=True)
+    ta_low  = np.array(ta1, dtype=float, copy=True)
+    ta_high = np.array(ta2, dtype=float, copy=True)
+    VW_low  = np.array(df["VW1"], dtype=float, copy=True)
+    VW_high = np.array(df["VW2"], dtype=float, copy=True)
+    RH_low  = np.array(df["RH1"], dtype=float, copy=True)
+    RH_high = np.array(df["RH2"], dtype=float, copy=True)
+    P       = np.array(df["P"], dtype=float, copy=True)
+
+    hw1 = np.array(df["HW1"], dtype=float, copy=True)
+    hw2 = np.array(df["HW2"], dtype=float, copy=True)
+    vw1 = np.array(df["VW1"], dtype=float, copy=True)
+    vw2 = np.array(df["VW2"], dtype=float, copy=True)
+    rh1 = np.array(df["RH1"], dtype=float, copy=True)
+    rh2 = np.array(df["RH2"], dtype=float, copy=True)
+    ta1a = np.array(ta1, dtype=float, copy=True)
+    ta2a = np.array(ta2, dtype=float, copy=True)
 
     ind = ht_high < ht_low
-    ht_low[ind] = df["HW2"].values[ind]
-    ht_high[ind] = df["HW1"].values[ind]
-    ta_low[ind] = ta2.values[ind]
-    ta_high[ind] = ta1.values[ind]
-    VW_low[ind] = df["VW2"].values[ind]
-    VW_high[ind] = df["VW1"].values[ind]
-    RH_low[ind] = df["RH2"].values[ind]
-    RH_high[ind] = df["RH1"].values[ind]
+
+    ht_low[ind]  = hw2[ind]
+    ht_high[ind] = hw1[ind]
+    ta_low[ind]  = ta2a[ind]
+    ta_high[ind] = ta1a[ind]
+    VW_low[ind]  = vw2[ind]
+    VW_high[ind] = vw1[ind]
+    RH_low[ind]  = rh2[ind]
+    RH_high[ind] = rh1[ind]
 
     # Potential Temperature
     pot_tmp_low = potential_temperature(

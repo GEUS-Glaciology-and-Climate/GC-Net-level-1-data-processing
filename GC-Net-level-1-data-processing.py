@@ -9,7 +9,7 @@ tip list:
     %matplotlib qt
 @author: bav
 """
-import os, sys
+import os
 import PROMICE_toolbox as ptb
 import matplotlib
 matplotlib.use('Agg')
@@ -17,7 +17,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os.path
 import numpy as np
-import jaws_tools
 import tocgen
 from os import path
 import nead
@@ -50,10 +49,11 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
-site_list = site_list.loc[site_list.Name.values == 'Tunu-N',:]
-
+# site_list = site_list.loc[site_list.Name.values == 'Humboldt',:]
+# site_list = site_list[17:]
+# %
 for site, ID in zip(site_list.Name, site_list.ID):
-    plt.close("all")
+    # plt.close("all")
     Msg("# " + str(ID) + " " + site)
     filename = path_to_L0 + str(ID).zfill(2) + "-" + site + ".csv"
     if not path.exists(filename):
@@ -83,27 +83,27 @@ for site, ID in zip(site_list.Name, site_list.ID):
     if ("HW2" not in df.columns) & ('HS2' in df.columns):
         df.loc[df.HS2>900,"HS2"] = np.nan
         df["HW2"] = 3.4 + df["HS2"].max() - df["HS2"]
-    df = df.resample("H").mean()
+    df = df.resample("h").mean()
+
+    Msg("## Interpolated values filter at " + site)
+    df_lin = ptb.flag_linear_interp_runs(df)
 
     Msg("## Manual flagging of data at " + site)
-    df_out = ptb.flag_data(df,
-                           site,
-                            var_list=['HW1','HW2'],
-                           )
+    df_out = ptb.flag_data(df_lin, site)
 
     Msg("## Adjusting data at " + site)
     # we start by adjusting and filtering all variables except surface height
-    df_v4 = ptb.adjust_data(df_out, site,
-                            # var_list=['HW1','HW2'],
-                            skip_var=["HS1", "HS2"])
+    df_v4 = ptb.adjust_data(df_out, site, skip_var=["HS1", "HS2"])
     # Applying standard filters again
     df_v4 = df_v4.resample("h").asfreq()
     df_v5 = ptb.filter_data(df_v4, site,
-                            site_list.loc[site_list.Name == site, "Latitude (°N)"].values[0],
-                            site_list.loc[site_list.Name == site, "Longitude (°E)"].values[0])
-    ptb.plot_flagged_data(df_v5, df_out, site,
-                            # var_list=['HW1','HW2'],
-                            )
+            site_list.loc[site_list.Name == site, "Latitude (°N)"].values[0],
+            site_list.loc[site_list.Name == site, "Longitude (°E)"].values[0])
+
+    Msg("## ROC filter at " + site)
+    df_roc = ptb.roc_filter_dataframe(df_v5)
+
+    ptb.plot_flagged_data(df_roc, df_out, site)
     df_v5 = ptb.remove_flagged_data(df_v5)
 
     # correction of the net radiometer for windspeed
@@ -126,8 +126,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
     # removing empty rows:
     useful_var_list = [
-        "ISWR",  "OSWR", "NR", "TA1", "TA2", "TA3", "TA4",  "RH1" "RH2", "P",
-    ] + ["TS" + str(i) for i in range(1, 11)]
+        "ISWR",  "OSWR", "NR", "TA1", "TA2", "TA3", "TA4",  "RH1" "RH2",
+        "P","VW1","VW2"] + ["TS" + str(i) for i in range(1, 11)]
     ind_first = df_v6[
         [v for v in useful_var_list if v in df_v6.columns]
     ].first_valid_index()

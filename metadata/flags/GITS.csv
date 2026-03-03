@@ -15,6 +15,7 @@ t0,t1,variable,flag,comment,URL_graphic
 1999-01-01T00:00:00+00:00,2002-01-01T00:00:00+00:00,P,NAN,Manually flagged by bav,
 2011-05-25T00:00:00+00:00,2013-01-01T00:00:00+00:00,P,NAN,Manually flagged by bav,
 
+,,TS8,NAN,Manually flagged by bav,
 ,1997-01-01T00:00:00+00:00,RH1 RH2,NAN,Manually flagged by bav,
 1990-01-01T00:00:00+00:00,1996-07-01T00:00:00+00:00,TA1,NAN,Manually flagged by bav,
 2006-06-28T00:00:00+00:00,2007-07-05T00:00:00+00:00,TA1 TA2 RH1,NAN,Manually flagged by bav,

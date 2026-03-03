@@ -10,7 +10,6 @@ tip list:
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import math
 import datetime
 import pytz
 import os
@@ -19,8 +18,383 @@ import jaws_tools
 import nead
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 from sklearn.linear_model import LinearRegression
-from pypromice.core.qc.percentiles.outlier_detector import ThresholdBasedOutlierDetector
+import xarray as xr
+import re
 
+
+DEFAULT_VARIABLE_THRESHOLDS = {
+    r"^TA[1234]$": {"tol": 3, "factor": 2.2},
+    r"^P$": {"tol": 5.0, "factor": 0.5},
+    r"^RH[12]$": {"tol": 2.0, "factor": 3.5},
+    r"^TS(?:10|[1-9])$": {"tol": 0.5, "factor": 1.5},
+}
+
+
+NO_QC_VAR = ['time','rec']
+
+
+def set_flag(ds: xr.Dataset, v: str, flag: str, index_slice=None, mask=None) -> xr.Dataset:
+    if v in NO_QC_VAR: return ds
+
+    if index_slice is None:
+        index_slice = {"time": slice(None, None)}
+
+    vqc = f"{v}_qc"
+    if vqc not in ds:
+        ds[vqc] = xr.DataArray(
+            np.full(ds[v].shape, "OK", dtype=object),
+            coords=ds[v].coords,
+            dims=ds[v].dims,
+        )
+    else:
+        if ds[vqc].dtype.kind in ("U", "S"):
+            ds[vqc] = ds[vqc].astype(object)
+
+    q = ds[vqc].loc[index_slice]
+    x = ds[v].loc[index_slice]
+    if q.size == 0:
+        return ds
+
+    m = xr.ones_like(x, dtype=bool) if mask is None else (
+        mask.loc[index_slice] if isinstance(mask, xr.DataArray) else mask
+    )
+
+    cond = m & x.notnull() & (q == "OK")
+
+    ds[vqc].loc[index_slice] = xr.where(cond, str(flag), q)
+    return ds
+
+def _get_params(var, tol=None, factor=None):
+    if tol is not None and factor is not None:
+        logger.debug(f"{var}: using user tol={tol}, factor={factor}")
+        return float(tol), float(factor)
+
+    for pat, cfg in DEFAULT_VARIABLE_THRESHOLDS.items():
+        if re.match(pat, var):
+            vt = float(cfg["tol"]) if tol is None else float(tol)
+            vf = float(cfg["factor"]) if factor is None else float(factor)
+            return vt, vf
+
+    vt = 0.1 if tol is None else float(tol)
+    vf = 2.0 if factor is None else float(factor)
+    return vt, vf
+
+# avoid xarray ffill/bfill (slow) -> numpy forward/backward fill
+def _ffill_idx(a):
+    a = a.copy()
+    m = np.isnan(a)
+    idx = np.where(~m, np.arange(a.size), 0)
+    np.maximum.accumulate(idx, out=idx)
+    a[m] = a[idx[m]]
+    return a
+
+def _bfill_idx(a):
+    a = a.copy()
+    m = np.isnan(a)
+    idx = np.where(~m, np.arange(a.size), a.size-1)
+    idx = idx[::-1]
+    np.minimum.accumulate(idx, out=idx)
+    idx = idx[::-1]
+    a[m] = a[idx[m]]
+    return a
+
+def unflag_if_linear_interp(ds, var, flag, tol=0.1, time="time"):
+    """
+    Remove flags where values follow linear interpolation within tolerance.
+
+    Parameters
+    ----------
+    ds : xarray.Dataset
+        Dataset containing the variable.
+    var : str
+        Variable name in ds to evaluate.
+    flag : xarray.DataArray (bool)
+        Initial flag array on the same time axis as the evaluated data.
+    tol : float, optional
+        Absolute tolerance for deviation from linear interpolation.
+    time : str, optional
+        Name of the time dimension.
+
+    Returns
+    -------
+    xarray.DataArray
+        Updated flag array where linearly interpolated points are unflagged.
+    """
+    # Align variable to flag time axis
+    v = ds[var].sel({time: flag[time]}).astype("float64")
+    t = v[time].values.astype("datetime64[ns]").astype("int64")
+
+    n = v.sizes[time]
+    idx = np.arange(n, dtype=np.int64)
+
+    # Valid (non-flagged and finite) samples
+    okv = ((~flag.values) & np.isfinite(v.values))
+    base = np.where(okv, idx.astype("float64"), np.nan)
+    pi = _ffill_idx(base)
+    ni = _bfill_idx(base)
+    # finding points that has two valid neigbors
+    has_both = np.isfinite(pi) & np.isfinite(ni) & (pi != ni)
+
+    pi_i = np.zeros(n, dtype=np.int64)
+    ni_i = np.zeros(n, dtype=np.int64)
+    pi_i[has_both] = pi[has_both].astype(np.int64)
+    ni_i[has_both] = ni[has_both].astype(np.int64)
+
+    t_prev = np.zeros(n, dtype=np.int64)
+    t_next = np.zeros(n, dtype=np.int64)
+    v_prev = np.zeros(n, dtype=float)
+    v_next = np.zeros(n, dtype=float)
+
+    t_prev[has_both] = t[pi_i[has_both]]
+    t_next[has_both] = t[ni_i[has_both]]
+    v_prev[has_both] = v.values[pi_i[has_both]]
+    v_next[has_both] = v.values[ni_i[has_both]]
+
+    # Linear interpolation weights
+    denom = (t_next - t_prev).astype("float64")
+    w = np.full(n, np.nan, dtype="float64")
+    w[has_both] = (t[has_both] - t_prev[has_both]) / denom[has_both]
+
+    # Interpolated estimate
+    v_hat = v_prev + w * (v_next - v_prev)
+
+    # Unflag if close to linear interpolation
+    unflag = (
+        flag.values
+        & has_both
+        & np.isfinite(v_hat)
+        & (np.abs(v.values - v_hat) <= tol)
+    )
+
+    return xr.DataArray(flag.values & ~unflag,
+                        coords=flag.coords, dims=flag.dims,
+                        name=f"{flag.name}_final")
+
+def rate_of_change_fwd_bwd_and_thresholds(da, var, window="7D", time="time", per="h",
+                              min_periods=10, factor=None, tol=None):
+    """Compute forward/backward rate-of-change flags and rolling thresholds.
+
+    Calculates absolute rates of change between consecutive samples of a
+    time series, derives rolling 95th percentile thresholds, and returns
+    forward- and backward-assigned exceedance flags aligned to the full
+    time axis of the input DataArray.
+
+    Args:
+        da (xr.DataArray): Input variable time series with NaNs already removed.
+        var (str): Name of the variable (used for logging and metadata).
+        window (str, optional): Rolling window length as a pandas offset
+            string (e.g. "7D"). Defaults to "7D".
+        time (str, optional): Name of the time dimension. Defaults to "time".
+        per (str, optional): Time unit used to normalize rates (e.g. "h", "D").
+            Defaults to "h".
+        min_periods (int, optional): Minimum number of samples required in the
+            rolling window. Defaults to 10.
+        factor (float, optional): Multiplier applied to the rolling 95th
+            percentile to form detection thresholds. If None, a
+            variable-specific default is used.
+        tol (float, optional): Interpolation tolerance passed through for
+            metadata consistency. If None, a variable-specific default is used.
+
+    Returns:
+        Tuple[xr.Dataset, xr.DataArray, xr.DataArray]:
+            - roc_ds: Dataset containing raw rates and rolling thresholds.
+            - fwd_full: Boolean DataArray of forward rate exceedances aligned
+              to the full time axis.
+            - bwd_full: Boolean DataArray of backward rate exceedances aligned
+              to the full time axis.
+    """
+    if (tol is None) | (factor is None):
+        tol, factor = _get_params(var, tol=tol, factor=factor)
+
+    t = da[time].values.astype("datetime64[ns]")
+    v = da.values.astype("float64")
+
+    dt_ns = (t[1:] - t[:-1]).astype("timedelta64[ns]").astype("int64")
+    dv = v[1:] - v[:-1]
+    denom_ns = np.timedelta64(1, per).astype("timedelta64[ns]").astype("int64")
+    rate = np.abs(dv) / (dt_ns / denom_ns)
+
+    idx_fwd = pd.to_datetime(t[1:])
+    s_fwd = pd.Series(rate, index=idx_fwd)
+    thr_fwd = factor * s_fwd.rolling(window=window, center=True, min_periods=min_periods).quantile(0.95)
+    flag_fwd_s = s_fwd > thr_fwd
+
+    idx_bwd = pd.to_datetime(t[:-1])
+    s_bwd = pd.Series(rate, index=idx_bwd)
+    thr_bwd = factor * s_bwd.rolling(window=window, center=True, min_periods=min_periods).quantile(0.95)
+    flag_bwd_s = s_bwd > thr_bwd
+
+    flag_fwd = xr.DataArray(
+        flag_fwd_s.values.astype(bool),
+        coords={time: da[time].values[1:]},
+        dims=(time,),
+        name=f"{var}_high_var_flag_fwd",
+    )
+    flag_bwd = xr.DataArray(
+        flag_bwd_s.values.astype(bool),
+        coords={time: da[time].values[:-1]},
+        dims=(time,),
+        name=f"{var}_high_var_flag_bwd",
+    )
+
+    tfull = da[time].values
+    fwd_full = xr.DataArray(np.zeros(tfull.shape, bool), coords={time: tfull}, dims=(time,))
+    bwd_full = xr.DataArray(np.zeros(tfull.shape, bool), coords={time: tfull}, dims=(time,))
+    fwd_full.loc[{time: flag_fwd[time]}] = flag_fwd
+    bwd_full.loc[{time: flag_bwd[time]}] = flag_bwd
+
+    roc_ds = xr.Dataset(
+        data_vars=dict(
+            roc_rate=(("time_rate",), rate),
+            roc_thr_fwd=(("time_fwd",), thr_fwd.values.astype("float64")),
+            roc_thr_bwd=(("time_bwd",), thr_bwd.values.astype("float64")),
+        ),
+        coords=dict(
+            time_rate=da[time].values[1:],
+            time_fwd=da[time].values[1:],
+            time_bwd=da[time].values[:-1],
+        ),
+        attrs=dict(var=var, per=per, window=window, min_periods=min_periods, factor=factor, tol=tol),
+    )
+
+    return roc_ds, fwd_full, bwd_full
+
+
+def flag_high_rate_of_change(ds, var, window="7D", time="time",
+                                       per="h", min_periods=10, factor=None, tol=None):
+    """Flag anomalously high rates of change and refine using interpolation logic.
+
+    Detects time steps where the rate of change exceeds a rolling percentile-
+    based threshold (forward and backward differences), applies additional
+    logical rules related to missing neighbors and uneven sampling, and
+    finally removes flags consistent with linear interpolation.
+
+    Args:
+        ds (xr.Dataset): Dataset containing the variable.
+        var (str): Name of the variable to analyze.
+        window (str, optional): Rolling window length (pandas offset string).
+            Defaults to "7D".
+        time (str, optional): Name of the time dimension. Defaults to "time".
+        per (str, optional): Time unit used to normalize rates (e.g. "h", "D").
+            Defaults to "h".
+        min_periods (int, optional): Minimum samples required in the rolling
+            window. Defaults to 10.
+        factor (float, optional): Multiplier applied to the rolling 95th
+            percentile threshold. If None, a variable-specific default is used.
+        tol (float, optional): Tolerance for linear interpolation unflagging.
+            If None, a variable-specific default is used.
+
+    Returns:
+        Tuple[xr.DataArray, xr.DataArray, xr.DataArray, xr.DataArray]:
+            - fwd_full: Forward rate-of-change flags on the full time axis.
+            - bwd_full: Backward rate-of-change flags on the full time axis.
+            - flag_combined: Combined logical flag before interpolation refinement.
+            - flag_final: Final flag after interpolation-based unflagging.
+    """
+    tol, factor = _get_params(var, tol=tol, factor=factor)
+
+    da = ds[var].where(ds[f"{var}_qc"] == "OK").dropna(dim=time)
+    roc_ds, fwd_full, bwd_full = rate_of_change_fwd_bwd_and_thresholds(
+        da, var, window=window, time=time, per=per, min_periods=min_periods, factor=factor, tol=tol
+    )
+
+    y = da
+    prev_missing = y.shift({time: 1}).isnull()
+    next_missing = y.shift({time: -1}).isnull()
+
+    tt = da[time]
+    dt_prev = tt - tt.shift({time: 1})
+    dt_next = tt.shift({time: -1}) - tt
+    uneven_dt = dt_prev != dt_next
+
+    if da.sizes[time] > 0:
+        prev_missing.values[0] = True
+        next_missing.values[-1] = True
+        uneven_dt.values[0] = True
+        uneven_dt.values[-1] = True
+
+    # Combine multiple logical criteria
+    flag_combined = (
+        (fwd_full & bwd_full)
+        | (fwd_full & prev_missing)
+        | (fwd_full & next_missing)
+        | (bwd_full & prev_missing)
+        | (bwd_full & next_missing)
+        | (fwd_full & uneven_dt)
+        | (bwd_full & uneven_dt)
+    ).rename(f"{var}_high_var_flag_combined")
+
+    # Final refinement step
+    if flag_combined.any():
+        flag_final = unflag_if_linear_interp(ds, var, flag_combined, tol=tol, time=time)
+    else:
+        flag_final = flag_combined
+    logger.info(f"ROC filter on {var} (tol={tol}, factor={factor}): filtering {flag_final.sum().item()}/{len(ds.time)}")
+
+    return fwd_full, bwd_full, flag_combined, flag_final
+
+def rate_of_change_filter(ds):
+    """Apply the rate-of-change outlier filter to all matching variables in a dataset.
+
+    Selects variables in `ds.data_vars` whose names match any regex pattern in
+    `DEFAULT_VARIABLE_THRESHOLDS`, then runs `flag_high_rate_of_change` to
+    identify outliers. The filter is applied in up to two passes: after the
+    first pass, flagged samples are temporarily set to NaN and the filter is
+    rerun to catch additional outliers. Final flags are the logical OR of both
+    passes.
+
+    Args:
+        ds (xr.Dataset): Input dataset containing time series variables.
+
+    Returns:
+        xr.Dataset: Dataset (same object) with the rate-of-change filter applied.
+    """
+
+    patterns = [re.compile(p) for p in DEFAULT_VARIABLE_THRESHOLDS]
+
+    vars_with_thresholds = [
+        v for v in ds.data_vars
+        if any(p.match(v) for p in patterns)
+    ]
+
+    max_iter = 20
+    thr_new_flags = 10
+
+    for var in vars_with_thresholds:
+        flag_final = xr.zeros_like(ds[var].isel(time=slice(0, 0)).reindex(time=ds.time), dtype=bool).reindex_like(ds.time, fill_value=False)
+        flag_combined = flag_final.copy()
+
+        tmp = ds.copy(deep=True)
+
+        for _ in range(max_iter):
+            _, _, fc, ff = flag_high_rate_of_change(tmp, var, window="7D")
+
+            fc = fc.reindex_like(ds.time, fill_value=False)
+            ff = ff.reindex_like(ds.time, fill_value=False)
+
+            new = ff & ~flag_final
+            nnew = int(new.sum().item()) if new.size else 0
+
+            flag_combined = flag_combined | fc
+            flag_final = flag_final | ff
+
+            if nnew == 0 or nnew <= thr_new_flags:
+                break
+
+            tmp[var] = tmp[var].where(~new)
+
+        ds = set_flag(ds, var, flag="ROC", mask=flag_final)
+
+    return ds
+
+def roc_filter_dataframe(df):
+    df_in = df.copy()
+    df_in.index = df_in.index.tz_convert(None)
+    df_in.index.name = "time"
+    df_out = rate_of_change_filter(df_in.to_xarray()).to_dataframe()
+    df_out.index = df_out.index.tz_localize("UTC")
+    df_out.index.name = "timestamp"
+    return df_out
 
 def field_info(fields):
     tmp =pd.read_csv('L1/L1_variable_list.csv', skipinitialspace=True)
@@ -86,7 +460,9 @@ def flag_data(df, site, var_list=["all"]):
 
     df_out = df.copy()
     if not os.path.isfile("metadata/flags/" + site + ".csv"):
+        Msg("===============")
         Msg("No erroneous data listed for " + site)
+        Msg("===============")
         return df
 
     flag_data = pd.read_csv("metadata/flags/" + site + ".csv",
@@ -140,7 +516,9 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
     adj_path = f"metadata/adjustments/{site}.csv"
 
     if not os.path.isfile(adj_path):
+        Msg("===============")
         Msg(f"No data to fix at {site}")
+        Msg("===============")
         return []
 
     # ---- Load adjustments ----
@@ -179,6 +557,8 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
         "IWS": "cyan",
         "FROZEN": "blue",
         "FROZEN_WS": "lightblue",
+        "ROC": "goldenrod",
+        "LIN": "lime",
     }
 
 
@@ -187,7 +567,6 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
     for var in var_list:
         if (df[var].isnull().all() or
             any(s in var for s in excluded_substrings)):
-            print("not plotting", var)
             continue
 
         qc_var = var + "_qc"
@@ -197,9 +576,9 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
         if len(flags_uni) <= 1 and df[var].isnull().all(): continue
 
         fig, ax = plt.subplots(figsize=(10, 7))
-        plt.subplots_adjust(top=0.95, bottom=0.08, left=0.1, right=0.98)
+        plt.subplots_adjust(top=0.85, bottom=0.08, left=0.1, right=0.98)
 
-        ax.scatter(df_out.index, df_out[var], s=8, color="gray", label="before adjustment or filtering")
+        ax.scatter(df_out.index, df_out[var], s=8, color="gray", label="raw")
 
         # flagged points
         for flag in flags_uni:
@@ -229,37 +608,76 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
 
         ax.set_xlabel("Year")
         ax.set_ylabel(var)
-        ax.set_title(site)
-        ax.legend(frameon=False, loc="upper left")
-
+        ax.legend(loc="upper center", ncols=5,
+          bbox_to_anchor=(0.5, 1.15), title = site, )
+        ax.grid()
         fname = f"figures/L1_data_treatment/{site.replace(' ', '')}_{var}.jpeg"
         fig.savefig(fname, dpi=120)
 
         Msg(f"![Adjusted and flagged data at {site}]({fname})")
-        plt.close(fig)
+        # plt.close(fig)
 
     Msg(" ")
 
 
+def flag_linear_interp_runs(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    var_list = df.columns
+    VAR_SKIP = ["HW1", "HW2", "V"]
+    for var in var_list:
+        if var in VAR_SKIP: continue
+
+        if "TS" in var:
+            N=10
+        else:
+            N=3
+        qc = f"{var}_qc"
+        if qc not in df.columns:
+            df[qc] = "OK"
+
+        v = df[var].astype(float)
+        dv = v.diff()
+
+        is_const = (np.abs(dv - dv.shift())<0.01001) & dv.notna() & (np.abs(dv)>=0.01)
+
+        rid = is_const.ne(is_const.shift(fill_value=False)).cumsum()
+        f = (is_const & (is_const.groupby(rid).transform("sum") >= N)).to_numpy(bool)
+
+        f = np.r_[f[1:], False]                          # shift -1
+        f = f | np.r_[False, f[:-1]] | np.r_[f[1:], False]  # expand by 1
+        f = f & np.r_[False, f[:-1]] & np.r_[f[1:], False]  # shrink by 1
+
+        flag = f
+
+        nflag = int(np.sum(flag))
+        if nflag > 0:
+            Msg(f"{var}: {nflag} samples flagged")
+
+        df.loc[flag, qc] = "LIN"
+
+    return df
+
 def remove_flagged_data(df):
-    """
-    Remove flagged data
-    """
-    for var in df.columns:
-        if var[-3:] == "_qc":
-            df[var].values[df[var].isnull()] = "OK"
-            if len(np.unique(df[var].values)) > 1:
-                msk = (df[var].values == "OK") | (df[var].values == "")
-                df.loc[~msk, var[:-3]] = np.nan
-            df = df.drop(columns=[var])
+    df = df.copy()
+    qc_cols = [c for c in df.columns if c.endswith("_qc")]
+
+    for qc in qc_cols:
+        s = df[qc].astype(object).fillna("OK")
+        if s.nunique(dropna=False) > 1:
+            msk = s.isin(["OK", ""])
+            base = qc[:-3]
+            if base in df.columns:
+                df.loc[~msk, base] = np.nan
+        df = df.drop(columns=[qc])
+
     return df
 
 
 import pytz
 
 
-def adjust_data(df, site, var_list=[], skip_var=[], skip_time_shifts=False):
-    df_out = df.copy()
+def adjust_data(df_in, site, var_list=[], skip_var=[], skip_time_shifts=False):
+    df_out = df_in.copy(deep=True)
     if not os.path.isfile("metadata/adjustments/" + site + ".csv"):
         Msg("No data to fix at " + site)
         return df_out
@@ -291,11 +709,9 @@ def adjust_data(df, site, var_list=[], skip_var=[], skip_time_shifts=False):
     adj_info = pd.concat((adj_info.loc[adj_info.adjust_function.str.startswith('swap'),:],
                           adj_info.loc[~adj_info.adjust_function.str.startswith('swap'),:]))
 
-    adj_info.loc[adj_info.adjust_function == "time_shift", :] = (
-        adj_info.loc[adj_info.adjust_function == "time_shift", :]
-        .sort_values(by="t0", ascending=False)
-        .values
-    )
+    msk = adj_info["adjust_function"].eq("time_shift")
+    adj_info = pd.concat([adj_info.loc[msk].sort_values("t0", ascending=False),
+                          adj_info.loc[~msk]], axis=0)
     if skip_time_shifts:
         adj_info = adj_info.loc[adj_info.adjust_function != "time_shift", :]
     adj_info.set_index(["variable", "t0"], drop=False, inplace=True)
@@ -319,7 +735,7 @@ def adjust_data(df, site, var_list=[], skip_var=[], skip_time_shifts=False):
             adj_info.loc[var].adjust_function,
             adj_info.loc[var].adjust_value,
         ):
-            if (pd.to_datetime(t0) > df.index[-1]) | (pd.to_datetime(t1) < df.index[0]):
+            if (pd.to_datetime(t0) > df_in.index[-1]) | (pd.to_datetime(t1) < df_in.index[0]):
                 continue
 
             # counting nan values before filtering
@@ -350,10 +766,11 @@ def adjust_data(df, site, var_list=[], skip_var=[], skip_time_shifts=False):
                 df_out.loc[ind, var + "_adj_flag"] = 1
 
             if func == "min_filter":
-                tmp = df_out.loc[t0:t1, var].values
+                tmp = df_out.loc[t0:t1, var].to_numpy(copy=True)
                 tmp[tmp < val] = np.nan
+                df_out.loc[t0:t1, var] = tmp
             if func == "max_filter":
-                tmp = df_out.loc[t0:t1, var].values
+                tmp = df_out.loc[t0:t1, var].to_numpy(copy=True)
                 tmp[tmp > val] = np.nan
                 df_out.loc[t0:t1, var] = tmp
             if func == "upper_perc_filter":
@@ -374,13 +791,13 @@ def adjust_data(df, site, var_list=[], skip_var=[], skip_time_shifts=False):
                 for m_start, m_end in zip(df_max.index[:-2], df_max.index[1:]):
                     msk = (tmp.index >= m_start) & (tmp.index < m_end)
                     lim = df_max.loc[m_start] - val
-                    values_month = tmp.loc[msk].values
+                    values_month = tmp.loc[msk].to_numpy(copy=True)
                     values_month[values_month < lim] = np.nan
                     tmp.loc[msk] = values_month
                 # remaining samples following outside of the last 2 weeks window
                 msk = tmp.index >= m_end
                 lim = df_max.loc[m_start] - val
-                values_month = tmp.loc[msk].values
+                values_month = tmp.loc[msk].to_numpy(copy=True)
                 values_month[values_month < lim] = np.nan
                 tmp.loc[msk] = values_month
                 # updating original pandas
@@ -482,10 +899,22 @@ def adjust_data(df, site, var_list=[], skip_var=[], skip_time_shifts=False):
                 if val > 0:
                     if val < 10000:
                         # errasing data that existed during the time shift
-                        df_out.loc[t0 : t0 + pd.Timedelta(hours=val), var] = np.nan
+                        col = df_out[var]
+                        if pd.api.types.is_numeric_dtype(col):
+                            df_out[var] = col.astype("float64")
+                            df_out.loc[t0:t0 + pd.Timedelta(hours=val), var] = np.nan
+                        else:
+                            df_out[var] = col.astype(object)
+                            df_out.loc[t0:t0 + pd.Timedelta(hours=val), var] = None
                     else:
                         # case of Crawford Point where only the shifted data should be errased
-                        df_out.loc[t0:t1, var] = np.nan
+                        col = df_out[var]
+                        if pd.api.types.is_numeric_dtype(col):
+                            df_out[var] = col.astype("float64")
+                            df_out.loc[t0:t1, var] = np.nan
+                        else:
+                            df_out[var] = col.astype(object)
+                            df_out.loc[t0:t1, var] = None
                 else:
                     df_out.loc[t1 + pd.Timedelta(hours=val) : t1, var] = np.nan
 
@@ -585,11 +1014,11 @@ def augment_data(df_in, latitude, longitude, elevation, site):
     # Interpolation over gaps smaller than two days
     for var in ['HW1','HW2']:
         if var not in df.columns:
-            print(var, 'not in dataframe')
+            Msg(var+' '+ 'not in dataframe')
             continue
 
         if df[var].isnull().all():
-            print('No valid data for', var)
+            Msg('No valid data for '+var)
             continue
 
         # Creating surface height field
@@ -614,27 +1043,34 @@ def augment_data(df_in, latitude, longitude, elevation, site):
 
             diff = df[var].bfill().diff()
             diff.plot(ax=ax,marker='o', linestyle='None', label='all shifts')
+            if (diff.abs()>thresh).any():
+                diff.loc[diff.abs()>thresh].plot(ax=ax, marker='o',
+                                                 linestyle='None',
+                                                 label='selected shifts')
             diff.loc[diff.abs()<thresh] = 0
             if 'SMS' in site:
                 diff.loc[diff>0] = 0
 
-            for t in  diff.loc[diff.abs()>thresh].index.values:
-                print(t)
-                # refining the diff value:
-                t = pd.to_datetime(t, utc=True)
-                one_week_before_gap = slice(t-pd.Timedelta(days=7), t)
-                one_week_after_gap = slice(t, t+pd.Timedelta(days=7))
-                if df.loc[one_week_after_gap, var].isnull().all() | df.loc[one_week_before_gap, var].isnull().all():
-                    # average daily accumulation
-                    if site == 'Tunu-N':
-                        avg_accum = 0.000784
-                    elif site == 'JAR1':
-                        avg_accum = -.0043
-                    elif site == 'NASA-SE':
-                        avg_accum = 0.003
-                    else:
-                        tmp = df[var].resample('D').mean().diff()
-                        avg_accum = -tmp.mean()
+            # average daily accumulation
+            if site == 'Tunu-N':
+                avg_accum = 0.000784
+            elif site == 'JAR1':
+                avg_accum = -.0043
+            elif site == 'NASA-SE':
+                avg_accum = 0.003
+            else:
+                avg_accum = -df[var].resample('D').mean().diff().mean()
+
+            large_diff_times = pd.to_datetime(diff.loc[diff.abs() > thresh].index.values, utc=True)
+
+            for i, t in enumerate(large_diff_times):
+                t_prev = large_diff_times[i-1] if i > 0 else pd.Timestamp.min.tz_localize("UTC")
+                t_next = large_diff_times[i+1] if i < len(large_diff_times)-1 else pd.Timestamp.max.tz_localize("UTC")
+
+                one_week_before_gap = slice(max(t - pd.Timedelta(days=7), t_prev), t)
+                one_week_after_gap  = slice(t, min(t + pd.Timedelta(days=7), t_next))
+                no_values_before_or_after = df.loc[one_week_after_gap, var].isnull().all() | df.loc[one_week_before_gap, var].isnull().all()
+                if no_values_before_or_after:
                     last_good_index = df.loc[:t, var].last_valid_index()
                     next_good_index = df.loc[t:, var].first_valid_index()
                     diff.loc[t] = df.loc[next_good_index, var] - df.loc[last_good_index, var] + avg_accum * (next_good_index-last_good_index).total_seconds()/3600/24
@@ -654,15 +1090,12 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             df[var_HS].plot(label=var_HS)
             plt.legend()
             fig.savefig("figures/L1_data_treatment/" + site + "_"+var_HS+"_adjust_auto.png")
-            x = df[var_HS].index.values.astype(float)/10**9/3600/24
-            y = df[var_HS].values
-            print(np.polyfit(x[~np.isnan(x+y)],
-                             y[~np.isnan(x+y)], 1)[-2])
+            # x = df[var_HS].index.values.astype(float)/10**9/3600/24
+            # y = df[var_HS].values
         else:
             # we then adjust and filter all surface height (could be replaced by an automated adjustment)
             df_save=df.copy()
             df = adjust_data(df, site, var_HS, skip_time_shifts=True)
-            print(var_HS)
             plot_flagged_data(df, df_save, site, var_list=var_HS)
 
 
@@ -749,9 +1182,9 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA3']
         T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA2']
         T1.loc[T1.isnull()] = df.loc[T1.isnull(), 'TA4']
-    df['RH1_cor'] = correctHumidity(df.RH1, T1)
+    df['RH1_wrt_ice_or_water'] = correctHumidity(df.RH1, T1)
     if 'P' in df.columns:
-        df['Q1'] = calcHumid(T1, df.P, df.RH1_cor)  *1000
+        df['Q1'] = calcHumid(T1, df.P, df.RH1_wrt_ice_or_water)  *1000
         df.loc[df['Q1']>40, 'Q1'] = np.nan
 
     if 'RH2' in df.columns:
@@ -760,78 +1193,81 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         T2.loc[T2.isnull()] = df.loc[T2.isnull(), 'TA1']
         T2.loc[T2.isnull()] = df.loc[T2.isnull(), 'TA3']
 
-        df['RH2_cor'] = correctHumidity(df.RH2, T2)
+        df['RH2_wrt_ice_or_water'] = correctHumidity(df.RH2, T2)
 
-        df['Q2'] = calcHumid(T2, df.P, df.RH2_cor)  *1000
+        df['Q2'] = calcHumid(T2, df.P, df.RH2_wrt_ice_or_water)  *1000
         df.loc[df['Q2']>40, 'Q2'] = np.nan
 
-    # adding latitude and longitude fields
-    try:
-        if os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated_with_elev.csv'):
-            df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated_with_elev.csv')
-        elif os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv'):
-            df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_interpolated.csv')
-        elif os.path.isfile('metadata/interpolated positions/'+site.replace(' ','')+'_position_info.csv'):
-            df_pos = pd.read_csv( 'metadata/interpolated positions/'+site.replace(' ','')+'_position_info.csv')
-            df_pos['date'] = df_pos.time_elev_approximation.astype(str) + '-08-01'
-            df_pos['elev'] = df_pos.elev_approximation
-            df_pos['lat'] = latitude
-            df_pos['lon'] = longitude
+    # %% adding latitude and longitude fields
+    # initialization
+    df['latitude'] = latitude
+    df['longitude'] = longitude
+    df['elevation'] = elevation
 
-        df_pos.date = pd.to_datetime(df_pos.date, utc=True)
-        df_pos = df_pos.set_index('date')
-        df_pos_save = df_pos.copy()
+    # filling lat lon if available
+    p = f"metadata/interpolated positions/{site}_position_interpolated.csv"
+    def extrapolate(df, y_col):
+        df_ = df[[y_col]].dropna()
+        return LinearRegression().fit(
+            df_.index.values.astype(float).reshape(-1,1), df_[y_col]).predict(
+            df.index.values.astype(float).reshape(-1,1))
+
+    df_pos = None
+    if os.path.isfile(p):
+        Msg(f'Using {p} for variable latitude and longitude')
+        df_pos = pd.read_csv(p, index_col=0, parse_dates=[0]).sort_index()
+        df_pos.index = pd.to_datetime(df_pos.index, utc=True)
+
+        # keep only anchor points (interpolate needs non-NaN anchors)
+        df_pos = df_pos[["lon", "lat"]].dropna(how="any")
+        if len(df_pos) < 2:
+            raise ValueError("Need at least two non-NaN lon/lat points to interpolate/extrapolate.")
+
         offset = pd.DateOffset(months=7)
-        df_pos = df_pos.shift(freq=-offset).resample('YS').first().shift(freq=offset)
+        df_pos = df_pos.shift(freq=-offset).resample("YS").first().shift(freq=offset).sort_index()
 
-        df['latitude'] =np.nan
-        df['longitude'] =np.nan
-        df['elevation'] =np.nan
+        full_index = pd.to_datetime(df_pos.index.union(df.index), utc=True).drop_duplicates().sort_values()
+        x = df_pos.reindex(full_index).interpolate(method="time")
+        t0, t1 = df_pos.index.min(), df_pos.index.max()
+        x = x.loc[(x.index >= t0) & (x.index <= t1)]
 
-        df_pos = df_pos.resample('h').first().interpolate()
+        df_pos_resampled = x.reindex(df.index)
 
-        if (df_pos.index[-1] < df.index[-1]) | (df_pos.index[0] > df.index[0]):
-            df_pos = pd.concat((df.loc[df.index[0]:df_pos.index[0]-pd.to_timedelta('1h'), df.columns[0]],
-                                df_pos,
-                        df.loc[df_pos.index[-1]+pd.to_timedelta('1h'):df.index[-1],
-                              df.columns[0]]))[df_pos.columns]
+        df_pos_resampled['lat'] = extrapolate(df_pos_resampled, 'lat')
+        df_pos_resampled['lon'] = extrapolate(df_pos_resampled, 'lon')
 
-        def extrapolate(df, y_col):
-            df_ = df[[y_col]].dropna()
-            return LinearRegression().fit(
-                df_.index.values.astype(float).reshape(-1,1), df_[y_col]).predict(
-                df.index.values.astype(float).reshape(-1,1))
-        for var in df_pos.columns:
-            df_pos[var+'_interp'] = extrapolate(df_pos,var)
-            if site != 'Swiss Camp':
-                df_pos[var] = df_pos[var].fillna(df_pos[var+'_interp'])
-            else:
-                df_pos[var] = df_pos[var].fillna(
-                    df_pos.loc[df_pos[var].last_valid_index(),
-                               var])
+        df["latitude"] = df_pos_resampled["lat"]
+        df["longitude"] = df_pos_resampled["lon"]
 
+    df_elev = None
+    if site in ['JAR1','Swiss Camp 10m', 'Swiss Camp', 'JAR2','JAR3']:
+        p='metadata/interpolated positions/GC-Net_elevation_tie_points.csv'
+        Msg(f'Using {p} for variable elevation')
+        df_elev = pd.read_csv(p)
+        site_tmp = 'Swiss Camp' if site=='Swiss Camp 10m' else site
+        df_elev = df_elev.loc[df_elev["site"].eq(site_tmp)].drop(columns="site")
+        df_elev["time"] = pd.to_datetime(df_elev["year"].astype(int).astype(str) + "-01-01", utc=True) + pd.to_timedelta((df_elev["year"] % 1) * 365, unit="D")
+        df_elev = df_elev.set_index('time')
 
-        df['latitude'] = df_pos.loc[df.index,'lat']
-        df['longitude'] = df_pos.loc[df.index,'lon']
-        if 'elev' in df_pos.columns:
-            df['elevation'] = df_pos.loc[df.index,'elev']
+        full_index = pd.to_datetime(df_elev.index.union(df.index), utc=True).drop_duplicates().sort_values()
+        x = df_elev.reindex(full_index).interpolate(method="time")
+        t0, t1 = df_elev.index.min(), df_elev.index.max()
+        x = x.loc[(x.index >= t0) & (x.index <= t1)]
 
-        fig, ax = plt.subplots(3,1,sharex=True)
-        df_pos_save.lat.plot(ax=ax[0], marker='o', ls='None')
-        df[['latitude']].plot(ax=ax[0])
-        df_pos_save.lon.plot(ax=ax[1], marker='o', ls='None')
-        df[['longitude']].plot(ax=ax[1])
-        if 'elev' in df_pos.columns:
-            df_pos_save.elev.plot(ax=ax[2], marker='o', ls='None')
-            df[['elevation']].plot(ax=ax[2])
-        fig.suptitle(site)
-        fig.savefig("figures/positions/" + site + "_positions.png", dpi=300)
+        df_elev_resampled = x.reindex(df.index)
+        df["elevation"] = df_elev_resampled["altitude"]
 
-    except Exception as e:
-        print(e)
-        df['latitude'] = latitude
-        df['longitude'] = longitude
-        df['elevation'] = elevation
+    fig, ax = plt.subplots(3,1,sharex=True)
+    df[['latitude']].plot(ax=ax[0])
+    df[['longitude']].plot(ax=ax[1])
+    if df_pos is not None:
+        df_pos.lat.plot(ax=ax[0], marker='o',ls='None', label='anchor points')
+        df_pos.lon.plot(ax=ax[1], marker='o',ls='None', label='anchor points')
+    df[['elevation']].plot(ax=ax[2])
+    if df_elev is not None:
+        df_elev.altitude.plot(ax=ax[2], marker='o',ls='None', label='anchor points')
+    fig.suptitle(site)
+    fig.savefig("figures/positions/" + site + "_positions.png", dpi=120)
 
     return df
 
@@ -849,7 +1285,7 @@ def interpolate_temperature(dates, depth_cor, temp, depth=10,
     tmp = pd.DataFrame(temp)
     tmp["time"] = dates
     tmp = tmp.set_index("time")
-    tmp = tmp.resample("H").mean()
+    tmp = tmp.resample("h").mean()
     # tmp = tmp.interpolate(limit=24*7)
     temp = tmp.loc[dates].values
     for i in (range(len(dates))):
@@ -954,7 +1390,7 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
         )
         pd.read_csv(url).to_csv("metadata/maintenance summary/" + site + ".csv")
     except:
-        print("Cannot download maintenance summary. Using local file.")
+        Msg("Cannot download maintenance summary. Using local file.")
         pass
 
     maintenance_string = pd.read_csv("metadata/maintenance summary/" + site + ".csv")
@@ -964,7 +1400,7 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
                           'NewDepth7 (m)', 'NewDepth8 (m)', 'NewDepth9 (m)',
                           'NewDepth10 (m)']
     if maintenance_string.shape[0] == 0:
-        print('No installtion depth reported, using default')
+        Msg('No installtion depth reported, using default')
         maintenance_string['date'] = [df_v6.index[0]]
         maintenance_string[col_depth_installation] = [np.arange(1,11)]
     maintenance_string.date = pd.to_datetime(maintenance_string.date,
@@ -988,8 +1424,11 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     if any(ind_filter):
         surface_height[ind_filter] = np.nan
     df_v6["HS_combined"] = surface_height.values
+    start = df_v6["HS_combined"].first_valid_index()
+    end = df_v6["HS_combined"].last_valid_index()
     df_v6["HS_combined"] = df_v6["HS_combined"].interpolate().values
-
+    df_v6.loc[slice(None,start), "HS_combined"] = np.nan
+    df_v6.loc[slice(end,None), "HS_combined"] = np.nan
     # first initialization of the depths
     for i, col in enumerate(depth_cols_name):
         df_v6[col] = (
@@ -1151,7 +1590,7 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
                 label="_nolegend_",
             )
     if len(df_v6["TS_10m"]) == 0:
-        print("No 10m temp for ", site)
+        Msg("No 10m temp for "+site)
     else:
         df_v6["TS_10m"].resample("D").mean().plot(ax=ax[1],
                                                                color="red",
@@ -1168,8 +1607,8 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     ax[1].plot(
         np.nan, np.nan, marker="o", linestyle="none", color="pink", label="var filter"
     )
-    ax[1].legend()
-    ax[0].legend()
+    ax[1].legend(loc='upper center')
+    ax[0].legend(loc='upper right')
     ax[0].set_ylabel("Height (m)")
     ax[1].set_ylabel("Subsurface temperature ($^o$C)")
     fig.suptitle(site)
@@ -1941,6 +2380,6 @@ def find_thresholds(stid: str) -> pd.DataFrame:
         ax.set_title(f"{stid} — {var}")
         fig.autofmt_xdate()
         fig.savefig(out / f"{stid}_{var}.png", dpi=120)
-        print(out / f"{stid}_{var}.png")
+        Msg(f"![]({out}/{stid}_{var}.png)")
 
     return threshold
