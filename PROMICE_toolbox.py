@@ -716,216 +716,219 @@ def adjust_data(df_in, site, var_list=[], skip_var=[], skip_time_shifts=False):
         adj_info = adj_info.loc[adj_info.adjust_function != "time_shift", :]
     adj_info.set_index(["variable", "t0"], drop=False, inplace=True)
 
-    if len(var_list) == 0:
+
+    adj_info_save = adj_info.copy()
+    for adj_info in [adj_info_save.loc[adj_info_save.adjust_function == "time_shift", :],
+                     adj_info_save.loc[adj_info_save.adjust_function != "time_shift", :]]:
+        if len(adj_info) == 0 :
+            continue
+        if len(var_list) > 0:
+            adj_info = adj_info.loc[np.isin(adj_info.variable, var_list), :]
+
+        if len(skip_var) > 0:
+            adj_info = adj_info.loc[~np.isin(adj_info.variable, skip_var), :]
         var_list = np.unique(adj_info.variable)
-    else:
-        adj_info = adj_info.loc[np.isin(adj_info.variable, var_list), :]
-        var_list = np.unique(adj_info.variable)
 
-    if len(skip_var) > 0:
-        adj_info = adj_info.loc[~np.isin(adj_info.variable, skip_var), :]
-        var_list = np.unique(adj_info.variable)
+        Msg("\n|start time|end time|variable|operation|value|number of removed samples|")
+        Msg("|-|-|-|-|-|-|")
+        for var in var_list:
+            for t0, t1, func, val in zip(
+                adj_info.loc[var].t0,
+                adj_info.loc[var].t1,
+                adj_info.loc[var].adjust_function,
+                adj_info.loc[var].adjust_value,
+            ):
+                if (pd.to_datetime(t0) > df_in.index[-1]) | (pd.to_datetime(t1) < df_in.index[0]):
+                    continue
 
-    Msg("|start time|end time|variable|operation|value|number of removed samples|")
-    Msg("|-|-|-|-|-|-|")
-    for var in var_list:
-        for t0, t1, func, val in zip(
-            adj_info.loc[var].t0,
-            adj_info.loc[var].t1,
-            adj_info.loc[var].adjust_function,
-            adj_info.loc[var].adjust_value,
-        ):
-            if (pd.to_datetime(t0) > df_in.index[-1]) | (pd.to_datetime(t1) < df_in.index[0]):
-                continue
+                # counting nan values before filtering
+                if "_qc" not in var:
+                    nan_count_1 = np.sum(np.isnan(df_out.loc[t0:t1, var].values))
 
-            # counting nan values before filtering
-            if "_qc" not in var:
-                nan_count_1 = np.sum(np.isnan(df_out.loc[t0:t1, var].values))
+                if t1 < t0:
+                    Msg("Dates in wrong order")
 
-            if t1 < t0:
-                Msg("Dates in wrong order")
+                if func == "add":
+                    df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values + val
+                    # flagging adjusted values
+                    if var + "_adj_flag" not in df_out.columns:
+                        df_out[var + "_adj_flag"] = 0
+                    msk = df_out.loc[t0:t1, var].notnull()
+                    ind = df_out.loc[t0:t1, var].loc[msk].index
+                    df_out.loc[ind, var + "_adj_flag"] = 1
 
-            if func == "add":
-                df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values + val
-                # flagging adjusted values
-                if var + "_adj_flag" not in df_out.columns:
-                    df_out[var + "_adj_flag"] = 0
-                msk = df_out.loc[t0:t1, var].notnull()
-                ind = df_out.loc[t0:t1, var].loc[msk].index
-                df_out.loc[ind, var + "_adj_flag"] = 1
+                if func == "multiply":
+                    df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values * val
+                    if "DW" in var:
+                        df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var] % 360
+                    # flagging adjusted values
+                    if var + "_adj_flag" not in df_out.columns:
+                        df_out[var + "_adj_flag"] = 0
+                    msk = df_out.loc[t0:t1, var].notnull()
+                    ind = df_out.loc[t0:t1, var].loc[msk].index
+                    df_out.loc[ind, var + "_adj_flag"] = 1
 
-            if func == "multiply":
-                df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values * val
-                if "DW" in var:
-                    df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var] % 360
-                # flagging adjusted values
-                if var + "_adj_flag" not in df_out.columns:
-                    df_out[var + "_adj_flag"] = 0
-                msk = df_out.loc[t0:t1, var].notnull()
-                ind = df_out.loc[t0:t1, var].loc[msk].index
-                df_out.loc[ind, var + "_adj_flag"] = 1
+                if func == "min_filter":
+                    tmp = df_out.loc[t0:t1, var].to_numpy(copy=True)
+                    tmp[tmp < val] = np.nan
+                    df_out.loc[t0:t1, var] = tmp
+                if func == "max_filter":
+                    tmp = df_out.loc[t0:t1, var].to_numpy(copy=True)
+                    tmp[tmp > val] = np.nan
+                    df_out.loc[t0:t1, var] = tmp
+                if func == "upper_perc_filter":
+                    tmp = df_out.loc[t0:t1, var].copy()
+                    df_w = df_out.loc[t0:t1, var].resample("14D").quantile(1 - val / 100)
+                    df_w = df_out.loc[t0:t1, var].resample("14D").var()
+                    for m_start, m_end in zip(df_w.index[:-2], df_w.index[1:]):
+                        msk = (tmp.index >= m_start) & (tmp.index < m_end)
+                        values_month = tmp.loc[msk].values
+                        values_month[values_month < df_w.loc[m_start]] = np.nan
+                        tmp.loc[msk] = values_month
 
-            if func == "min_filter":
-                tmp = df_out.loc[t0:t1, var].to_numpy(copy=True)
-                tmp[tmp < val] = np.nan
-                df_out.loc[t0:t1, var] = tmp
-            if func == "max_filter":
-                tmp = df_out.loc[t0:t1, var].to_numpy(copy=True)
-                tmp[tmp > val] = np.nan
-                df_out.loc[t0:t1, var] = tmp
-            if func == "upper_perc_filter":
-                tmp = df_out.loc[t0:t1, var].copy()
-                df_w = df_out.loc[t0:t1, var].resample("14D").quantile(1 - val / 100)
-                df_w = df_out.loc[t0:t1, var].resample("14D").var()
-                for m_start, m_end in zip(df_w.index[:-2], df_w.index[1:]):
-                    msk = (tmp.index >= m_start) & (tmp.index < m_end)
-                    values_month = tmp.loc[msk].values
-                    values_month[values_month < df_w.loc[m_start]] = np.nan
-                    tmp.loc[msk] = values_month
+                    df_out.loc[t0:t1, var] = tmp.values
 
-                df_out.loc[t0:t1, var] = tmp.values
-
-            if func == "biweekly_upper_range_filter":
-                tmp = df_out.loc[t0:t1, var].copy()
-                df_max = df_out.loc[t0:t1, var].resample("14D").max()
-                for m_start, m_end in zip(df_max.index[:-2], df_max.index[1:]):
-                    msk = (tmp.index >= m_start) & (tmp.index < m_end)
+                if func == "biweekly_upper_range_filter":
+                    tmp = df_out.loc[t0:t1, var].copy()
+                    df_max = df_out.loc[t0:t1, var].resample("14D").max()
+                    for m_start, m_end in zip(df_max.index[:-2], df_max.index[1:]):
+                        msk = (tmp.index >= m_start) & (tmp.index < m_end)
+                        lim = df_max.loc[m_start] - val
+                        values_month = tmp.loc[msk].to_numpy(copy=True)
+                        values_month[values_month < lim] = np.nan
+                        tmp.loc[msk] = values_month
+                    # remaining samples following outside of the last 2 weeks window
+                    msk = tmp.index >= m_end
                     lim = df_max.loc[m_start] - val
                     values_month = tmp.loc[msk].to_numpy(copy=True)
                     values_month[values_month < lim] = np.nan
                     tmp.loc[msk] = values_month
-                # remaining samples following outside of the last 2 weeks window
-                msk = tmp.index >= m_end
-                lim = df_max.loc[m_start] - val
-                values_month = tmp.loc[msk].to_numpy(copy=True)
-                values_month[values_month < lim] = np.nan
-                tmp.loc[msk] = values_month
-                # updating original pandas
-                df_out.loc[t0:t1, var] = tmp.values
+                    # updating original pandas
+                    df_out.loc[t0:t1, var] = tmp.values
 
-            if func == "hampel_filter":
-                tmp = df_out.loc[t0:t1, var]
-                tmp = hampel(tmp, k=7 * 24, t0=val)
-                df_out.loc[t0:t1, var] = tmp.values
+                if func == "hampel_filter":
+                    tmp = df_out.loc[t0:t1, var]
+                    tmp = hampel(tmp, k=7 * 24, t0=val)
+                    df_out.loc[t0:t1, var] = tmp.values
 
-            if func == "grad_filter":
-                tmp = df_out.loc[t0:t1, var].copy()
-                msk = df_out.loc[t0:t1, var].copy().diff()
-                tmp[np.roll(msk.abs() > val, -1)] = np.nan
-                df_out.loc[t0:t1, var] = tmp
+                if func == "grad_filter":
+                    tmp = df_out.loc[t0:t1, var].copy()
+                    msk = df_out.loc[t0:t1, var].copy().diff()
+                    tmp[np.roll(msk.abs() > val, -1)] = np.nan
+                    df_out.loc[t0:t1, var] = tmp
 
-            if "swap_with_" in func:
-                var2 = func[10:]
-                val_var = df_out.loc[t0:t1, var].values.copy()
-                val_var2 = df_out.loc[t0:t1, var2].values.copy()
-                df_out.loc[t0:t1, var2] = val_var
-                df_out.loc[t0:t1, var] = val_var2
+                if "swap_with_" in func:
+                    var2 = func[10:]
+                    val_var = df_out.loc[t0:t1, var].values.copy()
+                    val_var2 = df_out.loc[t0:t1, var2].values.copy()
+                    df_out.loc[t0:t1, var2] = val_var
+                    df_out.loc[t0:t1, var] = val_var2
 
-            if func == "rotate":
-                df_out.loc[t0:t1, var] = (df_out.loc[t0:t1, var].values + val) % 360
+                if func == "rotate":
+                    df_out.loc[t0:t1, var] = (df_out.loc[t0:t1, var].values + val) % 360
 
-            if func == "air_temp_sonic_correction":
-                # finding the available air temp measurements
-                if "TA" + var[-1] in df_out.columns:
-                    tmp = df_out.loc[t0:t1, "TA" + var[-1]]
-                else:
-                    tmp = df_out.loc[t0:t1, "TA1"]
-                TA_var =  ["TA" + str(i) for i in range(1, 5) if "TA" + str(i) in df_out.columns]
-                tmp2 = df_out.loc[t0:t1, TA_var].mean(axis=1)
-                tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()]
-                tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
-
-                df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values * np.sqrt(
-                    (tmp.values + 273.15) / 273.15
-                )
-
-            if func == "air_temp_sonic_anticorrection":
-                # finding the available air temp measurements
-                if "TA" + var[-1] in df_out.columns:
-                    tmp = df_out.loc[t0:t1, "TA" + var[-1]]
-                else:
-                    tmp = df_out.loc[t0:t1, "TA1"]
-                TA_var =  ["TA" + str(i) for i in range(1, 5) if "TA" + str(i) in df_out.columns]
-                tmp2 = df_out.loc[t0:t1, TA_var].mean(axis=1)
-                tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()]
-                tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
-                # plt.figure()
-                # df_out.loc[t0:t1, var].plot(ax=plt.gca(), label='original')
-                # (df_out.loc[t0:t1, var] * np.sqrt((tmp + 273.15) / 273.15)).plot(ax=plt.gca(), label='corrected')
-                df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values / np.sqrt(
-                    (tmp.values + 273.15) / 273.15
-                )
-                # df_out.loc[t0:t1, var].plot(ax=plt.gca(), label='anticorrected')
-                # plt.gca().legend()
-
-            if func == "ice_to_water":
-                tmp = df_out.loc[t0:t1, "TA" + var[-1]]
-                tmp2 = df_out.loc[t0:t1, "TA" + str(int(var[-1]) % 2 + 1)]
-                tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()].values
-                tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
-                df_out.loc[t0:t1, var] = RH_ice2water(
-                    df_out.loc[t0:t1, var].values, tmp.values
-                )
-
-            if func == "water_to_ice":
-                tmp = df_out.loc[t0:t1, "TA" + var[-1]]
-                tmp2 = df_out.loc[t0:t1, "TA" + str(int(var[-1]) % 2 + 1)]
-                tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()].values
-                tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
-                df_out.loc[t0:t1, var] = RH_water2ice(
-                    df_out.loc[t0:t1, var].values, tmp.values
-                )
-
-            if func == "time_shift":
-                t0 = pd.to_datetime(t0)
-                t1 = pd.to_datetime(t1)
-
-                if t1 + pd.Timedelta(hours=val) > df_out.index[-1]:
-                    # case where the files needs to be extended to receive the shifted data
-                    nb_new_rows = (
-                        t1 + pd.Timedelta(hours=val) - df_out.index[-1]
-                    ).total_seconds() / 3600
-                    df_new_rows = df_out.iloc[-int(nb_new_rows) :, :].copy()
-                    df_new_rows.loc[:, :] = np.NaN
-                    df_new_rows.index = df_new_rows.index + (
-                        t1 + pd.Timedelta(hours=val) - df_out.index[-1]
-                    )
-                    df_out = pd.concat((df_out, df_new_rows))
-
-                df_out.loc[
-                    t0 + pd.Timedelta(hours=val) : t1 + pd.Timedelta(hours=val), var
-                ] = df_out.loc[t0:t1, var].values
-
-                if val > 0:
-                    if val < 10000:
-                        # errasing data that existed during the time shift
-                        col = df_out[var]
-                        if pd.api.types.is_numeric_dtype(col):
-                            df_out[var] = col.astype("float64")
-                            df_out.loc[t0:t0 + pd.Timedelta(hours=val), var] = np.nan
-                        else:
-                            df_out[var] = col.astype(object)
-                            df_out.loc[t0:t0 + pd.Timedelta(hours=val), var] = None
+                if func == "air_temp_sonic_correction":
+                    # finding the available air temp measurements
+                    if "TA" + var[-1] in df_out.columns:
+                        tmp = df_out.loc[t0:t1, "TA" + var[-1]]
                     else:
-                        # case of Crawford Point where only the shifted data should be errased
-                        col = df_out[var]
-                        if pd.api.types.is_numeric_dtype(col):
-                            df_out[var] = col.astype("float64")
-                            df_out.loc[t0:t1, var] = np.nan
-                        else:
-                            df_out[var] = col.astype(object)
-                            df_out.loc[t0:t1, var] = None
-                else:
-                    df_out.loc[t1 + pd.Timedelta(hours=val) : t1, var] = np.nan
+                        tmp = df_out.loc[t0:t1, "TA1"]
+                    TA_var =  ["TA" + str(i) for i in range(1, 5) if "TA" + str(i) in df_out.columns]
+                    tmp2 = df_out.loc[t0:t1, TA_var].mean(axis=1)
+                    tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()]
+                    tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
 
-            if (
-                ("_qc" not in var) & ("_min" not in var) & ("_max" not in var)
-                & ("_std" not in var)  & ("_adj_flag" not in var) & ("_min" not in var)
-            ):
-                nan_count_2 = np.sum(np.isnan(df_out.loc[t0:t1, var].values))
-                Msg("|" + str(t0) + "|" + str(t1)  + "|" + var +"|" + func
-                    + "|" + str(val) + "|" + str(nan_count_2 - nan_count_1) + "|"
-                )
+                    df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values * np.sqrt(
+                        (tmp.values + 273.15) / 273.15
+                    )
+
+                if func == "air_temp_sonic_anticorrection":
+                    # finding the available air temp measurements
+                    if "TA" + var[-1] in df_out.columns:
+                        tmp = df_out.loc[t0:t1, "TA" + var[-1]]
+                    else:
+                        tmp = df_out.loc[t0:t1, "TA1"]
+                    TA_var =  ["TA" + str(i) for i in range(1, 5) if "TA" + str(i) in df_out.columns]
+                    tmp2 = df_out.loc[t0:t1, TA_var].mean(axis=1)
+                    tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()]
+                    tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
+                    # plt.figure()
+                    # df_out.loc[t0:t1, var].plot(ax=plt.gca(), label='original')
+                    # (df_out.loc[t0:t1, var] * np.sqrt((tmp + 273.15) / 273.15)).plot(ax=plt.gca(), label='corrected')
+                    df_out.loc[t0:t1, var] = df_out.loc[t0:t1, var].values / np.sqrt(
+                        (tmp.values + 273.15) / 273.15
+                    )
+                    # df_out.loc[t0:t1, var].plot(ax=plt.gca(), label='anticorrected')
+                    # plt.gca().legend()
+
+                if func == "ice_to_water":
+                    tmp = df_out.loc[t0:t1, "TA" + var[-1]]
+                    tmp2 = df_out.loc[t0:t1, "TA" + str(int(var[-1]) % 2 + 1)]
+                    tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()].values
+                    tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
+                    df_out.loc[t0:t1, var] = RH_ice2water(
+                        df_out.loc[t0:t1, var].values, tmp.values
+                    )
+
+                if func == "water_to_ice":
+                    tmp = df_out.loc[t0:t1, "TA" + var[-1]]
+                    tmp2 = df_out.loc[t0:t1, "TA" + str(int(var[-1]) % 2 + 1)]
+                    tmp.loc[tmp.isnull()] = tmp2.loc[tmp.isnull()].values
+                    tmp = tmp.interpolate(method="nearest", fill_value="extrapolate")
+                    df_out.loc[t0:t1, var] = RH_water2ice(
+                        df_out.loc[t0:t1, var].values, tmp.values
+                    )
+
+                if func == "time_shift":
+                    t0 = pd.to_datetime(t0)
+                    t1 = pd.to_datetime(t1)
+
+                    if t1 + pd.Timedelta(hours=val) > df_out.index[-1]:
+                        # case where the files needs to be extended to receive the shifted data
+                        nb_new_rows = (
+                            t1 + pd.Timedelta(hours=val) - df_out.index[-1]
+                        ).total_seconds() / 3600
+                        df_new_rows = df_out.iloc[-int(nb_new_rows) :, :].copy()
+                        df_new_rows.loc[:, :] = np.NaN
+                        df_new_rows.index = df_new_rows.index + (
+                            t1 + pd.Timedelta(hours=val) - df_out.index[-1]
+                        )
+                        df_out = pd.concat((df_out, df_new_rows))
+
+                    df_out.loc[
+                        t0 + pd.Timedelta(hours=val) : t1 + pd.Timedelta(hours=val), var
+                    ] = df_out.loc[t0:t1, var].values
+
+                    if val > 0:
+                        if val < 10000:
+                            # errasing data that existed during the time shift
+                            col = df_out[var]
+                            if pd.api.types.is_numeric_dtype(col):
+                                df_out[var] = col.astype("float64")
+                                df_out.loc[t0:(t0 + pd.Timedelta(hours=val)), var] = np.nan
+                            else:
+                                df_out[var] = col.astype(object)
+                                df_out.loc[t0:(t0 + pd.Timedelta(hours=val)), var] = None
+                        else:
+                            # case of Crawford Point where only the shifted data should be errased
+                            col = df_out[var]
+                            if pd.api.types.is_numeric_dtype(col):
+                                df_out[var] = col.astype("float64")
+                                df_out.loc[t0:t1, var] = np.nan
+                            else:
+                                df_out[var] = col.astype(object)
+                                df_out.loc[t0:t1, var] = None
+                    else:
+                        df_out.loc[t1 + pd.Timedelta(hours=val) : t1, var] = np.nan
+
+                if (
+                    ("_qc" not in var) & ("_min" not in var) & ("_max" not in var)
+                    & ("_std" not in var)  & ("_adj_flag" not in var) & ("_min" not in var)
+                ):
+                    nan_count_2 = np.sum(np.isnan(df_out.loc[t0:t1, var].values))
+                    Msg("|" + str(t0) + "|" + str(t1)  + "|" + var +"|" + func
+                        + "|" + str(val) + "|" + str(nan_count_2 - nan_count_1) + "|"
+                    )
     return df_out
 
 
@@ -1095,7 +1098,7 @@ def augment_data(df_in, latitude, longitude, elevation, site):
         else:
             # we then adjust and filter all surface height (could be replaced by an automated adjustment)
             df_save=df.copy()
-            df = adjust_data(df, site, var_HS, skip_time_shifts=True)
+            df = adjust_data(df, site, var_list=[var_HS], skip_time_shifts=True)
             plot_flagged_data(df, df_save, site, var_list=var_HS)
 
 

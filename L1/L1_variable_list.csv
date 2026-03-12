@@ -17,8 +17,8 @@ TA2_max,DegreesC,air_temperature_2_max,airtemp2_maximum,real
 TA2_min,DegreesC,air_temperature_2_min,airtemp2_minimum,real
 TA3,DegreesC,air_temperature_cs500_1,airtemp_cs500_1,real
 TA4,DegreesC,air_temperature_cs500_2,airtemp_cs500_2,real
-RH1,%/100,relative_humidity_with_respect_to_water_1,rh1,real
-RH2,%/100,relative_humidity_with_respect_to_water_2,rh2,real
+RH1,%,relative_humidity_with_respect_to_water_1,rh1,real
+RH2,%,relative_humidity_with_respect_to_water_2,rh2,real
 VW1,m/s,wind_speed_1,windspeed1,real
 VW1_max,m/s,wind_speed_u1_max,windspeed_u1_maximum,real
 VW1_stdev,m/s,wind_speed_u1_stdev,windspeed_u1_stdev,real
@@ -63,12 +63,12 @@ ILWR,W/m^2,incoming_longwave_radiation,lwin,real
 SHF,W/m^2,sensible_heat_flux,shf,real
 LHF,W/m^2,latent_heat_flux,lhf,real
 TA2m,DegreesC,air_temperature_2m,airtemp_2m,real
-RH2m,%/100,relative_humidity_2m,rh_2m,real
+RH2m,%,relative_humidity_2m,rh_2m,real
 VW10m,m/s,wind_speed_10m,windspeed_10m,real
 SZA,Degrees,solar_zenith_angle,solar_zenith_angle,real
 SAA,Degrees,solar_azimuth_angle,solar_azimuth_angle,real
-RH1_wrt_ice_or_water,%/100,relative_humidity_with_respect_to_ice_when_subfreezing_1,rh1_wrt_ice_or_water,real
-RH2_wrt_ice_or_water,%/100,relative_humidity_with_respect_to_ice_when_subfreezing_2,rh2_wrt_ice_or_water,real
+RH1_wrt_ice_or_water,%,relative_humidity_with_respect_to_ice_when_subfreezing_1,rh1_wrt_ice_or_water,real
+RH2_wrt_ice_or_water,%,relative_humidity_with_respect_to_ice_when_subfreezing_2,rh2_wrt_ice_or_water,real
 Q1,g/kg,specific_humidity_1,q1,real
 Q2,g/kg,specific_humidity_2,q2,real
 Alb,-,surface_albedo,alb,real
