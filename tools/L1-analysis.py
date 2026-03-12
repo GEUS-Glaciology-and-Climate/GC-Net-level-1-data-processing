@@ -318,6 +318,77 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
 # tocgen.processFile("out/L1_overview.md", "out/L1_overview_toc.md")
 
+# %% Compare to previous versions
+
+site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)
+site_list = site_list.loc[site_list.Name.values == 'NASA-SE',:]
+
+old_base = r"C:/Users/bav/Downloads/GC-Net_historical/V8/hourly"
+
+var_list = [
+"ISWR","OSWR","NR","TA1","TA2","TA3","TA4","RH1","RH2","VW1","VW2","DW1","DW2",
+"P","HW1","HW2","V","TA5","TS1","TS2","TS3","TS4","TS5","TS6","TS7","TS8","TS9","TS10",
+"HS1","HS2","HS_combined","SHF","LHF","TA2m","RH2m","VW10m","Alb","RH1_cor","RH1_wrt_ice_or_water","Q1", "RH2_cor","RH2_wrt_ice_or_water", "Q2","latitude","longitude","elevation","DTS1","DTS2","DTS3","DTS4",
+"DTS5","DTS6","DTS7","DTS8","DTS9","DTS10","TS_10m"
+]
+
+for site, ID in zip(site_list.Name, site_list.ID):
+    plt.close("all")
+    site_clean = site.replace(" ", "")
+
+    filename = f"L1/hourly/{site_clean}.csv"
+    filename_old = f"{old_base}/{site_clean}.csv"
+
+    if not path.exists(filename):
+        print(f"Warning: No file for station {ID} {site_clean}")
+        continue
+
+    df = nead.read(filename).to_dataframe().reset_index(drop=True)
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index("timestamp").replace(-999, np.nan)
+
+    if path.exists(filename_old):
+        df_old = nead.read(filename_old).to_dataframe().reset_index(drop=True)
+        df_old.timestamp = pd.to_datetime(df_old.timestamp)
+        df_old = df_old.set_index("timestamp").replace(-999, np.nan)
+    else:
+        df_old = None
+
+    def new_fig():
+        fig, ax = plt.subplots(6, 1, sharex=True, figsize=(15, 15))
+        plt.subplots_adjust(
+            left=0.1, right=0.9, top=0.95, bottom=0.1, wspace=0.2, hspace=0.05
+        )
+        plt.suptitle(f"{ID} {site_clean}")
+        return fig, ax
+
+    fig, ax = new_fig()
+    count = 0
+    # var_list = ['P']
+    for var in var_list:
+        if var in df_old.columns:
+            df_old[var].plot(ax=ax[count], color='tab:blue', label="old", marker = '.')
+        if var in df.columns:
+            df[var].plot(ax=ax[count], color='tab:orange', label="new", marker='.')
+
+        ax[count].set_ylabel(var)
+        ax[count].legend(fontsize="x-small")
+
+        ax[count].grid()
+        ax[count].set_xlim((df.index[0], df.index[-1]))
+        count += 1
+
+        if count == 6:
+            plt.show()
+            fig, ax = new_fig()
+            count = 0
+
+    if count < 6:
+        ax[count].xaxis.set_tick_params(which="both", labelbottom=True)
+        for k in range(count + 1, len(ax)):
+            ax[k].set_axis_off()
+        plt.show()
+
 # %% data availability
 site_list = pd.read_csv("L1/GC-Net_location.csv", header=0)
 fig, ax = plt.subplots(1,1, figsize=(9,12))

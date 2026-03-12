@@ -1026,7 +1026,6 @@ Flagging data:
  
 Using metadata/interpolated positions/JAR1_position_interpolated.csv for variable latitude and longitude
 Using metadata/interpolated positions/GC-Net_elevation_tie_points.csv for variable elevation
-Cannot download maintenance summary. Using local file.
 # <a id='s6' />17 JAR2
 ## <a id='s6-1' />Interpolated values filter at JAR2
 ISWR: 50 samples flagged
@@ -1207,7 +1206,6 @@ Flagging data:
 ![Adjusted and flagged data at JAR2](figures/L1_data_treatment/JAR2_TS10.jpeg)
  
 Using metadata/interpolated positions/GC-Net_elevation_tie_points.csv for variable elevation
-Cannot download maintenance summary. Using local file.
 # <a id='s7' />19 JAR3
 ## <a id='s7-1' />Interpolated values filter at JAR3
 ISWR: 9 samples flagged
@@ -1489,7 +1487,6 @@ Flagging data:
 ![Adjusted and flagged data at NASA-U](figures/L1_data_treatment/NASA-U_HS2.jpeg)
  
 Using metadata/interpolated positions/NASA-U_position_interpolated.csv for variable latitude and longitude
-Cannot download maintenance summary. Using local file.
 # <a id='s9' />4 GITS
 ## <a id='s9-1' />Interpolated values filter at GITS
 ISWR: 259 samples flagged
@@ -1672,7 +1669,6 @@ Flagging data:
  
 ![Adjusted and flagged data at GITS](figures/L1_data_treatment/GITS_HS2.jpeg)
  
-Cannot download maintenance summary. Using local file.
 # <a id='s10' />5 Humboldt
 ## <a id='s10-1' />Interpolated values filter at Humboldt
 ISWR: 148 samples flagged
@@ -2062,7 +2058,6 @@ Flagging data:
 ![Adjusted and flagged data at Humboldt](figures/L1_data_treatment/Humboldt_HS2.jpeg)
  
 Using metadata/interpolated positions/Humboldt_position_interpolated.csv for variable latitude and longitude
-Cannot download maintenance summary. Using local file.
 # <a id='s11' />6 Summit
 ## <a id='s11-1' />Interpolated values filter at Summit
 ISWR: 207 samples flagged
@@ -2184,7 +2179,6 @@ Flagging data:
 ![Adjusted and flagged data at Summit](figures/L1_data_treatment/Summit_TS9.jpeg)
 ![Adjusted and flagged data at Summit](figures/L1_data_treatment/Summit_TS10.jpeg)
  
-Cannot download maintenance summary. Using local file.
 # <a id='s12' />7 Tunu-N
 ## <a id='s12-1' />Interpolated values filter at Tunu-N
 ISWR: 115 samples flagged
@@ -2310,7 +2304,6 @@ Flagging data:
 ![Adjusted and flagged data at Tunu-N](figures/L1_data_treatment/Tunu-N_TS10.jpeg)
  
 Using metadata/interpolated positions/Tunu-N_position_interpolated.csv for variable latitude and longitude
-Cannot download maintenance summary. Using local file.
 # <a id='s13' />8 DYE-2
 ## <a id='s13-1' />Interpolated values filter at DYE-2
 ISWR: 194 samples flagged
@@ -2487,7 +2480,6 @@ Warning: OSR not found
 ![Adjusted and flagged data at DYE-2](figures/L1_data_treatment/DYE-2_HS2.jpeg)
  
 Using metadata/interpolated positions/DYE-2_position_interpolated.csv for variable latitude and longitude
-Cannot download maintenance summary. Using local file.
 # <a id='s14' />10 Saddle
 ## <a id='s14-1' />Interpolated values filter at Saddle
 ISWR: 31 samples flagged
@@ -2632,7 +2624,6 @@ Flagging data:
  
 ![Adjusted and flagged data at Saddle](figures/L1_data_treatment/Saddle_HS2.jpeg)
  
-Cannot download maintenance summary. Using local file.
 # <a id='s15' />11 South Dome
 ## <a id='s15-1' />Interpolated values filter at South Dome
 ISWR: 293 samples flagged
@@ -2771,7 +2762,6 @@ Flagging data:
  
 ![Adjusted and flagged data at South Dome](figures/L1_data_treatment/SouthDome_HS2.jpeg)
  
-Cannot download maintenance summary. Using local file.
 # <a id='s16' />12 NASA-E
 ## <a id='s16-1' />Interpolated values filter at NASA-E
 ISWR: 18 samples flagged
@@ -2889,7 +2879,6 @@ Flagging data:
 ![Adjusted and flagged data at NASA-E](figures/L1_data_treatment/NASA-E_HS2.jpeg)
  
 Using metadata/interpolated positions/NASA-E_position_interpolated.csv for variable latitude and longitude
-Cannot download maintenance summary. Using local file.
 # <a id='s17' />15 NASA-SE
 ## <a id='s17-1' />Interpolated values filter at NASA-SE
 ISWR: 979 samples flagged
@@ -3001,7 +2990,6 @@ Flagging data:
 ![Adjusted and flagged data at NASA-SE](figures/L1_data_treatment/NASA-SE_TS10.jpeg)
  
 Using metadata/interpolated positions/NASA-SE_position_interpolated.csv for variable latitude and longitude
-Cannot download maintenance summary. Using local file.
 # <a id='s18' />14 NGRIP
 ## <a id='s18-1' />Interpolated values filter at NGRIP
 ISWR: 18 samples flagged
@@ -3083,7 +3071,6 @@ Flagging data:
 ![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS9.jpeg)
 ![Adjusted and flagged data at NGRIP](figures/L1_data_treatment/NGRIP_TS10.jpeg)
  
-Cannot download maintenance summary. Using local file.
 # <a id='s19' />23 NEEM
 ## <a id='s19-1' />Interpolated values filter at NEEM
 ISWR: 12 samples flagged
@@ -3350,7 +3337,6 @@ Flagging data:
  
 ![Adjusted and flagged data at KAR](figures/L1_data_treatment/KAR_HS2.jpeg)
  
-Cannot download maintenance summary. Using local file.
 # <a id='s22' />18 KULU
 ## <a id='s22-1' />Interpolated values filter at KULU
 ISWR: 73 samples flagged
@@ -3561,7 +3547,6 @@ Flagging data:
  
 ![Adjusted and flagged data at Petermann Glacier](figures/L1_data_treatment/PetermannGlacier_HS2.jpeg)
  
-Cannot download maintenance summary. Using local file.
 # <a id='s25' />22 Petermann ELA
 ## <a id='s25-1' />Interpolated values filter at Petermann ELA
 ISWR: 16 samples flagged
@@ -3651,7 +3636,6 @@ Flagging data:
 ![Adjusted and flagged data at Petermann ELA](figures/L1_data_treatment/PetermannELA_TS10.jpeg)
  
 Using metadata/interpolated positions/Petermann ELA_position_interpolated.csv for variable latitude and longitude
-Cannot download maintenance summary. Using local file.
 # <a id='s26' />33 SMS-PET
 ## <a id='s26-1' />Interpolated values filter at SMS-PET
 TA1: 3 samples flagged

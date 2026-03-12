@@ -49,7 +49,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE-2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
-# site_list = site_list.loc[site_list.Name.values == 'Humboldt',:]
+# site_list = site_list.loc[site_list.Name.values == 'NASA-SE',:]
 # site_list = site_list[17:]
 # %
 for site, ID in zip(site_list.Name, site_list.ID):
@@ -104,15 +104,15 @@ for site, ID in zip(site_list.Name, site_list.ID):
     df_roc = ptb.roc_filter_dataframe(df_v5)
 
     ptb.plot_flagged_data(df_roc, df_out, site)
-    df_v5 = ptb.remove_flagged_data(df_v5)
+    df_v5b = ptb.remove_flagged_data(df_roc.copy())
 
     # correction of the net radiometer for windspeed
     if 'NR' in df_v5.columns:
-        df_v5 = ptb.correct_net_rad(df_v5,site)
+        df_v5b = ptb.correct_net_rad(df_v5b,site)
 
     # interpolating short gaps and calculating added variables
     df_v5b = ptb.augment_data(
-        df_v5,
+        df_v5b.copy(),
         site_list.loc[site_list.Name == site, "Latitude (°N)"].values[0],
         site_list.loc[site_list.Name == site, "Longitude (°E)"].values[0],
         site_list.loc[site_list.Name == site, "Elevation (wgs84 m)"].values[0],
