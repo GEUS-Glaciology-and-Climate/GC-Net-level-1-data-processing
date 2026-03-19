@@ -15,6 +15,7 @@ t0,t1,variable,flag,comment,URL_graphic
 2017-08-25T00:00:00+00:00,2018-05-26T00:00:00+00:00,HW2,CHECKME,removed by bav
 
 2009-11-01T00:00:00+00:00,2010-04-30T00:00:00+00:00,VW1,NAN, frozen anemometer (bav)
+2012-01-01T00:00:00+00:00,,VW1,NAN, too low values (bav)
 
 2019-01-01T00:00:00+00:00,2019-05-26T00:00:00+00:00,VW2,NAN, frozen anemometer (bav)
 2017-11-01T00:00:00+00:00,2019-05-26T00:00:00+00:00,VW1,NAN, frozen anemometer (bav)
