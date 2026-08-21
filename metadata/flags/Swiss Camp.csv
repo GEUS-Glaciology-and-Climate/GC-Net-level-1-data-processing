@@ -1,4 +1,9 @@
 t0,t1,variable,flag,comment,URL_graphic
+2003-09-01T00:00:00+00:00,2004-07-01T00:00:00+00:00,TA1,NAN,Manually flagged by bav,
+2003-09-01T00:00:00+00:00,2004-07-01T00:00:00+00:00,TA2,NAN,Manually flagged by bav,
+2003-09-01T00:00:00+00:00,2004-07-01T00:00:00+00:00,TA3,NAN,Manually flagged by bav,
+2003-09-01T00:00:00+00:00,2004-07-01T00:00:00+00:00,TA4,NAN,Manually flagged by bav,
+
 2015-06-01T00:00:00+00:00,2016-05-01T00:00:00+00:00,RH1,NAN,Manually flagged by bav,
 2009-07-01T00:00:00+00:00,2009-07-01T00:00:00+00:00,ISWR,NAN,Manually flagged by bav,
 2009-07-01T00:00:00+00:00,2009-07-01T00:00:00+00:00,OSWR,NAN,Manually flagged by bav,
