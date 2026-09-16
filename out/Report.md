@@ -95,6 +95,7 @@ Flagging data:
  
 ![Adjusted and flagged data at Swiss Camp 10m](figures/L1_data_treatment/SwissCamp10m_HS2.jpeg)
  
+Using metadata/interpolated positions/Swiss Camp 10m_position_interpolated.csv for variable latitude and longitude
 Using metadata/interpolated positions/GC-Net_elevation_tie_points.csv for variable elevation
 # 1 Swiss Camp
 ## Interpolated values filter at Swiss Camp
@@ -131,6 +132,10 @@ Tsurf2: 18 samples flagged
 Flagging data:
 |start time|end time|variable|
 |-|-|-|
+|2003-09-01 00:00:00+00:00|2004-07-01 00:00:00+00:00|TA1|
+|2003-09-01 00:00:00+00:00|2004-07-01 00:00:00+00:00|TA2|
+|2003-09-01 00:00:00+00:00|2004-07-01 00:00:00+00:00|TA3|
+|2003-09-01 00:00:00+00:00|2004-07-01 00:00:00+00:00|TA4|
 |2015-06-01 00:00:00+00:00|2016-05-01 00:00:00+00:00|RH1|
 |2009-07-01 00:00:00+00:00|2009-07-01 00:00:00+00:00|ISWR|
 |2009-07-01 00:00:00+00:00|2009-07-01 00:00:00+00:00|OSWR|
