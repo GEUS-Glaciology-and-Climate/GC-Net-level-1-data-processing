@@ -300,14 +300,14 @@ for i in range(len(L0dirs)):
         print('\nTransmissions:')
         date_end = dfm.timestamp.iloc[-1].strftime("%Y-%m-%d")
         date_now = datetime.now().strftime("%Y-%m-%d")  # current date and time
-                
-        
-        if date_end < metadata.loc[metadata.Name == site,'LastValidDate'].values[0]:
+
+
+        if date_end < metadata.loc[metadata.Name == site,'Last valid time'].values[0]:
             print('Fetching latest transmission.')
-            dfm = gc.get_transmission(site, 
-                                   date_end, 
-                                   date_now, 
-                                   dfm, 
+            dfm = gc.get_transmission(site,
+                                   date_end,
+                                   date_now,
+                                   dfm,
                                    path + L0dirs[i] + "/transmissions/",
                                    )
         else:
@@ -347,14 +347,14 @@ for i in range(len(L0dirs)):
             msk_neg = tmp.NR<0
             tmp.loc[msk_neg, 'NR'] = tmp.loc[msk_neg, 'NR'] *cr10x_info.calib_NR_neg.values[0]
             df_cr10x = pd.concat([df_cr10x, tmp])
-            
+
         print("Merging CR10X and CR1000 logger files dataframes")
         dfm = dfm.set_index("timestamp")
         df_cr10x = df_cr10x.set_index("timestamp")
         dfm = pd.concat([df_cr10x, dfm])
     else:
         print('No header specified for CR10X logger files')
-    
+
     # if swiss camp 10 m loading old logger files
     if i == 0:
         print("\nLoading CR27 logger files")
@@ -362,7 +362,7 @@ for i in range(len(L0dirs)):
         dfm = pd.concat([df_old, dfm])
         print("\nMerging CR10X and CR1000 logger files dataframes")
 
-        
+
     # read and merge historical c-level file
     print('\n\nLooking for C-level files to fill the gaps')
     if os.path.isfile(cfiledir):
@@ -370,20 +370,18 @@ for i in range(len(L0dirs)):
         c_file_header_str = write_nead.get_config_list_str(cconfigfile, "fields")
         dfc = gc.read_c_file(cfiledir, c_file_header_str)
         dfc.index = pd.to_datetime(dfc.index, utc=True)
-        
+
         if os.path.isfile(cfiledir_jeb):
             cconfigfile = "./L0//C level Jason/c_file_header_jeb.ini"
             c_file_header_str = write_nead.get_config_list_str(cconfigfile, "fields")
             dfc_jeb = gc.read_c_file(cfiledir_jeb, c_file_header_str)
             dfc_jeb.index = pd.to_datetime(dfc_jeb.index, utc=True)
-            
+
             TS_col = [v for v in dfc_jeb.columns if 'TS' in v]
             dfc_jeb[TS_col] = dfc.loc[dfc_jeb.index[0]:dfc_jeb.index[-1] , TS_col]
             if isinstance(starttime, datetime):
-                try:
-                    starttime = pytz.utc.localize(starttime)
-                except:
-                    pass
+                starttime = pd.to_datetime(starttime, utc=True)
+
                 needed_dfc_jeb = dfc_jeb[
                     : np.minimum(starttime, max(dfc_jeb.index)) - pd.Timedelta(hours=1)
                 ]
@@ -438,4 +436,3 @@ for i in range(len(L0dirs)):
 
     # clear dfm from memory before next station
     # del dfm
-    

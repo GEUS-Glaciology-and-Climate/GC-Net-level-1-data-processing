@@ -158,11 +158,11 @@ def nameLevel0col(dfm):
     # print("Warning:", target_var[~ind], "are not in the L0 data file")
     ind = np.isin(dfm.columns, target_var)
     missing_var = (~ind & ~np.isin(dfm.columns,
-                                   ['timestamp', 'record', 'loggerid', 
+                                   ['timestamp', 'record', 'loggerid',
                                     'year', 'day_of_year', 'hour',
                                     'val(1)', 'val(2)', 'val(3)', 'val(4)']))
     if any(missing_var) > 0:
-        
+
         print(
             "====> Warning:",
             dfm.columns[missing_var],
@@ -227,7 +227,7 @@ def read_c_file(c_file_path, c_file_header_str):
         dfc.DoY - 1, unit="d"
     )
     # round to the nearest hour (there is some remainder from fractional day)
-    dfc["timestamp"] = dfc["timestamp"].dt.round("H")
+    dfc["timestamp"] = dfc["timestamp"].dt.round("h")
     dfc = dfc.set_index("timestamp")
     # pd.to_datetime(dfc.index)
     # remove any possible duplicate datetimes
@@ -244,7 +244,7 @@ def get_transmission(site, date_end, date_now, dfm, local_path):
     # we just use that last available transimission file for the stations
     # that could not be visited in 2021 and 2022 (last available transmission
     # 2022-09-20)
-    
+
     # envidat_alias = {
     #     "Swiss Camp 10m": "swisscamp_10m_tower",
     #     "Swiss Camp": "swisscamp",
@@ -269,8 +269,8 @@ def get_transmission(site, date_end, date_now, dfm, local_path):
     #     os.mkdir(local_path)
     # except:
     #     pass
-    
-    
+
+
     # remote_url = (
     #     "https://www.envidat.ch/data-api/gcnet/nead/"
     #     + envidat_alias[site]
@@ -328,62 +328,62 @@ def get_transmission(site, date_end, date_now, dfm, local_path):
 
 def load_old_logger_file(plot=True):
     df_all = pd.DataFrame()
-    
+
     # plt.close('all')
     if plot:
         fig, ax = plt.subplots(2,3, figsize=(16,9))
         ax=ax.flatten()
-        CB_color_cycle = ['#377eb8', '#ff7f00', '#4daf4a', '#f781bf', '#a65628', 
+        CB_color_cycle = ['#377eb8', '#ff7f00', '#4daf4a', '#f781bf', '#a65628',
                           '#984ea3', '#999999', '#e41a1c', '#dede00']
     file_list = os.listdir('L0/00-Swiss Camp 10m/CR27 logger files/')
     for year in range(1995, 1999):
         path = 'L0/00-Swiss Camp 10m/CR27 logger files/'
         filename = [f for f in file_list if f.startswith(str(year))][-1]
         year_start = year-1
-        
+
         file1 = open(path + filename, 'r')
         Lines = file1.readlines()
         Lines_met = [];     Lines_rad = []
         count = 0;
         # Strips the newline character
-        for i, line in enumerate(Lines):   
+        for i, line in enumerate(Lines):
             if line.startswith('205') or line.startswith('202') or line.startswith('206'):
                 count += 1
                 Lines_met.append(line[4:])
                 current_day = int(Lines_met[-1].split(',')[0])
                 current_hour = int(Lines_met[-1].split(',')[1])
-        
+
             if line.startswith('103') and count>0:
                 if current_hour == 2400:
                     current_hour = 0
                     current_day = current_day +1
-                        
+
                 Lines_rad.append(str(current_day) + ',' + str(current_hour) + ',' + line[4:])
                 current_hour = current_hour+100
-        
+
         with open('L0/00-Swiss Camp 10m/CR27 logger files/processed_bav/' +  filename[:-4] + '_met_3h.csv', 'w') as f:
             f.write('day_of_year,hour,VW1,TA1,TA2,RH1,VW2,TA1_max,TA2_max,RH1_max,' \
                     + 'VW1_min,TA1_min,TA2_min,RH1_min,DW1,unkw\n')
-            
+
             for line in Lines_met:
                 if line.count(',') <= 5:
                     # then format is jd,time,wind,wmax,tair,wdir
                     tmp = line.replace('\n','').split(',')
                     line = ','.join([tmp[0], tmp[1], tmp[2], tmp[4], '', '',  tmp[3], '', '', '','','', '', '', tmp[5],  '\n'])
-                
+
                 if line.count(',') < 15:
                     line = line[:-1] + ','*(15-line.count(',')) + '\n'
                 f.write(line)
-        
+
         with open('L0/00-Swiss Camp 10m/CR27 logger files/processed_bav/'  +  filename[:-4] + '_rad_h.csv', 'w') as f:
             f.write('day_of_year,hour,r1,r2,r3,NR\n')
-            
+
             for line in Lines_rad:
                 # if line.count(',') < 27:
                 #     line = line[:-1] + ','*(27-line.count(',')) + '\n'
                 f.write(line)
-        
-        
+
+
         df_met = pd.read_csv('L0/00-Swiss Camp 10m/CR27 logger files/processed_bav/'  +  filename[:-4] + '_met_3h.csv', index_col = False)
         df_met[df_met==-6999] = np.nan
         df_met['year'] = year_start
@@ -397,18 +397,18 @@ def load_old_logger_file(plot=True):
         else:
             print(wtf)
         df_met['timestamp'] = pd.to_datetime(df_met.year * 100000 + df_met.day_of_year * 100 + df_met.hour/100 , utc=True, format='%Y%j%H')
-            
+
         # correction for wrong offset during winter 95/96
         msk= df_met.TA1 > 300
         df_met.loc[msk, ['TA1', 'TA1_max', 'TA1_min']] = df_met.loc[msk, ['TA1', 'TA1_max', 'TA1_min']] - 400
         df_met = df_met.set_index('timestamp')
-        
-        # convert UUB thermister reading to temperature      
+
+        # convert UUB thermister reading to temperature
         for var in ['TA1', 'TA1_max', 'TA1_min']:
             df_met[var] = -9.0763671 + 0.704343 * df_met[var] \
                 + 0.00919 * (df_met[var]**2) + 0.000137 * (df_met[var]**3) \
                 + 0.00000116676 * (df_met[var]**4) + 0.00000000400674*(df_met[var]**5)
-        
+
         df_rad = pd.read_csv('L0/00-Swiss Camp 10m/CR27 logger files/processed_bav/'  + filename[:-4] + '_rad_h.csv', index_col = False)
         df_rad[df_rad==-6999] = np.nan
         df_rad['year'] = year_start
@@ -421,35 +421,35 @@ def load_old_logger_file(plot=True):
             df_rad.loc[yr_shift[1]:, 'year'] = year_start +1
         else:
             print(wtf)
-        
+
         df_rad['timestamp'] = pd.to_datetime(df_rad.year * 100000 + df_rad.day_of_year * 100 + df_rad.hour/100 , utc=True, format='%Y%j%H')
         df_rad = df_rad.set_index('timestamp')
-    
+
         # convert Li-Core mV to W/m2
         df_rad['ISWR'] = df_rad.r1 * 106.49
         df_rad['ISWR2'] = df_rad.r2 * 105.89
         df_rad['OSWR'] = df_rad.r3 * 105.92
         # convert net radiation mv to W/m2
-        # new net radiation sensor in 97 (old one from Boulder)	
+        # new net radiation sensor in 97 (old one from Boulder)
         # df_rad['NR'] = df_rad.net * 13.3
         msk_pos = df_rad.NR>0
         df_rad.loc[msk_pos, 'NR'] = df_rad.loc[msk_pos, 'NR'] * 13.3*1.182
         msk_neg = df_rad.NR<0
         df_rad.loc[msk_neg, 'NR'] = df_rad.loc[msk_neg, 'NR'] * 13.3*0.962
-        
+
         print('\n', filename[:-4], 'met data')
         print('start date', df_met.index[0])
         print('end date', df_met.index[-1])
         print('resolution', np.unique(np.diff(df_met.index)))
-        
+
         print('\n', filename[:-4], 'radiation data')
         print('start date', df_rad.index[0])
         print('end date', df_rad.index[-1])
         print('resolution', np.unique(np.diff(df_rad.index)))
-    
+
         # interpolating to hourly values
         df_met = df_met.resample('H').mean().ffill(limit=3)
-        
+
         # plotting
         if plot:
             if year != 1998:
@@ -462,24 +462,24 @@ def load_old_logger_file(plot=True):
             df_met.DW1.plot(ax=ax[5], label='_nolegend_', color=CB_color_cycle[year-1995])
             i=0
             ax[i].plot(np.nan, np.nan, label =  filename, color=CB_color_cycle[year-1995])
-        
+
         # adding to table
         if len(df_all) == 0:
-            df_all = df_met[['VW1', 'TA1', 'TA2', 'RH1', 'VW2', 'TA1_max', 
+            df_all = df_met[['VW1', 'TA1', 'TA2', 'RH1', 'VW2', 'TA1_max',
                              'TA2_max', 'RH1_max', 'VW1_min', 'TA1_min', 'TA2_min',
                              'RH1_min', 'DW1']]
             df_all = pd.concat((df_all, df_rad[['ISWR', 'ISWR2', 'OSWR', 'NR',]]))
         else:
-            df_all = pd.concat((df_all, df_met[['VW1', 'TA1', 'TA2', 'RH1', 'VW2', 
-                                           'TA1_max', 'TA2_max', 'RH1_max', 
-                                           'VW1_min', 'TA1_min', 'TA2_min', 
+            df_all = pd.concat((df_all, df_met[['VW1', 'TA1', 'TA2', 'RH1', 'VW2',
+                                           'TA1_max', 'TA2_max', 'RH1_max',
+                                           'VW1_min', 'TA1_min', 'TA2_min',
                                            'RH1_min', 'DW1']]))
             df_all = pd.concat((df_all, df_rad[['ISWR', 'ISWR2', 'OSWR', 'NR',]]))
-    
-    # %% 
+
+    # %%
     filename = '1993_KLIMA.DAT'
     year_start = 1993
-    
+
     file1 = open(path + filename, 'r')
     Lines = file1.readlines()
     Lines_met = []
@@ -487,33 +487,33 @@ def load_old_logger_file(plot=True):
     count = 0
     count2 = 0
     # Strips the newline character
-    for i, line in enumerate(Lines):   
+    for i, line in enumerate(Lines):
         if line.startswith('205') or line.startswith('202') or line.startswith('206'):
             count += 1
             Lines_met.append(line[4:])
             count2 = 0
             current_day = int(Lines_met[-1].split(',')[0])
             current_hour = int(Lines_met[-1].split(',')[1])
-    
+
         if line.startswith('103') and count>0:
             count2 += 1
             if current_hour == 2400:
                 current_hour = 0
                 current_day = current_day +1
-                    
+
             Lines_rad.append(str(current_day) + ',' + str(current_hour) + ',' + line[4:])
             current_hour = current_hour+10
-    
+
     with open('L0/00-Swiss Camp 10m/CR27 logger files/processed_bav/' +  filename[:-4] + '_met_3h.csv', 'w') as f:
         f.write('day_of_year,hour,VW1,VW1_max,TA1,DW1\n')
         for line in Lines_met:
             f.write(line)
-    
+
     with open('L0/00-Swiss Camp 10m/CR27 logger files/processed_bav/'  +  filename[:-4] + '_rad_h.csv', 'w') as f:
         f.write('day_of_year,hour,r1,r2,r3,NR\n')
         for line in Lines_rad:
             f.write(line)
-    
+
     df_met = pd.read_csv('L0/00-Swiss Camp 10m/CR27 logger files/processed_bav/'  +  filename[:-4] + '_met_3h.csv', index_col = False)
     df_met[df_met==-6999] = np.nan
     df_met['year'] = year_start
@@ -529,13 +529,13 @@ def load_old_logger_file(plot=True):
     else:
         print(wtf)
     df_met['timestamp'] = pd.to_datetime(df_met.year * 100000 + df_met.day_of_year * 100 + df_met.hour/100 , utc=True, format='%Y%j%H')
-        
+
     # correction for wrong offset during winter 95/96
     msk= df_met.TA1 > 300
     df_met.loc[msk, ['TA1']] = df_met.loc[msk, ['TA1']] - 400
     df_met = df_met.set_index('timestamp')
-    
-    # convert UUB thermister reading to temperature      
+
+    # convert UUB thermister reading to temperature
     a=-9.0763671
     b=0.704343
     c=0.00919
@@ -546,7 +546,7 @@ def load_old_logger_file(plot=True):
         df_met[var] = a + b * df_met[var] \
             + c * (df_met[var]**2) + d * (df_met[var]**3) \
             + e * (df_met[var]**4) + f*(df_met[var]**5)
-    
+
     df_rad = pd.read_csv('L0/00-Swiss Camp 10m/CR27 logger files/processed_bav/'  + filename[:-4] + '_rad_h.csv', index_col = False)
     df_rad[df_rad==-6999] = np.nan
     df_rad['year'] = year_start
@@ -563,16 +563,16 @@ def load_old_logger_file(plot=True):
         print(wtf)
     df_met.to_csv('L0/00-Swiss Camp 10m/CR27 logger files/processed_bav/'  + filename[:-4] + '_met_3h.csv',  sep=' ', float_format='%.3f',
                   index=False)
-    
+
     df_rad['timestamp'] = pd.to_datetime(df_rad.year * 10000000 + df_rad.day_of_year * 10000 + df_rad.hour , utc=True, format='%Y%j%H%M')
     df_rad = df_rad.set_index('timestamp')
-    
+
     # convert Li-Core mV to W/m2
     df_rad['ISWR'] = df_rad.r1 * 106.49
     df_rad['ISWR2'] = df_rad.r2 * 105.89
     df_rad['OSWR'] = df_rad.r3 * 105.92
     # convert net radiation mv to W/m2
-    # new net radiation sensor in 97 (old one from Boulder)	
+    # new net radiation sensor in 97 (old one from Boulder)
     # df_rad['NR'] = df_rad.net * 13.3
     msk_pos = df_rad.NR>0
     df_rad.loc[msk_pos, 'NR'] = df_rad.loc[msk_pos, 'NR'] * 13.3*1.182
@@ -585,17 +585,17 @@ def load_old_logger_file(plot=True):
     print('start date', df_met.index[0])
     print('end date', df_met.index[-1])
     print('resolution', np.unique(np.diff(df_met.index)))
-    
+
     print('\n', filename, 'radiation data')
     print('start date', df_rad.index[0])
     print('end date', df_rad.index[-1])
     print('resolution', np.unique(np.diff(df_rad.index)))
-       
+
     df_all = pd.concat((df_all, df_met[[ 'VW1', 'VW1_max', 'TA1', 'DW1']]))
     df_all = pd.concat((df_all, df_rad.resample('H',label='right').mean()[['ISWR', 'ISWR2', 'OSWR', 'NR',]]))
-    
-    # %% 
-    ################################## 3 hours ################################### 
+
+    # %%
+    ################################## 3 hours ###################################
     filename = '1993_MET_91-93_3h_doy.hh.DAT'
     df_93 = pd.read_csv(path+filename, sep = ' ')
     df_93['year'] = 1991
@@ -613,7 +613,7 @@ def load_old_logger_file(plot=True):
     # interpolating to hourly values
     df_93 = df_93.resample('H').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_93))
-    ############################ 3 hours ##################################### 
+    ############################ 3 hours #####################################
     filename='1993_MET_90_3h_doy.hh.DAT'
     df_90 = pd.read_csv(path+filename, sep = ' ')
     df_90['year'] = 1990
@@ -628,18 +628,18 @@ def load_old_logger_file(plot=True):
     # interpolating to hourly values
     df_93 = df_93.resample('H').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_90))
-    
-    ############################ 3 hours ##################################### 
+
+    ############################ 3 hours #####################################
     filename='1994_T_W_R_93-94_3h.DAT'
     df_94_twr = pd.read_csv(path + filename, header=None, delim_whitespace=True)
-    df_94_twr=df_94_twr.rename(columns={0:'JD', 1:'VW1', 2:'VW1_max', 
+    df_94_twr=df_94_twr.rename(columns={0:'JD', 1:'VW1', 2:'VW1_max',
                                         3:'DW1', 4:'TA1', 5:'ISWR', 6:'ISWR2',
-                                        7:'OSWR', 8:'alb1', 9:'alb2', 10:'NR', 
+                                        7:'OSWR', 8:'alb1', 9:'alb2', 10:'NR',
                                         11:'ILWR'})
     df_94_twr['year'] = 1993
     yr_shift = df_94_twr.index.values[df_94_twr.JD.diff()<-1]
     df_94_twr.loc[yr_shift[0]:, 'year'] = 1993+1
-    
+
     df_94_twr['timestamp'] = pd.to_datetime(df_94_twr.year * 100000 \
                             + np.trunc(df_94_twr.JD) * 100 \
                             + np.round((df_94_twr.JD-np.trunc(df_94_twr.JD))*24) ,
@@ -674,8 +674,8 @@ def load_old_logger_file(plot=True):
     # interpolating to hourly values
     df_1993_tower = df_1993_tower.resample('H').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_1993_tower))
-    
-    ########################### hourly ########################################### 
+
+    ########################### hourly ###########################################
     filename = '1991_TOWER_90-91_10m.DAT'
     df_91 = pd.read_fwf(path + filename,
                      widths = [15, 10, 9, 9, 9, 9],
@@ -688,8 +688,8 @@ def load_old_logger_file(plot=True):
     print('end date', df_91.index[-1])
     print('resolution', np.unique(np.diff(df_91.index)))
     df_all = df_91.resample('H',label='right').mean().combine_first(df_all)
-    
-    ############################ hourly ###################################### 
+
+    ############################ hourly ######################################
     filename= '1994_RAD_ALL_93-94_h.DAT'
     df_94_rad = pd.read_csv(path + filename,  delim_whitespace=True)
     df_94_rad[df_94_rad.ISWR<0] = np.nan
@@ -699,7 +699,7 @@ def load_old_logger_file(plot=True):
     df_94_rad['year'] = 1993
     yr_shift = df_94_rad.index.values[df_94_rad.JD.diff()<-1]
     df_94_rad.loc[yr_shift[0]:, 'year'] = 1993+1
-    
+
     df_94_rad['timestamp'] = pd.to_datetime(df_94_rad.year * 100000 \
                             + np.trunc(df_94_rad.JD) * 100 \
                             + np.round((df_94_rad.JD-np.trunc(df_94_rad.JD))*24) ,
@@ -710,14 +710,14 @@ def load_old_logger_file(plot=True):
     print('end date', df_94_rad.index[-1])
     print('resolution', np.unique(np.diff(df_94_rad.index[df_94_rad.index.notnull()])))
     df_all = df_94_rad.combine_first(df_all)
-    
-    ######################### 30 min ####################################### 
+
+    ######################### 30 min #######################################
     filename = '1990_RAD90.DAT'
-    df_rad90 = pd.read_csv(path + filename, 
+    df_rad90 = pd.read_csv(path + filename,
                            delim_whitespace=True, header=None)
     df_rad90[df_rad90==-999] = np.nan
     df_rad90 = df_rad90.rename(columns={0:'year', 1:'month', 2:'day',3:'hour',4:'minute'})
-    df_rad90.year = df_rad90.year+1900  
+    df_rad90.year = df_rad90.year+1900
     df_rad90['timestamp'] = pd.to_datetime(df_rad90[['year','month','day','hour','minute']], utc = True)
     df_rad90 = df_rad90.set_index('timestamp').drop(columns=['year','month','day','hour','minute'])
     df_rad90.columns=['ISWR','SZA?','ISWR2','OSWR','OSWR2','alb1','alb2','SZA?','LWR1','LWR2','LWR','NR','NR2','ISWR3','alb3','alb4']
@@ -730,7 +730,7 @@ def load_old_logger_file(plot=True):
 
     ######################### 30 min #######################################
     filename='1990_SYNO90.DAT'
-    df_syno = pd.read_csv(path+filename, 
+    df_syno = pd.read_csv(path+filename,
                            delim_whitespace=True, header=None)
     df_syno[df_syno==-99.9] = np.nan
     df_syno = df_syno.rename(columns={0:'day', 1:'month', 2:'hour',3:'minute'})
@@ -742,19 +742,19 @@ def load_old_logger_file(plot=True):
     print('start date', df_syno.index[0])
     print('end date', df_syno.index[-1])
     print('resolution', np.unique(np.diff(df_syno.index[df_syno.index.notnull()])))
-    
-    df_syno = df_syno.resample('H', label='right').mean()                  
+
+    df_syno = df_syno.resample('H', label='right').mean()
     df_rad90 = pd.concat((df_rad90, df_syno))
     df_all = pd.concat((df_all, df_rad90))
-    
+
     df_all = df_all.sort_index()
-    
+
     df_all = df_all.drop(columns=['timestamp','year'])
     df_all = df_all.groupby(level=0).mean()
     # tmp = ( (df_all.groupby(level=0).mean() != df_all.groupby(level=0).max()) & df_all.groupby(level=0).max().notnull())
-    
+
     # plt.plot(df_syno['RH1'].values,df_syno['?'].values,marker='.',linestyle='None')
-    
+
     # # plt.close('all')
     # varlist = df_rad90.columns
     # df_rad90[[v for v in varlist if 'ISWR' in v]].plot()
