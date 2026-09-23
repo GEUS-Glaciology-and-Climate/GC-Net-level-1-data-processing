@@ -1,0 +1,29 @@
+logger_type = "CR10X"
+
+[[array]]
+id = -1
+ncols = 17
+column_header = ["_", "_", "NR", "TA1", "TA2", "_", "_", "VW2", "VW1", "_", "_", "_", "_", "_"]
+[[array.run]]
+row_from = 0
+row_to = 15451
+start_year = 2002
+
+[calibration.ISWR]
+scale_pos = 186.45
+scale_neg = 186.45
+add = 0
+source = "implied by C-level (1 runs); no station calibration in the repository"
+
+[calibration.NR]
+scale_pos = 9.3
+scale_neg = 11.452
+add = 0
+source = "differs: C-level factor over 1480 h in 2002-2003 (documented 1.0) / differs: C-level factor over 3135 h in 2002-2003 (documented 1.0)"
+
+[calibration.OSWR]
+scale_pos = 188.95
+scale_neg = 188.95
+add = 0
+source = "implied by C-level (1 runs); no station calibration in the repository"
+

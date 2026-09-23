@@ -22,8 +22,7 @@ import matplotlib.dates as mdates
 import requests
 
 # os.chdir('..')
-import tocgen
-
+from lib import tocgen
 # %% L0 overview
 path_to_L0N = "L0M/"
 site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=True)

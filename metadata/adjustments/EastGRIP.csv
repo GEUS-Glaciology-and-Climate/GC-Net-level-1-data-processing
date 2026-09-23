@@ -23,3 +23,4 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2019-05-22T00:00:00+00:00,,DW1,rotate,185,Manually filtered by bav
 
 2016-04-01T00:00:00+00:00, 2021-10-01T00:00:00+00:00, P, hampel_filter,10,Manually filtered by bav
+# RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.

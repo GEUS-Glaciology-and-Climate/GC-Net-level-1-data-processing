@@ -1,6 +1,6 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-# calibration of OSWR with LiCor offset
-2009-05-06T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their sidecars (calibration.ISWR/OSWR in the <file>.toml),
+# those of the C-level files in metadata/c_level_corrections.csv.
 
 2018-02-01T00:00:00+00:00,2019-12-20T00:00:00+00:00,TA3,max_filter,9,Manually flagged by bav
 2013-02-01T00:00:00+00:00,2015-12-20T00:00:00+00:00,TA4,max_filter,9,Manually flagged by bav
@@ -25,3 +25,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # time adjustments
 2003-04-24, 2005-05-07, *, time_shift,  24, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/60
 2011-06-01T00:00:00+00:00, 2012-05-09T00:00:00+00:00, *, time_shift,  -745, 
+# RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.
+
+# pressure sensor swap in 2016-17: from 2017-01-13 the logger P is exactly 400 hPa below the C-level P (corr 1.000, same variability) and ~400 hPa below the barometric expectation
+# for 908 m a.s.l.; before 2016 the logger P is correct. The cumulative CR1000 downloads overlap, so this cannot be a per-file decoding offset. See release_note_2026.md.
+2017-01-13T00:00:00+00:00,,P,add,400,JAR1 pressure sensor swap: logger P read without the +400 hPa offset (agrees with C-level once added)

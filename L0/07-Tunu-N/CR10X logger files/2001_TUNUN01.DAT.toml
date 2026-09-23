@@ -1,0 +1,47 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 12
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "_", "VW2", "DW1", "DW2", "_", "HW1", "HW2"]
+[[array.run]]
+row_from = 0
+row_to = 17999
+start_year = 1999
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "documented: C-level factor over 9687 h in 1999-2001 (documented 200.0)"
+
+[calibration.NR]
+scale_pos = 9.43
+scale_neg = 11.66
+add = 0
+source = "documented: C-level factor over 295 h in 1999-2001 (documented 9.43) / documented: C-level factor over 6300 h in 1999-2001 (documented 11.66)"
+
+[calibration.OSWR]
+scale_pos = 186.8
+scale_neg = 186.8
+add = 0
+source = "differs: C-level factor over 9119 h in 1999-2001 (documented 200.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (3 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 0.998909
+scale_neg = 0.998909
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 0.998909
+scale_neg = 0.998909
+add = 0
+source = "CR1000 header"
+

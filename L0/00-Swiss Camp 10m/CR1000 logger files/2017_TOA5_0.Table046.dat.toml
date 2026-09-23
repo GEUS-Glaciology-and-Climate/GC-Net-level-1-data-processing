@@ -1,0 +1,69 @@
+logger_type = "CR1000"
+
+column_header = ["timestamp", "ISWR", "OSWR", "NR", "TA1", "TA1_max", "TA1_min", "TA3", "TA4", "RH1", "RH2", "VW1", "VW1_max", "VW2", "VW2_max", "DW1", "DW2", "P", "HW1", "HW2", "V"]
+
+
+[calibration.ISWR]
+scale = 80
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.OSWR]
+scale = 77
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.NR]
+scale = 80
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.TA1]
+scale = 1.00007
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.TA1_max]
+scale = 1.00007
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.TA1_min]
+scale = 1.00007
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.TA3]
+scale = 1.00048
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.TA4]
+scale = 1.00048
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.VW1]
+scale = 1.00091
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.VW1_max]
+scale = 1.00091
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.VW2]
+scale = 1.00091
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.VW2_max]
+scale = 1.00091
+add = 0
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"
+
+[calibration.P]
+scale = 1
+add = 400
+source = "restored from the former 00-Swiss Camp 10m_header.ini (main branch, commit 8210be0)"

@@ -1,0 +1,92 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 32
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "_", "_", "P", "_", "_"]
+[[array.run]]
+row_from = 0
+row_to = 13233
+start_year = 2006
+
+[[array]]
+id = 32
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "_", "_", "_", "_"]
+[[array.run]]
+row_from = 13308
+row_to = 20182
+start_year = 2008
+
+[[array]]
+id = 32
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "DW2", "_", "_", "_"]
+[[array.run]]
+row_from = 20774
+row_to = 26364
+start_year = 2009
+
+[[array]]
+id = 188
+ncols = 17
+column_header = ["TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "TA3", "TA4", "VW2", "V"]
+[[array.run]]
+row_from = 0
+row_to = 359
+start_year = 2011
+note = "dated from the file name only (outside the C-level period)"
+[[array.run]]
+row_from = 6095
+row_to = 12969
+start_year = 2008
+[[array.run]]
+row_from = 13561
+row_to = 19151
+start_year = 2009
+
+[[array]]
+id = 188
+ncols = 17
+column_header = ["TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "_", "_", "TS10", "TA3", "TA4", "VW2", "V"]
+[[array.run]]
+row_from = 360
+row_to = 6020
+start_year = 2007
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "documented: C-level factor over 7805 h in 2006-2008 (documented 200.0)"
+
+[calibration.NR]
+scale_pos = 73.173
+scale_neg = 72.368
+add = 0
+source = "differs: C-level factor over 260 h in 2009-2009 (documented 80.0) / differs: C-level factor over 8938 h in 2006-2008 (documented 80.0)"
+
+[calibration.OSWR]
+scale_pos = 198.641112
+scale_neg = 198.641112
+add = 0
+source = "x2.76205 moved from metadata/adjustments (2003-01-01 on): the raw OSWR gives a summer albedo of 0.30, with the factor 0.84"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (8 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1.00048
+scale_neg = 1.00048
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 1.00048
+scale_neg = 1.00048
+add = 0
+source = "CR1000 header"
+

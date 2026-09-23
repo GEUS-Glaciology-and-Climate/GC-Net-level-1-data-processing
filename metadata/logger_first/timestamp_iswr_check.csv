@@ -1,0 +1,21 @@
+station,year,source,best_raw,best_corrected,r,r_at_raw0,n
+03-NASA-U,2007,logger-first L0M,0,2,0.958,0.958,6880
+03-NASA-U,2007,C-level,-1,1,0.958,0.922,6867
+05-Humboldt,2002,logger-first L0M,-2,0,0.96,0.853,8411
+05-Humboldt,2002,C-level,-1,1,0.96,0.93,7018
+05-Humboldt,2003,logger-first L0M,-2,0,0.683,0.65,8732
+05-Humboldt,2003,C-level,-2,0,0.95,0.897,6167
+09-JAR1,1997,logger-first L0M,-2,0,0.862,0.725,8760
+09-JAR1,1997,C-level,-1,1,0.746,0.714,4669
+12-NASA-E,2006,logger-first L0M,-4,-2,0.935,0.586,8760
+12-NASA-E,2006,C-level,-2,0,0.947,0.834,8760
+12-NASA-E,2007,logger-first L0M,-4,-2,0.923,0.534,8760
+12-NASA-E,2007,C-level,-2,0,0.934,0.805,8760
+12-NASA-E,2008,logger-first L0M,-2,0,0.919,0.782,7764
+12-NASA-E,2008,C-level,-2,0,0.805,0.668,2941
+23-NEEM,2007,logger-first L0M,-4,-2,0.901,0.559,4666
+23-NEEM,2007,C-level,-2,0,0.949,0.86,4260
+10-Saddle,2005,logger-first L0M,-2,0,0.949,0.786,8760
+10-Saddle,2005,C-level,-2,0,0.953,0.786,8760
+06-Summit,2005,logger-first L0M,-2,0,0.846,0.45,8719
+06-Summit,2005,C-level,-2,0,0.813,0.507,8141

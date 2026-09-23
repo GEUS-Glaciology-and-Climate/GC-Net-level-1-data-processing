@@ -1,0 +1,285 @@
+site,variable,year,offset,hours,reason
+Aurora,HW1,2000,0.473,4550,"same sensor, sonic-corrected"
+Aurora,HW1,2001,0.481,3001,"same sensor, sonic-corrected"
+CP2,HW1,1999,,5227,C-level matches the other sensor
+CP2,HW1,2000,,8773,the offset changes within the year (sensor reinstalled?)
+CP2,HW1,2001,,3565,C-level matches the other sensor
+CP2,HW2,1999,0.527,5227,"same sensor, sonic-corrected"
+CP2,HW2,2000,-0.101,5066,"same sensor, sonic-corrected"
+CP2,HW2,2001,-0.116,3565,"same sensor, sonic-corrected"
+Crawford Point 1,HW1,1995,,5340,no tight fit
+Crawford Point 1,HW1,1996,,8779,the offset changes within the year (sensor reinstalled?)
+Crawford Point 1,HW1,1997,,7377,C-level matches the other sensor
+Crawford Point 1,HW1,1998,,1579,C-level matches the other sensor
+Crawford Point 1,HW1,1999,,3544,no tight fit
+Crawford Point 1,HW1,2000,-0.208,5064,"same sensor, sonic-corrected"
+Crawford Point 1,HW1,2001,-0.253,8760,"same sensor, sonic-corrected"
+Crawford Point 1,HW1,2002,0.1,3061,"same sensor, sonic-corrected"
+Crawford Point 1,HW1,2003,0.1,3238,"same sensor, sonic-corrected"
+Crawford Point 1,HW2,1996,,5406,C-level matches the other sensor
+Crawford Point 1,HW2,1997,-0.322,929,"same sensor, sonic-corrected"
+Crawford Point 1,HW2,1998,-1.643,1579,"same sensor, sonic-corrected"
+Crawford Point 1,HW2,2000,,5064,C-level matches the other sensor
+Crawford Point 1,HW2,2001,,8760,C-level matches the other sensor
+Crawford Point 1,HW2,2002,,3061,C-level matches the other sensor
+Crawford Point 1,HW2,2008,0.099,5782,"same sensor, sonic-corrected"
+Crawford Point 1,HW2,2009,0.1,8736,"same sensor, sonic-corrected"
+Crawford Point 1,HW2,2010,0.101,3090,"same sensor, sonic-corrected"
+DYE-2,HW1,1996,,4314,no tight fit
+DYE-2,HW1,1997,,2662,no tight fit
+DYE-2,HW1,1998,-0.266,5982,"same sensor, sonic-corrected"
+DYE-2,HW1,1999,,8756,C-level matches the other sensor
+DYE-2,HW1,2000,,8752,the offset changes within the year (sensor reinstalled?)
+DYE-2,HW1,2001,-0.15,3732,"same sensor, sonic-corrected"
+DYE-2,HW1,2003,-0.57,5663,"same sensor, sonic-corrected"
+DYE-2,HW1,2004,-0.569,3935,"same sensor, sonic-corrected"
+DYE-2,HW1,2005,-0.57,5265,"same sensor, sonic-corrected"
+DYE-2,HW1,2006,-0.57,8757,"same sensor, sonic-corrected"
+DYE-2,HW1,2007,-0.569,2750,"same sensor, sonic-corrected"
+DYE-2,HW1,2008,-0.563,5809,"same sensor, sonic-corrected"
+DYE-2,HW1,2009,,3256,C-level matches the other sensor
+DYE-2,HW2,1996,,4314,C-level matches the other sensor
+DYE-2,HW2,1997,,2657,C-level matches the other sensor
+DYE-2,HW2,1998,,5983,C-level matches the other sensor
+DYE-2,HW2,1999,-0.793,6175,"same sensor, sonic-corrected"
+DYE-2,HW2,2000,,3177,C-level matches the other sensor
+DYE-2,HW2,2005,-0.07,5039,"same sensor, sonic-corrected"
+DYE-2,HW2,2006,-0.071,8387,"same sensor, sonic-corrected"
+DYE-2,HW2,2007,-0.07,8392,"same sensor, sonic-corrected"
+DYE-2,HW2,2008,-0.07,8414,"same sensor, sonic-corrected"
+DYE-2,HW2,2009,-0.07,3120,"same sensor, sonic-corrected"
+GITS,HW1,1999,,3383,no tight fit
+GITS,HW1,2001,,6587,no tight fit
+GITS,HW1,2002,0.25,868,"same sensor, sonic-corrected"
+GITS,HW2,1999,,3383,C-level matches the other sensor
+GITS,HW2,2002,0.25,868,"same sensor, sonic-corrected"
+Humboldt,HW1,1995,,4626,no tight fit
+Humboldt,HW1,1996,-0.882,586,"same sensor, sonic-corrected"
+Humboldt,HW1,1997,-0.878,8759,filled: the same offset before and after (C-level matches the other sensor)
+Humboldt,HW1,1998,-0.878,8760,filled: the same offset before and after (C-level matches the other sensor)
+Humboldt,HW1,1999,-0.873,2970,"same sensor, sonic-corrected"
+Humboldt,HW1,2002,,3508,C-level matches the other sensor
+Humboldt,HW2,1996,,586,C-level matches the other sensor
+Humboldt,HW2,1997,0.572,8759,"same sensor, sonic-corrected"
+Humboldt,HW2,1998,,8760,C-level matches the other sensor
+Humboldt,HW2,1999,,2970,C-level matches the other sensor
+Humboldt,HW2,2002,0.901,3508,"same sensor, sonic-corrected"
+Humboldt,HW2,2008,0.898,868,"same sensor, sonic-corrected"
+Humboldt,HW2,2010,0.9,6578,"same sensor, sonic-corrected"
+JAR1,HW1,1998,,3667,no tight fit
+JAR1,HW1,1999,,8638,C-level matches the other sensor
+JAR1,HW1,2000,,5938,C-level matches the other sensor
+JAR1,HW1,2001,,5263,C-level matches the other sensor
+JAR1,HW1,2002,-0.387,8688,"same sensor, sonic-corrected"
+JAR1,HW1,2003,-0.388,2849,filled: the same offset before and after (C-level matches the other sensor)
+JAR1,HW1,2004,-0.388,5188,filled: the same offset before and after (C-level matches the other sensor)
+JAR1,HW1,2005,-0.39,5695,"same sensor, sonic-corrected"
+JAR1,HW1,2006,-0.389,8723,"same sensor, sonic-corrected"
+JAR1,HW1,2007,-0.389,1733,"same sensor, sonic-corrected"
+JAR1,HW1,2008,-0.39,5691,"same sensor, sonic-corrected"
+JAR1,HW1,2009,-0.39,2871,"same sensor, sonic-corrected"
+JAR1,HW2,1997,,4640,no tight fit
+JAR1,HW2,1998,,8759,C-level matches the other sensor
+JAR1,HW2,1999,0.676,5143,"same sensor, sonic-corrected"
+JAR1,HW2,2000,0.687,5938,"same sensor, sonic-corrected"
+JAR1,HW2,2001,0.631,167,"same sensor, sonic-corrected"
+JAR1,HW2,2002,0.64,8688,"same sensor, sonic-corrected"
+JAR1,HW2,2003,0.64,2849,"same sensor, sonic-corrected"
+JAR1,HW2,2004,0.643,5188,"same sensor, sonic-corrected"
+JAR1,HW2,2005,0.64,5695,"same sensor, sonic-corrected"
+JAR1,HW2,2006,0.64,8723,"same sensor, sonic-corrected"
+JAR1,HW2,2007,0.64,1733,"same sensor, sonic-corrected"
+JAR1,HW2,2008,0.64,5692,"same sensor, sonic-corrected"
+JAR1,HW2,2009,0.64,2871,"same sensor, sonic-corrected"
+JAR2,HW1,1999,0.027,5108,"same sensor, sonic-corrected"
+JAR2,HW1,2000,-0.495,8780,"same sensor, sonic-corrected"
+JAR2,HW1,2001,-0.498,1782,"same sensor, sonic-corrected"
+JAR2,HW1,2002,-0.84,8757,"same sensor, sonic-corrected"
+JAR2,HW1,2003,-0.839,4964,"same sensor, sonic-corrected"
+JAR2,HW1,2005,-0.839,5491,"same sensor, sonic-corrected"
+JAR2,HW1,2007,-0.839,4845,"same sensor, sonic-corrected"
+JAR2,HW2,2001,-0.9,425,"same sensor, sonic-corrected"
+JAR2,HW2,2002,-0.9,8757,"same sensor, sonic-corrected"
+JAR2,HW2,2003,-0.9,4964,"same sensor, sonic-corrected"
+JAR2,HW2,2005,0.9,5491,"same sensor, sonic-corrected"
+JAR3,HW1,2000,-0.444,5206,"same sensor, sonic-corrected"
+JAR3,HW1,2001,-0.444,3309,"same sensor, sonic-corrected"
+KAR,HW1,1999,-1.477,5478,"same sensor, sonic-corrected"
+KAR,HW1,2000,-1.467,8776,"same sensor, sonic-corrected"
+KAR,HW1,2001,-1.455,3781,"same sensor, sonic-corrected"
+NASA-E,HW1,1997,0.593,5810,"same sensor, sonic-corrected"
+NASA-E,HW1,1998,0.576,8760,"same sensor, sonic-corrected"
+NASA-E,HW1,1999,0.555,8740,"same sensor, sonic-corrected"
+NASA-E,HW1,2000,,8783,no tight fit
+NASA-E,HW1,2001,0.521,4951,"same sensor, sonic-corrected"
+NASA-E,HW1,2002,0.52,8760,"same sensor, sonic-corrected"
+NASA-E,HW1,2003,0.52,8041,filled: the same offset before and after (no tight fit)
+NASA-E,HW1,2004,0.52,8784,"same sensor, sonic-corrected"
+NASA-E,HW1,2005,0.521,8760,"same sensor, sonic-corrected"
+NASA-E,HW1,2006,0.522,8756,"same sensor, sonic-corrected"
+NASA-E,HW1,2007,0.521,8760,filled: the same offset before and after (C-level matches the other sensor)
+NASA-E,HW1,2008,0.52,934,"same sensor, sonic-corrected"
+NASA-E,HW2,1997,0.078,5810,"same sensor, sonic-corrected"
+NASA-E,HW2,1998,,8760,C-level matches the other sensor
+NASA-E,HW2,1999,,3354,C-level matches the other sensor
+NASA-E,HW2,2001,0.17,4951,"same sensor, sonic-corrected"
+NASA-E,HW2,2002,0.17,2629,"same sensor, sonic-corrected"
+NASA-E,HW2,2003,0.17,8041,filled: the same offset before and after (C-level matches the other sensor)
+NASA-E,HW2,2004,0.17,8784,"same sensor, sonic-corrected"
+NASA-E,HW2,2005,0.171,8760,filled: the same offset before and after (C-level matches the other sensor)
+NASA-E,HW2,2006,0.172,8756,"same sensor, sonic-corrected"
+NASA-E,HW2,2007,0.17,8760,"same sensor, sonic-corrected"
+NASA-E,HW2,2008,,2941,C-level matches the other sensor
+NASA-SE,HW1,1998,0.609,6028,"same sensor, sonic-corrected"
+NASA-SE,HW1,1999,,8760,the offset changes within the year (sensor reinstalled?)
+NASA-SE,HW1,2000,-0.954,5504,"same sensor, sonic-corrected"
+NASA-SE,HW1,2001,,8759,the offset changes within the year (sensor reinstalled?)
+NASA-SE,HW1,2002,-3.835,8759,"same sensor, sonic-corrected"
+NASA-SE,HW1,2003,,3109,C-level matches the other sensor
+NASA-SE,HW1,2007,0.501,4220,"same sensor, sonic-corrected"
+NASA-SE,HW1,2008,,506,no tight fit
+NASA-SE,HW2,1998,,6028,C-level matches the other sensor
+NASA-SE,HW2,1999,-0.701,6098,"same sensor, sonic-corrected"
+NASA-SE,HW2,2000,-0.601,3280,"same sensor, sonic-corrected"
+NASA-SE,HW2,2001,-3.779,521,"same sensor, sonic-corrected"
+NASA-SE,HW2,2002,,8759,C-level matches the other sensor
+NASA-SE,HW2,2003,-3.644,3109,"same sensor, sonic-corrected"
+NASA-SE,HW2,2005,0.5,5268,"same sensor, sonic-corrected"
+NASA-SE,HW2,2006,0.5,8406,"same sensor, sonic-corrected"
+NASA-U,HW1,1997,,5403,no tight fit
+NASA-U,HW1,1998,,8758,C-level matches the other sensor
+NASA-U,HW1,1999,,3185,C-level matches the other sensor
+NASA-U,HW1,2003,0.251,5096,"same sensor, sonic-corrected"
+NASA-U,HW1,2004,0.251,8784,"same sensor, sonic-corrected"
+NASA-U,HW1,2005,,3475,C-level matches the other sensor
+NASA-U,HW2,1997,,5401,C-level matches the other sensor
+NASA-U,HW2,1998,-0.106,5599,"same sensor, sonic-corrected"
+NASA-U,HW2,1999,-0.022,3185,"same sensor, sonic-corrected"
+NASA-U,HW2,2003,0.25,5096,"same sensor, sonic-corrected"
+NASA-U,HW2,2004,0.25,8784,"same sensor, sonic-corrected"
+NASA-U,HW2,2005,0.25,8757,"same sensor, sonic-corrected"
+NASA-U,HW2,2006,,8687,no tight fit
+NASA-U,HW2,2007,,6839,no tight fit
+NEEM,HW1,2006,0.681,3793,"same sensor, sonic-corrected"
+NEEM,HW1,2008,,3165,C-level matches the other sensor
+NEEM,HW1,2009,,544,C-level matches the other sensor
+NEEM,HW2,2006,0.68,3793,"same sensor, sonic-corrected"
+NEEM,HW2,2007,0.68,4260,"same sensor, sonic-corrected"
+NEEM,HW2,2008,0.682,3165,"same sensor, sonic-corrected"
+NEEM,HW2,2009,,544,C-level matches the other sensor
+NGRIP,HW1,2002,,4926,no tight fit
+NGRIP,HW1,2003,0.1,8760,"same sensor, raw"
+NGRIP,HW1,2004,0.1,112,"same sensor, raw"
+NGRIP,HW1,2005,0.101,3480,"same sensor, raw"
+NGRIP,HW2,2004,0.1,112,"same sensor, raw"
+NGRIP,HW2,2005,0.1,1417,"same sensor, raw"
+NGRIP,HW2,2006,0.102,2412,"same sensor, raw"
+NGRIP,HW2,2007,0.101,8760,"same sensor, raw"
+NGRIP,HW2,2008,0.102,8784,"same sensor, raw"
+NGRIP,HW2,2009,,8760,no tight fit
+NGRIP,HW2,2010,,3062,no tight fit
+Petermann ELA,HW1,2003,0.1,3626,"same sensor, sonic-corrected"
+Petermann ELA,HW1,2007,0.101,846,"same sensor, sonic-corrected"
+Petermann ELA,HW2,2003,0.1,3626,"same sensor, sonic-corrected"
+Saddle,HW1,1998,,6202,C-level matches the other sensor
+Saddle,HW1,1999,0.506,6247,"same sensor, sonic-corrected"
+Saddle,HW1,2000,0.513,8784,filled: the same offset before and after (C-level matches the other sensor)
+Saddle,HW1,2001,0.513,8758,filled: the same offset before and after (C-level matches the other sensor)
+Saddle,HW1,2002,0.52,3301,"same sensor, sonic-corrected"
+Saddle,HW1,2003,0.521,5645,"same sensor, sonic-corrected"
+Saddle,HW1,2004,0.519,8769,"same sensor, sonic-corrected"
+Saddle,HW1,2005,0.52,5743,"same sensor, sonic-corrected"
+Saddle,HW1,2006,0.52,8756,"same sensor, sonic-corrected"
+Saddle,HW1,2007,0.519,8749,filled: the same offset before and after (C-level matches the other sensor)
+Saddle,HW1,2008,0.518,8342,"same sensor, sonic-corrected"
+Saddle,HW1,2009,0.52,2780,"same sensor, sonic-corrected"
+Saddle,HW2,1997,0.541,6122,"same sensor, sonic-corrected"
+Saddle,HW2,1998,,8758,the offset changes within the year (sensor reinstalled?)
+Saddle,HW2,1999,,8760,C-level matches the other sensor
+Saddle,HW2,2000,0.218,8784,"same sensor, sonic-corrected"
+Saddle,HW2,2001,,8758,the offset changes within the year (sensor reinstalled?)
+Saddle,HW2,2002,-0.319,3301,"same sensor, sonic-corrected"
+Saddle,HW2,2003,-0.32,5645,"same sensor, sonic-corrected"
+Saddle,HW2,2004,-0.319,8557,filled: the same offset before and after (C-level matches the other sensor)
+Saddle,HW2,2005,-0.318,5743,"same sensor, sonic-corrected"
+Saddle,HW2,2006,-0.319,8758,"same sensor, sonic-corrected"
+Saddle,HW2,2007,-0.319,8756,"same sensor, sonic-corrected"
+Saddle,HW2,2008,-0.319,8776,"same sensor, sonic-corrected"
+Saddle,HW2,2009,-0.319,2780,"same sensor, sonic-corrected"
+South Dome,HW1,1997,,6010,C-level matches the other sensor
+South Dome,HW1,1998,0.501,8743,"same sensor, sonic-corrected"
+South Dome,HW1,1999,0.507,2684,"same sensor, sonic-corrected"
+South Dome,HW2,1997,0.337,6012,"same sensor, sonic-corrected"
+South Dome,HW2,1998,0.341,6190,"same sensor, sonic-corrected"
+South Dome,HW2,1999,1.599,6067,"same sensor, sonic-corrected"
+South Dome,HW2,2000,1.506,8772,"same sensor, sonic-corrected"
+South Dome,HW2,2001,,3741,no tight fit
+South Dome,HW2,2005,-0.48,5230,"same sensor, raw"
+South Dome,HW2,2006,-0.48,8760,"same sensor, raw"
+South Dome,HW2,2007,-0.48,6798,"same sensor, raw"
+South Dome,HW2,2008,-0.48,4343,"same sensor, raw"
+Summit,HW1,1997,,5360,C-level matches the other sensor
+Summit,HW1,1998,,3208,C-level matches the other sensor
+Summit,HW1,1999,,5663,C-level matches the other sensor
+Summit,HW1,2000,,8783,C-level matches the other sensor
+Summit,HW1,2001,,8758,C-level matches the other sensor
+Summit,HW1,2002,,8760,no tight fit
+Summit,HW1,2003,,8760,no tight fit
+Summit,HW1,2004,-0.819,8542,"same sensor, sonic-corrected"
+Summit,HW1,2005,-0.819,7905,"same sensor, sonic-corrected"
+Summit,HW1,2006,-0.818,8760,"same sensor, sonic-corrected"
+Summit,HW1,2007,-0.819,8760,"same sensor, sonic-corrected"
+Summit,HW1,2008,,4144,C-level matches the other sensor
+Summit,HW2,1996,,5603,no tight fit
+Summit,HW2,1997,,8734,no tight fit
+Summit,HW2,1998,,3208,no tight fit
+Summit,HW2,1999,,5666,C-level matches the other sensor
+Summit,HW2,2000,-0.309,4613,"same sensor, sonic-corrected"
+Summit,HW2,2001,,8758,the offset changes within the year (sensor reinstalled?)
+Summit,HW2,2002,,8760,C-level matches the other sensor
+Summit,HW2,2003,,8760,C-level matches the other sensor
+Summit,HW2,2004,,8431,C-level matches the other sensor
+Summit,HW2,2005,-0.33,3233,"same sensor, sonic-corrected"
+Summit,HW2,2006,-0.331,6318,"same sensor, sonic-corrected"
+Summit,HW2,2007,-0.331,8760,"same sensor, sonic-corrected"
+Summit,HW2,2008,-0.331,4144,"same sensor, sonic-corrected"
+Swiss Camp,HW1,1996,,4758,no tight fit
+Swiss Camp,HW1,1997,-0.118,3484,"same sensor, sonic-corrected"
+Swiss Camp,HW1,1998,,3686,C-level matches the other sensor
+Swiss Camp,HW1,1999,-0.528,994,"same sensor, sonic-corrected"
+Swiss Camp,HW1,2000,,8783,C-level matches the other sensor
+Swiss Camp,HW1,2001,,8738,C-level matches the other sensor
+Swiss Camp,HW1,2002,,8760,C-level matches the other sensor
+Swiss Camp,HW1,2003,,6338,C-level matches the other sensor
+Swiss Camp,HW1,2005,,2497,C-level matches the other sensor
+Swiss Camp,HW2,1996,,4758,C-level matches the other sensor
+Swiss Camp,HW2,1997,0.467,5275,"same sensor, sonic-corrected"
+Swiss Camp,HW2,1998,0.441,1578,"same sensor, sonic-corrected"
+Swiss Camp,HW2,1999,0.574,133,"same sensor, sonic-corrected"
+Swiss Camp,HW2,2000,0.533,3376,"same sensor, sonic-corrected"
+Swiss Camp,HW2,2001,-0.342,5112,"same sensor, sonic-corrected"
+Swiss Camp,HW2,2002,-0.0,8760,"same sensor, sonic-corrected"
+Swiss Camp,HW2,2003,-0.306,6338,"same sensor, sonic-corrected"
+Swiss Camp,HW2,2004,-0.31,2419,"same sensor, sonic-corrected"
+Swiss Camp,HW2,2005,-0.31,3275,"same sensor, sonic-corrected"
+Tunu-N,HW1,1999,-0.048,5397,"same sensor, sonic-corrected"
+Tunu-N,HW1,2000,,8782,C-level matches the other sensor
+Tunu-N,HW1,2001,-0.542,4945,"same sensor, sonic-corrected"
+Tunu-N,HW1,2002,,8760,no tight fit
+Tunu-N,HW1,2003,,3596,C-level matches the other sensor
+Tunu-N,HW1,2007,,4522,C-level matches the other sensor
+Tunu-N,HW1,2008,0.329,8780,"same sensor, sonic-corrected"
+Tunu-N,HW1,2009,0.33,8760,filled: the same offset before and after (C-level matches the other sensor)
+Tunu-N,HW1,2010,0.33,8471,"same sensor, sonic-corrected"
+Tunu-N,HW2,1999,,5399,C-level matches the other sensor
+Tunu-N,HW2,2000,,8784,no tight fit
+Tunu-N,HW2,2001,1.084,3811,"same sensor, sonic-corrected"
+Tunu-N,HW2,2002,,8760,C-level matches the other sensor
+Tunu-N,HW2,2003,2.84,3596,"same sensor, raw"
+Tunu-N,HW2,2004,0.691,1855,"same sensor, sonic-corrected"
+Tunu-N,HW2,2005,0.689,8760,"same sensor, sonic-corrected"
+Tunu-N,HW2,2006,0.69,8760,"same sensor, sonic-corrected"
+Tunu-N,HW2,2007,0.691,8760,filled: the same offset before and after (no tight fit)
+Tunu-N,HW2,2008,0.692,8780,"same sensor, sonic-corrected"
+Tunu-N,HW2,2009,0.69,8539,"same sensor, sonic-corrected"
+Tunu-N,HW2,2010,0.69,8465,"same sensor, sonic-corrected"

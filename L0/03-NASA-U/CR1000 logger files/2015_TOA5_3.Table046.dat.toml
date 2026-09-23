@@ -1,0 +1,89 @@
+logger_type = "CR1000"
+
+column_header = ["timestamp", "ISWR", "ISWR_max", "ISWR_std", "OSWR", "NR", "NR_std", "TA1", "TA1_max", "TA1_min", "TA2", "TA2_max", "TA2_min", "TA3", "TA4", "RH1", "RH2", "VW1", "VW1_max", "VW1_stdev", "VW2", "VW2_max", "VW2_stdev", "DW1", "DW2", "P", "HW1", "HW2", "V", "TA5", "TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10"]
+
+[calibration.ISWR]
+scale = 200
+add = 0
+
+[calibration.ISWR_max]
+scale = 200
+add = 0
+
+[calibration.ISWR_std]
+scale = 200
+add = 0
+
+[calibration.OSWR]
+scale = 198.641112
+add = 0
+source = "x0.934 (LiCor) x 2.76205 moved from metadata/adjustments: the raw OSWR gives a summer albedo of 0.32, with both factors 0.83-0.84"
+
+[calibration.NR]
+scale = 80
+add = 0
+
+[calibration.NR_std]
+scale = 80
+add = 0
+
+[calibration.TA1]
+scale = 1.00007
+add = 0
+
+[calibration.TA1_max]
+scale = 1.00007
+add = 0
+
+[calibration.TA1_min]
+scale = 1.00007
+add = 0
+
+[calibration.TA2]
+scale = 1.00007
+add = 0
+
+[calibration.TA2_max]
+scale = 1.00007
+add = 0
+
+[calibration.TA2_min]
+scale = 1.00007
+add = 0
+
+[calibration.TA3]
+scale = 1.00048
+add = 0
+
+[calibration.TA4]
+scale = 1.00048
+add = 0
+
+[calibration.VW1]
+scale = 1.00091
+add = 0
+
+[calibration.VW1_max]
+scale = 1.00091
+add = 0
+
+[calibration.VW1_stdev]
+scale = 1.00091
+add = 0
+
+[calibration.VW2]
+scale = 1.00091
+add = 0
+
+[calibration.VW2_max]
+scale = 1.00091
+add = 0
+
+[calibration.VW2_stdev]
+scale = 1.00091
+add = 0
+
+[calibration.P]
+scale = 1
+add = 400
+

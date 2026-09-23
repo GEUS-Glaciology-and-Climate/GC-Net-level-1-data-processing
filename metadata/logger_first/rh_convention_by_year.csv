@@ -1,0 +1,586 @@
+site,variable,year,c_level_convention,hours,covered_by_ice_to_water,action
+Aurora,RH1,2000,same (wrt water),2748,True,existing row converts C-level RH that is already wrt water (check)
+Aurora,RH1,2001,same (wrt water),1720,True,existing row converts C-level RH that is already wrt water (check)
+CP2,RH1,1999,other,4597,True,
+CP2,RH1,2000,wrt ice,8268,True,
+CP2,RH1,2001,wrt ice,3565,True,
+CP2,RH2,1997,other,5254,True,
+CP2,RH2,1998,other,8089,True,
+CP2,RH2,1999,wrt ice,1319,True,
+CP2,RH2,2000,wrt ice,4625,True,
+CP2,RH2,2001,wrt ice,3565,True,
+Crawford Point 1,RH1,1998,wrt ice,1172,True,
+Crawford Point 1,RH1,2000,wrt ice,4480,True,
+Crawford Point 1,RH1,2001,wrt ice,8413,True,
+Crawford Point 1,RH1,2002,wrt ice,8127,True,
+Crawford Point 1,RH1,2003,wrt ice,5461,True,
+Crawford Point 1,RH1,2005,wrt ice,4861,True,
+Crawford Point 1,RH1,2006,wrt ice,4179,True,
+Crawford Point 1,RH1,2008,wrt ice,5417,True,
+Crawford Point 1,RH1,2009,wrt ice,8296,True,
+Crawford Point 1,RH1,2010,wrt ice,3858,True,
+Crawford Point 1,RH1,2014,wrt ice,3574,False,add ice_to_water
+Crawford Point 1,RH1,2015,wrt ice,3032,False,add ice_to_water
+Crawford Point 1,RH1,2016,wrt ice,3175,False,add ice_to_water
+Crawford Point 1,RH1,2017,wrt ice,3745,False,add ice_to_water
+Crawford Point 1,RH1,2018,wrt ice,5401,False,add ice_to_water
+Crawford Point 1,RH1,2019,wrt ice,1470,False,add ice_to_water
+Crawford Point 1,RH2,1998,same (wrt water),1185,True,existing row converts C-level RH that is already wrt water (check)
+Crawford Point 1,RH2,2000,wrt ice,4475,True,
+Crawford Point 1,RH2,2001,wrt ice,8414,True,
+Crawford Point 1,RH2,2002,wrt ice,8128,True,
+Crawford Point 1,RH2,2003,wrt ice,5462,True,
+Crawford Point 1,RH2,2006,wrt ice,1059,True,
+Crawford Point 1,RH2,2008,wrt ice,5420,True,
+Crawford Point 1,RH2,2009,wrt ice,8312,True,
+Crawford Point 1,RH2,2010,wrt ice,3882,True,
+Crawford Point 1,RH2,2014,wrt ice,3568,False,add ice_to_water
+Crawford Point 1,RH2,2015,wrt ice,3033,False,add ice_to_water
+Crawford Point 1,RH2,2016,wrt ice,3189,False,add ice_to_water
+Crawford Point 1,RH2,2017,wrt ice,5433,False,add ice_to_water
+Crawford Point 1,RH2,2018,wrt ice,5422,False,add ice_to_water
+Crawford Point 1,RH2,2019,wrt ice,1468,False,add ice_to_water
+DYE-2,RH1,2000,wrt ice,5006,True,
+DYE-2,RH1,2001,wrt ice,4775,True,
+DYE-2,RH1,2002,wrt ice,4894,True,
+DYE-2,RH1,2003,wrt ice,7959,True,
+DYE-2,RH1,2004,wrt ice,3706,True,
+DYE-2,RH1,2005,wrt ice,4522,True,
+DYE-2,RH1,2006,wrt ice,7809,True,
+DYE-2,RH1,2007,wrt ice,7510,True,
+DYE-2,RH1,2008,wrt ice,7926,True,
+DYE-2,RH1,2009,wrt ice,3120,True,
+DYE-2,RH1,2010,wrt ice,4789,True,
+DYE-2,RH1,2011,wrt ice,8007,False,add ice_to_water
+DYE-2,RH1,2012,wrt ice,7475,False,add ice_to_water
+DYE-2,RH1,2013,wrt ice,8320,False,add ice_to_water
+DYE-2,RH1,2014,wrt ice,8071,False,add ice_to_water
+DYE-2,RH1,2015,wrt ice,8334,False,add ice_to_water
+DYE-2,RH1,2016,wrt ice,6122,False,add ice_to_water
+DYE-2,RH1,2017,wrt ice,4990,False,add ice_to_water
+DYE-2,RH1,2018,wrt ice,8257,False,add ice_to_water
+DYE-2,RH1,2019,wrt ice,3295,False,add ice_to_water
+DYE-2,RH2,2000,wrt ice,5025,True,
+DYE-2,RH2,2001,wrt ice,4805,True,
+DYE-2,RH2,2002,wrt ice,4921,True,
+DYE-2,RH2,2003,wrt ice,7956,True,
+DYE-2,RH2,2004,wrt ice,3709,True,
+DYE-2,RH2,2005,wrt ice,4523,True,
+DYE-2,RH2,2006,wrt ice,7802,True,
+DYE-2,RH2,2007,wrt ice,7496,True,
+DYE-2,RH2,2008,wrt ice,7921,True,
+DYE-2,RH2,2009,other,4324,True,
+DYE-2,RH2,2010,other,4800,True,
+DYE-2,RH2,2011,other,8007,False,
+DYE-2,RH2,2012,other,7476,False,
+DYE-2,RH2,2013,other,8327,False,
+DYE-2,RH2,2014,other,3435,False,
+DYE-2,RH2,2017,wrt ice,2291,False,add ice_to_water
+DYE-2,RH2,2018,wrt ice,254,False,add ice_to_water
+EastGRIP,RH1,2014,wrt ice,5471,False,add ice_to_water
+EastGRIP,RH1,2015,wrt ice,8742,False,add ice_to_water
+EastGRIP,RH1,2016,wrt ice,8783,False,add ice_to_water
+EastGRIP,RH1,2017,wrt ice,8742,False,add ice_to_water
+EastGRIP,RH1,2018,wrt ice,8736,False,add ice_to_water
+EastGRIP,RH1,2019,wrt ice,3379,False,add ice_to_water
+EastGRIP,RH2,2014,wrt ice,5471,False,add ice_to_water
+EastGRIP,RH2,2015,wrt ice,8741,False,add ice_to_water
+EastGRIP,RH2,2016,wrt ice,8781,False,add ice_to_water
+EastGRIP,RH2,2017,wrt ice,8740,False,add ice_to_water
+EastGRIP,RH2,2018,wrt ice,8732,False,add ice_to_water
+EastGRIP,RH2,2019,wrt ice,3379,False,add ice_to_water
+GITS,RH1,2001,wrt ice,6414,True,
+GITS,RH1,2002,wrt ice,3929,True,
+GITS,RH1,2012,wrt ice,4759,False,add ice_to_water
+GITS,RH1,2013,wrt ice,6265,False,add ice_to_water
+GITS,RH1,2014,wrt ice,5936,False,add ice_to_water
+GITS,RH1,2015,wrt ice,6116,False,add ice_to_water
+GITS,RH1,2016,wrt ice,6996,False,add ice_to_water
+GITS,RH1,2017,wrt ice,810,False,add ice_to_water
+GITS,RH1,2018,wrt ice,3174,False,add ice_to_water
+GITS,RH1,2019,wrt ice,1049,False,add ice_to_water
+GITS,RH2,2002,same (wrt water),858,True,existing row converts C-level RH that is already wrt water (check)
+GITS,RH2,2012,wrt ice,4760,False,add ice_to_water
+GITS,RH2,2013,wrt ice,6266,False,add ice_to_water
+GITS,RH2,2014,wrt ice,7047,False,add ice_to_water
+GITS,RH2,2015,wrt ice,6110,False,add ice_to_water
+GITS,RH2,2016,wrt ice,6984,False,add ice_to_water
+GITS,RH2,2017,wrt ice,810,False,add ice_to_water
+GITS,RH2,2018,wrt ice,3182,False,add ice_to_water
+GITS,RH2,2019,wrt ice,1049,False,add ice_to_water
+Humboldt,RH1,1995,wrt ice,4429,True,
+Humboldt,RH1,1996,wrt ice,1919,True,
+Humboldt,RH1,1997,wrt ice,8612,True,
+Humboldt,RH1,1998,wrt ice,8147,True,
+Humboldt,RH1,1999,wrt ice,680,True,
+Humboldt,RH1,2007,other,868,True,
+Humboldt,RH1,2010,wrt ice,5580,True,
+Humboldt,RH1,2011,wrt ice,3738,True,
+Humboldt,RH1,2012,wrt ice,4088,True,
+Humboldt,RH1,2013,wrt ice,5039,False,add ice_to_water
+Humboldt,RH1,2014,wrt ice,4994,False,add ice_to_water
+Humboldt,RH1,2015,wrt ice,5351,False,add ice_to_water
+Humboldt,RH1,2016,wrt ice,4935,False,add ice_to_water
+Humboldt,RH1,2017,wrt ice,6315,False,add ice_to_water
+Humboldt,RH1,2018,wrt ice,5065,False,add ice_to_water
+Humboldt,RH1,2019,wrt ice,419,False,add ice_to_water
+Humboldt,RH2,1996,wrt ice,586,True,
+Humboldt,RH2,1997,wrt ice,8615,True,
+Humboldt,RH2,1998,wrt ice,8366,True,
+Humboldt,RH2,1999,wrt ice,2827,True,
+Humboldt,RH2,2010,wrt ice,5600,True,
+Humboldt,RH2,2011,wrt ice,3735,True,
+Humboldt,RH2,2012,wrt ice,4080,True,
+Humboldt,RH2,2013,wrt ice,5041,False,add ice_to_water
+Humboldt,RH2,2014,wrt ice,4987,False,add ice_to_water
+Humboldt,RH2,2015,wrt ice,5344,False,add ice_to_water
+Humboldt,RH2,2016,wrt ice,4929,False,add ice_to_water
+Humboldt,RH2,2017,wrt ice,6315,False,add ice_to_water
+Humboldt,RH2,2018,wrt ice,5061,False,add ice_to_water
+Humboldt,RH2,2019,wrt ice,419,False,add ice_to_water
+JAR1,RH1,1999,same (wrt water),3347,False,
+JAR1,RH1,2000,other,3839,False,
+JAR1,RH1,2001,same (wrt water),2993,False,
+JAR1,RH1,2002,other,6203,False,
+JAR1,RH1,2003,other,5263,False,
+JAR1,RH1,2005,wrt ice,3328,False,add ice_to_water
+JAR1,RH1,2006,same (wrt water),6204,False,
+JAR1,RH1,2007,wrt ice,6349,False,add ice_to_water
+JAR1,RH1,2008,same (wrt water),6403,False,
+JAR1,RH1,2009,wrt ice,6208,False,add ice_to_water
+JAR1,RH1,2010,wrt ice,5455,False,add ice_to_water
+JAR1,RH1,2011,wrt ice,3756,False,add ice_to_water
+JAR1,RH1,2012,wrt ice,2209,False,add ice_to_water
+JAR1,RH1,2013,wrt ice,3525,False,add ice_to_water
+JAR1,RH1,2014,other,3678,False,
+JAR1,RH1,2016,wrt ice,3176,False,add ice_to_water
+JAR1,RH1,2017,wrt ice,3663,False,add ice_to_water
+JAR1,RH1,2018,wrt ice,3804,False,add ice_to_water
+JAR1,RH1,2019,wrt ice,1748,False,add ice_to_water
+JAR1,RH2,1999,same (wrt water),3339,False,
+JAR1,RH2,2000,other,3815,False,
+JAR1,RH2,2001,same (wrt water),2970,False,
+JAR1,RH2,2002,same (wrt water),6183,False,
+JAR1,RH2,2003,other,5890,False,
+JAR1,RH2,2004,other,6133,False,
+JAR1,RH2,2005,other,3966,False,
+JAR1,RH2,2006,same (wrt water),6216,False,
+JAR1,RH2,2007,wrt ice,6270,False,add ice_to_water
+JAR1,RH2,2008,same (wrt water),6390,False,
+JAR1,RH2,2009,other,6193,False,
+JAR1,RH2,2010,wrt ice,5464,False,add ice_to_water
+JAR1,RH2,2011,wrt ice,3135,False,add ice_to_water
+JAR1,RH2,2012,wrt ice,2188,False,add ice_to_water
+JAR1,RH2,2014,wrt ice,688,False,add ice_to_water
+JAR1,RH2,2016,wrt ice,3141,False,add ice_to_water
+JAR1,RH2,2017,wrt ice,3624,False,add ice_to_water
+JAR1,RH2,2018,wrt ice,2822,False,add ice_to_water
+JAR1,RH2,2019,wrt ice,1358,False,add ice_to_water
+JAR2,RH1,1999,wrt ice,2722,True,
+JAR2,RH1,2000,other,5673,True,
+JAR2,RH1,2001,same (wrt water),5310,True,existing row converts C-level RH that is already wrt water (check)
+JAR2,RH1,2002,other,5289,True,
+JAR2,RH1,2003,other,5101,True,
+JAR2,RH1,2004,other,2956,True,
+JAR2,RH1,2005,wrt ice,2427,True,
+JAR2,RH1,2006,wrt ice,1872,True,
+JAR2,RH1,2007,wrt ice,2161,True,
+JAR2,RH1,2011,wrt ice,1960,True,
+JAR2,RH1,2012,wrt ice,2053,True,
+JAR2,RH1,2013,wrt ice,1432,True,
+JAR2,RH2,1999,wrt ice,2725,True,
+JAR2,RH2,2000,wrt ice,5661,True,
+JAR2,RH2,2001,same (wrt water),5293,True,existing row converts C-level RH that is already wrt water (check)
+JAR2,RH2,2002,other,5280,True,
+JAR2,RH2,2003,wrt ice,5093,True,
+JAR2,RH2,2004,other,2956,True,
+JAR2,RH2,2005,wrt ice,2426,True,
+JAR2,RH2,2006,wrt ice,1870,True,
+JAR2,RH2,2007,wrt ice,2155,True,
+JAR2,RH2,2011,wrt ice,1951,True,
+JAR2,RH2,2012,wrt ice,2029,True,
+JAR2,RH2,2013,wrt ice,1426,True,
+JAR3,RH1,2000,same (wrt water),2153,False,
+JAR3,RH1,2001,other,4962,False,
+JAR3,RH1,2002,other,4966,False,
+JAR3,RH1,2003,wrt ice,3767,False,add ice_to_water
+JAR3,RH2,2000,same (wrt water),2142,False,
+JAR3,RH2,2001,other,4952,False,
+JAR3,RH2,2002,other,4922,False,
+JAR3,RH2,2003,wrt ice,4652,False,add ice_to_water
+JAR3,RH2,2004,other,2833,False,
+KAR,RH1,1999,wrt ice,5349,True,
+KAR,RH1,2000,wrt ice,8703,True,
+KAR,RH1,2001,wrt ice,3782,True,
+NASA-E,RH1,1997,wrt ice,5261,True,
+NASA-E,RH1,2001,wrt ice,4952,True,
+NASA-E,RH1,2002,wrt ice,8646,True,
+NASA-E,RH1,2003,wrt ice,7116,True,
+NASA-E,RH1,2004,wrt ice,8761,True,
+NASA-E,RH1,2005,wrt ice,8751,True,
+NASA-E,RH1,2006,wrt ice,8751,True,
+NASA-E,RH1,2007,wrt ice,8749,True,
+NASA-E,RH1,2008,wrt ice,2941,True,
+NASA-E,RH1,2013,wrt ice,5189,False,add ice_to_water
+NASA-E,RH1,2014,wrt ice,8747,False,add ice_to_water
+NASA-E,RH1,2015,wrt ice,8708,False,add ice_to_water
+NASA-E,RH1,2016,wrt ice,8784,False,add ice_to_water
+NASA-E,RH1,2017,wrt ice,8749,False,add ice_to_water
+NASA-E,RH1,2018,wrt ice,6267,False,add ice_to_water
+NASA-E,RH2,1997,wrt ice,5727,True,
+NASA-E,RH2,1998,wrt ice,8660,True,
+NASA-E,RH2,1999,wrt ice,8493,True,
+NASA-E,RH2,2000,wrt ice,8561,True,
+NASA-E,RH2,2001,wrt ice,8503,True,
+NASA-E,RH2,2002,wrt ice,8643,True,
+NASA-E,RH2,2003,wrt ice,7092,True,
+NASA-E,RH2,2004,wrt ice,8760,True,
+NASA-E,RH2,2005,wrt ice,8754,True,
+NASA-E,RH2,2006,wrt ice,8751,True,
+NASA-E,RH2,2007,wrt ice,8750,True,
+NASA-E,RH2,2008,wrt ice,2941,True,
+NASA-E,RH2,2011,wrt ice,5088,True,
+NASA-E,RH2,2012,wrt ice,8625,False,add ice_to_water
+NASA-E,RH2,2013,wrt ice,8760,False,add ice_to_water
+NASA-E,RH2,2014,wrt ice,8752,False,add ice_to_water
+NASA-E,RH2,2015,wrt ice,8708,False,add ice_to_water
+NASA-E,RH2,2016,wrt ice,8784,False,add ice_to_water
+NASA-E,RH2,2017,wrt ice,8749,False,add ice_to_water
+NASA-E,RH2,2018,wrt ice,6269,False,add ice_to_water
+NASA-SE,RH1,1998,other,5811,True,
+NASA-SE,RH1,1999,other,8442,True,
+NASA-SE,RH1,2000,wrt ice,8561,True,
+NASA-SE,RH1,2001,wrt ice,8663,True,
+NASA-SE,RH1,2002,wrt ice,8603,True,
+NASA-SE,RH1,2003,wrt ice,8592,True,
+NASA-SE,RH1,2004,wrt ice,8505,True,
+NASA-SE,RH1,2005,wrt ice,8485,True,
+NASA-SE,RH1,2006,wrt ice,8142,True,
+NASA-SE,RH1,2007,wrt ice,4071,True,
+NASA-SE,RH1,2008,wrt ice,513,True,
+NASA-SE,RH1,2009,same (wrt water),3266,True,existing row converts C-level RH that is already wrt water (check)
+NASA-SE,RH1,2010,same (wrt water),6010,False,
+NASA-SE,RH1,2011,wrt ice,8638,False,add ice_to_water
+NASA-SE,RH1,2012,wrt ice,6496,False,add ice_to_water
+NASA-SE,RH1,2013,wrt ice,7228,False,add ice_to_water
+NASA-SE,RH1,2014,other,5672,False,
+NASA-SE,RH1,2015,other,7163,False,
+NASA-SE,RH1,2016,other,6666,False,
+NASA-SE,RH1,2017,other,6991,False,
+NASA-SE,RH1,2018,other,7130,False,
+NASA-SE,RH1,2019,other,2060,False,
+NASA-SE,RH2,1998,other,5860,True,
+NASA-SE,RH2,1999,other,8466,True,
+NASA-SE,RH2,2000,wrt ice,8571,True,
+NASA-SE,RH2,2001,wrt ice,8680,True,
+NASA-SE,RH2,2002,wrt ice,8621,True,
+NASA-SE,RH2,2003,wrt ice,8590,True,
+NASA-SE,RH2,2004,wrt ice,8506,True,
+NASA-SE,RH2,2005,wrt ice,8517,True,
+NASA-SE,RH2,2006,wrt ice,8161,True,
+NASA-SE,RH2,2007,wrt ice,4076,True,
+NASA-SE,RH2,2008,same (wrt water),513,True,existing row converts C-level RH that is already wrt water (check)
+NASA-SE,RH2,2009,other,3262,True,
+NASA-SE,RH2,2010,same (wrt water),6063,False,
+NASA-SE,RH2,2011,wrt ice,8656,False,add ice_to_water
+NASA-SE,RH2,2012,wrt ice,6477,False,add ice_to_water
+NASA-SE,RH2,2013,wrt ice,7234,False,add ice_to_water
+NASA-SE,RH2,2014,other,5657,False,
+NASA-SE,RH2,2015,other,7173,False,
+NASA-SE,RH2,2016,other,6699,False,
+NASA-SE,RH2,2017,other,7000,False,
+NASA-SE,RH2,2018,other,6980,False,
+NASA-SE,RH2,2019,other,2056,False,
+NASA-U,RH1,1998,wrt ice,5517,True,
+NASA-U,RH1,1999,wrt ice,3145,True,
+NASA-U,RH1,2003,wrt ice,4981,True,
+NASA-U,RH1,2004,wrt ice,8492,True,
+NASA-U,RH1,2005,wrt ice,8528,True,
+NASA-U,RH1,2006,wrt ice,8408,True,
+NASA-U,RH1,2007,wrt ice,6690,True,
+NASA-U,RH1,2008,wrt ice,6818,True,
+NASA-U,RH1,2009,wrt ice,5521,True,
+NASA-U,RH1,2011,wrt ice,4946,True,
+NASA-U,RH1,2012,wrt ice,7137,False,add ice_to_water
+NASA-U,RH1,2013,wrt ice,8025,False,add ice_to_water
+NASA-U,RH1,2014,wrt ice,7411,False,add ice_to_water
+NASA-U,RH1,2015,wrt ice,6881,False,add ice_to_water
+NASA-U,RH1,2016,wrt ice,7559,False,add ice_to_water
+NASA-U,RH1,2017,wrt ice,6793,False,add ice_to_water
+NASA-U,RH1,2018,other,570,False,
+NASA-U,RH2,1998,wrt ice,5538,True,
+NASA-U,RH2,1999,wrt ice,3146,True,
+NASA-U,RH2,2003,wrt ice,4979,True,
+NASA-U,RH2,2004,wrt ice,8494,True,
+NASA-U,RH2,2005,wrt ice,8531,True,
+NASA-U,RH2,2006,wrt ice,8402,True,
+NASA-U,RH2,2007,wrt ice,6612,True,
+NASA-U,RH2,2008,wrt ice,6811,True,
+NASA-U,RH2,2013,wrt ice,5234,False,add ice_to_water
+NASA-U,RH2,2014,wrt ice,7411,False,add ice_to_water
+NASA-U,RH2,2015,wrt ice,6885,False,add ice_to_water
+NASA-U,RH2,2016,wrt ice,7561,False,add ice_to_water
+NASA-U,RH2,2017,wrt ice,7284,False,add ice_to_water
+NASA-U,RH2,2018,wrt ice,3350,False,add ice_to_water
+NEEM,RH1,2006,wrt ice,3756,True,
+NEEM,RH1,2007,wrt ice,4226,True,
+NEEM,RH1,2009,wrt ice,5135,True,
+NEEM,RH1,2010,wrt ice,8681,False,add ice_to_water
+NEEM,RH1,2011,wrt ice,8732,False,add ice_to_water
+NEEM,RH1,2012,wrt ice,8576,False,add ice_to_water
+NEEM,RH1,2013,wrt ice,8755,False,add ice_to_water
+NEEM,RH1,2014,wrt ice,8757,False,add ice_to_water
+NEEM,RH1,2015,wrt ice,8639,False,add ice_to_water
+NEEM,RH1,2016,wrt ice,8779,False,add ice_to_water
+NEEM,RH1,2017,wrt ice,7774,False,add ice_to_water
+NEEM,RH1,2018,wrt ice,7333,False,add ice_to_water
+NEEM,RH1,2019,wrt ice,3375,False,add ice_to_water
+NEEM,RH2,2006,wrt ice,3753,True,
+NEEM,RH2,2007,wrt ice,4230,True,
+NEEM,RH2,2009,wrt ice,5133,True,
+NEEM,RH2,2010,wrt ice,8675,False,add ice_to_water
+NEEM,RH2,2011,wrt ice,8732,False,add ice_to_water
+NEEM,RH2,2012,wrt ice,8567,False,add ice_to_water
+NEEM,RH2,2013,wrt ice,8754,False,add ice_to_water
+NEEM,RH2,2014,wrt ice,8758,False,add ice_to_water
+NEEM,RH2,2015,other,8638,False,
+NEEM,RH2,2016,other,8779,False,
+NEEM,RH2,2017,other,5549,False,
+NEEM,RH2,2018,other,6168,False,
+NEEM,RH2,2019,other,3375,False,
+NGRIP,RH1,2000,wrt ice,4642,True,
+NGRIP,RH1,2001,wrt ice,8247,True,
+NGRIP,RH1,2002,wrt ice,8209,True,
+NGRIP,RH1,2003,wrt ice,8750,True,
+NGRIP,RH1,2004,wrt ice,8748,True,
+NGRIP,RH1,2005,wrt ice,4897,True,
+NGRIP,RH1,2006,wrt ice,2412,True,
+NGRIP,RH1,2007,wrt ice,8738,True,
+NGRIP,RH1,2008,wrt ice,8784,True,
+NGRIP,RH1,2009,wrt ice,8760,True,
+NGRIP,RH1,2010,wrt ice,3062,True,
+NGRIP,RH2,2000,wrt ice,4684,True,
+NGRIP,RH2,2001,wrt ice,8434,True,
+NGRIP,RH2,2002,wrt ice,8418,True,
+NGRIP,RH2,2003,wrt ice,8758,True,
+NGRIP,RH2,2004,wrt ice,8768,True,
+NGRIP,RH2,2005,wrt ice,4897,True,
+NGRIP,RH2,2006,wrt ice,2412,True,
+NGRIP,RH2,2007,wrt ice,8760,True,
+NGRIP,RH2,2008,wrt ice,8784,True,
+NGRIP,RH2,2009,wrt ice,8760,True,
+NGRIP,RH2,2010,wrt ice,3062,True,
+Petermann ELA,RH1,2003,wrt ice,2137,False,add ice_to_water
+Petermann ELA,RH1,2004,wrt ice,1240,False,add ice_to_water
+Petermann ELA,RH1,2007,other,841,False,
+Petermann ELA,RH1,2012,other,2546,False,
+Petermann ELA,RH1,2013,other,6373,False,
+Petermann ELA,RH1,2014,other,5580,False,
+Petermann ELA,RH2,2003,wrt ice,2131,False,add ice_to_water
+Petermann ELA,RH2,2004,wrt ice,1240,False,add ice_to_water
+Petermann ELA,RH2,2007,other,842,False,
+Petermann ELA,RH2,2011,other,1108,False,
+Petermann ELA,RH2,2012,other,4270,False,
+Petermann ELA,RH2,2013,other,6354,False,
+Petermann ELA,RH2,2014,other,5567,False,
+Saddle,RH1,1998,wrt ice,6065,True,
+Saddle,RH1,1999,wrt ice,8444,True,
+Saddle,RH1,2000,wrt ice,8519,True,
+Saddle,RH1,2001,wrt ice,8673,True,
+Saddle,RH1,2002,wrt ice,3300,True,
+Saddle,RH1,2003,same (wrt water),5414,True,existing row converts C-level RH that is already wrt water (check)
+Saddle,RH1,2004,same (wrt water),8507,True,existing row converts C-level RH that is already wrt water (check)
+Saddle,RH1,2005,wrt ice,8525,True,
+Saddle,RH1,2006,wrt ice,8517,True,
+Saddle,RH1,2007,wrt ice,8307,True,
+Saddle,RH1,2008,wrt ice,8653,True,
+Saddle,RH1,2009,wrt ice,2780,True,
+Saddle,RH1,2010,wrt ice,192,True,
+Saddle,RH1,2011,wrt ice,787,False,add ice_to_water
+Saddle,RH1,2012,wrt ice,6161,False,add ice_to_water
+Saddle,RH1,2013,wrt ice,2338,False,add ice_to_water
+Saddle,RH1,2014,other,3812,False,
+Saddle,RH1,2015,other,5289,False,
+Saddle,RH1,2016,other,7592,False,
+Saddle,RH1,2017,other,8610,False,
+Saddle,RH1,2018,other,8522,False,
+Saddle,RH1,2019,other,3309,False,
+Saddle,RH2,1998,wrt ice,6035,True,
+Saddle,RH2,1999,wrt ice,8441,True,
+Saddle,RH2,2000,wrt ice,8514,True,
+Saddle,RH2,2001,wrt ice,8665,True,
+Saddle,RH2,2002,wrt ice,3300,True,
+Saddle,RH2,2003,same (wrt water),5410,True,existing row converts C-level RH that is already wrt water (check)
+Saddle,RH2,2004,same (wrt water),8512,True,existing row converts C-level RH that is already wrt water (check)
+Saddle,RH2,2005,wrt ice,8528,True,
+Saddle,RH2,2006,wrt ice,8511,True,
+Saddle,RH2,2007,wrt ice,8306,True,
+Saddle,RH2,2008,wrt ice,8638,True,
+Saddle,RH2,2009,wrt ice,2780,True,
+Saddle,RH2,2010,other,5430,True,
+Saddle,RH2,2011,other,8582,False,
+Saddle,RH2,2012,other,7855,False,
+Saddle,RH2,2013,other,8535,False,
+Saddle,RH2,2014,other,8493,False,
+Saddle,RH2,2015,other,8355,False,
+Saddle,RH2,2016,other,8413,False,
+Saddle,RH2,2017,other,8585,False,
+Saddle,RH2,2018,other,8492,False,
+Saddle,RH2,2019,other,3307,False,
+South Dome,RH1,1998,wrt ice,6117,True,
+South Dome,RH1,1999,wrt ice,8624,True,
+South Dome,RH1,2000,wrt ice,8585,True,
+South Dome,RH1,2001,wrt ice,3719,True,
+South Dome,RH1,2003,same (wrt water),5255,True,existing row converts C-level RH that is already wrt water (check)
+South Dome,RH1,2004,same (wrt water),8279,True,existing row converts C-level RH that is already wrt water (check)
+South Dome,RH1,2005,wrt ice,8223,True,
+South Dome,RH1,2006,wrt ice,8202,True,
+South Dome,RH1,2007,wrt ice,6299,True,
+South Dome,RH1,2008,wrt ice,4097,True,
+South Dome,RH1,2009,wrt ice,5263,True,
+South Dome,RH1,2010,wrt ice,7649,False,add ice_to_water
+South Dome,RH1,2011,other,6830,False,
+South Dome,RH1,2012,other,8120,False,
+South Dome,RH1,2013,other,8643,False,
+South Dome,RH1,2014,other,7907,False,
+South Dome,RH1,2015,other,8685,False,
+South Dome,RH1,2016,other,8633,False,
+South Dome,RH1,2017,other,8646,False,
+South Dome,RH1,2018,other,8563,False,
+South Dome,RH1,2019,other,3325,False,
+South Dome,RH2,1998,other,6092,True,
+South Dome,RH2,1999,wrt ice,8637,True,
+South Dome,RH2,2000,wrt ice,8593,True,
+South Dome,RH2,2001,wrt ice,3724,True,
+South Dome,RH2,2003,wrt ice,5254,True,
+South Dome,RH2,2004,wrt ice,8251,True,
+South Dome,RH2,2005,wrt ice,8225,True,
+South Dome,RH2,2006,other,8206,True,
+South Dome,RH2,2007,wrt ice,6312,True,
+South Dome,RH2,2008,wrt ice,4104,True,
+South Dome,RH2,2009,other,5190,True,
+South Dome,RH2,2010,same (wrt water),2500,False,
+South Dome,RH2,2011,same (wrt water),5096,False,
+South Dome,RH2,2012,other,8123,False,
+South Dome,RH2,2013,wrt ice,8636,False,add ice_to_water
+South Dome,RH2,2014,wrt ice,8430,False,add ice_to_water
+South Dome,RH2,2015,other,8711,False,
+South Dome,RH2,2016,other,8629,False,
+South Dome,RH2,2017,other,8655,False,
+South Dome,RH2,2018,other,8493,False,
+South Dome,RH2,2019,other,3324,False,
+Summit,RH1,2000,wrt ice,4757,True,
+Summit,RH1,2001,wrt ice,8758,True,
+Summit,RH1,2002,wrt ice,8749,True,
+Summit,RH1,2003,wrt ice,8759,True,
+Summit,RH1,2004,wrt ice,8531,True,
+Summit,RH1,2005,wrt ice,6564,True,
+Summit,RH1,2006,wrt ice,6700,True,
+Summit,RH1,2007,wrt ice,8760,True,
+Summit,RH1,2008,wrt ice,8783,True,
+Summit,RH1,2009,wrt ice,8734,True,
+Summit,RH1,2010,wrt ice,8755,False,add ice_to_water
+Summit,RH1,2011,wrt ice,7045,False,add ice_to_water
+Summit,RH1,2012,wrt ice,7161,False,add ice_to_water
+Summit,RH1,2013,wrt ice,8701,False,add ice_to_water
+Summit,RH1,2014,wrt ice,8712,False,add ice_to_water
+Summit,RH1,2015,wrt ice,8498,False,add ice_to_water
+Summit,RH1,2016,wrt ice,8747,False,add ice_to_water
+Summit,RH1,2017,wrt ice,8742,False,add ice_to_water
+Summit,RH1,2018,wrt ice,8758,False,add ice_to_water
+Summit,RH1,2019,wrt ice,2820,False,add ice_to_water
+Summit,RH2,1999,wrt ice,5253,True,
+Summit,RH2,2000,wrt ice,8096,True,
+Summit,RH2,2001,wrt ice,8758,True,
+Summit,RH2,2002,wrt ice,8751,True,
+Summit,RH2,2003,wrt ice,8758,True,
+Summit,RH2,2004,wrt ice,8533,True,
+Summit,RH2,2005,wrt ice,6564,True,
+Summit,RH2,2006,wrt ice,6701,True,
+Summit,RH2,2007,wrt ice,8760,True,
+Summit,RH2,2008,wrt ice,8783,True,
+Summit,RH2,2009,wrt ice,8734,True,
+Summit,RH2,2010,wrt ice,8759,False,add ice_to_water
+Summit,RH2,2011,wrt ice,7039,False,add ice_to_water
+Summit,RH2,2012,wrt ice,7171,False,add ice_to_water
+Summit,RH2,2013,wrt ice,8703,False,add ice_to_water
+Summit,RH2,2014,wrt ice,8712,False,add ice_to_water
+Summit,RH2,2015,wrt ice,8500,False,add ice_to_water
+Summit,RH2,2016,wrt ice,8745,False,add ice_to_water
+Summit,RH2,2017,wrt ice,8742,False,add ice_to_water
+Summit,RH2,2018,wrt ice,6692,False,add ice_to_water
+Summit,RH2,2019,wrt ice,2820,False,add ice_to_water
+Swiss Camp,RH1,1999,wrt ice,3351,True,
+Swiss Camp,RH1,2000,wrt ice,6763,True,
+Swiss Camp,RH1,2001,wrt ice,6599,True,
+Swiss Camp,RH1,2002,wrt ice,6669,True,
+Swiss Camp,RH1,2003,wrt ice,4337,True,
+Swiss Camp,RH1,2004,wrt ice,2290,True,
+Swiss Camp,RH1,2005,other,1868,True,
+Swiss Camp,RH1,2009,same (wrt water),3685,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH1,2010,same (wrt water),5821,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH1,2011,same (wrt water),6719,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH1,2012,other,6281,False,
+Swiss Camp,RH1,2013,other,7044,False,
+Swiss Camp,RH1,2014,other,6688,False,
+Swiss Camp,RH1,2015,other,7063,False,
+Swiss Camp,RH1,2016,other,5833,False,
+Swiss Camp,RH1,2017,other,6875,False,
+Swiss Camp,RH1,2018,other,6987,False,
+Swiss Camp,RH1,2019,other,2826,False,
+Swiss Camp,RH2,1999,other,3344,True,
+Swiss Camp,RH2,2000,same (wrt water),6753,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH2,2001,same (wrt water),6584,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH2,2002,same (wrt water),6654,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH2,2003,same (wrt water),4168,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH2,2004,same (wrt water),2290,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH2,2005,same (wrt water),1857,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH2,2009,same (wrt water),3667,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH2,2010,same (wrt water),5810,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH2,2011,same (wrt water),6724,True,existing row converts C-level RH that is already wrt water (check)
+Swiss Camp,RH2,2012,other,6266,False,
+Swiss Camp,RH2,2013,other,7034,False,
+Swiss Camp,RH2,2014,other,6694,False,
+Swiss Camp,RH2,2015,wrt ice,7070,False,add ice_to_water
+Swiss Camp,RH2,2016,wrt ice,5835,False,add ice_to_water
+Swiss Camp,RH2,2017,other,6877,False,
+Swiss Camp,RH2,2018,other,6968,False,
+Swiss Camp,RH2,2019,other,2824,False,
+Tunu-N,RH1,1998,wrt ice,5240,True,
+Tunu-N,RH1,1999,wrt ice,8293,True,
+Tunu-N,RH1,2000,other,8199,True,
+Tunu-N,RH1,2001,wrt ice,8039,True,
+Tunu-N,RH1,2002,wrt ice,8509,True,
+Tunu-N,RH1,2003,other,3596,True,
+Tunu-N,RH1,2004,wrt ice,1855,True,
+Tunu-N,RH1,2005,wrt ice,8639,True,
+Tunu-N,RH1,2006,wrt ice,8694,True,
+Tunu-N,RH1,2007,wrt ice,8731,True,
+Tunu-N,RH1,2008,wrt ice,8668,True,
+Tunu-N,RH1,2009,wrt ice,8681,True,
+Tunu-N,RH1,2010,wrt ice,8365,True,
+Tunu-N,RH1,2012,wrt ice,4947,False,add ice_to_water
+Tunu-N,RH1,2013,wrt ice,8322,False,add ice_to_water
+Tunu-N,RH1,2014,wrt ice,8698,False,add ice_to_water
+Tunu-N,RH1,2015,wrt ice,8519,False,add ice_to_water
+Tunu-N,RH1,2016,wrt ice,8732,False,add ice_to_water
+Tunu-N,RH1,2017,wrt ice,8709,False,add ice_to_water
+Tunu-N,RH1,2018,wrt ice,3420,False,add ice_to_water
+Tunu-N,RH2,2001,wrt ice,4911,True,
+Tunu-N,RH2,2002,wrt ice,8489,True,
+Tunu-N,RH2,2003,other,3596,True,
+Tunu-N,RH2,2004,wrt ice,1855,True,
+Tunu-N,RH2,2005,wrt ice,8633,True,
+Tunu-N,RH2,2006,wrt ice,8691,True,
+Tunu-N,RH2,2007,wrt ice,8726,True,
+Tunu-N,RH2,2008,wrt ice,8667,True,
+Tunu-N,RH2,2009,wrt ice,8679,True,
+Tunu-N,RH2,2010,wrt ice,8356,True,
+Tunu-N,RH2,2011,other,1051,True,
+Tunu-N,RH2,2012,wrt ice,5929,False,add ice_to_water
+Tunu-N,RH2,2013,wrt ice,8322,False,add ice_to_water
+Tunu-N,RH2,2014,wrt ice,8683,False,add ice_to_water
+Tunu-N,RH2,2015,wrt ice,8516,False,add ice_to_water
+Tunu-N,RH2,2016,wrt ice,8722,False,add ice_to_water
+Tunu-N,RH2,2017,wrt ice,8704,False,add ice_to_water
+Tunu-N,RH2,2018,wrt ice,3420,False,add ice_to_water

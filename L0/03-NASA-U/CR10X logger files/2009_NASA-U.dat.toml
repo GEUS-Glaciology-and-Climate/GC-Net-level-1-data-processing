@@ -1,0 +1,78 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 32
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "_", "_", "P", "_", "HW2"]
+[[array.run]]
+row_from = 0
+row_to = 23836
+start_year = 2005
+
+[[array]]
+id = 32
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "_", "_", "_", "_"]
+[[array.run]]
+row_from = 23911
+row_to = 30785
+start_year = 2008
+
+[[array]]
+id = 188
+ncols = 17
+column_header = ["TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "TA3", "TA4", "VW2", "V"]
+[[array.run]]
+row_from = 0
+row_to = 10959
+start_year = 2005
+[[array.run]]
+row_from = 16695
+row_to = 23569
+start_year = 2008
+
+[[array]]
+id = 188
+ncols = 17
+column_header = ["TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "_", "_", "TS10", "TA3", "TA4", "VW2", "V"]
+[[array.run]]
+row_from = 10960
+row_to = 16620
+start_year = 2007
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "documented: C-level factor over 12548 h in 2005-2008 (documented 200.0)"
+
+[calibration.NR]
+scale_pos = 80
+scale_neg = 80
+add = 0
+source = "CR1000 header (CR10X-era ISWR implied 198.7 agrees with header 200)"
+
+[calibration.OSWR]
+scale_pos = 198.641112
+scale_neg = 198.641112
+add = 0
+source = "x2.76205 moved from metadata/adjustments (2003-01-01 on): the raw OSWR gives a summer albedo of 0.30, with the factor 0.84"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (8 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1.00048
+scale_neg = 1.00048
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 1.00048
+scale_neg = 1.00048
+add = 0
+source = "CR1000 header"
+

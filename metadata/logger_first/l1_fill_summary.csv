@@ -1,0 +1,5189 @@
+site,variable,source,hours
+Swiss Camp,ISWR,CR1000,97347
+Swiss Camp,ISWR,C-level (Jason file),20078
+Swiss Camp,ISWR,2004_SC.dat,14483
+Swiss Camp,ISWR,C-level (station file),8945
+Swiss Camp,ISWR,2000_AWSSWC00.DAT,8352
+Swiss Camp,ISWR,1997_AWS_ETH.DAT,8242
+Swiss Camp,ISWR,2002_eth_01_02.dat,8203
+Swiss Camp,ISWR,2001_SWC2001.DAT,7874
+Swiss Camp,ISWR,1998_AWS_97_8.DAT,6518
+Swiss Camp,ISWR,2005_ETH1.DAT,3200
+Swiss Camp,ISWR,1998_AWS_98_1.DAT,2108
+Swiss Camp,ISWR,2004_scnew..DAT,2032
+Swiss Camp,ISWR,2005_ETH Summer 05.DAT,1856
+Swiss Camp,ISWR,1999_CH_AW006.DAT,994
+Swiss Camp,ISWR,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,ISWR,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,ISWR,2000_ETH_AWS.DAT,404
+Swiss Camp,ISWR,2007_sc aws.dat,353
+Swiss Camp,ISWR,1998_SWIS_10M.DAT,335
+Swiss Camp,ISWR,2005_ETH3.DAT,207
+Swiss Camp,ISWR,1999_CH_AWS.DAT,134
+Swiss Camp,ISWR,2007_sc.dat,132
+Swiss Camp,ISWR,2000_SWC2000.DAT,10
+Swiss Camp,ISWR,1998_AWS_98.DAT,1
+Swiss Camp,ISWR,2006_SWC.dat,1
+Swiss Camp,OSWR,CR1000,97347
+Swiss Camp,OSWR,C-level (Jason file),37127
+Swiss Camp,OSWR,2004_SC.dat,14483
+Swiss Camp,OSWR,C-level (station file),8943
+Swiss Camp,OSWR,2000_AWSSWC00.DAT,8351
+Swiss Camp,OSWR,2002_eth_01_02.dat,8203
+Swiss Camp,OSWR,2001_SWC2001.DAT,7874
+Swiss Camp,OSWR,2005_ETH1.DAT,3200
+Swiss Camp,OSWR,2004_scnew..DAT,2032
+Swiss Camp,OSWR,2005_ETH Summer 05.DAT,1856
+Swiss Camp,OSWR,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,OSWR,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,OSWR,2000_ETH_AWS.DAT,404
+Swiss Camp,OSWR,2007_sc aws.dat,353
+Swiss Camp,OSWR,2005_ETH3.DAT,207
+Swiss Camp,OSWR,2007_sc.dat,132
+Swiss Camp,OSWR,2000_SWC2000.DAT,10
+Swiss Camp,OSWR,2006_SWC.dat,1
+Swiss Camp,NR,CR1000,97347
+Swiss Camp,NR,C-level (Jason file),20323
+Swiss Camp,NR,2004_SC.dat,14483
+Swiss Camp,NR,C-level (station file),11988
+Swiss Camp,NR,2000_AWSSWC00.DAT,8351
+Swiss Camp,NR,1997_AWS_ETH.DAT,8231
+Swiss Camp,NR,2002_eth_01_02.dat,8203
+Swiss Camp,NR,2001_SWC2001.DAT,7874
+Swiss Camp,NR,1998_AWS_97_8.DAT,6512
+Swiss Camp,NR,1998_AWS_98_1.DAT,2105
+Swiss Camp,NR,2004_scnew..DAT,2030
+Swiss Camp,NR,2005_ETH Summer 05.DAT,1803
+Swiss Camp,NR,1999_CH_AW006.DAT,993
+Swiss Camp,NR,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,NR,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,NR,2000_ETH_AWS.DAT,404
+Swiss Camp,NR,2007_sc aws.dat,353
+Swiss Camp,NR,1998_SWIS_10M.DAT,335
+Swiss Camp,NR,2005_ETH3.DAT,207
+Swiss Camp,NR,1999_CH_AWS.DAT,134
+Swiss Camp,NR,2007_sc.dat,129
+Swiss Camp,NR,2000_SWC2000.DAT,10
+Swiss Camp,NR,1998_AWS_98.DAT,1
+Swiss Camp,NR,2000_swis99_0.dat,1
+Swiss Camp,NR,2006_SWC.dat,1
+Swiss Camp,TA1,CR1000,97270
+Swiss Camp,TA1,2004_SC.dat,14483
+Swiss Camp,TA1,C-level (station file),9610
+Swiss Camp,TA1,1997_AWS_ETH.DAT,8239
+Swiss Camp,TA1,2002_eth_01_02.dat,8203
+Swiss Camp,TA1,2000_AWSSWC00.DAT,8155
+Swiss Camp,TA1,2001_SWC2001.DAT,7873
+Swiss Camp,TA1,1998_AWS_97_8.DAT,6518
+Swiss Camp,TA1,2005_ETH1.DAT,3197
+Swiss Camp,TA1,1998_AWS_98_1.DAT,2106
+Swiss Camp,TA1,2004_scnew..DAT,2028
+Swiss Camp,TA1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA1,C-level (Jason file),1166
+Swiss Camp,TA1,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TA1,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA1,1999_CH_AW006.DAT,455
+Swiss Camp,TA1,2000_ETH_AWS.DAT,404
+Swiss Camp,TA1,2007_sc aws.dat,353
+Swiss Camp,TA1,1998_SWIS_10M.DAT,335
+Swiss Camp,TA1,2005_ETH3.DAT,207
+Swiss Camp,TA1,2007_sc.dat,121
+Swiss Camp,TA1,1999_CH_AWS.DAT,109
+Swiss Camp,TA1,2000_SWC2000.DAT,10
+Swiss Camp,TA1,1998_AWS_98.DAT,1
+Swiss Camp,TA1,2006_SWC.dat,1
+Swiss Camp,TA2,CR1000,97284
+Swiss Camp,TA2,2004_SC.dat,14483
+Swiss Camp,TA2,C-level (Jason file),13278
+Swiss Camp,TA2,C-level (station file),9605
+Swiss Camp,TA2,1997_AWS_ETH.DAT,8239
+Swiss Camp,TA2,2002_eth_01_02.dat,8203
+Swiss Camp,TA2,2000_AWSSWC00.DAT,8155
+Swiss Camp,TA2,2001_SWC2001.DAT,7873
+Swiss Camp,TA2,1998_AWS_97_8.DAT,6518
+Swiss Camp,TA2,2005_ETH1.DAT,3197
+Swiss Camp,TA2,1998_AWS_98_1.DAT,2106
+Swiss Camp,TA2,2004_scnew..DAT,2028
+Swiss Camp,TA2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA2,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TA2,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA2,1999_CH_AW006.DAT,455
+Swiss Camp,TA2,2000_ETH_AWS.DAT,404
+Swiss Camp,TA2,2007_sc aws.dat,353
+Swiss Camp,TA2,1998_SWIS_10M.DAT,335
+Swiss Camp,TA2,2005_ETH3.DAT,207
+Swiss Camp,TA2,2007_sc.dat,121
+Swiss Camp,TA2,1999_CH_AWS.DAT,109
+Swiss Camp,TA2,2000_SWC2000.DAT,10
+Swiss Camp,TA2,1998_AWS_98.DAT,1
+Swiss Camp,TA2,2006_SWC.dat,1
+Swiss Camp,TA3,CR1000,97347
+Swiss Camp,TA3,2004_SC.dat,14483
+Swiss Camp,TA3,C-level (station file),9541
+Swiss Camp,TA3,2000_AWSSWC00.DAT,8352
+Swiss Camp,TA3,C-level (Jason file),8316
+Swiss Camp,TA3,1997_AWS_ETH.DAT,8242
+Swiss Camp,TA3,2002_eth_01_02.dat,8203
+Swiss Camp,TA3,2001_SWC2001.DAT,7874
+Swiss Camp,TA3,1998_AWS_97_8.DAT,6518
+Swiss Camp,TA3,2005_ETH1.DAT,3201
+Swiss Camp,TA3,1998_AWS_98_1.DAT,2108
+Swiss Camp,TA3,2004_scnew..DAT,1866
+Swiss Camp,TA3,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA3,1999_CH_AW006.DAT,994
+Swiss Camp,TA3,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TA3,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA3,2000_ETH_AWS.DAT,404
+Swiss Camp,TA3,2007_sc aws.dat,353
+Swiss Camp,TA3,1998_SWIS_10M.DAT,335
+Swiss Camp,TA3,2005_ETH3.DAT,207
+Swiss Camp,TA3,2007_sc.dat,140
+Swiss Camp,TA3,1999_CH_AWS.DAT,134
+Swiss Camp,TA3,2000_SWC2000.DAT,10
+Swiss Camp,TA3,2006_SWC.dat,2
+Swiss Camp,TA3,1998_AWS_98.DAT,1
+Swiss Camp,TA4,CR1000,97347
+Swiss Camp,TA4,2004_SC.dat,14483
+Swiss Camp,TA4,C-level (station file),9542
+Swiss Camp,TA4,2000_AWSSWC00.DAT,8352
+Swiss Camp,TA4,C-level (Jason file),8320
+Swiss Camp,TA4,1997_AWS_ETH.DAT,8240
+Swiss Camp,TA4,2002_eth_01_02.dat,8203
+Swiss Camp,TA4,2001_SWC2001.DAT,7874
+Swiss Camp,TA4,1998_AWS_97_8.DAT,6518
+Swiss Camp,TA4,2005_ETH1.DAT,3201
+Swiss Camp,TA4,1998_AWS_98_1.DAT,2108
+Swiss Camp,TA4,2004_scnew..DAT,1865
+Swiss Camp,TA4,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA4,1999_CH_AW006.DAT,994
+Swiss Camp,TA4,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TA4,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA4,2000_ETH_AWS.DAT,404
+Swiss Camp,TA4,2007_sc aws.dat,353
+Swiss Camp,TA4,1998_SWIS_10M.DAT,335
+Swiss Camp,TA4,2005_ETH3.DAT,207
+Swiss Camp,TA4,2007_sc.dat,142
+Swiss Camp,TA4,1999_CH_AWS.DAT,134
+Swiss Camp,TA4,2000_SWC2000.DAT,10
+Swiss Camp,TA4,2006_SWC.dat,2
+Swiss Camp,TA4,1998_AWS_98.DAT,1
+Swiss Camp,RH1,CR1000,97347
+Swiss Camp,RH1,C-level (Jason file),26605
+Swiss Camp,RH1,2004_SC.dat,14483
+Swiss Camp,RH1,C-level (station file),9632
+Swiss Camp,RH1,2000_AWSSWC00.DAT,8352
+Swiss Camp,RH1,2002_eth_01_02.dat,8203
+Swiss Camp,RH1,2001_SWC2001.DAT,7874
+Swiss Camp,RH1,2005_ETH1.DAT,3201
+Swiss Camp,RH1,2004_scnew..DAT,2032
+Swiss Camp,RH1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,RH1,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,RH1,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,RH1,2000_ETH_AWS.DAT,404
+Swiss Camp,RH1,2007_sc aws.dat,353
+Swiss Camp,RH1,2005_ETH3.DAT,207
+Swiss Camp,RH1,2007_sc.dat,153
+Swiss Camp,RH1,2000_SWC2000.DAT,10
+Swiss Camp,RH1,2006_SWC.dat,2
+Swiss Camp,RH2,CR1000,97347
+Swiss Camp,RH2,C-level (Jason file),26624
+Swiss Camp,RH2,2004_SC.dat,14483
+Swiss Camp,RH2,C-level (station file),9632
+Swiss Camp,RH2,2000_AWSSWC00.DAT,8352
+Swiss Camp,RH2,2002_eth_01_02.dat,8203
+Swiss Camp,RH2,2001_SWC2001.DAT,7874
+Swiss Camp,RH2,2005_ETH1.DAT,3201
+Swiss Camp,RH2,2004_scnew..DAT,2031
+Swiss Camp,RH2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,RH2,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,RH2,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,RH2,2000_ETH_AWS.DAT,404
+Swiss Camp,RH2,2007_sc aws.dat,353
+Swiss Camp,RH2,2005_ETH3.DAT,207
+Swiss Camp,RH2,2007_sc.dat,158
+Swiss Camp,RH2,2000_SWC2000.DAT,10
+Swiss Camp,RH2,2006_SWC.dat,2
+Swiss Camp,VW1,CR1000,97347
+Swiss Camp,VW1,C-level (Jason file),28820
+Swiss Camp,VW1,2004_SC.dat,14483
+Swiss Camp,VW1,C-level (station file),8928
+Swiss Camp,VW1,2000_AWSSWC00.DAT,8352
+Swiss Camp,VW1,1997_AWS_ETH.DAT,8242
+Swiss Camp,VW1,2002_eth_01_02.dat,8203
+Swiss Camp,VW1,2001_SWC2001.DAT,7874
+Swiss Camp,VW1,2005_ETH1.DAT,3201
+Swiss Camp,VW1,2004_scnew..DAT,2032
+Swiss Camp,VW1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,VW1,1999_CH_AW006.DAT,994
+Swiss Camp,VW1,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,VW1,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,VW1,2000_ETH_AWS.DAT,404
+Swiss Camp,VW1,2007_sc aws.dat,353
+Swiss Camp,VW1,1998_SWIS_10M.DAT,335
+Swiss Camp,VW1,2005_ETH3.DAT,207
+Swiss Camp,VW1,2007_sc.dat,165
+Swiss Camp,VW1,1999_CH_AWS.DAT,134
+Swiss Camp,VW1,2000_SWC2000.DAT,10
+Swiss Camp,VW1,2006_SWC.dat,2
+Swiss Camp,VW2,CR1000,97347
+Swiss Camp,VW2,C-level (Jason file),20383
+Swiss Camp,VW2,2004_SC.dat,14483
+Swiss Camp,VW2,C-level (station file),8927
+Swiss Camp,VW2,2000_AWSSWC00.DAT,8352
+Swiss Camp,VW2,1997_AWS_ETH.DAT,8242
+Swiss Camp,VW2,2002_eth_01_02.dat,8203
+Swiss Camp,VW2,2001_SWC2001.DAT,7874
+Swiss Camp,VW2,1998_AWS_97_8.DAT,6518
+Swiss Camp,VW2,2005_ETH1.DAT,3201
+Swiss Camp,VW2,1998_AWS_98_1.DAT,2108
+Swiss Camp,VW2,2004_scnew..DAT,2032
+Swiss Camp,VW2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,VW2,1999_CH_AW006.DAT,994
+Swiss Camp,VW2,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,VW2,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,VW2,2000_ETH_AWS.DAT,404
+Swiss Camp,VW2,2007_sc aws.dat,353
+Swiss Camp,VW2,1998_SWIS_10M.DAT,335
+Swiss Camp,VW2,2005_ETH3.DAT,207
+Swiss Camp,VW2,2007_sc.dat,165
+Swiss Camp,VW2,1999_CH_AWS.DAT,134
+Swiss Camp,VW2,2000_SWC2000.DAT,10
+Swiss Camp,VW2,2006_SWC.dat,2
+Swiss Camp,VW2,1998_AWS_98.DAT,1
+Swiss Camp,DW1,CR1000,97347
+Swiss Camp,DW1,2004_SC.dat,14483
+Swiss Camp,DW1,C-level (station file),12701
+Swiss Camp,DW1,2001_SWC2001.DAT,8539
+Swiss Camp,DW1,2000_AWSSWC00.DAT,8352
+Swiss Camp,DW1,1997_AWS_ETH.DAT,8242
+Swiss Camp,DW1,2002_eth_01_02.dat,8203
+Swiss Camp,DW1,C-level (Jason file),7519
+Swiss Camp,DW1,1998_AWS_97_8.DAT,6518
+Swiss Camp,DW1,1998_AWS_98_1.DAT,2108
+Swiss Camp,DW1,2004_scnew..DAT,2031
+Swiss Camp,DW1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,DW1,1999_CH_AW006.DAT,994
+Swiss Camp,DW1,2001_SWISSAWS.DAT,390
+Swiss Camp,DW1,2007_sc aws.dat,353
+Swiss Camp,DW1,1998_SWIS_10M.DAT,335
+Swiss Camp,DW1,2005_ETH3.DAT,208
+Swiss Camp,DW1,1999_CH_AWS.DAT,134
+Swiss Camp,DW1,2007_sc.dat,117
+Swiss Camp,DW1,2000_SWC2000.DAT,105
+Swiss Camp,DW1,2002_ETH.DAT,22
+Swiss Camp,DW1,2006_SWC.dat,2
+Swiss Camp,DW1,1998_AWS_98.DAT,1
+Swiss Camp,DW2,CR1000,97347
+Swiss Camp,DW2,C-level (Jason file),20270
+Swiss Camp,DW2,2004_SC.dat,14483
+Swiss Camp,DW2,C-level (station file),12640
+Swiss Camp,DW2,2001_SWC2001.DAT,8539
+Swiss Camp,DW2,2000_AWSSWC00.DAT,8352
+Swiss Camp,DW2,1997_AWS_ETH.DAT,8242
+Swiss Camp,DW2,2002_eth_01_02.dat,8203
+Swiss Camp,DW2,1998_AWS_97_8.DAT,6518
+Swiss Camp,DW2,1998_AWS_98_1.DAT,2108
+Swiss Camp,DW2,2004_scnew..DAT,2030
+Swiss Camp,DW2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,DW2,1999_CH_AW006.DAT,994
+Swiss Camp,DW2,2001_SWISSAWS.DAT,390
+Swiss Camp,DW2,2007_sc aws.dat,353
+Swiss Camp,DW2,1998_SWIS_10M.DAT,335
+Swiss Camp,DW2,2005_ETH3.DAT,208
+Swiss Camp,DW2,2007_sc.dat,163
+Swiss Camp,DW2,1999_CH_AWS.DAT,134
+Swiss Camp,DW2,2000_SWC2000.DAT,105
+Swiss Camp,DW2,2002_ETH.DAT,22
+Swiss Camp,DW2,2006_SWC.dat,2
+Swiss Camp,DW2,1998_AWS_98.DAT,1
+Swiss Camp,P,CR1000,97027
+Swiss Camp,P,C-level (station file),20703
+Swiss Camp,P,C-level (Jason file),12208
+Swiss Camp,P,2003_eth_02_03.dat,8445
+Swiss Camp,P,2002_eth_01_02.dat,8203
+Swiss Camp,P,2001_SWC2001.DAT,7874
+Swiss Camp,P,1998_AWS_97_8.DAT,6518
+Swiss Camp,P,1998_AWS_98_1.DAT,2108
+Swiss Camp,P,2005_ETH Summer 05.DAT,1856
+Swiss Camp,P,1999_CH_AW006.DAT,994
+Swiss Camp,P,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,P,2000_ETH_AWS.DAT,404
+Swiss Camp,P,2007_sc aws.dat,353
+Swiss Camp,P,1998_SWIS_10M.DAT,335
+Swiss Camp,P,2005_ETH3.DAT,208
+Swiss Camp,P,2007_sc.dat,165
+Swiss Camp,P,1999_CH_AWS.DAT,134
+Swiss Camp,P,2000_SWC2000.DAT,10
+Swiss Camp,P,2006_SWC.dat,2
+Swiss Camp,P,1998_AWS_98.DAT,1
+Swiss Camp,HW1,CR1000,83459
+Swiss Camp,HW1,C-level (Jason file),61961
+Swiss Camp,HW1,C-level (station file),30003
+Swiss Camp,HW2,CR1000,91181
+Swiss Camp,HW2,C-level (Jason file),61961
+Swiss Camp,HW2,C-level (station file),29996
+Swiss Camp,V,CR1000,97347
+Swiss Camp,V,C-level (station file),8911
+Swiss Camp,V,2003_eth_02_03.dat,8445
+Swiss Camp,V,2000_AWSSWC00.DAT,8353
+Swiss Camp,V,1997_AWS_ETH.DAT,8242
+Swiss Camp,V,2001_SWC2001.DAT,8231
+Swiss Camp,V,2002_eth_01_02.dat,8203
+Swiss Camp,V,1998_AWS_97_8.DAT,6518
+Swiss Camp,V,2005_ETH1.DAT,3201
+Swiss Camp,V,1998_AWS_98_1.DAT,2108
+Swiss Camp,V,2005_ETH Summer 05.DAT,1856
+Swiss Camp,V,1999_CH_AW006.DAT,994
+Swiss Camp,V,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,V,C-level (Jason file),408
+Swiss Camp,V,2000_ETH_AWS.DAT,404
+Swiss Camp,V,2001_SWISSAWS.DAT,390
+Swiss Camp,V,2007_sc aws.dat,353
+Swiss Camp,V,1998_SWIS_10M.DAT,335
+Swiss Camp,V,2005_ETH3.DAT,207
+Swiss Camp,V,2007_sc.dat,165
+Swiss Camp,V,1999_CH_AWS.DAT,134
+Swiss Camp,V,2002_ETH.DAT,22
+Swiss Camp,V,2006_SWC.dat,2
+Swiss Camp,V,1998_AWS_98.DAT,1
+Swiss Camp,TA5,CR1000,97347
+Swiss Camp,TA5,2004_SC.dat,22254
+Swiss Camp,TA5,C-level (station file),8892
+Swiss Camp,TA5,2005_ETH1.DAT,3197
+Swiss Camp,TA5,2004_scnew..DAT,2032
+Swiss Camp,TA5,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA5,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA5,2007_sc aws.dat,353
+Swiss Camp,TA5,2005_ETH3.DAT,207
+Swiss Camp,TA5,2007_sc.dat,120
+Swiss Camp,TA5,2006_SWC.dat,1
+Swiss Camp,TS1,CR1000,26208
+Swiss Camp,TS1,2004_SC.dat,14483
+Swiss Camp,TS1,C-level (station file),9863
+Swiss Camp,TS1,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS1,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS1,2002_eth_01_02.dat,8203
+Swiss Camp,TS1,2001_SWC2001.DAT,7874
+Swiss Camp,TS1,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS1,2005_ETH1.DAT,3197
+Swiss Camp,TS1,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS1,2004_scnew..DAT,2029
+Swiss Camp,TS1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS1,1999_CH_AW006.DAT,994
+Swiss Camp,TS1,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS1,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS1,2000_ETH_AWS.DAT,404
+Swiss Camp,TS1,2007_sc aws.dat,353
+Swiss Camp,TS1,1998_SWIS_10M.DAT,335
+Swiss Camp,TS1,2005_ETH3.DAT,207
+Swiss Camp,TS1,1999_CH_AWS.DAT,134
+Swiss Camp,TS1,2007_sc.dat,122
+Swiss Camp,TS1,C-level (Jason file),16
+Swiss Camp,TS1,2000_SWC2000.DAT,10
+Swiss Camp,TS1,1998_AWS_98.DAT,1
+Swiss Camp,TS1,2006_SWC.dat,1
+Swiss Camp,TS2,CR1000,43608
+Swiss Camp,TS2,2004_SC.dat,14483
+Swiss Camp,TS2,C-level (station file),9860
+Swiss Camp,TS2,2001_SWC2001.DAT,8539
+Swiss Camp,TS2,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS2,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS2,2002_eth_01_02.dat,8203
+Swiss Camp,TS2,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS2,2005_ETH1.DAT,3199
+Swiss Camp,TS2,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS2,2004_scnew..DAT,2030
+Swiss Camp,TS2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS2,1999_CH_AW006.DAT,994
+Swiss Camp,TS2,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS2,2001_SWISSAWS.DAT,390
+Swiss Camp,TS2,2007_sc aws.dat,353
+Swiss Camp,TS2,1998_SWIS_10M.DAT,335
+Swiss Camp,TS2,2005_ETH3.DAT,207
+Swiss Camp,TS2,1999_CH_AWS.DAT,134
+Swiss Camp,TS2,2007_sc.dat,123
+Swiss Camp,TS2,2000_SWC2000.DAT,105
+Swiss Camp,TS2,2002_ETH.DAT,22
+Swiss Camp,TS2,C-level (Jason file),16
+Swiss Camp,TS2,1998_AWS_98.DAT,1
+Swiss Camp,TS2,2006_SWC.dat,1
+Swiss Camp,TS3,CR1000,26203
+Swiss Camp,TS3,2004_SC.dat,14483
+Swiss Camp,TS3,C-level (station file),9860
+Swiss Camp,TS3,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS3,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS3,2002_eth_01_02.dat,8203
+Swiss Camp,TS3,2001_SWC2001.DAT,7874
+Swiss Camp,TS3,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS3,2005_ETH1.DAT,3199
+Swiss Camp,TS3,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS3,2004_scnew..DAT,2030
+Swiss Camp,TS3,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS3,1999_CH_AW006.DAT,994
+Swiss Camp,TS3,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS3,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS3,2000_ETH_AWS.DAT,404
+Swiss Camp,TS3,2007_sc aws.dat,353
+Swiss Camp,TS3,1998_SWIS_10M.DAT,335
+Swiss Camp,TS3,2005_ETH3.DAT,207
+Swiss Camp,TS3,1999_CH_AWS.DAT,134
+Swiss Camp,TS3,2007_sc.dat,123
+Swiss Camp,TS3,C-level (Jason file),16
+Swiss Camp,TS3,2000_SWC2000.DAT,10
+Swiss Camp,TS3,1998_AWS_98.DAT,1
+Swiss Camp,TS3,2006_SWC.dat,1
+Swiss Camp,TS4,CR1000,89078
+Swiss Camp,TS4,2004_SC.dat,14483
+Swiss Camp,TS4,C-level (station file),10530
+Swiss Camp,TS4,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS4,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS4,2002_eth_01_02.dat,8203
+Swiss Camp,TS4,2001_SWC2001.DAT,7874
+Swiss Camp,TS4,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS4,2005_ETH1.DAT,3199
+Swiss Camp,TS4,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS4,2004_scnew..DAT,2030
+Swiss Camp,TS4,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS4,1999_CH_AW006.DAT,994
+Swiss Camp,TS4,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS4,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS4,2000_ETH_AWS.DAT,404
+Swiss Camp,TS4,2007_sc aws.dat,353
+Swiss Camp,TS4,1998_SWIS_10M.DAT,335
+Swiss Camp,TS4,2005_ETH3.DAT,207
+Swiss Camp,TS4,1999_CH_AWS.DAT,134
+Swiss Camp,TS4,2007_sc.dat,123
+Swiss Camp,TS4,C-level (Jason file),16
+Swiss Camp,TS4,2000_SWC2000.DAT,10
+Swiss Camp,TS4,1998_AWS_98.DAT,1
+Swiss Camp,TS4,2006_SWC.dat,1
+Swiss Camp,TS5,CR1000,67245
+Swiss Camp,TS5,C-level (station file),14712
+Swiss Camp,TS5,2004_SC.dat,14483
+Swiss Camp,TS5,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS5,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS5,2002_eth_01_02.dat,8203
+Swiss Camp,TS5,2001_SWC2001.DAT,7874
+Swiss Camp,TS5,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS5,2005_ETH1.DAT,3199
+Swiss Camp,TS5,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS5,2004_scnew..DAT,2028
+Swiss Camp,TS5,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS5,1999_CH_AW006.DAT,994
+Swiss Camp,TS5,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS5,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS5,2000_ETH_AWS.DAT,404
+Swiss Camp,TS5,2007_sc aws.dat,353
+Swiss Camp,TS5,1998_SWIS_10M.DAT,335
+Swiss Camp,TS5,2005_ETH3.DAT,207
+Swiss Camp,TS5,1999_CH_AWS.DAT,134
+Swiss Camp,TS5,2007_sc.dat,123
+Swiss Camp,TS5,C-level (Jason file),16
+Swiss Camp,TS5,2000_SWC2000.DAT,10
+Swiss Camp,TS5,1998_AWS_98.DAT,1
+Swiss Camp,TS5,2006_SWC.dat,1
+Swiss Camp,TS6,CR1000,91445
+Swiss Camp,TS6,2004_SC.dat,14483
+Swiss Camp,TS6,C-level (station file),9937
+Swiss Camp,TS6,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS6,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS6,2002_eth_01_02.dat,8203
+Swiss Camp,TS6,2001_SWC2001.DAT,7874
+Swiss Camp,TS6,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS6,2005_ETH1.DAT,3199
+Swiss Camp,TS6,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS6,2004_scnew..DAT,2028
+Swiss Camp,TS6,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS6,1999_CH_AW006.DAT,994
+Swiss Camp,TS6,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS6,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS6,2000_ETH_AWS.DAT,404
+Swiss Camp,TS6,2007_sc aws.dat,353
+Swiss Camp,TS6,1998_SWIS_10M.DAT,335
+Swiss Camp,TS6,2005_ETH3.DAT,207
+Swiss Camp,TS6,1999_CH_AWS.DAT,134
+Swiss Camp,TS6,2007_sc.dat,121
+Swiss Camp,TS6,C-level (Jason file),16
+Swiss Camp,TS6,2000_SWC2000.DAT,10
+Swiss Camp,TS6,1998_AWS_98.DAT,1
+Swiss Camp,TS6,2006_SWC.dat,1
+Swiss Camp,TS7,CR1000,76533
+Swiss Camp,TS7,C-level (station file),14956
+Swiss Camp,TS7,2004_SC.dat,14483
+Swiss Camp,TS7,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS7,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS7,2002_eth_01_02.dat,8203
+Swiss Camp,TS7,2001_SWC2001.DAT,7874
+Swiss Camp,TS7,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS7,2005_ETH1.DAT,3200
+Swiss Camp,TS7,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS7,2004_scnew..DAT,2029
+Swiss Camp,TS7,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS7,1999_CH_AW006.DAT,994
+Swiss Camp,TS7,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS7,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS7,2000_ETH_AWS.DAT,404
+Swiss Camp,TS7,2007_sc aws.dat,353
+Swiss Camp,TS7,1998_SWIS_10M.DAT,335
+Swiss Camp,TS7,2005_ETH3.DAT,207
+Swiss Camp,TS7,1999_CH_AWS.DAT,134
+Swiss Camp,TS7,2007_sc.dat,121
+Swiss Camp,TS7,C-level (Jason file),16
+Swiss Camp,TS7,2000_SWC2000.DAT,10
+Swiss Camp,TS7,1998_AWS_98.DAT,1
+Swiss Camp,TS7,2006_SWC.dat,1
+Swiss Camp,TS8,CR1000,80053
+Swiss Camp,TS8,2004_SC.dat,14483
+Swiss Camp,TS8,C-level (station file),9771
+Swiss Camp,TS8,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS8,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS8,2002_eth_01_02.dat,8203
+Swiss Camp,TS8,2001_SWC2001.DAT,7874
+Swiss Camp,TS8,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS8,2005_ETH1.DAT,3199
+Swiss Camp,TS8,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS8,2004_scnew..DAT,2029
+Swiss Camp,TS8,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS8,1999_CH_AW006.DAT,994
+Swiss Camp,TS8,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS8,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS8,2000_ETH_AWS.DAT,404
+Swiss Camp,TS8,2007_sc aws.dat,353
+Swiss Camp,TS8,1998_SWIS_10M.DAT,335
+Swiss Camp,TS8,2005_ETH3.DAT,207
+Swiss Camp,TS8,1999_CH_AWS.DAT,134
+Swiss Camp,TS8,2007_sc.dat,121
+Swiss Camp,TS8,C-level (Jason file),16
+Swiss Camp,TS8,2000_SWC2000.DAT,10
+Swiss Camp,TS8,1998_AWS_98.DAT,1
+Swiss Camp,TS8,2006_SWC.dat,1
+Swiss Camp,TS9,CR1000,72023
+Swiss Camp,TS9,2004_SC.dat,14483
+Swiss Camp,TS9,C-level (station file),13682
+Swiss Camp,TS9,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS9,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS9,2002_eth_01_02.dat,8203
+Swiss Camp,TS9,2001_SWC2001.DAT,7874
+Swiss Camp,TS9,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS9,2005_ETH1.DAT,3199
+Swiss Camp,TS9,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS9,2004_scnew..DAT,2028
+Swiss Camp,TS9,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS9,1999_CH_AW006.DAT,994
+Swiss Camp,TS9,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS9,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS9,2000_ETH_AWS.DAT,404
+Swiss Camp,TS9,2007_sc aws.dat,353
+Swiss Camp,TS9,1998_SWIS_10M.DAT,335
+Swiss Camp,TS9,2005_ETH3.DAT,207
+Swiss Camp,TS9,1999_CH_AWS.DAT,134
+Swiss Camp,TS9,2007_sc.dat,120
+Swiss Camp,TS9,C-level (Jason file),16
+Swiss Camp,TS9,2000_SWC2000.DAT,10
+Swiss Camp,TS9,1998_AWS_98.DAT,1
+Swiss Camp,TS9,2006_SWC.dat,1
+Swiss Camp,TS10,CR1000,97327
+Swiss Camp,TS10,2004_SC.dat,13061
+Swiss Camp,TS10,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS10,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS10,2002_eth_01_02.dat,8203
+Swiss Camp,TS10,2001_SWC2001.DAT,7874
+Swiss Camp,TS10,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS10,C-level (station file),3853
+Swiss Camp,TS10,2005_ETH1.DAT,3199
+Swiss Camp,TS10,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS10,2004_scnew..DAT,2028
+Swiss Camp,TS10,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS10,1999_CH_AW006.DAT,994
+Swiss Camp,TS10,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS10,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS10,2000_ETH_AWS.DAT,404
+Swiss Camp,TS10,2007_sc aws.dat,353
+Swiss Camp,TS10,1998_SWIS_10M.DAT,335
+Swiss Camp,TS10,2005_ETH3.DAT,207
+Swiss Camp,TS10,1999_CH_AWS.DAT,134
+Swiss Camp,TS10,2007_sc.dat,121
+Swiss Camp,TS10,C-level (Jason file),16
+Swiss Camp,TS10,2000_SWC2000.DAT,10
+Swiss Camp,TS10,1998_AWS_98.DAT,1
+Swiss Camp,TS10,2006_SWC.dat,1
+Swiss Camp,IUVR,CR1000,34912
+Swiss Camp,ILWR,CR1000,47555
+Swiss Camp,Tsurf1,CR1000,95345
+Swiss Camp,Tsurf2,CR1000,97110
+Swiss Camp,HS1,C-level (Jason file),46914
+Swiss Camp,HS1,C-level (station file),24218
+Swiss Camp,HS2,C-level (Jason file),39647
+Swiss Camp,HS2,C-level (station file),29785
+Crawford Point 1,ISWR,CR1000,33751
+Crawford Point 1,ISWR,C-level (station file),25532
+Crawford Point 1,ISWR,C-level (Jason file),10610
+Crawford Point 1,ISWR,2010_cp1.dat,9048
+Crawford Point 1,ISWR,2006_CP1.dat,8895
+Crawford Point 1,ISWR,2001_AWSCP101.DAT,8606
+Crawford Point 1,ISWR,2009_CP1.dat,8562
+Crawford Point 1,ISWR,2003_AWSCP103.DAT,8304
+Crawford Point 1,ISWR,2002_AWSCP102.DAT,8279
+Crawford Point 1,ISWR,1997_CRA.DAT,7644
+Crawford Point 1,ISWR,1996_CRA95-96.DAT,5609
+Crawford Point 1,ISWR,1998_CP1_97.DAT,4211
+Crawford Point 1,ISWR,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,ISWR,1997_CRAWF101.DAT,3105
+Crawford Point 1,ISWR,1999_CP1_98_9.DAT,2021
+Crawford Point 1,ISWR,2007_cp1_2007.dat,1092
+Crawford Point 1,ISWR,1997_CR1.DAT,929
+Crawford Point 1,OSWR,CR1000,33764
+Crawford Point 1,OSWR,C-level (station file),24754
+Crawford Point 1,OSWR,C-level (Jason file),10610
+Crawford Point 1,OSWR,2010_cp1.dat,9048
+Crawford Point 1,OSWR,2006_CP1.dat,8895
+Crawford Point 1,OSWR,2001_AWSCP101.DAT,8606
+Crawford Point 1,OSWR,2009_CP1.dat,8562
+Crawford Point 1,OSWR,2003_AWSCP103.DAT,8304
+Crawford Point 1,OSWR,2002_AWSCP102.DAT,8279
+Crawford Point 1,OSWR,1997_CRA.DAT,7644
+Crawford Point 1,OSWR,1996_CRA95-96.DAT,5609
+Crawford Point 1,OSWR,1998_CP1_97.DAT,4211
+Crawford Point 1,OSWR,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,OSWR,1997_CRAWF101.DAT,3105
+Crawford Point 1,OSWR,1999_CP1_98_9.DAT,2021
+Crawford Point 1,OSWR,2007_cp1_2007.dat,1092
+Crawford Point 1,OSWR,1997_CR1.DAT,929
+Crawford Point 1,NR,CR1000,44721
+Crawford Point 1,NR,C-level (station file),35576
+Crawford Point 1,NR,C-level (Jason file),8943
+Crawford Point 1,NR,2006_CP1.dat,8894
+Crawford Point 1,NR,2001_AWSCP101.DAT,8606
+Crawford Point 1,NR,2009_CP1.dat,8562
+Crawford Point 1,NR,2003_AWSCP103.DAT,8303
+Crawford Point 1,NR,2002_AWSCP102.DAT,8279
+Crawford Point 1,NR,1997_CRA.DAT,7644
+Crawford Point 1,NR,1996_CRA95-96.DAT,5609
+Crawford Point 1,NR,1998_CP1_97.DAT,4211
+Crawford Point 1,NR,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,NR,1997_CRAWF101.DAT,3105
+Crawford Point 1,NR,1999_CP1_98_9.DAT,1585
+Crawford Point 1,NR,2007_cp1_2007.dat,1092
+Crawford Point 1,NR,1997_CR1.DAT,929
+Crawford Point 1,TA1,CR1000,33611
+Crawford Point 1,TA1,C-level (station file),24648
+Crawford Point 1,TA1,C-level (Jason file),12604
+Crawford Point 1,TA1,2010_cp1.dat,9045
+Crawford Point 1,TA1,2006_CP1.dat,8892
+Crawford Point 1,TA1,2001_AWSCP101.DAT,8606
+Crawford Point 1,TA1,2009_CP1.dat,8559
+Crawford Point 1,TA1,2003_AWSCP103.DAT,8301
+Crawford Point 1,TA1,2002_AWSCP102.DAT,8279
+Crawford Point 1,TA1,1997_CRA.DAT,7643
+Crawford Point 1,TA1,1998_CP1_97.DAT,4203
+Crawford Point 1,TA1,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TA1,1999_CP1_98_9.DAT,1575
+Crawford Point 1,TA1,2007_cp1_2007.dat,1092
+Crawford Point 1,TA1,1997_CR1.DAT,929
+Crawford Point 1,TA2,CR1000,33592
+Crawford Point 1,TA2,C-level (station file),24666
+Crawford Point 1,TA2,C-level (Jason file),12603
+Crawford Point 1,TA2,2010_cp1.dat,9045
+Crawford Point 1,TA2,2006_CP1.dat,8892
+Crawford Point 1,TA2,2001_AWSCP101.DAT,8606
+Crawford Point 1,TA2,2009_CP1.dat,8559
+Crawford Point 1,TA2,2003_AWSCP103.DAT,8301
+Crawford Point 1,TA2,2002_AWSCP102.DAT,8279
+Crawford Point 1,TA2,1997_CRA.DAT,7644
+Crawford Point 1,TA2,1998_CP1_97.DAT,4203
+Crawford Point 1,TA2,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TA2,1999_CP1_98_9.DAT,1576
+Crawford Point 1,TA2,2007_cp1_2007.dat,1092
+Crawford Point 1,TA2,1997_CR1.DAT,929
+Crawford Point 1,TA3,CR1000,54429
+Crawford Point 1,TA3,C-level (station file),36659
+Crawford Point 1,TA3,C-level (Jason file),12357
+Crawford Point 1,TA3,2010_cp1.dat,9048
+Crawford Point 1,TA3,2006_CP1.dat,8893
+Crawford Point 1,TA3,2001_AWSCP101.DAT,8605
+Crawford Point 1,TA3,1997_CRA.DAT,8573
+Crawford Point 1,TA3,2009_CP1.dat,8561
+Crawford Point 1,TA3,2003_AWSCP103.DAT,8302
+Crawford Point 1,TA3,2002_AWSCP102.DAT,8279
+Crawford Point 1,TA3,1996_CRA95-96.DAT,5609
+Crawford Point 1,TA3,1998_CP1_97.DAT,4211
+Crawford Point 1,TA3,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TA3,1997_CRAWF101.DAT,3105
+Crawford Point 1,TA3,1999_CP1_98_9.DAT,1584
+Crawford Point 1,TA3,2007_cp1_2007.dat,1092
+Crawford Point 1,TA4,CR1000,54555
+Crawford Point 1,TA4,C-level (station file),38623
+Crawford Point 1,TA4,C-level (Jason file),11973
+Crawford Point 1,TA4,2010_cp1.dat,9048
+Crawford Point 1,TA4,2001_AWSCP101.DAT,8606
+Crawford Point 1,TA4,2009_CP1.dat,8559
+Crawford Point 1,TA4,2007_cp1_2007.dat,8420
+Crawford Point 1,TA4,2003_AWSCP103.DAT,8304
+Crawford Point 1,TA4,2002_AWSCP102.DAT,8279
+Crawford Point 1,TA4,1997_CRA.DAT,7644
+Crawford Point 1,TA4,1996_CRA95-96.DAT,5609
+Crawford Point 1,TA4,1998_CP1_97.DAT,4211
+Crawford Point 1,TA4,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TA4,1997_CRAWF101.DAT,3105
+Crawford Point 1,TA4,1999_CP1_98_9.DAT,1585
+Crawford Point 1,TA4,2006_CP1.dat,1530
+Crawford Point 1,TA4,1997_CR1.DAT,929
+Crawford Point 1,RH1,CR1000,52768
+Crawford Point 1,RH1,C-level (station file),38725
+Crawford Point 1,RH1,C-level (Jason file),24778
+Crawford Point 1,RH1,2007_cp1_2007.dat,9937
+Crawford Point 1,RH1,2010_cp1.dat,9048
+Crawford Point 1,RH1,2001_AWSCP101.DAT,8606
+Crawford Point 1,RH1,2009_CP1.dat,8562
+Crawford Point 1,RH1,2003_AWSCP103.DAT,8302
+Crawford Point 1,RH1,2002_AWSCP102.DAT,8279
+Crawford Point 1,RH1,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,RH1,2000_AWSCP100.DAT,1707
+Crawford Point 1,RH1,1999_CP1_98_9.DAT,1583
+Crawford Point 1,RH2,CR1000,54556
+Crawford Point 1,RH2,C-level (station file),38657
+Crawford Point 1,RH2,C-level (Jason file),17527
+Crawford Point 1,RH2,2010_cp1.dat,9048
+Crawford Point 1,RH2,2001_AWSCP101.DAT,8606
+Crawford Point 1,RH2,2009_CP1.dat,8562
+Crawford Point 1,RH2,2000_AWSCP100.DAT,8497
+Crawford Point 1,RH2,2003_AWSCP103.DAT,8304
+Crawford Point 1,RH2,2002_AWSCP102.DAT,8279
+Crawford Point 1,RH2,2006_CP1.dat,6614
+Crawford Point 1,RH2,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,RH2,1999_CP1_98_9.DAT,2021
+Crawford Point 1,RH2,2007_cp1_2007.dat,1084
+Crawford Point 1,VW1,CR1000,54557
+Crawford Point 1,VW1,C-level (station file),36778
+Crawford Point 1,VW1,C-level (Jason file),20287
+Crawford Point 1,VW1,2010_cp1.dat,9048
+Crawford Point 1,VW1,2006_CP1.dat,8895
+Crawford Point 1,VW1,2001_AWSCP101.DAT,8606
+Crawford Point 1,VW1,2009_CP1.dat,8562
+Crawford Point 1,VW1,2003_AWSCP103.DAT,8304
+Crawford Point 1,VW1,2002_AWSCP102.DAT,8279
+Crawford Point 1,VW1,1997_CRA.DAT,7644
+Crawford Point 1,VW1,1998_CP1_97.DAT,4211
+Crawford Point 1,VW1,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,VW1,1999_CP1_98_9.DAT,1585
+Crawford Point 1,VW1,2007_cp1_2007.dat,1092
+Crawford Point 1,VW1,1997_CR1.DAT,929
+Crawford Point 1,VW2,CR1000,54557
+Crawford Point 1,VW2,C-level (station file),36814
+Crawford Point 1,VW2,C-level (Jason file),12450
+Crawford Point 1,VW2,2010_cp1.dat,9048
+Crawford Point 1,VW2,2006_CP1.dat,8895
+Crawford Point 1,VW2,2001_AWSCP101.DAT,8606
+Crawford Point 1,VW2,2009_CP1.dat,8562
+Crawford Point 1,VW2,2003_AWSCP103.DAT,8304
+Crawford Point 1,VW2,2002_AWSCP102.DAT,8279
+Crawford Point 1,VW2,1997_CRA.DAT,7644
+Crawford Point 1,VW2,1996_CRA95-96.DAT,5609
+Crawford Point 1,VW2,1998_CP1_97.DAT,4211
+Crawford Point 1,VW2,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,VW2,1997_CRAWF101.DAT,3105
+Crawford Point 1,VW2,1999_CP1_98_9.DAT,1585
+Crawford Point 1,VW2,2007_cp1_2007.dat,1092
+Crawford Point 1,VW2,1997_CR1.DAT,929
+Crawford Point 1,DW1,C-level (station file),73680
+Crawford Point 1,DW1,CR1000,54556
+Crawford Point 1,DW1,C-level (Jason file),22652
+Crawford Point 1,DW1,1997_CRA.DAT,7644
+Crawford Point 1,DW1,1996_CRA95-96.DAT,5609
+Crawford Point 1,DW1,1998_CP1_97.DAT,4211
+Crawford Point 1,DW1,1997_CRAWF101.DAT,3105
+Crawford Point 1,DW1,1997_CR1.DAT,929
+Crawford Point 1,DW2,CR1000,54556
+Crawford Point 1,DW2,C-level (station file),36561
+Crawford Point 1,DW2,2010_cp1.dat,9048
+Crawford Point 1,DW2,2006_CP1.dat,8894
+Crawford Point 1,DW2,C-level (Jason file),8879
+Crawford Point 1,DW2,2001_AWSCP101.DAT,8606
+Crawford Point 1,DW2,2009_CP1.dat,8562
+Crawford Point 1,DW2,2003_AWSCP103.DAT,8304
+Crawford Point 1,DW2,2002_AWSCP102.DAT,8279
+Crawford Point 1,DW2,1997_CRA.DAT,7644
+Crawford Point 1,DW2,1996_CRA95-96.DAT,5609
+Crawford Point 1,DW2,1998_CP1_97.DAT,4211
+Crawford Point 1,DW2,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,DW2,1997_CRAWF101.DAT,3105
+Crawford Point 1,DW2,1999_CP1_98_9.DAT,1584
+Crawford Point 1,DW2,2007_cp1_2007.dat,1092
+Crawford Point 1,DW2,1997_CR1.DAT,929
+Crawford Point 1,P,CR1000,54556
+Crawford Point 1,P,C-level (station file),46545
+Crawford Point 1,P,2010_cp1.dat,17330
+Crawford Point 1,P,2006_CP1.dat,8894
+Crawford Point 1,P,1997_CRA.DAT,7644
+Crawford Point 1,P,2000_AWSCP100.DAT,7240
+Crawford Point 1,P,2001_AWSCP101.DAT,6239
+Crawford Point 1,P,1996_CRA95-96.DAT,5609
+Crawford Point 1,P,2002_AWSCP102.DAT,4951
+Crawford Point 1,P,1998_CP1_97.DAT,4211
+Crawford Point 1,P,C-level (Jason file),3198
+Crawford Point 1,P,1997_CRAWF101.DAT,3105
+Crawford Point 1,P,1997_CR1.DAT,929
+Crawford Point 1,P,2008_cp1.dat,1
+Crawford Point 1,HW1,C-level (station file),69953
+Crawford Point 1,HW1,CR1000,53602
+Crawford Point 1,HW1,C-level (Jason file),49489
+Crawford Point 1,HW2,C-level (station file),69953
+Crawford Point 1,HW2,C-level (Jason file),49489
+Crawford Point 1,HW2,CR1000,47833
+Crawford Point 1,V,CR1000,54557
+Crawford Point 1,V,C-level (Jason file),24303
+Crawford Point 1,V,C-level (station file),6427
+Crawford Point 1,TA5,CR1000,33691
+Crawford Point 1,TA5,C-level (station file),6
+Crawford Point 1,TS1,C-level (station file),21334
+Crawford Point 1,TS1,CR1000,13321
+Crawford Point 1,TS1,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS1,2003_AWSCP103.DAT,8300
+Crawford Point 1,TS1,2002_AWSCP102.DAT,8279
+Crawford Point 1,TS1,1997_CRA.DAT,7644
+Crawford Point 1,TS1,2000_AWSCP100.DAT,7240
+Crawford Point 1,TS1,1996_CRA95-96.DAT,5607
+Crawford Point 1,TS1,1998_CP1_97.DAT,4202
+Crawford Point 1,TS1,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TS1,1997_CRAWF101.DAT,3092
+Crawford Point 1,TS1,C-level (Jason file),1745
+Crawford Point 1,TS1,1999_CP1_98_9.DAT,1575
+Crawford Point 1,TS1,1997_CR1.DAT,929
+Crawford Point 1,TS1,2006_CP1.dat,9
+Crawford Point 1,TS2,C-level (station file),35608
+Crawford Point 1,TS2,CR1000,16912
+Crawford Point 1,TS2,2006_CP1.dat,8892
+Crawford Point 1,TS2,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS2,2003_AWSCP103.DAT,8300
+Crawford Point 1,TS2,2002_AWSCP102.DAT,8279
+Crawford Point 1,TS2,1997_CRA.DAT,7644
+Crawford Point 1,TS2,2000_AWSCP100.DAT,7240
+Crawford Point 1,TS2,1996_CRA95-96.DAT,5607
+Crawford Point 1,TS2,1998_CP1_97.DAT,4202
+Crawford Point 1,TS2,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TS2,1997_CRAWF101.DAT,3086
+Crawford Point 1,TS2,C-level (Jason file),1752
+Crawford Point 1,TS2,1999_CP1_98_9.DAT,1576
+Crawford Point 1,TS2,2007_cp1_2007.dat,1092
+Crawford Point 1,TS2,1997_CR1.DAT,929
+Crawford Point 1,TS3,C-level (station file),34258
+Crawford Point 1,TS3,CR1000,12516
+Crawford Point 1,TS3,2006_CP1.dat,8892
+Crawford Point 1,TS3,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS3,1997_CRA.DAT,7643
+Crawford Point 1,TS3,2000_AWSCP100.DAT,7240
+Crawford Point 1,TS3,1996_CRA95-96.DAT,5607
+Crawford Point 1,TS3,1998_CP1_97.DAT,4202
+Crawford Point 1,TS3,1997_CRAWF101.DAT,3089
+Crawford Point 1,TS3,C-level (Jason file),2904
+Crawford Point 1,TS3,2004_CR21XSM4M002.dat,2857
+Crawford Point 1,TS3,2003_AWSCP103.DAT,2744
+Crawford Point 1,TS3,2002_AWSCP102.DAT,2286
+Crawford Point 1,TS3,1999_CP1_98_9.DAT,1576
+Crawford Point 1,TS3,2007_cp1_2007.dat,1092
+Crawford Point 1,TS3,1997_CR1.DAT,929
+Crawford Point 1,TS4,C-level (station file),32161
+Crawford Point 1,TS4,2006_CP1.dat,8892
+Crawford Point 1,TS4,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS4,CR1000,8479
+Crawford Point 1,TS4,2003_AWSCP103.DAT,7852
+Crawford Point 1,TS4,1997_CRA.DAT,7641
+Crawford Point 1,TS4,2000_AWSCP100.DAT,7240
+Crawford Point 1,TS4,1996_CRA95-96.DAT,5607
+Crawford Point 1,TS4,1998_CP1_97.DAT,4202
+Crawford Point 1,TS4,2002_AWSCP102.DAT,4070
+Crawford Point 1,TS4,2004_CR21XSM4M002.dat,3110
+Crawford Point 1,TS4,1997_CRAWF101.DAT,3079
+Crawford Point 1,TS4,C-level (Jason file),2585
+Crawford Point 1,TS4,1999_CP1_98_9.DAT,1576
+Crawford Point 1,TS4,2007_cp1_2007.dat,1092
+Crawford Point 1,TS4,1997_CR1.DAT,929
+Crawford Point 1,TS5,C-level (station file),34959
+Crawford Point 1,TS5,CR1000,9477
+Crawford Point 1,TS5,2006_CP1.dat,8892
+Crawford Point 1,TS5,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS5,2003_AWSCP103.DAT,8300
+Crawford Point 1,TS5,2002_AWSCP102.DAT,8279
+Crawford Point 1,TS5,1997_CRA.DAT,7644
+Crawford Point 1,TS5,2000_AWSCP100.DAT,7240
+Crawford Point 1,TS5,1996_CRA95-96.DAT,5607
+Crawford Point 1,TS5,1998_CP1_97.DAT,4202
+Crawford Point 1,TS5,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TS5,1997_CRAWF101.DAT,3075
+Crawford Point 1,TS5,C-level (Jason file),1763
+Crawford Point 1,TS5,1999_CP1_98_9.DAT,1576
+Crawford Point 1,TS5,2007_cp1_2007.dat,1092
+Crawford Point 1,TS5,1997_CR1.DAT,929
+Crawford Point 1,TS6,C-level (station file),35519
+Crawford Point 1,TS6,CR1000,11801
+Crawford Point 1,TS6,2000_AWSCP100.DAT,8933
+Crawford Point 1,TS6,2006_CP1.dat,8892
+Crawford Point 1,TS6,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS6,2003_AWSCP103.DAT,8300
+Crawford Point 1,TS6,2002_AWSCP102.DAT,8279
+Crawford Point 1,TS6,1997_CRA.DAT,7644
+Crawford Point 1,TS6,1996_CRA95-96.DAT,5607
+Crawford Point 1,TS6,1998_CP1_97.DAT,4203
+Crawford Point 1,TS6,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TS6,1997_CRAWF101.DAT,3078
+Crawford Point 1,TS6,1999_CP1_98_9.DAT,1576
+Crawford Point 1,TS6,2007_cp1_2007.dat,1092
+Crawford Point 1,TS6,1997_CR1.DAT,929
+Crawford Point 1,TS6,C-level (Jason file),66
+Crawford Point 1,TS7,C-level (station file),33960
+Crawford Point 1,TS7,2000_AWSCP100.DAT,8932
+Crawford Point 1,TS7,2006_CP1.dat,8892
+Crawford Point 1,TS7,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS7,2002_AWSCP102.DAT,8279
+Crawford Point 1,TS7,CR1000,7973
+Crawford Point 1,TS7,1997_CRA.DAT,7643
+Crawford Point 1,TS7,2003_AWSCP103.DAT,6578
+Crawford Point 1,TS7,1996_CRA95-96.DAT,5607
+Crawford Point 1,TS7,1998_CP1_97.DAT,4203
+Crawford Point 1,TS7,1997_CRAWF101.DAT,3082
+Crawford Point 1,TS7,2004_CR21XSM4M002.dat,2748
+Crawford Point 1,TS7,1999_CP1_98_9.DAT,1576
+Crawford Point 1,TS7,2007_cp1_2007.dat,1092
+Crawford Point 1,TS7,1997_CR1.DAT,929
+Crawford Point 1,TS7,C-level (Jason file),64
+Crawford Point 1,TS8,C-level (station file),18105
+Crawford Point 1,TS8,CR1000,10386
+Crawford Point 1,TS8,2000_AWSCP100.DAT,8933
+Crawford Point 1,TS8,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS8,2002_AWSCP102.DAT,8279
+Crawford Point 1,TS8,2003_AWSCP103.DAT,7738
+Crawford Point 1,TS8,1997_CRA.DAT,7644
+Crawford Point 1,TS8,1996_CRA95-96.DAT,5607
+Crawford Point 1,TS8,1998_CP1_97.DAT,4203
+Crawford Point 1,TS8,2004_CR21XSM4M002.dat,3182
+Crawford Point 1,TS8,1997_CRAWF101.DAT,3079
+Crawford Point 1,TS8,1999_CP1_98_9.DAT,1575
+Crawford Point 1,TS8,1997_CR1.DAT,929
+Crawford Point 1,TS8,C-level (Jason file),65
+Crawford Point 1,TS9,C-level (station file),35430
+Crawford Point 1,TS9,2000_AWSCP100.DAT,8933
+Crawford Point 1,TS9,2006_CP1.dat,8881
+Crawford Point 1,TS9,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS9,2003_AWSCP103.DAT,8300
+Crawford Point 1,TS9,2002_AWSCP102.DAT,8279
+Crawford Point 1,TS9,1997_CRA.DAT,7644
+Crawford Point 1,TS9,CR1000,7363
+Crawford Point 1,TS9,1996_CRA95-96.DAT,5607
+Crawford Point 1,TS9,1998_CP1_97.DAT,4203
+Crawford Point 1,TS9,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TS9,1997_CRAWF101.DAT,3079
+Crawford Point 1,TS9,1999_CP1_98_9.DAT,1574
+Crawford Point 1,TS9,2007_cp1_2007.dat,1092
+Crawford Point 1,TS9,1997_CR1.DAT,929
+Crawford Point 1,TS9,C-level (Jason file),65
+Crawford Point 1,TS10,C-level (station file),27915
+Crawford Point 1,TS10,CR1000,10443
+Crawford Point 1,TS10,2001_AWSCP101.DAT,8606
+Crawford Point 1,TS10,2003_AWSCP103.DAT,8301
+Crawford Point 1,TS10,2002_AWSCP102.DAT,8279
+Crawford Point 1,TS10,1997_CRA.DAT,7644
+Crawford Point 1,TS10,2000_AWSCP100.DAT,7240
+Crawford Point 1,TS10,1998_CP1_97.DAT,4203
+Crawford Point 1,TS10,2004_CR21XSM4M002.dat,3242
+Crawford Point 1,TS10,C-level (Jason file),1730
+Crawford Point 1,TS10,1999_CP1_98_9.DAT,1574
+Crawford Point 1,TS10,1997_CR1.DAT,929
+Crawford Point 1,HS1,C-level (station file),64710
+Crawford Point 1,HS1,C-level (Jason file),49481
+Crawford Point 1,HS2,C-level (station file),52100
+Crawford Point 1,HS2,C-level (Jason file),49481
+CP2,ISWR,2000_AWSCP200.DAT,8934
+CP2,ISWR,1999_CP2_98-9.DAT,8664
+CP2,ISWR,2001_AWSCP201.DAT,8631
+CP2,ISWR,1998_CP2_1.DAT,8533
+CP2,ISWR,1998_CP2_2.DAT,638
+CP2,ISWR,C-level (Jason file),62
+CP2,ISWR,1998_CP2_97-8.DAT,1
+CP2,ISWR,2000_cp2_99_00.dat,1
+CP2,ISWR,C-level (station file),1
+CP2,OSWR,2000_AWSCP200.DAT,8934
+CP2,OSWR,1999_CP2_98-9.DAT,8686
+CP2,OSWR,2001_AWSCP201.DAT,8631
+CP2,OSWR,1998_CP2_1.DAT,8533
+CP2,OSWR,1998_CP2_2.DAT,638
+CP2,OSWR,C-level (Jason file),42
+CP2,OSWR,1998_CP2_97-8.DAT,1
+CP2,OSWR,2000_cp2_99_00.dat,1
+CP2,OSWR,C-level (station file),1
+CP2,NR,2000_AWSCP200.DAT,8934
+CP2,NR,1999_CP2_98-9.DAT,8686
+CP2,NR,2001_AWSCP201.DAT,8631
+CP2,NR,1998_CP2_1.DAT,8533
+CP2,NR,1998_CP2_2.DAT,638
+CP2,NR,C-level (Jason file),35
+CP2,NR,1998_CP2_97-8.DAT,1
+CP2,NR,2000_cp2_99_00.dat,1
+CP2,NR,C-level (station file),1
+CP2,TA1,2000_AWSCP200.DAT,8860
+CP2,TA1,2001_AWSCP201.DAT,8631
+CP2,TA1,1999_CP2_98-9.DAT,8602
+CP2,TA1,1998_CP2_1.DAT,8504
+CP2,TA1,1998_CP2_2.DAT,638
+CP2,TA1,C-level (Jason file),88
+CP2,TA1,1998_CP2_97-8.DAT,1
+CP2,TA1,2000_cp2_99_00.dat,1
+CP2,TA1,C-level (station file),1
+CP2,TA2,2000_AWSCP200.DAT,8860
+CP2,TA2,2001_AWSCP201.DAT,8631
+CP2,TA2,1999_CP2_98-9.DAT,8602
+CP2,TA2,1998_CP2_1.DAT,8504
+CP2,TA2,1998_CP2_2.DAT,638
+CP2,TA2,C-level (Jason file),248
+CP2,TA2,1998_CP2_97-8.DAT,1
+CP2,TA2,2000_cp2_99_00.dat,1
+CP2,TA2,C-level (station file),1
+CP2,TA3,2000_AWSCP200.DAT,8934
+CP2,TA3,1999_CP2_98-9.DAT,8686
+CP2,TA3,2001_AWSCP201.DAT,8631
+CP2,TA3,1998_CP2_1.DAT,8533
+CP2,TA3,1998_CP2_2.DAT,638
+CP2,TA3,C-level (Jason file),48
+CP2,TA3,1998_CP2_97-8.DAT,1
+CP2,TA3,2000_cp2_99_00.dat,1
+CP2,TA3,C-level (station file),1
+CP2,TA4,C-level (Jason file),26854
+CP2,TA4,2001_AWSCP201.DAT,8631
+CP2,TA4,C-level (station file),1
+CP2,RH1,C-level (Jason file),15474
+CP2,RH1,2000_AWSCP200.DAT,8934
+CP2,RH1,2001_AWSCP201.DAT,8631
+CP2,RH1,C-level (station file),1
+CP2,RH2,C-level (Jason file),9041
+CP2,RH2,2001_AWSCP201.DAT,8631
+CP2,RH2,1999_CP2_98-9.DAT,8613
+CP2,RH2,1998_CP2_1.DAT,8533
+CP2,RH2,1998_CP2_2.DAT,638
+CP2,RH2,1998_CP2_97-8.DAT,1
+CP2,RH2,C-level (station file),1
+CP2,VW1,2000_AWSCP200.DAT,8934
+CP2,VW1,1999_CP2_98-9.DAT,8686
+CP2,VW1,2001_AWSCP201.DAT,8631
+CP2,VW1,1998_CP2_1.DAT,8533
+CP2,VW1,1998_CP2_2.DAT,638
+CP2,VW1,C-level (Jason file),33
+CP2,VW1,1998_CP2_97-8.DAT,1
+CP2,VW1,2000_cp2_99_00.dat,1
+CP2,VW1,C-level (station file),1
+CP2,VW2,2000_AWSCP200.DAT,8934
+CP2,VW2,1999_CP2_98-9.DAT,8686
+CP2,VW2,2001_AWSCP201.DAT,8631
+CP2,VW2,1998_CP2_1.DAT,8533
+CP2,VW2,1998_CP2_2.DAT,638
+CP2,VW2,C-level (Jason file),33
+CP2,VW2,1998_CP2_97-8.DAT,1
+CP2,VW2,2000_cp2_99_00.dat,1
+CP2,VW2,C-level (station file),1
+CP2,DW1,2000_AWSCP200.DAT,8934
+CP2,DW1,1999_CP2_98-9.DAT,8686
+CP2,DW1,2001_AWSCP201.DAT,8631
+CP2,DW1,1998_CP2_1.DAT,8533
+CP2,DW1,1998_CP2_2.DAT,638
+CP2,DW1,C-level (Jason file),25
+CP2,DW1,1998_CP2_97-8.DAT,1
+CP2,DW1,2000_cp2_99_00.dat,1
+CP2,DW1,C-level (station file),1
+CP2,DW2,2000_AWSCP200.DAT,8934
+CP2,DW2,1999_CP2_98-9.DAT,8686
+CP2,DW2,2001_AWSCP201.DAT,8631
+CP2,DW2,1998_CP2_1.DAT,8533
+CP2,DW2,1998_CP2_2.DAT,638
+CP2,DW2,C-level (Jason file),37
+CP2,DW2,1998_CP2_97-8.DAT,1
+CP2,DW2,2000_cp2_99_00.dat,1
+CP2,DW2,C-level (station file),1
+CP2,P,C-level (Jason file),8983
+CP2,P,1999_CP2_98-9.DAT,8686
+CP2,P,2001_AWSCP201.DAT,8631
+CP2,P,1998_CP2_1.DAT,8533
+CP2,P,1998_CP2_2.DAT,638
+CP2,P,1998_CP2_97-8.DAT,1
+CP2,P,C-level (station file),1
+CP2,HS1,C-level (station file),35101
+CP2,HS2,C-level (station file),35404
+CP2,V,2000_AWSCP200.DAT,8934
+CP2,V,1999_CP2_98-9.DAT,8686
+CP2,V,2001_AWSCP201.DAT,8631
+CP2,V,1998_CP2_1.DAT,8533
+CP2,V,1998_CP2_2.DAT,638
+CP2,V,C-level (Jason file),61
+CP2,V,1998_CP2_97-8.DAT,1
+CP2,V,2000_cp2_99_00.dat,1
+CP2,V,C-level (station file),1
+CP2,HW1,C-level (station file),35101
+CP2,HW2,C-level (station file),35404
+CP2,TS1,2000_AWSCP200.DAT,8860
+CP2,TS1,2001_AWSCP201.DAT,8631
+CP2,TS1,1999_CP2_98-9.DAT,8603
+CP2,TS1,1998_CP2_1.DAT,8504
+CP2,TS1,1998_CP2_2.DAT,638
+CP2,TS1,C-level (Jason file),199
+CP2,TS1,1998_CP2_97-8.DAT,1
+CP2,TS1,2000_cp2_99_00.dat,1
+CP2,TS1,C-level (station file),1
+CP2,TS2,2000_AWSCP200.DAT,8861
+CP2,TS2,2001_AWSCP201.DAT,8631
+CP2,TS2,1999_CP2_98-9.DAT,8603
+CP2,TS2,1998_CP2_1.DAT,8504
+CP2,TS2,1998_CP2_2.DAT,638
+CP2,TS2,C-level (Jason file),198
+CP2,TS2,1998_CP2_97-8.DAT,1
+CP2,TS2,2000_cp2_99_00.dat,1
+CP2,TS2,C-level (station file),1
+CP2,TS3,2000_AWSCP200.DAT,8860
+CP2,TS3,2001_AWSCP201.DAT,8631
+CP2,TS3,1999_CP2_98-9.DAT,8603
+CP2,TS3,1998_CP2_1.DAT,8504
+CP2,TS3,1998_CP2_2.DAT,638
+CP2,TS3,C-level (Jason file),199
+CP2,TS3,1998_CP2_97-8.DAT,1
+CP2,TS3,2000_cp2_99_00.dat,1
+CP2,TS3,C-level (station file),1
+CP2,TS4,C-level (Jason file),9062
+CP2,TS4,2001_AWSCP201.DAT,8631
+CP2,TS4,1999_CP2_98-9.DAT,8601
+CP2,TS4,1998_CP2_1.DAT,8504
+CP2,TS4,1998_CP2_2.DAT,638
+CP2,TS4,1998_CP2_97-8.DAT,1
+CP2,TS4,C-level (station file),1
+CP2,TS5,2000_AWSCP200.DAT,8861
+CP2,TS5,2001_AWSCP201.DAT,8631
+CP2,TS5,1999_CP2_98-9.DAT,8602
+CP2,TS5,1998_CP2_1.DAT,8504
+CP2,TS5,1998_CP2_2.DAT,638
+CP2,TS5,C-level (Jason file),199
+CP2,TS5,1998_CP2_97-8.DAT,1
+CP2,TS5,2000_cp2_99_00.dat,1
+CP2,TS5,C-level (station file),1
+CP2,TS6,2000_AWSCP200.DAT,8861
+CP2,TS6,2001_AWSCP201.DAT,8631
+CP2,TS6,1999_CP2_98-9.DAT,8602
+CP2,TS6,1998_CP2_1.DAT,8504
+CP2,TS6,1998_CP2_2.DAT,638
+CP2,TS6,C-level (Jason file),199
+CP2,TS6,1998_CP2_97-8.DAT,1
+CP2,TS6,2000_cp2_99_00.dat,1
+CP2,TS6,C-level (station file),1
+CP2,TS7,2000_AWSCP200.DAT,8861
+CP2,TS7,2001_AWSCP201.DAT,8631
+CP2,TS7,1999_CP2_98-9.DAT,8601
+CP2,TS7,1998_CP2_1.DAT,8504
+CP2,TS7,1998_CP2_2.DAT,638
+CP2,TS7,C-level (Jason file),200
+CP2,TS7,1998_CP2_97-8.DAT,1
+CP2,TS7,2000_cp2_99_00.dat,1
+CP2,TS7,C-level (station file),1
+CP2,TS8,2000_AWSCP200.DAT,8861
+CP2,TS8,2001_AWSCP201.DAT,8631
+CP2,TS8,1999_CP2_98-9.DAT,8602
+CP2,TS8,1998_CP2_1.DAT,8504
+CP2,TS8,1998_CP2_2.DAT,638
+CP2,TS8,C-level (Jason file),199
+CP2,TS8,1998_CP2_97-8.DAT,1
+CP2,TS8,2000_cp2_99_00.dat,1
+CP2,TS8,C-level (station file),1
+CP2,TS9,2000_AWSCP200.DAT,8860
+CP2,TS9,2001_AWSCP201.DAT,8631
+CP2,TS9,1999_CP2_98-9.DAT,8602
+CP2,TS9,1998_CP2_1.DAT,8504
+CP2,TS9,1998_CP2_2.DAT,638
+CP2,TS9,C-level (Jason file),200
+CP2,TS9,1998_CP2_97-8.DAT,1
+CP2,TS9,2000_cp2_99_00.dat,1
+CP2,TS9,C-level (station file),1
+CP2,TS10,2000_AWSCP200.DAT,8861
+CP2,TS10,2001_AWSCP201.DAT,8631
+CP2,TS10,1999_CP2_98-9.DAT,8602
+CP2,TS10,1998_CP2_1.DAT,8504
+CP2,TS10,1998_CP2_2.DAT,638
+CP2,TS10,C-level (Jason file),199
+CP2,TS10,1998_CP2_97-8.DAT,1
+CP2,TS10,2000_cp2_99_00.dat,1
+CP2,TS10,C-level (station file),1
+JAR1,ISWR,CR1000,60425
+JAR1,ISWR,2008_jar1.dat,16520
+JAR1,ISWR,1998_JAR_97-8.DAT,9760
+JAR1,ISWR,2004_Jar1.dat,9445
+JAR1,ISWR,C-level (Jason file),8910
+JAR1,ISWR,2006_Jar1.dat,8809
+JAR1,ISWR,2007_jar1 date.dat,8756
+JAR1,ISWR,2000_AWSJAR00.DAT,8639
+JAR1,ISWR,2009_jar1_09 clean.dat,8567
+JAR1,ISWR,2003_AWSJR103.DAT,8451
+JAR1,ISWR,2002_AWSJR102.DAT,8310
+JAR1,ISWR,1998_JAR2.DAT,7162
+JAR1,ISWR,transmission (station folder),2684
+JAR1,ISWR,2001_AWSJR101.DAT,2609
+JAR1,ISWR,2005_jar1.dat,593
+JAR1,ISWR,C-level (station file),49
+JAR1,ISWR,2007_jar1.dat,1
+JAR1,OSWR,CR1000,60423
+JAR1,OSWR,2008_jar1.dat,16520
+JAR1,OSWR,1998_JAR_97-8.DAT,9760
+JAR1,OSWR,2004_Jar1.dat,9445
+JAR1,OSWR,C-level (Jason file),8910
+JAR1,OSWR,2006_Jar1.dat,8809
+JAR1,OSWR,2007_jar1 date.dat,8756
+JAR1,OSWR,2000_AWSJAR00.DAT,8639
+JAR1,OSWR,2009_jar1_09 clean.dat,8567
+JAR1,OSWR,2003_AWSJR103.DAT,8451
+JAR1,OSWR,2002_AWSJR102.DAT,8310
+JAR1,OSWR,1998_JAR2.DAT,7162
+JAR1,OSWR,transmission (station folder),2688
+JAR1,OSWR,2001_AWSJR101.DAT,2609
+JAR1,OSWR,2005_jar1.dat,593
+JAR1,OSWR,C-level (station file),30
+JAR1,OSWR,2007_jar1.dat,1
+JAR1,NR,CR1000,60374
+JAR1,NR,2008_jar1.dat,16520
+JAR1,NR,1998_JAR_97-8.DAT,9760
+JAR1,NR,2004_Jar1.dat,9445
+JAR1,NR,C-level (Jason file),8910
+JAR1,NR,2006_Jar1.dat,8809
+JAR1,NR,2007_jar1 date.dat,8756
+JAR1,NR,2000_AWSJAR00.DAT,8639
+JAR1,NR,2009_jar1_09 clean.dat,8567
+JAR1,NR,2003_AWSJR103.DAT,8451
+JAR1,NR,2002_AWSJR102.DAT,8310
+JAR1,NR,1998_JAR2.DAT,7162
+JAR1,NR,transmission (station folder),2689
+JAR1,NR,2001_AWSJR101.DAT,2609
+JAR1,NR,2005_jar1.dat,593
+JAR1,NR,C-level (station file),65
+JAR1,NR,2007_jar1.dat,1
+JAR1,TA1,CR1000,60201
+JAR1,TA1,2008_jar1.dat,16520
+JAR1,TA1,1998_JAR_97-8.DAT,9760
+JAR1,TA1,2004_Jar1.dat,9445
+JAR1,TA1,2006_Jar1.dat,8809
+JAR1,TA1,C-level (Jason file),8794
+JAR1,TA1,2007_jar1 date.dat,8755
+JAR1,TA1,2000_AWSJAR00.DAT,8636
+JAR1,TA1,2009_jar1_09 clean.dat,8567
+JAR1,TA1,2003_AWSJR103.DAT,8450
+JAR1,TA1,2002_AWSJR102.DAT,8310
+JAR1,TA1,1998_JAR2.DAT,7162
+JAR1,TA1,transmission (station folder),2686
+JAR1,TA1,2001_AWSJR101.DAT,2609
+JAR1,TA1,C-level (station file),1626
+JAR1,TA1,2005_jar1.dat,592
+JAR1,TA1,2007_jar1.dat,1
+JAR1,TA2,CR1000,58689
+JAR1,TA2,2008_jar1.dat,16520
+JAR1,TA2,1998_JAR_97-8.DAT,9760
+JAR1,TA2,2004_Jar1.dat,9445
+JAR1,TA2,C-level (Jason file),8916
+JAR1,TA2,2006_Jar1.dat,8809
+JAR1,TA2,2007_jar1 date.dat,8755
+JAR1,TA2,2000_AWSJAR00.DAT,8635
+JAR1,TA2,2009_jar1_09 clean.dat,8567
+JAR1,TA2,2003_AWSJR103.DAT,8450
+JAR1,TA2,2002_AWSJR102.DAT,8310
+JAR1,TA2,1998_JAR2.DAT,7161
+JAR1,TA2,transmission (station folder),2683
+JAR1,TA2,2001_AWSJR101.DAT,2609
+JAR1,TA2,2005_jar1.dat,592
+JAR1,TA2,C-level (station file),538
+JAR1,TA2,2007_jar1.dat,1
+JAR1,TA3,CR1000,60552
+JAR1,TA3,2008_jar1.dat,16520
+JAR1,TA3,1998_JAR_97-8.DAT,9760
+JAR1,TA3,2004_Jar1.dat,9445
+JAR1,TA3,C-level (Jason file),8911
+JAR1,TA3,2006_Jar1.dat,8809
+JAR1,TA3,2007_jar1 date.dat,8756
+JAR1,TA3,2000_AWSJAR00.DAT,8639
+JAR1,TA3,2009_jar1_09 clean.dat,8567
+JAR1,TA3,2003_AWSJR103.DAT,8451
+JAR1,TA3,2002_AWSJR102.DAT,8310
+JAR1,TA3,1998_JAR2.DAT,7162
+JAR1,TA3,transmission (station folder),2660
+JAR1,TA3,2001_AWSJR101.DAT,2609
+JAR1,TA3,C-level (station file),1594
+JAR1,TA3,2005_jar1.dat,593
+JAR1,TA3,2007_jar1.dat,1
+JAR1,TA4,CR1000,58945
+JAR1,TA4,2008_jar1.dat,16520
+JAR1,TA4,1998_JAR_97-8.DAT,9760
+JAR1,TA4,2004_Jar1.dat,9445
+JAR1,TA4,C-level (Jason file),8911
+JAR1,TA4,2006_Jar1.dat,8809
+JAR1,TA4,2007_jar1 date.dat,8756
+JAR1,TA4,2000_AWSJAR00.DAT,8639
+JAR1,TA4,2009_jar1_09 clean.dat,8567
+JAR1,TA4,2003_AWSJR103.DAT,8451
+JAR1,TA4,2002_AWSJR102.DAT,8310
+JAR1,TA4,1998_JAR2.DAT,7162
+JAR1,TA4,transmission (station folder),2630
+JAR1,TA4,2001_AWSJR101.DAT,2609
+JAR1,TA4,C-level (station file),1615
+JAR1,TA4,2005_jar1.dat,593
+JAR1,TA4,2007_jar1.dat,1
+JAR1,RH1,CR1000,60552
+JAR1,RH1,C-level (Jason file),25812
+JAR1,RH1,2008_jar1.dat,16520
+JAR1,RH1,2004_Jar1.dat,9445
+JAR1,RH1,2006_Jar1.dat,8809
+JAR1,RH1,2007_jar1 date.dat,8756
+JAR1,RH1,2000_AWSJAR00.DAT,8639
+JAR1,RH1,2009_jar1_09 clean.dat,8567
+JAR1,RH1,2003_AWSJR103.DAT,8451
+JAR1,RH1,2002_AWSJR102.DAT,8310
+JAR1,RH1,2001_AWSJR101.DAT,2609
+JAR1,RH1,transmission (station folder),2609
+JAR1,RH1,C-level (station file),1617
+JAR1,RH1,2005_jar1.dat,593
+JAR1,RH1,2007_jar1.dat,1
+JAR1,RH2,CR1000,58918
+JAR1,RH2,C-level (Jason file),25785
+JAR1,RH2,2008_jar1.dat,16520
+JAR1,RH2,2004_Jar1.dat,9445
+JAR1,RH2,2006_Jar1.dat,8809
+JAR1,RH2,2007_jar1 date.dat,8756
+JAR1,RH2,2000_AWSJAR00.DAT,8639
+JAR1,RH2,2009_jar1_09 clean.dat,8567
+JAR1,RH2,2003_AWSJR103.DAT,8451
+JAR1,RH2,2002_AWSJR102.DAT,8310
+JAR1,RH2,2001_AWSJR101.DAT,2609
+JAR1,RH2,transmission (station folder),2573
+JAR1,RH2,C-level (station file),1609
+JAR1,RH2,2005_jar1.dat,593
+JAR1,RH2,2007_jar1.dat,1
+JAR1,VW1,CR1000,60552
+JAR1,VW1,2008_jar1.dat,16520
+JAR1,VW1,1998_JAR_97-8.DAT,9760
+JAR1,VW1,2004_Jar1.dat,9445
+JAR1,VW1,C-level (Jason file),8892
+JAR1,VW1,2006_Jar1.dat,8809
+JAR1,VW1,2007_jar1 date.dat,8756
+JAR1,VW1,2000_AWSJAR00.DAT,8639
+JAR1,VW1,2009_jar1_09 clean.dat,8567
+JAR1,VW1,2003_AWSJR103.DAT,8451
+JAR1,VW1,2002_AWSJR102.DAT,8310
+JAR1,VW1,1998_JAR2.DAT,7162
+JAR1,VW1,2001_AWSJR101.DAT,2609
+JAR1,VW1,transmission (station folder),2599
+JAR1,VW1,2005_jar1.dat,593
+JAR1,VW1,2007_jar1.dat,1
+JAR1,VW2,CR1000,60552
+JAR1,VW2,2008_jar1.dat,16520
+JAR1,VW2,1998_JAR_97-8.DAT,9760
+JAR1,VW2,2004_Jar1.dat,9445
+JAR1,VW2,C-level (Jason file),8892
+JAR1,VW2,2006_Jar1.dat,8809
+JAR1,VW2,2007_jar1 date.dat,8756
+JAR1,VW2,2000_AWSJAR00.DAT,8639
+JAR1,VW2,2009_jar1_09 clean.dat,8567
+JAR1,VW2,2003_AWSJR103.DAT,8451
+JAR1,VW2,2002_AWSJR102.DAT,8310
+JAR1,VW2,1998_JAR2.DAT,7162
+JAR1,VW2,transmission (station folder),2622
+JAR1,VW2,2001_AWSJR101.DAT,2609
+JAR1,VW2,2005_jar1.dat,593
+JAR1,VW2,2007_jar1.dat,1
+JAR1,DW1,CR1000,60552
+JAR1,DW1,2008_jar1.dat,16520
+JAR1,DW1,1998_JAR_97-8.DAT,9760
+JAR1,DW1,2004_Jar1.dat,9445
+JAR1,DW1,C-level (Jason file),8823
+JAR1,DW1,2006_Jar1.dat,8809
+JAR1,DW1,2007_jar1 date.dat,8756
+JAR1,DW1,2000_AWSJAR00.DAT,8639
+JAR1,DW1,2009_jar1_09 clean.dat,8567
+JAR1,DW1,2003_AWSJR103.DAT,8451
+JAR1,DW1,2002_AWSJR102.DAT,8310
+JAR1,DW1,1998_JAR2.DAT,7162
+JAR1,DW1,transmission (station folder),2682
+JAR1,DW1,2001_AWSJR101.DAT,2609
+JAR1,DW1,2005_jar1.dat,593
+JAR1,DW1,2007_jar1.dat,1
+JAR1,DW2,CR1000,60520
+JAR1,DW2,2008_jar1.dat,16520
+JAR1,DW2,1998_JAR_97-8.DAT,9760
+JAR1,DW2,2004_Jar1.dat,9445
+JAR1,DW2,C-level (Jason file),8839
+JAR1,DW2,2006_Jar1.dat,8809
+JAR1,DW2,2007_jar1 date.dat,8756
+JAR1,DW2,2000_AWSJAR00.DAT,8639
+JAR1,DW2,2009_jar1_09 clean.dat,8567
+JAR1,DW2,2003_AWSJR103.DAT,8451
+JAR1,DW2,2002_AWSJR102.DAT,8310
+JAR1,DW2,1998_JAR2.DAT,7162
+JAR1,DW2,transmission (station folder),2677
+JAR1,DW2,2001_AWSJR101.DAT,2609
+JAR1,DW2,2005_jar1.dat,593
+JAR1,DW2,2007_jar1.dat,1
+JAR1,P,C-level (station file),63858
+JAR1,P,CR1000,59897
+JAR1,P,C-level (Jason file),23790
+JAR1,P,1998_JAR_97-8.DAT,9760
+JAR1,P,1998_JAR2.DAT,7162
+JAR1,P,transmission (station folder),2659
+JAR1,HW1,CR1000,49540
+JAR1,HW1,C-level (station file),48960
+JAR1,HW1,C-level (Jason file),40951
+JAR1,HW2,CR1000,60374
+JAR1,HW2,C-level (station file),48960
+JAR1,HW2,C-level (Jason file),40951
+JAR1,V,CR1000,60530
+JAR1,V,2008_jar1.dat,16520
+JAR1,V,2004_Jar1.dat,9445
+JAR1,V,2006_Jar1.dat,8809
+JAR1,V,2007_jar1 date.dat,8756
+JAR1,V,2000_AWSJAR00.DAT,8639
+JAR1,V,2009_jar1_09 clean.dat,8567
+JAR1,V,2003_AWSJR103.DAT,8451
+JAR1,V,2002_AWSJR102.DAT,8310
+JAR1,V,transmission (station folder),2674
+JAR1,V,2001_AWSJR101.DAT,2609
+JAR1,V,2005_jar1.dat,593
+JAR1,V,C-level (Jason file),6
+JAR1,V,2007_jar1.dat,1
+JAR1,TA5,CR1000,60208
+JAR1,TA5,transmission (station folder),2679
+JAR1,TA5,C-level (station file),13
+JAR1,TS1,2004_Jar1.dat,9444
+JAR1,TS1,2006_Jar1.dat,8809
+JAR1,TS1,2003_AWSJR103.DAT,8450
+JAR1,TS1,2002_AWSJR102.DAT,8309
+JAR1,TS1,2008_jar1.dat,7783
+JAR1,TS1,CR1000,7346
+JAR1,TS1,2000_AWSJAR00.DAT,7302
+JAR1,TS1,C-level (station file),7088
+JAR1,TS1,2007_jar1 date.dat,6427
+JAR1,TS1,2001_AWSJR101.DAT,2607
+JAR1,TS1,2005_jar1.dat,592
+JAR1,TS1,2007_jar1.dat,1
+JAR1,TS2,CR1000,39192
+JAR1,TS2,2008_jar1.dat,16520
+JAR1,TS2,2004_Jar1.dat,9444
+JAR1,TS2,C-level (station file),9297
+JAR1,TS2,2006_Jar1.dat,8809
+JAR1,TS2,2007_jar1 date.dat,8755
+JAR1,TS2,2000_AWSJAR00.DAT,8638
+JAR1,TS2,2009_jar1_09 clean.dat,8567
+JAR1,TS2,2003_AWSJR103.DAT,8450
+JAR1,TS2,2002_AWSJR102.DAT,8309
+JAR1,TS2,2001_AWSJR101.DAT,2607
+JAR1,TS2,2005_jar1.dat,592
+JAR1,TS2,2007_jar1.dat,1
+JAR1,TS3,CR1000,26918
+JAR1,TS3,2008_jar1.dat,16520
+JAR1,TS3,2004_Jar1.dat,9445
+JAR1,TS3,2006_Jar1.dat,8809
+JAR1,TS3,2007_jar1 date.dat,8755
+JAR1,TS3,2000_AWSJAR00.DAT,8639
+JAR1,TS3,2009_jar1_09 clean.dat,8567
+JAR1,TS3,2003_AWSJR103.DAT,8450
+JAR1,TS3,C-level (station file),8354
+JAR1,TS3,2002_AWSJR102.DAT,8308
+JAR1,TS3,2001_AWSJR101.DAT,2607
+JAR1,TS3,2005_jar1.dat,592
+JAR1,TS3,2007_jar1.dat,1
+JAR1,TS4,CR1000,26594
+JAR1,TS4,C-level (station file),14888
+JAR1,TS4,2004_Jar1.dat,9444
+JAR1,TS4,2000_AWSJAR00.DAT,8551
+JAR1,TS4,2002_AWSJR102.DAT,8309
+JAR1,TS4,2003_AWSJR103.DAT,8286
+JAR1,TS4,2007_jar1 date.dat,7950
+JAR1,TS4,2008_jar1.dat,7932
+JAR1,TS4,2006_Jar1.dat,6700
+JAR1,TS4,2001_AWSJR101.DAT,2607
+JAR1,TS4,2009_jar1_09 clean.dat,1449
+JAR1,TS4,2005_jar1.dat,589
+JAR1,TS4,2007_jar1.dat,1
+JAR1,TS5,CR1000,24366
+JAR1,TS5,2008_jar1.dat,16520
+JAR1,TS5,2004_Jar1.dat,9444
+JAR1,TS5,2006_Jar1.dat,8809
+JAR1,TS5,2007_jar1 date.dat,8755
+JAR1,TS5,2000_AWSJAR00.DAT,8639
+JAR1,TS5,C-level (station file),8575
+JAR1,TS5,2009_jar1_09 clean.dat,8567
+JAR1,TS5,2003_AWSJR103.DAT,8450
+JAR1,TS5,2002_AWSJR102.DAT,8308
+JAR1,TS5,2005_jar1.dat,592
+JAR1,TS5,2001_AWSJR101.DAT,534
+JAR1,TS5,2007_jar1.dat,1
+JAR1,TS6,CR1000,33026
+JAR1,TS6,2008_jar1.dat,16520
+JAR1,TS6,C-level (station file),10493
+JAR1,TS6,2004_Jar1.dat,9444
+JAR1,TS6,2006_Jar1.dat,8809
+JAR1,TS6,2007_jar1 date.dat,8755
+JAR1,TS6,2009_jar1_09 clean.dat,8567
+JAR1,TS6,2003_AWSJR103.DAT,8450
+JAR1,TS6,2002_AWSJR102.DAT,8309
+JAR1,TS6,2005_jar1.dat,592
+JAR1,TS6,2007_jar1.dat,1
+JAR1,TS7,CR1000,22411
+JAR1,TS7,2008_jar1.dat,16520
+JAR1,TS7,2004_Jar1.dat,9445
+JAR1,TS7,2006_Jar1.dat,8809
+JAR1,TS7,2007_jar1 date.dat,8755
+JAR1,TS7,2009_jar1_09 clean.dat,8567
+JAR1,TS7,2003_AWSJR103.DAT,8450
+JAR1,TS7,2002_AWSJR102.DAT,8309
+JAR1,TS7,C-level (station file),4841
+JAR1,TS7,2005_jar1.dat,592
+JAR1,TS7,2007_jar1.dat,1
+JAR1,TS8,CR1000,12684
+JAR1,TS8,2004_Jar1.dat,9403
+JAR1,TS8,2003_AWSJR103.DAT,8447
+JAR1,TS8,2002_AWSJR102.DAT,8283
+JAR1,TS8,2008_jar1.dat,7764
+JAR1,TS8,C-level (station file),7524
+JAR1,TS8,2005_jar1.dat,591
+JAR1,TS8,2006_Jar1.dat,4
+JAR1,TS9,CR1000,26058
+JAR1,TS9,2008_jar1.dat,16520
+JAR1,TS9,2004_Jar1.dat,9444
+JAR1,TS9,2006_Jar1.dat,8809
+JAR1,TS9,2007_jar1 date.dat,8755
+JAR1,TS9,2009_jar1_09 clean.dat,8567
+JAR1,TS9,C-level (station file),8566
+JAR1,TS9,2003_AWSJR103.DAT,8450
+JAR1,TS9,2002_AWSJR102.DAT,8309
+JAR1,TS9,2005_jar1.dat,592
+JAR1,TS9,2007_jar1.dat,1
+JAR1,TS10,CR1000,31061
+JAR1,TS10,2008_jar1.dat,16520
+JAR1,TS10,2004_Jar1.dat,9444
+JAR1,TS10,2006_Jar1.dat,8809
+JAR1,TS10,2007_jar1 date.dat,8755
+JAR1,TS10,C-level (station file),8571
+JAR1,TS10,2009_jar1_09 clean.dat,8567
+JAR1,TS10,2003_AWSJR103.DAT,8450
+JAR1,TS10,2002_AWSJR102.DAT,8309
+JAR1,TS10,2005_jar1.dat,592
+JAR1,TS10,2007_jar1.dat,1
+JAR1,HS1,C-level (station file),43288
+JAR1,HS1,C-level (Jason file),40943
+JAR1,HS2,C-level (station file),48957
+JAR1,HS2,C-level (Jason file),23937
+JAR2,ISWR,2004_Jar2.dat,27973
+JAR2,ISWR,CR1000,21121
+JAR2,ISWR,C-level (station file),12460
+JAR2,ISWR,2002_AWSJR202.DAT,10562
+JAR2,ISWR,2006_jar2.dat,7603
+JAR2,ISWR,2000_AWSJR200.DAT,5109
+JAR2,ISWR,2008_jar2 08.dat,5047
+JAR2,ISWR,2007_jar2.dat,224
+JAR2,ISWR,C-level (Jason file),6
+JAR2,ISWR,2005_jar2.dat,1
+JAR2,OSWR,2004_Jar2.dat,27973
+JAR2,OSWR,CR1000,21125
+JAR2,OSWR,C-level (station file),12460
+JAR2,OSWR,2002_AWSJR202.DAT,10562
+JAR2,OSWR,2006_jar2.dat,7603
+JAR2,OSWR,2000_AWSJR200.DAT,5109
+JAR2,OSWR,2008_jar2 08.dat,5047
+JAR2,OSWR,2007_jar2.dat,225
+JAR2,OSWR,C-level (Jason file),6
+JAR2,OSWR,2005_jar2.dat,1
+JAR2,NR,2004_Jar2.dat,27971
+JAR2,NR,CR1000,21143
+JAR2,NR,C-level (station file),12422
+JAR2,NR,2002_AWSJR202.DAT,10562
+JAR2,NR,2006_jar2.dat,7603
+JAR2,NR,2000_AWSJR200.DAT,5109
+JAR2,NR,2008_jar2 08.dat,5047
+JAR2,NR,2007_jar2.dat,225
+JAR2,NR,C-level (Jason file),4
+JAR2,NR,2005_jar2.dat,1
+JAR2,TA1,2004_Jar2.dat,27972
+JAR2,TA1,CR1000,21108
+JAR2,TA1,C-level (station file),12930
+JAR2,TA1,2002_AWSJR202.DAT,10562
+JAR2,TA1,2006_jar2.dat,7597
+JAR2,TA1,2000_AWSJR200.DAT,5107
+JAR2,TA1,2008_jar2 08.dat,5045
+JAR2,TA1,2007_jar2.dat,222
+JAR2,TA1,C-level (Jason file),4
+JAR2,TA1,2005_jar2.dat,1
+JAR2,TA2,2004_Jar2.dat,27972
+JAR2,TA2,CR1000,21107
+JAR2,TA2,C-level (station file),13674
+JAR2,TA2,2002_AWSJR202.DAT,10562
+JAR2,TA2,2006_jar2.dat,7597
+JAR2,TA2,2000_AWSJR200.DAT,5108
+JAR2,TA2,2008_jar2 08.dat,5045
+JAR2,TA2,2007_jar2.dat,222
+JAR2,TA2,C-level (Jason file),4
+JAR2,TA2,2005_jar2.dat,1
+JAR2,TA3,2004_Jar2.dat,27972
+JAR2,TA3,CR1000,21128
+JAR2,TA3,C-level (station file),12698
+JAR2,TA3,2002_AWSJR202.DAT,10562
+JAR2,TA3,2006_jar2.dat,7600
+JAR2,TA3,2000_AWSJR200.DAT,5109
+JAR2,TA3,2008_jar2 08.dat,5047
+JAR2,TA3,2007_jar2.dat,224
+JAR2,TA3,C-level (Jason file),4
+JAR2,TA3,2005_jar2.dat,1
+JAR2,TA4,2004_Jar2.dat,27973
+JAR2,TA4,CR1000,21145
+JAR2,TA4,C-level (station file),12676
+JAR2,TA4,2002_AWSJR202.DAT,10562
+JAR2,TA4,2006_jar2.dat,7601
+JAR2,TA4,2000_AWSJR200.DAT,5109
+JAR2,TA4,2008_jar2 08.dat,5046
+JAR2,TA4,2007_jar2.dat,224
+JAR2,TA4,C-level (Jason file),4
+JAR2,TA4,2005_jar2.dat,1
+JAR2,RH1,2004_Jar2.dat,27972
+JAR2,RH1,CR1000,21129
+JAR2,RH1,C-level (station file),12646
+JAR2,RH1,2002_AWSJR202.DAT,10562
+JAR2,RH1,2006_jar2.dat,7599
+JAR2,RH1,2000_AWSJR200.DAT,5109
+JAR2,RH1,2008_jar2 08.dat,5047
+JAR2,RH1,2007_jar2.dat,225
+JAR2,RH1,C-level (Jason file),4
+JAR2,RH1,2005_jar2.dat,1
+JAR2,RH2,2004_Jar2.dat,27973
+JAR2,RH2,CR1000,21145
+JAR2,RH2,C-level (station file),12629
+JAR2,RH2,2002_AWSJR202.DAT,10562
+JAR2,RH2,2006_jar2.dat,7602
+JAR2,RH2,2000_AWSJR200.DAT,5109
+JAR2,RH2,2008_jar2 08.dat,5047
+JAR2,RH2,2007_jar2.dat,225
+JAR2,RH2,C-level (Jason file),4
+JAR2,RH2,2005_jar2.dat,1
+JAR2,VW1,2004_Jar2.dat,27973
+JAR2,VW1,CR1000,21145
+JAR2,VW1,C-level (station file),11915
+JAR2,VW1,2002_AWSJR202.DAT,10562
+JAR2,VW1,2006_jar2.dat,7603
+JAR2,VW1,2000_AWSJR200.DAT,5109
+JAR2,VW1,2008_jar2 08.dat,5047
+JAR2,VW1,2007_jar2.dat,225
+JAR2,VW1,C-level (Jason file),4
+JAR2,VW1,2005_jar2.dat,1
+JAR2,VW2,2004_Jar2.dat,27973
+JAR2,VW2,CR1000,21145
+JAR2,VW2,C-level (station file),11914
+JAR2,VW2,2002_AWSJR202.DAT,10562
+JAR2,VW2,2006_jar2.dat,7603
+JAR2,VW2,2000_AWSJR200.DAT,5109
+JAR2,VW2,2008_jar2 08.dat,5047
+JAR2,VW2,2007_jar2.dat,225
+JAR2,VW2,C-level (Jason file),4
+JAR2,VW2,2005_jar2.dat,1
+JAR2,DW1,2004_Jar2.dat,27973
+JAR2,DW1,CR1000,21130
+JAR2,DW1,C-level (station file),11827
+JAR2,DW1,2002_AWSJR202.DAT,10562
+JAR2,DW1,2006_jar2.dat,7603
+JAR2,DW1,2000_AWSJR200.DAT,5109
+JAR2,DW1,2008_jar2 08.dat,5047
+JAR2,DW1,2007_jar2.dat,225
+JAR2,DW1,C-level (Jason file),4
+JAR2,DW1,2005_jar2.dat,1
+JAR2,DW2,2004_Jar2.dat,27973
+JAR2,DW2,CR1000,21145
+JAR2,DW2,C-level (station file),11874
+JAR2,DW2,2002_AWSJR202.DAT,10562
+JAR2,DW2,2006_jar2.dat,7603
+JAR2,DW2,2000_AWSJR200.DAT,5109
+JAR2,DW2,2008_jar2 08.dat,5047
+JAR2,DW2,2007_jar2.dat,225
+JAR2,DW2,C-level (Jason file),4
+JAR2,DW2,2005_jar2.dat,1
+JAR2,P,2004_Jar2.dat,27973
+JAR2,P,C-level (station file),23778
+JAR2,P,CR1000,20385
+JAR2,P,2002_AWSJR202.DAT,10562
+JAR2,P,2000_AWSJR200.DAT,5109
+JAR2,P,C-level (Jason file),4
+JAR2,P,2005_jar2.dat,1
+JAR2,HW1,C-level (station file),40897
+JAR2,HW1,C-level (Jason file),19529
+JAR2,HW1,CR1000,13256
+JAR2,HW2,C-level (station file),40873
+JAR2,HW2,CR1000,21031
+JAR2,HW2,C-level (Jason file),19529
+JAR2,V,2004_Jar2.dat,27973
+JAR2,V,CR1000,21144
+JAR2,V,C-level (station file),10603
+JAR2,V,2002_AWSJR202.DAT,10562
+JAR2,V,2006_jar2.dat,7603
+JAR2,V,2000_AWSJR200.DAT,5109
+JAR2,V,2008_jar2 08.dat,5047
+JAR2,V,2007_jar2.dat,225
+JAR2,V,C-level (Jason file),28
+JAR2,V,2005_jar2.dat,1
+JAR2,TA5,CR1000,21110
+JAR2,TA5,C-level (station file),643
+JAR2,TS1,2004_Jar2.dat,27969
+JAR2,TS1,CR1000,21114
+JAR2,TS1,2002_AWSJR202.DAT,10562
+JAR2,TS1,C-level (station file),10528
+JAR2,TS1,2006_jar2.dat,7597
+JAR2,TS1,2000_AWSJR200.DAT,5106
+JAR2,TS1,2008_jar2 08.dat,5045
+JAR2,TS1,2007_jar2.dat,223
+JAR2,TS1,C-level (Jason file),34
+JAR2,TS1,2005_jar2.dat,1
+JAR2,TS2,2004_Jar2.dat,18853
+JAR2,TS2,C-level (station file),14627
+JAR2,TS2,CR1000,10806
+JAR2,TS2,2006_jar2.dat,5115
+JAR2,TS2,2000_AWSJR200.DAT,5106
+JAR2,TS2,2002_AWSJR202.DAT,4076
+JAR2,TS2,C-level (Jason file),1540
+JAR2,TS2,2008_jar2 08.dat,1064
+JAR2,TS2,2007_jar2.dat,110
+JAR2,TS2,2005_jar2.dat,1
+JAR2,TS3,2004_Jar2.dat,27968
+JAR2,TS3,CR1000,21113
+JAR2,TS3,2002_AWSJR202.DAT,10562
+JAR2,TS3,C-level (station file),10529
+JAR2,TS3,2006_jar2.dat,7600
+JAR2,TS3,2000_AWSJR200.DAT,5106
+JAR2,TS3,2008_jar2 08.dat,5046
+JAR2,TS3,2007_jar2.dat,222
+JAR2,TS3,C-level (Jason file),34
+JAR2,TS3,2005_jar2.dat,1
+JAR2,TS4,2004_Jar2.dat,26422
+JAR2,TS4,CR1000,21113
+JAR2,TS4,C-level (station file),10534
+JAR2,TS4,2006_jar2.dat,7601
+JAR2,TS4,2008_jar2 08.dat,5045
+JAR2,TS4,2000_AWSJR200.DAT,2907
+JAR2,TS4,2007_jar2.dat,222
+JAR2,TS4,C-level (Jason file),84
+JAR2,TS4,2005_jar2.dat,1
+JAR2,TS5,2004_Jar2.dat,26422
+JAR2,TS5,CR1000,21112
+JAR2,TS5,C-level (station file),10527
+JAR2,TS5,2006_jar2.dat,7601
+JAR2,TS5,2000_AWSJR200.DAT,5106
+JAR2,TS5,2008_jar2 08.dat,5045
+JAR2,TS5,2002_AWSJR202.DAT,863
+JAR2,TS5,2007_jar2.dat,222
+JAR2,TS5,C-level (Jason file),29
+JAR2,TS5,2005_jar2.dat,1
+JAR2,TS6,2004_Jar2.dat,27108
+JAR2,TS6,CR1000,21111
+JAR2,TS6,C-level (station file),10528
+JAR2,TS6,2006_jar2.dat,7600
+JAR2,TS6,2000_AWSJR200.DAT,5106
+JAR2,TS6,2008_jar2 08.dat,5045
+JAR2,TS6,2002_AWSJR202.DAT,4471
+JAR2,TS6,C-level (Jason file),1902
+JAR2,TS6,2007_jar2.dat,222
+JAR2,TS6,2005_jar2.dat,1
+JAR2,TS7,2004_Jar2.dat,20716
+JAR2,TS7,2002_AWSJR202.DAT,10562
+JAR2,TS7,2006_jar2.dat,7597
+JAR2,TS7,2000_AWSJR200.DAT,5106
+JAR2,TS7,CR1000,1803
+JAR2,TS7,C-level (station file),1501
+JAR2,TS7,2007_jar2.dat,173
+JAR2,TS7,C-level (Jason file),34
+JAR2,TS8,2004_Jar2.dat,14176
+JAR2,TS8,2000_AWSJR200.DAT,3793
+JAR2,TS8,C-level (Jason file),3265
+JAR2,TS8,2002_AWSJR202.DAT,1609
+JAR2,TS8,CR1000,827
+JAR2,TS8,C-level (station file),574
+JAR2,TS9,2004_Jar2.dat,26585
+JAR2,TS9,C-level (station file),9404
+JAR2,TS9,2006_jar2.dat,5733
+JAR2,TS9,2002_AWSJR202.DAT,5176
+JAR2,TS9,2000_AWSJR200.DAT,5106
+JAR2,TS9,CR1000,2754
+JAR2,TS9,C-level (Jason file),1744
+JAR2,TS9,2005_jar2.dat,1
+JAR2,TS10,2004_Jar2.dat,27967
+JAR2,TS10,2002_AWSJR202.DAT,10562
+JAR2,TS10,C-level (station file),8511
+JAR2,TS10,2006_jar2.dat,7597
+JAR2,TS10,2000_AWSJR200.DAT,5106
+JAR2,TS10,CR1000,1096
+JAR2,TS10,2007_jar2.dat,173
+JAR2,TS10,C-level (Jason file),34
+JAR2,TS10,2005_jar2.dat,1
+JAR2,HS1,C-level (station file),39147
+JAR2,HS1,C-level (Jason file),19525
+JAR2,HS2,C-level (station file),14779
+JAR3,ISWR,2003_JAR3_1.dat,9430
+JAR3,ISWR,2004_Jar3.DAT,8567
+JAR3,ISWR,C-level (Jason file),8517
+JAR3,ISWR,C-level (station file),8458
+JAR3,OSWR,2003_JAR3_1.dat,9430
+JAR3,OSWR,2004_Jar3.DAT,8567
+JAR3,OSWR,C-level (Jason file),8517
+JAR3,OSWR,C-level (station file),8458
+JAR3,NR,2003_JAR3_1.dat,9430
+JAR3,NR,2004_Jar3.DAT,8561
+JAR3,NR,C-level (Jason file),8517
+JAR3,NR,C-level (station file),8468
+JAR3,TA1,2002_AWSJR302.dat,16976
+JAR3,TA1,2003_JAR3_1.dat,9430
+JAR3,TA1,2004_Jar3.DAT,8566
+JAR3,TA1,C-level (station file),7
+JAR3,TA1,C-level (Jason file),2
+JAR3,TA2,2002_AWSJR302.dat,16976
+JAR3,TA2,2003_JAR3_1.dat,9430
+JAR3,TA2,2004_Jar3.DAT,8566
+JAR3,TA2,C-level (station file),7
+JAR3,TA2,C-level (Jason file),2
+JAR3,TA3,2002_AWSJR302.dat,16978
+JAR3,TA3,2003_JAR3_1.dat,9430
+JAR3,TA3,2004_Jar3.DAT,8555
+JAR3,TA3,C-level (station file),6
+JAR3,TA4,2002_AWSJR302.dat,16974
+JAR3,TA4,2003_JAR3_1.dat,9430
+JAR3,TA4,2004_Jar3.DAT,8565
+JAR3,TA4,C-level (station file),8
+JAR3,TA4,C-level (Jason file),4
+JAR3,RH1,2002_AWSJR302.dat,16976
+JAR3,RH1,2003_JAR3_1.dat,9430
+JAR3,RH1,2004_Jar3.DAT,8554
+JAR3,RH1,C-level (station file),8
+JAR3,RH2,2002_AWSJR302.dat,16968
+JAR3,RH2,2003_JAR3_1.dat,9430
+JAR3,RH2,2004_Jar3.DAT,8565
+JAR3,RH2,C-level (Jason file),10
+JAR3,RH2,C-level (station file),8
+JAR3,VW1,C-level (station file),16999
+JAR3,VW1,2003_JAR3_1.dat,9430
+JAR3,VW1,C-level (Jason file),8477
+JAR3,VW2,2003_JAR3_1.dat,9430
+JAR3,VW2,2004_Jar3.DAT,8567
+JAR3,VW2,C-level (Jason file),8486
+JAR3,VW2,C-level (station file),8450
+JAR3,DW1,2003_JAR3_1.dat,9430
+JAR3,DW1,2004_Jar3.DAT,8567
+JAR3,DW1,C-level (Jason file),8447
+JAR3,DW1,C-level (station file),8219
+JAR3,DW2,2003_JAR3_1.dat,9430
+JAR3,DW2,2004_Jar3.DAT,8567
+JAR3,DW2,C-level (Jason file),8223
+JAR3,DW2,C-level (station file),8078
+JAR3,P,2002_AWSJR302.dat,16978
+JAR3,P,2003_JAR3_1.dat,9430
+JAR3,P,2004_Jar3.DAT,8567
+JAR3,P,C-level (station file),6
+JAR3,HS1,C-level (station file),34942
+JAR3,V,2002_AWSJR302.dat,16978
+JAR3,V,2003_JAR3_1.dat,9430
+JAR3,V,2004_Jar3.DAT,8567
+JAR3,V,C-level (station file),1
+JAR3,HW1,C-level (station file),34942
+NASA-U,ISWR,CR1000,90429
+NASA-U,ISWR,C-level (Jason file),33987
+NASA-U,ISWR,2011_NASAU1.DAT,18806
+NASA-U,ISWR,1999_AWSNAU99.DAT,8813
+NASA-U,ISWR,2005_nasa-u.dat,8612
+NASA-U,ISWR,1998_NASU97-8.DAT,8534
+NASA-U,ISWR,2006_nasa_u_2006.dat,7701
+NASA-U,ISWR,2008_NASA U 08.dat,7107
+NASA-U,ISWR,2009_NASA-U.dat,5969
+NASA-U,ISWR,C-level (station file),5501
+NASA-U,ISWR,2006_nasa_u_2006_1.dat,2476
+NASA-U,OSWR,CR1000,90512
+NASA-U,OSWR,C-level (Jason file),33974
+NASA-U,OSWR,2011_NASAU1.DAT,18803
+NASA-U,OSWR,1999_AWSNAU99.DAT,8813
+NASA-U,OSWR,2005_nasa-u.dat,8612
+NASA-U,OSWR,1998_NASU97-8.DAT,8534
+NASA-U,OSWR,2006_nasa_u_2006.dat,7701
+NASA-U,OSWR,2008_NASA U 08.dat,7107
+NASA-U,OSWR,2009_NASA-U.dat,5969
+NASA-U,OSWR,C-level (station file),5502
+NASA-U,OSWR,2006_nasa_u_2006_1.dat,2476
+NASA-U,NR,CR1000,90422
+NASA-U,NR,C-level (Jason file),33471
+NASA-U,NR,2011_NASAU1.DAT,18809
+NASA-U,NR,1999_AWSNAU99.DAT,8813
+NASA-U,NR,2005_nasa-u.dat,8612
+NASA-U,NR,1998_NASU97-8.DAT,8534
+NASA-U,NR,2006_nasa_u_2006.dat,7701
+NASA-U,NR,2008_NASA U 08.dat,7108
+NASA-U,NR,2009_NASA-U.dat,5969
+NASA-U,NR,C-level (station file),5268
+NASA-U,NR,2006_nasa_u_2006_1.dat,2476
+NASA-U,TA1,CR1000,90474
+NASA-U,TA1,C-level (Jason file),32851
+NASA-U,TA1,2011_NASAU1.DAT,18789
+NASA-U,TA1,1999_AWSNAU99.DAT,8771
+NASA-U,TA1,2005_nasa-u.dat,8608
+NASA-U,TA1,2006_nasa_u_2006.dat,7577
+NASA-U,TA1,2008_NASA U 08.dat,7008
+NASA-U,TA1,C-level (station file),6619
+NASA-U,TA1,2009_NASA-U.dat,5949
+NASA-U,TA1,2006_nasa_u_2006_1.dat,2476
+NASA-U,TA2,CR1000,90483
+NASA-U,TA2,C-level (Jason file),32851
+NASA-U,TA2,2011_NASAU1.DAT,18789
+NASA-U,TA2,1999_AWSNAU99.DAT,8772
+NASA-U,TA2,2005_nasa-u.dat,8608
+NASA-U,TA2,2006_nasa_u_2006.dat,7577
+NASA-U,TA2,2008_NASA U 08.dat,7008
+NASA-U,TA2,C-level (station file),6610
+NASA-U,TA2,2009_NASA-U.dat,5949
+NASA-U,TA2,2006_nasa_u_2006_1.dat,2476
+NASA-U,TA3,CR1000,90205
+NASA-U,TA3,C-level (Jason file),42923
+NASA-U,TA3,2008_NASA U 08.dat,12753
+NASA-U,TA3,2005_nasa-u.dat,8612
+NASA-U,TA3,2006_nasa_u_2006.dat,8057
+NASA-U,TA3,C-level (station file),6284
+NASA-U,TA3,2009_NASA-U.dat,5971
+NASA-U,TA3,2011_NASAU1.DAT,5948
+NASA-U,TA3,2006_nasa_u_2006_1.dat,2477
+NASA-U,TA4,CR1000,90407
+NASA-U,TA4,C-level (Jason file),14087
+NASA-U,TA4,2008_NASA U 08.dat,12754
+NASA-U,TA4,2005_nasa-u.dat,8612
+NASA-U,TA4,2006_nasa_u_2006.dat,8057
+NASA-U,TA4,2009_NASA-U.dat,5971
+NASA-U,TA4,2011_NASAU1.DAT,5947
+NASA-U,TA4,2006_nasa_u_2006_1.dat,2477
+NASA-U,TA4,C-level (station file),1400
+NASA-U,RH1,CR1000,90154
+NASA-U,RH1,C-level (Jason file),34297
+NASA-U,RH1,2011_NASAU1.DAT,18808
+NASA-U,RH1,1999_AWSNAU99.DAT,8813
+NASA-U,RH1,2005_nasa-u.dat,8612
+NASA-U,RH1,1998_NASU97-8.DAT,8534
+NASA-U,RH1,2006_nasa_u_2006.dat,7701
+NASA-U,RH1,2008_NASA U 08.dat,7108
+NASA-U,RH1,C-level (station file),6707
+NASA-U,RH1,2009_NASA-U.dat,5969
+NASA-U,RH1,2006_nasa_u_2006_1.dat,2476
+NASA-U,RH2,CR1000,90242
+NASA-U,RH2,2011_NASAU1.DAT,18717
+NASA-U,RH2,C-level (Jason file),10255
+NASA-U,RH2,1999_AWSNAU99.DAT,8813
+NASA-U,RH2,2005_nasa-u.dat,8612
+NASA-U,RH2,1998_NASU97-8.DAT,8534
+NASA-U,RH2,2006_nasa_u_2006.dat,7701
+NASA-U,RH2,2008_NASA U 08.dat,7108
+NASA-U,RH2,2009_NASA-U.dat,5969
+NASA-U,RH2,2006_nasa_u_2006_1.dat,2476
+NASA-U,RH2,C-level (station file),1285
+NASA-U,VW1,CR1000,90515
+NASA-U,VW1,C-level (Jason file),33613
+NASA-U,VW1,2011_NASAU1.DAT,18810
+NASA-U,VW1,1999_AWSNAU99.DAT,8813
+NASA-U,VW1,2005_nasa-u.dat,8674
+NASA-U,VW1,1998_NASU97-8.DAT,8534
+NASA-U,VW1,2006_nasa_u_2006.dat,7702
+NASA-U,VW1,2008_NASA U 08.dat,7108
+NASA-U,VW1,2009_NASA-U.dat,5969
+NASA-U,VW1,C-level (station file),5458
+NASA-U,VW1,2006_nasa_u_2006_1.dat,2476
+NASA-U,VW2,CR1000,90515
+NASA-U,VW2,C-level (Jason file),33021
+NASA-U,VW2,2011_NASAU1.DAT,13520
+NASA-U,VW2,2008_NASA U 08.dat,12755
+NASA-U,VW2,1999_AWSNAU99.DAT,8813
+NASA-U,VW2,2005_nasa-u.dat,8674
+NASA-U,VW2,1998_NASU97-8.DAT,8534
+NASA-U,VW2,2006_nasa_u_2006.dat,7702
+NASA-U,VW2,2009_NASA-U.dat,5969
+NASA-U,VW2,C-level (station file),5466
+NASA-U,VW2,2006_nasa_u_2006_1.dat,2477
+NASA-U,DW1,CR1000,90514
+NASA-U,DW1,C-level (Jason file),23366
+NASA-U,DW1,2008_NASA U 08.dat,19069
+NASA-U,DW1,1999_AWSNAU99.DAT,8812
+NASA-U,DW1,2005_nasa-u.dat,8612
+NASA-U,DW1,1998_NASU97-8.DAT,8534
+NASA-U,DW1,2006_nasa_u_2006.dat,8058
+NASA-U,DW1,2009_NASA-U.dat,6871
+NASA-U,DW1,2011_NASAU1.DAT,5590
+NASA-U,DW1,C-level (station file),5433
+NASA-U,DW1,2006_nasa_u_2006_1.dat,2476
+NASA-U,DW2,CR1000,90057
+NASA-U,DW2,C-level (Jason file),33410
+NASA-U,DW2,C-level (station file),24808
+NASA-U,DW2,2005_nasa-u.dat,14818
+NASA-U,DW2,1999_AWSNAU99.DAT,8813
+NASA-U,DW2,1998_NASU97-8.DAT,8534
+NASA-U,DW2,2006_nasa_u_2006.dat,8058
+NASA-U,DW2,2011_NASAU1.DAT,5590
+NASA-U,DW2,2006_nasa_u_2006_1.dat,2476
+NASA-U,P,CR1000,86889
+NASA-U,P,C-level (Jason file),15774
+NASA-U,P,2011_NASAU1.DAT,13233
+NASA-U,P,1999_AWSNAU99.DAT,8813
+NASA-U,P,2005_nasa-u.dat,8619
+NASA-U,P,1998_NASU97-8.DAT,8534
+NASA-U,P,2006_nasa_u_2006.dat,7702
+NASA-U,P,2008_NASA U 08.dat,5783
+NASA-U,P,2006_nasa_u_2006_1.dat,2476
+NASA-U,P,C-level (station file),915
+NASA-U,P,2009_NASA-U.dat,423
+NASA-U,HW1,CR1000,83191
+NASA-U,HW1,C-level (Jason file),52066
+NASA-U,HW1,C-level (station file),50355
+NASA-U,HW2,CR1000,88217
+NASA-U,HW2,C-level (Jason file),52066
+NASA-U,HW2,C-level (station file),50355
+NASA-U,V,CR1000,90515
+NASA-U,V,C-level (Jason file),33068
+NASA-U,V,2008_NASA U 08.dat,12755
+NASA-U,V,2005_nasa-u.dat,8674
+NASA-U,V,2006_nasa_u_2006.dat,8058
+NASA-U,V,2009_NASA-U.dat,5971
+NASA-U,V,2011_NASAU1.DAT,5948
+NASA-U,V,C-level (station file),5366
+NASA-U,V,2006_nasa_u_2006_1.dat,2477
+NASA-U,TA5,CR1000,90498
+NASA-U,TS1,CR1000,32165
+NASA-U,TS1,C-level (station file),22667
+NASA-U,TS1,2008_NASA U 08.dat,12645
+NASA-U,TS1,2005_nasa-u.dat,8608
+NASA-U,TS1,2006_nasa_u_2006.dat,7933
+NASA-U,TS1,2009_NASA-U.dat,5951
+NASA-U,TS1,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS1,2011_NASAU1.DAT,358
+NASA-U,TS2,CR1000,47629
+NASA-U,TS2,C-level (station file),21455
+NASA-U,TS2,2008_NASA U 08.dat,12651
+NASA-U,TS2,2005_nasa-u.dat,8608
+NASA-U,TS2,2006_nasa_u_2006.dat,7933
+NASA-U,TS2,2009_NASA-U.dat,5951
+NASA-U,TS2,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS2,2011_NASAU1.DAT,358
+NASA-U,TS3,CR1000,29030
+NASA-U,TS3,C-level (station file),21848
+NASA-U,TS3,2008_NASA U 08.dat,11245
+NASA-U,TS3,2005_nasa-u.dat,8608
+NASA-U,TS3,2006_nasa_u_2006.dat,7933
+NASA-U,TS3,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS3,2009_NASA-U.dat,405
+NASA-U,TS3,2011_NASAU1.DAT,358
+NASA-U,TS4,CR1000,76114
+NASA-U,TS4,C-level (station file),19196
+NASA-U,TS4,2008_NASA U 08.dat,10968
+NASA-U,TS4,2005_nasa-u.dat,8608
+NASA-U,TS4,2006_nasa_u_2006.dat,7933
+NASA-U,TS4,2011_NASAU1.DAT,5947
+NASA-U,TS4,2009_NASA-U.dat,5781
+NASA-U,TS4,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS5,CR1000,20455
+NASA-U,TS5,C-level (station file),17178
+NASA-U,TS5,2008_NASA U 08.dat,11460
+NASA-U,TS5,2005_nasa-u.dat,8608
+NASA-U,TS5,2006_nasa_u_2006.dat,7933
+NASA-U,TS5,2011_NASAU1.DAT,5947
+NASA-U,TS5,2009_NASA-U.dat,5697
+NASA-U,TS5,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS6,CR1000,29502
+NASA-U,TS6,C-level (station file),20777
+NASA-U,TS6,2008_NASA U 08.dat,12633
+NASA-U,TS6,2005_nasa-u.dat,8608
+NASA-U,TS6,2006_nasa_u_2006.dat,7933
+NASA-U,TS6,2009_NASA-U.dat,5951
+NASA-U,TS6,2011_NASAU1.DAT,5947
+NASA-U,TS6,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS7,CR1000,43820
+NASA-U,TS7,C-level (station file),23281
+NASA-U,TS7,2008_NASA U 08.dat,11831
+NASA-U,TS7,2005_nasa-u.dat,8608
+NASA-U,TS7,2006_nasa_u_2006.dat,7933
+NASA-U,TS7,2009_NASA-U.dat,5951
+NASA-U,TS7,2011_NASAU1.DAT,5947
+NASA-U,TS7,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS8,CR1000,73392
+NASA-U,TS8,C-level (station file),26069
+NASA-U,TS8,2005_nasa-u.dat,8608
+NASA-U,TS8,2006_nasa_u_2006.dat,7933
+NASA-U,TS8,2009_NASA-U.dat,7275
+NASA-U,TS8,2011_NASAU1.DAT,5947
+NASA-U,TS8,2008_NASA U 08.dat,5683
+NASA-U,TS8,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS9,CR1000,78564
+NASA-U,TS9,C-level (station file),24521
+NASA-U,TS9,2005_nasa-u.dat,8608
+NASA-U,TS9,2006_nasa_u_2006.dat,7933
+NASA-U,TS9,2009_NASA-U.dat,7254
+NASA-U,TS9,2011_NASAU1.DAT,5947
+NASA-U,TS9,2008_NASA U 08.dat,5683
+NASA-U,TS9,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS10,CR1000,74632
+NASA-U,TS10,C-level (station file),21686
+NASA-U,TS10,2005_nasa-u.dat,8608
+NASA-U,TS10,2008_NASA U 08.dat,7372
+NASA-U,TS10,2011_NASAU1.DAT,4761
+NASA-U,TS10,2006_nasa_u_2006_1.dat,2477
+NASA-U,TS10,2006_nasa_u_2006.dat,1307
+NASA-U,TS10,2009_NASA-U.dat,403
+NASA-U,HS1,C-level (Jason file),52012
+NASA-U,HS1,C-level (station file),44397
+NASA-U,HS2,C-level (Jason file),52024
+NASA-U,HS2,C-level (station file),35868
+GITS,ISWR,CR1000,55846
+GITS,ISWR,C-level (Jason file),23566
+GITS,ISWR,2007_gits000.dat,10536
+GITS,ISWR,2002_GIT_MEM.DAT,9668
+GITS,ISWR,1996_GIT95-96.DAT,7927
+GITS,ISWR,1999_GITS9902.DAT,3383
+GITS,ISWR,2002_GITS.DAT,868
+GITS,ISWR,C-level (station file),37
+GITS,ISWR,2007_gits_007.dat,2
+GITS,OSWR,CR1000,58348
+GITS,OSWR,C-level (Jason file),23566
+GITS,OSWR,2007_gits000.dat,10536
+GITS,OSWR,2002_GIT_MEM.DAT,9668
+GITS,OSWR,1996_GIT95-96.DAT,7927
+GITS,OSWR,1999_GITS9902.DAT,3383
+GITS,OSWR,2002_GITS.DAT,868
+GITS,OSWR,C-level (station file),37
+GITS,OSWR,2007_gits_007.dat,2
+GITS,NR,CR1000,58580
+GITS,NR,C-level (Jason file),16389
+GITS,NR,2007_gits000.dat,10536
+GITS,NR,2002_GIT_MEM.DAT,9668
+GITS,NR,1996_GIT95-96.DAT,7927
+GITS,NR,1999_GITS9902.DAT,3383
+GITS,NR,2002_GITS.DAT,868
+GITS,NR,C-level (station file),45
+GITS,NR,2007_gits_007.dat,2
+GITS,TA1,CR1000,48694
+GITS,TA1,C-level (Jason file),21280
+GITS,TA1,2007_gits000.dat,10535
+GITS,TA1,2002_GIT_MEM.DAT,9660
+GITS,TA1,2002_GITS.DAT,868
+GITS,TA1,C-level (station file),734
+GITS,TA1,2007_gits_007.dat,2
+GITS,TA2,CR1000,49345
+GITS,TA2,C-level (Jason file),21280
+GITS,TA2,2007_gits000.dat,10535
+GITS,TA2,2002_GIT_MEM.DAT,9660
+GITS,TA2,2002_GITS.DAT,868
+GITS,TA2,C-level (station file),734
+GITS,TA2,2007_gits_007.dat,2
+GITS,TA3,CR1000,71921
+GITS,TA3,C-level (Jason file),17694
+GITS,TA3,2007_gits000.dat,10536
+GITS,TA3,2002_GIT_MEM.DAT,9669
+GITS,TA3,1996_GIT95-96.DAT,7927
+GITS,TA3,1999_GITS9902.DAT,3375
+GITS,TA3,2002_GITS.DAT,868
+GITS,TA3,C-level (station file),431
+GITS,TA3,2007_gits_007.dat,2
+GITS,TA4,CR1000,58278
+GITS,TA4,C-level (Jason file),17692
+GITS,TA4,2007_gits000.dat,10536
+GITS,TA4,2002_GIT_MEM.DAT,9669
+GITS,TA4,1996_GIT95-96.DAT,7927
+GITS,TA4,1999_GITS9902.DAT,3375
+GITS,TA4,2002_GITS.DAT,868
+GITS,TA4,C-level (station file),850
+GITS,TA4,2007_gits_007.dat,2
+GITS,RH1,CR1000,71921
+GITS,RH1,C-level (Jason file),28839
+GITS,RH1,C-level (station file),11322
+GITS,RH1,2002_GIT_MEM.DAT,9668
+GITS,RH1,2002_GITS.DAT,868
+GITS,RH2,CR1000,58278
+GITS,RH2,C-level (Jason file),31914
+GITS,RH2,C-level (station file),14012
+GITS,RH2,2002_GITS.DAT,868
+GITS,VW1,CR1000,71921
+GITS,VW1,C-level (Jason file),17106
+GITS,VW1,2007_gits000.dat,10536
+GITS,VW1,2002_GIT_MEM.DAT,9668
+GITS,VW1,1996_GIT95-96.DAT,7927
+GITS,VW1,1999_GITS9902.DAT,3383
+GITS,VW1,2002_GITS.DAT,868
+GITS,VW1,C-level (station file),26
+GITS,VW1,2007_gits_007.dat,2
+GITS,VW2,CR1000,71921
+GITS,VW2,C-level (Jason file),17127
+GITS,VW2,2007_gits000.dat,10536
+GITS,VW2,2002_GIT_MEM.DAT,9668
+GITS,VW2,1996_GIT95-96.DAT,7927
+GITS,VW2,1999_GITS9902.DAT,3383
+GITS,VW2,2002_GITS.DAT,868
+GITS,VW2,C-level (station file),12
+GITS,VW2,2007_gits_007.dat,2
+GITS,DW1,CR1000,65709
+GITS,DW1,2007_gits000.dat,10536
+GITS,DW1,C-level (Jason file),10027
+GITS,DW1,2002_GIT_MEM.DAT,9668
+GITS,DW1,1996_GIT95-96.DAT,7927
+GITS,DW1,1999_GITS9902.DAT,3383
+GITS,DW1,2002_GITS.DAT,868
+GITS,DW1,C-level (station file),26
+GITS,DW1,2007_gits_007.dat,2
+GITS,DW2,CR1000,58279
+GITS,DW2,C-level (Jason file),28067
+GITS,DW2,2002_GIT_MEM.DAT,9669
+GITS,DW2,2002_GITS.DAT,868
+GITS,P,CR1000,67658
+GITS,P,2007_gits000.dat,10536
+GITS,P,C-level (Jason file),10072
+GITS,P,2002_GIT_MEM.DAT,9668
+GITS,P,1996_GIT95-96.DAT,7927
+GITS,P,1999_GITS9902.DAT,3383
+GITS,P,2002_GITS.DAT,868
+GITS,P,C-level (station file),329
+GITS,P,2007_gits_007.dat,2
+GITS,HW1,CR1000,64998
+GITS,HW1,C-level (Jason file),41164
+GITS,HW1,C-level (station file),3495
+GITS,HW2,CR1000,49162
+GITS,HW2,C-level (Jason file),41164
+GITS,HW2,C-level (station file),3495
+GITS,V,CR1000,60504
+GITS,V,C-level (Jason file),6691
+GITS,V,C-level (station file),26
+GITS,TA5,CR1000,1175
+GITS,TS1,2007_gits000.dat,10027
+GITS,TS1,2002_GIT_MEM.DAT,9661
+GITS,TS1,C-level (Jason file),6665
+GITS,TS1,2002_GITS.DAT,868
+GITS,TS1,CR1000,44
+GITS,TS1,C-level (station file),28
+GITS,TS2,2002_GIT_MEM.DAT,9661
+GITS,TS2,C-level (Jason file),6665
+GITS,TS2,2002_GITS.DAT,868
+GITS,TS2,CR1000,40
+GITS,TS2,C-level (station file),8
+GITS,TS2,2007_gits_007.dat,2
+GITS,TS3,2002_GIT_MEM.DAT,9661
+GITS,TS3,2002_GITS.DAT,868
+GITS,TS3,CR1000,27
+GITS,TS3,C-level (station file),8
+GITS,TS3,2007_gits_007.dat,2
+GITS,TS4,2002_GIT_MEM.DAT,9661
+GITS,TS4,2002_GITS.DAT,868
+GITS,TS4,CR1000,31
+GITS,TS4,C-level (station file),10
+GITS,TS5,2007_gits000.dat,10533
+GITS,TS5,2002_GIT_MEM.DAT,9661
+GITS,TS5,2002_GITS.DAT,868
+GITS,TS5,C-level (station file),8
+GITS,TS5,CR1000,2
+GITS,TS6,2007_gits000.dat,10533
+GITS,TS6,2002_GIT_MEM.DAT,9661
+GITS,TS6,2002_GITS.DAT,868
+GITS,TS6,CR1000,19
+GITS,TS6,C-level (station file),11
+GITS,TS6,2007_gits_007.dat,2
+GITS,TS7,2007_gits000.dat,10533
+GITS,TS7,2002_GIT_MEM.DAT,9661
+GITS,TS7,2002_GITS.DAT,868
+GITS,TS7,CR1000,29
+GITS,TS7,C-level (station file),8
+GITS,TS8,2007_gits000.dat,223
+GITS,TS8,CR1000,47
+GITS,TS9,2007_gits000.dat,10533
+GITS,TS9,CR1000,22
+GITS,TS10,2007_gits000.dat,10027
+GITS,TS10,CR1000,26
+GITS,TS10,C-level (station file),20
+GITS,HS1,C-level (Jason file),38869
+GITS,HS1,C-level (station file),2341
+GITS,HS2,C-level (Jason file),30911
+GITS,HS2,C-level (station file),3495
+Humboldt,ISWR,CR1000,65761
+Humboldt,ISWR,C-level (Jason file),29160
+Humboldt,ISWR,C-level (station file),25695
+Humboldt,ISWR,1999_HUM99001.DAT,20201
+Humboldt,ISWR,2003_Hum_02_03.dat,9668
+Humboldt,ISWR,2008_hum07_08.dat,7816
+Humboldt,ISWR,1996_HUM95-96.DAT,5959
+Humboldt,ISWR,2011_hum001.dat,5818
+Humboldt,ISWR,2011_hum000.dat,3730
+Humboldt,ISWR,1996_HUM.DAT,1758
+Humboldt,ISWR,1999_HUM99-00.DAT,874
+Humboldt,ISWR,2003_Hum_1.dat,868
+Humboldt,ISWR,2007_hum1.dat,868
+Humboldt,ISWR,2008_CR10X_FSArea1.dat,868
+Humboldt,ISWR,2010_hum2010.dat,868
+Humboldt,OSWR,CR1000,65761
+Humboldt,OSWR,C-level (Jason file),29159
+Humboldt,OSWR,C-level (station file),25695
+Humboldt,OSWR,1999_HUM99001.DAT,21072
+Humboldt,OSWR,2003_Hum_02_03.dat,9668
+Humboldt,OSWR,2008_hum07_08.dat,7816
+Humboldt,OSWR,1996_HUM95-96.DAT,5959
+Humboldt,OSWR,2011_hum001.dat,5818
+Humboldt,OSWR,2011_hum000.dat,3730
+Humboldt,OSWR,1996_HUM.DAT,1758
+Humboldt,OSWR,2003_Hum_1.dat,868
+Humboldt,OSWR,2007_hum1.dat,868
+Humboldt,OSWR,2008_CR10X_FSArea1.dat,868
+Humboldt,OSWR,2010_hum2010.dat,868
+Humboldt,NR,CR1000,65761
+Humboldt,NR,C-level (station file),31545
+Humboldt,NR,C-level (Jason file),29068
+Humboldt,NR,1999_HUM99001.DAT,20201
+Humboldt,NR,2003_Hum_02_03.dat,9668
+Humboldt,NR,2008_hum07_08.dat,7816
+Humboldt,NR,1996_HUM95-96.DAT,5959
+Humboldt,NR,2011_hum000.dat,3730
+Humboldt,NR,1996_HUM.DAT,1758
+Humboldt,NR,1999_HUM99-00.DAT,874
+Humboldt,NR,2003_Hum_1.dat,868
+Humboldt,NR,2007_hum1.dat,868
+Humboldt,NR,2008_CR10X_FSArea1.dat,868
+Humboldt,NR,2010_hum2010.dat,868
+Humboldt,TA1,CR1000,65761
+Humboldt,TA1,C-level (Jason file),29784
+Humboldt,TA1,C-level (station file),28404
+Humboldt,TA1,1999_HUM99001.DAT,19773
+Humboldt,TA1,2003_Hum_02_03.dat,9668
+Humboldt,TA1,2008_hum07_08.dat,7816
+Humboldt,TA1,1996_HUM95-96.DAT,5856
+Humboldt,TA1,2011_hum001.dat,5795
+Humboldt,TA1,2011_hum000.dat,3616
+Humboldt,TA1,1996_HUM.DAT,1713
+Humboldt,TA1,1999_HUM99-00.DAT,871
+Humboldt,TA1,2003_Hum_1.dat,868
+Humboldt,TA1,2007_hum1.dat,868
+Humboldt,TA1,2008_CR10X_FSArea1.dat,868
+Humboldt,TA1,2010_hum2010.dat,868
+Humboldt,TA2,CR1000,65761
+Humboldt,TA2,C-level (Jason file),29784
+Humboldt,TA2,C-level (station file),28404
+Humboldt,TA2,1999_HUM99001.DAT,19773
+Humboldt,TA2,2003_Hum_02_03.dat,9668
+Humboldt,TA2,2008_hum07_08.dat,7816
+Humboldt,TA2,2011_hum001.dat,5795
+Humboldt,TA2,2011_hum000.dat,3616
+Humboldt,TA2,1999_HUM99-00.DAT,871
+Humboldt,TA2,2003_Hum_1.dat,868
+Humboldt,TA2,2007_hum1.dat,868
+Humboldt,TA2,2008_CR10X_FSArea1.dat,868
+Humboldt,TA2,2010_hum2010.dat,868
+Humboldt,TA3,CR1000,65761
+Humboldt,TA3,C-level (Jason file),26687
+Humboldt,TA3,C-level (station file),10638
+Humboldt,TA3,2003_Hum_02_03.dat,9668
+Humboldt,TA3,1996_HUM95-96.DAT,5959
+Humboldt,TA3,2011_hum001.dat,5817
+Humboldt,TA3,2011_hum000.dat,3731
+Humboldt,TA3,1996_HUM.DAT,1758
+Humboldt,TA3,2003_Hum_1.dat,868
+Humboldt,TA3,2007_hum1.dat,868
+Humboldt,TA3,2008_CR10X_FSArea1.dat,868
+Humboldt,TA3,2010_hum2010.dat,868
+Humboldt,TA4,CR1000,65761
+Humboldt,TA4,C-level (Jason file),38256
+Humboldt,TA4,C-level (station file),28428
+Humboldt,TA4,2008_hum07_08.dat,8684
+Humboldt,TA4,1996_HUM95-96.DAT,5959
+Humboldt,TA4,2011_hum001.dat,5818
+Humboldt,TA4,1996_HUM.DAT,1758
+Humboldt,TA4,2007_hum1.dat,868
+Humboldt,RH1,CR1000,65761
+Humboldt,RH1,C-level (station file),48516
+Humboldt,RH1,1999_HUM99001.DAT,21072
+Humboldt,RH1,C-level (Jason file),11361
+Humboldt,RH1,1996_HUM95-96.DAT,7393
+Humboldt,RH1,2011_hum001.dat,5818
+Humboldt,RH1,2007_hum1.dat,868
+Humboldt,RH2,CR1000,65761
+Humboldt,RH2,C-level (Jason file),35332
+Humboldt,RH2,1999_HUM99001.DAT,21072
+Humboldt,RH2,2003_Hum_02_03.dat,10536
+Humboldt,RH2,2008_hum07_08.dat,8008
+Humboldt,RH2,2011_hum001.dat,5818
+Humboldt,RH2,2011_hum000.dat,3730
+Humboldt,RH2,C-level (station file),2820
+Humboldt,RH2,1996_HUM.DAT,1434
+Humboldt,RH2,2008_CR10X_FSArea1.dat,868
+Humboldt,RH2,2010_hum2010.dat,868
+Humboldt,VW1,CR1000,65761
+Humboldt,VW1,C-level (Jason file),49967
+Humboldt,VW1,C-level (station file),27002
+Humboldt,VW1,2003_Hum_02_03.dat,9668
+Humboldt,VW1,2008_hum07_08.dat,7816
+Humboldt,VW1,1996_HUM95-96.DAT,5959
+Humboldt,VW1,2011_hum001.dat,5818
+Humboldt,VW1,2011_hum000.dat,3730
+Humboldt,VW1,1996_HUM.DAT,1758
+Humboldt,VW1,2003_Hum_1.dat,868
+Humboldt,VW1,2007_hum1.dat,868
+Humboldt,VW1,2008_CR10X_FSArea1.dat,868
+Humboldt,VW1,2010_hum2010.dat,868
+Humboldt,VW2,CR1000,65761
+Humboldt,VW2,C-level (Jason file),29065
+Humboldt,VW2,C-level (station file),27011
+Humboldt,VW2,1999_HUM99001.DAT,20201
+Humboldt,VW2,2003_Hum_02_03.dat,9668
+Humboldt,VW2,2008_hum07_08.dat,7816
+Humboldt,VW2,1996_HUM95-96.DAT,5959
+Humboldt,VW2,2011_hum001.dat,5818
+Humboldt,VW2,2011_hum000.dat,3730
+Humboldt,VW2,1996_HUM.DAT,1758
+Humboldt,VW2,1999_HUM99-00.DAT,874
+Humboldt,VW2,2003_Hum_1.dat,868
+Humboldt,VW2,2007_hum1.dat,868
+Humboldt,VW2,2008_CR10X_FSArea1.dat,868
+Humboldt,VW2,2010_hum2010.dat,868
+Humboldt,DW1,CR1000,65761
+Humboldt,DW1,C-level (station file),37036
+Humboldt,DW1,1999_HUM99001.DAT,20201
+Humboldt,DW1,2008_hum07_08.dat,7816
+Humboldt,DW1,1996_HUM95-96.DAT,5959
+Humboldt,DW1,2011_hum001.dat,5818
+Humboldt,DW1,C-level (Jason file),4864
+Humboldt,DW1,2011_hum000.dat,3730
+Humboldt,DW1,1996_HUM.DAT,1758
+Humboldt,DW1,1999_HUM99-00.DAT,874
+Humboldt,DW1,2007_hum1.dat,868
+Humboldt,DW1,2008_CR10X_FSArea1.dat,868
+Humboldt,DW1,2010_hum2010.dat,868
+Humboldt,DW2,CR1000,65761
+Humboldt,DW2,C-level (Jason file),57051
+Humboldt,DW2,C-level (station file),30589
+Humboldt,DW2,2008_hum07_08.dat,7816
+Humboldt,DW2,2011_hum001.dat,5818
+Humboldt,DW2,2011_hum000.dat,3731
+Humboldt,DW2,2003_Hum_1.dat,868
+Humboldt,DW2,2007_hum1.dat,868
+Humboldt,DW2,2008_CR10X_FSArea1.dat,868
+Humboldt,DW2,2010_hum2010.dat,868
+Humboldt,P,CR1000,65761
+Humboldt,P,C-level (Jason file),29783
+Humboldt,P,C-level (station file),28379
+Humboldt,P,1999_HUM99001.DAT,20201
+Humboldt,P,2003_Hum_02_03.dat,9668
+Humboldt,P,2008_hum07_08.dat,7816
+Humboldt,P,1996_HUM95-96.DAT,5959
+Humboldt,P,2011_hum001.dat,5818
+Humboldt,P,2011_hum000.dat,3730
+Humboldt,P,1996_HUM.DAT,1758
+Humboldt,P,1999_HUM99-00.DAT,874
+Humboldt,P,2003_Hum_1.dat,868
+Humboldt,P,2007_hum1.dat,868
+Humboldt,P,2008_CR10X_FSArea1.dat,868
+Humboldt,P,2010_hum2010.dat,868
+Humboldt,HW1,CR1000,63383
+Humboldt,HW1,C-level (Jason file),58595
+Humboldt,HW1,C-level (station file),45428
+Humboldt,HW2,CR1000,65718
+Humboldt,HW2,C-level (Jason file),58595
+Humboldt,HW2,C-level (station file),45428
+Humboldt,V,CR1000,65761
+Humboldt,V,C-level (station file),27112
+Humboldt,V,2003_Hum_02_03.dat,10536
+Humboldt,V,2008_hum07_08.dat,7816
+Humboldt,V,2011_hum001.dat,5818
+Humboldt,V,2011_hum000.dat,3731
+Humboldt,V,2007_hum1.dat,868
+Humboldt,V,2008_CR10X_FSArea1.dat,868
+Humboldt,V,2010_hum2010.dat,868
+Humboldt,TS1,C-level (station file),25681
+Humboldt,TS1,1999_HUM99001.DAT,19773
+Humboldt,TS1,2003_Hum_02_03.dat,9668
+Humboldt,TS1,2008_hum07_08.dat,7816
+Humboldt,TS1,1999_HUM99-00.DAT,871
+Humboldt,TS1,2003_Hum_1.dat,868
+Humboldt,TS1,2007_hum1.dat,868
+Humboldt,TS1,2008_CR10X_FSArea1.dat,868
+Humboldt,TS2,C-level (station file),26648
+Humboldt,TS2,2003_Hum_02_03.dat,9668
+Humboldt,TS2,2008_hum07_08.dat,7816
+Humboldt,TS2,2011_hum001.dat,4939
+Humboldt,TS2,2011_hum000.dat,3456
+Humboldt,TS2,2003_Hum_1.dat,868
+Humboldt,TS2,2007_hum1.dat,868
+Humboldt,TS2,2008_CR10X_FSArea1.dat,868
+Humboldt,TS2,2010_hum2010.dat,765
+Humboldt,TS3,C-level (station file),25704
+Humboldt,TS3,2003_Hum_02_03.dat,9668
+Humboldt,TS3,2008_hum07_08.dat,7816
+Humboldt,TS3,2011_hum001.dat,5795
+Humboldt,TS3,2011_hum000.dat,3617
+Humboldt,TS3,2003_Hum_1.dat,868
+Humboldt,TS3,2007_hum1.dat,868
+Humboldt,TS3,2008_CR10X_FSArea1.dat,868
+Humboldt,TS3,2010_hum2010.dat,868
+Humboldt,TS4,C-level (station file),25681
+Humboldt,TS4,2003_Hum_02_03.dat,9668
+Humboldt,TS4,2008_hum07_08.dat,7816
+Humboldt,TS4,2003_Hum_1.dat,868
+Humboldt,TS4,2007_hum1.dat,868
+Humboldt,TS4,2008_CR10X_FSArea1.dat,868
+Humboldt,TS5,C-level (station file),25681
+Humboldt,TS5,2003_Hum_02_03.dat,9668
+Humboldt,TS5,2008_hum07_08.dat,7816
+Humboldt,TS5,2003_Hum_1.dat,868
+Humboldt,TS5,2007_hum1.dat,868
+Humboldt,TS5,2008_CR10X_FSArea1.dat,868
+Humboldt,TS6,C-level (station file),25681
+Humboldt,TS6,2003_Hum_02_03.dat,9668
+Humboldt,TS6,2008_hum07_08.dat,7816
+Humboldt,TS6,2003_Hum_1.dat,868
+Humboldt,TS6,2007_hum1.dat,868
+Humboldt,TS6,2008_CR10X_FSArea1.dat,868
+Humboldt,TS7,C-level (station file),25681
+Humboldt,TS7,2003_Hum_02_03.dat,9668
+Humboldt,TS7,2008_hum07_08.dat,7816
+Humboldt,TS7,2003_Hum_1.dat,868
+Humboldt,TS7,2007_hum1.dat,868
+Humboldt,TS7,2008_CR10X_FSArea1.dat,868
+Humboldt,TS8,C-level (station file),25681
+Humboldt,TS8,2003_Hum_02_03.dat,9668
+Humboldt,TS8,2008_hum07_08.dat,7816
+Humboldt,TS8,2003_Hum_1.dat,868
+Humboldt,TS8,2007_hum1.dat,868
+Humboldt,TS8,2008_CR10X_FSArea1.dat,868
+Humboldt,TS9,C-level (station file),25681
+Humboldt,TS9,2003_Hum_02_03.dat,9668
+Humboldt,TS9,2008_hum07_08.dat,7816
+Humboldt,TS9,2003_Hum_1.dat,868
+Humboldt,TS9,2007_hum1.dat,868
+Humboldt,TS9,2008_CR10X_FSArea1.dat,868
+Humboldt,TS10,C-level (station file),25681
+Humboldt,TS10,2003_Hum_02_03.dat,9668
+Humboldt,TS10,2008_hum07_08.dat,7816
+Humboldt,TS10,2003_Hum_1.dat,868
+Humboldt,TS10,2007_hum1.dat,868
+Humboldt,TS10,2008_CR10X_FSArea1.dat,868
+Humboldt,HS1,C-level (Jason file),58595
+Humboldt,HS1,C-level (station file),28760
+Humboldt,HS2,C-level (Jason file),58580
+Humboldt,HS2,C-level (station file),45410
+Summit,ISWR,CR1000,114878
+Summit,ISWR,2009_sum_09.dat,30973
+Summit,ISWR,2004_Summit_2a.dat,23947
+Summit,ISWR,C-level (Jason file),11534
+Summit,ISWR,2000_SUM99_00.DAT,9841
+Summit,ISWR,1997_SUM96_97.DAT,8966
+Summit,ISWR,2005_sum.dat,8865
+Summit,ISWR,1998_SUM_97-8.DAT,6196
+Summit,ISWR,2001_SUMMIT01.DAT,5069
+Summit,ISWR,C-level (station file),3262
+Summit,ISWR,2004_Summit_1.dat,2519
+Summit,ISWR,2006_Summit_06.dat,635
+Summit,ISWR,2008_SUMMIT1.dat,574
+Summit,ISWR,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,ISWR,2004_040410_Summit.dat,50
+Summit,OSWR,CR1000,114878
+Summit,OSWR,2009_sum_09.dat,33006
+Summit,OSWR,2004_Summit_2a.dat,25645
+Summit,OSWR,C-level (Jason file),9973
+Summit,OSWR,2000_SUM99_00.DAT,9841
+Summit,OSWR,2005_sum.dat,9467
+Summit,OSWR,1997_SUM96_97.DAT,8966
+Summit,OSWR,1998_SUM_97-8.DAT,6196
+Summit,OSWR,2001_SUMMIT01.DAT,5069
+Summit,OSWR,2004_Summit_1.dat,2519
+Summit,OSWR,2006_Summit_06.dat,837
+Summit,OSWR,2008_SUMMIT1.dat,834
+Summit,OSWR,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,OSWR,C-level (station file),155
+Summit,OSWR,2004_040410_Summit.dat,50
+Summit,NR,CR1000,114878
+Summit,NR,2004_Summit_2a.dat,25674
+Summit,NR,C-level (Jason file),23819
+Summit,NR,C-level (station file),22756
+Summit,NR,2000_SUM99_00.DAT,9837
+Summit,NR,2005_sum.dat,9490
+Summit,NR,2009_sum_09.dat,7109
+Summit,NR,2001_SUMMIT01.DAT,5069
+Summit,NR,2004_Summit_1.dat,2519
+Summit,NR,2008_SUMMIT1.dat,836
+Summit,NR,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,NR,2004_040410_Summit.dat,50
+Summit,TA1,CR1000,114007
+Summit,TA1,2009_sum_09.dat,28957
+Summit,TA1,2004_Summit_2a.dat,25674
+Summit,TA1,C-level (Jason file),23911
+Summit,TA1,2005_sum.dat,9490
+Summit,TA1,2000_SUM99_00.DAT,8777
+Summit,TA1,2001_SUMMIT01.DAT,5069
+Summit,TA1,2004_Summit_1.dat,2519
+Summit,TA1,C-level (station file),1948
+Summit,TA1,2006_Summit_06.dat,839
+Summit,TA1,2008_SUMMIT1.dat,836
+Summit,TA1,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TA1,2004_040410_Summit.dat,50
+Summit,TA2,CR1000,114007
+Summit,TA2,2009_sum_09.dat,28957
+Summit,TA2,2004_Summit_2a.dat,25674
+Summit,TA2,C-level (Jason file),17714
+Summit,TA2,2005_sum.dat,9490
+Summit,TA2,2000_SUM99_00.DAT,8777
+Summit,TA2,2001_SUMMIT01.DAT,5069
+Summit,TA2,2004_Summit_1.dat,2519
+Summit,TA2,C-level (station file),1948
+Summit,TA2,2006_Summit_06.dat,839
+Summit,TA2,2008_SUMMIT1.dat,836
+Summit,TA2,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TA2,2004_040410_Summit.dat,50
+Summit,TA3,CR1000,114878
+Summit,TA3,2009_sum_09.dat,33209
+Summit,TA3,2004_Summit_2a.dat,25674
+Summit,TA3,2005_sum.dat,9490
+Summit,TA3,1997_SUM96_97.DAT,8232
+Summit,TA3,1998_SUM_97-8.DAT,6017
+Summit,TA3,C-level (Jason file),5151
+Summit,TA3,2001_SUMMIT01.DAT,5069
+Summit,TA3,2004_Summit_1.dat,2519
+Summit,TA3,2006_Summit_06.dat,839
+Summit,TA3,2008_SUMMIT1.dat,836
+Summit,TA3,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TA3,2000_SUM99_00.DAT,217
+Summit,TA3,C-level (station file),88
+Summit,TA3,2004_040410_Summit.dat,50
+Summit,TA4,CR1000,114874
+Summit,TA4,2009_sum_09.dat,33209
+Summit,TA4,2004_Summit_2a.dat,25674
+Summit,TA4,C-level (Jason file),23505
+Summit,TA4,2005_sum.dat,9490
+Summit,TA4,1997_SUM96_97.DAT,8225
+Summit,TA4,2001_SUMMIT01.DAT,5286
+Summit,TA4,2004_Summit_1.dat,2519
+Summit,TA4,2006_Summit_06.dat,839
+Summit,TA4,2008_SUMMIT1.dat,836
+Summit,TA4,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TA4,C-level (station file),88
+Summit,TA4,2004_040410_Summit.dat,50
+Summit,RH1,CR1000,114878
+Summit,RH1,2009_sum_09.dat,33209
+Summit,RH1,C-level (Jason file),25713
+Summit,RH1,2004_Summit_2a.dat,25674
+Summit,RH1,2005_sum.dat,9655
+Summit,RH1,1998_SUM_97-8.DAT,6196
+Summit,RH1,2001_SUMMIT01.DAT,5069
+Summit,RH1,2004_Summit_1.dat,2519
+Summit,RH1,2006_Summit_06.dat,839
+Summit,RH1,2008_SUMMIT1.dat,836
+Summit,RH1,2000_SUM99_00.DAT,217
+Summit,RH1,C-level (station file),88
+Summit,RH1,2004_040410_Summit.dat,50
+Summit,RH2,CR1000,114874
+Summit,RH2,2009_sum_09.dat,33209
+Summit,RH2,2004_Summit_2a.dat,25674
+Summit,RH2,C-level (Jason file),12723
+Summit,RH2,2000_SUM99_00.DAT,9839
+Summit,RH2,2005_sum.dat,9490
+Summit,RH2,1998_SUM_97-8.DAT,8568
+Summit,RH2,2001_SUMMIT01.DAT,5069
+Summit,RH2,2004_Summit_1.dat,2519
+Summit,RH2,2006_Summit_06.dat,839
+Summit,RH2,2008_SUMMIT1.dat,836
+Summit,RH2,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,RH2,C-level (station file),92
+Summit,RH2,2004_040410_Summit.dat,50
+Summit,VW1,CR1000,114878
+Summit,VW1,2009_sum_09.dat,33209
+Summit,VW1,2004_Summit_2a.dat,25674
+Summit,VW1,2000_SUM99_00.DAT,9841
+Summit,VW1,2005_sum.dat,9490
+Summit,VW1,1997_SUM96_97.DAT,8966
+Summit,VW1,1998_SUM_97-8.DAT,8568
+Summit,VW1,C-level (Jason file),6482
+Summit,VW1,2001_SUMMIT01.DAT,5069
+Summit,VW1,2004_Summit_1.dat,2519
+Summit,VW1,2006_Summit_06.dat,839
+Summit,VW1,2008_SUMMIT1.dat,836
+Summit,VW1,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,VW1,2004_040410_Summit.dat,50
+Summit,VW1,C-level (station file),1
+Summit,VW2,CR1000,114878
+Summit,VW2,2009_sum_09.dat,33209
+Summit,VW2,2004_Summit_2a.dat,25674
+Summit,VW2,2000_SUM99_00.DAT,9841
+Summit,VW2,2005_sum.dat,9490
+Summit,VW2,1997_SUM96_97.DAT,8966
+Summit,VW2,1998_SUM_97-8.DAT,8568
+Summit,VW2,C-level (Jason file),6468
+Summit,VW2,2001_SUMMIT01.DAT,5069
+Summit,VW2,2004_Summit_1.dat,2519
+Summit,VW2,2006_Summit_06.dat,839
+Summit,VW2,2008_SUMMIT1.dat,836
+Summit,VW2,2004_Summit_99_118_1minute calibrated.dat,407
+Summit,VW2,C-level (station file),1
+Summit,DW1,CR1000,114878
+Summit,DW1,2009_sum_09.dat,33209
+Summit,DW1,2004_Summit_2a.dat,25674
+Summit,DW1,2000_SUM99_00.DAT,9841
+Summit,DW1,2005_sum.dat,9655
+Summit,DW1,1997_SUM96_97.DAT,8966
+Summit,DW1,1998_SUM_97-8.DAT,8533
+Summit,DW1,C-level (Jason file),8400
+Summit,DW1,2001_SUMMIT01.DAT,5069
+Summit,DW1,2004_Summit_1.dat,2519
+Summit,DW1,2006_Summit_06.dat,839
+Summit,DW1,2008_SUMMIT1.dat,836
+Summit,DW1,2004_040410_Summit.dat,50
+Summit,DW1,C-level (station file),1
+Summit,DW2,CR1000,114878
+Summit,DW2,2009_sum_09.dat,33209
+Summit,DW2,2004_Summit_2a.dat,25674
+Summit,DW2,C-level (Jason file),15921
+Summit,DW2,2000_SUM99_00.DAT,9841
+Summit,DW2,2005_sum.dat,9655
+Summit,DW2,1998_SUM_97-8.DAT,8553
+Summit,DW2,2001_SUMMIT01.DAT,5069
+Summit,DW2,2004_Summit_1.dat,2519
+Summit,DW2,2006_Summit_06.dat,839
+Summit,DW2,2008_SUMMIT1.dat,836
+Summit,DW2,2004_040410_Summit.dat,50
+Summit,DW2,C-level (station file),1
+Summit,P,CR1000,114878
+Summit,P,2009_sum_09.dat,33209
+Summit,P,2004_Summit_2a.dat,25674
+Summit,P,2000_SUM99_00.DAT,9624
+Summit,P,2005_sum.dat,9490
+Summit,P,1997_SUM96_97.DAT,8966
+Summit,P,C-level (Jason file),8670
+Summit,P,1998_SUM_97-8.DAT,8568
+Summit,P,2001_SUMMIT01.DAT,5286
+Summit,P,2004_Summit_1.dat,2519
+Summit,P,2006_Summit_06.dat,839
+Summit,P,2008_SUMMIT1.dat,836
+Summit,P,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,P,C-level (station file),87
+Summit,P,2004_040410_Summit.dat,50
+Summit,HW1,CR1000,114788
+Summit,HW1,C-level (Jason file),66487
+Summit,HW1,C-level (station file),47346
+Summit,HW2,CR1000,114842
+Summit,HW2,C-level (Jason file),66487
+Summit,HW2,C-level (station file),47346
+Summit,V,CR1000,114878
+Summit,V,2009_sum_09.dat,33209
+Summit,V,2004_Summit_2a.dat,25674
+Summit,V,2000_SUM99_00.DAT,9841
+Summit,V,2005_sum.dat,9490
+Summit,V,1997_SUM96_97.DAT,8966
+Summit,V,1998_SUM_97-8.DAT,8568
+Summit,V,2001_SUMMIT01.DAT,5069
+Summit,V,2004_Summit_1.dat,2519
+Summit,V,2006_Summit_06.dat,839
+Summit,V,2008_SUMMIT1.dat,836
+Summit,V,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,V,2004_040410_Summit.dat,50
+Summit,V,C-level (Jason file),2
+Summit,V,C-level (station file),1
+Summit,TA5,CR1000,114007
+Summit,TA5,C-level (station file),355
+Summit,TS1,CR1000,106027
+Summit,TS1,2009_sum_09.dat,28968
+Summit,TS1,2004_Summit_2a.dat,25674
+Summit,TS1,2005_sum.dat,9490
+Summit,TS1,2000_SUM99_00.DAT,8735
+Summit,TS1,1997_SUM96_97.DAT,8232
+Summit,TS1,1998_SUM_97-8.DAT,6017
+Summit,TS1,2001_SUMMIT01.DAT,5069
+Summit,TS1,C-level (station file),4807
+Summit,TS1,2004_Summit_1.dat,2519
+Summit,TS1,C-level (Jason file),1772
+Summit,TS1,2006_Summit_06.dat,839
+Summit,TS1,2008_SUMMIT1.dat,836
+Summit,TS1,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS1,2004_040410_Summit.dat,50
+Summit,TS2,CR1000,112183
+Summit,TS2,2009_sum_09.dat,28978
+Summit,TS2,2004_Summit_2a.dat,25674
+Summit,TS2,2005_sum.dat,9490
+Summit,TS2,2000_SUM99_00.DAT,8735
+Summit,TS2,1997_SUM96_97.DAT,8232
+Summit,TS2,1998_SUM_97-8.DAT,6017
+Summit,TS2,2001_SUMMIT01.DAT,5069
+Summit,TS2,C-level (station file),2637
+Summit,TS2,2004_Summit_1.dat,2519
+Summit,TS2,C-level (Jason file),1772
+Summit,TS2,2006_Summit_06.dat,839
+Summit,TS2,2008_SUMMIT1.dat,836
+Summit,TS2,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS2,2004_040410_Summit.dat,50
+Summit,TS3,CR1000,106554
+Summit,TS3,2009_sum_09.dat,28986
+Summit,TS3,2004_Summit_2a.dat,25674
+Summit,TS3,2005_sum.dat,9490
+Summit,TS3,2000_SUM99_00.DAT,8735
+Summit,TS3,1997_SUM96_97.DAT,8232
+Summit,TS3,1998_SUM_97-8.DAT,6017
+Summit,TS3,2001_SUMMIT01.DAT,5069
+Summit,TS3,C-level (station file),4326
+Summit,TS3,2004_Summit_1.dat,2519
+Summit,TS3,C-level (Jason file),1772
+Summit,TS3,2006_Summit_06.dat,839
+Summit,TS3,2008_SUMMIT1.dat,836
+Summit,TS3,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS3,2004_040410_Summit.dat,50
+Summit,TS4,CR1000,112674
+Summit,TS4,2009_sum_09.dat,28985
+Summit,TS4,2004_Summit_2a.dat,25674
+Summit,TS4,2005_sum.dat,9490
+Summit,TS4,2000_SUM99_00.DAT,8735
+Summit,TS4,1997_SUM96_97.DAT,8232
+Summit,TS4,1998_SUM_97-8.DAT,6017
+Summit,TS4,2001_SUMMIT01.DAT,5069
+Summit,TS4,2004_Summit_1.dat,2519
+Summit,TS4,C-level (station file),2413
+Summit,TS4,C-level (Jason file),1772
+Summit,TS4,2006_Summit_06.dat,839
+Summit,TS4,2008_SUMMIT1.dat,836
+Summit,TS4,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS4,2004_040410_Summit.dat,50
+Summit,TS5,CR1000,90111
+Summit,TS5,2009_sum_09.dat,28955
+Summit,TS5,2004_Summit_2a.dat,25674
+Summit,TS5,C-level (station file),13732
+Summit,TS5,2005_sum.dat,9490
+Summit,TS5,2000_SUM99_00.DAT,8735
+Summit,TS5,1997_SUM96_97.DAT,8232
+Summit,TS5,1998_SUM_97-8.DAT,6017
+Summit,TS5,2001_SUMMIT01.DAT,5069
+Summit,TS5,2004_Summit_1.dat,2519
+Summit,TS5,C-level (Jason file),1772
+Summit,TS5,2006_Summit_06.dat,839
+Summit,TS5,2008_SUMMIT1.dat,836
+Summit,TS5,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS5,2004_040410_Summit.dat,50
+Summit,TS6,CR1000,103849
+Summit,TS6,2009_sum_09.dat,28957
+Summit,TS6,2004_Summit_2a.dat,25674
+Summit,TS6,2005_sum.dat,9490
+Summit,TS6,2000_SUM99_00.DAT,8735
+Summit,TS6,1997_SUM96_97.DAT,8232
+Summit,TS6,C-level (station file),6427
+Summit,TS6,1998_SUM_97-8.DAT,6017
+Summit,TS6,2001_SUMMIT01.DAT,5069
+Summit,TS6,2004_Summit_1.dat,2519
+Summit,TS6,C-level (Jason file),1815
+Summit,TS6,2006_Summit_06.dat,839
+Summit,TS6,2008_SUMMIT1.dat,836
+Summit,TS6,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS6,2004_040410_Summit.dat,50
+Summit,TS7,CR1000,106703
+Summit,TS7,2009_sum_09.dat,28957
+Summit,TS7,2004_Summit_2a.dat,25674
+Summit,TS7,2005_sum.dat,9490
+Summit,TS7,2000_SUM99_00.DAT,8735
+Summit,TS7,1997_SUM96_97.DAT,8232
+Summit,TS7,1998_SUM_97-8.DAT,6017
+Summit,TS7,C-level (station file),5464
+Summit,TS7,2001_SUMMIT01.DAT,5069
+Summit,TS7,2004_Summit_1.dat,2519
+Summit,TS7,C-level (Jason file),1815
+Summit,TS7,2006_Summit_06.dat,839
+Summit,TS7,2008_SUMMIT1.dat,836
+Summit,TS7,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS7,2004_040410_Summit.dat,50
+Summit,TS8,CR1000,110238
+Summit,TS8,2009_sum_09.dat,28957
+Summit,TS8,2004_Summit_2a.dat,25674
+Summit,TS8,2005_sum.dat,9490
+Summit,TS8,2000_SUM99_00.DAT,8735
+Summit,TS8,2001_SUMMIT01.DAT,5069
+Summit,TS8,C-level (station file),3567
+Summit,TS8,2004_Summit_1.dat,2519
+Summit,TS8,2006_Summit_06.dat,839
+Summit,TS8,2008_SUMMIT1.dat,836
+Summit,TS8,C-level (Jason file),750
+Summit,TS8,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS8,2004_040410_Summit.dat,50
+Summit,TS9,CR1000,96693
+Summit,TS9,2009_sum_09.dat,28957
+Summit,TS9,2004_Summit_2a.dat,25674
+Summit,TS9,C-level (station file),10254
+Summit,TS9,2005_sum.dat,9490
+Summit,TS9,2000_SUM99_00.DAT,8735
+Summit,TS9,2001_SUMMIT01.DAT,5069
+Summit,TS9,2004_Summit_1.dat,2519
+Summit,TS9,2006_Summit_06.dat,839
+Summit,TS9,2008_SUMMIT1.dat,836
+Summit,TS9,C-level (Jason file),793
+Summit,TS9,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS9,2004_040410_Summit.dat,50
+Summit,TS10,CR1000,89958
+Summit,TS10,2009_sum_09.dat,28956
+Summit,TS10,2004_Summit_2a.dat,25674
+Summit,TS10,C-level (station file),13545
+Summit,TS10,2005_sum.dat,9490
+Summit,TS10,2000_SUM99_00.DAT,8735
+Summit,TS10,2001_SUMMIT01.DAT,5069
+Summit,TS10,2004_Summit_1.dat,2519
+Summit,TS10,2006_Summit_06.dat,839
+Summit,TS10,2008_SUMMIT1.dat,836
+Summit,TS10,C-level (Jason file),793
+Summit,TS10,2004_Summit_99_118_1minute calibrated.dat,357
+Summit,TS10,2004_040410_Summit.dat,50
+Summit,HS1,C-level (Jason file),66482
+Summit,HS1,C-level (station file),41401
+Summit,HS2,C-level (Jason file),66396
+Summit,HS2,C-level (station file),34880
+Tunu-N,ISWR,CR1000,101792
+Tunu-N,ISWR,2011_Tunu-N 2011.dat,31409
+Tunu-N,ISWR,2008_tunu08.dat,23612
+Tunu-N,ISWR,2001_TUNUN01.DAT,18000
+Tunu-N,ISWR,2003_Tunu_1.dat,17301
+Tunu-N,ISWR,1998_TUNU.DAT,17263
+Tunu-N,ISWR,1999_AWSTUN99.DAT,8807
+Tunu-N,ISWR,1996_TUNU.DAT,308
+Tunu-N,ISWR,C-level (station file),244
+Tunu-N,ISWR,C-level (Jason file),3
+Tunu-N,OSWR,CR1000,101792
+Tunu-N,OSWR,2011_Tunu-N 2011.dat,31408
+Tunu-N,OSWR,2008_tunu08.dat,23611
+Tunu-N,OSWR,2001_TUNUN01.DAT,18000
+Tunu-N,OSWR,2003_Tunu_1.dat,17301
+Tunu-N,OSWR,1998_TUNU.DAT,17263
+Tunu-N,OSWR,1999_AWSTUN99.DAT,8807
+Tunu-N,OSWR,1996_TUNU.DAT,308
+Tunu-N,OSWR,C-level (station file),245
+Tunu-N,OSWR,C-level (Jason file),3
+Tunu-N,NR,CR1000,100367
+Tunu-N,NR,2011_Tunu-N 2011.dat,30539
+Tunu-N,NR,2008_tunu08.dat,23613
+Tunu-N,NR,2001_TUNUN01.DAT,18000
+Tunu-N,NR,2003_Tunu_1.dat,17301
+Tunu-N,NR,1998_TUNU.DAT,17262
+Tunu-N,NR,1999_AWSTUN99.DAT,8807
+Tunu-N,NR,C-level (station file),1295
+Tunu-N,NR,1996_TUNU.DAT,308
+Tunu-N,NR,C-level (Jason file),4
+Tunu-N,TA1,CR1000,101599
+Tunu-N,TA1,2011_Tunu-N 2011.dat,30487
+Tunu-N,TA1,2008_tunu08.dat,23609
+Tunu-N,TA1,2003_Tunu_1.dat,17301
+Tunu-N,TA1,2001_TUNUN01.DAT,16669
+Tunu-N,TA1,1998_TUNU.DAT,16433
+Tunu-N,TA1,1999_AWSTUN99.DAT,8536
+Tunu-N,TA1,C-level (Jason file),1728
+Tunu-N,TA1,C-level (station file),1440
+Tunu-N,TA1,1996_TUNU.DAT,308
+Tunu-N,TA2,CR1000,101599
+Tunu-N,TA2,2011_Tunu-N 2011.dat,30487
+Tunu-N,TA2,2008_tunu08.dat,23610
+Tunu-N,TA2,2003_Tunu_1.dat,17301
+Tunu-N,TA2,2001_TUNUN01.DAT,16669
+Tunu-N,TA2,1998_TUNU.DAT,16433
+Tunu-N,TA2,1999_AWSTUN99.DAT,8536
+Tunu-N,TA2,C-level (Jason file),1728
+Tunu-N,TA2,C-level (station file),1439
+Tunu-N,TA2,1996_TUNU.DAT,308
+Tunu-N,TA3,CR1000,101793
+Tunu-N,TA3,2011_Tunu-N 2011.dat,30540
+Tunu-N,TA3,2008_tunu08.dat,23612
+Tunu-N,TA3,2003_Tunu_1.dat,17301
+Tunu-N,TA3,1998_TUNU.DAT,17263
+Tunu-N,TA3,1999_AWSTUN99.DAT,8807
+Tunu-N,TA3,C-level (station file),1367
+Tunu-N,TA3,1996_TUNU.DAT,307
+Tunu-N,TA4,CR1000,101793
+Tunu-N,TA4,2011_Tunu-N 2011.dat,30540
+Tunu-N,TA4,2008_tunu08.dat,23612
+Tunu-N,TA4,2003_Tunu_1.dat,17301
+Tunu-N,TA4,1998_TUNU.DAT,17263
+Tunu-N,TA4,1999_AWSTUN99.DAT,8806
+Tunu-N,TA4,C-level (station file),1367
+Tunu-N,TA4,1996_TUNU.DAT,307
+Tunu-N,TA4,C-level (Jason file),3
+Tunu-N,RH1,CR1000,101793
+Tunu-N,RH1,2011_Tunu-N 2011.dat,31461
+Tunu-N,RH1,2008_tunu08.dat,23613
+Tunu-N,RH1,2001_TUNUN01.DAT,18000
+Tunu-N,RH1,2003_Tunu_1.dat,17301
+Tunu-N,RH1,1999_AWSTUN99.DAT,8807
+Tunu-N,RH1,C-level (Jason file),6365
+Tunu-N,RH1,C-level (station file),448
+Tunu-N,RH2,CR1000,101793
+Tunu-N,RH2,2011_Tunu-N 2011.dat,31461
+Tunu-N,RH2,2008_tunu08.dat,23613
+Tunu-N,RH2,C-level (Jason file),21075
+Tunu-N,RH2,2001_TUNUN01.DAT,18000
+Tunu-N,RH2,2003_Tunu_1.dat,17301
+Tunu-N,RH2,C-level (station file),448
+Tunu-N,VW1,CR1000,101793
+Tunu-N,VW1,2011_Tunu-N 2011.dat,31461
+Tunu-N,VW1,C-level (station file),23557
+Tunu-N,VW1,C-level (Jason file),17893
+Tunu-N,VW1,2003_Tunu_1.dat,17301
+Tunu-N,VW1,1998_TUNU.DAT,17263
+Tunu-N,VW1,1999_AWSTUN99.DAT,8807
+Tunu-N,VW1,1996_TUNU.DAT,308
+Tunu-N,VW2,CR1000,101793
+Tunu-N,VW2,2011_Tunu-N 2011.dat,31462
+Tunu-N,VW2,2008_tunu08.dat,23612
+Tunu-N,VW2,2001_TUNUN01.DAT,18000
+Tunu-N,VW2,2003_Tunu_1.dat,17301
+Tunu-N,VW2,1998_TUNU.DAT,17263
+Tunu-N,VW2,1999_AWSTUN99.DAT,8807
+Tunu-N,VW2,1996_TUNU.DAT,308
+Tunu-N,VW2,C-level (station file),211
+Tunu-N,VW2,C-level (Jason file),3
+Tunu-N,DW1,CR1000,101793
+Tunu-N,DW1,2011_Tunu-N 2011.dat,30540
+Tunu-N,DW1,2008_tunu08.dat,23613
+Tunu-N,DW1,2001_TUNUN01.DAT,18000
+Tunu-N,DW1,2003_Tunu_1.dat,17301
+Tunu-N,DW1,1998_TUNU.DAT,17263
+Tunu-N,DW1,C-level (Jason file),8581
+Tunu-N,DW1,C-level (station file),1115
+Tunu-N,DW1,1996_TUNU.DAT,308
+Tunu-N,DW2,CR1000,101793
+Tunu-N,DW2,2011_Tunu-N 2011.dat,30540
+Tunu-N,DW2,2008_tunu08.dat,23613
+Tunu-N,DW2,2001_TUNUN01.DAT,18000
+Tunu-N,DW2,2003_Tunu_1.dat,17301
+Tunu-N,DW2,1998_TUNU.DAT,17263
+Tunu-N,DW2,C-level (Jason file),8723
+Tunu-N,DW2,C-level (station file),938
+Tunu-N,DW2,1996_TUNU.DAT,307
+Tunu-N,P,CR1000,101792
+Tunu-N,P,C-level (Jason file),44379
+Tunu-N,P,2011_Tunu-N 2011.dat,30540
+Tunu-N,P,2008_tunu08.dat,23613
+Tunu-N,P,2003_Tunu_1.dat,17301
+Tunu-N,P,C-level (station file),1408
+Tunu-N,HW1,CR1000,101044
+Tunu-N,HW1,C-level (station file),66032
+Tunu-N,HW1,C-level (Jason file),50715
+Tunu-N,HW2,CR1000,82779
+Tunu-N,HW2,C-level (station file),66032
+Tunu-N,HW2,C-level (Jason file),50715
+Tunu-N,V,CR1000,101793
+Tunu-N,V,2011_Tunu-N 2011.dat,30540
+Tunu-N,V,C-level (Jason file),26811
+Tunu-N,V,2008_tunu08.dat,23612
+Tunu-N,V,2003_Tunu_1.dat,17301
+Tunu-N,V,1998_TUNU.DAT,17263
+Tunu-N,V,C-level (station file),1140
+Tunu-N,V,1996_TUNU.DAT,307
+Tunu-N,TA5,1998_TUNU.DAT,16433
+Tunu-N,TA5,1996_TUNU.DAT,307
+Tunu-N,TS1,2011_Tunu-N 2011.dat,27591
+Tunu-N,TS1,2008_tunu08.dat,21256
+Tunu-N,TS1,C-level (Jason file),19129
+Tunu-N,TS1,2003_Tunu_1.dat,16844
+Tunu-N,TS1,1998_TUNU.DAT,16433
+Tunu-N,TS1,C-level (station file),9186
+Tunu-N,TS1,1999_AWSTUN99.DAT,8536
+Tunu-N,TS1,1996_TUNU.DAT,307
+Tunu-N,TS2,2011_Tunu-N 2011.dat,30463
+Tunu-N,TS2,2008_tunu08.dat,22785
+Tunu-N,TS2,C-level (Jason file),19757
+Tunu-N,TS2,1998_TUNU.DAT,16433
+Tunu-N,TS2,2003_Tunu_1.dat,14897
+Tunu-N,TS2,1999_AWSTUN99.DAT,8536
+Tunu-N,TS2,C-level (station file),8072
+Tunu-N,TS2,1996_TUNU.DAT,307
+Tunu-N,TS3,2011_Tunu-N 2011.dat,30463
+Tunu-N,TS3,2008_tunu08.dat,23608
+Tunu-N,TS3,C-level (Jason file),19102
+Tunu-N,TS3,2003_Tunu_1.dat,17299
+Tunu-N,TS3,1998_TUNU.DAT,16433
+Tunu-N,TS3,1999_AWSTUN99.DAT,8536
+Tunu-N,TS3,C-level (station file),5502
+Tunu-N,TS3,1996_TUNU.DAT,307
+Tunu-N,TS4,2011_Tunu-N 2011.dat,30462
+Tunu-N,TS4,2008_tunu08.dat,23610
+Tunu-N,TS4,C-level (Jason file),19102
+Tunu-N,TS4,2003_Tunu_1.dat,17299
+Tunu-N,TS4,1998_TUNU.DAT,16433
+Tunu-N,TS4,1999_AWSTUN99.DAT,8536
+Tunu-N,TS4,C-level (station file),5501
+Tunu-N,TS4,1996_TUNU.DAT,307
+Tunu-N,TS5,2011_Tunu-N 2011.dat,30462
+Tunu-N,TS5,2008_tunu08.dat,23607
+Tunu-N,TS5,C-level (Jason file),19102
+Tunu-N,TS5,2003_Tunu_1.dat,17299
+Tunu-N,TS5,1998_TUNU.DAT,16433
+Tunu-N,TS5,1999_AWSTUN99.DAT,8536
+Tunu-N,TS5,C-level (station file),5504
+Tunu-N,TS5,1996_TUNU.DAT,307
+Tunu-N,TS6,2011_Tunu-N 2011.dat,30462
+Tunu-N,TS6,2008_tunu08.dat,23609
+Tunu-N,TS6,C-level (Jason file),19102
+Tunu-N,TS6,2003_Tunu_1.dat,17299
+Tunu-N,TS6,1998_TUNU.DAT,16433
+Tunu-N,TS6,1999_AWSTUN99.DAT,8536
+Tunu-N,TS6,C-level (station file),5502
+Tunu-N,TS6,1996_TUNU.DAT,307
+Tunu-N,TS7,2011_Tunu-N 2011.dat,30462
+Tunu-N,TS7,2008_tunu08.dat,23608
+Tunu-N,TS7,C-level (Jason file),19579
+Tunu-N,TS7,1998_TUNU.DAT,16433
+Tunu-N,TS7,2003_Tunu_1.dat,10786
+Tunu-N,TS7,1999_AWSTUN99.DAT,8536
+Tunu-N,TS7,C-level (station file),6228
+Tunu-N,TS7,1996_TUNU.DAT,307
+Tunu-N,TS8,C-level (Jason file),19525
+Tunu-N,TS8,1998_TUNU.DAT,16433
+Tunu-N,TS8,2008_tunu08.dat,15353
+Tunu-N,TS8,2011_Tunu-N 2011.dat,13498
+Tunu-N,TS8,2003_Tunu_1.dat,11681
+Tunu-N,TS8,1999_AWSTUN99.DAT,8536
+Tunu-N,TS8,C-level (station file),6175
+Tunu-N,TS8,1996_TUNU.DAT,307
+Tunu-N,TS9,2008_tunu08.dat,23610
+Tunu-N,TS9,C-level (Jason file),19102
+Tunu-N,TS9,2003_Tunu_1.dat,17299
+Tunu-N,TS9,1998_TUNU.DAT,16433
+Tunu-N,TS9,2011_Tunu-N 2011.dat,8985
+Tunu-N,TS9,1999_AWSTUN99.DAT,8536
+Tunu-N,TS9,C-level (station file),2140
+Tunu-N,TS9,1996_TUNU.DAT,307
+Tunu-N,TS10,2011_Tunu-N 2011.dat,30461
+Tunu-N,TS10,2008_tunu08.dat,23609
+Tunu-N,TS10,C-level (Jason file),19101
+Tunu-N,TS10,2003_Tunu_1.dat,17299
+Tunu-N,TS10,1998_TUNU.DAT,16433
+Tunu-N,TS10,1999_AWSTUN99.DAT,8536
+Tunu-N,TS10,C-level (station file),5503
+Tunu-N,TS10,1996_TUNU.DAT,308
+Tunu-N,HS1,C-level (station file),63728
+Tunu-N,HS1,C-level (Jason file),50706
+Tunu-N,HS2,C-level (Jason file),50690
+Tunu-N,HS2,C-level (station file),48491
+DYE-2,ISWR,CR1000,111373
+DYE-2,ISWR,C-level (station file),15542
+DYE-2,ISWR,2000_AWSDY200.DAT,9357
+DYE-2,ISWR,2001_AWSDY201.DAT,9325
+DYE-2,ISWR,2009_Dye2_09.dat,9068
+DYE-2,ISWR,2008_Dye-II 08.dat,8980
+DYE-2,ISWR,1999_AWSDY299.DAT,8566
+DYE-2,ISWR,2003_AWSDY203.DAT,8499
+DYE-2,ISWR,2007_dye_2.dat,8469
+DYE-2,ISWR,2006_dye2.dat,8303
+DYE-2,ISWR,1998_DY2_97-8.DAT,7868
+DYE-2,ISWR,1997_AWSDY297.DAT,6988
+DYE-2,ISWR,2005_dye2.dat,6357
+DYE-2,ISWR,C-level (Jason file),1999
+DYE-2,ISWR,2002_DYE-2.DAT,1357
+DYE-2,OSWR,CR1000,111371
+DYE-2,OSWR,C-level (station file),13959
+DYE-2,OSWR,2005_dye2.dat,9558
+DYE-2,OSWR,2000_AWSDY200.DAT,9357
+DYE-2,OSWR,2001_AWSDY201.DAT,9325
+DYE-2,OSWR,2009_Dye2_09.dat,9067
+DYE-2,OSWR,2008_Dye-II 08.dat,8981
+DYE-2,OSWR,1999_AWSDY299.DAT,8566
+DYE-2,OSWR,2003_AWSDY203.DAT,8499
+DYE-2,OSWR,2007_dye_2.dat,8469
+DYE-2,OSWR,2006_dye2.dat,8304
+DYE-2,OSWR,1998_DY2_97-8.DAT,7868
+DYE-2,OSWR,1997_AWSDY297.DAT,6988
+DYE-2,OSWR,C-level (Jason file),1999
+DYE-2,OSWR,2002_DYE-2.DAT,1357
+DYE-2,NR,CR1000,111720
+DYE-2,NR,C-level (station file),15155
+DYE-2,NR,2005_dye2.dat,9601
+DYE-2,NR,2000_AWSDY200.DAT,9357
+DYE-2,NR,2001_AWSDY201.DAT,9325
+DYE-2,NR,2009_Dye2_09.dat,9069
+DYE-2,NR,2008_Dye-II 08.dat,8981
+DYE-2,NR,1999_AWSDY299.DAT,8566
+DYE-2,NR,2003_AWSDY203.DAT,8499
+DYE-2,NR,2007_dye_2.dat,8469
+DYE-2,NR,2006_dye2.dat,8304
+DYE-2,NR,1998_DY2_97-8.DAT,7872
+DYE-2,NR,1997_AWSDY297.DAT,6988
+DYE-2,NR,C-level (Jason file),1996
+DYE-2,NR,2002_DYE-2.DAT,1357
+DYE-2,TA1,CR1000,111270
+DYE-2,TA1,C-level (station file),15180
+DYE-2,TA1,2005_dye2.dat,9598
+DYE-2,TA1,2000_AWSDY200.DAT,9339
+DYE-2,TA1,2001_AWSDY201.DAT,9325
+DYE-2,TA1,2009_Dye2_09.dat,9065
+DYE-2,TA1,2008_Dye-II 08.dat,8979
+DYE-2,TA1,1999_AWSDY299.DAT,8560
+DYE-2,TA1,2003_AWSDY203.DAT,8478
+DYE-2,TA1,2007_dye_2.dat,8469
+DYE-2,TA1,2006_dye2.dat,8303
+DYE-2,TA1,C-level (Jason file),8072
+DYE-2,TA1,1998_DY2_97-8.DAT,7806
+DYE-2,TA1,2002_DYE-2.DAT,1357
+DYE-2,TA2,CR1000,111275
+DYE-2,TA2,C-level (station file),15172
+DYE-2,TA2,2005_dye2.dat,9599
+DYE-2,TA2,2000_AWSDY200.DAT,9341
+DYE-2,TA2,2001_AWSDY201.DAT,9324
+DYE-2,TA2,2009_Dye2_09.dat,9065
+DYE-2,TA2,2008_Dye-II 08.dat,8979
+DYE-2,TA2,1999_AWSDY299.DAT,8564
+DYE-2,TA2,2003_AWSDY203.DAT,8482
+DYE-2,TA2,2007_dye_2.dat,8469
+DYE-2,TA2,2006_dye2.dat,8302
+DYE-2,TA2,C-level (Jason file),8066
+DYE-2,TA2,1998_DY2_97-8.DAT,7807
+DYE-2,TA2,2002_DYE-2.DAT,1357
+DYE-2,TA3,CR1000,112130
+DYE-2,TA3,C-level (station file),15136
+DYE-2,TA3,2005_dye2.dat,9601
+DYE-2,TA3,2000_AWSDY200.DAT,9357
+DYE-2,TA3,2001_AWSDY201.DAT,9325
+DYE-2,TA3,2009_Dye2_09.dat,9069
+DYE-2,TA3,2008_Dye-II 08.dat,8981
+DYE-2,TA3,1999_AWSDY299.DAT,8566
+DYE-2,TA3,2003_AWSDY203.DAT,8499
+DYE-2,TA3,2007_dye_2.dat,8469
+DYE-2,TA3,2006_dye2.dat,8304
+DYE-2,TA3,1998_DY2_97-8.DAT,7872
+DYE-2,TA3,1997_AWSDY297.DAT,6987
+DYE-2,TA3,C-level (Jason file),1997
+DYE-2,TA3,2002_DYE-2.DAT,1357
+DYE-2,TA4,CR1000,112134
+DYE-2,TA4,C-level (station file),15141
+DYE-2,TA4,2005_dye2.dat,9601
+DYE-2,TA4,2000_AWSDY200.DAT,9357
+DYE-2,TA4,2001_AWSDY201.DAT,9325
+DYE-2,TA4,2009_Dye2_09.dat,9069
+DYE-2,TA4,2008_Dye-II 08.dat,8981
+DYE-2,TA4,1999_AWSDY299.DAT,8566
+DYE-2,TA4,2003_AWSDY203.DAT,8499
+DYE-2,TA4,2007_dye_2.dat,8469
+DYE-2,TA4,2006_dye2.dat,8304
+DYE-2,TA4,1998_DY2_97-8.DAT,7872
+DYE-2,TA4,1997_AWSDY297.DAT,6987
+DYE-2,TA4,C-level (Jason file),1997
+DYE-2,TA4,2002_DYE-2.DAT,1357
+DYE-2,RH1,CR1000,111957
+DYE-2,RH1,C-level (Jason file),22770
+DYE-2,RH1,C-level (station file),17405
+DYE-2,RH1,2001_AWSDY201.DAT,9325
+DYE-2,RH1,2005_dye2.dat,9201
+DYE-2,RH1,2009_Dye2_09.dat,8691
+DYE-2,RH1,2008_Dye-II 08.dat,8607
+DYE-2,RH1,2003_AWSDY203.DAT,8499
+DYE-2,RH1,2007_dye_2.dat,8116
+DYE-2,RH1,2006_dye2.dat,7958
+DYE-2,RH1,1997_AWSDY297.DAT,6988
+DYE-2,RH1,2002_DYE-2.DAT,1357
+DYE-2,RH2,CR1000,112129
+DYE-2,RH2,C-level (Jason file),27765
+DYE-2,RH2,C-level (station file),16981
+DYE-2,RH2,2001_AWSDY201.DAT,9325
+DYE-2,RH2,2005_dye2.dat,9200
+DYE-2,RH2,2009_Dye2_09.dat,8691
+DYE-2,RH2,2008_Dye-II 08.dat,8607
+DYE-2,RH2,2003_AWSDY203.DAT,8499
+DYE-2,RH2,2007_dye_2.dat,8116
+DYE-2,RH2,2006_dye2.dat,7958
+DYE-2,RH2,1997_AWSDY297.DAT,6988
+DYE-2,RH2,2002_DYE-2.DAT,1357
+DYE-2,VW1,CR1000,112139
+DYE-2,VW1,C-level (station file),14377
+DYE-2,VW1,2005_dye2.dat,9601
+DYE-2,VW1,2000_AWSDY200.DAT,9357
+DYE-2,VW1,2001_AWSDY201.DAT,9325
+DYE-2,VW1,2009_Dye2_09.dat,9069
+DYE-2,VW1,2008_Dye-II 08.dat,8981
+DYE-2,VW1,1999_AWSDY299.DAT,8566
+DYE-2,VW1,2003_AWSDY203.DAT,8499
+DYE-2,VW1,2007_dye_2.dat,8469
+DYE-2,VW1,2006_dye2.dat,8304
+DYE-2,VW1,1998_DY2_97-8.DAT,7872
+DYE-2,VW1,1997_AWSDY297.DAT,6988
+DYE-2,VW1,C-level (Jason file),1994
+DYE-2,VW1,2002_DYE-2.DAT,1357
+DYE-2,VW2,CR1000,112139
+DYE-2,VW2,C-level (station file),14377
+DYE-2,VW2,2005_dye2.dat,9601
+DYE-2,VW2,2000_AWSDY200.DAT,9357
+DYE-2,VW2,2001_AWSDY201.DAT,9325
+DYE-2,VW2,2009_Dye2_09.dat,9069
+DYE-2,VW2,2008_Dye-II 08.dat,8981
+DYE-2,VW2,1999_AWSDY299.DAT,8566
+DYE-2,VW2,2003_AWSDY203.DAT,8499
+DYE-2,VW2,2007_dye_2.dat,8469
+DYE-2,VW2,2006_dye2.dat,8304
+DYE-2,VW2,1998_DY2_97-8.DAT,7872
+DYE-2,VW2,1997_AWSDY297.DAT,6988
+DYE-2,VW2,C-level (Jason file),1996
+DYE-2,VW2,2002_DYE-2.DAT,1357
+DYE-2,DW1,CR1000,112129
+DYE-2,DW1,C-level (station file),13716
+DYE-2,DW1,2005_dye2.dat,9601
+DYE-2,DW1,2000_AWSDY200.DAT,9357
+DYE-2,DW1,2001_AWSDY201.DAT,9325
+DYE-2,DW1,2009_Dye2_09.dat,9069
+DYE-2,DW1,2008_Dye-II 08.dat,8981
+DYE-2,DW1,1999_AWSDY299.DAT,8565
+DYE-2,DW1,2003_AWSDY203.DAT,8499
+DYE-2,DW1,2007_dye_2.dat,8469
+DYE-2,DW1,2006_dye2.dat,8304
+DYE-2,DW1,1998_DY2_97-8.DAT,7872
+DYE-2,DW1,1997_AWSDY297.DAT,6988
+DYE-2,DW1,2002_DYE-2.DAT,1357
+DYE-2,DW1,C-level (Jason file),15
+DYE-2,DW2,CR1000,112139
+DYE-2,DW2,C-level (station file),14284
+DYE-2,DW2,2005_dye2.dat,9601
+DYE-2,DW2,2000_AWSDY200.DAT,9357
+DYE-2,DW2,2001_AWSDY201.DAT,9325
+DYE-2,DW2,2009_Dye2_09.dat,9069
+DYE-2,DW2,2008_Dye-II 08.dat,8981
+DYE-2,DW2,1999_AWSDY299.DAT,8566
+DYE-2,DW2,2007_dye_2.dat,8469
+DYE-2,DW2,2006_dye2.dat,8304
+DYE-2,DW2,1998_DY2_97-8.DAT,7872
+DYE-2,DW2,1997_AWSDY297.DAT,6987
+DYE-2,DW2,C-level (Jason file),1975
+DYE-2,DW2,2002_DYE-2.DAT,1357
+DYE-2,P,CR1000,112116
+DYE-2,P,C-level (Jason file),11325
+DYE-2,P,2005_dye2.dat,9601
+DYE-2,P,2000_AWSDY200.DAT,9357
+DYE-2,P,2009_Dye2_09.dat,9064
+DYE-2,P,2008_Dye-II 08.dat,8977
+DYE-2,P,1999_AWSDY299.DAT,8566
+DYE-2,P,2003_AWSDY203.DAT,8499
+DYE-2,P,2007_dye_2.dat,8469
+DYE-2,P,2006_dye2.dat,8302
+DYE-2,P,1998_DY2_97-8.DAT,7868
+DYE-2,P,1997_AWSDY297.DAT,6988
+DYE-2,P,C-level (station file),2511
+DYE-2,HW1,CR1000,107037
+DYE-2,HW1,C-level (station file),69405
+DYE-2,HW1,C-level (Jason file),44104
+DYE-2,HW2,CR1000,110615
+DYE-2,HW2,C-level (station file),69407
+DYE-2,HW2,C-level (Jason file),44104
+DYE-2,V,CR1000,112139
+DYE-2,V,C-level (station file),14778
+DYE-2,V,2005_dye2.dat,9601
+DYE-2,V,2000_AWSDY200.DAT,9357
+DYE-2,V,2001_AWSDY201.DAT,9325
+DYE-2,V,2009_Dye2_09.dat,9069
+DYE-2,V,2008_Dye-II 08.dat,8981
+DYE-2,V,1999_AWSDY299.DAT,8566
+DYE-2,V,2003_AWSDY203.DAT,8499
+DYE-2,V,2007_dye_2.dat,8469
+DYE-2,V,2006_dye2.dat,8304
+DYE-2,V,1998_DY2_97-8.DAT,7872
+DYE-2,V,2002_DYE-2.DAT,1357
+DYE-2,V,C-level (Jason file),999
+DYE-2,TA5,CR1000,111354
+DYE-2,TA5,C-level (station file),5
+DYE-2,TS1,CR1000,50153
+DYE-2,TS1,C-level (station file),49315
+DYE-2,TS1,2005_dye2.dat,9600
+DYE-2,TS1,2000_AWSDY200.DAT,9341
+DYE-2,TS1,2009_Dye2_09.dat,9064
+DYE-2,TS1,2001_AWSDY201.DAT,9049
+DYE-2,TS1,2008_Dye-II 08.dat,8979
+DYE-2,TS1,2003_AWSDY203.DAT,8487
+DYE-2,TS1,2007_dye_2.dat,8469
+DYE-2,TS1,2006_dye2.dat,8302
+DYE-2,TS1,1999_AWSDY299.DAT,7452
+DYE-2,TS1,1998_DY2_97-8.DAT,7081
+DYE-2,TS1,1997_AWSDY297.DAT,6969
+DYE-2,TS1,C-level (Jason file),2213
+DYE-2,TS1,2002_DYE-2.DAT,1357
+DYE-2,TS2,C-level (station file),43396
+DYE-2,TS2,CR1000,41687
+DYE-2,TS2,2000_AWSDY200.DAT,9342
+DYE-2,TS2,2009_Dye2_09.dat,9064
+DYE-2,TS2,2008_Dye-II 08.dat,8979
+DYE-2,TS2,1999_AWSDY299.DAT,8565
+DYE-2,TS2,2001_AWSDY201.DAT,8397
+DYE-2,TS2,2005_dye2.dat,7874
+DYE-2,TS2,1998_DY2_97-8.DAT,7807
+DYE-2,TS2,2003_AWSDY203.DAT,7046
+DYE-2,TS2,1997_AWSDY297.DAT,6969
+DYE-2,TS2,2006_dye2.dat,6950
+DYE-2,TS2,2007_dye_2.dat,6027
+DYE-2,TS2,2002_DYE-2.DAT,1336
+DYE-2,TS2,C-level (Jason file),455
+DYE-2,TS3,CR1000,69109
+DYE-2,TS3,C-level (station file),34816
+DYE-2,TS3,2005_dye2.dat,9600
+DYE-2,TS3,2000_AWSDY200.DAT,9342
+DYE-2,TS3,2001_AWSDY201.DAT,9324
+DYE-2,TS3,2009_Dye2_09.dat,9065
+DYE-2,TS3,2008_Dye-II 08.dat,8979
+DYE-2,TS3,1999_AWSDY299.DAT,8565
+DYE-2,TS3,2003_AWSDY203.DAT,8481
+DYE-2,TS3,2007_dye_2.dat,8469
+DYE-2,TS3,2006_dye2.dat,8303
+DYE-2,TS3,1998_DY2_97-8.DAT,7807
+DYE-2,TS3,1997_AWSDY297.DAT,6969
+DYE-2,TS3,2002_DYE-2.DAT,1357
+DYE-2,TS3,C-level (Jason file),98
+DYE-2,TS4,CR1000,46312
+DYE-2,TS4,C-level (station file),38047
+DYE-2,TS4,2005_dye2.dat,9600
+DYE-2,TS4,2000_AWSDY200.DAT,9341
+DYE-2,TS4,2001_AWSDY201.DAT,9323
+DYE-2,TS4,2009_Dye2_09.dat,9064
+DYE-2,TS4,2008_Dye-II 08.dat,8979
+DYE-2,TS4,1999_AWSDY299.DAT,8565
+DYE-2,TS4,2003_AWSDY203.DAT,8480
+DYE-2,TS4,2007_dye_2.dat,8469
+DYE-2,TS4,2006_dye2.dat,8303
+DYE-2,TS4,1998_DY2_97-8.DAT,7807
+DYE-2,TS4,1997_AWSDY297.DAT,6968
+DYE-2,TS4,2002_DYE-2.DAT,1357
+DYE-2,TS4,C-level (Jason file),101
+DYE-2,TS5,C-level (station file),44457
+DYE-2,TS5,CR1000,32539
+DYE-2,TS5,2005_dye2.dat,9600
+DYE-2,TS5,2000_AWSDY200.DAT,9341
+DYE-2,TS5,2001_AWSDY201.DAT,9323
+DYE-2,TS5,2009_Dye2_09.dat,9063
+DYE-2,TS5,2008_Dye-II 08.dat,8979
+DYE-2,TS5,1999_AWSDY299.DAT,8565
+DYE-2,TS5,2003_AWSDY203.DAT,8479
+DYE-2,TS5,2007_dye_2.dat,8469
+DYE-2,TS5,2006_dye2.dat,8303
+DYE-2,TS5,1998_DY2_97-8.DAT,7807
+DYE-2,TS5,1997_AWSDY297.DAT,6969
+DYE-2,TS5,2002_DYE-2.DAT,1357
+DYE-2,TS5,C-level (Jason file),100
+DYE-2,TS6,CR1000,58491
+DYE-2,TS6,C-level (station file),39064
+DYE-2,TS6,2005_dye2.dat,9600
+DYE-2,TS6,2000_AWSDY200.DAT,9341
+DYE-2,TS6,2001_AWSDY201.DAT,9325
+DYE-2,TS6,2009_Dye2_09.dat,9065
+DYE-2,TS6,2008_Dye-II 08.dat,8979
+DYE-2,TS6,1999_AWSDY299.DAT,8565
+DYE-2,TS6,2003_AWSDY203.DAT,8480
+DYE-2,TS6,2007_dye_2.dat,8469
+DYE-2,TS6,2006_dye2.dat,8303
+DYE-2,TS6,1998_DY2_97-8.DAT,7806
+DYE-2,TS6,1997_AWSDY297.DAT,6966
+DYE-2,TS6,2002_DYE-2.DAT,1357
+DYE-2,TS6,C-level (Jason file),101
+DYE-2,TS7,CR1000,51080
+DYE-2,TS7,C-level (station file),39924
+DYE-2,TS7,2005_dye2.dat,9600
+DYE-2,TS7,2000_AWSDY200.DAT,9342
+DYE-2,TS7,2001_AWSDY201.DAT,9325
+DYE-2,TS7,2009_Dye2_09.dat,9064
+DYE-2,TS7,2008_Dye-II 08.dat,8979
+DYE-2,TS7,1999_AWSDY299.DAT,8562
+DYE-2,TS7,2003_AWSDY203.DAT,8481
+DYE-2,TS7,2007_dye_2.dat,8469
+DYE-2,TS7,2006_dye2.dat,8302
+DYE-2,TS7,1998_DY2_97-8.DAT,7807
+DYE-2,TS7,1997_AWSDY297.DAT,6967
+DYE-2,TS7,2002_DYE-2.DAT,1357
+DYE-2,TS7,C-level (Jason file),102
+DYE-2,TS8,CR1000,63321
+DYE-2,TS8,C-level (station file),36302
+DYE-2,TS8,2005_dye2.dat,9600
+DYE-2,TS8,2000_AWSDY200.DAT,9341
+DYE-2,TS8,2001_AWSDY201.DAT,9325
+DYE-2,TS8,2009_Dye2_09.dat,9064
+DYE-2,TS8,2008_Dye-II 08.dat,8979
+DYE-2,TS8,1999_AWSDY299.DAT,8564
+DYE-2,TS8,2003_AWSDY203.DAT,8480
+DYE-2,TS8,2007_dye_2.dat,8469
+DYE-2,TS8,2006_dye2.dat,8302
+DYE-2,TS8,1998_DY2_97-8.DAT,7807
+DYE-2,TS8,1997_AWSDY297.DAT,6967
+DYE-2,TS8,2002_DYE-2.DAT,1357
+DYE-2,TS8,C-level (Jason file),101
+DYE-2,TS9,CR1000,56827
+DYE-2,TS9,C-level (station file),37714
+DYE-2,TS9,2005_dye2.dat,9600
+DYE-2,TS9,2009_Dye2_09.dat,9065
+DYE-2,TS9,2008_Dye-II 08.dat,8979
+DYE-2,TS9,2003_AWSDY203.DAT,8480
+DYE-2,TS9,2007_dye_2.dat,8469
+DYE-2,TS9,2006_dye2.dat,8303
+DYE-2,TS9,1999_AWSDY299.DAT,7447
+DYE-2,TS9,1997_AWSDY297.DAT,6968
+DYE-2,TS9,2000_AWSDY200.DAT,6695
+DYE-2,TS9,C-level (Jason file),6174
+DYE-2,TS9,1998_DY2_97-8.DAT,5396
+DYE-2,TS9,2001_AWSDY201.DAT,2797
+DYE-2,TS9,2002_DYE-2.DAT,1355
+DYE-2,TS10,CR1000,50801
+DYE-2,TS10,C-level (station file),38757
+DYE-2,TS10,2005_dye2.dat,9599
+DYE-2,TS10,2000_AWSDY200.DAT,9340
+DYE-2,TS10,2001_AWSDY201.DAT,9325
+DYE-2,TS10,2009_Dye2_09.dat,9065
+DYE-2,TS10,2008_Dye-II 08.dat,8979
+DYE-2,TS10,2003_AWSDY203.DAT,8479
+DYE-2,TS10,2007_dye_2.dat,8469
+DYE-2,TS10,2006_dye2.dat,8303
+DYE-2,TS10,1999_AWSDY299.DAT,8104
+DYE-2,TS10,1998_DY2_97-8.DAT,7681
+DYE-2,TS10,1997_AWSDY297.DAT,6969
+DYE-2,TS10,2002_DYE-2.DAT,1357
+DYE-2,TS10,C-level (Jason file),686
+DYE-2,HS1,C-level (station file),61269
+DYE-2,HS1,C-level (Jason file),44093
+DYE-2,HS2,C-level (station file),59808
+DYE-2,HS2,C-level (Jason file),44094
+Saddle,ISWR,CR1000,97285
+Saddle,ISWR,2009_Saddle 09.dat,34827
+Saddle,ISWR,2000_AWSSDL00.DAT,9456
+Saddle,ISWR,2001_SADDLE01.DAT,9310
+Saddle,ISWR,2005_saddle-a.dat,8985
+Saddle,ISWR,1999_AWSSDL99.DAT,8715
+Saddle,ISWR,1998_SAD_97-8.DAT,8679
+Saddle,ISWR,2008_saddle 08.dat,8458
+Saddle,ISWR,2002_SADDLE.DAT,8325
+Saddle,ISWR,transmission (station folder),269
+Saddle,ISWR,C-level (station file),7
+Saddle,ISWR,C-level (Jason file),2
+Saddle,OSWR,CR1000,97290
+Saddle,OSWR,2009_Saddle 09.dat,34827
+Saddle,OSWR,2000_AWSSDL00.DAT,9456
+Saddle,OSWR,2001_SADDLE01.DAT,9310
+Saddle,OSWR,2005_saddle-a.dat,8985
+Saddle,OSWR,1999_AWSSDL99.DAT,8715
+Saddle,OSWR,1998_SAD_97-8.DAT,8679
+Saddle,OSWR,2008_saddle 08.dat,8458
+Saddle,OSWR,2002_SADDLE.DAT,8325
+Saddle,OSWR,transmission (station folder),268
+Saddle,OSWR,C-level (station file),3
+Saddle,OSWR,C-level (Jason file),2
+Saddle,NR,CR1000,96996
+Saddle,NR,2009_Saddle 09.dat,34824
+Saddle,NR,2000_AWSSDL00.DAT,9456
+Saddle,NR,2001_SADDLE01.DAT,9310
+Saddle,NR,C-level (station file),8857
+Saddle,NR,1999_AWSSDL99.DAT,8715
+Saddle,NR,1998_SAD_97-8.DAT,8679
+Saddle,NR,2002_SADDLE.DAT,8325
+Saddle,NR,2008_saddle 08.dat,7993
+Saddle,NR,transmission (station folder),269
+Saddle,NR,C-level (Jason file),2
+Saddle,TA1,CR1000,66753
+Saddle,TA1,2009_Saddle 09.dat,34820
+Saddle,TA1,2000_AWSSDL00.DAT,9453
+Saddle,TA1,2001_SADDLE01.DAT,9310
+Saddle,TA1,2005_saddle-a.dat,8985
+Saddle,TA1,1999_AWSSDL99.DAT,8715
+Saddle,TA1,1998_SAD_97-8.DAT,8647
+Saddle,TA1,2008_saddle 08.dat,8438
+Saddle,TA1,2002_SADDLE.DAT,8320
+Saddle,TA1,C-level (station file),5315
+Saddle,TA1,transmission (station folder),944
+Saddle,TA1,C-level (Jason file),8
+Saddle,TA2,CR1000,97265
+Saddle,TA2,2009_Saddle 09.dat,34820
+Saddle,TA2,2000_AWSSDL00.DAT,9453
+Saddle,TA2,2001_SADDLE01.DAT,9310
+Saddle,TA2,2005_saddle-a.dat,8985
+Saddle,TA2,1999_AWSSDL99.DAT,8715
+Saddle,TA2,1998_SAD_97-8.DAT,8647
+Saddle,TA2,2008_saddle 08.dat,8438
+Saddle,TA2,2002_SADDLE.DAT,8320
+Saddle,TA2,transmission (station folder),941
+Saddle,TA2,C-level (station file),56
+Saddle,TA2,C-level (Jason file),42
+Saddle,TA3,CR1000,97291
+Saddle,TA3,2009_Saddle 09.dat,34827
+Saddle,TA3,2000_AWSSDL00.DAT,9456
+Saddle,TA3,2001_SADDLE01.DAT,9310
+Saddle,TA3,2005_saddle-a.dat,8985
+Saddle,TA3,1999_AWSSDL99.DAT,8715
+Saddle,TA3,1998_SAD_97-8.DAT,8679
+Saddle,TA3,2008_saddle 08.dat,8458
+Saddle,TA3,2002_SADDLE.DAT,8325
+Saddle,TA3,transmission (station folder),312
+Saddle,TA3,C-level (Jason file),3
+Saddle,TA3,C-level (station file),2
+Saddle,TA4,CR1000,97291
+Saddle,TA4,2009_Saddle 09.dat,34827
+Saddle,TA4,2000_AWSSDL00.DAT,9456
+Saddle,TA4,2001_SADDLE01.DAT,9310
+Saddle,TA4,2005_saddle-a.dat,8985
+Saddle,TA4,1999_AWSSDL99.DAT,8715
+Saddle,TA4,1998_SAD_97-8.DAT,8679
+Saddle,TA4,2008_saddle 08.dat,8458
+Saddle,TA4,2002_SADDLE.DAT,8325
+Saddle,TA4,transmission (station folder),927
+Saddle,TA4,C-level (Jason file),3
+Saddle,TA4,C-level (station file),2
+Saddle,RH1,CR1000,97291
+Saddle,RH1,2009_Saddle 09.dat,34827
+Saddle,RH1,2000_AWSSDL00.DAT,9456
+Saddle,RH1,2001_SADDLE01.DAT,9310
+Saddle,RH1,2005_saddle-a.dat,8985
+Saddle,RH1,1999_AWSSDL99.DAT,8715
+Saddle,RH1,C-level (Jason file),8682
+Saddle,RH1,2008_saddle 08.dat,8458
+Saddle,RH1,2002_SADDLE.DAT,8325
+Saddle,RH1,transmission (station folder),156
+Saddle,RH1,C-level (station file),2
+Saddle,RH2,CR1000,97291
+Saddle,RH2,2009_Saddle 09.dat,34827
+Saddle,RH2,2000_AWSSDL00.DAT,9456
+Saddle,RH2,2001_SADDLE01.DAT,9310
+Saddle,RH2,2005_saddle-a.dat,8985
+Saddle,RH2,1999_AWSSDL99.DAT,8715
+Saddle,RH2,C-level (Jason file),8682
+Saddle,RH2,2008_saddle 08.dat,8458
+Saddle,RH2,2002_SADDLE.DAT,8325
+Saddle,RH2,transmission (station folder),116
+Saddle,RH2,C-level (station file),2
+Saddle,VW1,CR1000,97291
+Saddle,VW1,2009_Saddle 09.dat,34827
+Saddle,VW1,2000_AWSSDL00.DAT,9456
+Saddle,VW1,2001_SADDLE01.DAT,9310
+Saddle,VW1,2005_saddle-a.dat,8985
+Saddle,VW1,1999_AWSSDL99.DAT,8715
+Saddle,VW1,1998_SAD_97-8.DAT,8679
+Saddle,VW1,2008_saddle 08.dat,8458
+Saddle,VW1,2002_SADDLE.DAT,8325
+Saddle,VW1,transmission (station folder),175
+Saddle,VW1,C-level (Jason file),3
+Saddle,VW2,CR1000,97291
+Saddle,VW2,2009_Saddle 09.dat,34827
+Saddle,VW2,2000_AWSSDL00.DAT,9456
+Saddle,VW2,2001_SADDLE01.DAT,9310
+Saddle,VW2,2005_saddle-a.dat,8985
+Saddle,VW2,1999_AWSSDL99.DAT,8715
+Saddle,VW2,1998_SAD_97-8.DAT,8679
+Saddle,VW2,2008_saddle 08.dat,8458
+Saddle,VW2,2002_SADDLE.DAT,8325
+Saddle,VW2,transmission (station folder),327
+Saddle,VW2,C-level (Jason file),3
+Saddle,DW1,CR1000,97291
+Saddle,DW1,2009_Saddle 09.dat,34827
+Saddle,DW1,2000_AWSSDL00.DAT,9456
+Saddle,DW1,2001_SADDLE01.DAT,9310
+Saddle,DW1,2005_saddle-a.dat,8985
+Saddle,DW1,1999_AWSSDL99.DAT,8715
+Saddle,DW1,1998_SAD_97-8.DAT,8679
+Saddle,DW1,2008_saddle 08.dat,8458
+Saddle,DW1,2002_SADDLE.DAT,8325
+Saddle,DW1,transmission (station folder),957
+Saddle,DW2,CR1000,97291
+Saddle,DW2,2009_Saddle 09.dat,34827
+Saddle,DW2,2000_AWSSDL00.DAT,9456
+Saddle,DW2,2001_SADDLE01.DAT,9310
+Saddle,DW2,2005_saddle-a.dat,8985
+Saddle,DW2,1999_AWSSDL99.DAT,8715
+Saddle,DW2,2008_saddle 08.dat,8458
+Saddle,DW2,2002_SADDLE.DAT,8325
+Saddle,DW2,C-level (Jason file),7223
+Saddle,DW2,transmission (station folder),957
+Saddle,P,CR1000,97291
+Saddle,P,2009_Saddle 09.dat,34827
+Saddle,P,2000_AWSSDL00.DAT,9456
+Saddle,P,2001_SADDLE01.DAT,9310
+Saddle,P,2005_saddle-a.dat,8985
+Saddle,P,1999_AWSSDL99.DAT,8715
+Saddle,P,2008_saddle 08.dat,8458
+Saddle,P,2002_SADDLE.DAT,8325
+Saddle,P,transmission (station folder),940
+Saddle,P,C-level (station file),2
+Saddle,P,C-level (Jason file),1
+Saddle,HW1,CR1000,61301
+Saddle,HW1,C-level (station file),55314
+Saddle,HW1,C-level (Jason file),41020
+Saddle,HW2,CR1000,82244
+Saddle,HW2,C-level (station file),55723
+Saddle,HW2,C-level (Jason file),41020
+Saddle,V,CR1000,97291
+Saddle,V,2009_Saddle 09.dat,34827
+Saddle,V,2000_AWSSDL00.DAT,9456
+Saddle,V,2001_SADDLE01.DAT,9310
+Saddle,V,2005_saddle-a.dat,8985
+Saddle,V,1999_AWSSDL99.DAT,8715
+Saddle,V,1998_SAD_97-8.DAT,8679
+Saddle,V,2008_saddle 08.dat,8458
+Saddle,V,2002_SADDLE.DAT,8325
+Saddle,V,transmission (station folder),950
+Saddle,V,C-level (Jason file),3
+Saddle,TA5,CR1000,97290
+Saddle,TA5,2000_AWSSDL00.DAT,9456
+Saddle,TA5,1999_AWSSDL99.DAT,8715
+Saddle,TA5,transmission (station folder),265
+Saddle,TS1,CR1000,45352
+Saddle,TS1,2009_Saddle 09.dat,34824
+Saddle,TS1,C-level (station file),17029
+Saddle,TS1,2000_AWSSDL00.DAT,9453
+Saddle,TS1,2001_SADDLE01.DAT,9310
+Saddle,TS1,2005_saddle-a.dat,8985
+Saddle,TS1,1999_AWSSDL99.DAT,8714
+Saddle,TS1,1998_SAD_97-8.DAT,8647
+Saddle,TS1,2008_saddle 08.dat,8437
+Saddle,TS1,2002_SADDLE.DAT,8314
+Saddle,TS1,C-level (Jason file),46
+Saddle,TS2,CR1000,71904
+Saddle,TS2,2009_Saddle 09.dat,34822
+Saddle,TS2,2000_AWSSDL00.DAT,9453
+Saddle,TS2,2001_SADDLE01.DAT,9310
+Saddle,TS2,2005_saddle-a.dat,8985
+Saddle,TS2,1999_AWSSDL99.DAT,8715
+Saddle,TS2,1998_SAD_97-8.DAT,8647
+Saddle,TS2,2008_saddle 08.dat,8437
+Saddle,TS2,2002_SADDLE.DAT,8318
+Saddle,TS2,C-level (station file),6157
+Saddle,TS2,C-level (Jason file),43
+Saddle,TS3,CR1000,76176
+Saddle,TS3,2009_Saddle 09.dat,34822
+Saddle,TS3,2000_AWSSDL00.DAT,9453
+Saddle,TS3,2001_SADDLE01.DAT,9310
+Saddle,TS3,2005_saddle-a.dat,8985
+Saddle,TS3,1999_AWSSDL99.DAT,8715
+Saddle,TS3,1998_SAD_97-8.DAT,8647
+Saddle,TS3,2008_saddle 08.dat,8435
+Saddle,TS3,2002_SADDLE.DAT,8318
+Saddle,TS3,C-level (station file),6947
+Saddle,TS3,C-level (Jason file),42
+Saddle,TS4,CR1000,37039
+Saddle,TS4,2009_Saddle 09.dat,34823
+Saddle,TS4,C-level (station file),10470
+Saddle,TS4,2000_AWSSDL00.DAT,9453
+Saddle,TS4,2001_SADDLE01.DAT,9310
+Saddle,TS4,2005_saddle-a.dat,8985
+Saddle,TS4,1999_AWSSDL99.DAT,8715
+Saddle,TS4,1998_SAD_97-8.DAT,8647
+Saddle,TS4,2008_saddle 08.dat,8438
+Saddle,TS4,2002_SADDLE.DAT,8320
+Saddle,TS4,C-level (Jason file),41
+Saddle,TS5,2009_Saddle 09.dat,34825
+Saddle,TS5,CR1000,24710
+Saddle,TS5,C-level (station file),13944
+Saddle,TS5,2000_AWSSDL00.DAT,9453
+Saddle,TS5,2001_SADDLE01.DAT,9310
+Saddle,TS5,2005_saddle-a.dat,8985
+Saddle,TS5,1999_AWSSDL99.DAT,8715
+Saddle,TS5,1998_SAD_97-8.DAT,8647
+Saddle,TS5,2008_saddle 08.dat,8438
+Saddle,TS5,2002_SADDLE.DAT,8320
+Saddle,TS5,C-level (Jason file),41
+Saddle,TS6,2009_Saddle 09.dat,34824
+Saddle,TS6,CR1000,16240
+Saddle,TS6,C-level (station file),9696
+Saddle,TS6,2000_AWSSDL00.DAT,9453
+Saddle,TS6,2001_SADDLE01.DAT,9310
+Saddle,TS6,2005_saddle-a.dat,8985
+Saddle,TS6,1999_AWSSDL99.DAT,8715
+Saddle,TS6,1998_SAD_97-8.DAT,8647
+Saddle,TS6,2008_saddle 08.dat,8438
+Saddle,TS6,2002_SADDLE.DAT,8320
+Saddle,TS6,C-level (Jason file),41
+Saddle,TS7,CR1000,48635
+Saddle,TS7,2009_Saddle 09.dat,34823
+Saddle,TS7,C-level (station file),12063
+Saddle,TS7,2000_AWSSDL00.DAT,9453
+Saddle,TS7,2001_SADDLE01.DAT,9310
+Saddle,TS7,2005_saddle-a.dat,8985
+Saddle,TS7,1999_AWSSDL99.DAT,8715
+Saddle,TS7,1998_SAD_97-8.DAT,8647
+Saddle,TS7,2008_saddle 08.dat,8438
+Saddle,TS7,2002_SADDLE.DAT,8320
+Saddle,TS7,C-level (Jason file),41
+Saddle,TS8,CR1000,62786
+Saddle,TS8,2009_Saddle 09.dat,34824
+Saddle,TS8,C-level (station file),11607
+Saddle,TS8,2000_AWSSDL00.DAT,9453
+Saddle,TS8,2001_SADDLE01.DAT,9310
+Saddle,TS8,2005_saddle-a.dat,8985
+Saddle,TS8,1999_AWSSDL99.DAT,8715
+Saddle,TS8,1998_SAD_97-8.DAT,8647
+Saddle,TS8,2008_saddle 08.dat,8438
+Saddle,TS8,2002_SADDLE.DAT,8320
+Saddle,TS8,C-level (Jason file),41
+Saddle,TS9,CR1000,51454
+Saddle,TS9,C-level (station file),17088
+Saddle,TS9,2009_Saddle 09.dat,11635
+Saddle,TS9,2000_AWSSDL00.DAT,9453
+Saddle,TS9,2001_SADDLE01.DAT,9310
+Saddle,TS9,2005_saddle-a.dat,8985
+Saddle,TS9,1999_AWSSDL99.DAT,8715
+Saddle,TS9,1998_SAD_97-8.DAT,8647
+Saddle,TS9,2008_saddle 08.dat,8437
+Saddle,TS9,2002_SADDLE.DAT,8320
+Saddle,TS9,C-level (Jason file),41
+Saddle,TS10,2009_Saddle 09.dat,34822
+Saddle,TS10,CR1000,34571
+Saddle,TS10,C-level (station file),19798
+Saddle,TS10,2000_AWSSDL00.DAT,9453
+Saddle,TS10,2001_SADDLE01.DAT,9310
+Saddle,TS10,2005_saddle-a.dat,8985
+Saddle,TS10,1999_AWSSDL99.DAT,8715
+Saddle,TS10,2008_saddle 08.dat,8438
+Saddle,TS10,2002_SADDLE.DAT,8320
+Saddle,TS10,1998_SAD_97-8.DAT,7503
+Saddle,TS10,C-level (Jason file),1183
+Saddle,HS1,C-level (station file),47506
+Saddle,HS1,C-level (Jason file),37245
+Saddle,HS2,C-level (station file),52001
+Saddle,HS2,C-level (Jason file),41012
+South Dome,ISWR,CR1000,103506
+South Dome,ISWR,2001_SDOME01.DAT,18598
+South Dome,ISWR,2009_s_dome_09.dat,13341
+South Dome,ISWR,2005_south-dome05a.dat,10578
+South Dome,ISWR,1999_AWSSDM99.DAT,8876
+South Dome,ISWR,1998_SDOM97-8.DAT,8573
+South Dome,ISWR,2009_11new.dat,7077
+South Dome,ISWR,C-level (Jason file),5021
+South Dome,ISWR,C-level (station file),4635
+South Dome,OSWR,CR1000,103510
+South Dome,OSWR,2001_SDOME01.DAT,18598
+South Dome,OSWR,2009_s_dome_09.dat,18558
+South Dome,OSWR,2005_south-dome05a.dat,11715
+South Dome,OSWR,2009_11new.dat,9615
+South Dome,OSWR,1999_AWSSDM99.DAT,8876
+South Dome,OSWR,1998_SDOM97-8.DAT,8573
+South Dome,OSWR,C-level (Jason file),5008
+South Dome,OSWR,C-level (station file),2173
+South Dome,NR,CR1000,103439
+South Dome,NR,2009_s_dome_09.dat,19940
+South Dome,NR,2001_SDOME01.DAT,18598
+South Dome,NR,2005_south-dome05a.dat,13004
+South Dome,NR,2009_11new.dat,10310
+South Dome,NR,1999_AWSSDM99.DAT,8876
+South Dome,NR,1998_SDOM97-8.DAT,8573
+South Dome,NR,C-level (Jason file),4807
+South Dome,NR,C-level (station file),62
+South Dome,TA1,CR1000,103423
+South Dome,TA1,2009_s_dome_09.dat,19939
+South Dome,TA1,2001_SDOME01.DAT,18598
+South Dome,TA1,2005_south-dome05a.dat,13003
+South Dome,TA1,2009_11new.dat,10309
+South Dome,TA1,1999_AWSSDM99.DAT,8871
+South Dome,TA1,1998_SDOM97-8.DAT,8573
+South Dome,TA1,C-level (Jason file),5025
+South Dome,TA1,C-level (station file),875
+South Dome,TA2,CR1000,98367
+South Dome,TA2,2009_s_dome_09.dat,19939
+South Dome,TA2,2001_SDOME01.DAT,18598
+South Dome,TA2,2005_south-dome05a.dat,13003
+South Dome,TA2,2009_11new.dat,10309
+South Dome,TA2,1999_AWSSDM99.DAT,8869
+South Dome,TA2,1998_SDOM97-8.DAT,8573
+South Dome,TA2,C-level (Jason file),5072
+South Dome,TA2,C-level (station file),2198
+South Dome,TA3,CR1000,104453
+South Dome,TA3,2009_s_dome_09.dat,19940
+South Dome,TA3,2001_SDOME01.DAT,18598
+South Dome,TA3,2005_south-dome05a.dat,13004
+South Dome,TA3,2009_11new.dat,10310
+South Dome,TA3,1999_AWSSDM99.DAT,8876
+South Dome,TA3,1998_SDOM97-8.DAT,8573
+South Dome,TA3,C-level (Jason file),4932
+South Dome,TA3,C-level (station file),761
+South Dome,TA4,CR1000,104453
+South Dome,TA4,2009_s_dome_09.dat,19940
+South Dome,TA4,2001_SDOME01.DAT,18598
+South Dome,TA4,2005_south-dome05a.dat,13004
+South Dome,TA4,2009_11new.dat,10310
+South Dome,TA4,1999_AWSSDM99.DAT,8876
+South Dome,TA4,1998_SDOM97-8.DAT,8573
+South Dome,TA4,C-level (Jason file),4923
+South Dome,TA4,C-level (station file),123
+South Dome,RH1,CR1000,104453
+South Dome,RH1,2009_s_dome_09.dat,19112
+South Dome,RH1,2001_SDOME01.DAT,18598
+South Dome,RH1,C-level (Jason file),13474
+South Dome,RH1,2005_south-dome05a.dat,12462
+South Dome,RH1,2009_11new.dat,9880
+South Dome,RH1,1999_AWSSDM99.DAT,8876
+South Dome,RH1,C-level (station file),2538
+South Dome,RH2,CR1000,104349
+South Dome,RH2,2009_s_dome_09.dat,19113
+South Dome,RH2,2001_SDOME01.DAT,18597
+South Dome,RH2,2005_south-dome05a.dat,12462
+South Dome,RH2,2009_11new.dat,9880
+South Dome,RH2,1999_AWSSDM99.DAT,8875
+South Dome,RH2,C-level (Jason file),5447
+South Dome,RH2,C-level (station file),2406
+South Dome,VW1,CR1000,104453
+South Dome,VW1,2009_s_dome_09.dat,19939
+South Dome,VW1,2001_SDOME01.DAT,18598
+South Dome,VW1,2005_south-dome05a.dat,13004
+South Dome,VW1,2009_11new.dat,10310
+South Dome,VW1,1999_AWSSDM99.DAT,8876
+South Dome,VW1,1998_SDOM97-8.DAT,8573
+South Dome,VW1,C-level (Jason file),4841
+South Dome,VW1,C-level (station file),63
+South Dome,VW2,CR1000,104453
+South Dome,VW2,2009_s_dome_09.dat,19940
+South Dome,VW2,2001_SDOME01.DAT,18598
+South Dome,VW2,2005_south-dome05a.dat,13004
+South Dome,VW2,2009_11new.dat,10310
+South Dome,VW2,1999_AWSSDM99.DAT,8876
+South Dome,VW2,1998_SDOM97-8.DAT,8573
+South Dome,VW2,C-level (Jason file),4839
+South Dome,VW2,C-level (station file),63
+South Dome,DW1,CR1000,104453
+South Dome,DW1,2009_s_dome_09.dat,19940
+South Dome,DW1,2001_SDOME01.DAT,18598
+South Dome,DW1,2005_south-dome05a.dat,13004
+South Dome,DW1,2009_11new.dat,10310
+South Dome,DW1,1999_AWSSDM99.DAT,8876
+South Dome,DW1,1998_SDOM97-8.DAT,8573
+South Dome,DW1,C-level (Jason file),4709
+South Dome,DW1,C-level (station file),63
+South Dome,DW2,CR1000,104441
+South Dome,DW2,2001_SDOME01.DAT,18598
+South Dome,DW2,1999_AWSSDM99.DAT,8876
+South Dome,DW2,1998_SDOM97-8.DAT,8573
+South Dome,DW2,C-level (Jason file),1956
+South Dome,DW2,C-level (station file),62
+South Dome,P,CR1000,104453
+South Dome,P,C-level (station file),43120
+South Dome,P,C-level (Jason file),32438
+South Dome,HW1,CR1000,103764
+South Dome,HW1,C-level (Jason file),41117
+South Dome,HW1,C-level (station file),25190
+South Dome,HW2,CR1000,71677
+South Dome,HW2,C-level (Jason file),41117
+South Dome,HW2,C-level (station file),25190
+South Dome,V,CR1000,104445
+South Dome,V,2009_s_dome_09.dat,19939
+South Dome,V,2001_SDOME01.DAT,18598
+South Dome,V,2005_south-dome05a.dat,13004
+South Dome,V,2009_11new.dat,10310
+South Dome,V,1999_AWSSDM99.DAT,8876
+South Dome,V,C-level (Jason file),4989
+South Dome,V,C-level (station file),63
+South Dome,TA5,CR1000,103499
+South Dome,TA5,C-level (station file),92
+South Dome,TS1,2009_s_dome_09.dat,19943
+South Dome,TS1,2001_SDOME01.DAT,18598
+South Dome,TS1,2005_south-dome05a.dat,13003
+South Dome,TS1,2009_11new.dat,10010
+South Dome,TS1,C-level (station file),8921
+South Dome,TS1,1999_AWSSDM99.DAT,7164
+South Dome,TS1,1998_SDOM97-8.DAT,7134
+South Dome,TS1,C-level (Jason file),3193
+South Dome,TS1,CR1000,1683
+South Dome,TS2,C-level (station file),31820
+South Dome,TS2,2009_s_dome_09.dat,19917
+South Dome,TS2,2001_SDOME01.DAT,18598
+South Dome,TS2,CR1000,14658
+South Dome,TS2,2005_south-dome05a.dat,13003
+South Dome,TS2,2009_11new.dat,10302
+South Dome,TS2,1999_AWSSDM99.DAT,8872
+South Dome,TS2,1998_SDOM97-8.DAT,8573
+South Dome,TS2,C-level (Jason file),56
+South Dome,TS3,CR1000,49641
+South Dome,TS3,C-level (station file),31235
+South Dome,TS3,2009_s_dome_09.dat,19938
+South Dome,TS3,2001_SDOME01.DAT,18598
+South Dome,TS3,2005_south-dome05a.dat,13003
+South Dome,TS3,2009_11new.dat,10304
+South Dome,TS3,1999_AWSSDM99.DAT,8873
+South Dome,TS3,1998_SDOM97-8.DAT,8573
+South Dome,TS3,C-level (Jason file),55
+South Dome,TS4,C-level (station file),28482
+South Dome,TS4,2009_s_dome_09.dat,19964
+South Dome,TS4,2001_SDOME01.DAT,18598
+South Dome,TS4,2005_south-dome05a.dat,13003
+South Dome,TS4,1999_AWSSDM99.DAT,8871
+South Dome,TS4,1998_SDOM97-8.DAT,8573
+South Dome,TS4,2009_11new.dat,8260
+South Dome,TS4,CR1000,5023
+South Dome,TS4,C-level (Jason file),57
+South Dome,TS5,2009_s_dome_09.dat,19950
+South Dome,TS5,2001_SDOME01.DAT,18598
+South Dome,TS5,2005_south-dome05a.dat,13003
+South Dome,TS5,2009_11new.dat,10012
+South Dome,TS5,1999_AWSSDM99.DAT,8872
+South Dome,TS5,1998_SDOM97-8.DAT,8573
+South Dome,TS5,C-level (station file),1108
+South Dome,TS5,CR1000,728
+South Dome,TS5,C-level (Jason file),56
+South Dome,TS6,2009_s_dome_09.dat,20070
+South Dome,TS6,2001_SDOME01.DAT,18598
+South Dome,TS6,2005_south-dome05a.dat,13003
+South Dome,TS6,1999_AWSSDM99.DAT,8874
+South Dome,TS6,1998_SDOM97-8.DAT,8573
+South Dome,TS6,2009_11new.dat,2810
+South Dome,TS6,C-level (station file),2004
+South Dome,TS6,CR1000,320
+South Dome,TS6,C-level (Jason file),54
+South Dome,TS7,2009_s_dome_09.dat,19952
+South Dome,TS7,2001_SDOME01.DAT,18598
+South Dome,TS7,CR1000,15739
+South Dome,TS7,C-level (station file),14002
+South Dome,TS7,2005_south-dome05a.dat,13003
+South Dome,TS7,2009_11new.dat,9497
+South Dome,TS7,1999_AWSSDM99.DAT,8873
+South Dome,TS7,1998_SDOM97-8.DAT,8573
+South Dome,TS7,C-level (Jason file),55
+South Dome,TS8,C-level (station file),33781
+South Dome,TS8,CR1000,21475
+South Dome,TS8,2009_s_dome_09.dat,19938
+South Dome,TS8,2001_SDOME01.DAT,18598
+South Dome,TS8,2005_south-dome05a.dat,13003
+South Dome,TS8,2009_11new.dat,10305
+South Dome,TS8,1999_AWSSDM99.DAT,8873
+South Dome,TS8,1998_SDOM97-8.DAT,8573
+South Dome,TS8,C-level (Jason file),55
+South Dome,TS9,CR1000,55993
+South Dome,TS9,C-level (station file),31734
+South Dome,TS9,2009_s_dome_09.dat,19974
+South Dome,TS9,2001_SDOME01.DAT,18598
+South Dome,TS9,2005_south-dome05a.dat,13003
+South Dome,TS9,1999_AWSSDM99.DAT,8873
+South Dome,TS9,2009_11new.dat,8644
+South Dome,TS9,1998_SDOM97-8.DAT,8573
+South Dome,TS9,C-level (Jason file),55
+South Dome,TS10,CR1000,59311
+South Dome,TS10,C-level (station file),28106
+South Dome,TS10,2009_s_dome_09.dat,19953
+South Dome,TS10,2001_SDOME01.DAT,18598
+South Dome,TS10,2005_south-dome05a.dat,13003
+South Dome,TS10,2009_11new.dat,9859
+South Dome,TS10,1999_AWSSDM99.DAT,8871
+South Dome,TS10,1998_SDOM97-8.DAT,8573
+South Dome,TS10,C-level (Jason file),57
+South Dome,HS1,C-level (Jason file),37331
+South Dome,HS1,C-level (station file),10060
+South Dome,HS2,C-level (Jason file),41109
+South Dome,HS2,C-level (station file),25190
+NASA-E,ISWR,CR1000,85908
+NASA-E,ISWR,2011_nasae1.dat,26057
+NASA-E,ISWR,2001_NASAE01.DAT,17996
+NASA-E,ISWR,1999_AWSNAE99.DAT,17924
+NASA-E,ISWR,2006_NASA_E.dat,17343
+NASA-E,ISWR,C-level (station file),14192
+NASA-E,ISWR,2003_NASA-NE_1.dat,11083
+NASA-E,ISWR,2008_NASA_e_08.dat,10089
+NASA-E,ISWR,transmission (station folder),3199
+NASA-E,OSWR,CR1000,85908
+NASA-E,OSWR,2011_nasae1.dat,26059
+NASA-E,OSWR,2001_NASAE01.DAT,17996
+NASA-E,OSWR,1999_AWSNAE99.DAT,17924
+NASA-E,OSWR,2006_NASA_E.dat,17342
+NASA-E,OSWR,C-level (station file),14191
+NASA-E,OSWR,2003_NASA-NE_1.dat,11084
+NASA-E,OSWR,2008_NASA_e_08.dat,10088
+NASA-E,OSWR,transmission (station folder),3197
+NASA-E,NR,CR1000,85908
+NASA-E,NR,2001_NASAE01.DAT,17996
+NASA-E,NR,1999_AWSNAE99.DAT,17924
+NASA-E,NR,2006_NASA_E.dat,17348
+NASA-E,NR,2008_NASA_e_08.dat,16833
+NASA-E,NR,2011_nasae1.dat,14494
+NASA-E,NR,C-level (station file),14188
+NASA-E,NR,2003_NASA-NE_1.dat,11084
+NASA-E,NR,transmission (station folder),3152
+NASA-E,TA1,CR1000,85857
+NASA-E,TA1,2011_nasae1.dat,26058
+NASA-E,TA1,1999_AWSNAE99.DAT,17670
+NASA-E,TA1,2001_NASAE01.DAT,17382
+NASA-E,TA1,2006_NASA_E.dat,17335
+NASA-E,TA1,C-level (station file),14598
+NASA-E,TA1,2003_NASA-NE_1.dat,11084
+NASA-E,TA1,2008_NASA_e_08.dat,10088
+NASA-E,TA1,transmission (station folder),3061
+NASA-E,TA1,C-level (Jason file),501
+NASA-E,TA2,CR1000,85857
+NASA-E,TA2,2011_nasae1.dat,26058
+NASA-E,TA2,1999_AWSNAE99.DAT,17672
+NASA-E,TA2,2001_NASAE01.DAT,17382
+NASA-E,TA2,2006_NASA_E.dat,17336
+NASA-E,TA2,C-level (station file),14596
+NASA-E,TA2,2003_NASA-NE_1.dat,11084
+NASA-E,TA2,2008_NASA_e_08.dat,10089
+NASA-E,TA2,transmission (station folder),3074
+NASA-E,TA2,C-level (Jason file),501
+NASA-E,TA3,CR1000,85832
+NASA-E,TA3,2011_nasae1.dat,26039
+NASA-E,TA3,2006_NASA_E.dat,16777
+NASA-E,TA3,2001_NASAE01.DAT,15314
+NASA-E,TA3,C-level (station file),14164
+NASA-E,TA3,2003_NASA-NE_1.dat,11083
+NASA-E,TA3,1999_AWSNAE99.DAT,10748
+NASA-E,TA3,2008_NASA_e_08.dat,10090
+NASA-E,TA3,transmission (station folder),3032
+NASA-E,TA3,C-level (Jason file),2682
+NASA-E,TA4,CR1000,85909
+NASA-E,TA4,2011_nasae1.dat,26039
+NASA-E,TA4,2001_NASAE01.DAT,17996
+NASA-E,TA4,1999_AWSNAE99.DAT,17924
+NASA-E,TA4,2006_NASA_E.dat,16777
+NASA-E,TA4,C-level (station file),14164
+NASA-E,TA4,2003_NASA-NE_1.dat,11083
+NASA-E,TA4,2008_NASA_e_08.dat,10090
+NASA-E,TA4,transmission (station folder),3047
+NASA-E,RH1,CR1000,85856
+NASA-E,RH1,2011_nasae1.dat,26059
+NASA-E,RH1,2006_NASA_E.dat,17348
+NASA-E,RH1,2001_NASAE01.DAT,15340
+NASA-E,RH1,C-level (station file),14144
+NASA-E,RH1,2003_NASA-NE_1.dat,11084
+NASA-E,RH1,1999_AWSNAE99.DAT,10748
+NASA-E,RH1,2008_NASA_e_08.dat,10089
+NASA-E,RH1,transmission (station folder),3193
+NASA-E,RH2,CR1000,85909
+NASA-E,RH2,2011_nasae1.dat,26059
+NASA-E,RH2,2001_NASAE01.DAT,17996
+NASA-E,RH2,1999_AWSNAE99.DAT,17924
+NASA-E,RH2,2006_NASA_E.dat,17348
+NASA-E,RH2,C-level (station file),14144
+NASA-E,RH2,2003_NASA-NE_1.dat,11084
+NASA-E,RH2,2008_NASA_e_08.dat,10089
+NASA-E,RH2,transmission (station folder),3190
+NASA-E,VW1,CR1000,85909
+NASA-E,VW1,2011_nasae1.dat,26059
+NASA-E,VW1,2001_NASAE01.DAT,17996
+NASA-E,VW1,1999_AWSNAE99.DAT,17924
+NASA-E,VW1,2006_NASA_E.dat,17348
+NASA-E,VW1,C-level (station file),13928
+NASA-E,VW1,2003_NASA-NE_1.dat,11084
+NASA-E,VW1,2008_NASA_e_08.dat,10089
+NASA-E,VW1,transmission (station folder),3192
+NASA-E,VW2,CR1000,85909
+NASA-E,VW2,2011_nasae1.dat,26059
+NASA-E,VW2,2001_NASAE01.DAT,17996
+NASA-E,VW2,1999_AWSNAE99.DAT,17924
+NASA-E,VW2,2006_NASA_E.dat,17348
+NASA-E,VW2,C-level (station file),13998
+NASA-E,VW2,2003_NASA-NE_1.dat,11083
+NASA-E,VW2,2008_NASA_e_08.dat,10090
+NASA-E,VW2,transmission (station folder),3191
+NASA-E,DW1,CR1000,85909
+NASA-E,DW1,2006_NASA_E.dat,31156
+NASA-E,DW1,C-level (station file),30846
+NASA-E,DW1,2001_NASAE01.DAT,17996
+NASA-E,DW1,1999_AWSNAE99.DAT,17924
+NASA-E,DW1,2003_NASA-NE_1.dat,11084
+NASA-E,DW1,transmission (station folder),3190
+NASA-E,DW2,CR1000,85894
+NASA-E,DW2,2006_NASA_E.dat,31156
+NASA-E,DW2,C-level (station file),30712
+NASA-E,DW2,2001_NASAE01.DAT,17996
+NASA-E,DW2,1999_AWSNAE99.DAT,17924
+NASA-E,DW2,2003_NASA-NE_1.dat,11084
+NASA-E,DW2,transmission (station folder),3191
+NASA-E,P,CR1000,85909
+NASA-E,P,2011_nasae1.dat,26059
+NASA-E,P,2001_NASAE01.DAT,17996
+NASA-E,P,1999_AWSNAE99.DAT,17924
+NASA-E,P,2006_NASA_E.dat,17348
+NASA-E,P,C-level (station file),14144
+NASA-E,P,2003_NASA-NE_1.dat,11084
+NASA-E,P,2008_NASA_e_08.dat,10089
+NASA-E,P,transmission (station folder),3167
+NASA-E,HW1,CR1000,83786
+NASA-E,HW1,C-level (station file),74614
+NASA-E,HW1,C-level (Jason file),35918
+NASA-E,HW2,CR1000,85894
+NASA-E,HW2,C-level (station file),74614
+NASA-E,HW2,C-level (Jason file),35918
+NASA-E,V,CR1000,85909
+NASA-E,V,2001_NASAE01.DAT,17996
+NASA-E,V,1999_AWSNAE99.DAT,17924
+NASA-E,V,2006_NASA_E.dat,17348
+NASA-E,V,2008_NASA_e_08.dat,16829
+NASA-E,V,2011_nasae1.dat,14479
+NASA-E,V,C-level (station file),14161
+NASA-E,V,2003_NASA-NE_1.dat,11083
+NASA-E,V,transmission (station folder),3181
+NASA-E,TA5,CR1000,85857
+NASA-E,TA5,transmission (station folder),3186
+NASA-E,TA5,C-level (station file),47
+NASA-E,TS1,CR1000,85856
+NASA-E,TS1,1999_AWSNAE99.DAT,17672
+NASA-E,TS1,2001_NASAE01.DAT,17381
+NASA-E,TS1,2006_NASA_E.dat,17336
+NASA-E,TS1,2003_NASA-NE_1.dat,11083
+NASA-E,TS1,2008_NASA_e_08.dat,9156
+NASA-E,TS1,C-level (station file),5601
+NASA-E,TS1,2011_nasae1.dat,4652
+NASA-E,TS1,C-level (Jason file),867
+NASA-E,TS2,CR1000,85857
+NASA-E,TS2,1999_AWSNAE99.DAT,17672
+NASA-E,TS2,2001_NASAE01.DAT,17382
+NASA-E,TS2,2006_NASA_E.dat,17336
+NASA-E,TS2,2003_NASA-NE_1.dat,11083
+NASA-E,TS2,2008_NASA_e_08.dat,9156
+NASA-E,TS2,C-level (station file),5601
+NASA-E,TS2,2011_nasae1.dat,4651
+NASA-E,TS2,C-level (Jason file),866
+NASA-E,TS3,CR1000,85857
+NASA-E,TS3,2011_nasae1.dat,26034
+NASA-E,TS3,1999_AWSNAE99.DAT,17672
+NASA-E,TS3,2001_NASAE01.DAT,17382
+NASA-E,TS3,2006_NASA_E.dat,17342
+NASA-E,TS3,C-level (station file),14945
+NASA-E,TS3,2003_NASA-NE_1.dat,11083
+NASA-E,TS3,2008_NASA_e_08.dat,10090
+NASA-E,TS3,C-level (Jason file),866
+NASA-E,TS4,CR1000,85857
+NASA-E,TS4,2011_nasae1.dat,26037
+NASA-E,TS4,1999_AWSNAE99.DAT,17672
+NASA-E,TS4,2001_NASAE01.DAT,17382
+NASA-E,TS4,2006_NASA_E.dat,17342
+NASA-E,TS4,C-level (station file),14942
+NASA-E,TS4,2003_NASA-NE_1.dat,11083
+NASA-E,TS4,2008_NASA_e_08.dat,10090
+NASA-E,TS4,C-level (Jason file),866
+NASA-E,TS5,CR1000,85857
+NASA-E,TS5,2011_nasae1.dat,26037
+NASA-E,TS5,1999_AWSNAE99.DAT,17672
+NASA-E,TS5,2001_NASAE01.DAT,17382
+NASA-E,TS5,2006_NASA_E.dat,17342
+NASA-E,TS5,C-level (station file),14942
+NASA-E,TS5,2003_NASA-NE_1.dat,11083
+NASA-E,TS5,2008_NASA_e_08.dat,10090
+NASA-E,TS5,C-level (Jason file),866
+NASA-E,TS6,CR1000,85783
+NASA-E,TS6,2011_nasae1.dat,26037
+NASA-E,TS6,1999_AWSNAE99.DAT,17672
+NASA-E,TS6,2001_NASAE01.DAT,17382
+NASA-E,TS6,2006_NASA_E.dat,17342
+NASA-E,TS6,C-level (station file),14960
+NASA-E,TS6,2003_NASA-NE_1.dat,11083
+NASA-E,TS6,2008_NASA_e_08.dat,10090
+NASA-E,TS6,C-level (Jason file),866
+NASA-E,TS7,CR1000,85857
+NASA-E,TS7,2011_nasae1.dat,26036
+NASA-E,TS7,1999_AWSNAE99.DAT,17672
+NASA-E,TS7,2001_NASAE01.DAT,17382
+NASA-E,TS7,2006_NASA_E.dat,17342
+NASA-E,TS7,C-level (station file),14943
+NASA-E,TS7,2003_NASA-NE_1.dat,11083
+NASA-E,TS7,2008_NASA_e_08.dat,10090
+NASA-E,TS7,C-level (Jason file),866
+NASA-E,TS8,CR1000,85857
+NASA-E,TS8,2008_NASA_e_08.dat,31304
+NASA-E,TS8,1999_AWSNAE99.DAT,17672
+NASA-E,TS8,2001_NASAE01.DAT,17382
+NASA-E,TS8,2006_NASA_E.dat,17343
+NASA-E,TS8,C-level (station file),14943
+NASA-E,TS8,2003_NASA-NE_1.dat,11083
+NASA-E,TS8,C-level (Jason file),866
+NASA-E,TS9,C-level (station file),28526
+NASA-E,TS9,2011_nasae1.dat,26037
+NASA-E,TS9,1999_AWSNAE99.DAT,17672
+NASA-E,TS9,2001_NASAE01.DAT,17382
+NASA-E,TS9,2006_NASA_E.dat,17343
+NASA-E,TS9,2003_NASA-NE_1.dat,11083
+NASA-E,TS9,2008_NASA_e_08.dat,10090
+NASA-E,TS9,CR1000,6833
+NASA-E,TS9,C-level (Jason file),866
+NASA-E,TS10,C-level (station file),48175
+NASA-E,TS10,CR1000,35360
+NASA-E,TS10,2011_nasae1.dat,26037
+NASA-E,TS10,1999_AWSNAE99.DAT,17672
+NASA-E,TS10,2001_NASAE01.DAT,17382
+NASA-E,TS10,2006_NASA_E.dat,17341
+NASA-E,TS10,2003_NASA-NE_1.dat,11083
+NASA-E,TS10,2008_NASA_e_08.dat,10088
+NASA-E,TS10,C-level (Jason file),866
+NASA-E,HS1,C-level (station file),73304
+NASA-E,HS1,C-level (Jason file),29747
+NASA-E,HS2,C-level (station file),74614
+NASA-E,HS2,C-level (Jason file),35914
+NASA-SE,ISWR,CR1000,84411
+NASA-SE,ISWR,C-level (station file),17177
+NASA-SE,ISWR,2007_NASA SE clean.dat,11529
+NASA-SE,ISWR,2000_AWSNSE00.DAT,9378
+NASA-SE,ISWR,2001_NASASE01.DAT,9264
+NASA-SE,ISWR,C-level (Jason file),8693
+NASA-SE,ISWR,1999_AWSNSE99.DAT,8690
+NASA-SE,ISWR,2005_nasa-se11.dat,8133
+NASA-SE,ISWR,2008_NASA SE 08 1.dat,2216
+NASA-SE,ISWR,2002_NASA-SE.DAT,2134
+NASA-SE,ISWR,2005_nasa-se.dat,1462
+NASA-SE,OSWR,CR1000,84411
+NASA-SE,OSWR,2008_NASA SE 08 1.dat,16147
+NASA-SE,OSWR,2005_nasa-se11.dat,15039
+NASA-SE,OSWR,2000_AWSNSE00.DAT,9378
+NASA-SE,OSWR,2001_NASASE01.DAT,9264
+NASA-SE,OSWR,2007_NASA SE clean.dat,9196
+NASA-SE,OSWR,1999_AWSNSE99.DAT,8690
+NASA-SE,OSWR,C-level (station file),3442
+NASA-SE,OSWR,2002_NASA-SE.DAT,3418
+NASA-SE,OSWR,2005_nasa-se.dat,2885
+NASA-SE,OSWR,C-level (Jason file),2610
+NASA-SE,NR,CR1000,84412
+NASA-SE,NR,2008_NASA SE 08 1.dat,18417
+NASA-SE,NR,2005_nasa-se11.dat,16770
+NASA-SE,NR,2007_NASA SE clean.dat,10401
+NASA-SE,NR,2000_AWSNSE00.DAT,9378
+NASA-SE,NR,2001_NASASE01.DAT,9264
+NASA-SE,NR,1999_AWSNSE99.DAT,8690
+NASA-SE,NR,2002_NASA-SE.DAT,4478
+NASA-SE,NR,2005_nasa-se.dat,3143
+NASA-SE,NR,C-level (station file),177
+NASA-SE,TA1,CR1000,84400
+NASA-SE,TA1,2008_NASA SE 08 1.dat,18412
+NASA-SE,TA1,2005_nasa-se11.dat,16770
+NASA-SE,TA1,2007_NASA SE clean.dat,10400
+NASA-SE,TA1,2000_AWSNSE00.DAT,9373
+NASA-SE,TA1,2001_NASASE01.DAT,9264
+NASA-SE,TA1,1999_AWSNSE99.DAT,8690
+NASA-SE,TA1,2002_NASA-SE.DAT,4478
+NASA-SE,TA1,2005_nasa-se.dat,3143
+NASA-SE,TA1,C-level (station file),2539
+NASA-SE,TA1,C-level (Jason file),5
+NASA-SE,TA2,CR1000,84401
+NASA-SE,TA2,2008_NASA SE 08 1.dat,18412
+NASA-SE,TA2,2005_nasa-se11.dat,16770
+NASA-SE,TA2,2007_NASA SE clean.dat,10400
+NASA-SE,TA2,2000_AWSNSE00.DAT,9373
+NASA-SE,TA2,2001_NASASE01.DAT,9264
+NASA-SE,TA2,1999_AWSNSE99.DAT,8690
+NASA-SE,TA2,2002_NASA-SE.DAT,4478
+NASA-SE,TA2,2005_nasa-se.dat,3143
+NASA-SE,TA2,C-level (station file),2538
+NASA-SE,TA2,C-level (Jason file),5
+NASA-SE,TA3,CR1000,84419
+NASA-SE,TA3,2008_NASA SE 08 1.dat,18417
+NASA-SE,TA3,2005_nasa-se11.dat,16770
+NASA-SE,TA3,2007_NASA SE clean.dat,10401
+NASA-SE,TA3,2000_AWSNSE00.DAT,9378
+NASA-SE,TA3,2001_NASASE01.DAT,9264
+NASA-SE,TA3,1999_AWSNSE99.DAT,8690
+NASA-SE,TA3,2002_NASA-SE.DAT,4478
+NASA-SE,TA3,2005_nasa-se.dat,3143
+NASA-SE,TA3,C-level (station file),2521
+NASA-SE,TA4,CR1000,84419
+NASA-SE,TA4,2008_NASA SE 08 1.dat,18416
+NASA-SE,TA4,2005_nasa-se11.dat,16770
+NASA-SE,TA4,2007_NASA SE clean.dat,10401
+NASA-SE,TA4,2000_AWSNSE00.DAT,9378
+NASA-SE,TA4,2001_NASASE01.DAT,9264
+NASA-SE,TA4,1999_AWSNSE99.DAT,8690
+NASA-SE,TA4,2002_NASA-SE.DAT,4478
+NASA-SE,TA4,2005_nasa-se.dat,3143
+NASA-SE,TA4,C-level (station file),2521
+NASA-SE,RH1,CR1000,84414
+NASA-SE,RH1,2008_NASA SE 08 1.dat,18415
+NASA-SE,RH1,2005_nasa-se11.dat,16770
+NASA-SE,RH1,2007_NASA SE clean.dat,10401
+NASA-SE,RH1,2000_AWSNSE00.DAT,9378
+NASA-SE,RH1,2001_NASASE01.DAT,9264
+NASA-SE,RH1,1999_AWSNSE99.DAT,8690
+NASA-SE,RH1,2002_NASA-SE.DAT,4478
+NASA-SE,RH1,2005_nasa-se.dat,3143
+NASA-SE,RH1,C-level (station file),2497
+NASA-SE,RH2,CR1000,84302
+NASA-SE,RH2,2008_NASA SE 08 1.dat,18396
+NASA-SE,RH2,2005_nasa-se11.dat,16770
+NASA-SE,RH2,2007_NASA SE clean.dat,10352
+NASA-SE,RH2,2000_AWSNSE00.DAT,9378
+NASA-SE,RH2,2001_NASASE01.DAT,9264
+NASA-SE,RH2,1999_AWSNSE99.DAT,8690
+NASA-SE,RH2,2002_NASA-SE.DAT,4478
+NASA-SE,RH2,2005_nasa-se.dat,3143
+NASA-SE,RH2,C-level (station file),2677
+NASA-SE,VW1,CR1000,84419
+NASA-SE,VW1,2008_NASA SE 08 1.dat,18417
+NASA-SE,VW1,C-level (Jason file),17653
+NASA-SE,VW1,2005_nasa-se11.dat,16770
+NASA-SE,VW1,2007_NASA SE clean.dat,10401
+NASA-SE,VW1,2001_NASASE01.DAT,9264
+NASA-SE,VW1,2002_NASA-SE.DAT,4478
+NASA-SE,VW1,2005_nasa-se.dat,3143
+NASA-SE,VW2,CR1000,84419
+NASA-SE,VW2,2008_NASA SE 08 1.dat,18417
+NASA-SE,VW2,2005_nasa-se11.dat,16770
+NASA-SE,VW2,2007_NASA SE clean.dat,10401
+NASA-SE,VW2,2000_AWSNSE00.DAT,9378
+NASA-SE,VW2,2001_NASASE01.DAT,9264
+NASA-SE,VW2,1999_AWSNSE99.DAT,8690
+NASA-SE,VW2,2002_NASA-SE.DAT,4478
+NASA-SE,VW2,2005_nasa-se.dat,3143
+NASA-SE,DW1,CR1000,84418
+NASA-SE,DW1,2008_NASA SE 08 1.dat,18417
+NASA-SE,DW1,2005_nasa-se11.dat,16770
+NASA-SE,DW1,2007_NASA SE clean.dat,10401
+NASA-SE,DW1,2000_AWSNSE00.DAT,9378
+NASA-SE,DW1,2001_NASASE01.DAT,9264
+NASA-SE,DW1,1999_AWSNSE99.DAT,8690
+NASA-SE,DW1,2002_NASA-SE.DAT,4478
+NASA-SE,DW1,2005_nasa-se.dat,3143
+NASA-SE,DW1,C-level (station file),2
+NASA-SE,DW2,CR1000,84416
+NASA-SE,DW2,2008_NASA SE 08 1.dat,18417
+NASA-SE,DW2,2005_nasa-se11.dat,16770
+NASA-SE,DW2,2007_NASA SE clean.dat,10401
+NASA-SE,DW2,2000_AWSNSE00.DAT,9378
+NASA-SE,DW2,2001_NASASE01.DAT,9264
+NASA-SE,DW2,1999_AWSNSE99.DAT,8690
+NASA-SE,DW2,2002_NASA-SE.DAT,4478
+NASA-SE,DW2,2005_nasa-se.dat,3143
+NASA-SE,DW2,C-level (station file),2
+NASA-SE,P,CR1000,84395
+NASA-SE,P,2005_nasa-se11.dat,21020
+NASA-SE,P,C-level (station file),15142
+NASA-SE,P,2000_AWSNSE00.DAT,9378
+NASA-SE,P,2001_NASASE01.DAT,9264
+NASA-SE,P,1999_AWSNSE99.DAT,8690
+NASA-SE,P,2002_NASA-SE.DAT,4478
+NASA-SE,P,2007_NASA SE clean.dat,4374
+NASA-SE,P,2009_NASA SE 091.dat,4223
+NASA-SE,P,2005_nasa-se.dat,3143
+NASA-SE,P,2008_NASA SE 08 1.dat,1780
+NASA-SE,HW1,CR1000,83609
+NASA-SE,HW1,C-level (Jason file),44200
+NASA-SE,HW1,C-level (station file),36498
+NASA-SE,HW2,CR1000,70136
+NASA-SE,HW2,C-level (Jason file),44200
+NASA-SE,HW2,C-level (station file),36498
+NASA-SE,V,CR1000,84419
+NASA-SE,V,2008_NASA SE 08 1.dat,18417
+NASA-SE,V,2005_nasa-se11.dat,16770
+NASA-SE,V,2007_NASA SE clean.dat,10401
+NASA-SE,V,2000_AWSNSE00.DAT,9378
+NASA-SE,V,2001_NASASE01.DAT,9264
+NASA-SE,V,1999_AWSNSE99.DAT,8690
+NASA-SE,V,2002_NASA-SE.DAT,4478
+NASA-SE,V,2005_nasa-se.dat,3143
+NASA-SE,V,C-level (station file),3
+NASA-SE,TA5,CR1000,84405
+NASA-SE,TS1,CR1000,64023
+NASA-SE,TS1,C-level (station file),36628
+NASA-SE,TS1,2005_nasa-se11.dat,25391
+NASA-SE,TS1,2000_AWSNSE00.DAT,9373
+NASA-SE,TS1,2001_NASASE01.DAT,9264
+NASA-SE,TS1,C-level (Jason file),8697
+NASA-SE,TS1,2002_NASA-SE.DAT,4476
+NASA-SE,TS1,2005_nasa-se.dat,3143
+NASA-SE,TS1,2008_NASA SE 08 1.dat,1780
+NASA-SE,TS2,CR1000,72808
+NASA-SE,TS2,2008_NASA SE 08 1.dat,21405
+NASA-SE,TS2,2005_nasa-se11.dat,16913
+NASA-SE,TS2,C-level (station file),14306
+NASA-SE,TS2,2000_AWSNSE00.DAT,9373
+NASA-SE,TS2,2001_NASASE01.DAT,9264
+NASA-SE,TS2,C-level (Jason file),8697
+NASA-SE,TS2,2007_NASA SE clean.dat,5418
+NASA-SE,TS2,2002_NASA-SE.DAT,4476
+NASA-SE,TS3,CR1000,71838
+NASA-SE,TS3,C-level (station file),27515
+NASA-SE,TS3,2005_nasa-se11.dat,21017
+NASA-SE,TS3,2000_AWSNSE00.DAT,9373
+NASA-SE,TS3,2001_NASASE01.DAT,9264
+NASA-SE,TS3,C-level (Jason file),8697
+NASA-SE,TS3,2008_NASA SE 08 1.dat,6517
+NASA-SE,TS3,2002_NASA-SE.DAT,4476
+NASA-SE,TS3,2007_NASA SE clean.dat,4374
+NASA-SE,TS3,2005_nasa-se.dat,3143
+NASA-SE,TS4,CR1000,72495
+NASA-SE,TS4,C-level (station file),25714
+NASA-SE,TS4,2005_nasa-se11.dat,25391
+NASA-SE,TS4,2000_AWSNSE00.DAT,9371
+NASA-SE,TS4,2001_NASASE01.DAT,9264
+NASA-SE,TS4,C-level (Jason file),8698
+NASA-SE,TS4,2008_NASA SE 08 1.dat,6517
+NASA-SE,TS4,2002_NASA-SE.DAT,4476
+NASA-SE,TS4,2005_nasa-se.dat,3143
+NASA-SE,TS5,CR1000,49527
+NASA-SE,TS5,C-level (station file),37052
+NASA-SE,TS5,2005_nasa-se11.dat,25391
+NASA-SE,TS5,2000_AWSNSE00.DAT,9370
+NASA-SE,TS5,2001_NASASE01.DAT,9264
+NASA-SE,TS5,C-level (Jason file),8698
+NASA-SE,TS5,2008_NASA SE 08 1.dat,6517
+NASA-SE,TS5,2002_NASA-SE.DAT,4476
+NASA-SE,TS5,2005_nasa-se.dat,3143
+NASA-SE,TS6,CR1000,69680
+NASA-SE,TS6,C-level (station file),29812
+NASA-SE,TS6,2005_nasa-se11.dat,25391
+NASA-SE,TS6,2000_AWSNSE00.DAT,9372
+NASA-SE,TS6,2001_NASASE01.DAT,9264
+NASA-SE,TS6,C-level (Jason file),8696
+NASA-SE,TS6,2008_NASA SE 08 1.dat,6517
+NASA-SE,TS6,2002_NASA-SE.DAT,4476
+NASA-SE,TS6,2005_nasa-se.dat,3136
+NASA-SE,TS7,CR1000,60448
+NASA-SE,TS7,C-level (station file),37924
+NASA-SE,TS7,2005_nasa-se11.dat,25391
+NASA-SE,TS7,2000_AWSNSE00.DAT,9373
+NASA-SE,TS7,2001_NASASE01.DAT,9264
+NASA-SE,TS7,C-level (Jason file),8695
+NASA-SE,TS7,2008_NASA SE 08 1.dat,6517
+NASA-SE,TS7,2002_NASA-SE.DAT,4476
+NASA-SE,TS7,2005_nasa-se.dat,3143
+NASA-SE,TS8,CR1000,53812
+NASA-SE,TS8,C-level (station file),43778
+NASA-SE,TS8,2005_nasa-se11.dat,21017
+NASA-SE,TS8,2000_AWSNSE00.DAT,9374
+NASA-SE,TS8,2001_NASASE01.DAT,9264
+NASA-SE,TS8,C-level (Jason file),8693
+NASA-SE,TS8,2008_NASA SE 08 1.dat,6517
+NASA-SE,TS8,2002_NASA-SE.DAT,4476
+NASA-SE,TS8,2007_NASA SE clean.dat,4374
+NASA-SE,TS8,2005_nasa-se.dat,3143
+NASA-SE,TS9,CR1000,67821
+NASA-SE,TS9,2008_NASA SE 08 1.dat,17882
+NASA-SE,TS9,2005_nasa-se11.dat,16770
+NASA-SE,TS9,C-level (station file),12781
+NASA-SE,TS9,2007_NASA SE clean.dat,10413
+NASA-SE,TS9,2000_AWSNSE00.DAT,9373
+NASA-SE,TS9,2001_NASASE01.DAT,9264
+NASA-SE,TS9,C-level (Jason file),8694
+NASA-SE,TS9,2002_NASA-SE.DAT,4476
+NASA-SE,TS9,2005_nasa-se.dat,3143
+NASA-SE,TS10,CR1000,72623
+NASA-SE,TS10,C-level (station file),27920
+NASA-SE,TS10,2005_nasa-se11.dat,17625
+NASA-SE,TS10,2000_AWSNSE00.DAT,9374
+NASA-SE,TS10,2001_NASASE01.DAT,9264
+NASA-SE,TS10,C-level (Jason file),8695
+NASA-SE,TS10,2008_NASA SE 08 1.dat,4737
+NASA-SE,TS10,2002_NASA-SE.DAT,4476
+NASA-SE,TS10,2005_nasa-se.dat,3143
+NASA-SE,HS1,C-level (Jason file),44190
+NASA-SE,HS1,C-level (station file),35992
+NASA-SE,HS2,C-level (Jason file),44196
+NASA-SE,HS2,C-level (station file),36495
+NGRIP,ISWR,2010_NGRIP_2010.dat,33195
+NGRIP,ISWR,2005_ngrip.dat,24933
+NGRIP,ISWR,C-level (Jason file),17462
+NGRIP,ISWR,2003_AWSNGRIP03.dat,17356
+NGRIP,ISWR,1997_NGRI97-8.DAT,7585
+NGRIP,ISWR,2004_5.dat,618
+NGRIP,ISWR,1997_NGRIP2.DAT,455
+NGRIP,ISWR,2004_111.dat,287
+NGRIP,ISWR,2004_NGRIP004.dat,112
+NGRIP,ISWR,1997_NGRIP1.DAT,1
+NGRIP,ISWR,C-level (station file),1
+NGRIP,OSWR,2010_NGRIP_2010.dat,33195
+NGRIP,OSWR,2005_ngrip.dat,25045
+NGRIP,OSWR,C-level (Jason file),17462
+NGRIP,OSWR,2003_AWSNGRIP03.dat,17356
+NGRIP,OSWR,1997_NGRI97-8.DAT,7585
+NGRIP,OSWR,2004_5.dat,515
+NGRIP,OSWR,1997_NGRIP2.DAT,455
+NGRIP,OSWR,2004_111.dat,278
+NGRIP,OSWR,2004_NGRIP004.dat,112
+NGRIP,OSWR,1997_NGRIP1.DAT,1
+NGRIP,OSWR,C-level (station file),1
+NGRIP,NR,2010_NGRIP_2010.dat,33195
+NGRIP,NR,2005_ngrip.dat,25838
+NGRIP,NR,2003_AWSNGRIP03.dat,17356
+NGRIP,NR,C-level (Jason file),16264
+NGRIP,NR,1997_NGRI97-8.DAT,7585
+NGRIP,NR,1997_NGRIP2.DAT,455
+NGRIP,NR,2004_NGRIP004.dat,112
+NGRIP,NR,1997_NGRIP1.DAT,1
+NGRIP,NR,C-level (station file),1
+NGRIP,TA1,2010_NGRIP_2010.dat,33195
+NGRIP,TA1,2005_ngrip.dat,25838
+NGRIP,TA1,C-level (Jason file),17596
+NGRIP,TA1,2003_AWSNGRIP03.dat,17335
+NGRIP,TA1,1997_NGRI97-8.DAT,7066
+NGRIP,TA1,1997_NGRIP2.DAT,455
+NGRIP,TA1,2004_NGRIP004.dat,112
+NGRIP,TA1,1997_NGRIP1.DAT,1
+NGRIP,TA1,C-level (station file),1
+NGRIP,TA2,2010_NGRIP_2010.dat,33195
+NGRIP,TA2,2005_ngrip.dat,25838
+NGRIP,TA2,C-level (Jason file),17575
+NGRIP,TA2,2003_AWSNGRIP03.dat,17356
+NGRIP,TA2,1997_NGRI97-8.DAT,7066
+NGRIP,TA2,1997_NGRIP2.DAT,455
+NGRIP,TA2,2004_NGRIP004.dat,112
+NGRIP,TA2,1997_NGRIP1.DAT,1
+NGRIP,TA2,C-level (station file),1
+NGRIP,TA3,C-level (Jason file),40672
+NGRIP,TA4,C-level (Jason file),25993
+NGRIP,RH1,2010_NGRIP_2010.dat,33195
+NGRIP,RH1,2005_ngrip.dat,24926
+NGRIP,RH1,2003_AWSNGRIP03.dat,17356
+NGRIP,RH1,C-level (Jason file),17097
+NGRIP,RH1,1997_NGRI97-8.DAT,7579
+NGRIP,RH1,2004_5.dat,625
+NGRIP,RH1,1997_NGRIP2.DAT,455
+NGRIP,RH1,2004_111.dat,287
+NGRIP,RH1,2004_NGRIP004.dat,112
+NGRIP,RH1,1997_NGRIP1.DAT,1
+NGRIP,RH1,C-level (station file),1
+NGRIP,RH2,2010_NGRIP_2010.dat,33195
+NGRIP,RH2,2005_ngrip.dat,24926
+NGRIP,RH2,2003_AWSNGRIP03.dat,17356
+NGRIP,RH2,C-level (Jason file),17081
+NGRIP,RH2,1997_NGRI97-8.DAT,7585
+NGRIP,RH2,2004_5.dat,625
+NGRIP,RH2,1997_NGRIP2.DAT,455
+NGRIP,RH2,2004_111.dat,287
+NGRIP,RH2,2004_NGRIP004.dat,112
+NGRIP,RH2,1997_NGRIP1.DAT,1
+NGRIP,RH2,C-level (station file),1
+NGRIP,VW1,2010_NGRIP_2010.dat,33195
+NGRIP,VW1,2005_ngrip.dat,25838
+NGRIP,VW1,2003_AWSNGRIP03.dat,17356
+NGRIP,VW1,C-level (Jason file),13989
+NGRIP,VW1,1997_NGRI97-8.DAT,7585
+NGRIP,VW1,1997_NGRIP2.DAT,455
+NGRIP,VW1,2004_NGRIP004.dat,112
+NGRIP,VW1,1997_NGRIP1.DAT,1
+NGRIP,VW1,C-level (station file),1
+NGRIP,VW2,2010_NGRIP_2010.dat,33195
+NGRIP,VW2,2005_ngrip.dat,25838
+NGRIP,VW2,2003_AWSNGRIP03.dat,17356
+NGRIP,VW2,C-level (Jason file),14166
+NGRIP,VW2,1997_NGRI97-8.DAT,7586
+NGRIP,VW2,1997_NGRIP2.DAT,455
+NGRIP,VW2,2004_NGRIP004.dat,112
+NGRIP,DW1,2010_NGRIP_2010.dat,33195
+NGRIP,DW1,2005_ngrip.dat,25838
+NGRIP,DW1,2003_AWSNGRIP03.dat,17356
+NGRIP,DW1,C-level (Jason file),16825
+NGRIP,DW1,1997_NGRI97-8.DAT,7585
+NGRIP,DW1,1997_NGRIP2.DAT,455
+NGRIP,DW1,2004_NGRIP004.dat,112
+NGRIP,DW1,1997_NGRIP1.DAT,1
+NGRIP,DW1,C-level (station file),1
+NGRIP,DW2,2010_NGRIP_2010.dat,33195
+NGRIP,DW2,2005_ngrip.dat,25838
+NGRIP,DW2,2003_AWSNGRIP03.dat,17356
+NGRIP,DW2,C-level (Jason file),17180
+NGRIP,DW2,1997_NGRI97-8.DAT,7585
+NGRIP,DW2,1997_NGRIP2.DAT,455
+NGRIP,DW2,2004_NGRIP004.dat,112
+NGRIP,DW2,1997_NGRIP1.DAT,1
+NGRIP,DW2,C-level (station file),1
+NGRIP,P,2010_NGRIP_2010.dat,33195
+NGRIP,P,2005_ngrip.dat,24926
+NGRIP,P,C-level (Jason file),17704
+NGRIP,P,2003_AWSNGRIP03.dat,17356
+NGRIP,P,1997_NGRI97-8.DAT,7585
+NGRIP,P,2004_5.dat,625
+NGRIP,P,1997_NGRIP2.DAT,455
+NGRIP,P,2004_111.dat,287
+NGRIP,P,2004_NGRIP004.dat,112
+NGRIP,P,1997_NGRIP1.DAT,1
+NGRIP,HS1,C-level (station file),49378
+NGRIP,HS2,C-level (station file),59145
+NGRIP,V,C-level (Jason file),43758
+NGRIP,HW1,C-level (station file),59145
+NGRIP,HW2,C-level (station file),59145
+NGRIP,TS1,2010_NGRIP_2010.dat,31778
+NGRIP,TS1,2005_ngrip.dat,25838
+NGRIP,TS1,2003_AWSNGRIP03.dat,17356
+NGRIP,TS1,1997_NGRI97-8.DAT,7067
+NGRIP,TS1,C-level (station file),1418
+NGRIP,TS1,1997_NGRIP2.DAT,455
+NGRIP,TS1,2004_NGRIP004.dat,112
+NGRIP,TS2,2010_NGRIP_2010.dat,31778
+NGRIP,TS2,2005_ngrip.dat,25838
+NGRIP,TS2,2003_AWSNGRIP03.dat,17356
+NGRIP,TS2,1997_NGRI97-8.DAT,7067
+NGRIP,TS2,C-level (station file),1418
+NGRIP,TS2,1997_NGRIP2.DAT,455
+NGRIP,TS2,2004_NGRIP004.dat,112
+NGRIP,TS3,2010_NGRIP_2010.dat,31778
+NGRIP,TS3,2005_ngrip.dat,25838
+NGRIP,TS3,2003_AWSNGRIP03.dat,17356
+NGRIP,TS3,1997_NGRI97-8.DAT,7067
+NGRIP,TS3,C-level (station file),1418
+NGRIP,TS3,1997_NGRIP2.DAT,455
+NGRIP,TS3,2004_NGRIP004.dat,112
+NGRIP,TS4,2010_NGRIP_2010.dat,31778
+NGRIP,TS4,2005_ngrip.dat,25838
+NGRIP,TS4,2003_AWSNGRIP03.dat,17356
+NGRIP,TS4,1997_NGRI97-8.DAT,7067
+NGRIP,TS4,C-level (station file),1418
+NGRIP,TS4,1997_NGRIP2.DAT,455
+NGRIP,TS4,2004_NGRIP004.dat,112
+NGRIP,TS5,2010_NGRIP_2010.dat,31778
+NGRIP,TS5,2005_ngrip.dat,25838
+NGRIP,TS5,2003_AWSNGRIP03.dat,17356
+NGRIP,TS5,1997_NGRI97-8.DAT,7067
+NGRIP,TS5,C-level (station file),1418
+NGRIP,TS5,1997_NGRIP2.DAT,455
+NGRIP,TS5,2004_NGRIP004.dat,112
+NGRIP,TS6,2010_NGRIP_2010.dat,31778
+NGRIP,TS6,2005_ngrip.dat,25838
+NGRIP,TS6,2003_AWSNGRIP03.dat,17356
+NGRIP,TS6,1997_NGRI97-8.DAT,7067
+NGRIP,TS6,C-level (station file),1418
+NGRIP,TS6,1997_NGRIP2.DAT,455
+NGRIP,TS6,2004_NGRIP004.dat,112
+NGRIP,TS7,2010_NGRIP_2010.dat,31778
+NGRIP,TS7,2005_ngrip.dat,25838
+NGRIP,TS7,2003_AWSNGRIP03.dat,17356
+NGRIP,TS7,1997_NGRI97-8.DAT,7067
+NGRIP,TS7,C-level (station file),1418
+NGRIP,TS7,1997_NGRIP2.DAT,455
+NGRIP,TS7,2004_NGRIP004.dat,112
+NGRIP,TS8,2010_NGRIP_2010.dat,31778
+NGRIP,TS8,2005_ngrip.dat,25838
+NGRIP,TS8,2003_AWSNGRIP03.dat,17356
+NGRIP,TS8,1997_NGRI97-8.DAT,7067
+NGRIP,TS8,C-level (station file),1418
+NGRIP,TS8,1997_NGRIP2.DAT,455
+NGRIP,TS8,2004_NGRIP004.dat,112
+NGRIP,TS9,2010_NGRIP_2010.dat,31778
+NGRIP,TS9,2005_ngrip.dat,25838
+NGRIP,TS9,2003_AWSNGRIP03.dat,17356
+NGRIP,TS9,1997_NGRI97-8.DAT,7067
+NGRIP,TS9,C-level (station file),1418
+NGRIP,TS9,1997_NGRIP2.DAT,455
+NGRIP,TS9,2004_NGRIP004.dat,112
+NGRIP,TS10,2010_NGRIP_2010.dat,31778
+NGRIP,TS10,2005_ngrip.dat,25838
+NGRIP,TS10,2003_AWSNGRIP03.dat,17356
+NGRIP,TS10,1997_NGRI97-8.DAT,7067
+NGRIP,TS10,C-level (station file),1418
+NGRIP,TS10,1997_NGRIP2.DAT,455
+NGRIP,TS10,2004_NGRIP004.dat,112
+NEEM,ISWR,CR1000,101170
+NEEM,ISWR,transmission (station folder),9787
+NEEM,ISWR,C-level (station file),5810
+NEEM,ISWR,2008_PARCA 2006_2008_CR10_1.dat,4414
+NEEM,ISWR,2007_NEMM 07.dat,3801
+NEEM,ISWR,2007_nemm.dat,252
+NEEM,OSWR,CR1000,101170
+NEEM,OSWR,transmission (station folder),9784
+NEEM,OSWR,C-level (station file),5809
+NEEM,OSWR,2008_PARCA 2006_2008_CR10_1.dat,4608
+NEEM,OSWR,2007_NEMM 07.dat,4067
+NEEM,NR,CR1000,101170
+NEEM,NR,transmission (station folder),9788
+NEEM,NR,C-level (station file),5811
+NEEM,NR,2008_PARCA 2006_2008_CR10_1.dat,4610
+NEEM,NR,2007_NEMM 07.dat,4073
+NEEM,TA1,CR1000,100958
+NEEM,TA1,transmission (station folder),9652
+NEEM,TA1,neem_09.dat,5580
+NEEM,TA1,2008_PARCA 2006_2008_CR10_1.dat,4605
+NEEM,TA1,2007_NEMM 07.dat,4056
+NEEM,TA1,C-level (station file),2367
+NEEM,TA1,2007_nemm.dat,1
+NEEM,TA2,CR1000,100958
+NEEM,TA2,transmission (station folder),9504
+NEEM,TA2,neem_09.dat,5580
+NEEM,TA2,2008_PARCA 2006_2008_CR10_1.dat,4605
+NEEM,TA2,2007_NEMM 07.dat,4056
+NEEM,TA2,C-level (station file),2367
+NEEM,TA2,2007_nemm.dat,1
+NEEM,TA3,CR1000,101171
+NEEM,TA3,transmission (station folder),9216
+NEEM,TA3,C-level (station file),132
+NEEM,TA4,CR1000,101115
+NEEM,TA4,transmission (station folder),8968
+NEEM,TA4,C-level (station file),1
+NEEM,RH1,CR1000,101171
+NEEM,RH1,transmission (station folder),9028
+NEEM,RH1,C-level (station file),5983
+NEEM,RH1,2008_PARCA 2006_2008_CR10_1.dat,4610
+NEEM,RH1,2007_NEMM 07.dat,4074
+NEEM,RH2,CR1000,100815
+NEEM,RH2,transmission (station folder),9744
+NEEM,RH2,C-level (station file),6059
+NEEM,RH2,2008_PARCA 2006_2008_CR10_1.dat,4610
+NEEM,RH2,2007_NEMM 07.dat,4074
+NEEM,VW1,CR1000,101172
+NEEM,VW1,transmission (station folder),9640
+NEEM,VW1,C-level (station file),5792
+NEEM,VW1,2008_PARCA 2006_2008_CR10_1.dat,4610
+NEEM,VW1,2007_NEMM 07.dat,4074
+NEEM,VW2,CR1000,101172
+NEEM,VW2,transmission (station folder),8072
+NEEM,VW2,C-level (station file),5725
+NEEM,VW2,2008_PARCA 2006_2008_CR10_1.dat,4610
+NEEM,VW2,2007_NEMM 07.dat,4074
+NEEM,DW1,CR1000,101171
+NEEM,DW1,transmission (station folder),9748
+NEEM,DW1,C-level (station file),6378
+NEEM,DW1,neem_09.dat,5598
+NEEM,DW1,2007_NEMM 07.dat,4074
+NEEM,DW1,2008_PARCA 2006_2008_CR10_1.dat,210
+NEEM,DW2,CR1000,101172
+NEEM,DW2,C-level (station file),13723
+NEEM,DW2,transmission (station folder),9754
+NEEM,P,CR1000,45510
+NEEM,P,C-level (station file),6737
+NEEM,P,2008_PARCA 2006_2008_CR10_1.dat,4610
+NEEM,P,2007_NEMM 07.dat,4074
+NEEM,HW1,CR1000,101170
+NEEM,HW1,C-level (station file),14215
+NEEM,HW2,CR1000,101162
+NEEM,HW2,C-level (station file),14215
+NEEM,V,CR1000,101172
+NEEM,V,C-level (station file),13874
+NEEM,V,transmission (station folder),9688
+NEEM,TA5,CR1000,100958
+NEEM,TA5,transmission (station folder),9725
+NEEM,TA5,C-level (station file),100
+NEEM,TS1,CR1000,98761
+NEEM,TS1,C-level (station file),1992
+NEEM,TS2,CR1000,97387
+NEEM,TS2,C-level (station file),2776
+NEEM,TS3,CR1000,90786
+NEEM,TS3,C-level (station file),7539
+NEEM,TS4,CR1000,96119
+NEEM,TS4,C-level (station file),4466
+NEEM,TS5,CR1000,70777
+NEEM,TS5,C-level (station file),17350
+NEEM,TS6,CR1000,95234
+NEEM,TS6,C-level (station file),5033
+NEEM,TS7,CR1000,98438
+NEEM,TS7,C-level (station file),2367
+NEEM,TS8,CR1000,95469
+NEEM,TS8,C-level (station file),4330
+NEEM,TS9,CR1000,99385
+NEEM,TS9,C-level (station file),1418
+NEEM,TS10,CR1000,76458
+NEEM,TS10,C-level (station file),14665
+NEEM,HS1,C-level (station file),7701
+NEEM,HS2,C-level (station file),14214
+EastGRIP,TA1,CR1000,79745
+EastGRIP,TA2,CR1000,79745
+EastGRIP,TA3,CR1000,79745
+EastGRIP,TA4,CR1000,79745
+EastGRIP,RH1,CR1000,79745
+EastGRIP,RH2,CR1000,79745
+EastGRIP,VW1,CR1000,79745
+EastGRIP,VW2,CR1000,79745
+EastGRIP,DW1,CR1000,79745
+EastGRIP,DW2,CR1000,79745
+EastGRIP,P,CR1000,79745
+EastGRIP,HW1,CR1000,79737
+EastGRIP,HW2,CR1000,69502
+EastGRIP,V,CR1000,79745
+EastGRIP,TA5,CR1000,79745
+EastGRIP,ISWR,C-level (station file),7
+EastGRIP,OSWR,C-level (station file),4
+KAR,ISWR,2001_KAR01.DAT,18015
+KAR,OSWR,2001_KAR01.DAT,18015
+KAR,NR,2001_KAR01.DAT,18015
+KAR,TA1,2001_KAR01.DAT,18012
+KAR,TA1,C-level (Jason file),3
+KAR,TA2,2001_KAR01.DAT,18013
+KAR,TA2,C-level (Jason file),2
+KAR,TA3,2001_KAR01.DAT,18015
+KAR,TA4,C-level (Jason file),20
+KAR,RH1,2001_KAR01.DAT,18015
+KAR,RH2,C-level (Jason file),28
+KAR,VW1,C-level (Jason file),17967
+KAR,VW2,2001_KAR01.DAT,18015
+KAR,DW1,2001_KAR01.DAT,18015
+KAR,DW2,2001_KAR01.DAT,18015
+KAR,P,2001_KAR01.DAT,18015
+KAR,HS1,C-level (station file),18014
+KAR,HS2,C-level (station file),18014
+KAR,V,2001_KAR01.DAT,18015
+KAR,HW1,C-level (station file),18014
+KAR,HW2,C-level (station file),18014
+KAR,TS1,C-level (Jason file),18014
+KAR,TS2,C-level (Jason file),18014
+KAR,TS3,C-level (Jason file),18014
+KAR,TS4,C-level (Jason file),18014
+KAR,TS5,C-level (Jason file),18014
+KAR,TS6,C-level (Jason file),18014
+KAR,TS7,C-level (Jason file),18014
+KAR,TS8,C-level (Jason file),18014
+KAR,TS9,C-level (Jason file),18014
+KAR,TS10,C-level (Jason file),18014
+KULU,ISWR,logger (L0M),8972
+KULU,OSWR,logger (L0M),8972
+KULU,NR,logger (L0M),8134
+KULU,TA1,logger (L0M),3196
+KULU,TA2,logger (L0M),6875
+KULU,TA3,logger (L0M),4481
+KULU,TA4,logger (L0M),4501
+KULU,RH1,logger (L0M),7744
+KULU,RH2,logger (L0M),4383
+KULU,VW1,logger (L0M),7198
+KULU,VW2,logger (L0M),7182
+KULU,DW1,logger (L0M),5024
+KULU,DW2,logger (L0M),3899
+KULU,P,logger (L0M),8810
+KULU,HS1,logger (L0M),6296
+KULU,V,logger (L0M),8778
+KULU,HW1,logger (L0M),10867
+KULU,HW2,logger (L0M),10867
+Aurora,ISWR,2001_AWSAUR01.DAT,5536
+Aurora,ISWR,2000_aurora.dat,2015
+Aurora,ISWR,C-level (Jason file),20
+Aurora,OSWR,C-level (Jason file),4698
+Aurora,NR,2001_AWSAUR01.DAT,5536
+Aurora,NR,2000_aurora.dat,2015
+Aurora,NR,C-level (Jason file),20
+Aurora,TA1,2001_AWSAUR01.DAT,5536
+Aurora,TA1,2000_aurora.dat,2015
+Aurora,TA3,2001_AWSAUR01.DAT,5536
+Aurora,TA3,2000_aurora.dat,2015
+Aurora,TA3,C-level (Jason file),20
+Aurora,RH1,2001_aurora.dat,5535
+Aurora,RH1,2000_aurora.dat,2015
+Aurora,RH1,C-level (Jason file),20
+Aurora,VW1,2001_AWSAUR01.DAT,5536
+Aurora,VW1,2000_aurora.dat,2015
+Aurora,VW1,C-level (Jason file),20
+Aurora,VW2,2001_AWSAUR01.DAT,5536
+Aurora,VW2,2000_aurora.dat,2015
+Aurora,VW2,C-level (Jason file),20
+Aurora,DW1,2001_AWSAUR01.DAT,5536
+Aurora,DW1,2000_aurora.dat,2015
+Aurora,DW1,C-level (Jason file),20
+Aurora,DW2,2001_AWSAUR01.DAT,5536
+Aurora,DW2,2000_aurora.dat,2015
+Aurora,DW2,C-level (Jason file),20
+Aurora,P,2001_aurora.dat,5535
+Aurora,P,2000_aurora.dat,2015
+Aurora,P,C-level (Jason file),13
+Aurora,HS1,C-level (station file),7566
+Aurora,V,2001_AWSAUR01.DAT,5536
+Aurora,V,2000_aurora.dat,2015
+Aurora,V,C-level (Jason file),20
+Aurora,HW1,C-level (station file),7571
+Aurora,HW2,C-level (station file),7571
+Petermann Glacier,ISWR,2006_PET_Camp.dat,17132
+Petermann Glacier,ISWR,2004_PET.DAT,16839
+Petermann Glacier,ISWR,C-level (station file),162
+Petermann Glacier,ISWR,2002_ PET_AWS.DAT,96
+Petermann Glacier,OSWR,2006_PET_Camp.dat,17131
+Petermann Glacier,OSWR,2004_PET.DAT,16839
+Petermann Glacier,OSWR,C-level (station file),165
+Petermann Glacier,OSWR,2002_ PET_AWS.DAT,96
+Petermann Glacier,NR,2006_PET_Camp.dat,17135
+Petermann Glacier,NR,2004_PET.DAT,8561
+Petermann Glacier,NR,2003_Pet AWS.dat,7650
+Petermann Glacier,NR,2003_PetermannAWS_1.dat,628
+Petermann Glacier,NR,2002_ PET_AWS.DAT,96
+Petermann Glacier,NR,C-level (station file),10
+Petermann Glacier,TA1,2006_PET_Camp.dat,17130
+Petermann Glacier,TA1,2004_PET.DAT,8561
+Petermann Glacier,TA1,2003_Pet AWS.dat,7629
+Petermann Glacier,TA1,2003_PetermannAWS_1.dat,626
+Petermann Glacier,TA1,C-level (station file),159
+Petermann Glacier,TA1,2002_ PET_AWS.DAT,96
+Petermann Glacier,TA2,2006_PET_Camp.dat,17129
+Petermann Glacier,TA2,2004_PET.DAT,8561
+Petermann Glacier,TA2,2003_Pet AWS.dat,7629
+Petermann Glacier,TA2,2003_PetermannAWS_1.dat,626
+Petermann Glacier,TA2,C-level (station file),160
+Petermann Glacier,TA2,2002_ PET_AWS.DAT,96
+Petermann Glacier,TA3,C-level (station file),34127
+Petermann Glacier,TA4,C-level (station file),34093
+Petermann Glacier,RH1,C-level (station file),34043
+Petermann Glacier,RH2,C-level (station file),33966
+Petermann Glacier,VW1,2006_PET_Camp.dat,17135
+Petermann Glacier,VW1,2004_PET.DAT,8561
+Petermann Glacier,VW1,2003_Pet AWS.dat,7726
+Petermann Glacier,VW1,2003_PetermannAWS_1.dat,631
+Petermann Glacier,VW1,C-level (station file),4
+Petermann Glacier,VW2,2006_PET_Camp.dat,17135
+Petermann Glacier,VW2,2004_PET.DAT,8561
+Petermann Glacier,VW2,2003_Pet AWS.dat,7726
+Petermann Glacier,VW2,2003_PetermannAWS_1.dat,631
+Petermann Glacier,VW2,C-level (station file),5
+Petermann Glacier,DW1,C-level (station file),33946
+Petermann Glacier,DW2,C-level (station file),33906
+Petermann Glacier,P,C-level (station file),7963
+Petermann Glacier,HS1,C-level (station file),34225
+Petermann Glacier,HS2,C-level (station file),22573
+Petermann Glacier,V,C-level (station file),535
+Petermann Glacier,HW1,C-level (station file),34226
+Petermann Glacier,HW2,C-level (station file),34226
+Petermann Glacier,TS1,C-level (station file),32500
+Petermann Glacier,TS2,C-level (station file),32954
+Petermann Glacier,TS3,C-level (station file),33137
+Petermann Glacier,TS4,C-level (station file),32499
+Petermann Glacier,TS5,C-level (station file),34225
+Petermann Glacier,TS6,C-level (station file),34225
+Petermann Glacier,TS7,C-level (station file),34212
+Petermann Glacier,TS8,C-level (station file),34225
+Petermann Glacier,TS9,C-level (station file),34225
+Petermann Glacier,TS10,C-level (station file),34225
+Petermann ELA,ISWR,CR1000,48984
+Petermann ELA,ISWR,transmission (station folder),17132
+Petermann ELA,ISWR,C-level (station file),5209
+Petermann ELA,ISWR,2004_PET_el..DAT,5134
+Petermann ELA,ISWR,2008_PET_ELA.dat,843
+Petermann ELA,ISWR,2006_Pet_ela_06.dat,17
+Petermann ELA,OSWR,CR1000,48984
+Petermann ELA,OSWR,transmission (station folder),17089
+Petermann ELA,OSWR,C-level (station file),5208
+Petermann ELA,OSWR,2004_PET_el..DAT,5134
+Petermann ELA,OSWR,2008_PET_ELA.dat,842
+Petermann ELA,OSWR,2006_Pet_ela_06.dat,17
+Petermann ELA,NR,CR1000,48984
+Petermann ELA,NR,transmission (station folder),17269
+Petermann ELA,NR,C-level (station file),5212
+Petermann ELA,NR,2004_PET_el..DAT,5134
+Petermann ELA,NR,2008_PET_ELA.dat,846
+Petermann ELA,NR,2006_Pet_ela_06.dat,17
+Petermann ELA,TA1,CR1000,27322
+Petermann ELA,TA1,transmission (station folder),17238
+Petermann ELA,TA1,C-level (station file),5768
+Petermann ELA,TA1,2004_PET_el..DAT,5131
+Petermann ELA,TA1,2008_PET_ELA.dat,841
+Petermann ELA,TA1,2006_Pet_ela_06.dat,17
+Petermann ELA,TA2,CR1000,27322
+Petermann ELA,TA2,transmission (station folder),17193
+Petermann ELA,TA2,C-level (station file),5767
+Petermann ELA,TA2,2004_PET_el..DAT,5131
+Petermann ELA,TA2,2008_PET_ELA.dat,842
+Petermann ELA,TA2,2006_Pet_ela_06.dat,17
+Petermann ELA,TA3,CR1000,48984
+Petermann ELA,TA3,transmission (station folder),17023
+Petermann ELA,TA3,C-level (station file),6011
+Petermann ELA,TA3,2004_PET_el..DAT,5134
+Petermann ELA,TA3,2008_PET_ELA.dat,847
+Petermann ELA,TA3,2006_Pet_ela_06.dat,17
+Petermann ELA,TA3,2008_Pet.dat,1
+Petermann ELA,TA4,CR1000,48984
+Petermann ELA,TA4,transmission (station folder),17021
+Petermann ELA,TA4,C-level (station file),6000
+Petermann ELA,TA4,2004_PET_el..DAT,5134
+Petermann ELA,TA4,2008_PET_ELA.dat,847
+Petermann ELA,TA4,2006_Pet_ela_06.dat,17
+Petermann ELA,TA4,2008_Pet.dat,1
+Petermann ELA,RH1,CR1000,48984
+Petermann ELA,RH1,transmission (station folder),17087
+Petermann ELA,RH1,C-level (station file),6001
+Petermann ELA,RH1,2004_PET_el..DAT,5134
+Petermann ELA,RH1,2008_PET_ELA.dat,847
+Petermann ELA,RH1,2006_Pet_ela_06.dat,17
+Petermann ELA,RH2,CR1000,48984
+Petermann ELA,RH2,transmission (station folder),17056
+Petermann ELA,RH2,C-level (station file),6001
+Petermann ELA,RH2,2004_PET_el..DAT,5134
+Petermann ELA,RH2,2008_PET_ELA.dat,847
+Petermann ELA,RH2,2006_Pet_ela_06.dat,17
+Petermann ELA,VW1,CR1000,48984
+Petermann ELA,VW1,transmission (station folder),17104
+Petermann ELA,VW1,C-level (station file),5180
+Petermann ELA,VW1,2004_PET_el..DAT,5134
+Petermann ELA,VW1,2008_PET_ELA.dat,848
+Petermann ELA,VW1,2006_Pet_ela_06.dat,17
+Petermann ELA,VW2,CR1000,48984
+Petermann ELA,VW2,transmission (station folder),17096
+Petermann ELA,VW2,C-level (station file),5180
+Petermann ELA,VW2,2004_PET_el..DAT,5134
+Petermann ELA,VW2,2008_PET_ELA.dat,847
+Petermann ELA,VW2,2006_Pet_ela_06.dat,17
+Petermann ELA,DW1,CR1000,48984
+Petermann ELA,DW1,transmission (station folder),16740
+Petermann ELA,DW1,C-level (station file),5149
+Petermann ELA,DW1,2004_PET_el..DAT,5134
+Petermann ELA,DW1,2008_PET_ELA.dat,847
+Petermann ELA,DW1,2006_Pet_ela_06.dat,17
+Petermann ELA,DW2,CR1000,48984
+Petermann ELA,DW2,transmission (station folder),17126
+Petermann ELA,DW2,2004_PET_el..DAT,5134
+Petermann ELA,DW2,C-level (station file),5104
+Petermann ELA,DW2,2008_PET_ELA.dat,847
+Petermann ELA,DW2,2006_Pet_ela_06.dat,17
+Petermann ELA,P,CR1000,48982
+Petermann ELA,P,transmission (station folder),15743
+Petermann ELA,P,C-level (station file),10889
+Petermann ELA,P,2008_PET_ELA.dat,847
+Petermann ELA,P,2006_Pet_ela_06.dat,17
+Petermann ELA,HW1,CR1000,48900
+Petermann ELA,HW1,C-level (station file),11636
+Petermann ELA,HW2,CR1000,47796
+Petermann ELA,HW2,C-level (station file),11638
+Petermann ELA,V,CR1000,48984
+Petermann ELA,V,transmission (station folder),16393
+Petermann ELA,V,C-level (station file),5205
+Petermann ELA,V,2004_PET_el..DAT,5134
+Petermann ELA,V,2008_PET_ELA.dat,847
+Petermann ELA,V,2006_Pet_ela_06.dat,17
+Petermann ELA,V,2008_Pet.dat,1
+Petermann ELA,TS1,C-level (station file),5712
+Petermann ELA,TS1,2004_PET_el..DAT,5134
+Petermann ELA,TS1,2008_PET_ELA.dat,842
+Petermann ELA,TS1,2006_Pet_ela_06.dat,17
+Petermann ELA,TS1,2008_Pet.dat,1
+Petermann ELA,TS2,C-level (station file),5669
+Petermann ELA,TS2,2004_PET_el..DAT,5134
+Petermann ELA,TS2,2006_Pet_ela_06.dat,17
+Petermann ELA,TS2,2008_PET_ELA.dat,1
+Petermann ELA,TS3,C-level (station file),5669
+Petermann ELA,TS3,2004_PET_el..DAT,5134
+Petermann ELA,TS3,2006_Pet_ela_06.dat,17
+Petermann ELA,TS3,2008_PET_ELA.dat,1
+Petermann ELA,TS4,C-level (station file),5669
+Petermann ELA,TS4,2004_PET_el..DAT,5134
+Petermann ELA,TS4,2006_Pet_ela_06.dat,17
+Petermann ELA,TS4,2008_PET_ELA.dat,1
+Petermann ELA,TS5,C-level (station file),5670
+Petermann ELA,TS5,2004_PET_el..DAT,5132
+Petermann ELA,TS5,2006_Pet_ela_06.dat,17
+Petermann ELA,TS5,2008_PET_ELA.dat,1
+Petermann ELA,TS6,C-level (station file),5669
+Petermann ELA,TS6,2004_PET_el..DAT,5134
+Petermann ELA,TS6,2006_Pet_ela_06.dat,17
+Petermann ELA,TS6,2008_PET_ELA.dat,1
+Petermann ELA,TS7,C-level (station file),5669
+Petermann ELA,TS7,2004_PET_el..DAT,5133
+Petermann ELA,TS7,2006_Pet_ela_06.dat,17
+Petermann ELA,TS7,2008_PET_ELA.dat,1
+Petermann ELA,TS8,C-level (station file),5669
+Petermann ELA,TS8,2004_PET_el..DAT,5134
+Petermann ELA,TS8,2006_Pet_ela_06.dat,17
+Petermann ELA,TS8,2008_PET_ELA.dat,1
+Petermann ELA,TS9,C-level (station file),5673
+Petermann ELA,TS9,2004_PET_el..DAT,5130
+Petermann ELA,TS9,2006_Pet_ela_06.dat,17
+Petermann ELA,TS9,2008_PET_ELA.dat,1
+Petermann ELA,TS10,C-level (station file),5672
+Petermann ELA,TS10,2004_PET_el..DAT,5130
+Petermann ELA,TS10,2006_Pet_ela_06.dat,17
+Petermann ELA,TS10,2008_PET_ELA.dat,13
+Petermann ELA,HS1,C-level (station file),11636
+Petermann ELA,HS2,C-level (station file),11638
+LAR1,ISWR,logger (L0M),23302
+LAR1,OSWR,logger (L0M),23302
+LAR1,NR,logger (L0M),23362
+LAR1,TA1,logger (L0M),25460
+LAR1,TA2,logger (L0M),25435
+LAR1,TA3,logger (L0M),25474
+LAR1,TA4,logger (L0M),25474
+LAR1,RH1,logger (L0M),25215
+LAR1,RH2,logger (L0M),25191
+LAR1,VW1,logger (L0M),22362
+LAR1,VW2,logger (L0M),22010
+LAR1,DW1,logger (L0M),22287
+LAR1,DW2,logger (L0M),21564
+LAR1,P,logger (L0M),25130
+LAR1,HS1,logger (L0M),24043
+LAR1,HS1,C-level (station file),6624
+LAR1,HS2,logger (L0M),21557
+LAR1,HS2,C-level (station file),6763
+LAR1,V,logger (L0M),22563
+LAR1,TA5,logger (L0M),22546
+LAR1,HW1,logger (L0M),24043
+LAR1,HW1,C-level (station file),6720
+LAR1,HW2,logger (L0M),21557
+LAR1,HW2,C-level (station file),7296
+LAR2,ISWR,logger (L0M),18381
+LAR2,OSWR,logger (L0M),18381
+LAR2,NR,logger (L0M),18250
+LAR2,TA1,logger (L0M),19601
+LAR2,TA2,logger (L0M),19623
+LAR2,TA3,logger (L0M),19654
+LAR2,TA4,logger (L0M),19654
+LAR2,RH1,logger (L0M),19517
+LAR2,RH2,logger (L0M),19519
+LAR2,VW1,logger (L0M),18209
+LAR2,VW2,logger (L0M),18263
+LAR2,DW1,logger (L0M),17991
+LAR2,DW2,logger (L0M),18215
+LAR2,P,logger (L0M),19529
+LAR2,HS1,logger (L0M),17099
+LAR2,HS2,logger (L0M),22379
+LAR2,V,logger (L0M),18361
+LAR2,TA5,logger (L0M),18346
+LAR2,HW1,logger (L0M),17099
+LAR2,HW1,C-level (station file),5288
+LAR2,HW2,logger (L0M),22379
+LAR2,HW2,C-level (station file),8
+LAR3,ISWR,logger (L0M),8551
+LAR3,OSWR,logger (L0M),9739
+LAR3,NR,logger (L0M),12613
+LAR3,TA1,logger (L0M),13549
+LAR3,TA2,logger (L0M),13550
+LAR3,TA3,logger (L0M),13564
+LAR3,TA4,logger (L0M),10922
+LAR3,RH1,logger (L0M),13564
+LAR3,RH2,logger (L0M),12471
+LAR3,VW1,logger (L0M),12553
+LAR3,VW2,logger (L0M),12546
+LAR3,DW1,logger (L0M),12534
+LAR3,DW2,logger (L0M),12477
+LAR3,P,logger (L0M),13570
+LAR3,HS1,logger (L0M),14057
+LAR3,HS2,logger (L0M),14030
+LAR3,V,logger (L0M),12625
+LAR3,TA5,logger (L0M),12603
+LAR3,HW1,logger (L0M),14057
+LAR3,HW1,C-level (station file),13
+LAR3,HW2,logger (L0M),14030
+LAR3,HW2,C-level (station file),40

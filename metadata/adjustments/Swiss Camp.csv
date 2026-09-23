@@ -20,8 +20,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20120510T00:00:00+00:00,,ISWR,swap_with_OSWR,0,Not reported. Manual shift adj by bav.
 2005-05-09T00:00:00+00:00,,RH1,swap_with_RH2, 0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/110
 
-# calibration of OSWR with LiCor offset
-2009-05-07T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their sidecars (calibration.ISWR/OSWR in the <file>.toml),
+# those of the C-level files in metadata/c_level_corrections.csv.
 
 # air temp correction on HW1 and HW2
 1996-01-01T00:00:00+00:00,1996-08-01T00:00:00+00:00,HW1,air_temp_sonic_anticorrection,0,
@@ -40,8 +40,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
-1996-01-01T00:00:00+00:00,2011-01-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
-1996-01-01T00:00:00+00:00,2011-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
+# RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.
 
 2019-11-15T00:00:00+00:00,,P,min_filter,856,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/46
 

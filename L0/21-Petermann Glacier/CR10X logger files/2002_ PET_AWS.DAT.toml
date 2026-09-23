@@ -1,0 +1,35 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 212
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "_", "_", "_", "_", "_", "_", "_", "_", "_"]
+[[array.run]]
+row_from = 0
+row_to = 262
+start_year = 2002
+note = "dated from the file name only (outside the C-level period)"
+
+[calibration.ISWR]
+scale_pos = 186.45
+scale_neg = 186.45
+add = 0
+source = "implied by C-level (1 runs); no station calibration in the repository"
+
+[calibration.NR]
+scale_pos = 9.35
+scale_neg = 11.61
+add = 0
+source = "implied by C-level (4 runs); no station calibration in the repository"
+
+[calibration.OSWR]
+scale_pos = 188.95
+scale_neg = 188.95
+add = 0
+source = "implied by C-level (1 runs); no station calibration in the repository"
+
+
+[[ignore_rows]]
+start = "1900-01-01 00:00:00"
+end = "2002-06-03 23:00:00"
+reason = "records dated before the installation of the station (2002-06-04, location table)"
