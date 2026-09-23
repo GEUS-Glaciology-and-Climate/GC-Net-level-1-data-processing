@@ -217,7 +217,7 @@ def read_c_file(c_file_path, c_file_header_str):
     print("Now reading: ", c_file_path)
     dfc = pd.read_csv(
         c_file_path,
-        sep="\s+",
+        sep=r"\s+",
         names=c_file_header_str,
         header=None,
         na_values=[999.0, -999, 999.99, 999.999],
@@ -448,7 +448,7 @@ def load_old_logger_file(plot=True):
         print('resolution', np.unique(np.diff(df_rad.index)))
 
         # interpolating to hourly values
-        df_met = df_met.resample('H').mean().ffill(limit=3)
+        df_met = df_met.resample('h').mean().ffill(limit=3)
 
         # plotting
         if plot:
@@ -592,7 +592,7 @@ def load_old_logger_file(plot=True):
     print('resolution', np.unique(np.diff(df_rad.index)))
 
     df_all = pd.concat((df_all, df_met[[ 'VW1', 'VW1_max', 'TA1', 'DW1']]))
-    df_all = pd.concat((df_all, df_rad.resample('H',label='right').mean()[['ISWR', 'ISWR2', 'OSWR', 'NR',]]))
+    df_all = pd.concat((df_all, df_rad.resample('h',label='right').mean()[['ISWR', 'ISWR2', 'OSWR', 'NR',]]))
 
     # %%
     ################################## 3 hours ###################################
@@ -611,7 +611,7 @@ def load_old_logger_file(plot=True):
     print('end date', df_93.index[-1])
     print('resolution', np.unique(np.diff(df_93.index)))
     # interpolating to hourly values
-    df_93 = df_93.resample('H').mean().ffill(limit=3)
+    df_93 = df_93.resample('h').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_93))
     ############################ 3 hours #####################################
     filename='1993_MET_90_3h_doy.hh.DAT'
@@ -626,12 +626,12 @@ def load_old_logger_file(plot=True):
     print('end date', df_90.index[-1])
     print('resolution', np.unique(np.diff(df_90.index)))
     # interpolating to hourly values
-    df_93 = df_93.resample('H').mean().ffill(limit=3)
+    df_93 = df_93.resample('h').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_90))
 
     ############################ 3 hours #####################################
     filename='1994_T_W_R_93-94_3h.DAT'
-    df_94_twr = pd.read_csv(path + filename, header=None, delim_whitespace=True)
+    df_94_twr = pd.read_csv(path + filename, header=None, sep=r'\s+')
     df_94_twr=df_94_twr.rename(columns={0:'JD', 1:'VW1', 2:'VW1_max',
                                         3:'DW1', 4:'TA1', 5:'ISWR', 6:'ISWR2',
                                         7:'OSWR', 8:'alb1', 9:'alb2', 10:'NR',
@@ -650,7 +650,7 @@ def load_old_logger_file(plot=True):
     print('end date', df_94_twr.index[-1])
     print('resolution', np.unique(np.diff(df_94_twr.index)))
     # interpolating to hourly values
-    df_94_twr = df_94_twr.resample('H').mean().ffill(limit=3)
+    df_94_twr = df_94_twr.resample('h').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_94_twr))
     ############################ 3 h #######################################
     filename = '1993_TOWER.DAT'
@@ -672,7 +672,7 @@ def load_old_logger_file(plot=True):
     print('end date', df_1993_tower.index[-1])
     print('resolution', np.unique(np.diff(df_1993_tower.index)))
     # interpolating to hourly values
-    df_1993_tower = df_1993_tower.resample('H').mean().ffill(limit=3)
+    df_1993_tower = df_1993_tower.resample('h').mean().ffill(limit=3)
     df_all = pd.concat((df_all, df_1993_tower))
 
     ########################### hourly ###########################################
@@ -687,11 +687,11 @@ def load_old_logger_file(plot=True):
     print('start date', df_91.index[0])
     print('end date', df_91.index[-1])
     print('resolution', np.unique(np.diff(df_91.index)))
-    df_all = df_91.resample('H',label='right').mean().combine_first(df_all)
+    df_all = df_91.resample('h',label='right').mean().combine_first(df_all)
 
     ############################ hourly ######################################
     filename= '1994_RAD_ALL_93-94_h.DAT'
-    df_94_rad = pd.read_csv(path + filename,  delim_whitespace=True)
+    df_94_rad = pd.read_csv(path + filename,  sep=r'\s+')
     df_94_rad[df_94_rad.ISWR<0] = np.nan
     df_94_rad[df_94_rad.ISWR2<0] = np.nan
     df_94_rad[df_94_rad.OSWR<0] = np.nan
@@ -714,7 +714,7 @@ def load_old_logger_file(plot=True):
     ######################### 30 min #######################################
     filename = '1990_RAD90.DAT'
     df_rad90 = pd.read_csv(path + filename,
-                           delim_whitespace=True, header=None)
+                           sep=r'\s+', header=None)
     df_rad90[df_rad90==-999] = np.nan
     df_rad90 = df_rad90.rename(columns={0:'year', 1:'month', 2:'day',3:'hour',4:'minute'})
     df_rad90.year = df_rad90.year+1900
@@ -731,7 +731,7 @@ def load_old_logger_file(plot=True):
     ######################### 30 min #######################################
     filename='1990_SYNO90.DAT'
     df_syno = pd.read_csv(path+filename,
-                           delim_whitespace=True, header=None)
+                           sep=r'\s+', header=None)
     df_syno[df_syno==-99.9] = np.nan
     df_syno = df_syno.rename(columns={0:'day', 1:'month', 2:'hour',3:'minute'})
     df_syno['year'] = 1990
@@ -743,7 +743,7 @@ def load_old_logger_file(plot=True):
     print('end date', df_syno.index[-1])
     print('resolution', np.unique(np.diff(df_syno.index[df_syno.index.notnull()])))
 
-    df_syno = df_syno.resample('H', label='right').mean()
+    df_syno = df_syno.resample('h', label='right').mean()
     df_rad90 = pd.concat((df_rad90, df_syno))
     df_all = pd.concat((df_all, df_rad90))
 

@@ -9,5 +9,7 @@ t0,t1,variable,flag,comment,URL_graphic
 1998-11-11T00:00:00+00:00,1999-04-01T00:00:00+00:00,HW1,NAN,Manually flagged by bav,
 1998-11-11T00:00:00+00:00,1999-04-01T00:00:00+00:00,HW2,NAN,Manually flagged by bav,
 
+2019-01-10T00:00:00+00:00,2025-01-01T00:00:00+00:00,DW2,NAN,Wind vane 2 saturating: never reads below ~45 or above ~327 deg after this date,
+
 2010-05-18T00:00:00+00:00,2025-01-01T00:00:00+00:00,^TS[^_]+$,NAN,Manually flagged by bav,
 1999-05-01T00:00:00+00:00,1999-05-15T00:00:00+00:00,^TS[^_]+$,NAN,Manually flagged by bav,

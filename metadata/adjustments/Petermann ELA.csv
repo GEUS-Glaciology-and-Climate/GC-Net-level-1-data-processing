@@ -27,3 +27,6 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 2016-01-01T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2016-01-01T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
+
+# time shifts
+2005-04-09T00:00:00+00:00, 2005-10-16T00:00:00+00:00, *, time_shift, -112, Logger clock offset found and confirmed 2026-09-22 against CARRA reanalysis surface pressure (clean day-level signal r=0.96-0.98 vs near-zero unshifted) with an additional intra-day refinement from CARRA/ISWR (r=0.95). See out/network_review_2026-09-22/report.md.

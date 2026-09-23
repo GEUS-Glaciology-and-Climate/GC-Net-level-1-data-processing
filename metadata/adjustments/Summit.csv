@@ -3,7 +3,15 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # calibration of OSWR with LiCor offset
 2009-05-19T00:00:00+00:00,,OSWR,multiply,0.91, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
 
-2016-05-22T00:00:00+00:00,,P,add,-61,Manual shift suggested by bav. https://github.com/GEUS-PROMICE/GC-Net-level-1-data-processing/issues/14
+# Treat the pressure sensor installed on 2016-05-22 as a CS106 read with the CS105 program settings.
+# The logger program (p_flag = 1) computes  P_L0M = 0.184*mV + 200 + 400 (CS105, 600-1060 hPa) while a CS106 (500-1100 hPa)
+# needs  P = 0.24*mV + 100 + 400, so  P_true = 500 + (0.24/0.184)*(P_L0M - 600) = 1.3043*P_L0M - 282.6
+# (gives 668.3 hPa for the post-2016 mean of P_L0M = 729, i.e. the same mean as the -61 shift, but with a 30% larger amplitude:
+# post-2016 hourly SD 8.5 hPa vs 12.3 hPa in 2009-2012, day-to-day change 3.1 vs 5.2 hPa).
+2016-05-22T00:00:00+00:00,,P,add,-600,CS106 read as CS105: remove CS105 offset
+2016-05-22T00:00:00+00:00,,P,multiply,1.3043,CS106 read as CS105: rescale 0.24/0.184
+2016-05-22T00:00:00+00:00,,P,add,500,CS106 read as CS105: apply CS106 offset
+# On the logger side: if the sensor is a CS106 the program must be run with p_flag = 0 (VoltSe multiplier 0.24, offset 100).
 
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,

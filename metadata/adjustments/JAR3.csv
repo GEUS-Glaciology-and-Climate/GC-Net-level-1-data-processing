@@ -1,2 +1,8 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-2002-05-06T15:00:00+00:00,,P,add,70, continuity  (bav)
+# Amplitude (not just offset) error from 2002-05-06 (matches the previous mean-only patch below)
+# through the end of the record: raw P varies at only ~0.57x the true amplitude (slope vs CARRA
+# reanalysis surface pressure, r=0.96, n=751 days). No sensor-swap documentation found (checked
+# 2026-09-22; JAR3 has no CR1000 program files, only the CR10X logger files). Empirical regression
+# fit against CARRA replaces the previous mean-only "add 70" patch. See out/network_review_2026-09-22/report.md.
+2002-05-06T15:00:00+00:00,,P,multiply,1.7796,Empirical scale correction fit to CARRA reanalysis surface pressure (r=0.96); see out/network_review_2026-09-22/report.md.
+2002-05-06T15:00:00+00:00,,P,add,-648.88,Empirical scale correction fit to CARRA reanalysis surface pressure (r=0.96); see out/network_review_2026-09-22/report.md.

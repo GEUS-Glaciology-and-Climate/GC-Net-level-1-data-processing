@@ -1787,17 +1787,18 @@ def extrapolate_variable_standard_height(df, var=["TA1", "TA2"], log=False,
 
 def filter_zero_gradient(df_out):
     # Filter frozen values
-    # default settings:
-    thresh = 0.000001
-    length_frozen = 6
-    not_in_dark_season = False
     var_list = [
         "VW1", "VW2", "DW1", "DW2", "TA1", "TA1", "TA2",
-        "TA3", "TA4", "P", "ISWR", "OSWR",
+        "TA3", "TA4", "P", "ISWR", "OSWR", "NR", "RH1", "RH2",
     ]
     for var in var_list:
         if var not in df_out.columns:
             continue
+        # default settings (reset every iteration: previously thresh/length_frozen set for
+        # ISWR/OSWR leaked into any variable placed after them in var_list)
+        thresh = 0.000001
+        length_frozen = 6
+        not_in_dark_season = False
         if var in ["HW1", "HW2"]:
             length_frozen = 5 * 24
         if var in ["ISWR", "OSWR"]:
@@ -1806,6 +1807,17 @@ def filter_zero_gradient(df_out):
             not_in_dark_season = True
 
         ind = np.abs(df_out[var].diff().values) < thresh
+
+        if var in ("RH1", "RH2"):
+            # A sensor pinned near 100% can be genuine (super)saturation/riming rather than
+            # a fault -- the recovery time after riming is not well known, so those runs are
+            # deliberately left alone here. Confirmed sensor faults instead cluster at 0% or
+            # at mid-range values (checked network-wide 2026-09-22: ~85-90% of otherwise-
+            # flaggable flat runs sit exactly at 100.0%, but stations like DYE-2 RH2 (41897 h),
+            # JAR2 RH1 (8760 h) and Swiss Camp 10m RH1 (9162 h) have large stuck-at-0%/mid-range
+            # populations well clear of the saturation cluster). See
+            # out/network_review_2026-09-22/report.md.
+            ind = ind & (df_out[var].values < 99)
 
         if not_in_dark_season:
             dark_month = df_out["ISWR"].groupby(df_out.index.month).mean() < 5
@@ -2345,7 +2357,7 @@ def find_thresholds(stid: str) -> pd.DataFrame:
         fig, ax = plt.subplots(figsize=(12,4))
 
         # monthly min/max gray band
-        m = df[var].resample("M")
+        m = df[var].resample("ME")
         lo_band = m.min()
         hi_band = m.max()
         ax.fill_between(lo_band.index, lo_band, hi_band,
