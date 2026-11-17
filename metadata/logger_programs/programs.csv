@@ -1,0 +1,198 @@
+station,file,path,type,logger,execution_interval,n_measurements,output_arrays,pressure_sensor,first_comment_lines
+00-Swiss Camp 10m,1993_KLIMA.DLD,L0/00-Swiss Camp 10m/Logger programs/1993_KLIMA.DLD,.dld,21X,table 1: 15 s;table 2: 600 s,5,,,KLIMA.DLD
+00-Swiss Camp 10m,1993_KLIMA_OR.DLD,L0/00-Swiss Camp 10m/Logger programs/1993_KLIMA_OR.DLD,.dld,21X,table 1: 15 s;table 2: 0 s,3,,,KLIMA.DLD
+00-Swiss Camp 10m,1994_TOWER.DLD,L0/00-Swiss Camp 10m/Logger programs/1994_TOWER.DLD,.dld,21X,table 1: 15 s;table 2: 600 s,7,,,TOWER.DLD
+00-Swiss Camp 10m,1995_TOWER.DLD,L0/00-Swiss Camp 10m/Logger programs/1995_TOWER.DLD,.dld,21X,table 1: 15 s;table 2: 600 s,7,,,TOWER.DLD
+00-Swiss Camp 10m,1997_TOWER.DLD,L0/00-Swiss Camp 10m/Logger programs/1997_TOWER.DLD,.dld,21X,table 1: 15 s;table 2: 600 s,7,,,A:TOWER.DLD
+00-Swiss Camp 10m,1998_TOWER.DLD,L0/00-Swiss Camp 10m/Logger programs/1998_TOWER.DLD,.dld,21X,table 1: 15 s;table 2: 600 s,7,,,A:TOWER.DLD
+00-Swiss Camp 10m,1998_TOWER98.CSI,L0/00-Swiss Camp 10m/Logger programs/1998_TOWER98.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,6,21:26 columns,,"{CR10} | Swiss Camp 10 meter Tower, new set up | 2x RM Young wind fan, 2x CS500 T/H"
+00-Swiss Camp 10m,1998_TOWER98.DLD,L0/00-Swiss Camp 10m/Logger programs/1998_TOWER98.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,6,21:26 columns,,TOWER98.DLD | $ | $
+00-Swiss Camp 10m,2006_ETH_tower.dld,L0/00-Swiss Camp 10m/Logger programs/2006_ETH_tower.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,6,21:26 columns,,
+00-Swiss Camp 10m,2007_sc 10m.dld,L0/00-Swiss Camp 10m/Logger programs/2007_sc 10m.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,6,21:26 columns,,
+00-Swiss Camp 10m,2008_sc10m.dld,L0/00-Swiss Camp 10m/Logger programs/2008_sc10m.dld,.dld,CR10,table 1: 15 s;table 2: 60 s,6,21:26 columns,,
+00-Swiss Camp 10m,2013_10M SC TOWER.CSI,L0/00-Swiss Camp 10m/Logger programs/2013_10M SC TOWER.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,6,21:26 columns,,{CR10} | 10 m tower at Swiss Camp | short waver in and out
+00-Swiss Camp 10m,2013_10m SC tower.dld,L0/00-Swiss Camp 10m/Logger programs/2013_10m SC tower.dld,.dld,CR10,table 1: 15 s;table 2: 60 s,6,21:26 columns,,10m SC tower.dld | $ | $
+00-Swiss Camp 10m,2013_sc10m.dld,L0/00-Swiss Camp 10m/Logger programs/2013_sc10m.dld,.dld,CR10,table 1: 15 s;table 2: 60 s,6,21:26 columns,,
+01-Swiss Camp,AWSGOS95.DLD,L0/01-Swiss Camp/1995 GOES/Logger program/AWSGOS95.DLD,.dld,CR10,table 1: 15 s;table 2: 600 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",AWSGOS95.DLD
+01-Swiss Camp,GOES.CSI,L0/01-Swiss Camp/1995 GOES/Logger program/GOES.CSI,.csi,CR10,table 1: 10 s;table 2: 60 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | Program:GOES95 aero tower | Flag Usage:
+01-Swiss Camp,GOES.DLD,L0/01-Swiss Camp/1995 GOES/Logger program/GOES.DLD,.dld,CR10,table 1: 10 s;table 2: 60 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",GOES.DLD
+01-Swiss Camp,GOES95.DLD,L0/01-Swiss Camp/1995 GOES/Logger program/GOES95.DLD,.dld,CR10,table 1: 10 s;table 2: 60 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",GOES95.DLD
+01-Swiss Camp,GOES95WI.DLD,L0/01-Swiss Camp/1995 GOES/Logger program/GOES95WI.DLD,.dld,CR10,table 1: 15 s;table 2: 600 s,11,,,GOES95WI.DLD
+01-Swiss Camp,2001_SWISSAWS.DLD,L0/01-Swiss Camp/CR10X logger files/2001_SWISSAWS.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+01-Swiss Camp,2004_swissCamp04_old.dld,L0/01-Swiss Camp/CR10X logger files/2004_swissCamp04_old.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+01-Swiss Camp,2005_sc05.dld,L0/01-Swiss Camp/CR10X logger files/2005_sc05.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+01-Swiss Camp,2006_swc.dld,L0/01-Swiss Camp/CR10X logger files/2006_swc.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+01-Swiss Camp,2007_sc aws.dld,L0/01-Swiss Camp/CR10X logger files/2007_sc aws.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+01-Swiss Camp,2007_sc.dld,L0/01-Swiss Camp/CR10X logger files/2007_sc.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+01-Swiss Camp,2007_swc.dld,L0/01-Swiss Camp/CR10X logger files/2007_swc.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+01-Swiss Camp,1997_AWS.DLD,L0/01-Swiss Camp/Logger programs/1997_AWS.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,19,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS97.DLD | $ | $
+01-Swiss Camp,1997_AWS_OLD.DLD,L0/01-Swiss Camp/Logger programs/1997_AWS_OLD.DLD,.dld,,table 1: 15 s;table 2: 60 s,21,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+01-Swiss Camp,1997_SWISS97.CSI,L0/01-Swiss Camp/Logger programs/1997_SWISS97.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,19,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,1997_SWISS97.DLD,L0/01-Swiss Camp/Logger programs/1997_SWISS97.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,19,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS97.DLD | $ | $
+01-Swiss Camp,2000_SWISS00.CSI,L0/01-Swiss Camp/Logger programs/2000_SWISS00.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,15,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,2000_SWISS00.DLD,L0/01-Swiss Camp/Logger programs/2000_SWISS00.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS00.DLD | $ | $
+01-Swiss Camp,2000_SWISS98.CSI,L0/01-Swiss Camp/Logger programs/2000_SWISS98.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,20,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,2000_SWISS98.DLD,L0/01-Swiss Camp/Logger programs/2000_SWISS98.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,20,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS98.DLD | $ | $
+01-Swiss Camp,2000_SWISS99.CSI,L0/01-Swiss Camp/Logger programs/2000_SWISS99.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,20,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,2000_SWISS99.DLD,L0/01-Swiss Camp/Logger programs/2000_SWISS99.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,20,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS99.DLD | $ | $
+01-Swiss Camp,2000_SWISS99B.CSI,L0/01-Swiss Camp/Logger programs/2000_SWISS99B.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,20,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,2000_SWISS99B.DLD,L0/01-Swiss Camp/Logger programs/2000_SWISS99B.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,20,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS99B.DLD | $ | $
+01-Swiss Camp,2001_SWISS00.CSI,L0/01-Swiss Camp/Logger programs/2001_SWISS00.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,15,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,2001_SWISS00.dld,L0/01-Swiss Camp/Logger programs/2001_SWISS00.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS00.dld | $ | $
+01-Swiss Camp,AWSGOS96.CSI,L0/01-Swiss Camp/Logger programs/AWSGOS96.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,17,11:40 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,AWSGOS96.DLD,L0/01-Swiss Camp/Logger programs/AWSGOS96.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,17,11:40 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSGOS96.DLD | $ | $
+01-Swiss Camp,SWISS00.CSI,L0/01-Swiss Camp/Logger programs/SWISS00.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,15,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,SWISS00.dld,L0/01-Swiss Camp/Logger programs/SWISS00.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,16,11:37 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS00.dld | $ | $
+01-Swiss Camp,SWISS04.CSI,L0/01-Swiss Camp/Logger programs/SWISS04.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,SWISS04.dld,L0/01-Swiss Camp/Logger programs/SWISS04.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS04.dld | $ | $
+01-Swiss Camp,SWISS05.csi,L0/01-Swiss Camp/Logger programs/SWISS05.csi,.csi,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,SWISS05.dld,L0/01-Swiss Camp/Logger programs/SWISS05.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS05.dld | $ | $
+01-Swiss Camp,SWISS96.CSI,L0/01-Swiss Camp/Logger programs/SWISS96.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,19,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,SWISS96.DLD,L0/01-Swiss Camp/Logger programs/SWISS96.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,19,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS96.DLD | $ | $
+01-Swiss Camp,SWISS97.CSI,L0/01-Swiss Camp/Logger programs/SWISS97.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,19,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,SWISS97.DLD,L0/01-Swiss Camp/Logger programs/SWISS97.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,19,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS97.DLD | $ | $
+01-Swiss Camp,SWISS97O.CSI,L0/01-Swiss Camp/Logger programs/SWISS97O.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,19,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,SWISS97_winter.CSI,L0/01-Swiss Camp/Logger programs/SWISS97_winter.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,19,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,SWISS97_winter.DLD,L0/01-Swiss Camp/Logger programs/SWISS97_winter.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,19,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS97.DLD | $ | $
+01-Swiss Camp,SWISS98.CSI,L0/01-Swiss Camp/Logger programs/SWISS98.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,20,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+01-Swiss Camp,SWISS98.DLD,L0/01-Swiss Camp/Logger programs/SWISS98.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,20,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS98.DLD | $ | $
+01-Swiss Camp,TEST.DLD,L0/01-Swiss Camp/Logger programs/TEST.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,19,11:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+02-Crawford Point 1,1997_CR1.DLD,L0/02-Crawford Point 1/CR10X logger files/1997_CR1.DLD,.dld,,table 1: 15 s;table 2: 60 s,13,2:30 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+02-Crawford Point 1,2008_cp1.dld,L0/02-Crawford Point 1/CR10X logger files/2008_cp1.dld,.dld,CR10,table 1: 15 s;table 2: 60 s,19,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+02-Crawford Point 1,2002_AWSCP1OL.DLD,L0/02-Crawford Point 1/logger programs/2002_AWSCP1OL.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+02-Crawford Point 1,2005_cp1.dld,L0/02-Crawford Point 1/logger programs/2005_cp1.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,19,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+02-Crawford Point 1,2006_cp1.dld,L0/02-Crawford Point 1/logger programs/2006_cp1.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,19,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+02-Crawford Point 1,AWSGOS95.DLD,L0/02-Crawford Point 1/logger programs/AWSGOS95.DLD,.dld,CR10,table 1: 15 s;table 2: 600 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",AWSGOS95.DLD
+02-Crawford Point 1,AWSGOSCP.DLD,L0/02-Crawford Point 1/logger programs/AWSGOSCP.DLD,.dld,,table 1: 0 s;table 2: 0 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",
+03-NASA-U,2003_NASA_U.dld,L0/03-NASA-U/CR10X logger files/2003_NASA_U.dld,.dld,CR10X,table 1: 0 s;table 2: 0 s,0,,,
+03-NASA-U,2005_nasa-u.dld,L0/03-NASA-U/CR10X logger files/2005_nasa-u.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,32:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+03-NASA-U,AWSARGUN.DLD,L0/03-NASA-U/CR10X logger files/other files from 1995/AWSARGUN.DLD,.dld,CR10,table 1: 20 s;table 2: 600 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",AWSARGUN.DLD
+03-NASA-U,AWSARG98.CSI,L0/03-NASA-U/Logger programs/AWSARG98.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,16,32:17 columns | 32:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | version 03/20/1998 | --------------------------------------------------------------
+03-NASA-U,AWSARG98.DLD,L0/03-NASA-U/Logger programs/AWSARG98.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,16,31:17 columns | 32:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSARG98.DLD | $ | $
+03-NASA-U,NASA_U.dld,L0/03-NASA-U/Logger programs/NASA_U.dld,.dld,CR10X,table 1: 0 s;table 2: 0 s,0,,,
+04-GITS,AWSARG02.CSI,L0/04-GITS/logger programs/AWSARG02.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,18,212:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | version 05/27/2002 | --------------------------------------------------------------
+04-GITS,AWSARG02.DLD,L0/04-GITS/logger programs/AWSARG02.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,212:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSARG02.DLD | $ | $
+04-GITS,GITARG02.CSI,L0/04-GITS/logger programs/GITARG02.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,18,42:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | version 05/27/2002 | --------------------------------------------------------------
+04-GITS,GITARG02.DLD,L0/04-GITS/logger programs/GITARG02.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,42:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",GITARG02.dld | $ | $
+04-GITS,GIT_OLD.DLD,L0/04-GITS/logger programs/GIT_OLD.DLD,.dld,21X,table 1: 15 s;table 2: 60 s,16,5:17 columns | 52:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+05-Humboldt,2003_hum.dld,L0/05-Humboldt/CR10X logger files/2003_hum.dld,.dld,CR10,table 1: 15 s;table 2: 60 s,16,5:17 columns | 52:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+05-Humboldt,2008_hum.dld,L0/05-Humboldt/CR10X logger files/2008_hum.dld,.dld,CR10,table 1: 15 s;table 2: 60 s,16,5:17 columns | 52:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+06-Summit,2000_AWSSUM00.CSI,L0/06-Summit/Logger programs/2000_AWSSUM00.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | {CR10X} | excitation changed from 350 mV to 250 to extend measurement range to -72 C
+06-Summit,2000_AWSSUM00.DLD,L0/06-Summit/Logger programs/2000_AWSSUM00.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,,"CS105 (mult 0.184, range 600-1060 hPa)",AWSSUM00.DLD | $ | $
+06-Summit,2000_AWSSUM04.CSI,L0/06-Summit/Logger programs/2000_AWSSUM04.CSI,.csi,CR10X,table 1: 15 s;table 2: 10 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)","{CR10X} | Modified program for 1 m averaging and 15, 10 second logging for | Summit 2004 spring"
+06-Summit,2000_AWSSUM04.dld,L0/06-Summit/Logger programs/2000_AWSSUM04.dld,.dld,CR10X,table 1: 15 s;table 2: 10 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSSUM04.dld | $ | $
+06-Summit,2000_AWS_1.CSI,L0/06-Summit/Logger programs/2000_AWS_1.CSI,.csi,21X,table 1: 5 s;table 2: 0 s,5,,,"{21X} | Program for Summit, 2000 | Met One instruments; Temperature, humidity, wind speed and direction"
+06-Summit,2000_AWS_1.DLD,L0/06-Summit/Logger programs/2000_AWS_1.DLD,.dld,21X,table 1: 5 s;table 2: 0 s,5,,,AWS_1.DLD | $ | $
+06-Summit,2000_AWS_2.CSI,L0/06-Summit/Logger programs/2000_AWS_2.CSI,.csi,CR10X,table 1: 5 s;table 2: 0 s,5,,,"{CR10X} | Summit 2000 AWS station | Surface temperature, pressure, sonic height and"
+06-Summit,2000_AWS_2.DLD,L0/06-Summit/Logger programs/2000_AWS_2.DLD,.dld,CR10X,table 1: 5 s;table 2: 0 s,5,,,AWS_2.DLD | $ | $
+06-Summit,2003_Summit_040401.dld,L0/06-Summit/Logger programs/2003_Summit_040401.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+06-Summit,2004_1-min_summit_040408.dld,L0/06-Summit/Logger programs/2004_1-min_summit_040408.dld,.dld,CR10X,table 1: 15 s;table 2: 10 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+06-Summit,2004_Summit_040401.dld,L0/06-Summit/Logger programs/2004_Summit_040401.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+06-Summit,2005_sum.dld,L0/06-Summit/Logger programs/2005_sum.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+07-Tunu-N,2008_tunu.dld,L0/07-Tunu-N/logger programs/2008_tunu.dld,.dld,CR10,table 1: 15 s;table 2: 60 s,14,12:17 columns | 2:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+07-Tunu-N,EDDY.DLD,L0/07-Tunu-N/other instruments/1996 EDDY/EDDY.DLD,.dld,21X,table 1: 0.2 s;table 2: 10 s,6,,"CS105 (mult 0.184, range 600-1060 hPa)",EDDY.DLD
+07-Tunu-N,EDDY.csi,L0/07-Tunu-N/other instruments/1996 EDDY/EDDY.csi,.csi,21X,table 1: 0.2 s;table 2: 10 s,6,,"CS105 (mult 0.184, range 600-1060 hPa)",{21X}
+07-Tunu-N,RAD.DLD,L0/07-Tunu-N/other instruments/1996 RAD/RAD.DLD,.dld,21X,table 1: 10 s;table 2: 0 s,4,,,RAD.DLD
+07-Tunu-N,GND96.DLD,L0/07-Tunu-N/other instruments/1996 SNOW_TEM/GND96.DLD,.dld,21X,table 1: 5 s;table 2: 0 s,4,,,GND96.DLD
+08-DYE-2,2002_DYE-2.DLD,L0/08-DYE-2/Logger programs/2002_DYE-2.DLD,.dld,21X,table 1: 15 s;table 2: 60 s,16,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+08-DYE-2,2005_dye2.dld,L0/08-DYE-2/Logger programs/2005_dye2.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,11:41 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+08-DYE-2,2006_dye2.dld,L0/08-DYE-2/Logger programs/2006_dye2.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,11:41 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+08-DYE-2,AWSDY298.CSI,L0/08-DYE-2/Logger programs/AWSDY298.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,23,108:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsdy298.csi (cr10x)
+08-DYE-2,AWSDY298.DLD,L0/08-DYE-2/Logger programs/AWSDY298.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,23,108:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSDY298.DLD | $ | $
+09-JAR1,1998_JAR.DLD,L0/09-JAR1/CR10X logger files/1998_JAR.DLD,.dld,21X,table 1: 15 s;table 2: 60 s,14,9:25 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+09-JAR1,2005_jar1.dld,L0/09-JAR1/CR10X logger files/2005_jar1.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,9:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+09-JAR1,2006_jar1.dld,L0/09-JAR1/CR10X logger files/2006_jar1.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,9:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+09-JAR1,2008_jar1.dld,L0/09-JAR1/CR10X logger files/2008_jar1.dld,.dld,CR10X,table 1: 5 s;table 2: 60 s,18,9:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+10-Saddle,2005_saddle.dld,L0/10-Saddle/CR10X logger files/2005_saddle.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+10-Saddle,2006_saddle.dld,L0/10-Saddle/CR10X logger files/2006_saddle.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+11-South Dome,2005_south-dome05.dld,L0/11-South Dome/CR10X logger files/2005_south-dome05.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,11:41 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+11-South Dome,2007_S-dome.dld,L0/11-South Dome/CR10X logger files/2007_S-dome.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,11:41 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+12-NASA-E,2006_nasa_e.dld,L0/12-NASA-E/CR10X logger files/2006_nasa_e.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,14,12:17 columns | 2:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+13-CP2,1997_CR2.CSI,L0/13-CP2/logger programs/1997_CR2.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,14,,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos97.csi (cr10x)
+13-CP2,1997_CR2.DLD,L0/13-CP2/logger programs/1997_CR2.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,14,,"CS105 (mult 0.184, range 600-1060 hPa)",CR2.DLD | $ | $
+14-NGRIP,2005_ngrip.dld,L0/14-NGRIP/CR10X logger files/2005_ngrip.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,14,12:17 columns | 2:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+14-NGRIP,AWSARG98.CSI,L0/14-NGRIP/Logger programs/AWSARG98.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,16,31:17 columns | 32:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | version 03/20/1998 | --------------------------------------------------------------
+14-NGRIP,AWSARG98.DLD,L0/14-NGRIP/Logger programs/AWSARG98.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,16,31:17 columns | 32:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSARG98.DLD | $ | $
+14-NGRIP,GGU5N.DLD,L0/14-NGRIP/Logger programs/GGU5N.DLD,.dld,CR10,table 1: 10 s;table 2: 600 s,18,5:15 columns,,A:GGU5N.DLD
+15-NASA-SE,2002_NASA-SE.DLD,L0/15-NASA-SE/CR10X logger files/2002_NASA-SE.DLD,.dld,21X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+15-NASA-SE,2005_nasa-se.dld,L0/15-NASA-SE/CR10X logger files/2005_nasa-se.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+17-JAR2,2000_AWSGOSJ2.CSI,L0/17-JAR2/logger programs/2000_AWSGOSJ2.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | {CR10X} | excitation changed from 350 mV to 250 to extend measurement range to -72 C
+17-JAR2,2000_AWSGOSJ2.DLD,L0/17-JAR2/logger programs/2000_AWSGOSJ2.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSGOSJ2.DLD | $ | $
+17-JAR2,2002_JR202.DLD,L0/17-JAR2/logger programs/2002_JR202.DLD,.dld,,table 1: 15 s;table 2: 60 s,19,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+17-JAR2,2004_JAR2.dld,L0/17-JAR2/logger programs/2004_JAR2.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,19,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+17-JAR2,2005_jar2.dld,L0/17-JAR2/logger programs/2005_jar2.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,19,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+17-JAR2,2006_jar2.dld,L0/17-JAR2/logger programs/2006_jar2.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,19,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+19-JAR3,2003_JAR3.dld,L0/19-JAR3/CR10X logger files/2003_JAR3.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,19,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+21-Petermann Glacier,AWSARG02.CSI,L0/21-Petermann Glacier/Logger programs/AWSARG02.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,18,212:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | version 05/27/2002 | --------------------------------------------------------------
+21-Petermann Glacier,AWSARG02.DLD,L0/21-Petermann Glacier/Logger programs/AWSARG02.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,212:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSARG02.DLD | $ | $
+21-Petermann Glacier,PET_AWS.CSI,L0/21-Petermann Glacier/Logger programs/PET_AWS.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,20,212:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | version 05/27/2002 | --------------------------------------------------------------
+21-Petermann Glacier,PET_AWS.dld,L0/21-Petermann Glacier/Logger programs/PET_AWS.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,20,212:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",PET_AWS.dld | $ | $
+21-Petermann Glacier,PET_AWS_EL_03.CSI,L0/21-Petermann Glacier/Logger programs/PET_AWS_EL_03.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,18,222:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | version 05/27/2002 | --------------------------------------------------------------
+21-Petermann Glacier,PET_AWS_EL_03.dld,L0/21-Petermann Glacier/Logger programs/PET_AWS_EL_03.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,222:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",PET_AWS_EL_03.dld | $ | $
+21-Petermann Glacier,PET_PRT.CSI,L0/21-Petermann Glacier/Logger programs/PET_PRT.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,20,212:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | version 05/27/2002 | --------------------------------------------------------------
+21-Petermann Glacier,PET_PRT.DLD,L0/21-Petermann Glacier/Logger programs/PET_PRT.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,20,212:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",PET_PRT.DLD | $ | $
+21-Petermann Glacier,SMS_GPS.CSI,L0/21-Petermann Glacier/Logger programs/SMS_GPS.CSI,.csi,CR10X,table 1: 5 s;table 2: 0 s,1,,,{CR10X} | Program to read the Trimble SVeeSix GPS | Wiring:
+21-Petermann Glacier,SMS_GPS.DLD,L0/21-Petermann Glacier/Logger programs/SMS_GPS.DLD,.dld,CR10X,table 1: 5 s;table 2: 0 s,1,,,SMS_GPS.DLD | $ | $
+21-Petermann Glacier,SMS_PET1.CSI,L0/21-Petermann Glacier/Logger programs/SMS_PET1.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,10,,,{CR10X} | -------------------------------------------------------------------------- | Smart Stake Program for CR10X Datalogger
+21-Petermann Glacier,SMS_PET1.DLD,L0/21-Petermann Glacier/Logger programs/SMS_PET1.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,10,,,SMS_PET1.DLD | $ | $
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,L0/22-Petermann ELA/Logger programs/2003_PET_AWS_EL_03.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,18,222:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | version 05/27/2002 | --------------------------------------------------------------
+22-Petermann ELA,2003_PET_AWS_EL_03.dld,L0/22-Petermann ELA/Logger programs/2003_PET_AWS_EL_03.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,222:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",PET_AWS_EL_03.dld | $ | $
+22-Petermann ELA,2006_pet ela.dld,L0/22-Petermann ELA/Logger programs/2006_pet ela.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,222:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",
+23-NEEM,EMM.CSI,L0/23-NEEM/Logger programs/EMM.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,18,222:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | version 05/27/2002 | --------------------------------------------------------------
+23-NEEM,emm.dld,L0/23-NEEM/Logger programs/emm.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,222:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",EMM.dld | $ | $
+25-SMS1,SMS01.DLD,L0/25-SMS1/raw/2003/SMS01.DLD,.dld,,table 1: 0 s;table 2: 0 s,7,,,
+28-SMS4,AWSARG99.CSI,L0/28-SMS4/2001/Smart Stakes/AWSARG99.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,19,12:17 columns | 2:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | version 02/22/1999 | --------------------------------------------------------------
+28-SMS4,SS_2001.DLD,L0/28-SMS4/2001/Smart Stakes/SS_2001.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,7,,,SS_2001.DLD | $ | $
+28-SMS4,SS_2001.csi,L0/28-SMS4/2001/Smart Stakes/SS_2001.csi,.csi,CR10,table 1: 15 s;table 2: 60 s,7,,,{CR10} | version 1.0b | --------------------------------------------------------------------------
+28-SMS4,SS_2001X.CSI,L0/28-SMS4/2001/Smart Stakes/SS_2001X.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,8,,,{CR10X} | -------------------------------------------------------------------------- | Smart Stake Program for CR10X Datalogger
+28-SMS4,SS_2001X.DLD,L0/28-SMS4/2001/Smart Stakes/SS_2001X.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,8,,,SS_2001X.DLD | $ | $
+28-SMS4,SS_CAL_1.CSI,L0/28-SMS4/2001/Smart Stakes/SS_CAL_1.CSI,.csi,CR10X,table 1: 10 s;table 2: 60 s,9,,,{CR10X} | -------------------------------------------------------------------- | Smart Stake INSTRUMENT CALIBRATION Program for CR10X Datalogger
+28-SMS4,SS_CAL_1.DLD,L0/28-SMS4/2001/Smart Stakes/SS_CAL_1.DLD,.dld,CR10X,table 1: 10 s;table 2: 60 s,9,,,SS_CAL_1.DLD | $ | $
+28-SMS4,SS_CAL_2.CSI,L0/28-SMS4/2001/Smart Stakes/SS_CAL_2.CSI,.csi,CR10X,table 1: 10 s;table 2: 60 s,5,,,{CR10X} | -------------------------------------------------------------------- | Smart Stake INSTRUMENT CALIBRATION Program for CR10X Datalogger
+28-SMS4,SS_CAL_2.DLD,L0/28-SMS4/2001/Smart Stakes/SS_CAL_2.DLD,.dld,CR10X,table 1: 10 s;table 2: 60 s,5,,,SS_CAL_2.DLD | $ | $
+28-SMS4,SS_CAL_3.CSI,L0/28-SMS4/2001/Smart Stakes/SS_CAL_3.CSI,.csi,CR10,table 1: 10 s;table 2: 60 s,5,,,{CR10} | -------------------------------------------------------------------- | Smart Stake INSTRUMENT CALIBRATION Program for CR10 Datalogger
+28-SMS4,SS_CAL_3.DLD,L0/28-SMS4/2001/Smart Stakes/SS_CAL_3.DLD,.dld,CR10,table 1: 10 s;table 2: 60 s,5,,,SS_CAL_3.DLD | $ | $
+29-SMS5,SMS-0503.DLD,L0/29-SMS5/2003/SMS-0503.DLD,.dld,CR10X,table 1: 15 s;table 2: 600 s,8,,,
+29-SMS5,SMS-10X.DLD,L0/29-SMS5/2003/SMS-10X.DLD,.dld,CR10X,table 1: 15 s;table 2: 60 s,8,,,
+DataLogger Programs,AWSARGCC.DLD,L0/DataLogger Programs/CR10X/1995 programs/AWSARGCC.DLD,.dld,CR10,table 1: 20 s;table 2: 600 s,11,,"CS105 (mult 0.184, range 600-1060 hPa)",AWSARGCC.DLD
+DataLogger Programs,AWSARGHG.DLD,L0/DataLogger Programs/CR10X/1995 programs/AWSARGHG.DLD,.dld,CR10,table 1: 20 s;table 2: 600 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",AWSARGUN.DLD
+DataLogger Programs,AWSARGUN.DLD,L0/DataLogger Programs/CR10X/1995 programs/AWSARGUN.DLD,.dld,CR10,table 1: 20 s;table 2: 600 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",AWSARGUN.DLD
+DataLogger Programs,AWSGOSCP.DLD,L0/DataLogger Programs/CR10X/1995 programs/AWSGOSCP.DLD,.dld,,table 1: 0 s;table 2: 0 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",
+DataLogger Programs,AWSUN.DLD,L0/DataLogger Programs/CR10X/1995 programs/AWSUN.DLD,.dld,,table 1: 20 s;table 2: 600 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",
+DataLogger Programs,HGTC.DLD,L0/DataLogger Programs/CR10X/1995 programs/HGTC.DLD,.dld,CR10,table 1: 15 s;table 2: 20 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",HGTC.DLD
+DataLogger Programs,HUM_CAL.DLD,L0/DataLogger Programs/CR10X/1995 programs/HUM_CAL.DLD,.dld,21X,table 1: 0 s;table 2: 0 s,4,,,HUM_CAL.DLD
+DataLogger Programs,HUM_TEST.DLD,L0/DataLogger Programs/CR10X/1995 programs/HUM_TEST.DLD,.dld,21X,table 1: 10 s;table 2: 0 s,4,,,HUM_TEST.DLD
+DataLogger Programs,UNTC.DLD,L0/DataLogger Programs/CR10X/1995 programs/UNTC.DLD,.dld,CR10,table 1: 15 s;table 2: 20 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",UNTC.DLD
+DataLogger Programs,RFTEST.DLD,L0/DataLogger Programs/CR10X/1996/CAM/RFTEST.DLD,.dld,21X,table 1: 10 s;table 2: 0 s,10,,,RFTEST.DLD
+DataLogger Programs,TOWER.DLD,L0/DataLogger Programs/CR10X/1996/CAM/TOWER.DLD,.dld,21X,table 1: 15 s;table 2: 600 s,7,,,A:TOWER.DLD
+DataLogger Programs,AWSGOS96.CSI,L0/DataLogger Programs/CR10X/1996/CAM_NEW/AWSGOS96.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,14,61:30 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x)
+DataLogger Programs,AWSGOS96.DLD,L0/DataLogger Programs/CR10X/1996/CAM_NEW/AWSGOS96.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,14,,"CS105 (mult 0.184, range 600-1060 hPa)",AWSGOS96.DLD | $ | $
+DataLogger Programs,SWISS96.CSI,L0/DataLogger Programs/CR10X/1996/CAM_NEW/SWISS96.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,19,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+DataLogger Programs,SWISS96.DLD,L0/DataLogger Programs/CR10X/1996/CAM_NEW/SWISS96.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,19,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS96.DLD | $ | $
+DataLogger Programs,AWSARG98.CSI,L0/DataLogger Programs/CR10X/1998/AWSARG98.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,16,31:17 columns | 32:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | version 03/20/1998 | --------------------------------------------------------------
+DataLogger Programs,AWSARG98.DLD,L0/DataLogger Programs/CR10X/1998/AWSARG98.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,16,31:17 columns | 32:17 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSARG98.DLD | $ | $
+DataLogger Programs,AWSDY298.CSI,L0/DataLogger Programs/CR10X/1998/AWSDY298.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,23,108:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsdy298.csi (cr10x)
+DataLogger Programs,AWSDY298.DLD,L0/DataLogger Programs/CR10X/1998/AWSDY298.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,23,108:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSDY298.DLD | $ | $
+DataLogger Programs,AWSGOS98.CSI,L0/DataLogger Programs/CR10X/1998/AWSGOS98.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,16,6:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x)
+DataLogger Programs,AWSGOS98.DLD,L0/DataLogger Programs/CR10X/1998/AWSGOS98.DLD,.dld,CR10,table 1: 15 s;table 2: 60 s,16,6:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",AWSGOS98.DLD | $ | $
+DataLogger Programs,EMM.CSI,L0/DataLogger Programs/CR10X/2006 logger program EMM1/EMM.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,18,222:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | version 05/27/2002 | --------------------------------------------------------------
+DataLogger Programs,emm.dld,L0/DataLogger Programs/CR10X/2006 logger program EMM1/emm.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,18,222:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",EMM.dld | $ | $
+DataLogger Programs,AWSDY298.CSI,L0/DataLogger Programs/GOES/AWSDY298.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,23,108:39 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsdy298.csi (cr10x)
+DataLogger Programs,AWSGOS98.CSI,L0/DataLogger Programs/GOES/AWSGOS98.CSI,.csi,CR10,table 1: 15 s;table 2: 60 s,16,6:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | -------------------------------------------------------------- | Program: awsgos96.csi (cr10x)
+DataLogger Programs,AWSSUM04.CSI,L0/DataLogger Programs/GOES/AWSSUM04.CSI,.csi,CR10X,table 1: 15 s;table 2: 10 s,15,17:31 columns,"CS105 (mult 0.184, range 600-1060 hPa)","{CR10X} | Modified program for 1 m averaging and 15, 10 second logging for | Summit 2004 spring"
+DataLogger Programs,AWS_LARSEN C.csi,L0/DataLogger Programs/GOES/AWS_LARSEN C.csi,.csi,CR10X,table 1: 15 s;table 2: 60 s,15,,"CS105 (mult 0.184, range 600-1060 hPa); CS106 (mult 0.240, range 500-1100 hPa)",{CR10X} | _______________________________________________________________________________ | Larsen C Prject: with new TX312 GOES transmitter
+DataLogger Programs,GOES.CSI,L0/DataLogger Programs/GOES/GOES.CSI,.csi,CR10,table 1: 10 s;table 2: 60 s,12,,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10} | Program:GOES95 aero tower | Flag Usage:
+DataLogger Programs,MOULIN.CSI,L0/DataLogger Programs/GOES/MOULIN.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,9,,,{CR10X} | -------------------------------------------------------------------------- | Moulin Climate Station 2008 for CR10X Datalogger
+DataLogger Programs,SWISS04.CSI,L0/DataLogger Programs/GOES/SWISS04.CSI,.csi,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",{CR10X} | ------------------------------------------------------------- | Program: awsgos96.csi (cr10x) for the Swiss Camp
+DataLogger Programs,SWISS04.dld,L0/DataLogger Programs/GOES/SWISS04.dld,.dld,CR10X,table 1: 15 s;table 2: 60 s,16,11:38 columns,"CS105 (mult 0.184, range 600-1060 hPa)",SWISS04.dld | $ | $
+Swiss Camp Science tower,2006_Science_Tower.dld,L0/Swiss Camp Science tower/CR10X logger files/2006_Science_Tower.dld,.dld,CR10X,table 1: 2 s;table 2: 60 s,15,,,
+Swiss Camp Science tower,2008_science tower.dld,L0/Swiss Camp Science tower/CR10X logger files/2008_science tower.dld,.dld,CR10X,table 1: 10 s;table 2: 60 s,15,,,
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.dld,L0/Swiss Camp Science tower/CR10X logger files/2009_SCI_TOWER_new 09.dld,.dld,CR10X,table 1: 2 s;table 2: 60 s,15,,,SCI_TOWER_new 09.dld | $ | $
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,L0/Swiss Camp Science tower/Logger programs/2009_SCI_TOWER 09.CSI,.csi,CR10X,table 1: 2 s;table 2: 60 s,13,,,{CR10X} | ************************************* | Swiss Camp 'Science Tower'
+Swiss Camp Science tower,2009_SCI_TOWER 09.dld,L0/Swiss Camp Science tower/Logger programs/2009_SCI_TOWER 09.dld,.dld,CR10X,table 1: 2 s;table 2: 60 s,17,,,SCI_TOWER 09.dld | $ | $
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,L0/Swiss Camp Science tower/Logger programs/2009_SCI_TOWER_NEW ICETEMP 09.CSI,.csi,CR10X,table 1: 2 s;table 2: 60 s,20,,,{CR10X} | ************************************* | Swiss Camp 'Science Tower'
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,L0/Swiss Camp Science tower/Logger programs/2009_SCI_TOWER_new 09.csi,.csi,CR10X,table 1: 2 s;table 2: 60 s,15,,,{CR10X} | ************************************* | Swiss Camp 'Science Tower'
+Swiss Camp Science tower,2009_SCI_TOWER_new icetemp 09.dld,L0/Swiss Camp Science tower/Logger programs/2009_SCI_TOWER_new icetemp 09.dld,.dld,CR10X,table 1: 2 s;table 2: 60 s,20,,,SCI_TOWER_new icetemp 09.dld | $ | $
+Swiss Camp Science tower,SCI_TOWER 08.csi,L0/Swiss Camp Science tower/Logger programs/SCI_TOWER 08.csi,.csi,CR10X,table 1: 2 s;table 2: 60 s,13,,,{CR10X} | ************************************* | Swiss Camp 'Science Tower'
+Swiss Camp Science tower,SCI_TOWER 08.dld,L0/Swiss Camp Science tower/Logger programs/SCI_TOWER 08.dld,.dld,CR10X,table 1: 2 s;table 2: 60 s,17,,,SCI_TOWER 08.dld | $ | $
+Swiss Camp Science tower,SCI_TOWER.CSI,L0/Swiss Camp Science tower/Logger programs/SCI_TOWER.CSI,.csi,CR10X,table 1: 2 s;table 2: 60 s,13,,,{CR10X} | ************************************* | Swiss Camp 'Science Tower'

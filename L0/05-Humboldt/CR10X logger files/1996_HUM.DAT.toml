@@ -1,0 +1,47 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 122
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA3", "TA4", "RH2", "_", "VW1", "VW2", "DW1", "P", "_", "_"]
+[[array.run]]
+row_from = 0
+row_to = 1757
+start_year = 1996
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "documented: C-level factor over 1038 h in 1996-1996 (documented 200.0)"
+
+[calibration.NR]
+scale_pos = 9.29
+scale_neg = 11.62
+add = 0
+source = "documented: C-level factor over 148 h in 1996-1996 (documented 9.29) / documented: C-level factor over 595 h in 1996-1996 (documented 11.62)"
+
+[calibration.OSWR]
+scale_pos = 186
+scale_neg = 186
+add = 0
+source = "differs: C-level factor over 1017 h in 1996-1996 (documented 200.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 600
+source = "decoding offset corrected 2026-11: logger P differs from C-level by an exact +200 hPa (corr >= 0.998) and from the barometric expectation; see release_note_2026.md"
+
+[calibration.TA3]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "CR1000 header"
+

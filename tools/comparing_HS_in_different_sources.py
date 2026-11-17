@@ -19,9 +19,8 @@ import pandas as pd
 from datetime import datetime
 import os
 from os import path
-import write_nead
-import libgcnet as gc
-
+from lib import write_nead
+from lib import libgcnet as gc
 path = "./L0/"
 
 site_list = pd.read_csv("metadata/GC-Net_location.csv", header=0)[15:16]

@@ -1,0 +1,53 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 12
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "DW2", "P", "HW1", "HW2"]
+[[array.run]]
+row_from = 0
+row_to = 1416
+start_year = 2005
+[[array.run]]
+row_from = 1417
+row_to = 33194
+start_year = 2006
+
+[[array]]
+id = 2
+ncols = 17
+column_header = ["TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "_", "_", "VW2", "_"]
+[[array.run]]
+row_from = 0
+row_to = 1416
+start_year = 2006
+note = "dating score below 0.9"
+[[array.run]]
+row_from = 1417
+row_to = 33194
+note = "dating score below 0.9"
+
+[calibration.ISWR]
+scale_pos = 73.469
+scale_neg = 73.469
+add = 0
+source = "differs: C-level factor over 13218 h in 2006-2010 (documented 1.0)"
+
+[calibration.NR]
+scale_pos = 72.946
+scale_neg = 66.461
+add = 0
+source = "differs: C-level factor over 2250 h in 2006-2010 (documented 1.0) / differs: C-level factor over 506 h in 2005-2005 (documented 1.0)"
+
+[calibration.OSWR]
+scale_pos = 64.176
+scale_neg = 64.176
+add = 0
+source = "differs: C-level factor over 12915 h in 2006-2010 (documented 1.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (5 runs); the programs write P minus 400"
+

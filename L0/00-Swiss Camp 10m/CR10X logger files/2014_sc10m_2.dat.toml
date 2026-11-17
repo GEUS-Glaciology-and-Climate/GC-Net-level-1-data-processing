@@ -1,0 +1,25 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 21
+ncols = 27
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "TA1_max", "TA2_max", "RH1_max", "RH2_max", "VW1_max", "VW2_max", "TA1_min", "TA2_min", "RH1_min", "RH2_min", "VW1_min", "VW2_min", "DW1", "DW2"]
+
+[calibration.ISWR]
+scale = 106.49
+add = 0
+
+[calibration.OSWR]
+scale = 105.89
+add = 0
+
+[calibration.NR]
+scale_pos = 8.02
+scale_neg = 12.12
+add = 0
+
+
+[[ignore_rows]]
+start = "2014-05-09 21:00:00"
+end = "2100-01-01 00:00:00"
+reason = "the CR1000 took over at 2014-05-09 21:00; the CR10X logger kept recording until 2014-05-10 16:00 with disconnected sensors (TA1 -52 to -85, RH1 < 0)"

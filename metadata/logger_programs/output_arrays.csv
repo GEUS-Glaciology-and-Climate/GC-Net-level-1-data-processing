@@ -1,0 +1,141 @@
+station,file,table,array_id,time_code,n_outputs,expected_columns_in_data_file,outputs
+00-Swiss Camp 10m,1998_TOWER98.CSI,1,21.0,1110,23,26,Averagex3@loc1;Averagex6@loc4;Maximizex6@loc4;Minimizex6@loc4;Averagex2@loc10
+00-Swiss Camp 10m,1998_TOWER98.DLD,1,21.0,1110,23,26,Averagex3@loc1;Averagex6@loc4;Maximizex6@loc4;Minimizex6@loc4;Averagex2@loc10
+00-Swiss Camp 10m,2006_ETH_tower.dld,1,21.0,1110,23,26,Averagex3@loc1;Averagex6@loc4;Maximizex6@loc4;Minimizex6@loc4;Averagex2@loc10
+00-Swiss Camp 10m,2007_sc 10m.dld,1,21.0,1110,23,26,Averagex3@loc1;Averagex6@loc4;Maximizex6@loc4;Minimizex6@loc4;Averagex2@loc10
+00-Swiss Camp 10m,2008_sc10m.dld,1,21.0,1110,23,26,Averagex3@loc1;Averagex6@loc4;Maximizex6@loc4;Minimizex6@loc4;Averagex2@loc10
+00-Swiss Camp 10m,2013_10M SC TOWER.CSI,1,21.0,1110,23,26,Averagex3@loc1;Averagex6@loc4;Maximizex6@loc4;Minimizex6@loc4;Averagex2@loc10
+00-Swiss Camp 10m,2013_10m SC tower.dld,1,21.0,1110,23,26,Averagex3@loc1;Averagex6@loc4;Maximizex6@loc4;Minimizex6@loc4;Averagex2@loc10
+00-Swiss Camp 10m,2013_sc10m.dld,1,21.0,1110,23,26,Averagex3@loc1;Averagex6@loc4;Maximizex6@loc4;Minimizex6@loc4;Averagex2@loc10
+01-Swiss Camp,2001_SWISSAWS.DLD,1,11.0,110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,2004_swissCamp04_old.dld,1,11.0,110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,2005_sc05.dld,1,11.0,110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+01-Swiss Camp,2006_swc.dld,1,11.0,110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+01-Swiss Camp,2007_sc aws.dld,1,11.0,110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+01-Swiss Camp,2007_sc.dld,1,11.0,110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+01-Swiss Camp,2007_swc.dld,1,11.0,110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+01-Swiss Camp,1997_AWS.DLD,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,1997_AWS_OLD.DLD,1,11.0,110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex7@loc28;Averagex1@loc36;Averagex1@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,1997_SWISS97.CSI,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,1997_SWISS97.DLD,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,2000_SWISS00.CSI,1,11.0,0110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,2000_SWISS00.DLD,1,11.0,0110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,2000_SWISS98.CSI,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,2000_SWISS98.DLD,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,2000_SWISS99.CSI,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,2000_SWISS99.DLD,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,2000_SWISS99B.CSI,1,11.0,0110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,2000_SWISS99B.DLD,1,11.0,0110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,2001_SWISS00.CSI,1,11.0,0110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,2001_SWISS00.dld,1,11.0,0110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,AWSGOS96.CSI,1,11.0,0110,37,40,Averagex7@loc2;Averagex2@loc19;Averagex4@loc23;Averagex1@loc27;Averagex3@loc28;Averagex1@loc18;Averagex10@loc9;Averagex6@loc35;Averagex2@loc21;Averagex1@loc42
+01-Swiss Camp,AWSGOS96.DLD,1,11.0,0110,37,40,Averagex7@loc2;Averagex2@loc19;Averagex4@loc23;Averagex1@loc27;Averagex3@loc28;Averagex1@loc18;Averagex10@loc9;Averagex6@loc35;Averagex2@loc21;Averagex1@loc42
+01-Swiss Camp,SWISS00.CSI,1,11.0,0110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,SWISS00.dld,1,11.0,0110,34,37,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc35
+01-Swiss Camp,SWISS04.CSI,1,11.0,0110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+01-Swiss Camp,SWISS04.dld,1,11.0,0110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+01-Swiss Camp,SWISS05.csi,1,11.0,0110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+01-Swiss Camp,SWISS05.dld,1,11.0,0110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+01-Swiss Camp,SWISS96.CSI,1,11.0,0110,35,38,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex1@loc32;Averagex1@loc33;Averagex2@loc34;Averagex10@loc12;Averagex4@loc22;Averagex1@loc36
+01-Swiss Camp,SWISS96.DLD,1,11.0,0110,35,38,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex1@loc32;Averagex1@loc33;Averagex2@loc34;Averagex10@loc12;Averagex4@loc22;Averagex1@loc36
+01-Swiss Camp,SWISS97.CSI,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,SWISS97.DLD,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,SWISS97O.CSI,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,SWISS97_winter.CSI,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,SWISS97_winter.DLD,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,SWISS98.CSI,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,SWISS98.DLD,1,11.0,0110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+01-Swiss Camp,TEST.DLD,1,11.0,110,36,39,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex2@loc32;Averagex1@loc34;Averagex2@loc35;Averagex10@loc12;Averagex4@loc22;Averagex1@loc37
+02-Crawford Point 1,1997_CR1.DLD,1,2.0,110,27,30,Averagex3@loc2;Averagex2@loc15;Averagex9@loc19;Averagex10@loc5;Averagex2@loc17;Averagex1@loc28
+02-Crawford Point 1,2008_cp1.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+02-Crawford Point 1,2002_AWSCP1OL.DLD,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+02-Crawford Point 1,2005_cp1.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+02-Crawford Point 1,2006_cp1.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+03-NASA-U,2005_nasa-u.dld,1,32.0,110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+03-NASA-U,AWSARG98.CSI,1,32.0,0110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Samplex1@loc25;Averagex2@loc26
+03-NASA-U,AWSARG98.CSI,1,32.0,0110,14,17,Averagex10@loc5;Averagex2@loc17;Averagex1@loc1;Samplex1@loc28
+03-NASA-U,AWSARG98.DLD,1,31.0,0110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Samplex1@loc25;Averagex2@loc26
+03-NASA-U,AWSARG98.DLD,1,32.0,0110,14,17,Averagex10@loc5;Averagex2@loc17;Averagex1@loc1;Samplex1@loc28
+04-GITS,AWSARG02.CSI,1,212.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+04-GITS,AWSARG02.DLD,1,212.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+04-GITS,GITARG02.CSI,1,42.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+04-GITS,GITARG02.DLD,1,42.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+04-GITS,GIT_OLD.DLD,1,5.0,110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex4@loc24;Averagex1@loc14
+04-GITS,GIT_OLD.DLD,1,52.0,110,14,17,Averagex10@loc5;Averagex2@loc17;Averagex1@loc23;Averagex1@loc28
+05-Humboldt,2003_hum.dld,1,5.0,110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex4@loc24;Averagex1@loc14
+05-Humboldt,2003_hum.dld,1,52.0,110,14,17,Averagex10@loc5;Averagex2@loc17;Averagex1@loc23;Averagex1@loc28
+05-Humboldt,2008_hum.dld,1,5.0,110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex4@loc24;Averagex1@loc14
+05-Humboldt,2008_hum.dld,1,52.0,110,14,17,Averagex10@loc5;Averagex2@loc17;Averagex1@loc23;Averagex1@loc28
+06-Summit,2000_AWSSUM00.CSI,1,17.0,0110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+06-Summit,2000_AWSSUM04.CSI,1,17.0,0110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+06-Summit,2000_AWSSUM04.dld,1,17.0,0110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+06-Summit,2003_Summit_040401.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+06-Summit,2004_1-min_summit_040408.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+06-Summit,2004_Summit_040401.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+06-Summit,2005_sum.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+07-Tunu-N,2008_tunu.dld,1,12.0,110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26
+07-Tunu-N,2008_tunu.dld,1,2.0,110,14,17,Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+08-DYE-2,2002_DYE-2.DLD,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+08-DYE-2,2005_dye2.dld,1,11.0,110,38,41,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28;Averagex8@loc35;Samplex1@loc103;Samplex1@loc104
+08-DYE-2,2006_dye2.dld,1,11.0,110,38,41,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28;Averagex8@loc35;Samplex1@loc103;Samplex1@loc104
+08-DYE-2,AWSDY298.CSI,1,108.0,0110,36,39,Averagex3@loc2;Averagex2@loc17;Averagex6@loc21;Samplex1@loc27;Averagex2@loc28;Averagex10@loc5;Averagex2@loc15;Averagex2@loc19;Samplex1@loc30;Averagex6@loc31;Samplex1@loc37
+08-DYE-2,AWSDY298.DLD,1,108.0,0110,36,39,Averagex3@loc2;Averagex2@loc17;Averagex6@loc21;Samplex1@loc27;Averagex2@loc28;Averagex10@loc5;Averagex2@loc15;Averagex2@loc19;Samplex1@loc30;Averagex6@loc31;Samplex1@loc37
+09-JAR1,1998_JAR.DLD,1,9.0,110,22,25,Averagex3@loc2;Averagex10@loc10;Samplex1@loc20;Averagex1@loc21;Averagex5@loc5;Maximizex2@loc16
+09-JAR1,2005_jar1.dld,1,9.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+09-JAR1,2006_jar1.dld,1,9.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+09-JAR1,2008_jar1.dld,1,9.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+10-Saddle,2005_saddle.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+10-Saddle,2006_saddle.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+11-South Dome,2005_south-dome05.dld,1,11.0,110,38,41,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28;Averagex8@loc35;Samplex1@loc103;Samplex1@loc104
+11-South Dome,2007_S-dome.dld,1,11.0,110,38,41,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28;Averagex8@loc35;Samplex1@loc103;Samplex1@loc104
+12-NASA-E,2006_nasa_e.dld,1,12.0,110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26
+12-NASA-E,2006_nasa_e.dld,1,2.0,110,14,17,Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+14-NGRIP,2005_ngrip.dld,1,12.0,110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26
+14-NGRIP,2005_ngrip.dld,1,2.0,110,14,17,Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+14-NGRIP,AWSARG98.CSI,1,31.0,0110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Samplex1@loc25;Averagex2@loc26
+14-NGRIP,AWSARG98.CSI,1,32.0,0110,14,17,Averagex10@loc5;Averagex2@loc17;Averagex1@loc1;Samplex1@loc28
+14-NGRIP,AWSARG98.DLD,1,31.0,0110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Samplex1@loc25;Averagex2@loc26
+14-NGRIP,AWSARG98.DLD,1,32.0,0110,14,17,Averagex10@loc5;Averagex2@loc17;Averagex1@loc1;Samplex1@loc28
+14-NGRIP,GGU5N.DLD,1,5.0,110,12,15,Samplex1@loc12;Samplex1@loc13;Averagex1@loc5;Averagex1@loc6;Averagex1@loc10;Averagex1@loc11;Averagex1@loc7;Averagex1@loc8;Averagex1@loc9;Averagex1@loc14;Samplex1@loc20;Samplex1@loc21
+15-NASA-SE,2002_NASA-SE.DLD,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+15-NASA-SE,2005_nasa-se.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+17-JAR2,2000_AWSGOSJ2.CSI,1,17.0,0110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+17-JAR2,2000_AWSGOSJ2.DLD,1,17.0,0110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+17-JAR2,2002_JR202.DLD,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+17-JAR2,2004_JAR2.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+17-JAR2,2005_jar2.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+17-JAR2,2006_jar2.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+19-JAR3,2003_JAR3.dld,1,17.0,110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+21-Petermann Glacier,AWSARG02.CSI,1,212.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+21-Petermann Glacier,AWSARG02.DLD,1,212.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+21-Petermann Glacier,PET_AWS.CSI,1,212.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Averagex1@loc74;Averagex1@loc75
+21-Petermann Glacier,PET_AWS.dld,1,212.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Averagex1@loc74;Averagex1@loc75
+21-Petermann Glacier,PET_AWS_EL_03.CSI,1,222.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+21-Petermann Glacier,PET_AWS_EL_03.dld,1,222.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+21-Petermann Glacier,PET_PRT.CSI,1,212.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Averagex1@loc76
+21-Petermann Glacier,PET_PRT.DLD,1,212.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Averagex1@loc76
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,1,222.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+22-Petermann ELA,2003_PET_AWS_EL_03.dld,1,222.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+22-Petermann ELA,2006_pet ela.dld,1,222.0,110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+23-NEEM,EMM.CSI,1,222.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+23-NEEM,emm.dld,1,222.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+28-SMS4,AWSARG99.CSI,1,12.0,0110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26
+28-SMS4,AWSARG99.CSI,1,2.0,0110,14,17,Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+DataLogger Programs,AWSGOS96.CSI,1,61.0,0110,27,30,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex1@loc24;Averagex3@loc25;Averagex1@loc14;Averagex10@loc5;Averagex2@loc17;Averagex1@loc28
+DataLogger Programs,SWISS96.CSI,1,11.0,0110,35,38,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex1@loc32;Averagex1@loc33;Averagex2@loc34;Averagex10@loc12;Averagex4@loc22;Averagex1@loc36
+DataLogger Programs,SWISS96.DLD,1,11.0,0110,35,38,Averagex8@loc2;Averagex2@loc10;Averagex2@loc26;Averagex4@loc28;Averagex1@loc32;Averagex1@loc33;Averagex2@loc34;Averagex10@loc12;Averagex4@loc22;Averagex1@loc36
+DataLogger Programs,AWSARG98.CSI,1,31.0,0110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Samplex1@loc25;Averagex2@loc26
+DataLogger Programs,AWSARG98.CSI,1,32.0,0110,14,17,Averagex10@loc5;Averagex2@loc17;Averagex1@loc1;Samplex1@loc28
+DataLogger Programs,AWSARG98.DLD,1,31.0,0110,14,17,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Samplex1@loc25;Averagex2@loc26
+DataLogger Programs,AWSARG98.DLD,1,32.0,0110,14,17,Averagex10@loc5;Averagex2@loc17;Averagex1@loc1;Samplex1@loc28
+DataLogger Programs,AWSDY298.CSI,1,108.0,0110,36,39,Averagex3@loc2;Averagex2@loc17;Averagex6@loc21;Samplex1@loc27;Averagex2@loc28;Averagex10@loc5;Averagex2@loc15;Averagex2@loc19;Samplex1@loc30;Averagex6@loc31;Samplex1@loc37
+DataLogger Programs,AWSDY298.DLD,1,108.0,0110,36,39,Averagex3@loc2;Averagex2@loc17;Averagex6@loc21;Samplex1@loc27;Averagex2@loc28;Averagex10@loc5;Averagex2@loc15;Averagex2@loc19;Samplex1@loc30;Averagex6@loc31;Samplex1@loc37
+DataLogger Programs,AWSGOS98.CSI,1,6.0,0110,28,31,Averagex23@loc2;Samplex1@loc25;Averagex2@loc26;Averagex1@loc1;Samplex1@loc28
+DataLogger Programs,AWSGOS98.DLD,1,6.0,0110,28,31,Averagex23@loc2;Samplex1@loc25;Averagex2@loc26;Averagex1@loc1;Samplex1@loc28
+DataLogger Programs,EMM.CSI,1,222.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+DataLogger Programs,emm.dld,1,222.0,0110,28,31,Averagex3@loc2;Averagex2@loc15;Averagex4@loc19;Averagex2@loc23;Averagex1@loc25;Averagex2@loc26;Averagex10@loc5;Averagex2@loc17;Maximizex1@loc22;Samplex1@loc28
+DataLogger Programs,AWSDY298.CSI,1,108.0,0110,36,39,Averagex3@loc2;Averagex2@loc17;Averagex6@loc21;Samplex1@loc27;Averagex2@loc28;Averagex10@loc5;Averagex2@loc15;Averagex2@loc19;Samplex1@loc30;Averagex6@loc31;Samplex1@loc37
+DataLogger Programs,AWSGOS98.CSI,1,6.0,0110,28,31,Averagex23@loc2;Samplex1@loc25;Averagex2@loc26;Averagex1@loc1;Samplex1@loc28
+DataLogger Programs,AWSSUM04.CSI,1,17.0,0110,28,31,Averagex23@loc2;Averagex1@loc25;Averagex2@loc26;Maximizex1@loc22;Samplex1@loc28
+DataLogger Programs,SWISS04.CSI,1,11.0,0110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35
+DataLogger Programs,SWISS04.dld,1,11.0,0110,35,38,Averagex6@loc2;Averagex2@loc8;Averagex2@loc24;Averagex4@loc26;Averagex2@loc30;Averagex1@loc32;Averagex2@loc33;Averagex10@loc10;Averagex4@loc20;Averagex1@loc85;Averagex1@loc35

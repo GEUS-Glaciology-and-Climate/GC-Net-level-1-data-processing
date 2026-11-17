@@ -1,0 +1,2242 @@
+station,file,note
+00-Swiss Camp 10m,1998_TOWER98.CSI,"2x RM Young wind fan, 2x CS500 T/H"
+00-Swiss Camp 10m,1998_TOWER98.CSI,"LI-Core Radiometer, first in, second reflected"
+00-Swiss Camp 10m,1998_TOWER98.CSI,Net Radiation
+00-Swiss Camp 10m,1998_TOWER98.CSI,"average temp, hum, wind"
+00-Swiss Camp 10m,1998_TOWER98.CSI,"max value of temp, hum, wind"
+00-Swiss Camp 10m,1998_TOWER98.CSI,"min value of temp, hum, wind"
+00-Swiss Camp 10m,1998_TOWER98.CSI,average of wind dir
+00-Swiss Camp 10m,1998_TOWER98.CSI,to CS500
+00-Swiss Camp 10m,1998_TOWER98.CSI,CS500 temperatures 1 and 2
+00-Swiss Camp 10m,1998_TOWER98.CSI,CS500 humidity 1 and 2
+00-Swiss Camp 10m,1998_TOWER98.CSI,to CS500 is turned off
+00-Swiss Camp 10m,1998_TOWER98.CSI,RM Young wind 1 and 2
+00-Swiss Camp 10m,2013_10M SC TOWER.CSI,Net radiometer
+00-Swiss Camp 10m,2013_10M SC TOWER.CSI,Humidity 2 x
+00-Swiss Camp 10m,2013_10M SC TOWER.CSI,wind speed
+00-Swiss Camp 10m,2013_10m SC tower.dld,7 netrad_AVG  L
+00-Swiss Camp 10m,2013_10m SC tower.dld,12 wind_1_AVG  L
+00-Swiss Camp 10m,2013_10m SC tower.dld,13 wind_2_AVG  L
+00-Swiss Camp 10m,2013_10m SC tower.dld,18 wind_1_MAX  L
+00-Swiss Camp 10m,2013_10m SC tower.dld,19 wind_2_MAX  L
+00-Swiss Camp 10m,2013_10m SC tower.dld,24 wind_1_MIN  L
+00-Swiss Camp 10m,2013_10m SC tower.dld,25 wind_2_MIN  L
+01-Swiss Camp,GOES.CSI,Flag Usage:
+01-Swiss Camp,GOES.CSI,"All radiation instruments: s(in), s(out), s(red),s(diff"
+01-Swiss Camp,GOES.CSI,Net Radiometer
+01-Swiss Camp,GOES.CSI,"3 humidity: 15 at bottom, 17 at top"
+01-Swiss Camp,GOES.CSI,"2 wind speed: 18 at lowest level, 19 at highest"
+01-Swiss Camp,GOES.CSI,Met One wind direction
+01-Swiss Camp,GOES.CSI,Vaisala PTA427 Barometer
+01-Swiss Camp,GOES.CSI,"Snow Height at lower level, SW facing"
+01-Swiss Camp,GOES.CSI,"Snow Height at higher level, SE facing"
+01-Swiss Camp,1997_SWISS97.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,1997_SWISS97.CSI,This program measures various meteorological instruments
+01-Swiss Camp,1997_SWISS97.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,1997_SWISS97.CSI,to turn on multiplexer
+01-Swiss Camp,1997_SWISS97.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,1997_SWISS97.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,1997_SWISS97.CSI,multiplexer input channel.
+01-Swiss Camp,1997_SWISS97.CSI,Net Radiometer
+01-Swiss Camp,1997_SWISS97.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,1997_SWISS97.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,1997_SWISS97.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,1997_SWISS97.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,1997_SWISS97.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,1997_SWISS97.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,1997_SWISS97.CSI,Snow TC (4x)
+01-Swiss Camp,1997_SWISS97.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,1997_SWISS97.CSI,End of hourly ice and snow TC meas. 14x
+01-Swiss Camp,1997_SWISS97.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,1997_SWISS97.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,1997_SWISS97.CSI,2 x wind speed averages
+01-Swiss Camp,1997_SWISS97.CSI,2 x wind direction averages
+01-Swiss Camp,1997_SWISS97.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,1997_SWISS97.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,1997_SWISS97.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,1997_SWISS97.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,1997_SWISS97.CSI,"in 1995 this was 600, but filled memory with wind"
+01-Swiss Camp,1997_SWISS97.CSI,sensor pulses.
+01-Swiss Camp,1997_SWISS97.CSI,"memory buffer, yet we can still measure certain sensors"
+01-Swiss Camp,1997_SWISS97.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,1997_SWISS97.CSI,temperature cs500 probe x 2
+01-Swiss Camp,1997_SWISS97.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,1997_SWISS97.CSI,humidity cs500 probe x 2
+01-Swiss Camp,1997_SWISS97.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,1997_SWISS97.CSI,Met One wind direction measurement.
+01-Swiss Camp,1997_SWISS97.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,1997_SWISS97.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,1997_SWISS97.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,1997_SWISS97.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,1997_SWISS97.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,1997_SWISS97.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,1997_SWISS97.CSI,Following is the snow height measurement which
+01-Swiss Camp,1997_SWISS97.CSI,sonic snow height sensor 1
+01-Swiss Camp,1997_SWISS97.CSI,sonic snow height sensor 2
+01-Swiss Camp,2000_SWISS00.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,2000_SWISS00.CSI,Modified by K. Steffen 6-5-98 for THR
+01-Swiss Camp,2000_SWISS00.CSI,Modified by J. Box and N. Cullen 4-1-99
+01-Swiss Camp,2000_SWISS00.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,2000_SWISS00.CSI,to turn on multiplexer
+01-Swiss Camp,2000_SWISS00.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,2000_SWISS00.CSI,multiplexer input channel.
+01-Swiss Camp,2000_SWISS00.CSI,Net Radiometer
+01-Swiss Camp,2000_SWISS00.CSI,"end sw in, sw ref, and Kipp and Zonen net"
+01-Swiss Camp,2000_SWISS00.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,2000_SWISS00.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,2000_SWISS00.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,2000_SWISS00.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,2000_SWISS00.CSI,Snow TC (4x)
+01-Swiss Camp,2000_SWISS00.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,2000_SWISS00.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,2000_SWISS00.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,2000_SWISS00.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,2000_SWISS00.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,2000_SWISS00.CSI,2 x wind speed averages
+01-Swiss Camp,2000_SWISS00.CSI,2 x wind direction averages
+01-Swiss Camp,2000_SWISS00.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,2000_SWISS00.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,2000_SWISS00.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,2000_SWISS00.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,2000_SWISS00.CSI,set flag hi
+01-Swiss Camp,2000_SWISS00.CSI,"begin hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,2000_SWISS00.CSI,above comment only valid if 23 hour filter is added.
+01-Swiss Camp,2000_SWISS00.CSI,begin flag is definately 1
+01-Swiss Camp,2000_SWISS00.CSI,end flag is definately 1
+01-Swiss Camp,2000_SWISS00.CSI,"end hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,2000_SWISS00.CSI,end loop for flag hi
+01-Swiss Camp,2000_SWISS00.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,2000_SWISS00.CSI,temperature cs500 probe x 2
+01-Swiss Camp,2000_SWISS00.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,2000_SWISS00.CSI,humidity cs500 probe x 2
+01-Swiss Camp,2000_SWISS00.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,2000_SWISS00.CSI,Met One wind direction measurement.
+01-Swiss Camp,2000_SWISS00.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,2000_SWISS00.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,2000_SWISS00.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,2000_SWISS00.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,2000_SWISS00.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,2000_SWISS00.CSI,end cs105 pressure sensor measurement last minute of each hr
+01-Swiss Camp,2000_SWISS00.CSI,Following is the snow height measurement which
+01-Swiss Camp,2000_SWISS00.CSI,sonic snow height sensor 1
+01-Swiss Camp,2000_SWISS00.CSI,sonic snow height sensor 2
+01-Swiss Camp,2000_SWISS98.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,2000_SWISS98.CSI,Modified by K. Steffen 6-5-98 for THR
+01-Swiss Camp,2000_SWISS98.CSI,This program measures various meteorological instruments
+01-Swiss Camp,2000_SWISS98.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,2000_SWISS98.CSI,to turn on multiplexer
+01-Swiss Camp,2000_SWISS98.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,2000_SWISS98.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,2000_SWISS98.CSI,multiplexer input channel.
+01-Swiss Camp,2000_SWISS98.CSI,Net Radiometer
+01-Swiss Camp,2000_SWISS98.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,2000_SWISS98.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,2000_SWISS98.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,2000_SWISS98.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,2000_SWISS98.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,2000_SWISS98.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,2000_SWISS98.CSI,Snow TC (4x)
+01-Swiss Camp,2000_SWISS98.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,2000_SWISS98.CSI,End of hourly ice and snow TC meas. 14x
+01-Swiss Camp,2000_SWISS98.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,2000_SWISS98.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,2000_SWISS98.CSI,2 x wind speed averages
+01-Swiss Camp,2000_SWISS98.CSI,2 x wind direction averages
+01-Swiss Camp,2000_SWISS98.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,2000_SWISS98.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,2000_SWISS98.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,2000_SWISS98.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,2000_SWISS98.CSI,"in 1995 this was 600, but filled memory with wind"
+01-Swiss Camp,2000_SWISS98.CSI,sensor pulses.
+01-Swiss Camp,2000_SWISS98.CSI,"memory buffer, yet we can still measure certain sensors"
+01-Swiss Camp,2000_SWISS98.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,2000_SWISS98.CSI,temperature cs500 probe x 2
+01-Swiss Camp,2000_SWISS98.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,2000_SWISS98.CSI,humidity cs500 probe x 2
+01-Swiss Camp,2000_SWISS98.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,2000_SWISS98.CSI,Met One wind direction measurement.
+01-Swiss Camp,2000_SWISS98.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,2000_SWISS98.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,2000_SWISS98.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,2000_SWISS98.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,2000_SWISS98.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,2000_SWISS98.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,2000_SWISS98.CSI,Following is the snow height measurement which
+01-Swiss Camp,2000_SWISS98.CSI,sonic snow height sensor 1
+01-Swiss Camp,2000_SWISS98.CSI,sonic snow height sensor 2
+01-Swiss Camp,2000_SWISS99.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,2000_SWISS99.CSI,Modified by K. Steffen 6-5-98 for THR
+01-Swiss Camp,2000_SWISS99.CSI,Modified by J. Box and N. Cullen 4-1-99
+01-Swiss Camp,2000_SWISS99.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,2000_SWISS99.CSI,to turn on multiplexer
+01-Swiss Camp,2000_SWISS99.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,2000_SWISS99.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,2000_SWISS99.CSI,multiplexer input channel.
+01-Swiss Camp,2000_SWISS99.CSI,Net Radiometer
+01-Swiss Camp,2000_SWISS99.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,2000_SWISS99.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,2000_SWISS99.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,2000_SWISS99.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,2000_SWISS99.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,2000_SWISS99.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,2000_SWISS99.CSI,Snow TC (4x)
+01-Swiss Camp,2000_SWISS99.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,2000_SWISS99.CSI,End of hourly ice and snow TC meas. 14x
+01-Swiss Camp,2000_SWISS99.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,2000_SWISS99.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,2000_SWISS99.CSI,2 x wind speed averages
+01-Swiss Camp,2000_SWISS99.CSI,2 x wind direction averages
+01-Swiss Camp,2000_SWISS99.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,2000_SWISS99.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,2000_SWISS99.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,2000_SWISS99.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,2000_SWISS99.CSI,set flag hi
+01-Swiss Camp,2000_SWISS99.CSI,"begin hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,2000_SWISS99.CSI,above comment only valid if 23 hour filter is added.
+01-Swiss Camp,2000_SWISS99.CSI,begin flag is definately 1
+01-Swiss Camp,2000_SWISS99.CSI,end flag is definately 1
+01-Swiss Camp,2000_SWISS99.CSI,"end hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,2000_SWISS99.CSI,end loop for flag hi
+01-Swiss Camp,2000_SWISS99.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,2000_SWISS99.CSI,temperature cs500 probe x 2
+01-Swiss Camp,2000_SWISS99.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,2000_SWISS99.CSI,humidity cs500 probe x 2
+01-Swiss Camp,2000_SWISS99.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,2000_SWISS99.CSI,Met One wind direction measurement.
+01-Swiss Camp,2000_SWISS99.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,2000_SWISS99.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,2000_SWISS99.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,2000_SWISS99.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,2000_SWISS99.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,2000_SWISS99.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,2000_SWISS99.CSI,Following is the snow height measurement which
+01-Swiss Camp,2000_SWISS99.CSI,sonic snow height sensor 1
+01-Swiss Camp,2000_SWISS99.CSI,sonic snow height sensor 2
+01-Swiss Camp,2000_SWISS99B.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,2000_SWISS99B.CSI,Modified by K. Steffen 6-5-98 for THR
+01-Swiss Camp,2000_SWISS99B.CSI,Modified by J. Box and N. Cullen 4-1-99
+01-Swiss Camp,2000_SWISS99B.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,2000_SWISS99B.CSI,to turn on multiplexer
+01-Swiss Camp,2000_SWISS99B.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,2000_SWISS99B.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,2000_SWISS99B.CSI,multiplexer input channel.
+01-Swiss Camp,2000_SWISS99B.CSI,Net Radiometer
+01-Swiss Camp,2000_SWISS99B.CSI,"end sw in, sw ref, and Kipp and Zonen net"
+01-Swiss Camp,2000_SWISS99B.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,2000_SWISS99B.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,2000_SWISS99B.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,2000_SWISS99B.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,2000_SWISS99B.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,2000_SWISS99B.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,2000_SWISS99B.CSI,Snow TC (4x)
+01-Swiss Camp,2000_SWISS99B.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,2000_SWISS99B.CSI,End of hourly ice and snow TC meas. 14x
+01-Swiss Camp,2000_SWISS99B.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,2000_SWISS99B.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,2000_SWISS99B.CSI,2 x wind speed averages
+01-Swiss Camp,2000_SWISS99B.CSI,2 x wind direction averages
+01-Swiss Camp,2000_SWISS99B.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,2000_SWISS99B.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,2000_SWISS99B.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,2000_SWISS99B.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,2000_SWISS99B.CSI,set flag hi
+01-Swiss Camp,2000_SWISS99B.CSI,"begin hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,2000_SWISS99B.CSI,above comment only valid if 23 hour filter is added.
+01-Swiss Camp,2000_SWISS99B.CSI,begin flag is definately 1
+01-Swiss Camp,2000_SWISS99B.CSI,end flag is definately 1
+01-Swiss Camp,2000_SWISS99B.CSI,"end hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,2000_SWISS99B.CSI,end loop for flag hi
+01-Swiss Camp,2000_SWISS99B.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,2000_SWISS99B.CSI,temperature cs500 probe x 2
+01-Swiss Camp,2000_SWISS99B.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,2000_SWISS99B.CSI,humidity cs500 probe x 2
+01-Swiss Camp,2000_SWISS99B.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,2000_SWISS99B.CSI,Met One wind direction measurement.
+01-Swiss Camp,2000_SWISS99B.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,2000_SWISS99B.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,2000_SWISS99B.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,2000_SWISS99B.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,2000_SWISS99B.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,2000_SWISS99B.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,2000_SWISS99B.CSI,Following is the snow height measurement which
+01-Swiss Camp,2000_SWISS99B.CSI,sonic snow height sensor 1
+01-Swiss Camp,2000_SWISS99B.CSI,sonic snow height sensor 2
+01-Swiss Camp,2001_SWISS00.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,2001_SWISS00.CSI,Modified by K. Steffen 6-5-98 for THR
+01-Swiss Camp,2001_SWISS00.CSI,Modified by J. Box and N. Cullen 4-1-99
+01-Swiss Camp,2001_SWISS00.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,2001_SWISS00.CSI,to turn on multiplexer
+01-Swiss Camp,2001_SWISS00.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,2001_SWISS00.CSI,multiplexer input channel.
+01-Swiss Camp,2001_SWISS00.CSI,Net Radiometer
+01-Swiss Camp,2001_SWISS00.CSI,"end sw in, sw ref, and Kipp and Zonen net"
+01-Swiss Camp,2001_SWISS00.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,2001_SWISS00.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,2001_SWISS00.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,2001_SWISS00.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,2001_SWISS00.CSI,Snow TC (4x)
+01-Swiss Camp,2001_SWISS00.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,2001_SWISS00.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,2001_SWISS00.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,2001_SWISS00.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,2001_SWISS00.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,2001_SWISS00.CSI,2 x wind speed averages
+01-Swiss Camp,2001_SWISS00.CSI,2 x wind direction averages
+01-Swiss Camp,2001_SWISS00.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,2001_SWISS00.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,2001_SWISS00.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,2001_SWISS00.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,2001_SWISS00.CSI,set flag hi
+01-Swiss Camp,2001_SWISS00.CSI,"begin hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,2001_SWISS00.CSI,above comment only valid if 23 hour filter is added.
+01-Swiss Camp,2001_SWISS00.CSI,begin flag is definately 1
+01-Swiss Camp,2001_SWISS00.CSI,end flag is definately 1
+01-Swiss Camp,2001_SWISS00.CSI,"end hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,2001_SWISS00.CSI,end loop for flag hi
+01-Swiss Camp,2001_SWISS00.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,2001_SWISS00.CSI,temperature cs500 probe x 2
+01-Swiss Camp,2001_SWISS00.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,2001_SWISS00.CSI,humidity cs500 probe x 2
+01-Swiss Camp,2001_SWISS00.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,2001_SWISS00.CSI,Met One wind direction measurement.
+01-Swiss Camp,2001_SWISS00.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,2001_SWISS00.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,2001_SWISS00.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,2001_SWISS00.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,2001_SWISS00.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,2001_SWISS00.CSI,end cs105 pressure sensor measurement last minute of each hr
+01-Swiss Camp,2001_SWISS00.CSI,Following is the snow height measurement which
+01-Swiss Camp,2001_SWISS00.CSI,sonic snow height sensor 1
+01-Swiss Camp,2001_SWISS00.CSI,sonic snow height sensor 2
+01-Swiss Camp,2001_SWISS00.dld,22 pressure_AVG  L
+01-Swiss Camp,2001_SWISS00.dld,35 TC_snow1_AVG  L
+01-Swiss Camp,2001_SWISS00.dld,36 TC_snow2_AVG  L
+01-Swiss Camp,2001_SWISS00.dld,37 TC_snow3_AVG  L
+01-Swiss Camp,2001_SWISS00.dld,38 TC_snow4_AVG  L
+01-Swiss Camp,2001_SWISS00.dld,39 BATTERY_AVG  L
+01-Swiss Camp,AWSGOS96.CSI,Modified by K. Steffen 6-11-96
+01-Swiss Camp,AWSGOS96.CSI,This program measures various meteorological instruments
+01-Swiss Camp,AWSGOS96.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,AWSGOS96.CSI,to turn on multiplexer
+01-Swiss Camp,AWSGOS96.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,AWSGOS96.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,AWSGOS96.CSI,multiplexer input channel.
+01-Swiss Camp,AWSGOS96.CSI,Net Radiometer
+01-Swiss Camp,AWSGOS96.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,AWSGOS96.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,AWSGOS96.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,AWSGOS96.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,AWSGOS96.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,AWSGOS96.CSI,Thermocouples in the Snow
+01-Swiss Camp,AWSGOS96.CSI,end TC_snow loop (6x)
+01-Swiss Camp,AWSGOS96.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,AWSGOS96.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,AWSGOS96.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,AWSGOS96.CSI,"2 x cs-500 relative humidity averages, loc 23-24"
+01-Swiss Camp,AWSGOS96.CSI,"2 x wind speed averages, loc 25 - 26"
+01-Swiss Camp,AWSGOS96.CSI,"1 x wind direction average from the higher wind monitor, loc 27"
+01-Swiss Camp,AWSGOS96.CSI,"1 x pressure average, loc 29"
+01-Swiss Camp,AWSGOS96.CSI,"2 x snow height averages, loc 30-31"
+01-Swiss Camp,AWSGOS96.CSI,snow temperature at 0 m.
+01-Swiss Camp,AWSGOS96.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,AWSGOS96.CSI,snow therocouples TC_snow1 - TC_snow6
+01-Swiss Camp,AWSGOS96.CSI,"in 1995 this was 600, but filled memory with wind"
+01-Swiss Camp,AWSGOS96.CSI,sensor pulses.
+01-Swiss Camp,AWSGOS96.CSI,"memory buffer, yet we can still measure certain sensors"
+01-Swiss Camp,AWSGOS96.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,AWSGOS96.CSI,temperature cs500 probe x 2
+01-Swiss Camp,AWSGOS96.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,AWSGOS96.CSI,humidity cs500 probe x 2
+01-Swiss Camp,AWSGOS96.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,AWSGOS96.CSI,Met One wind direction measurement.
+01-Swiss Camp,AWSGOS96.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,AWSGOS96.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,AWSGOS96.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,AWSGOS96.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,AWSGOS96.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,AWSGOS96.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,AWSGOS96.CSI,Following is the snow height measurement which
+01-Swiss Camp,AWSGOS96.CSI,sonic snow height sensor 1
+01-Swiss Camp,AWSGOS96.CSI,sonic snow height sensor 2
+01-Swiss Camp,SWISS00.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,SWISS00.CSI,Modified by K. Steffen 6-5-98 for THR
+01-Swiss Camp,SWISS00.CSI,Modified by J. Box and N. Cullen 4-1-99
+01-Swiss Camp,SWISS00.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,SWISS00.CSI,to turn on multiplexer
+01-Swiss Camp,SWISS00.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,SWISS00.CSI,multiplexer input channel.
+01-Swiss Camp,SWISS00.CSI,Net Radiometer
+01-Swiss Camp,SWISS00.CSI,"end sw in, sw ref, and Kipp and Zonen net"
+01-Swiss Camp,SWISS00.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS00.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS00.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,SWISS00.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,SWISS00.CSI,Snow TC (4x)
+01-Swiss Camp,SWISS00.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,SWISS00.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,SWISS00.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,SWISS00.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,SWISS00.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,SWISS00.CSI,2 x wind speed averages
+01-Swiss Camp,SWISS00.CSI,2 x wind direction averages
+01-Swiss Camp,SWISS00.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,SWISS00.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,SWISS00.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,SWISS00.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,SWISS00.CSI,set flag hi
+01-Swiss Camp,SWISS00.CSI,"begin hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,SWISS00.CSI,above comment only valid if 23 hour filter is added.
+01-Swiss Camp,SWISS00.CSI,begin flag is definately 1
+01-Swiss Camp,SWISS00.CSI,end flag is definately 1
+01-Swiss Camp,SWISS00.CSI,"end hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,SWISS00.CSI,end loop for flag hi
+01-Swiss Camp,SWISS00.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,SWISS00.CSI,temperature cs500 probe x 2
+01-Swiss Camp,SWISS00.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,SWISS00.CSI,humidity cs500 probe x 2
+01-Swiss Camp,SWISS00.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,SWISS00.CSI,Met One wind direction measurement.
+01-Swiss Camp,SWISS00.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,SWISS00.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,SWISS00.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,SWISS00.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,SWISS00.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,SWISS00.CSI,end cs105 pressure sensor measurement last minute of each hr
+01-Swiss Camp,SWISS00.CSI,Following is the snow height measurement which
+01-Swiss Camp,SWISS00.CSI,sonic snow height sensor 1
+01-Swiss Camp,SWISS00.CSI,sonic snow height sensor 2
+01-Swiss Camp,SWISS00.dld,22 pressure_AVG  L
+01-Swiss Camp,SWISS00.dld,35 TC_snow1_AVG  L
+01-Swiss Camp,SWISS00.dld,36 TC_snow2_AVG  L
+01-Swiss Camp,SWISS00.dld,37 TC_snow3_AVG  L
+01-Swiss Camp,SWISS00.dld,38 TC_snow4_AVG  L
+01-Swiss Camp,SWISS00.dld,39 BATTERY_AVG  L
+01-Swiss Camp,SWISS04.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,SWISS04.CSI,Modified by K. Steffen 6-5-98 for THR
+01-Swiss Camp,SWISS04.CSI,Modified by J. Box and N. Cullen 4-1-99
+01-Swiss Camp,SWISS04.CSI,Modifies by K. Steffen 6-4-04: added T(surf) IR thermocouple
+01-Swiss Camp,SWISS04.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,SWISS04.CSI,to turn on multiplexer
+01-Swiss Camp,SWISS04.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,SWISS04.CSI,multiplexer input channel.
+01-Swiss Camp,SWISS04.CSI,"S_in, S_ref, Net Radiometer"
+01-Swiss Camp,SWISS04.CSI,"end sw in, sw ref, and Kipp and Zonen net"
+01-Swiss Camp,SWISS04.CSI,Begin to measure the PRT (Precision Infrared Thermocouple) sensor
+01-Swiss Camp,SWISS04.CSI,Surface temperature from IR (uncorrected)
+01-Swiss Camp,SWISS04.CSI,Instrument temperature for IR TC
+01-Swiss Camp,SWISS04.CSI,Empty channel on multiplexer
+01-Swiss Camp,SWISS04.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS04.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS04.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,SWISS04.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,SWISS04.CSI,Snow TC (4x)
+01-Swiss Camp,SWISS04.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,SWISS04.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,SWISS04.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,SWISS04.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,SWISS04.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,SWISS04.CSI,2 x wind speed averages
+01-Swiss Camp,SWISS04.CSI,2 x wind direction averages
+01-Swiss Camp,SWISS04.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,SWISS04.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,SWISS04.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,SWISS04.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,SWISS04.CSI,set flag hi
+01-Swiss Camp,SWISS04.CSI,"begin hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,SWISS04.CSI,above comment only valid if 23 hour filter is added.
+01-Swiss Camp,SWISS04.CSI,begin flag is definately 1
+01-Swiss Camp,SWISS04.CSI,end flag is definately 1
+01-Swiss Camp,SWISS04.CSI,"end hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,SWISS04.CSI,end loop for flag hi
+01-Swiss Camp,SWISS04.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,SWISS04.CSI,temperature cs500 probe x 2
+01-Swiss Camp,SWISS04.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,SWISS04.CSI,humidity cs500 probe x 2
+01-Swiss Camp,SWISS04.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,SWISS04.CSI,Met One wind direction measurement.
+01-Swiss Camp,SWISS04.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,SWISS04.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,SWISS04.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,SWISS04.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,SWISS04.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,SWISS04.CSI,end cs105 pressure sensor measurement last minute of each hr
+01-Swiss Camp,SWISS04.CSI,Following is the snow height measurement which
+01-Swiss Camp,SWISS04.CSI,sonic snow height sensor 1
+01-Swiss Camp,SWISS04.CSI,sonic snow height sensor 2
+01-Swiss Camp,SWISS04.dld,22 pressure_AVG  L
+01-Swiss Camp,SWISS04.dld,35 TC_snow1_AVG  L
+01-Swiss Camp,SWISS04.dld,36 TC_snow2_AVG  L
+01-Swiss Camp,SWISS04.dld,37 TC_snow3_AVG  L
+01-Swiss Camp,SWISS04.dld,38 TC_snow4_AVG  L
+01-Swiss Camp,SWISS04.dld,40 BATTERY_AVG  L
+01-Swiss Camp,SWISS05.csi,Modified by K. Steffen 5-21-97
+01-Swiss Camp,SWISS05.csi,Modified by K. Steffen 6-5-98 for THR
+01-Swiss Camp,SWISS05.csi,Modified by J. Box and N. Cullen 4-1-99
+01-Swiss Camp,SWISS05.csi,Modifies by K. Steffen 6-4-04: added T(surf) IR thermocouple
+01-Swiss Camp,SWISS05.csi,send voltage from control port 2 to multiplexer
+01-Swiss Camp,SWISS05.csi,to turn on multiplexer
+01-Swiss Camp,SWISS05.csi,send voltage from control port 1 to multiplexer
+01-Swiss Camp,SWISS05.csi,multiplexer input channel.
+01-Swiss Camp,SWISS05.csi,"S_in, S_ref, Net Radiometer"
+01-Swiss Camp,SWISS05.csi,"end sw in, sw ref, and Kipp and Zonen net"
+01-Swiss Camp,SWISS05.csi,Begin to measure the PRT (Precision Infrared Thermocouple) sensor
+01-Swiss Camp,SWISS05.csi,Surface temperature from IR (uncorrected)
+01-Swiss Camp,SWISS05.csi,Instrument temperature for IR TC
+01-Swiss Camp,SWISS05.csi,Empty channel on multiplexer
+01-Swiss Camp,SWISS05.csi,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS05.csi,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS05.csi,begin thermocople multiplexer measurement loop
+01-Swiss Camp,SWISS05.csi,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,SWISS05.csi,Snow TC (4x)
+01-Swiss Camp,SWISS05.csi,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,SWISS05.csi,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,SWISS05.csi,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,SWISS05.csi,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,SWISS05.csi,2 x cs-500 relative humidity averages
+01-Swiss Camp,SWISS05.csi,2 x wind speed averages
+01-Swiss Camp,SWISS05.csi,2 x wind direction averages
+01-Swiss Camp,SWISS05.csi,"1 x pressure average, loc 28"
+01-Swiss Camp,SWISS05.csi,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,SWISS05.csi,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,SWISS05.csi,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,SWISS05.csi,set flag hi
+01-Swiss Camp,SWISS05.csi,"begin hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,SWISS05.csi,above comment only valid if 23 hour filter is added.
+01-Swiss Camp,SWISS05.csi,begin flag is definately 1
+01-Swiss Camp,SWISS05.csi,end flag is definately 1
+01-Swiss Camp,SWISS05.csi,"end hour is 23 , set logger clk, and set flag low."
+01-Swiss Camp,SWISS05.csi,end loop for flag hi
+01-Swiss Camp,SWISS05.csi,for the purpose of switching on 12V to cs500
+01-Swiss Camp,SWISS05.csi,temperature cs500 probe x 2
+01-Swiss Camp,SWISS05.csi,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,SWISS05.csi,humidity cs500 probe x 2
+01-Swiss Camp,SWISS05.csi,Met One Wind Speed -> m/s
+01-Swiss Camp,SWISS05.csi,Met One wind direction measurement.
+01-Swiss Camp,SWISS05.csi,Following a loop of the barometer measurement that is
+01-Swiss Camp,SWISS05.csi,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,SWISS05.csi,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,SWISS05.csi,CS105 Vaisala Barometer
+01-Swiss Camp,SWISS05.csi,another 400 has to be added to pressure value to yield
+01-Swiss Camp,SWISS05.csi,end cs105 pressure sensor measurement last minute of each hr
+01-Swiss Camp,SWISS05.csi,Following is the snow height measurement which
+01-Swiss Camp,SWISS05.csi,sonic snow height sensor 1
+01-Swiss Camp,SWISS05.csi,sonic snow height sensor 2
+01-Swiss Camp,SWISS05.dld,22 pressure_AVG  L
+01-Swiss Camp,SWISS05.dld,35 TC_snow1_AVG  L
+01-Swiss Camp,SWISS05.dld,36 TC_snow2_AVG  L
+01-Swiss Camp,SWISS05.dld,37 TC_snow3_AVG  L
+01-Swiss Camp,SWISS05.dld,38 TC_snow4_AVG  L
+01-Swiss Camp,SWISS05.dld,40 BATTERY_AVG  L
+01-Swiss Camp,SWISS96.CSI,Modified by K. Steffen 6-11-96
+01-Swiss Camp,SWISS96.CSI,This program measures various meteorological instruments
+01-Swiss Camp,SWISS96.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,SWISS96.CSI,to turn on multiplexer
+01-Swiss Camp,SWISS96.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,SWISS96.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,SWISS96.CSI,multiplexer input channel.
+01-Swiss Camp,SWISS96.CSI,Net Radiometer
+01-Swiss Camp,SWISS96.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS96.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS96.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,SWISS96.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,SWISS96.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,SWISS96.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,SWISS96.CSI,Snow TC (4x)
+01-Swiss Camp,SWISS96.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,SWISS96.CSI,End of hourly ice and snow TC meas. 14x
+01-Swiss Camp,SWISS96.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,SWISS96.CSI,"2 x cs-500 relative humidity averages, loc 23-24"
+01-Swiss Camp,SWISS96.CSI,"2 x wind speed averages, loc 25 - 26"
+01-Swiss Camp,SWISS96.CSI,"1 x wind direction average from the higher wind monitor, loc 27"
+01-Swiss Camp,SWISS96.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,SWISS96.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,SWISS96.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,SWISS96.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,SWISS96.CSI,"in 1995 this was 600, but filled memory with wind"
+01-Swiss Camp,SWISS96.CSI,sensor pulses.
+01-Swiss Camp,SWISS96.CSI,"memory buffer, yet we can still measure certain sensors"
+01-Swiss Camp,SWISS96.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,SWISS96.CSI,temperature cs500 probe x 2
+01-Swiss Camp,SWISS96.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,SWISS96.CSI,humidity cs500 probe x 2
+01-Swiss Camp,SWISS96.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,SWISS96.CSI,Met One wind direction measurement.
+01-Swiss Camp,SWISS96.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,SWISS96.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,SWISS96.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,SWISS96.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,SWISS96.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,SWISS96.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,SWISS96.CSI,Following is the snow height measurement which
+01-Swiss Camp,SWISS96.CSI,sonic snow height sensor 1
+01-Swiss Camp,SWISS96.CSI,sonic snow height sensor 2
+01-Swiss Camp,SWISS97.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,SWISS97.CSI,This program measures various meteorological instruments
+01-Swiss Camp,SWISS97.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,SWISS97.CSI,to turn on multiplexer
+01-Swiss Camp,SWISS97.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,SWISS97.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,SWISS97.CSI,multiplexer input channel.
+01-Swiss Camp,SWISS97.CSI,Net Radiometer
+01-Swiss Camp,SWISS97.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS97.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS97.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,SWISS97.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,SWISS97.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,SWISS97.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,SWISS97.CSI,Snow TC (4x)
+01-Swiss Camp,SWISS97.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,SWISS97.CSI,End of hourly ice and snow TC meas. 14x
+01-Swiss Camp,SWISS97.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,SWISS97.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,SWISS97.CSI,2 x wind speed averages
+01-Swiss Camp,SWISS97.CSI,2 x wind direction averages
+01-Swiss Camp,SWISS97.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,SWISS97.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,SWISS97.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,SWISS97.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,SWISS97.CSI,"in 1995 this was 600, but filled memory with wind"
+01-Swiss Camp,SWISS97.CSI,sensor pulses.
+01-Swiss Camp,SWISS97.CSI,"memory buffer, yet we can still measure certain sensors"
+01-Swiss Camp,SWISS97.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,SWISS97.CSI,temperature cs500 probe x 2
+01-Swiss Camp,SWISS97.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,SWISS97.CSI,humidity cs500 probe x 2
+01-Swiss Camp,SWISS97.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,SWISS97.CSI,Met One wind direction measurement.
+01-Swiss Camp,SWISS97.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,SWISS97.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,SWISS97.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,SWISS97.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,SWISS97.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,SWISS97.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,SWISS97.CSI,Following is the snow height measurement which
+01-Swiss Camp,SWISS97.CSI,sonic snow height sensor 1
+01-Swiss Camp,SWISS97.CSI,sonic snow height sensor 2
+01-Swiss Camp,SWISS97O.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,SWISS97O.CSI,This program measures various meteorological instruments
+01-Swiss Camp,SWISS97O.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,SWISS97O.CSI,to turn on multiplexer
+01-Swiss Camp,SWISS97O.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,SWISS97O.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,SWISS97O.CSI,multiplexer input channel.
+01-Swiss Camp,SWISS97O.CSI,Net Radiometer
+01-Swiss Camp,SWISS97O.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS97O.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS97O.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,SWISS97O.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,SWISS97O.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,SWISS97O.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,SWISS97O.CSI,Snow TC (4x)
+01-Swiss Camp,SWISS97O.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,SWISS97O.CSI,End of hourly ice and snow TC meas. 14x
+01-Swiss Camp,SWISS97O.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,SWISS97O.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,SWISS97O.CSI,2 x wind speed averages
+01-Swiss Camp,SWISS97O.CSI,2 x wind direction averages
+01-Swiss Camp,SWISS97O.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,SWISS97O.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,SWISS97O.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,SWISS97O.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,SWISS97O.CSI,"in 1995 this was 600, but filled memory with wind"
+01-Swiss Camp,SWISS97O.CSI,sensor pulses.
+01-Swiss Camp,SWISS97O.CSI,"memory buffer, yet we can still measure certain sensors"
+01-Swiss Camp,SWISS97O.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,SWISS97O.CSI,temperature cs500 probe x 2
+01-Swiss Camp,SWISS97O.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,SWISS97O.CSI,humidity cs500 probe x 2
+01-Swiss Camp,SWISS97O.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,SWISS97O.CSI,Met One wind direction measurement.
+01-Swiss Camp,SWISS97O.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,SWISS97O.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,SWISS97O.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,SWISS97O.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,SWISS97O.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,SWISS97O.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,SWISS97O.CSI,Following is the snow height measurement which
+01-Swiss Camp,SWISS97O.CSI,sonic snow height sensor 1
+01-Swiss Camp,SWISS97O.CSI,sonic snow height sensor 2
+01-Swiss Camp,SWISS97_winter.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,SWISS97_winter.CSI,This program measures various meteorological instruments
+01-Swiss Camp,SWISS97_winter.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,SWISS97_winter.CSI,to turn on multiplexer
+01-Swiss Camp,SWISS97_winter.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,SWISS97_winter.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,SWISS97_winter.CSI,multiplexer input channel.
+01-Swiss Camp,SWISS97_winter.CSI,Net Radiometer
+01-Swiss Camp,SWISS97_winter.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS97_winter.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS97_winter.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,SWISS97_winter.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,SWISS97_winter.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,SWISS97_winter.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,SWISS97_winter.CSI,Snow TC (4x)
+01-Swiss Camp,SWISS97_winter.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,SWISS97_winter.CSI,End of hourly ice and snow TC meas. 14x
+01-Swiss Camp,SWISS97_winter.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,SWISS97_winter.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,SWISS97_winter.CSI,2 x wind speed averages
+01-Swiss Camp,SWISS97_winter.CSI,2 x wind direction averages
+01-Swiss Camp,SWISS97_winter.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,SWISS97_winter.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,SWISS97_winter.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,SWISS97_winter.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,SWISS97_winter.CSI,"in 1995 this was 600, but filled memory with wind"
+01-Swiss Camp,SWISS97_winter.CSI,sensor pulses.
+01-Swiss Camp,SWISS97_winter.CSI,"memory buffer, yet we can still measure certain sensors"
+01-Swiss Camp,SWISS97_winter.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,SWISS97_winter.CSI,temperature cs500 probe x 2
+01-Swiss Camp,SWISS97_winter.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,SWISS97_winter.CSI,humidity cs500 probe x 2
+01-Swiss Camp,SWISS97_winter.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,SWISS97_winter.CSI,Met One wind direction measurement.
+01-Swiss Camp,SWISS97_winter.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,SWISS97_winter.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,SWISS97_winter.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,SWISS97_winter.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,SWISS97_winter.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,SWISS97_winter.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,SWISS97_winter.CSI,Following is the snow height measurement which
+01-Swiss Camp,SWISS97_winter.CSI,sonic snow height sensor 1
+01-Swiss Camp,SWISS97_winter.CSI,sonic snow height sensor 2
+01-Swiss Camp,SWISS98.CSI,Modified by K. Steffen 5-21-97
+01-Swiss Camp,SWISS98.CSI,Modified by K. Steffen 6-5-98 for THR
+01-Swiss Camp,SWISS98.CSI,This program measures various meteorological instruments
+01-Swiss Camp,SWISS98.CSI,send voltage from control port 2 to multiplexer
+01-Swiss Camp,SWISS98.CSI,to turn on multiplexer
+01-Swiss Camp,SWISS98.CSI,-> (internal multiplexer reference temperature signal)
+01-Swiss Camp,SWISS98.CSI,send voltage from control port 1 to multiplexer
+01-Swiss Camp,SWISS98.CSI,multiplexer input channel.
+01-Swiss Camp,SWISS98.CSI,Net Radiometer
+01-Swiss Camp,SWISS98.CSI,begin air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS98.CSI,end air temperature thermocouple multiplexer loop
+01-Swiss Camp,SWISS98.CSI,"turns multiplexer off, the remaining measurements"
+01-Swiss Camp,SWISS98.CSI,will occur on the cr10 and not on the multiplexer.
+01-Swiss Camp,SWISS98.CSI,begin thermocople multiplexer measurement loop
+01-Swiss Camp,SWISS98.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+01-Swiss Camp,SWISS98.CSI,Snow TC (4x)
+01-Swiss Camp,SWISS98.CSI,"end loop of 10, thermocouple measurement loop."
+01-Swiss Camp,SWISS98.CSI,End of hourly ice and snow TC meas. 14x
+01-Swiss Camp,SWISS98.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+01-Swiss Camp,SWISS98.CSI,2 x cs-500 relative humidity averages
+01-Swiss Camp,SWISS98.CSI,2 x wind speed averages
+01-Swiss Camp,SWISS98.CSI,2 x wind direction averages
+01-Swiss Camp,SWISS98.CSI,"1 x pressure average, loc 28"
+01-Swiss Camp,SWISS98.CSI,"2 x snow height averages, loc 29-30"
+01-Swiss Camp,SWISS98.CSI,ice thermocouple measurements tc1 - tc10
+01-Swiss Camp,SWISS98.CSI,snow thermocouples TC_snow1 - TC_snow4
+01-Swiss Camp,SWISS98.CSI,"in 1995 this was 600, but filled memory with wind"
+01-Swiss Camp,SWISS98.CSI,sensor pulses.
+01-Swiss Camp,SWISS98.CSI,"memory buffer, yet we can still measure certain sensors"
+01-Swiss Camp,SWISS98.CSI,for the purpose of switching on 12V to cs500
+01-Swiss Camp,SWISS98.CSI,temperature cs500 probe x 2
+01-Swiss Camp,SWISS98.CSI,removed 60 Hz rejection range since there is no 60 Hz
+01-Swiss Camp,SWISS98.CSI,humidity cs500 probe x 2
+01-Swiss Camp,SWISS98.CSI,Met One Wind Speed -> m/s
+01-Swiss Camp,SWISS98.CSI,Met One wind direction measurement.
+01-Swiss Camp,SWISS98.CSI,Following a loop of the barometer measurement that is
+01-Swiss Camp,SWISS98.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+01-Swiss Camp,SWISS98.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+01-Swiss Camp,SWISS98.CSI,CS105 Vaisala Barometer
+01-Swiss Camp,SWISS98.CSI,another 400 has to be added to pressure value to yield
+01-Swiss Camp,SWISS98.CSI,end pressure sensor measurement last minute of each hr
+01-Swiss Camp,SWISS98.CSI,Following is the snow height measurement which
+01-Swiss Camp,SWISS98.CSI,sonic snow height sensor 1
+01-Swiss Camp,SWISS98.CSI,sonic snow height sensor 2
+03-NASA-U,AWSARG98.CSI,"modified for NASA-U (station 03, staion code 63) 26 May 2006"
+03-NASA-U,AWSARG98.CSI,Program modified 03/20/1998 by Jason Box
+03-NASA-U,AWSARG98.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+03-NASA-U,AWSARG98.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+03-NASA-U,AWSARG98.CSI,replace peak wind speed with reference temperature.
+03-NASA-U,AWSARG98.CSI,This program measures various meteorological instruments
+03-NASA-U,AWSARG98.CSI,send voltage from control port 2 to multiplexer
+03-NASA-U,AWSARG98.CSI,to turn on multiplexer
+03-NASA-U,AWSARG98.CSI,-> (internal multiplexer reference temperature signal)
+03-NASA-U,AWSARG98.CSI,begin multiplexer measurement loop
+03-NASA-U,AWSARG98.CSI,send voltage from control port 1 to multiplexer
+03-NASA-U,AWSARG98.CSI,multiplexer input channel.
+03-NASA-U,AWSARG98.CSI,Two Li Cor Photo-Diode Pyranometers
+03-NASA-U,AWSARG98.CSI,end Li Cor multiplexer loop
+03-NASA-U,AWSARG98.CSI,Net Radiometer
+03-NASA-U,AWSARG98.CSI,begin thermocople multiplexer measurement loop
+03-NASA-U,AWSARG98.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+03-NASA-U,AWSARG98.CSI,"end loop of 10, thermocouple measurement loop."
+03-NASA-U,AWSARG98.CSI,begin air temperature thermocouple multiplexer loop
+03-NASA-U,AWSARG98.CSI,end air temperature thermocouple multiplexer loop
+03-NASA-U,AWSARG98.CSI,"turns multiplexer off, the remaining measurements"
+03-NASA-U,AWSARG98.CSI,will occur on the cr10 and not on the multiplexer.
+03-NASA-U,AWSARG98.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+03-NASA-U,AWSARG98.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+03-NASA-U,AWSARG98.CSI,"2 x wind speed averages, loc 21 - 22"
+03-NASA-U,AWSARG98.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+03-NASA-U,AWSARG98.CSI,"2 x snow height averages, loc 26-27"
+03-NASA-U,AWSARG98.CSI,snow thermocouple measurements tc1 - tc10
+03-NASA-U,AWSARG98.CSI,"in 1995 this was 600, but filled memory with wind"
+03-NASA-U,AWSARG98.CSI,sensor pulses.
+03-NASA-U,AWSARG98.CSI,"memory buffer, yet we can still measure certain sensors"
+03-NASA-U,AWSARG98.CSI,for the purpose of switching on 12V to cs500
+03-NASA-U,AWSARG98.CSI,temperature cs500 probe x 2
+03-NASA-U,AWSARG98.CSI,removed 60 Hz rejection range since there is no 60 Hz
+03-NASA-U,AWSARG98.CSI,humidity cs500 probe x 2
+03-NASA-U,AWSARG98.CSI,Young Wind Monitor wind speed -> m/s
+03-NASA-U,AWSARG98.CSI,Young wind direction measurement.
+03-NASA-U,AWSARG98.CSI,Following a loop of the barometer measurement that is
+03-NASA-U,AWSARG98.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+03-NASA-U,AWSARG98.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+03-NASA-U,AWSARG98.CSI,CS105 Vaisala Barometer
+03-NASA-U,AWSARG98.CSI,another 400 has to be added to pressure value to yield
+03-NASA-U,AWSARG98.CSI,end pressure sensor measurement last minute of each hr
+03-NASA-U,AWSARG98.CSI,Following is the snow height measurement which
+03-NASA-U,AWSARG98.CSI,sonic snow height sensor 1
+03-NASA-U,AWSARG98.CSI,sonic snow height sensor 2
+04-GITS,AWSARG02.CSI,This program measures various meteorological instruments
+04-GITS,AWSARG02.CSI,Program modified 02/21/1999 by Jason Box
+04-GITS,AWSARG02.CSI,modifications include a reset of TC measurement range if it reads -6999
+04-GITS,AWSARG02.CSI,pressure will require measurement elsewhere than c6
+04-GITS,AWSARG02.CSI,Program modified 03/20/1998 by Jason Box
+04-GITS,AWSARG02.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+04-GITS,AWSARG02.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+04-GITS,AWSARG02.CSI,replace peak wind speed with reference temperature.
+04-GITS,AWSARG02.CSI,Modified at Petermann Gletscher by K. Steffen 25 May 2002
+04-GITS,AWSARG02.CSI,send voltage from control port 2 to multiplexer
+04-GITS,AWSARG02.CSI,to turn on multiplexer
+04-GITS,AWSARG02.CSI,-> (internal multiplexer reference temperature signal)
+04-GITS,AWSARG02.CSI,begin multiplexer measurement loop
+04-GITS,AWSARG02.CSI,send voltage from control port 1 to multiplexer
+04-GITS,AWSARG02.CSI,multiplexer input channel.
+04-GITS,AWSARG02.CSI,Two Li Cor Photo-Diode Pyranometers
+04-GITS,AWSARG02.CSI,end Li Cor multiplexer loop
+04-GITS,AWSARG02.CSI,Net Radiometer
+04-GITS,AWSARG02.CSI,begin thermocople multiplexer measurement loop
+04-GITS,AWSARG02.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+04-GITS,AWSARG02.CSI,"end loop of 10, thermocouple measurement loop."
+04-GITS,AWSARG02.CSI,begin air temperature thermocouple multiplexer loop
+04-GITS,AWSARG02.CSI,end air temperature thermocouple multiplexer loop
+04-GITS,AWSARG02.CSI,"turns multiplexer off, the remaining measurements"
+04-GITS,AWSARG02.CSI,will occur on the cr10 and not on the multiplexer.
+04-GITS,AWSARG02.CSI,Young Wind Monitor wind speed -> m/s
+04-GITS,AWSARG02.CSI,set flag hi
+04-GITS,AWSARG02.CSI,"begin hour is 23 , set logger clk, and set flag low."
+04-GITS,AWSARG02.CSI,above comment only valid if 23 hour filter is added.
+04-GITS,AWSARG02.CSI,begin flag is definately 1
+04-GITS,AWSARG02.CSI,end flag is definately 1
+04-GITS,AWSARG02.CSI,"end hour is 23 , set logger clk, and set flag low."
+04-GITS,AWSARG02.CSI,end loop for flag hi
+04-GITS,AWSARG02.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+04-GITS,AWSARG02.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+04-GITS,AWSARG02.CSI,"2 x wind speed averages, loc 21 - 22"
+04-GITS,AWSARG02.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+04-GITS,AWSARG02.CSI,"2 x snow height averages, loc 26-27"
+04-GITS,AWSARG02.CSI,snow thermocouple measurements tc1 - tc10
+04-GITS,AWSARG02.CSI,"in 1995 this was 600, but filled memory with wind"
+04-GITS,AWSARG02.CSI,sensor pulses.
+04-GITS,AWSARG02.CSI,"memory buffer, yet we can still measure certain sensors"
+04-GITS,AWSARG02.CSI,for the purpose of switching on 12V to cs500
+04-GITS,AWSARG02.CSI,temperature cs500 probe x 2
+04-GITS,AWSARG02.CSI,removed 60 Hz rejection range since there is no 60 Hz
+04-GITS,AWSARG02.CSI,humidity cs500 probe x 2
+04-GITS,AWSARG02.CSI,Young wind direction measurement.
+04-GITS,AWSARG02.CSI,Following a loop of the barometer measurement that is
+04-GITS,AWSARG02.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+04-GITS,AWSARG02.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+04-GITS,AWSARG02.CSI,CS105 Vaisala Barometer
+04-GITS,AWSARG02.CSI,another 400 has to be added to pressure value to yield
+04-GITS,AWSARG02.CSI,end cs105 pressure sensor measurement last minute of each hr
+04-GITS,AWSARG02.CSI,Following is the snow height measurement which
+04-GITS,AWSARG02.CSI,sonic snow height sensor 1
+04-GITS,AWSARG02.CSI,sonic snow height sensor 2
+04-GITS,GITARG02.CSI,This program measures various meteorological instruments
+04-GITS,GITARG02.CSI,Program modified 02/21/1999 by Jason Box
+04-GITS,GITARG02.CSI,modifications include a reset of TC measurement range if it reads -6999
+04-GITS,GITARG02.CSI,pressure will require measurement elsewhere than c6
+04-GITS,GITARG02.CSI,Program modified 03/20/1998 by Jason Box
+04-GITS,GITARG02.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+04-GITS,GITARG02.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+04-GITS,GITARG02.CSI,replace peak wind speed with reference temperature.
+04-GITS,GITARG02.CSI,Modified at Petermann Gletscher by K. Steffen 25 May 2002
+04-GITS,GITARG02.CSI,send voltage from control port 2 to multiplexer
+04-GITS,GITARG02.CSI,to turn on multiplexer
+04-GITS,GITARG02.CSI,-> (internal multiplexer reference temperature signal)
+04-GITS,GITARG02.CSI,begin multiplexer measurement loop
+04-GITS,GITARG02.CSI,send voltage from control port 1 to multiplexer
+04-GITS,GITARG02.CSI,multiplexer input channel.
+04-GITS,GITARG02.CSI,Two Li Cor Photo-Diode Pyranometers
+04-GITS,GITARG02.CSI,end Li Cor multiplexer loop
+04-GITS,GITARG02.CSI,Net Radiometer
+04-GITS,GITARG02.CSI,begin thermocople multiplexer measurement loop
+04-GITS,GITARG02.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+04-GITS,GITARG02.CSI,"end loop of 10, thermocouple measurement loop."
+04-GITS,GITARG02.CSI,begin air temperature thermocouple multiplexer loop
+04-GITS,GITARG02.CSI,end air temperature thermocouple multiplexer loop
+04-GITS,GITARG02.CSI,"turns multiplexer off, the remaining measurements"
+04-GITS,GITARG02.CSI,will occur on the cr10 and not on the multiplexer.
+04-GITS,GITARG02.CSI,Young Wind Monitor wind speed -> m/s
+04-GITS,GITARG02.CSI,set flag hi
+04-GITS,GITARG02.CSI,"begin hour is 23 , set logger clk, and set flag low."
+04-GITS,GITARG02.CSI,above comment only valid if 23 hour filter is added.
+04-GITS,GITARG02.CSI,begin flag is definately 1
+04-GITS,GITARG02.CSI,end flag is definately 1
+04-GITS,GITARG02.CSI,"end hour is 23 , set logger clk, and set flag low."
+04-GITS,GITARG02.CSI,end loop for flag hi
+04-GITS,GITARG02.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+04-GITS,GITARG02.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+04-GITS,GITARG02.CSI,"2 x wind speed averages, loc 21 - 22"
+04-GITS,GITARG02.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+04-GITS,GITARG02.CSI,"2 x snow height averages, loc 26-27"
+04-GITS,GITARG02.CSI,snow thermocouple measurements tc1 - tc10
+04-GITS,GITARG02.CSI,"in 1995 this was 600, but filled memory with wind"
+04-GITS,GITARG02.CSI,sensor pulses.
+04-GITS,GITARG02.CSI,"memory buffer, yet we can still measure certain sensors"
+04-GITS,GITARG02.CSI,for the purpose of switching on 12V to cs500
+04-GITS,GITARG02.CSI,temperature cs500 probe x 2
+04-GITS,GITARG02.CSI,removed 60 Hz rejection range since there is no 60 Hz
+04-GITS,GITARG02.CSI,humidity cs500 probe x 2
+04-GITS,GITARG02.CSI,Young wind direction measurement.
+04-GITS,GITARG02.CSI,Following a loop of the barometer measurement that is
+04-GITS,GITARG02.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+04-GITS,GITARG02.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+04-GITS,GITARG02.CSI,CS105 Vaisala Barometer
+04-GITS,GITARG02.CSI,another 400 has to be added to pressure value to yield
+04-GITS,GITARG02.CSI,end cs105 pressure sensor measurement last minute of each hr
+04-GITS,GITARG02.CSI,Following is the snow height measurement which
+04-GITS,GITARG02.CSI,sonic snow height sensor 1
+04-GITS,GITARG02.CSI,sonic snow height sensor 2
+04-GITS,GITARG02.DLD,15 pressure_AVG  L
+04-GITS,GITARG02.DLD,17 BATTERY  L
+06-Summit,2000_AWSSUM00.CSI,excitation changed from 350 mV to 250 to extend measurement range to -72 C
+06-Summit,2000_AWSSUM00.CSI,port 7 will remain hi and hence so will pressure the trigger of which is moved to c7
+06-Summit,2000_AWSSUM00.CSI,send voltage from control port 2 to multiplexer
+06-Summit,2000_AWSSUM00.CSI,to turn on multiplexer
+06-Summit,2000_AWSSUM00.CSI,begin multiplexer measurement loop
+06-Summit,2000_AWSSUM00.CSI,send voltage from control port 1 to multiplexer
+06-Summit,2000_AWSSUM00.CSI,multiplexer input channel.
+06-Summit,2000_AWSSUM00.CSI,Two Li Cor Photo-Diode Pyranometers
+06-Summit,2000_AWSSUM00.CSI,end Li Cor multiplexer loop
+06-Summit,2000_AWSSUM00.CSI,Net Radiometer
+06-Summit,2000_AWSSUM00.CSI,---------------------- begin snow TC loop
+06-Summit,2000_AWSSUM00.CSI,begin thermocople multiplexer measurement loop
+06-Summit,2000_AWSSUM00.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+06-Summit,2000_AWSSUM00.CSI,"end loop of 10, thermocouple measurement loop."
+06-Summit,2000_AWSSUM00.CSI,begin air temperature thermocouple multiplexer loop
+06-Summit,2000_AWSSUM00.CSI,end air temperature thermocouple multiplexer loop
+06-Summit,2000_AWSSUM00.CSI,"turns multiplexer off, the remaining measurements"
+06-Summit,2000_AWSSUM00.CSI,will occur on the cr10 and not on the multiplexer.
+06-Summit,2000_AWSSUM00.CSI,"end turn on GPS and initialize counter, flag, and flag3"
+06-Summit,2000_AWSSUM00.CSI,"loop to set flag 4, to trigger clock set after GPS has sampled for 15 minutes"
+06-Summit,2000_AWSSUM00.CSI,"begin hour is 23 , set logger clk, and set flag low."
+06-Summit,2000_AWSSUM00.CSI,above comment only valid if 23 hour filter is added.
+06-Summit,2000_AWSSUM00.CSI,end time calculation when flag is set hi
+06-Summit,2000_AWSSUM00.CSI,set clock if flag is definately set hi
+06-Summit,2000_AWSSUM00.CSI,end flag is definately 1
+06-Summit,2000_AWSSUM00.CSI,"end hour is 23 , set logger clk, and set flag low."
+06-Summit,2000_AWSSUM00.CSI,end loop for flag hi
+06-Summit,2000_AWSSUM00.CSI,set flag low
+06-Summit,2000_AWSSUM00.CSI,Young Wind Monitor wind speed -> m/s
+06-Summit,2000_AWSSUM00.CSI,set pressure sensor option. 0 is for the older PTA427A pressure sensor
+06-Summit,2000_AWSSUM00.CSI,p_flag = 1 is for the newer PTB101B pressure sensor.
+06-Summit,2000_AWSSUM00.CSI,for the purpose of switching on 12V to cs500
+06-Summit,2000_AWSSUM00.CSI,temperature cs500 probe x 2
+06-Summit,2000_AWSSUM00.CSI,removed 60 Hz rejection range since there is no 60 Hz
+06-Summit,2000_AWSSUM00.CSI,humidity cs500 probe x 2
+06-Summit,2000_AWSSUM00.CSI,Young wind direction measurement.
+06-Summit,2000_AWSSUM00.CSI,Following a loop of the barometer measurement that is
+06-Summit,2000_AWSSUM00.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+06-Summit,2000_AWSSUM00.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+06-Summit,2000_AWSSUM00.CSI,0 in parameter location 1 sets flag2 to 0 for pta427
+06-Summit,2000_AWSSUM00.CSI,1 in parameter location 1 sets flag2 to 1 for cs105
+06-Summit,2000_AWSSUM00.CSI,end pta427 pressure sensor measurement last minute of each hr
+06-Summit,2000_AWSSUM00.CSI,CS105 Vaisala Barometer
+06-Summit,2000_AWSSUM00.CSI,another 400 has to be added to pressure value to yield
+06-Summit,2000_AWSSUM00.CSI,end cs105 pressure sensor measurement last minute of each hr
+06-Summit,2000_AWSSUM00.CSI,end pressure sensor measurement last minute of each hr
+06-Summit,2000_AWSSUM00.CSI,Following is the snow height measurement which
+06-Summit,2000_AWSSUM00.CSI,sonic snow height sensor 1
+06-Summit,2000_AWSSUM00.CSI,sonic snow height sensor 2
+06-Summit,2000_AWSSUM04.CSI,"Modified program for 1 m averaging and 15, 10 second logging for"
+06-Summit,2000_AWSSUM04.CSI,"Modified Koni Steffen, Boulder 11 March 2004"
+06-Summit,2000_AWSSUM04.CSI,excitation changed from 350 mV to 250 to extend measurement range to -72 C
+06-Summit,2000_AWSSUM04.CSI,port 7 will remain hi and hence so will pressure the trigger of which is moved to c7
+06-Summit,2000_AWSSUM04.CSI,send voltage from control port 2 to multiplexer
+06-Summit,2000_AWSSUM04.CSI,to turn on multiplexer
+06-Summit,2000_AWSSUM04.CSI,begin multiplexer measurement loop
+06-Summit,2000_AWSSUM04.CSI,send voltage from control port 1 to multiplexer
+06-Summit,2000_AWSSUM04.CSI,multiplexer input channel.
+06-Summit,2000_AWSSUM04.CSI,Two Li Cor Photo-Diode Pyranometers
+06-Summit,2000_AWSSUM04.CSI,end Li Cor multiplexer loop
+06-Summit,2000_AWSSUM04.CSI,Net Radiometer
+06-Summit,2000_AWSSUM04.CSI,---------------------- begin snow TC loop
+06-Summit,2000_AWSSUM04.CSI,begin thermocople multiplexer measurement loop
+06-Summit,2000_AWSSUM04.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+06-Summit,2000_AWSSUM04.CSI,"end loop of 10, thermocouple measurement loop."
+06-Summit,2000_AWSSUM04.CSI,begin air temperature thermocouple multiplexer loop
+06-Summit,2000_AWSSUM04.CSI,end air temperature thermocouple multiplexer loop
+06-Summit,2000_AWSSUM04.CSI,"turns multiplexer off, the remaining measurements"
+06-Summit,2000_AWSSUM04.CSI,will occur on the cr10 and not on the multiplexer.
+06-Summit,2000_AWSSUM04.CSI,"end turn on GPS and initialize counter, flag, and flag3"
+06-Summit,2000_AWSSUM04.CSI,"loop to set flag 4, to trigger clock set after GPS has sampled for 15 minutes"
+06-Summit,2000_AWSSUM04.CSI,"begin hour is 23 , set logger clk, and set flag low."
+06-Summit,2000_AWSSUM04.CSI,above comment only valid if 23 hour filter is added.
+06-Summit,2000_AWSSUM04.CSI,end time calculation when flag is set hi
+06-Summit,2000_AWSSUM04.CSI,set clock if flag is definately set hi
+06-Summit,2000_AWSSUM04.CSI,end flag is definately 1
+06-Summit,2000_AWSSUM04.CSI,"end hour is 23 , set logger clk, and set flag low."
+06-Summit,2000_AWSSUM04.CSI,end loop for flag hi
+06-Summit,2000_AWSSUM04.CSI,set flag low
+06-Summit,2000_AWSSUM04.CSI,Young Wind Monitor wind speed -> m/s
+06-Summit,2000_AWSSUM04.CSI,set pressure sensor option. 0 is for the older PTA427A pressure sensor
+06-Summit,2000_AWSSUM04.CSI,p_flag = 1 is for the newer PTB101B pressure sensor.
+06-Summit,2000_AWSSUM04.CSI,for the purpose of switching on 12V to cs500
+06-Summit,2000_AWSSUM04.CSI,temperature cs500 probe x 2
+06-Summit,2000_AWSSUM04.CSI,removed 60 Hz rejection range since there is no 60 Hz
+06-Summit,2000_AWSSUM04.CSI,humidity cs500 probe x 2
+06-Summit,2000_AWSSUM04.CSI,Young wind direction measurement.
+06-Summit,2000_AWSSUM04.CSI,Following a loop of the barometer measurement that is
+06-Summit,2000_AWSSUM04.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+06-Summit,2000_AWSSUM04.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+06-Summit,2000_AWSSUM04.CSI,0 in parameter location 1 sets flag2 to 0 for pta427
+06-Summit,2000_AWSSUM04.CSI,1 in parameter location 1 sets flag2 to 1 for cs105
+06-Summit,2000_AWSSUM04.CSI,end pta427 pressure sensor measurement last minute of each hr
+06-Summit,2000_AWSSUM04.CSI,CS105 Vaisala Barometer
+06-Summit,2000_AWSSUM04.CSI,another 400 has to be added to pressure value to yield
+06-Summit,2000_AWSSUM04.CSI,end cs105 pressure sensor measurement last minute of each hr
+06-Summit,2000_AWSSUM04.CSI,end pressure sensor measurement last minute of each hr
+06-Summit,2000_AWSSUM04.CSI,Following is the snow height measurement which
+06-Summit,2000_AWSSUM04.CSI,sonic snow height sensor 1
+06-Summit,2000_AWSSUM04.CSI,sonic snow height sensor 2
+06-Summit,2000_AWSSUM04.dld,19 thmp_1_AVG  L
+06-Summit,2000_AWSSUM04.dld,20 thmp_2_AVG  L
+06-Summit,2000_AWSSUM04.dld,27 pressure_AVG  L
+06-Summit,2000_AWSSUM04.dld,31 BATTERY  L
+06-Summit,2000_AWS_1.CSI,"Met One instruments; Temperature, humidity, wind speed and direction"
+06-Summit,2000_AWS_1.CSI,See program for instrument details
+06-Summit,2000_AWS_1.CSI,Relative humidity 083C proobes x3
+06-Summit,2000_AWS_1.CSI,Wind speed using 014A instruments
+06-Summit,2000_AWS_1.CSI,Wind direction using 024A
+06-Summit,2000_AWS_2.CSI,"Surface temperature, pressure, sonic height and"
+06-Summit,2000_AWS_2.CSI,HMP 45C temperatures
+06-Summit,2000_AWS_2.CSI,"Temperature and humidity, HMP 45C x3"
+06-Summit,2000_AWS_2.CSI,Sonic ranging instrument
+06-Summit,2000_AWS_2.CSI,Pressure
+08-DYE-2,AWSDY298.CSI,Program modified 03/20/1998 by Jason Box
+08-DYE-2,AWSDY298.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+08-DYE-2,AWSDY298.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+08-DYE-2,AWSDY298.CSI,This program measures various meteorological instruments
+08-DYE-2,AWSDY298.CSI,send voltage from control port 2 to multiplexer
+08-DYE-2,AWSDY298.CSI,to turn on multiplexer
+08-DYE-2,AWSDY298.CSI,-> (internal multiplexer reference temperature signal)
+08-DYE-2,AWSDY298.CSI,begin multiplexer measurement loop
+08-DYE-2,AWSDY298.CSI,send voltage from control port 1 to multiplexer
+08-DYE-2,AWSDY298.CSI,multiplexer input channel.
+08-DYE-2,AWSDY298.CSI,Two Li Cor Photo-Diode Pyranometers
+08-DYE-2,AWSDY298.CSI,end Li Cor multiplexer loop
+08-DYE-2,AWSDY298.CSI,Net Radiometer
+08-DYE-2,AWSDY298.CSI,begin thermocople multiplexer measurement loop
+08-DYE-2,AWSDY298.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+08-DYE-2,AWSDY298.CSI,"end loop of 10, thermocouple measurement loop."
+08-DYE-2,AWSDY298.CSI,begin air temperature thermocouple multiplexer loop
+08-DYE-2,AWSDY298.CSI,end air temperature thermocouple multiplexer loop
+08-DYE-2,AWSDY298.CSI,begin thr thermocouple top an bottom
+08-DYE-2,AWSDY298.CSI,"turns multiplexer off, the remaining measurements"
+08-DYE-2,AWSDY298.CSI,will occur on the cr10 and not on the multiplexer.
+08-DYE-2,AWSDY298.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+08-DYE-2,AWSDY298.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+08-DYE-2,AWSDY298.CSI,2 x wind speed averages
+08-DYE-2,AWSDY298.CSI,2 x wind direction average
+08-DYE-2,AWSDY298.CSI,2 x snow height
+08-DYE-2,AWSDY298.CSI,snow thermocouple measurements tc1 - tc10
+08-DYE-2,AWSDY298.CSI,"in 1995 this was 600, but filled memory with wind"
+08-DYE-2,AWSDY298.CSI,sensor pulses.
+08-DYE-2,AWSDY298.CSI,"memory buffer, yet we can still measure certain sensors"
+08-DYE-2,AWSDY298.CSI,for the purpose of switching on 12V to cs500
+08-DYE-2,AWSDY298.CSI,temperature cs500 probe x 2
+08-DYE-2,AWSDY298.CSI,humidity cs500 probe x 2
+08-DYE-2,AWSDY298.CSI,Young Wind Monitor wind speed -> m/s
+08-DYE-2,AWSDY298.CSI,Young wind direction measurement.
+08-DYE-2,AWSDY298.CSI,Following a loop of the barometer measurement that is
+08-DYE-2,AWSDY298.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+08-DYE-2,AWSDY298.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+08-DYE-2,AWSDY298.CSI,CS105 Vaisala Barometer
+08-DYE-2,AWSDY298.CSI,another 400 has to be added to pressure value to yield
+08-DYE-2,AWSDY298.CSI,end pressure sensor measurement last minute of each hr
+08-DYE-2,AWSDY298.CSI,Following is the snow height measurement which
+08-DYE-2,AWSDY298.CSI,sonic snow height sensor 1
+08-DYE-2,AWSDY298.CSI,sonic snow height sensor 2
+13-CP2,1997_CR2.CSI,This program measures various meteorological instruments
+13-CP2,1997_CR2.CSI,send voltage from control port 2 to multiplexer
+13-CP2,1997_CR2.CSI,to turn on multiplexer
+13-CP2,1997_CR2.CSI,-> (internal multiplexer reference temperature signal)
+13-CP2,1997_CR2.CSI,begin multiplexer measurement loop
+13-CP2,1997_CR2.CSI,send voltage from control port 1 to multiplexer
+13-CP2,1997_CR2.CSI,multiplexer input channel.
+13-CP2,1997_CR2.CSI,Two Li Cor Photo-Diode Pyranometers
+13-CP2,1997_CR2.CSI,end Li Cor multiplexer loop
+13-CP2,1997_CR2.CSI,Net Radiometer
+13-CP2,1997_CR2.CSI,begin thermocople multiplexer measurement loop
+13-CP2,1997_CR2.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+13-CP2,1997_CR2.CSI,"end loop of 10, thermocouple measurement loop."
+13-CP2,1997_CR2.CSI,begin air temperature thermocouple multiplexer loop
+13-CP2,1997_CR2.CSI,end air temperature thermocouple multiplexer loop
+13-CP2,1997_CR2.CSI,"turns multiplexer off, the remaining measurements"
+13-CP2,1997_CR2.CSI,will occur on the cr10 and not on the multiplexer.
+13-CP2,1997_CR2.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+13-CP2,1997_CR2.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+13-CP2,1997_CR2.CSI,"2 x wind speed averages, loc 21 - 22"
+13-CP2,1997_CR2.CSI,"2 x wind direction average from higher and lower wind monitor, loc 23-24"
+13-CP2,1997_CR2.CSI,"1 x pressure average, loc 25"
+13-CP2,1997_CR2.CSI,"2 x snow height averages, loc 26-27"
+13-CP2,1997_CR2.CSI,snow thermocouple measurements tc1 - tc10
+13-CP2,1997_CR2.CSI,"in 1995 this was 600, but filled memory with wind"
+13-CP2,1997_CR2.CSI,sensor pulses.
+13-CP2,1997_CR2.CSI,"memory buffer, yet we can still measure certain sensors"
+13-CP2,1997_CR2.CSI,for the purpose of switching on 12V to cs500
+13-CP2,1997_CR2.CSI,temperature cs500 probe x 2
+13-CP2,1997_CR2.CSI,removed 60 Hz rejection range since there is no 60 Hz
+13-CP2,1997_CR2.CSI,humidity cs500 probe x 2
+13-CP2,1997_CR2.CSI,Young Wind Monitor wind speed -> m/s
+13-CP2,1997_CR2.CSI,Young wind direction measurement.
+13-CP2,1997_CR2.CSI,Following a loop of the barometer measurement that is
+13-CP2,1997_CR2.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+13-CP2,1997_CR2.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+13-CP2,1997_CR2.CSI,CS105 Vaisala Barometer
+13-CP2,1997_CR2.CSI,another 400 has to be added to pressure value to yield
+13-CP2,1997_CR2.CSI,end pressure sensor measurement last minute of each hr
+13-CP2,1997_CR2.CSI,Following is the snow height measurement which
+13-CP2,1997_CR2.CSI,sonic snow height sensor 1
+13-CP2,1997_CR2.CSI,sonic snow height sensor 2
+14-NGRIP,AWSARG98.CSI,Program modified 03/20/1998 by Jason Box
+14-NGRIP,AWSARG98.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+14-NGRIP,AWSARG98.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+14-NGRIP,AWSARG98.CSI,replace peak wind speed with reference temperature.
+14-NGRIP,AWSARG98.CSI,This program measures various meteorological instruments
+14-NGRIP,AWSARG98.CSI,send voltage from control port 2 to multiplexer
+14-NGRIP,AWSARG98.CSI,to turn on multiplexer
+14-NGRIP,AWSARG98.CSI,-> (internal multiplexer reference temperature signal)
+14-NGRIP,AWSARG98.CSI,begin multiplexer measurement loop
+14-NGRIP,AWSARG98.CSI,send voltage from control port 1 to multiplexer
+14-NGRIP,AWSARG98.CSI,multiplexer input channel.
+14-NGRIP,AWSARG98.CSI,Two Li Cor Photo-Diode Pyranometers
+14-NGRIP,AWSARG98.CSI,end Li Cor multiplexer loop
+14-NGRIP,AWSARG98.CSI,Net Radiometer
+14-NGRIP,AWSARG98.CSI,begin thermocople multiplexer measurement loop
+14-NGRIP,AWSARG98.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+14-NGRIP,AWSARG98.CSI,"end loop of 10, thermocouple measurement loop."
+14-NGRIP,AWSARG98.CSI,begin air temperature thermocouple multiplexer loop
+14-NGRIP,AWSARG98.CSI,end air temperature thermocouple multiplexer loop
+14-NGRIP,AWSARG98.CSI,"turns multiplexer off, the remaining measurements"
+14-NGRIP,AWSARG98.CSI,will occur on the cr10 and not on the multiplexer.
+14-NGRIP,AWSARG98.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+14-NGRIP,AWSARG98.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+14-NGRIP,AWSARG98.CSI,"2 x wind speed averages, loc 21 - 22"
+14-NGRIP,AWSARG98.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+14-NGRIP,AWSARG98.CSI,"2 x snow height averages, loc 26-27"
+14-NGRIP,AWSARG98.CSI,snow thermocouple measurements tc1 - tc10
+14-NGRIP,AWSARG98.CSI,"in 1995 this was 600, but filled memory with wind"
+14-NGRIP,AWSARG98.CSI,sensor pulses.
+14-NGRIP,AWSARG98.CSI,"memory buffer, yet we can still measure certain sensors"
+14-NGRIP,AWSARG98.CSI,for the purpose of switching on 12V to cs500
+14-NGRIP,AWSARG98.CSI,temperature cs500 probe x 2
+14-NGRIP,AWSARG98.CSI,removed 60 Hz rejection range since there is no 60 Hz
+14-NGRIP,AWSARG98.CSI,humidity cs500 probe x 2
+14-NGRIP,AWSARG98.CSI,Young Wind Monitor wind speed -> m/s
+14-NGRIP,AWSARG98.CSI,Young wind direction measurement.
+14-NGRIP,AWSARG98.CSI,Following a loop of the barometer measurement that is
+14-NGRIP,AWSARG98.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+14-NGRIP,AWSARG98.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+14-NGRIP,AWSARG98.CSI,CS105 Vaisala Barometer
+14-NGRIP,AWSARG98.CSI,another 400 has to be added to pressure value to yield
+14-NGRIP,AWSARG98.CSI,end pressure sensor measurement last minute of each hr
+14-NGRIP,AWSARG98.CSI,Following is the snow height measurement which
+14-NGRIP,AWSARG98.CSI,sonic snow height sensor 1
+14-NGRIP,AWSARG98.CSI,sonic snow height sensor 2
+17-JAR2,2000_AWSGOSJ2.CSI,excitation changed from 350 mV to 250 to extend measurement range to -72 C
+17-JAR2,2000_AWSGOSJ2.CSI,port 7 will remain hi and hence so will pressure the trigger of which is moved to c7
+17-JAR2,2000_AWSGOSJ2.CSI,send voltage from control port 2 to multiplexer
+17-JAR2,2000_AWSGOSJ2.CSI,to turn on multiplexer
+17-JAR2,2000_AWSGOSJ2.CSI,begin multiplexer measurement loop
+17-JAR2,2000_AWSGOSJ2.CSI,send voltage from control port 1 to multiplexer
+17-JAR2,2000_AWSGOSJ2.CSI,multiplexer input channel.
+17-JAR2,2000_AWSGOSJ2.CSI,Two Li Cor Photo-Diode Pyranometers
+17-JAR2,2000_AWSGOSJ2.CSI,end Li Cor multiplexer loop
+17-JAR2,2000_AWSGOSJ2.CSI,Net Radiometer
+17-JAR2,2000_AWSGOSJ2.CSI,---------------------- begin snow TC loop
+17-JAR2,2000_AWSGOSJ2.CSI,begin thermocople multiplexer measurement loop
+17-JAR2,2000_AWSGOSJ2.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+17-JAR2,2000_AWSGOSJ2.CSI,"end loop of 10, thermocouple measurement loop."
+17-JAR2,2000_AWSGOSJ2.CSI,begin air temperature thermocouple multiplexer loop
+17-JAR2,2000_AWSGOSJ2.CSI,end air temperature thermocouple multiplexer loop
+17-JAR2,2000_AWSGOSJ2.CSI,"turns multiplexer off, the remaining measurements"
+17-JAR2,2000_AWSGOSJ2.CSI,will occur on the cr10 and not on the multiplexer.
+17-JAR2,2000_AWSGOSJ2.CSI,"end turn on GPS and initialize counter, flag, and flag3"
+17-JAR2,2000_AWSGOSJ2.CSI,"loop to set flag 4, to trigger clock set after GPS has sampled for 15 minutes"
+17-JAR2,2000_AWSGOSJ2.CSI,"begin hour is 23 , set logger clk, and set flag low."
+17-JAR2,2000_AWSGOSJ2.CSI,above comment only valid if 23 hour filter is added.
+17-JAR2,2000_AWSGOSJ2.CSI,end time calculation when flag is set hi
+17-JAR2,2000_AWSGOSJ2.CSI,set clock if flag is definately set hi
+17-JAR2,2000_AWSGOSJ2.CSI,end flag is definately 1
+17-JAR2,2000_AWSGOSJ2.CSI,"end hour is 23 , set logger clk, and set flag low."
+17-JAR2,2000_AWSGOSJ2.CSI,end loop for flag hi
+17-JAR2,2000_AWSGOSJ2.CSI,set flag low
+17-JAR2,2000_AWSGOSJ2.CSI,Young Wind Monitor wind speed -> m/s
+17-JAR2,2000_AWSGOSJ2.CSI,set pressure sensor option. 0 is for the older PTA427A pressure sensor
+17-JAR2,2000_AWSGOSJ2.CSI,p_flag = 1 is for the newer PTB101B pressure sensor.
+17-JAR2,2000_AWSGOSJ2.CSI,for the purpose of switching on 12V to cs500
+17-JAR2,2000_AWSGOSJ2.CSI,temperature cs500 probe x 2
+17-JAR2,2000_AWSGOSJ2.CSI,removed 60 Hz rejection range since there is no 60 Hz
+17-JAR2,2000_AWSGOSJ2.CSI,humidity cs500 probe x 2
+17-JAR2,2000_AWSGOSJ2.CSI,Young wind direction measurement.
+17-JAR2,2000_AWSGOSJ2.CSI,Following a loop of the barometer measurement that is
+17-JAR2,2000_AWSGOSJ2.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+17-JAR2,2000_AWSGOSJ2.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+17-JAR2,2000_AWSGOSJ2.CSI,0 in parameter location 1 sets flag2 to 0 for pta427
+17-JAR2,2000_AWSGOSJ2.CSI,1 in parameter location 1 sets flag2 to 1 for cs105
+17-JAR2,2000_AWSGOSJ2.CSI,end pta427 pressure sensor measurement last minute of each hr
+17-JAR2,2000_AWSGOSJ2.CSI,CS105 Vaisala Barometer
+17-JAR2,2000_AWSGOSJ2.CSI,another 400 has to be added to pressure value to yield
+17-JAR2,2000_AWSGOSJ2.CSI,end cs105 pressure sensor measurement last minute of each hr
+17-JAR2,2000_AWSGOSJ2.CSI,end pressure sensor measurement last minute of each hr
+17-JAR2,2000_AWSGOSJ2.CSI,Following is the snow height measurement which
+17-JAR2,2000_AWSGOSJ2.CSI,sonic snow height sensor 1
+17-JAR2,2000_AWSGOSJ2.CSI,sonic snow height sensor 2
+21-Petermann Glacier,AWSARG02.CSI,This program measures various meteorological instruments
+21-Petermann Glacier,AWSARG02.CSI,Program modified 02/21/1999 by Jason Box
+21-Petermann Glacier,AWSARG02.CSI,modifications include a reset of TC measurement range if it reads -6999
+21-Petermann Glacier,AWSARG02.CSI,pressure will require measurement elsewhere than c6
+21-Petermann Glacier,AWSARG02.CSI,Program modified 03/20/1998 by Jason Box
+21-Petermann Glacier,AWSARG02.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+21-Petermann Glacier,AWSARG02.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+21-Petermann Glacier,AWSARG02.CSI,replace peak wind speed with reference temperature.
+21-Petermann Glacier,AWSARG02.CSI,Modified at Petermann Gletscher by K. Steffen 25 May 2002
+21-Petermann Glacier,AWSARG02.CSI,send voltage from control port 2 to multiplexer
+21-Petermann Glacier,AWSARG02.CSI,to turn on multiplexer
+21-Petermann Glacier,AWSARG02.CSI,-> (internal multiplexer reference temperature signal)
+21-Petermann Glacier,AWSARG02.CSI,begin multiplexer measurement loop
+21-Petermann Glacier,AWSARG02.CSI,send voltage from control port 1 to multiplexer
+21-Petermann Glacier,AWSARG02.CSI,multiplexer input channel.
+21-Petermann Glacier,AWSARG02.CSI,Two Li Cor Photo-Diode Pyranometers
+21-Petermann Glacier,AWSARG02.CSI,end Li Cor multiplexer loop
+21-Petermann Glacier,AWSARG02.CSI,Net Radiometer
+21-Petermann Glacier,AWSARG02.CSI,begin thermocople multiplexer measurement loop
+21-Petermann Glacier,AWSARG02.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+21-Petermann Glacier,AWSARG02.CSI,"end loop of 10, thermocouple measurement loop."
+21-Petermann Glacier,AWSARG02.CSI,begin air temperature thermocouple multiplexer loop
+21-Petermann Glacier,AWSARG02.CSI,end air temperature thermocouple multiplexer loop
+21-Petermann Glacier,AWSARG02.CSI,"turns multiplexer off, the remaining measurements"
+21-Petermann Glacier,AWSARG02.CSI,will occur on the cr10 and not on the multiplexer.
+21-Petermann Glacier,AWSARG02.CSI,Young Wind Monitor wind speed -> m/s
+21-Petermann Glacier,AWSARG02.CSI,set flag hi
+21-Petermann Glacier,AWSARG02.CSI,"begin hour is 23 , set logger clk, and set flag low."
+21-Petermann Glacier,AWSARG02.CSI,above comment only valid if 23 hour filter is added.
+21-Petermann Glacier,AWSARG02.CSI,begin flag is definately 1
+21-Petermann Glacier,AWSARG02.CSI,end flag is definately 1
+21-Petermann Glacier,AWSARG02.CSI,"end hour is 23 , set logger clk, and set flag low."
+21-Petermann Glacier,AWSARG02.CSI,end loop for flag hi
+21-Petermann Glacier,AWSARG02.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+21-Petermann Glacier,AWSARG02.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+21-Petermann Glacier,AWSARG02.CSI,"2 x wind speed averages, loc 21 - 22"
+21-Petermann Glacier,AWSARG02.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+21-Petermann Glacier,AWSARG02.CSI,"2 x snow height averages, loc 26-27"
+21-Petermann Glacier,AWSARG02.CSI,snow thermocouple measurements tc1 - tc10
+21-Petermann Glacier,AWSARG02.CSI,"in 1995 this was 600, but filled memory with wind"
+21-Petermann Glacier,AWSARG02.CSI,sensor pulses.
+21-Petermann Glacier,AWSARG02.CSI,"memory buffer, yet we can still measure certain sensors"
+21-Petermann Glacier,AWSARG02.CSI,for the purpose of switching on 12V to cs500
+21-Petermann Glacier,AWSARG02.CSI,temperature cs500 probe x 2
+21-Petermann Glacier,AWSARG02.CSI,removed 60 Hz rejection range since there is no 60 Hz
+21-Petermann Glacier,AWSARG02.CSI,humidity cs500 probe x 2
+21-Petermann Glacier,AWSARG02.CSI,Young wind direction measurement.
+21-Petermann Glacier,AWSARG02.CSI,Following a loop of the barometer measurement that is
+21-Petermann Glacier,AWSARG02.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+21-Petermann Glacier,AWSARG02.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+21-Petermann Glacier,AWSARG02.CSI,CS105 Vaisala Barometer
+21-Petermann Glacier,AWSARG02.CSI,another 400 has to be added to pressure value to yield
+21-Petermann Glacier,AWSARG02.CSI,end cs105 pressure sensor measurement last minute of each hr
+21-Petermann Glacier,AWSARG02.CSI,Following is the snow height measurement which
+21-Petermann Glacier,AWSARG02.CSI,sonic snow height sensor 1
+21-Petermann Glacier,AWSARG02.CSI,sonic snow height sensor 2
+21-Petermann Glacier,PET_AWS.CSI,This program measures various meteorological instruments
+21-Petermann Glacier,PET_AWS.CSI,Program modified 02/21/1999 by Jason Box
+21-Petermann Glacier,PET_AWS.CSI,modifications include a reset of TC measurement range if it reads -6999
+21-Petermann Glacier,PET_AWS.CSI,pressure will require measurement elsewhere than c6
+21-Petermann Glacier,PET_AWS.CSI,Program modified 03/20/1998 by Jason Box
+21-Petermann Glacier,PET_AWS.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+21-Petermann Glacier,PET_AWS.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+21-Petermann Glacier,PET_AWS.CSI,replace peak wind speed with reference temperature.
+21-Petermann Glacier,PET_AWS.CSI,Modified at Petermann Gletscher by K. Steffen 25 May 2002
+21-Petermann Glacier,PET_AWS.CSI,put GPS and precision Infrared thermocouple in Argos programm
+21-Petermann Glacier,PET_AWS.CSI,send voltage from control port 2 to multiplexer
+21-Petermann Glacier,PET_AWS.CSI,to turn on multiplexer
+21-Petermann Glacier,PET_AWS.CSI,-> (internal multiplexer reference temperature signal)
+21-Petermann Glacier,PET_AWS.CSI,begin multiplexer measurement loop
+21-Petermann Glacier,PET_AWS.CSI,send voltage from control port 1 to multiplexer
+21-Petermann Glacier,PET_AWS.CSI,multiplexer input channel.
+21-Petermann Glacier,PET_AWS.CSI,Two Li Cor Photo-Diode Pyranometers
+21-Petermann Glacier,PET_AWS.CSI,end Li Cor multiplexer loop
+21-Petermann Glacier,PET_AWS.CSI,Net Radiometer
+21-Petermann Glacier,PET_AWS.CSI,begin thermocople multiplexer measurement loop
+21-Petermann Glacier,PET_AWS.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+21-Petermann Glacier,PET_AWS.CSI,"end loop of 10, thermocouple measurement loop."
+21-Petermann Glacier,PET_AWS.CSI,begin air temperature thermocouple multiplexer loop
+21-Petermann Glacier,PET_AWS.CSI,end air temperature thermocouple multiplexer loop
+21-Petermann Glacier,PET_AWS.CSI,Begin to measure the PRT (Precision Infrared Thermocouple) sensor
+21-Petermann Glacier,PET_AWS.CSI,begin PRT surface temperature thermocouple multiplexer loop
+21-Petermann Glacier,PET_AWS.CSI,end PRT surface temperature multiplexer loop
+21-Petermann Glacier,PET_AWS.CSI,"turns multiplexer off, the remaining measurements"
+21-Petermann Glacier,PET_AWS.CSI,will occur on the cr10 and not on the multiplexer.
+21-Petermann Glacier,PET_AWS.CSI,Young Wind Monitor wind speed -> m/s
+21-Petermann Glacier,PET_AWS.CSI,set flag hi
+21-Petermann Glacier,PET_AWS.CSI,"begin hour is 23 , set logger clk, and set flag low."
+21-Petermann Glacier,PET_AWS.CSI,above comment only valid if 23 hour filter is added.
+21-Petermann Glacier,PET_AWS.CSI,begin flag is definately 1
+21-Petermann Glacier,PET_AWS.CSI,end flag is definately 1
+21-Petermann Glacier,PET_AWS.CSI,"end hour is 23 , set logger clk, and set flag low."
+21-Petermann Glacier,PET_AWS.CSI,end loop for flag hi
+21-Petermann Glacier,PET_AWS.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+21-Petermann Glacier,PET_AWS.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+21-Petermann Glacier,PET_AWS.CSI,"2 x wind speed averages, loc 21 - 22"
+21-Petermann Glacier,PET_AWS.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+21-Petermann Glacier,PET_AWS.CSI,"2 x snow height averages, loc 26-27"
+21-Petermann Glacier,PET_AWS.CSI,snow thermocouple measurements tc1 - tc10
+21-Petermann Glacier,PET_AWS.CSI,"in 1995 this was 600, but filled memory with wind"
+21-Petermann Glacier,PET_AWS.CSI,sensor pulses.
+21-Petermann Glacier,PET_AWS.CSI,"memory buffer, yet we can still measure certain sensors"
+21-Petermann Glacier,PET_AWS.CSI,for the purpose of switching on 12V to cs500
+21-Petermann Glacier,PET_AWS.CSI,temperature cs500 probe x 2
+21-Petermann Glacier,PET_AWS.CSI,removed 60 Hz rejection range since there is no 60 Hz
+21-Petermann Glacier,PET_AWS.CSI,humidity cs500 probe x 2
+21-Petermann Glacier,PET_AWS.CSI,Young wind direction measurement.
+21-Petermann Glacier,PET_AWS.CSI,Following a loop of the barometer measurement that is
+21-Petermann Glacier,PET_AWS.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+21-Petermann Glacier,PET_AWS.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+21-Petermann Glacier,PET_AWS.CSI,CS105 Vaisala Barometer
+21-Petermann Glacier,PET_AWS.CSI,another 400 has to be added to pressure value to yield
+21-Petermann Glacier,PET_AWS.CSI,end cs105 pressure sensor measurement last minute of each hr
+21-Petermann Glacier,PET_AWS.CSI,Following is the snow height measurement which
+21-Petermann Glacier,PET_AWS.CSI,sonic snow height sensor 1
+21-Petermann Glacier,PET_AWS.CSI,sonic snow height sensor 2
+21-Petermann Glacier,PET_AWS.dld,15 pressure_AVG  L
+21-Petermann Glacier,PET_AWS_EL_03.CSI,This program measures various meteorological instruments
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Program modified 02/21/1999 by Jason Box
+21-Petermann Glacier,PET_AWS_EL_03.CSI,modifications include a reset of TC measurement range if it reads -6999
+21-Petermann Glacier,PET_AWS_EL_03.CSI,pressure will require measurement elsewhere than c6
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Program modified 03/20/1998 by Jason Box
+21-Petermann Glacier,PET_AWS_EL_03.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+21-Petermann Glacier,PET_AWS_EL_03.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+21-Petermann Glacier,PET_AWS_EL_03.CSI,replace peak wind speed with reference temperature.
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Modified at Petermann Gletscher by K. Steffen 22 May 2003
+21-Petermann Glacier,PET_AWS_EL_03.CSI,send voltage from control port 2 to multiplexer
+21-Petermann Glacier,PET_AWS_EL_03.CSI,to turn on multiplexer
+21-Petermann Glacier,PET_AWS_EL_03.CSI,-> (internal multiplexer reference temperature signal)
+21-Petermann Glacier,PET_AWS_EL_03.CSI,begin multiplexer measurement loop
+21-Petermann Glacier,PET_AWS_EL_03.CSI,send voltage from control port 1 to multiplexer
+21-Petermann Glacier,PET_AWS_EL_03.CSI,multiplexer input channel.
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Two Li Cor Photo-Diode Pyranometers
+21-Petermann Glacier,PET_AWS_EL_03.CSI,end Li Cor multiplexer loop
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Net Radiometer
+21-Petermann Glacier,PET_AWS_EL_03.CSI,begin thermocople multiplexer measurement loop
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"end loop of 10, thermocouple measurement loop."
+21-Petermann Glacier,PET_AWS_EL_03.CSI,begin air temperature thermocouple multiplexer loop
+21-Petermann Glacier,PET_AWS_EL_03.CSI,end air temperature thermocouple multiplexer loop
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"turns multiplexer off, the remaining measurements"
+21-Petermann Glacier,PET_AWS_EL_03.CSI,will occur on the cr10 and not on the multiplexer.
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Young Wind Monitor wind speed -> m/s
+21-Petermann Glacier,PET_AWS_EL_03.CSI,set flag hi
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"begin hour is 23 , set logger clk, and set flag low."
+21-Petermann Glacier,PET_AWS_EL_03.CSI,above comment only valid if 23 hour filter is added.
+21-Petermann Glacier,PET_AWS_EL_03.CSI,begin flag is definately 1
+21-Petermann Glacier,PET_AWS_EL_03.CSI,end flag is definately 1
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"end hour is 23 , set logger clk, and set flag low."
+21-Petermann Glacier,PET_AWS_EL_03.CSI,end loop for flag hi
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"2 x wind speed averages, loc 21 - 22"
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"2 x snow height averages, loc 26-27"
+21-Petermann Glacier,PET_AWS_EL_03.CSI,snow thermocouple measurements tc1 - tc10
+21-Petermann Glacier,PET_AWS_EL_03.CSI,removed two channels of prt - COULD ADD TWO MORE CHANNELS
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"in 1995 this was 600, but filled memory with wind"
+21-Petermann Glacier,PET_AWS_EL_03.CSI,sensor pulses.
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"memory buffer, yet we can still measure certain sensors"
+21-Petermann Glacier,PET_AWS_EL_03.CSI,for the purpose of switching on 12V to cs500
+21-Petermann Glacier,PET_AWS_EL_03.CSI,temperature cs500 probe x 2
+21-Petermann Glacier,PET_AWS_EL_03.CSI,removed 60 Hz rejection range since there is no 60 Hz
+21-Petermann Glacier,PET_AWS_EL_03.CSI,humidity cs500 probe x 2
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Young wind direction measurement.
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Following a loop of the barometer measurement that is
+21-Petermann Glacier,PET_AWS_EL_03.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+21-Petermann Glacier,PET_AWS_EL_03.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+21-Petermann Glacier,PET_AWS_EL_03.CSI,CS105 Vaisala Barometer
+21-Petermann Glacier,PET_AWS_EL_03.CSI,another 400 has to be added to pressure value to yield
+21-Petermann Glacier,PET_AWS_EL_03.CSI,end cs105 pressure sensor measurement last minute of each hr
+21-Petermann Glacier,PET_AWS_EL_03.CSI,Following is the snow height measurement which
+21-Petermann Glacier,PET_AWS_EL_03.CSI,sonic snow height sensor 1
+21-Petermann Glacier,PET_AWS_EL_03.CSI,sonic snow height sensor 2
+21-Petermann Glacier,PET_AWS_EL_03.dld,15 pressure_AVG  L
+21-Petermann Glacier,PET_AWS_EL_03.dld,17 BATTERY  L
+21-Petermann Glacier,PET_PRT.CSI,This program measures various meteorological instruments
+21-Petermann Glacier,PET_PRT.CSI,Program modified 02/21/1999 by Jason Box
+21-Petermann Glacier,PET_PRT.CSI,modifications include a reset of TC measurement range if it reads -6999
+21-Petermann Glacier,PET_PRT.CSI,pressure will require measurement elsewhere than c6
+21-Petermann Glacier,PET_PRT.CSI,Program modified 03/20/1998 by Jason Box
+21-Petermann Glacier,PET_PRT.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+21-Petermann Glacier,PET_PRT.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+21-Petermann Glacier,PET_PRT.CSI,replace peak wind speed with reference temperature.
+21-Petermann Glacier,PET_PRT.CSI,Modified at Petermann Gletscher by K. Steffen 25 May 2002
+21-Petermann Glacier,PET_PRT.CSI,put GPS and precision Infrared thermocouple in Argos programm
+21-Petermann Glacier,PET_PRT.CSI,send voltage from control port 2 to multiplexer
+21-Petermann Glacier,PET_PRT.CSI,to turn on multiplexer
+21-Petermann Glacier,PET_PRT.CSI,-> (internal multiplexer reference temperature signal)
+21-Petermann Glacier,PET_PRT.CSI,begin multiplexer measurement loop
+21-Petermann Glacier,PET_PRT.CSI,send voltage from control port 1 to multiplexer
+21-Petermann Glacier,PET_PRT.CSI,multiplexer input channel.
+21-Petermann Glacier,PET_PRT.CSI,Two Li Cor Photo-Diode Pyranometers
+21-Petermann Glacier,PET_PRT.CSI,end Li Cor multiplexer loop
+21-Petermann Glacier,PET_PRT.CSI,Net Radiometer
+21-Petermann Glacier,PET_PRT.CSI,begin thermocople multiplexer measurement loop
+21-Petermann Glacier,PET_PRT.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+21-Petermann Glacier,PET_PRT.CSI,"end loop of 10, thermocouple measurement loop."
+21-Petermann Glacier,PET_PRT.CSI,begin air temperature thermocouple multiplexer loop
+21-Petermann Glacier,PET_PRT.CSI,end air temperature thermocouple multiplexer loop
+21-Petermann Glacier,PET_PRT.CSI,Begin to measure the PRT (Precision Infrared Thermocouple) sensor
+21-Petermann Glacier,PET_PRT.CSI,begin PRT surface temperature thermocouple multiplexer loop
+21-Petermann Glacier,PET_PRT.CSI,end PRT surface temperature multiplexer loop
+21-Petermann Glacier,PET_PRT.CSI,calculate corrected surface temperature
+21-Petermann Glacier,PET_PRT.CSI,"turns multiplexer off, the remaining measurements"
+21-Petermann Glacier,PET_PRT.CSI,will occur on the cr10 and not on the multiplexer.
+21-Petermann Glacier,PET_PRT.CSI,Young Wind Monitor wind speed -> m/s
+21-Petermann Glacier,PET_PRT.CSI,set flag hi
+21-Petermann Glacier,PET_PRT.CSI,"begin hour is 23 , set logger clk, and set flag low."
+21-Petermann Glacier,PET_PRT.CSI,above comment only valid if 23 hour filter is added.
+21-Petermann Glacier,PET_PRT.CSI,begin flag is definately 1
+21-Petermann Glacier,PET_PRT.CSI,end flag is definately 1
+21-Petermann Glacier,PET_PRT.CSI,"end hour is 23 , set logger clk, and set flag low."
+21-Petermann Glacier,PET_PRT.CSI,end loop for flag hi
+21-Petermann Glacier,PET_PRT.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+21-Petermann Glacier,PET_PRT.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+21-Petermann Glacier,PET_PRT.CSI,"2 x wind speed averages, loc 21 - 22"
+21-Petermann Glacier,PET_PRT.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+21-Petermann Glacier,PET_PRT.CSI,"2 x snow height averages, loc 26-27"
+21-Petermann Glacier,PET_PRT.CSI,snow thermocouple measurements tc1 - tc10
+21-Petermann Glacier,PET_PRT.CSI,"in 1995 this was 600, but filled memory with wind"
+21-Petermann Glacier,PET_PRT.CSI,sensor pulses.
+21-Petermann Glacier,PET_PRT.CSI,"memory buffer, yet we can still measure certain sensors"
+21-Petermann Glacier,PET_PRT.CSI,for the purpose of switching on 12V to cs500
+21-Petermann Glacier,PET_PRT.CSI,temperature cs500 probe x 2
+21-Petermann Glacier,PET_PRT.CSI,removed 60 Hz rejection range since there is no 60 Hz
+21-Petermann Glacier,PET_PRT.CSI,humidity cs500 probe x 2
+21-Petermann Glacier,PET_PRT.CSI,Young wind direction measurement.
+21-Petermann Glacier,PET_PRT.CSI,Following a loop of the barometer measurement that is
+21-Petermann Glacier,PET_PRT.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+21-Petermann Glacier,PET_PRT.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+21-Petermann Glacier,PET_PRT.CSI,CS105 Vaisala Barometer
+21-Petermann Glacier,PET_PRT.CSI,another 400 has to be added to pressure value to yield
+21-Petermann Glacier,PET_PRT.CSI,end cs105 pressure sensor measurement last minute of each hr
+21-Petermann Glacier,PET_PRT.CSI,Following is the snow height measurement which
+21-Petermann Glacier,PET_PRT.CSI,sonic snow height sensor 1
+21-Petermann Glacier,PET_PRT.CSI,sonic snow height sensor 2
+21-Petermann Glacier,PET_PRT.DLD,PET_PRT.DLD
+21-Petermann Glacier,SMS_GPS.CSI,Flag 1 high turn SV NEMA GGA string and get data
+21-Petermann Glacier,SMS_GPS.CSI,Flag 2 high will turn NEMA GGA string off
+21-Petermann Glacier,SMS_GPS.CSI,"If Flag 1 high, turn NEMA outouts and receive string"
+21-Petermann Glacier,SMS_GPS.CSI,"If Flag 2 high, turn NEMA outputs"
+21-Petermann Glacier,SMS_PET1.CSI,Author:  Todd Albert - modified by Koni Steffen
+21-Petermann Glacier,SMS_PET1.CSI,"Includes instructions for CS500, SR50, Young wind, and one Thermocouple"
+21-Petermann Glacier,SMS_PET1.CSI,Added Li-Core and Net Radiometer for Petermann Gletscher SMS
+21-Petermann Glacier,SMS_PET1.CSI,Turn on CS500
+21-Petermann Glacier,SMS_PET1.CSI,Allow CS500 to warm up and T and RH to stabalize
+21-Petermann Glacier,SMS_PET1.CSI,Measure T from CS500
+21-Petermann Glacier,SMS_PET1.CSI,Measure RH from CS500
+21-Petermann Glacier,SMS_PET1.CSI,Turn CS500 off
+21-Petermann Glacier,SMS_PET1.CSI,Young Wind Monitor wind speed -> m/s
+21-Petermann Glacier,SMS_PET1.CSI,Young wind direction measurement.
+21-Petermann Glacier,SMS_PET1.CSI,Measure air temperature from thermocouple
+21-Petermann Glacier,SMS_PET1.CSI,"Record average TC-temp, CS500-temp, CS500-rh"
+21-Petermann Glacier,SMS_PET1.CSI,Record wind speed and direction
+21-Petermann Glacier,SMS_PET1.CSI,Record MAX wind speed
+21-Petermann Glacier,SMS_PET1.CSI,Record battery voltage (CR10X ONLY!)
+21-Petermann Glacier,SMS_PET1.CSI,Measure battery voltage
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,This program measures various meteorological instruments
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Program modified 02/21/1999 by Jason Box
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,modifications include a reset of TC measurement range if it reads -6999
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,pressure will require measurement elsewhere than c6
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Program modified 03/20/1998 by Jason Box
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,replace peak wind speed with reference temperature.
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Modified at Petermann Gletscher by K. Steffen 22 May 2003
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,send voltage from control port 2 to multiplexer
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,to turn on multiplexer
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,-> (internal multiplexer reference temperature signal)
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,begin multiplexer measurement loop
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,send voltage from control port 1 to multiplexer
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,multiplexer input channel.
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Two Li Cor Photo-Diode Pyranometers
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,end Li Cor multiplexer loop
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Net Radiometer
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,begin thermocople multiplexer measurement loop
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"end loop of 10, thermocouple measurement loop."
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,begin air temperature thermocouple multiplexer loop
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,end air temperature thermocouple multiplexer loop
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"turns multiplexer off, the remaining measurements"
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,will occur on the cr10 and not on the multiplexer.
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Young Wind Monitor wind speed -> m/s
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,set flag hi
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"begin hour is 23 , set logger clk, and set flag low."
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,above comment only valid if 23 hour filter is added.
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,begin flag is definately 1
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,end flag is definately 1
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"end hour is 23 , set logger clk, and set flag low."
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,end loop for flag hi
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"2 x wind speed averages, loc 21 - 22"
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"2 x snow height averages, loc 26-27"
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,snow thermocouple measurements tc1 - tc10
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,removed two channels of prt - COULD ADD TWO MORE CHANNELS
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"in 1995 this was 600, but filled memory with wind"
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,sensor pulses.
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"memory buffer, yet we can still measure certain sensors"
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,for the purpose of switching on 12V to cs500
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,temperature cs500 probe x 2
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,removed 60 Hz rejection range since there is no 60 Hz
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,humidity cs500 probe x 2
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Young wind direction measurement.
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Following a loop of the barometer measurement that is
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,CS105 Vaisala Barometer
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,another 400 has to be added to pressure value to yield
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,end cs105 pressure sensor measurement last minute of each hr
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,Following is the snow height measurement which
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,sonic snow height sensor 1
+22-Petermann ELA,2003_PET_AWS_EL_03.CSI,sonic snow height sensor 2
+22-Petermann ELA,2003_PET_AWS_EL_03.dld,15 pressure_AVG  L
+22-Petermann ELA,2003_PET_AWS_EL_03.dld,17 BATTERY  L
+23-NEEM,EMM.CSI,This program measures various meteorological instruments
+23-NEEM,EMM.CSI,Program modified 02/21/1999 by Jason Box
+23-NEEM,EMM.CSI,modifications include a reset of TC measurement range if it reads -6999
+23-NEEM,EMM.CSI,pressure will require measurement elsewhere than c6
+23-NEEM,EMM.CSI,Program modified 03/20/1998 by Jason Box
+23-NEEM,EMM.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+23-NEEM,EMM.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+23-NEEM,EMM.CSI,replace peak wind speed with reference temperature.
+23-NEEM,EMM.CSI,Modified for new EMM 29 May 2006
+23-NEEM,EMM.CSI,send voltage from control port 2 to multiplexer
+23-NEEM,EMM.CSI,to turn on multiplexer
+23-NEEM,EMM.CSI,-> (internal multiplexer reference temperature signal)
+23-NEEM,EMM.CSI,begin multiplexer measurement loop
+23-NEEM,EMM.CSI,send voltage from control port 1 to multiplexer
+23-NEEM,EMM.CSI,multiplexer input channel.
+23-NEEM,EMM.CSI,Two Li Cor Photo-Diode Pyranometers
+23-NEEM,EMM.CSI,end Li Cor multiplexer loop
+23-NEEM,EMM.CSI,Net Radiometer
+23-NEEM,EMM.CSI,begin thermocople multiplexer measurement loop
+23-NEEM,EMM.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+23-NEEM,EMM.CSI,"end loop of 10, thermocouple measurement loop."
+23-NEEM,EMM.CSI,begin air temperature thermocouple multiplexer loop
+23-NEEM,EMM.CSI,end air temperature thermocouple multiplexer loop
+23-NEEM,EMM.CSI,"turns multiplexer off, the remaining measurements"
+23-NEEM,EMM.CSI,will occur on the cr10 and not on the multiplexer.
+23-NEEM,EMM.CSI,Young Wind Monitor wind speed -> m/s
+23-NEEM,EMM.CSI,set flag hi
+23-NEEM,EMM.CSI,"begin hour is 23 , set logger clk, and set flag low."
+23-NEEM,EMM.CSI,above comment only valid if 23 hour filter is added.
+23-NEEM,EMM.CSI,begin flag is definately 1
+23-NEEM,EMM.CSI,end flag is definately 1
+23-NEEM,EMM.CSI,"end hour is 23 , set logger clk, and set flag low."
+23-NEEM,EMM.CSI,end loop for flag hi
+23-NEEM,EMM.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+23-NEEM,EMM.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+23-NEEM,EMM.CSI,"2 x wind speed averages, loc 21 - 22"
+23-NEEM,EMM.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+23-NEEM,EMM.CSI,"2 x snow height averages, loc 26-27"
+23-NEEM,EMM.CSI,snow thermocouple measurements tc1 - tc10
+23-NEEM,EMM.CSI,removed two channels of prt - COULD ADD TWO MORE CHANNELS
+23-NEEM,EMM.CSI,"in 1995 this was 600, but filled memory with wind"
+23-NEEM,EMM.CSI,sensor pulses.
+23-NEEM,EMM.CSI,"memory buffer, yet we can still measure certain sensors"
+23-NEEM,EMM.CSI,for the purpose of switching on 12V to cs500
+23-NEEM,EMM.CSI,temperature cs500 probe x 2
+23-NEEM,EMM.CSI,removed 60 Hz rejection range since there is no 60 Hz
+23-NEEM,EMM.CSI,humidity cs500 probe x 2
+23-NEEM,EMM.CSI,Young wind direction measurement.
+23-NEEM,EMM.CSI,Following a loop of the barometer measurement that is
+23-NEEM,EMM.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+23-NEEM,EMM.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+23-NEEM,EMM.CSI,CS105 Vaisala Barometer
+23-NEEM,EMM.CSI,another 400 has to be added to pressure value to yield
+23-NEEM,EMM.CSI,end cs105 pressure sensor measurement last minute of each hr
+23-NEEM,EMM.CSI,Following is the snow height measurement which
+23-NEEM,EMM.CSI,sonic snow height sensor 1
+23-NEEM,EMM.CSI,sonic snow height sensor 2
+23-NEEM,emm.dld,15 pressure_AVG  L
+23-NEEM,emm.dld,17 BATTERY  L
+28-SMS4,AWSARG99.CSI,This program measures various meteorological instruments
+28-SMS4,AWSARG99.CSI,Program modified 02/21/1999 by Jason Box
+28-SMS4,AWSARG99.CSI,modifications include a reset of TC measurement range if it reads -6999
+28-SMS4,AWSARG99.CSI,pressure will require measurement elsewhere than c6
+28-SMS4,AWSARG99.CSI,Program modified 03/20/1998 by Jason Box
+28-SMS4,AWSARG99.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+28-SMS4,AWSARG99.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+28-SMS4,AWSARG99.CSI,replace peak wind speed with reference temperature.
+28-SMS4,AWSARG99.CSI,send voltage from control port 2 to multiplexer
+28-SMS4,AWSARG99.CSI,to turn on multiplexer
+28-SMS4,AWSARG99.CSI,-> (internal multiplexer reference temperature signal)
+28-SMS4,AWSARG99.CSI,begin multiplexer measurement loop
+28-SMS4,AWSARG99.CSI,send voltage from control port 1 to multiplexer
+28-SMS4,AWSARG99.CSI,multiplexer input channel.
+28-SMS4,AWSARG99.CSI,Two Li Cor Photo-Diode Pyranometers
+28-SMS4,AWSARG99.CSI,end Li Cor multiplexer loop
+28-SMS4,AWSARG99.CSI,Net Radiometer
+28-SMS4,AWSARG99.CSI,begin thermocople multiplexer measurement loop
+28-SMS4,AWSARG99.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+28-SMS4,AWSARG99.CSI,"end loop of 10, thermocouple measurement loop."
+28-SMS4,AWSARG99.CSI,begin air temperature thermocouple multiplexer loop
+28-SMS4,AWSARG99.CSI,end air temperature thermocouple multiplexer loop
+28-SMS4,AWSARG99.CSI,"turns multiplexer off, the remaining measurements"
+28-SMS4,AWSARG99.CSI,will occur on the cr10 and not on the multiplexer.
+28-SMS4,AWSARG99.CSI,Young Wind Monitor wind speed -> m/s
+28-SMS4,AWSARG99.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+28-SMS4,AWSARG99.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+28-SMS4,AWSARG99.CSI,"2 x wind speed averages, loc 21 - 22"
+28-SMS4,AWSARG99.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+28-SMS4,AWSARG99.CSI,"2 x snow height averages, loc 26-27"
+28-SMS4,AWSARG99.CSI,snow thermocouple measurements tc1 - tc10
+28-SMS4,AWSARG99.CSI,"in 1995 this was 600, but filled memory with wind"
+28-SMS4,AWSARG99.CSI,sensor pulses.
+28-SMS4,AWSARG99.CSI,"memory buffer, yet we can still measure certain sensors"
+28-SMS4,AWSARG99.CSI,for the purpose of switching on 12V to cs500
+28-SMS4,AWSARG99.CSI,temperature cs500 probe x 2
+28-SMS4,AWSARG99.CSI,removed 60 Hz rejection range since there is no 60 Hz
+28-SMS4,AWSARG99.CSI,humidity cs500 probe x 2
+28-SMS4,AWSARG99.CSI,Young wind direction measurement.
+28-SMS4,AWSARG99.CSI,Following a loop of the barometer measurement that is
+28-SMS4,AWSARG99.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+28-SMS4,AWSARG99.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+28-SMS4,AWSARG99.CSI,0 in parameter location 1 sets flag2 to 0 for pta427
+28-SMS4,AWSARG99.CSI,1 in parameter location 1 sets flag2 to 1 for cs105
+28-SMS4,AWSARG99.CSI,end pta427 pressure sensor measurement last minute of each hr
+28-SMS4,AWSARG99.CSI,CS105 Vaisala Barometer
+28-SMS4,AWSARG99.CSI,another 400 has to be added to pressure value to yield
+28-SMS4,AWSARG99.CSI,end cs105 pressure sensor measurement last minute of each hr
+28-SMS4,AWSARG99.CSI,end pressure sensor measurement last minute of each hr
+28-SMS4,AWSARG99.CSI,Following is the snow height measurement which
+28-SMS4,AWSARG99.CSI,sonic snow height sensor 1
+28-SMS4,AWSARG99.CSI,sonic snow height sensor 2
+28-SMS4,SS_2001.csi,"Includes instructions for CS500, SR50, Young wind, and ONE Thermocouple"
+28-SMS4,SS_2001.csi,Turn on CS500
+28-SMS4,SS_2001.csi,Allow CS500 to warm up and T and RH to stabalize
+28-SMS4,SS_2001.csi,Measure T from CS500
+28-SMS4,SS_2001.csi,"For ROTRONICS Temps, use Mult = 0.15, Offset = -50"
+28-SMS4,SS_2001.csi,Measure RH from CS500
+28-SMS4,SS_2001.csi,"Different offset and Mult for ROTRONICS,too"
+28-SMS4,SS_2001.csi,Turn CS500 off
+28-SMS4,SS_2001.csi,Young Wind Monitor wind speed -> m/s
+28-SMS4,SS_2001.csi,Young wind direction measurement.
+28-SMS4,SS_2001.csi,Measure air temperature from thermocouple
+28-SMS4,SS_2001.csi,"Record average TC-temp, CS500-temp, CS500-rh"
+28-SMS4,SS_2001.csi,Record wind speed and direction
+28-SMS4,SS_2001.csi,Record MAX wind speed
+28-SMS4,SS_2001.csi,Do NOT Record battery voltage on CR10's
+28-SMS4,SS_2001.csi,Do NOT Measure battery voltage on CR10's
+28-SMS4,SS_2001X.CSI,"Includes instructions for CS500, SR50, Young wind, and one Thermocouple"
+28-SMS4,SS_2001X.CSI,Turn on CS500
+28-SMS4,SS_2001X.CSI,Allow CS500 to warm up and T and RH to stabalize
+28-SMS4,SS_2001X.CSI,Measure T from CS500
+28-SMS4,SS_2001X.CSI,"For ROTRONICS Temps, use Mult = 0.15, Offset = -50"
+28-SMS4,SS_2001X.CSI,Measure RH from CS500
+28-SMS4,SS_2001X.CSI,"Different offset and Mult for ROTRONICS,too"
+28-SMS4,SS_2001X.CSI,Turn CS500 off
+28-SMS4,SS_2001X.CSI,Young Wind Monitor wind speed -> m/s
+28-SMS4,SS_2001X.CSI,Young wind direction measurement.
+28-SMS4,SS_2001X.CSI,Measure air temperature from thermocouple
+28-SMS4,SS_2001X.CSI,"Record average TC-temp, CS500-temp, CS500-rh"
+28-SMS4,SS_2001X.CSI,Record wind speed and direction
+28-SMS4,SS_2001X.CSI,Record MAX wind speed
+28-SMS4,SS_2001X.CSI,Record battery voltage (CR10X ONLY!)
+28-SMS4,SS_2001X.CSI,Measure battery voltage
+28-SMS4,SS_CAL_1.CSI,Smart Stake INSTRUMENT CALIBRATION Program for CR10X Datalogger
+28-SMS4,SS_CAL_1.CSI,"Includes instructions for 2x CS500, 2x Rotronics, 2x Young wind"
+28-SMS4,SS_CAL_1.CSI,Note: Rest of instruments on second datalogger
+28-SMS4,SS_CAL_1.CSI,10 second execution interval for calibration
+28-SMS4,SS_CAL_1.CSI,Turn on both CS500's and Rotronics
+28-SMS4,SS_CAL_1.CSI,Allow CS500'snstruments to warm up and T and RH values to stabalize
+28-SMS4,SS_CAL_1.CSI,Measure T from CS500
+28-SMS4,SS_CAL_1.CSI,Measure RH from CS500
+28-SMS4,SS_CAL_1.CSI,Turn instruments off
+28-SMS4,SS_CAL_1.CSI,R.M. Young Wind Monitor wind speed -> m/s
+28-SMS4,SS_CAL_1.CSI,R.M. Young wind direction measurement.
+28-SMS4,SS_CAL_2.CSI,Smart Stake INSTRUMENT CALIBRATION Program for CR10X Datalogger
+28-SMS4,SS_CAL_2.CSI,Includes instructions for 2x Young wind and 4x Thermocouples
+28-SMS4,SS_CAL_2.CSI,10 second execution interval for calibration
+28-SMS4,SS_CAL_2.CSI,Air thermocouple
+28-SMS4,SS_CAL_2.CSI,Young Wind Monitor wind speed -> m/s
+28-SMS4,SS_CAL_2.CSI,Young wind direction measurement.
+28-SMS4,SS_CAL_3.CSI,Smart Stake INSTRUMENT CALIBRATION Program for CR10 Datalogger
+28-SMS4,SS_CAL_3.CSI,Includes instructions for 2x HMP45C's and 2 TCs
+28-SMS4,SS_CAL_3.CSI,Note: This is a second calibration of instruments intended
+28-SMS4,SS_CAL_3.CSI,10 sec for calibration
+28-SMS4,SS_CAL_3.CSI,Turn on both HMPs
+28-SMS4,SS_CAL_3.CSI,Allow HMP instruments to warm up and T and RH values to stabalize
+28-SMS4,SS_CAL_3.CSI,Measure HMP Temperature
+28-SMS4,SS_CAL_3.CSI,Measure the RH from the HMP
+28-SMS4,SS_CAL_3.CSI,Turn the HMP's off
+28-SMS4,SS_CAL_3.CSI,Air thermocouple
+DataLogger Programs,AWSGOS96.CSI,This program measures various meteorological instruments
+DataLogger Programs,AWSGOS96.CSI,send voltage from control port 2 to multiplexer
+DataLogger Programs,AWSGOS96.CSI,to turn on multiplexer
+DataLogger Programs,AWSGOS96.CSI,-> (internal multiplexer reference temperature signal)
+DataLogger Programs,AWSGOS96.CSI,begin multiplexer measurement loop
+DataLogger Programs,AWSGOS96.CSI,send voltage from control port 1 to multiplexer
+DataLogger Programs,AWSGOS96.CSI,multiplexer input channel.
+DataLogger Programs,AWSGOS96.CSI,Two Li Cor Photo-Diode Pyranometers
+DataLogger Programs,AWSGOS96.CSI,end Li Cor multiplexer loop
+DataLogger Programs,AWSGOS96.CSI,Net Radiometer
+DataLogger Programs,AWSGOS96.CSI,begin thermocople multiplexer measurement loop
+DataLogger Programs,AWSGOS96.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+DataLogger Programs,AWSGOS96.CSI,"end loop of 10, thermocouple measurement loop."
+DataLogger Programs,AWSGOS96.CSI,begin air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSGOS96.CSI,end air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSGOS96.CSI,"turns multiplexer off, the remaining measurements"
+DataLogger Programs,AWSGOS96.CSI,will occur on the cr10 and not on the multiplexer.
+DataLogger Programs,AWSGOS96.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+DataLogger Programs,AWSGOS96.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+DataLogger Programs,AWSGOS96.CSI,"2 x wind speed averages, loc 21 - 22"
+DataLogger Programs,AWSGOS96.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+DataLogger Programs,AWSGOS96.CSI,"1 x pressure average, loc 25"
+DataLogger Programs,AWSGOS96.CSI,"2 x snow height averages, loc 26-27"
+DataLogger Programs,AWSGOS96.CSI,snow temperature at 0 m.
+DataLogger Programs,AWSGOS96.CSI,snow thermocouple measurements tc1 - tc10
+DataLogger Programs,AWSGOS96.CSI,"in 1995 this was 600, but filled memory with wind"
+DataLogger Programs,AWSGOS96.CSI,sensor pulses.
+DataLogger Programs,AWSGOS96.CSI,"memory buffer, yet we can still measure certain sensors"
+DataLogger Programs,AWSGOS96.CSI,for the purpose of switching on 12V to cs500
+DataLogger Programs,AWSGOS96.CSI,temperature cs500 probe x 2
+DataLogger Programs,AWSGOS96.CSI,removed 60 Hz rejection range since there is no 60 Hz
+DataLogger Programs,AWSGOS96.CSI,humidity cs500 probe x 2
+DataLogger Programs,AWSGOS96.CSI,Young Wind Monitor wind speed -> m/s
+DataLogger Programs,AWSGOS96.CSI,Young wind direction measurement.
+DataLogger Programs,AWSGOS96.CSI,Following a loop of the barometer measurement that is
+DataLogger Programs,AWSGOS96.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+DataLogger Programs,AWSGOS96.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+DataLogger Programs,AWSGOS96.CSI,CS105 Vaisala Barometer
+DataLogger Programs,AWSGOS96.CSI,another 400 has to be added to pressure value to yield
+DataLogger Programs,AWSGOS96.CSI,end pressure sensor measurement last minute of each hr
+DataLogger Programs,AWSGOS96.CSI,Following is the snow height measurement which
+DataLogger Programs,AWSGOS96.CSI,sonic snow height sensor 1
+DataLogger Programs,AWSGOS96.CSI,sonic snow height sensor 2
+DataLogger Programs,SWISS96.CSI,Modified by K. Steffen 6-11-96
+DataLogger Programs,SWISS96.CSI,This program measures various meteorological instruments
+DataLogger Programs,SWISS96.CSI,send voltage from control port 2 to multiplexer
+DataLogger Programs,SWISS96.CSI,to turn on multiplexer
+DataLogger Programs,SWISS96.CSI,-> (internal multiplexer reference temperature signal)
+DataLogger Programs,SWISS96.CSI,send voltage from control port 1 to multiplexer
+DataLogger Programs,SWISS96.CSI,multiplexer input channel.
+DataLogger Programs,SWISS96.CSI,Net Radiometer
+DataLogger Programs,SWISS96.CSI,begin air temperature thermocouple multiplexer loop
+DataLogger Programs,SWISS96.CSI,end air temperature thermocouple multiplexer loop
+DataLogger Programs,SWISS96.CSI,"turns multiplexer off, the remaining measurements"
+DataLogger Programs,SWISS96.CSI,will occur on the cr10 and not on the multiplexer.
+DataLogger Programs,SWISS96.CSI,begin thermocople multiplexer measurement loop
+DataLogger Programs,SWISS96.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+DataLogger Programs,SWISS96.CSI,Snow TC (4x)
+DataLogger Programs,SWISS96.CSI,"end loop of 10, thermocouple measurement loop."
+DataLogger Programs,SWISS96.CSI,End of hourly ice and snow TC meas. 14x
+DataLogger Programs,SWISS96.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+DataLogger Programs,SWISS96.CSI,"2 x cs-500 relative humidity averages, loc 23-24"
+DataLogger Programs,SWISS96.CSI,"2 x wind speed averages, loc 25 - 26"
+DataLogger Programs,SWISS96.CSI,"1 x wind direction average from the higher wind monitor, loc 27"
+DataLogger Programs,SWISS96.CSI,"1 x pressure average, loc 28"
+DataLogger Programs,SWISS96.CSI,"2 x snow height averages, loc 29-30"
+DataLogger Programs,SWISS96.CSI,ice thermocouple measurements tc1 - tc10
+DataLogger Programs,SWISS96.CSI,snow thermocouples TC_snow1 - TC_snow4
+DataLogger Programs,SWISS96.CSI,"in 1995 this was 600, but filled memory with wind"
+DataLogger Programs,SWISS96.CSI,sensor pulses.
+DataLogger Programs,SWISS96.CSI,"memory buffer, yet we can still measure certain sensors"
+DataLogger Programs,SWISS96.CSI,for the purpose of switching on 12V to cs500
+DataLogger Programs,SWISS96.CSI,temperature cs500 probe x 2
+DataLogger Programs,SWISS96.CSI,removed 60 Hz rejection range since there is no 60 Hz
+DataLogger Programs,SWISS96.CSI,humidity cs500 probe x 2
+DataLogger Programs,SWISS96.CSI,Met One Wind Speed -> m/s
+DataLogger Programs,SWISS96.CSI,Met One wind direction measurement.
+DataLogger Programs,SWISS96.CSI,Following a loop of the barometer measurement that is
+DataLogger Programs,SWISS96.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+DataLogger Programs,SWISS96.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+DataLogger Programs,SWISS96.CSI,CS105 Vaisala Barometer
+DataLogger Programs,SWISS96.CSI,another 400 has to be added to pressure value to yield
+DataLogger Programs,SWISS96.CSI,end pressure sensor measurement last minute of each hr
+DataLogger Programs,SWISS96.CSI,Following is the snow height measurement which
+DataLogger Programs,SWISS96.CSI,sonic snow height sensor 1
+DataLogger Programs,SWISS96.CSI,sonic snow height sensor 2
+DataLogger Programs,AWSARG98.CSI,Program modified 03/20/1998 by Jason Box
+DataLogger Programs,AWSARG98.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+DataLogger Programs,AWSARG98.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+DataLogger Programs,AWSARG98.CSI,replace peak wind speed with reference temperature.
+DataLogger Programs,AWSARG98.CSI,This program measures various meteorological instruments
+DataLogger Programs,AWSARG98.CSI,send voltage from control port 2 to multiplexer
+DataLogger Programs,AWSARG98.CSI,to turn on multiplexer
+DataLogger Programs,AWSARG98.CSI,-> (internal multiplexer reference temperature signal)
+DataLogger Programs,AWSARG98.CSI,begin multiplexer measurement loop
+DataLogger Programs,AWSARG98.CSI,send voltage from control port 1 to multiplexer
+DataLogger Programs,AWSARG98.CSI,multiplexer input channel.
+DataLogger Programs,AWSARG98.CSI,Two Li Cor Photo-Diode Pyranometers
+DataLogger Programs,AWSARG98.CSI,end Li Cor multiplexer loop
+DataLogger Programs,AWSARG98.CSI,Net Radiometer
+DataLogger Programs,AWSARG98.CSI,begin thermocople multiplexer measurement loop
+DataLogger Programs,AWSARG98.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+DataLogger Programs,AWSARG98.CSI,"end loop of 10, thermocouple measurement loop."
+DataLogger Programs,AWSARG98.CSI,begin air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSARG98.CSI,end air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSARG98.CSI,"turns multiplexer off, the remaining measurements"
+DataLogger Programs,AWSARG98.CSI,will occur on the cr10 and not on the multiplexer.
+DataLogger Programs,AWSARG98.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+DataLogger Programs,AWSARG98.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+DataLogger Programs,AWSARG98.CSI,"2 x wind speed averages, loc 21 - 22"
+DataLogger Programs,AWSARG98.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+DataLogger Programs,AWSARG98.CSI,"2 x snow height averages, loc 26-27"
+DataLogger Programs,AWSARG98.CSI,snow thermocouple measurements tc1 - tc10
+DataLogger Programs,AWSARG98.CSI,"in 1995 this was 600, but filled memory with wind"
+DataLogger Programs,AWSARG98.CSI,sensor pulses.
+DataLogger Programs,AWSARG98.CSI,"memory buffer, yet we can still measure certain sensors"
+DataLogger Programs,AWSARG98.CSI,for the purpose of switching on 12V to cs500
+DataLogger Programs,AWSARG98.CSI,temperature cs500 probe x 2
+DataLogger Programs,AWSARG98.CSI,removed 60 Hz rejection range since there is no 60 Hz
+DataLogger Programs,AWSARG98.CSI,humidity cs500 probe x 2
+DataLogger Programs,AWSARG98.CSI,Young Wind Monitor wind speed -> m/s
+DataLogger Programs,AWSARG98.CSI,Young wind direction measurement.
+DataLogger Programs,AWSARG98.CSI,Following a loop of the barometer measurement that is
+DataLogger Programs,AWSARG98.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+DataLogger Programs,AWSARG98.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+DataLogger Programs,AWSARG98.CSI,CS105 Vaisala Barometer
+DataLogger Programs,AWSARG98.CSI,another 400 has to be added to pressure value to yield
+DataLogger Programs,AWSARG98.CSI,end pressure sensor measurement last minute of each hr
+DataLogger Programs,AWSARG98.CSI,Following is the snow height measurement which
+DataLogger Programs,AWSARG98.CSI,sonic snow height sensor 1
+DataLogger Programs,AWSARG98.CSI,sonic snow height sensor 2
+DataLogger Programs,AWSDY298.CSI,Program modified 03/20/1998 by Jason Box
+DataLogger Programs,AWSDY298.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+DataLogger Programs,AWSDY298.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+DataLogger Programs,AWSDY298.CSI,This program measures various meteorological instruments
+DataLogger Programs,AWSDY298.CSI,send voltage from control port 2 to multiplexer
+DataLogger Programs,AWSDY298.CSI,to turn on multiplexer
+DataLogger Programs,AWSDY298.CSI,-> (internal multiplexer reference temperature signal)
+DataLogger Programs,AWSDY298.CSI,begin multiplexer measurement loop
+DataLogger Programs,AWSDY298.CSI,send voltage from control port 1 to multiplexer
+DataLogger Programs,AWSDY298.CSI,multiplexer input channel.
+DataLogger Programs,AWSDY298.CSI,Two Li Cor Photo-Diode Pyranometers
+DataLogger Programs,AWSDY298.CSI,end Li Cor multiplexer loop
+DataLogger Programs,AWSDY298.CSI,Net Radiometer
+DataLogger Programs,AWSDY298.CSI,begin thermocople multiplexer measurement loop
+DataLogger Programs,AWSDY298.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+DataLogger Programs,AWSDY298.CSI,"end loop of 10, thermocouple measurement loop."
+DataLogger Programs,AWSDY298.CSI,begin air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSDY298.CSI,end air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSDY298.CSI,begin thr thermocouple top an bottom
+DataLogger Programs,AWSDY298.CSI,"turns multiplexer off, the remaining measurements"
+DataLogger Programs,AWSDY298.CSI,will occur on the cr10 and not on the multiplexer.
+DataLogger Programs,AWSDY298.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+DataLogger Programs,AWSDY298.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+DataLogger Programs,AWSDY298.CSI,2 x wind speed averages
+DataLogger Programs,AWSDY298.CSI,2 x wind direction average
+DataLogger Programs,AWSDY298.CSI,2 x snow height
+DataLogger Programs,AWSDY298.CSI,snow thermocouple measurements tc1 - tc10
+DataLogger Programs,AWSDY298.CSI,"in 1995 this was 600, but filled memory with wind"
+DataLogger Programs,AWSDY298.CSI,sensor pulses.
+DataLogger Programs,AWSDY298.CSI,"memory buffer, yet we can still measure certain sensors"
+DataLogger Programs,AWSDY298.CSI,for the purpose of switching on 12V to cs500
+DataLogger Programs,AWSDY298.CSI,temperature cs500 probe x 2
+DataLogger Programs,AWSDY298.CSI,humidity cs500 probe x 2
+DataLogger Programs,AWSDY298.CSI,Young Wind Monitor wind speed -> m/s
+DataLogger Programs,AWSDY298.CSI,Young wind direction measurement.
+DataLogger Programs,AWSDY298.CSI,Following a loop of the barometer measurement that is
+DataLogger Programs,AWSDY298.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+DataLogger Programs,AWSDY298.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+DataLogger Programs,AWSDY298.CSI,CS105 Vaisala Barometer
+DataLogger Programs,AWSDY298.CSI,another 400 has to be added to pressure value to yield
+DataLogger Programs,AWSDY298.CSI,end pressure sensor measurement last minute of each hr
+DataLogger Programs,AWSDY298.CSI,Following is the snow height measurement which
+DataLogger Programs,AWSDY298.CSI,sonic snow height sensor 1
+DataLogger Programs,AWSDY298.CSI,sonic snow height sensor 2
+DataLogger Programs,AWSGOS98.CSI,Program modified 03/20/1998 by Jason Box
+DataLogger Programs,AWSGOS98.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35. C.
+DataLogger Programs,AWSGOS98.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35. C.
+DataLogger Programs,AWSGOS98.CSI,replace peak wind speed 1 with reff temperature.
+DataLogger Programs,AWSGOS98.CSI,replace peak wind speed 2 with battery measurement.
+DataLogger Programs,AWSGOS98.CSI,This program measures various meteorological instruments
+DataLogger Programs,AWSGOS98.CSI,send voltage from control port 2 to multiplexer
+DataLogger Programs,AWSGOS98.CSI,to turn on multiplexer
+DataLogger Programs,AWSGOS98.CSI,-> (internal multiplexer reference temperature signal)
+DataLogger Programs,AWSGOS98.CSI,begin multiplexer measurement loop
+DataLogger Programs,AWSGOS98.CSI,send voltage from control port 1 to multiplexer
+DataLogger Programs,AWSGOS98.CSI,multiplexer input channel.
+DataLogger Programs,AWSGOS98.CSI,Two Li Cor Photo-Diode Pyranometers
+DataLogger Programs,AWSGOS98.CSI,end Li Cor multiplexer loop
+DataLogger Programs,AWSGOS98.CSI,Net Radiometer
+DataLogger Programs,AWSGOS98.CSI,begin thermocople multiplexer measurement loop
+DataLogger Programs,AWSGOS98.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+DataLogger Programs,AWSGOS98.CSI,"end loop of 10, thermocouple measurement loop."
+DataLogger Programs,AWSGOS98.CSI,begin air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSGOS98.CSI,end air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSGOS98.CSI,"turns multiplexer off, the remaining measurements"
+DataLogger Programs,AWSGOS98.CSI,will occur on the cr10 and not on the multiplexer.
+DataLogger Programs,AWSGOS98.CSI,"in 1995 this was 600, but filled memory with wind"
+DataLogger Programs,AWSGOS98.CSI,sensor pulses.
+DataLogger Programs,AWSGOS98.CSI,"memory buffer, yet we can still measure certain sensors"
+DataLogger Programs,AWSGOS98.CSI,for the purpose of switching on 12V to cs500
+DataLogger Programs,AWSGOS98.CSI,temperature cs500 probe x 2
+DataLogger Programs,AWSGOS98.CSI,removed 60 Hz rejection range since there is no 60 Hz
+DataLogger Programs,AWSGOS98.CSI,humidity cs500 probe x 2
+DataLogger Programs,AWSGOS98.CSI,Young Wind Monitor wind speed -> m/s
+DataLogger Programs,AWSGOS98.CSI,Young wind direction measurement.
+DataLogger Programs,AWSGOS98.CSI,Following a loop of the barometer measurement that is
+DataLogger Programs,AWSGOS98.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+DataLogger Programs,AWSGOS98.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+DataLogger Programs,AWSGOS98.CSI,CS105 Vaisala Barometer
+DataLogger Programs,AWSGOS98.CSI,another 400 has to be added to pressure value to yield
+DataLogger Programs,AWSGOS98.CSI,end pressure sensor measurement last minute of each hr
+DataLogger Programs,AWSGOS98.CSI,Following is the snow height measurement which
+DataLogger Programs,AWSGOS98.CSI,sonic snow height sensor 1
+DataLogger Programs,AWSGOS98.CSI,sonic snow height sensor 2
+DataLogger Programs,EMM.CSI,This program measures various meteorological instruments
+DataLogger Programs,EMM.CSI,Program modified 02/21/1999 by Jason Box
+DataLogger Programs,EMM.CSI,modifications include a reset of TC measurement range if it reads -6999
+DataLogger Programs,EMM.CSI,pressure will require measurement elsewhere than c6
+DataLogger Programs,EMM.CSI,Program modified 03/20/1998 by Jason Box
+DataLogger Programs,EMM.CSI,air and snow TC use 2.5 mV range if ref temp is greater than -35 C.
+DataLogger Programs,EMM.CSI,air and snow TC use 7.5 mV range if ref temp is less than -35 C.
+DataLogger Programs,EMM.CSI,replace peak wind speed with reference temperature.
+DataLogger Programs,EMM.CSI,Modified for new EMM 29 May 2006
+DataLogger Programs,EMM.CSI,send voltage from control port 2 to multiplexer
+DataLogger Programs,EMM.CSI,to turn on multiplexer
+DataLogger Programs,EMM.CSI,-> (internal multiplexer reference temperature signal)
+DataLogger Programs,EMM.CSI,begin multiplexer measurement loop
+DataLogger Programs,EMM.CSI,send voltage from control port 1 to multiplexer
+DataLogger Programs,EMM.CSI,multiplexer input channel.
+DataLogger Programs,EMM.CSI,Two Li Cor Photo-Diode Pyranometers
+DataLogger Programs,EMM.CSI,end Li Cor multiplexer loop
+DataLogger Programs,EMM.CSI,Net Radiometer
+DataLogger Programs,EMM.CSI,begin thermocople multiplexer measurement loop
+DataLogger Programs,EMM.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+DataLogger Programs,EMM.CSI,"end loop of 10, thermocouple measurement loop."
+DataLogger Programs,EMM.CSI,begin air temperature thermocouple multiplexer loop
+DataLogger Programs,EMM.CSI,end air temperature thermocouple multiplexer loop
+DataLogger Programs,EMM.CSI,"turns multiplexer off, the remaining measurements"
+DataLogger Programs,EMM.CSI,will occur on the cr10 and not on the multiplexer.
+DataLogger Programs,EMM.CSI,Young Wind Monitor wind speed -> m/s
+DataLogger Programs,EMM.CSI,set flag hi
+DataLogger Programs,EMM.CSI,"begin hour is 23 , set logger clk, and set flag low."
+DataLogger Programs,EMM.CSI,above comment only valid if 23 hour filter is added.
+DataLogger Programs,EMM.CSI,begin flag is definately 1
+DataLogger Programs,EMM.CSI,end flag is definately 1
+DataLogger Programs,EMM.CSI,"end hour is 23 , set logger clk, and set flag low."
+DataLogger Programs,EMM.CSI,end loop for flag hi
+DataLogger Programs,EMM.CSI,"2 x air temperature thermocouple averages, loc 15-16"
+DataLogger Programs,EMM.CSI,"2 x cs-500 relative humidity averages, loc 19-20"
+DataLogger Programs,EMM.CSI,"2 x wind speed averages, loc 21 - 22"
+DataLogger Programs,EMM.CSI,"1 x wind direction average from the higher wind monitor, loc 24"
+DataLogger Programs,EMM.CSI,"2 x snow height averages, loc 26-27"
+DataLogger Programs,EMM.CSI,snow thermocouple measurements tc1 - tc10
+DataLogger Programs,EMM.CSI,removed two channels of prt - COULD ADD TWO MORE CHANNELS
+DataLogger Programs,EMM.CSI,"in 1995 this was 600, but filled memory with wind"
+DataLogger Programs,EMM.CSI,sensor pulses.
+DataLogger Programs,EMM.CSI,"memory buffer, yet we can still measure certain sensors"
+DataLogger Programs,EMM.CSI,for the purpose of switching on 12V to cs500
+DataLogger Programs,EMM.CSI,temperature cs500 probe x 2
+DataLogger Programs,EMM.CSI,removed 60 Hz rejection range since there is no 60 Hz
+DataLogger Programs,EMM.CSI,humidity cs500 probe x 2
+DataLogger Programs,EMM.CSI,Young wind direction measurement.
+DataLogger Programs,EMM.CSI,Following a loop of the barometer measurement that is
+DataLogger Programs,EMM.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+DataLogger Programs,EMM.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+DataLogger Programs,EMM.CSI,CS105 Vaisala Barometer
+DataLogger Programs,EMM.CSI,another 400 has to be added to pressure value to yield
+DataLogger Programs,EMM.CSI,end cs105 pressure sensor measurement last minute of each hr
+DataLogger Programs,EMM.CSI,Following is the snow height measurement which
+DataLogger Programs,EMM.CSI,sonic snow height sensor 1
+DataLogger Programs,EMM.CSI,sonic snow height sensor 2
+DataLogger Programs,emm.dld,15 pressure_AVG  L
+DataLogger Programs,emm.dld,17 BATTERY  L
+DataLogger Programs,AWSSUM04.CSI,"Modified program for 1 m averaging and 15, 10 second logging for"
+DataLogger Programs,AWSSUM04.CSI,"Modified Koni Steffen, Boulder 11 March 2004"
+DataLogger Programs,AWSSUM04.CSI,excitation changed from 350 mV to 250 to extend measurement range to -72 C
+DataLogger Programs,AWSSUM04.CSI,port 7 will remain hi and hence so will pressure the trigger of which is moved to c7
+DataLogger Programs,AWSSUM04.CSI,send voltage from control port 2 to multiplexer
+DataLogger Programs,AWSSUM04.CSI,to turn on multiplexer
+DataLogger Programs,AWSSUM04.CSI,begin multiplexer measurement loop
+DataLogger Programs,AWSSUM04.CSI,send voltage from control port 1 to multiplexer
+DataLogger Programs,AWSSUM04.CSI,multiplexer input channel.
+DataLogger Programs,AWSSUM04.CSI,Two Li Cor Photo-Diode Pyranometers
+DataLogger Programs,AWSSUM04.CSI,end Li Cor multiplexer loop
+DataLogger Programs,AWSSUM04.CSI,Net Radiometer
+DataLogger Programs,AWSSUM04.CSI,---------------------- begin snow TC loop
+DataLogger Programs,AWSSUM04.CSI,begin thermocople multiplexer measurement loop
+DataLogger Programs,AWSSUM04.CSI,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+DataLogger Programs,AWSSUM04.CSI,"end loop of 10, thermocouple measurement loop."
+DataLogger Programs,AWSSUM04.CSI,begin air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSSUM04.CSI,end air temperature thermocouple multiplexer loop
+DataLogger Programs,AWSSUM04.CSI,"turns multiplexer off, the remaining measurements"
+DataLogger Programs,AWSSUM04.CSI,will occur on the cr10 and not on the multiplexer.
+DataLogger Programs,AWSSUM04.CSI,"end turn on GPS and initialize counter, flag, and flag3"
+DataLogger Programs,AWSSUM04.CSI,"loop to set flag 4, to trigger clock set after GPS has sampled for 15 minutes"
+DataLogger Programs,AWSSUM04.CSI,"begin hour is 23 , set logger clk, and set flag low."
+DataLogger Programs,AWSSUM04.CSI,above comment only valid if 23 hour filter is added.
+DataLogger Programs,AWSSUM04.CSI,end time calculation when flag is set hi
+DataLogger Programs,AWSSUM04.CSI,set clock if flag is definately set hi
+DataLogger Programs,AWSSUM04.CSI,end flag is definately 1
+DataLogger Programs,AWSSUM04.CSI,"end hour is 23 , set logger clk, and set flag low."
+DataLogger Programs,AWSSUM04.CSI,end loop for flag hi
+DataLogger Programs,AWSSUM04.CSI,set flag low
+DataLogger Programs,AWSSUM04.CSI,Young Wind Monitor wind speed -> m/s
+DataLogger Programs,AWSSUM04.CSI,set pressure sensor option. 0 is for the older PTA427A pressure sensor
+DataLogger Programs,AWSSUM04.CSI,p_flag = 1 is for the newer PTB101B pressure sensor.
+DataLogger Programs,AWSSUM04.CSI,for the purpose of switching on 12V to cs500
+DataLogger Programs,AWSSUM04.CSI,temperature cs500 probe x 2
+DataLogger Programs,AWSSUM04.CSI,removed 60 Hz rejection range since there is no 60 Hz
+DataLogger Programs,AWSSUM04.CSI,humidity cs500 probe x 2
+DataLogger Programs,AWSSUM04.CSI,Young wind direction measurement.
+DataLogger Programs,AWSSUM04.CSI,Following a loop of the barometer measurement that is
+DataLogger Programs,AWSSUM04.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+DataLogger Programs,AWSSUM04.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+DataLogger Programs,AWSSUM04.CSI,0 in parameter location 1 sets flag2 to 0 for pta427
+DataLogger Programs,AWSSUM04.CSI,1 in parameter location 1 sets flag2 to 1 for cs105
+DataLogger Programs,AWSSUM04.CSI,end pta427 pressure sensor measurement last minute of each hr
+DataLogger Programs,AWSSUM04.CSI,CS105 Vaisala Barometer
+DataLogger Programs,AWSSUM04.CSI,another 400 has to be added to pressure value to yield
+DataLogger Programs,AWSSUM04.CSI,end cs105 pressure sensor measurement last minute of each hr
+DataLogger Programs,AWSSUM04.CSI,end pressure sensor measurement last minute of each hr
+DataLogger Programs,AWSSUM04.CSI,Following is the snow height measurement which
+DataLogger Programs,AWSSUM04.CSI,sonic snow height sensor 1
+DataLogger Programs,AWSSUM04.CSI,sonic snow height sensor 2
+DataLogger Programs,AWS_LARSEN C.csi,"Modified Koni Steffen, Rothera 6 Nov 2008"
+DataLogger Programs,AWS_LARSEN C.csi,excitation changed from 350 mV to 250 to extend measurement range to -72 C
+DataLogger Programs,AWS_LARSEN C.csi,send voltage from control port 2 to multiplexer
+DataLogger Programs,AWS_LARSEN C.csi,to turn on multiplexer
+DataLogger Programs,AWS_LARSEN C.csi,begin multiplexer measurement loop
+DataLogger Programs,AWS_LARSEN C.csi,send voltage from control port 1 to multiplexer
+DataLogger Programs,AWS_LARSEN C.csi,multiplexer input channel.
+DataLogger Programs,AWS_LARSEN C.csi,Two Li Cor Photo-Diode Pyranometers
+DataLogger Programs,AWS_LARSEN C.csi,end Li Cor multiplexer loop
+DataLogger Programs,AWS_LARSEN C.csi,Net Radiometer
+DataLogger Programs,AWS_LARSEN C.csi,---------------------- begin snow TC loop
+DataLogger Programs,AWS_LARSEN C.csi,begin thermocople multiplexer measurement loop
+DataLogger Programs,AWS_LARSEN C.csi,Sub-surface Ice Thermocouple string (0.1 m .. 9.1 m initial)
+DataLogger Programs,AWS_LARSEN C.csi,"end loop of 10, thermocouple measurement loop."
+DataLogger Programs,AWS_LARSEN C.csi,begin air temperature thermocouple multiplexer loop
+DataLogger Programs,AWS_LARSEN C.csi,end air temperature thermocouple multiplexer loop
+DataLogger Programs,AWS_LARSEN C.csi,"turns multiplexer off, the remaining measurements"
+DataLogger Programs,AWS_LARSEN C.csi,will occur on the cr10 and not on the multiplexer.
+DataLogger Programs,AWS_LARSEN C.csi,Young Wind Monitor wind speed -> m/s
+DataLogger Programs,AWS_LARSEN C.csi,check which presure sensor *******************************************
+DataLogger Programs,AWS_LARSEN C.csi,set pressure sensor option. 0 is for the new cs106 = PTB110 pressure sensor
+DataLogger Programs,AWS_LARSEN C.csi,p_flag = 1 is for cs105 = PTB101B pressure sensor.
+DataLogger Programs,AWS_LARSEN C.csi,for the purpose of switching on 12V to cs500
+DataLogger Programs,AWS_LARSEN C.csi,temperature cs500 probe x 2
+DataLogger Programs,AWS_LARSEN C.csi,removed 60 Hz rejection range since there is no 60 Hz
+DataLogger Programs,AWS_LARSEN C.csi,humidity cs500 probe x 2
+DataLogger Programs,AWS_LARSEN C.csi,Young wind direction measurement
+DataLogger Programs,AWS_LARSEN C.csi,Following a loop of the barometer measurement that is
+DataLogger Programs,AWS_LARSEN C.csi,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+DataLogger Programs,AWS_LARSEN C.csi,-> multiplier = sensor range (460)/mV Excitation(2500)
+DataLogger Programs,AWS_LARSEN C.csi,Multiplier = 0.184 for CS105; add 400 to value
+DataLogger Programs,AWS_LARSEN C.csi,Multiplier = 0.240 for CS106; add 400 t value
+DataLogger Programs,AWS_LARSEN C.csi,0 in parameter location 1 sets flag2 to 0 for cs106
+DataLogger Programs,AWS_LARSEN C.csi,1 in parameter location 1 sets flag2 to 1 for cs105
+DataLogger Programs,AWS_LARSEN C.csi,new vaisala cs106 pressure sensor
+DataLogger Programs,AWS_LARSEN C.csi,"offset is 500, need to offset by -400"
+DataLogger Programs,AWS_LARSEN C.csi,end cs106 new pressure sensor measurement last minute of each hr
+DataLogger Programs,AWS_LARSEN C.csi,CS105 Vaisala Barometer
+DataLogger Programs,AWS_LARSEN C.csi,another 400 has to be added to pressure value to yield
+DataLogger Programs,AWS_LARSEN C.csi,end cs105 pressure sensor measurement last minute of each hr
+DataLogger Programs,AWS_LARSEN C.csi,end pressure sensor measurement last minute of each hr
+DataLogger Programs,AWS_LARSEN C.csi,Following is the snow height measurement which
+DataLogger Programs,AWS_LARSEN C.csi,sonic snow height sensor 1
+DataLogger Programs,AWS_LARSEN C.csi,sonic snow height sensor 2
+DataLogger Programs,GOES.CSI,Flag Usage:
+DataLogger Programs,GOES.CSI,"All radiation instruments: s(in), s(out), s(red),s(diff"
+DataLogger Programs,GOES.CSI,Net Radiometer
+DataLogger Programs,GOES.CSI,"3 humidity: 15 at bottom, 17 at top"
+DataLogger Programs,GOES.CSI,"2 wind speed: 18 at lowest level, 19 at highest"
+DataLogger Programs,GOES.CSI,Met One wind direction
+DataLogger Programs,GOES.CSI,Vaisala PTA427 Barometer
+DataLogger Programs,GOES.CSI,"Snow Height at lower level, SW facing"
+DataLogger Programs,GOES.CSI,"Snow Height at higher level, SE facing"
+DataLogger Programs,MOULIN.CSI,"Includes instructions for CS500, SR50, Young wind, and one Tair TC"
+DataLogger Programs,MOULIN.CSI,Turn on HMP45
+DataLogger Programs,MOULIN.CSI,Allow HMP45 to warm up and T and RH to stabalize
+DataLogger Programs,MOULIN.CSI,Measure T from HMP45
+DataLogger Programs,MOULIN.CSI,Measure RH from HMP45
+DataLogger Programs,MOULIN.CSI,Turn HMP45 off
+DataLogger Programs,MOULIN.CSI,Young Wind Monitor wind speed -> m/s
+DataLogger Programs,MOULIN.CSI,Young wind direction measurement.
+DataLogger Programs,MOULIN.CSI,Measure air temperature from thermocouple
+DataLogger Programs,MOULIN.CSI,"Record average TC-temp, CS500-temp, CS500-rh"
+DataLogger Programs,MOULIN.CSI,Record wind speed and direction
+DataLogger Programs,MOULIN.CSI,Record MAX wind speed
+DataLogger Programs,MOULIN.CSI,Record battery voltage
+DataLogger Programs,MOULIN.CSI,Measure battery voltage
+DataLogger Programs,SWISS04.CSI,Modified by K. Steffen 5-21-97
+DataLogger Programs,SWISS04.CSI,Modified by K. Steffen 6-5-98 for THR
+DataLogger Programs,SWISS04.CSI,Modified by J. Box and N. Cullen 4-1-99
+DataLogger Programs,SWISS04.CSI,Modifies by K. Steffen 6-4-04: added T(surf) IR thermocouple
+DataLogger Programs,SWISS04.CSI,send voltage from control port 2 to multiplexer
+DataLogger Programs,SWISS04.CSI,to turn on multiplexer
+DataLogger Programs,SWISS04.CSI,send voltage from control port 1 to multiplexer
+DataLogger Programs,SWISS04.CSI,multiplexer input channel.
+DataLogger Programs,SWISS04.CSI,"S_in, S_ref, Net Radiometer"
+DataLogger Programs,SWISS04.CSI,"end sw in, sw ref, and Kipp and Zonen net"
+DataLogger Programs,SWISS04.CSI,Begin to measure the PRT (Precision Infrared Thermocouple) sensor
+DataLogger Programs,SWISS04.CSI,Surface temperature from IR (uncorrected)
+DataLogger Programs,SWISS04.CSI,Instrument temperature for IR TC
+DataLogger Programs,SWISS04.CSI,Empty channel on multiplexer
+DataLogger Programs,SWISS04.CSI,begin air temperature thermocouple multiplexer loop
+DataLogger Programs,SWISS04.CSI,end air temperature thermocouple multiplexer loop
+DataLogger Programs,SWISS04.CSI,begin thermocople multiplexer measurement loop
+DataLogger Programs,SWISS04.CSI,Sub-surface Ice Thermocouple string (0.0 m .. 9.0 m initial)
+DataLogger Programs,SWISS04.CSI,Snow TC (4x)
+DataLogger Programs,SWISS04.CSI,"end loop of 10, thermocouple measurement loop."
+DataLogger Programs,SWISS04.CSI,"turns multiplexer off, the remaining measurements"
+DataLogger Programs,SWISS04.CSI,will occur on the cr10 and not on the multiplexer.
+DataLogger Programs,SWISS04.CSI,"2 x air temperature thermocouple averages, loc 19-20"
+DataLogger Programs,SWISS04.CSI,2 x cs-500 relative humidity averages
+DataLogger Programs,SWISS04.CSI,2 x wind speed averages
+DataLogger Programs,SWISS04.CSI,2 x wind direction averages
+DataLogger Programs,SWISS04.CSI,"1 x pressure average, loc 28"
+DataLogger Programs,SWISS04.CSI,"2 x snow height averages, loc 29-30"
+DataLogger Programs,SWISS04.CSI,ice thermocouple measurements tc1 - tc10
+DataLogger Programs,SWISS04.CSI,snow thermocouples TC_snow1 - TC_snow4
+DataLogger Programs,SWISS04.CSI,set flag hi
+DataLogger Programs,SWISS04.CSI,"begin hour is 23 , set logger clk, and set flag low."
+DataLogger Programs,SWISS04.CSI,above comment only valid if 23 hour filter is added.
+DataLogger Programs,SWISS04.CSI,begin flag is definately 1
+DataLogger Programs,SWISS04.CSI,end flag is definately 1
+DataLogger Programs,SWISS04.CSI,"end hour is 23 , set logger clk, and set flag low."
+DataLogger Programs,SWISS04.CSI,end loop for flag hi
+DataLogger Programs,SWISS04.CSI,for the purpose of switching on 12V to cs500
+DataLogger Programs,SWISS04.CSI,temperature cs500 probe x 2
+DataLogger Programs,SWISS04.CSI,removed 60 Hz rejection range since there is no 60 Hz
+DataLogger Programs,SWISS04.CSI,humidity cs500 probe x 2
+DataLogger Programs,SWISS04.CSI,Met One Wind Speed -> m/s
+DataLogger Programs,SWISS04.CSI,Met One wind direction measurement.
+DataLogger Programs,SWISS04.CSI,Following a loop of the barometer measurement that is
+DataLogger Programs,SWISS04.CSI,"The pressure sensor has a range from 600 - 1060 hPa,mb"
+DataLogger Programs,SWISS04.CSI,-> multiplier = sensor range (460)/mV Excitation(2500)
+DataLogger Programs,SWISS04.CSI,CS105 Vaisala Barometer
+DataLogger Programs,SWISS04.CSI,another 400 has to be added to pressure value to yield
+DataLogger Programs,SWISS04.CSI,end cs105 pressure sensor measurement last minute of each hr
+DataLogger Programs,SWISS04.CSI,Following is the snow height measurement which
+DataLogger Programs,SWISS04.CSI,sonic snow height sensor 1
+DataLogger Programs,SWISS04.CSI,sonic snow height sensor 2
+DataLogger Programs,SWISS04.dld,22 pressure_AVG  L
+DataLogger Programs,SWISS04.dld,35 TC_snow1_AVG  L
+DataLogger Programs,SWISS04.dld,36 TC_snow2_AVG  L
+DataLogger Programs,SWISS04.dld,37 TC_snow3_AVG  L
+DataLogger Programs,SWISS04.dld,38 TC_snow4_AVG  L
+DataLogger Programs,SWISS04.dld,40 BATTERY_AVG  L
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.dld,10 wind_spd_AVG  L
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.dld,11 wind_spd_MAX  L
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.dld,13 battery  L
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.dld,14 snow_H_AVG  L
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,CNR1 4-component net radiometer
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,10 x snow temperature sensors
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,10 Aug 2009 modified by Koni Steffen
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,------------------------------------------ turn on multiplexer
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,turn multiplexer on
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,-> (internal multiplexer reference temperature signal)
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,141.2429 = CNR1 4- component radiometer multiplier
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,-------------------------------------------------- battery voltage
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,------------------------ battery voltage is sufficient for ventilation
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,------------------------ wind speed threshold less
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,-------------------------------------------------- Air Thermocouples
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,-------------------------------------------------- measure thermocouple air temps once per minute
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,-------------------------------------------------- measure ice thermistors every 10 minutes
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,begin multiplexer measurement loop
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,-------------------------------------------------- turn off multiplexer
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,-------------------------------------------------- wind speed
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,Write out Table 1 instruments
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,Table 2: Thermistors and soil moisture
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,----------------------------------------- Snow Temperatures
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,---------------------- measure 6 single ended snow thermistors
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,-------------------------------------------------- Wind Direction
+Swiss Camp Science tower,2009_SCI_TOWER 09.CSI,-------------------------------------------------- Sonic ranger  SR50
+Swiss Camp Science tower,2009_SCI_TOWER 09.dld,13 wind_spd_S_WVT  L
+Swiss Camp Science tower,2009_SCI_TOWER 09.dld,14 wind_dir_D1_WVT  L
+Swiss Camp Science tower,2009_SCI_TOWER 09.dld,15 wind_spd_MAX  L
+Swiss Camp Science tower,2009_SCI_TOWER 09.dld,16 battery  L
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,CNR1 4-component net radiometer
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,10 x snow temperature sensors
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,10 Aug 2009 modified by Koni Steffen
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,------------------------------------------ turn on multiplexer
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,turn multiplexer on
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,-> (internal multiplexer reference temperature signal)
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,141.2429 = CNR1 4- component radiometer multiplier
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,------------------------ battery voltage is sufficient for ventilation
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,------------------------ wind speed threshold less
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,-------------------------------------------------- Air Thermocouples
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,-------------------------------------------------- measure thermocouple air temps once per minute
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,-------------------------------------------------- measure ice thermistors once every 10 min
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,-------------------------------------------------- wind speed
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,Write out Table 1 instruments
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,Table 2: Thermistors and soil moisture
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,----------------------------------------- Snow Temperatures
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,---------------------- measure 6 single ended snow thermistors
+Swiss Camp Science tower,2009_SCI_TOWER_NEW ICETEMP 09.CSI,-------------------------------------------------- Sonic ranger  SR50
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,CNR1 4-component net radiometer
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,10 x snow temperature sensors
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,10 Aug 2009 modified by Koni Steffen
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,------------------------------------------ turn on multiplexer
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,turn multiplexer on
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,-> (internal multiplexer reference temperature signal)
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,141.2429 = CNR1 4- component radiometer multiplier
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,------------------------ battery voltage is sufficient for ventilation
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,------------------------ wind speed threshold less
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,-------------------------------------------------- Air Thermocouples
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,-------------------------------------------------- measure thermocouple air temps once per minute
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,-------------------------------------------------- wind speed
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,Write out Table 1 instruments
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,Table 2: Thermistors and soil moisture
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,----------------------------------------- Snow Temperatures
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,---------------------- measure 6 single ended snow thermistors
+Swiss Camp Science tower,2009_SCI_TOWER_new 09.csi,-------------------------------------------------- Sonic ranger  SR50
+Swiss Camp Science tower,2009_SCI_TOWER_new icetemp 09.dld,10 wind_spd_AVG  L
+Swiss Camp Science tower,2009_SCI_TOWER_new icetemp 09.dld,11 wind_spd_MAX  L
+Swiss Camp Science tower,2009_SCI_TOWER_new icetemp 09.dld,17 snow_H_AVG  L
+Swiss Camp Science tower,2009_SCI_TOWER_new icetemp 09.dld,18 battery  L
+Swiss Camp Science tower,SCI_TOWER 08.csi,CNR1 4-component net radiometer
+Swiss Camp Science tower,SCI_TOWER 08.csi,10 x snow temperature sensors
+Swiss Camp Science tower,SCI_TOWER 08.csi,------------------------------------------ turn on multiplexer
+Swiss Camp Science tower,SCI_TOWER 08.csi,141.2429 = CNR1 4- component radiometer multiplier
+Swiss Camp Science tower,SCI_TOWER 08.csi,-------------------------------------------------- battery voltage
+Swiss Camp Science tower,SCI_TOWER 08.csi,------------------------ battery voltage is sufficient for ventilation
+Swiss Camp Science tower,SCI_TOWER 08.csi,------------------------ wind speed threshold less
+Swiss Camp Science tower,SCI_TOWER 08.csi,-------------------------------------------------- Air Thermocouples
+Swiss Camp Science tower,SCI_TOWER 08.csi,-------------------------------------------------- measure thermocouple air temps once per minute
+Swiss Camp Science tower,SCI_TOWER 08.csi,-------------------------------------------------- turn off multiplexer
+Swiss Camp Science tower,SCI_TOWER 08.csi,-------------------------------------------------- wind speed
+Swiss Camp Science tower,SCI_TOWER 08.csi,Write out Table 1 instruments
+Swiss Camp Science tower,SCI_TOWER 08.csi,Table 2: Thermistors and soil moisture
+Swiss Camp Science tower,SCI_TOWER 08.csi,----------------------------------------- Snow Temperatures
+Swiss Camp Science tower,SCI_TOWER 08.csi,---------------------- measure 6 single ended snow thermistors
+Swiss Camp Science tower,SCI_TOWER 08.csi,-------------------------------------------------- Wind Direction
+Swiss Camp Science tower,SCI_TOWER 08.csi,-------------------------------------------------- Sonic ranger  SR50
+Swiss Camp Science tower,SCI_TOWER 08.dld,13 wind_spd_S_WVT  L
+Swiss Camp Science tower,SCI_TOWER 08.dld,14 wind_dir_D1_WVT  L
+Swiss Camp Science tower,SCI_TOWER 08.dld,16 battery  L
+Swiss Camp Science tower,SCI_TOWER.CSI,CNR1 4-component net radiometer
+Swiss Camp Science tower,SCI_TOWER.CSI,10 x snow temperature sensors
+Swiss Camp Science tower,SCI_TOWER.CSI,------------------------------------------ turn on multiplexer
+Swiss Camp Science tower,SCI_TOWER.CSI,141.2429 = CNR1 4- component radiometer multiplier
+Swiss Camp Science tower,SCI_TOWER.CSI,-------------------------------------------------- battery voltage
+Swiss Camp Science tower,SCI_TOWER.CSI,------------------------ battery voltage is sufficient for ventilation
+Swiss Camp Science tower,SCI_TOWER.CSI,------------------------ wind speed threshold less
+Swiss Camp Science tower,SCI_TOWER.CSI,-------------------------------------------------- Air Thermocouples
+Swiss Camp Science tower,SCI_TOWER.CSI,-------------------------------------------------- measure thermocouple air temps once per minute
+Swiss Camp Science tower,SCI_TOWER.CSI,-------------------------------------------------- turn off multiplexer
+Swiss Camp Science tower,SCI_TOWER.CSI,-------------------------------------------------- wind speed
+Swiss Camp Science tower,SCI_TOWER.CSI,Write out Table 1 instruments
+Swiss Camp Science tower,SCI_TOWER.CSI,Table 2: Thermistors and soil moisture
+Swiss Camp Science tower,SCI_TOWER.CSI,----------------------------------------- Snow Temperatures
+Swiss Camp Science tower,SCI_TOWER.CSI,---------------------- measure 6 single ended snow thermistors
+Swiss Camp Science tower,SCI_TOWER.CSI,-------------------------------------------------- Wind Direction
+Swiss Camp Science tower,SCI_TOWER.CSI,-------------------------------------------------- Sonic ranger  SR50

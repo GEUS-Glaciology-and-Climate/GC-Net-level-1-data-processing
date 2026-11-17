@@ -1,0 +1,47 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 125
+ncols = 30
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "_", "RH2", "VW1", "VW2", "DW1", "DW2", "P", "_", "_", "TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "TA3", "_", "V"]
+[[array.run]]
+row_from = 0
+row_to = 637
+start_year = 1998
+
+[calibration.ISWR]
+scale_pos = 77
+scale_neg = 77
+add = 0
+source = "differs: C-level factor over 528 h in 1998-1998 (documented 1.0)"
+
+[calibration.NR]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "implied by C-level (5 runs); no station calibration in the repository"
+
+[calibration.OSWR]
+scale_pos = 71.918
+scale_neg = 71.918
+add = 0
+source = "differs: C-level factor over 515 h in 1998-1998 (documented 1.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (5 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "implied by C-level"
+
+[calibration.TA4]
+scale_pos = 0.9998
+scale_neg = 0.9998
+add = 0
+source = "implied by C-level"
+

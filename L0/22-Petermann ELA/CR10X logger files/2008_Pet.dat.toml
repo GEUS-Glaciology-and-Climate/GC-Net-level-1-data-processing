@@ -1,0 +1,98 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 188
+ncols = 17
+column_header = ["TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "TA3", "TA4", "VW1", "V"]
+[[array.run]]
+row_from = 0
+row_to = 847
+start_year = 2007
+[[array.run]]
+row_from = 848
+row_to = 1695
+[[array.run]]
+row_from = 1696
+row_to = 2543
+[[array.run]]
+row_from = 2544
+row_to = 3391
+[[array.run]]
+row_from = 3392
+row_to = 4239
+[[array.run]]
+row_from = 4240
+row_to = 5087
+[[array.run]]
+row_from = 5088
+row_to = 5857
+
+[[array]]
+id = 222
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "DW2", "P", "HW1", "_"]
+[[array.run]]
+row_from = 0
+row_to = 846
+start_year = 2007
+[[array.run]]
+row_from = 847
+row_to = 1693
+[[array.run]]
+row_from = 1694
+row_to = 2540
+[[array.run]]
+row_from = 2541
+row_to = 3387
+[[array.run]]
+row_from = 3388
+row_to = 4234
+[[array.run]]
+row_from = 4235
+row_to = 5081
+
+[[array]]
+id = 222
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "DW2", "P", "_", "_"]
+[[array.run]]
+row_from = 5082
+row_to = 5850
+start_year = 2007
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "documented: C-level factor over 649 h in 2007-2007 (documented 200.0)"
+
+[calibration.NR]
+scale_pos = 9.29
+scale_neg = 11.62
+add = 0
+source = "CR1000 header (CR10X-era ISWR implied 199.6 agrees with header 200)"
+
+[calibration.OSWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "documented: C-level factor over 642 h in 2007-2007 (documented 200.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (14 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "CR1000 header"
+

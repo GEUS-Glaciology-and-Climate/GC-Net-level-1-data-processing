@@ -44,7 +44,7 @@ df_all = df_all.drop(columns=['minutes'])
 df_all = df_all.sort_index()
 df_all[['TA2','TA1']].plot()
 #%%
-import write_nead
+from lib import write_nead
 write_nead.write_nead(df_all.reset_index(), 
                       'L0/L0_ini/25-SMS1.ini',
                       'L0M/25-SMS1')

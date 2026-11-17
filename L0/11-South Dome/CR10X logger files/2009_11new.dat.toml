@@ -1,0 +1,51 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 11
+ncols = 31
+column_header = ["ISWR", "OSWR", "NR", "TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "TA1", "TA2", "TA3", "TA4", "RH1", "RH2", "VW1", "VW2", "DW1", "_", "_", "_", "HW2", "_", "V"]
+[[array.run]]
+row_from = 2
+row_to = 9883
+start_year = 2007
+
+[[array]]
+id = 11
+ncols = 43
+column_header = ["ISWR", "_", "NR", "TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "TA1", "TA2", "TA3", "TA4", "_", "_", "VW1", "VW2", "DW1", "_", "_", "_", "HW2", "_", "V", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_"]
+[[array.run]]
+row_from = 0
+row_to = 429
+start_year = 2007
+note = "dating score below 0.9"
+
+[calibration.ISWR]
+scale_pos = 64.126
+scale_neg = 64.126
+add = 0
+source = "differs: C-level factor over 4289 h in 2007-2008 (documented 62.0)"
+
+[calibration.NR]
+scale_pos = 9.29
+scale_neg = 11.7
+add = 0
+source = "documented: C-level factor over 897 h in 2007-2008 (documented 9.29) / documented: C-level factor over 176 h in 2007-2008 (documented 11.7)"
+
+[calibration.OSWR]
+scale_pos = 67.985
+scale_neg = 67.985
+add = 0
+source = "differs: C-level factor over 5702 h in 2007-2008 (documented 72.7891)"
+
+[calibration.TA3]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "CR1000 header"
+

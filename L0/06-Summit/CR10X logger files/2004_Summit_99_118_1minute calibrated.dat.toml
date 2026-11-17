@@ -1,0 +1,48 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 17
+ncols = 31
+column_header = ["ISWR", "OSWR", "NR", "TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "TA1", "TA2", "TA3", "TA4", "_", "RH2", "VW1", "VW2", "_", "_", "P", "_", "_", "_", "V"]
+[[array.run]]
+row_from = 0
+row_to = 23504
+start_year = 2004
+note = "dated from the file name only (outside the C-level period)"
+
+[calibration.ISWR]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "physical_units: C-level factor over 112 h in 2004-2004 (documented 200.0)"
+
+[calibration.NR]
+scale_pos = 78.74
+scale_neg = 78.74
+add = 0
+source = "CR1000 header (CR10X-era ISWR implied 199.9 agrees with header 200)"
+
+[calibration.OSWR]
+scale_pos = 0.903
+scale_neg = 0.903
+add = 0
+source = "physical_units: C-level factor over 110 h in 2004-2004 (documented 200.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (16 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1.00132
+scale_neg = 1.00132
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 1.00132
+scale_neg = 1.00132
+add = 0
+source = "CR1000 header"
+

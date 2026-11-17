@@ -14,7 +14,7 @@ import os, sys
 base_path= '/Users/maiken/Desktop/GCNet/GC-Net-level-1-data-processing/'
 os.chdir(base_path) # changing working directory
 
-import PROMICE_toolbox as ptb
+from lib import PROMICE_toolbox as ptb
 import matplotlib.pyplot as plt
 import pandas as pd
 import nead
