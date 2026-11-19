@@ -334,21 +334,61 @@ def read_configured_files(directory, priority="latest_first", dedup=True):
         return None, None
     if dedup:
         # a file (or a run of it) can repeat a timestamp internally, e.g. after a logger reboot: the first row is kept
-        items = [(k, lab, df.loc[~df.index.duplicated(keep="first")]) for k, lab, df in items]
+        items = [(k, lab, df.loc[~df.index.duplicated(keep="first")] if df.index.has_duplicates else df) for k, lab, df in items]
     items.sort(key=lambda x: x[0], reverse=(priority == "latest_first"))
     if not dedup:
         combined = pd.concat([df for _, _, df in items])
         prov = pd.concat([tag(df, label) for _, label, df in items])
         return combined.sort_index(), prov.reindex(index=combined.index, columns=combined.columns).sort_index()
-    combined, prov = pd.DataFrame(), pd.DataFrame()
-    for _, label, df in items:
-        p = tag(df, label)
-        if len(combined) == 0:
-            combined, prov = df, p
-        else:
-            combined = combined.combine_first(df)
-            prov = prov.combine_first(p)
-    return combined.sort_index(), prov.reindex(index=combined.index, columns=combined.columns).sort_index()
+    try:
+        return _merge_first_wins(items)
+    except (ValueError, TypeError):
+        # a frame that cannot be handled as plain numbers (text column, repeated column name): the slow generic merge
+        combined, prov = pd.DataFrame(), pd.DataFrame()
+        for _, label, df in items:
+            p = tag(df, label)
+            if len(combined) == 0:
+                combined, prov = df, p
+            else:
+                combined = combined.combine_first(df)
+                prov = prov.combine_first(p)
+        return combined.sort_index(), prov.reindex(index=combined.index, columns=combined.columns).sort_index()
+
+
+def _merge_first_wins(items):
+    """The frames of `items` ((key, label, frame), highest priority first, each with a unique index) merged value by value:
+    where several have a value, the first one wins. Same result as chaining DataFrame.combine_first over the frames (and the
+    same for the provenance), but it fills one array and one small integer code array (which frame the value came from)
+    instead of building a new string-labelled frame for every file: combine_first on object frames took 35 of the 45 s
+    needed to read the 11 Summit CR1000 files, and its temporary copies made the process grow to more than 1 GB."""
+    idx, one_row = items[0][2].index, items[0][2].iloc[:1]
+    for _, _, df in items[1:]:
+        idx = idx.union(df.index)
+        one_row = one_row.combine_first(df.iloc[:1])    # only to get the column order that chaining combine_first gives
+    cols = one_row.columns
+    if not idx.is_monotonic_increasing:
+        idx = idx.sort_values()
+    out = np.full((len(idx), len(cols)), np.nan)
+    code = np.full(out.shape, -1, dtype=np.int16)
+    for k, (_, _, df) in enumerate(items):
+        r = idx.get_indexer(df.index)[:, None]
+        c = cols.get_indexer(df.columns)[None, :]
+        if (r < 0).any() or (c < 0).any():
+            raise ValueError("index or columns not found")
+        v = df.to_numpy(dtype=float)
+        cur = out[r, c]
+        take = np.isnan(cur) & ~np.isnan(v)
+        out[r, c] = np.where(take, v, cur)
+        code[r, c] = np.where(take, k, code[r, c])
+    labels = np.array([lab for _, lab, _ in items] + [np.nan], dtype=object)   # code -1 -> the last element: NaN
+    combined = pd.DataFrame(out, index=idx, columns=cols)
+    # integer columns (e.g. the record number) stay integers where the result has no gap, as with combine_first
+    for j, c in enumerate(cols):
+        dts = [df[c].dtype for _, _, df in items if c in df.columns]
+        if dts and all(pd.api.types.is_integer_dtype(d) for d in dts) and not np.isnan(out[:, j]).any():
+            combined[c] = combined[c].astype(dts[0])
+    prov = pd.DataFrame(labels[code], index=idx, columns=cols, dtype=object)
+    return combined, prov
 
 
 # read_station_cr10x (the CR10X_file_registry.csv / CR10X_layouts.csv / CR10X_calibration*.csv - driven reader) was
@@ -410,8 +450,9 @@ def combine_sources(parts):
 # ---------------------------------------------------------------------------------------------
 def tag(df, label):
     """frame of the same shape as df holding `label` where df has a value and NaN elsewhere"""
-    p = pd.DataFrame(np.nan, index=df.index, columns=df.columns, dtype=object)
-    return p.mask(df.notna(), label)
+    arr = np.full(df.shape, np.nan, dtype=object)
+    arr[df.notna().to_numpy()] = label
+    return pd.DataFrame(arr, index=df.index, columns=df.columns, dtype=object)
 
 
 def c_level_provenance(dfc, dfc_jeb, cols):
@@ -614,9 +655,13 @@ def yearly_diagnostics(site, logger, clevel, prov=None, min_hours=100):
     """
     logger = logger[~logger.index.duplicated(keep="first")]
     clevel = clevel[~clevel.index.duplicated(keep="first")]
+    # one time resolution for all the indexes: when the logger, C-level and provenance frames differ in it (ns / us), every
+    # .loc[...] below converts a 100 000-element index again (about 170 of the 215 s this function took for Summit)
+    logger = logger.set_axis(logger.index.as_unit("ns"))
+    clevel = clevel.set_axis(clevel.index.as_unit("ns"))
     if prov is not None:
         prov = prov.copy()
-        prov.index = pd.to_datetime(prov.index, utc=True).floor("h")
+        prov.index = pd.to_datetime(prov.index, utc=True).floor("h").as_unit("ns")
         prov = prov.loc[~prov.index.duplicated(keep="first")]
     idx = logger.index.intersection(clevel.index)
     L, C = logger.loc[idx], clevel.loc[idx]
@@ -838,8 +883,27 @@ def _installation_date(l0dir, table="L1/GC-Net_location.csv"):
         return None
 
 
+_C_FILES_CACHE = {}
+
+
 def _read_c_files(l0dir, path="./L0/"):
-    """The two raw C-level files of a station as read (no derived columns): (Jason file or None, per-station file or None)."""
+    """The two raw C-level files of a station as read (no derived columns): (Jason file or None, per-station file or None).
+    Reading them takes 10 to 15 s per station and L1 asks for them three times in a row (read_c_level, c_level_heights, and the
+    L0 origin plots), so the last station read is kept and handed out as copies (callers edit them); asking for another station
+    drops it, so at most one station's C-level files are in memory."""
+    key = (str(l0dir), path)
+    if key not in _C_FILES_CACHE:
+        _C_FILES_CACHE.clear()
+        _C_FILES_CACHE[key] = _read_c_files_from_disk(l0dir, path)
+    return tuple(None if d is None else d.copy() for d in _C_FILES_CACHE[key])
+
+
+def clear_c_files_cache():
+    """free the C-level files kept by _read_c_files (called at the end of a station's processing)"""
+    _C_FILES_CACHE.clear()
+
+
+def _read_c_files_from_disk(l0dir, path="./L0/"):
     num = str(l0dir)[:2]
     f_st = path + l0dir + "/C file/" + num + "c.dat"
     f_je = path + "C level Jason/" + num + "c.dat"

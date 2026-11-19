@@ -29,11 +29,55 @@ def _savefig(fig, fname, tries=10, **kwargs):
     for k in range(tries):
         try:
             fig.savefig(fname, **kwargs)
+            # every caller is done with the figure once it is saved: closing it here frees it at once instead of
+            # keeping all the figures of a station (some at dpi 300 with 200 000 points) alive until the end of the station
+            plt.close(fig)
             return
         except OSError:
             if k == tries - 1:
                 raise
             time.sleep(1.5)
+
+
+def _date_x(index):
+    """matplotlib date numbers of a (UTC) DatetimeIndex, to plot against instead of the index itself, followed by ax.xaxis_date().
+    Matplotlib converts a timezone-aware index through Python datetime objects: 3 to 5 s for 200 000 hourly values, at every
+    ax.plot / ax.scatter call, while drawing them takes 0.2 s. The numbers are the same, converted once and in a few ms."""
+    import matplotlib.dates as mdates
+    index = pd.DatetimeIndex(index)
+    if index.tz is not None:
+        index = index.tz_convert("UTC").tz_localize(None)
+    return mdates.date2num(index)
+
+
+def _format_for_nead(d):
+    """values of a frame indexed by timestamp as the text of the L1 files: empty for NaN, '0' and '1' for the values within 0.005 of
+    them, two decimals otherwise (latitude and longitude six decimals)"""
+    d = d.copy()
+    for col in [c for c in d.columns if c not in ['latitude', 'longitude', 'elevation', 'timestamp']]:
+        d[col] = d[col].map(lambda x: '' if np.isnan(x)
+                            else '0' if abs(x) < 0.005
+                            else '1' if abs(x - 1) < 0.005
+                            else '%0.2f' % x)
+    d['elevation'] = d['elevation'].map(lambda x: '' if np.isnan(x) else '%0.2f' % x)
+    for col in ['latitude', 'longitude']:
+        d[col] = d[col].map(lambda x: '' if np.isnan(x) else '%0.6f' % x)
+    return d
+
+
+def write_l1_nead(df, header_obj, out_path, chunk_rows=40000):
+    """Write an L1 frame (indexed by timestamp, numbers) to a NEAD file with the text format of _format_for_nead. Done chunk by
+    chunk: formatting the whole frame first made a copy of every value as a Python string (10 million of them for a station
+    with 20 years of hourly data, more than 500 MB) next to the frame itself. The file is the same as when written in one go."""
+    import nead
+    fields = header_obj.get('FIELDS', 'fields').replace(" ", "").split(',')
+    for i in range(0, len(df), chunk_rows):
+        part = _format_for_nead(df.iloc[i:i + chunk_rows]).reset_index()
+        if i == 0:
+            nead.write(part, header_obj, out_path)       # writes the header, then this first part
+        else:
+            with open(out_path, 'a') as f:
+                part.to_csv(f, index=False, header=False, columns=fields, float_format='%.2f', lineterminator='\n')
 
 
 DEFAULT_VARIABLE_THRESHOLDS = {
@@ -577,6 +621,7 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
 
 
     excluded_substrings = ["_qc", "_min", "_max", "_std", "_adj_flag"]
+    x_df, x_out = _date_x(df.index), _date_x(df_out.index)      # converted once for all the variables
 
     for var in var_list:
         if (df[var].isnull().all() or
@@ -592,13 +637,21 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
         fig, ax = plt.subplots(figsize=(10, 7))
         plt.subplots_adjust(top=0.85, bottom=0.08, left=0.1, right=0.98)
 
-        ax.scatter(df_out.index, df_out[var], s=8, color="gray", label="raw")
+        # markers drawn as lines without a connecting line (ax.plot), only where there is a value: ax.scatter built one
+        # path per point of the 200 000-hour series, NaN included, once for the raw data and once per flag
+        # (marker size 2.8 / 3.5 points = the former scatter areas s=8 / s=12)
+        raw = df_out[var]
+        ok = raw.notna().to_numpy()
+        ax.plot(x_out[ok], raw.to_numpy()[ok], ls="none", marker="o", ms=2.8, mew=0, color="gray", label="raw")
 
         # flagged points
+        vals_all = df[var].to_numpy()
+        qc = df[qc_var]
         for flag in flags_uni:
-            mask = df[qc_var] == flag
+            mask = ((qc == flag).to_numpy()) & ~pd.isna(vals_all)
             color = flag_colors.get(flag, None)
-            ax.scatter(df.index[mask], df[var][mask], s=12, color=color, label=flag)
+            ax.plot(x_df[mask], vals_all[mask], ls="none", marker="o", ms=3.5, mew=0, color=color, label=flag)
+        ax.xaxis_date()
 
         if var in adj_info.index.get_level_values(0).unique():
             for t in adj_info.loc[var].t0.values:
@@ -623,7 +676,7 @@ def plot_flagged_data(df1, df2, site, tag="", var_list=[]):
         ax.set_xlabel("Year")
         ax.set_ylabel(var)
         ax.legend(loc="upper center", ncols=5,
-          bbox_to_anchor=(0.5, 1.15), title = site, )
+          bbox_to_anchor=(0.5, 1.15), title = site, markerscale=3)
         ax.grid()
         fname = f"figures/L1_data_treatment/{site.replace(' ', '')}_{var}.jpeg"
         _savefig(fig, fname, dpi=120)

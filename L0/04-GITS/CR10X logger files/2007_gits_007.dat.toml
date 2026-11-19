@@ -31,10 +31,9 @@ add = 0
 source = "differs: C-level factor over 1089 h in 2006-2007 (documented 9.35) / differs: C-level factor over 1775 h in 2006-2007 (documented 11.66)"
 
 [calibration.OSWR]
-scale_pos = 177.776
-scale_neg = 177.776
+scale = 186.8
 add = 0
-source = "differs: C-level factor over 4699 h in 2006-2007 (documented 77.0)"
+source = "documented 200 x 0.934 (LiCor), as the 1996-2002 files; was fitted to the C-level file (174-178). V11 = this value in 2006-07 (new/V11 OSWR 0.95)"
 
 [calibration.P]
 scale_pos = 1

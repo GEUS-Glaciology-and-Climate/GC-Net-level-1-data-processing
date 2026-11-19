@@ -16,6 +16,7 @@ For every station the file each value comes from is written to L0M/provenance/ a
 import numpy as np
 import pandas as pd
 import os
+from gc import collect as gc_collect
 from lib import libgcnet as gc
 from lib import liblogger
 from lib import write_nead
@@ -32,6 +33,12 @@ backup_transmissions = path + "backup_transmissions_20230111/"
 
 # Get sorted list of all non-hidden sub-directories in L0 folder
 L0dirs = np.array(sorted(f for f in os.listdir(path) if "-" in f))
+
+# To rebuild only some stations (after editing their sidecars), list their L0 folders here; None = all stations
+ONLY = None
+ONLY = ["03-NASA-U", "04-GITS", "12-NASA-E", "14-NGRIP", "21-Petermann Glacier"]
+if ONLY:
+    L0dirs = np.array([d for d in L0dirs if d in ONLY])
 
 
 # %% Loop through each station, read the logger files and stack them
@@ -116,3 +123,10 @@ for i in range(len(L0dirs)):
         liblogger.plot_sources(site, dfm.loc[uniq, fields], prov.loc[uniq, fields], c_level, "figures/L0_sources/" + L0dirs[i] + ".png")
     except Exception as e:
         print("Origin plot / provenance failed for", site, ":", repr(e))
+
+    # memory: every station's frames (raw yearly files, calibrated, provenance labels, C-level data) are dropped before the next
+    # station, so that the process holds one station at a time instead of growing with the number of stations
+    for _v in ("df_cr1000", "prov_cr1000", "df_cr10x", "prov_cr10x", "df_cr27", "dfm", "prov", "tr", "c_level", "uniq", "fields"):
+        globals().pop(_v, None)
+    liblogger.clear_c_files_cache()
+    gc_collect()

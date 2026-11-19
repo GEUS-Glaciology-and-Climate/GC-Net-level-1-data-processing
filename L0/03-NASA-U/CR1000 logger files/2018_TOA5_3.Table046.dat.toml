@@ -87,3 +87,10 @@ add = 0
 scale = 1
 add = 400
 
+
+[[calibration_period]]
+variable = "ISWR"
+start = "2018-05-22 00:00:00"
+end = "2100-01-01 00:00:00"
+multiply = 1.15
+reason = "NASA-U: new radiometers installed at the 2018-05-22/23 visit (field book 2018, 23.5.2018: lost shortwave pulled, incoming shortwave sensor 77538, reflected LI-COR PY28087 calibrated 15 Oct 2006, multiplier -10.3; the program's scale for them is not documented). With the generic scale 200 the new ISWR reads 0.88 of CARRA ssrd (1.07 in 2012-2017) and the summer albedo is 0.95-0.98 (0.83 before); OSWR/CARRA is unchanged (0.86-0.89). x1.15 brings ISWR/CARRA back to 1.01 and the albedo to 0.84 (CARRA ssrd is not assimilated; empirical)"

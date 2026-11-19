@@ -7,7 +7,8 @@ column_header = ["ISWR", "OSWR", "NR", "TA3", "TA4", "_", "_", "VW1", "VW2", "DW
 [[array.run]]
 row_from = 0
 row_to = 3382
-start_year = 1999
+start_year = 1997
+# 2026-11: was 1999. Daily pressure of the run matches CARRA sp 730 days earlier (r 0.989, against 0.03 with the old dating); ISWR cannot show a year error.
 
 [calibration.ISWR]
 scale_pos = 200

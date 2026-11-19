@@ -53,6 +53,11 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'KULU', 'Petermann ELA', 'NEEM', 'EastGRIP'
 # site_list = site_list.loc[site_list.Name.values == 'Summit',:]
 # site_list = site_list[17:]
+ONLY = None
+ONLY = ["NASA-U", "GITS", "NASA-E", "NGRIP", "Petermann Glacier", "JAR2", "Summit", "Aurora", "Humboldt", "Crawford Point 1", "Swiss Camp"]
+
+if ONLY:
+    site_list = site_list.loc[site_list.Name.isin(ONLY), :]
 
 # Swiss Camp 10m fills its HW gaps from the L1 file of Swiss Camp (PROMICE_toolbox.augment_data reads L1/hourly/SwissCamp.csv):
 # Swiss Camp is therefore processed first, so that the 10 m tower always gets the heights of the same run.
@@ -73,7 +78,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
         df = df.reset_index(drop=True)
         df.timestamp = pd.to_datetime(df.timestamp, utc=True)
         df = df.set_index("timestamp")
-        ds_attrs = ds.attrs
+        ds_attrs = dict(ds.attrs)
+        del ds      # only the table and the header attributes are needed: the xarray copy of the file is freed now
     else:
         Msg("No logger file (L0M) for station " + str(ID) + " " + site + ": built from the C-level files only")
         df = pd.DataFrame(index=pd.DatetimeIndex([], tz="UTC", name="timestamp"))
@@ -160,6 +166,7 @@ for site, ID in zip(site_list.Name, site_list.ID):
 
     Msg("## Manual flagging of data at " + site)
     df_out = ptb.flag_data(df_lin.copy(), site)
+    del df_lin      # the intermediate frames are deleted as soon as the next step has them (one station = several 100 MB of copies)
 
     Msg("## Adjusting data at " + site)
     # which hours come from CR10X logger files (raw RH wrt water) - see PROMICE_toolbox.SOURCE_CR10X
@@ -184,11 +191,13 @@ for site, ID in zip(site_list.Name, site_list.ID):
             site_list.loc[site_list.Name == site, "Latitude (°N)"].values[0],
             site_list.loc[site_list.Name == site, "Longitude (°E)"].values[0])
 
+    del df_v4
     Msg("## ROC filter at " + site)
     df_roc = ptb.roc_filter_dataframe(df_v5)
 
     ptb.plot_flagged_data(df_roc, df_out, site)
     df_v5b = ptb.remove_flagged_data(df_roc.copy())
+    del df_roc, df_out
 
     # correction of the net radiometer for windspeed
     if 'NR' in df_v5.columns:
@@ -206,7 +215,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
     if df_v5b[[v for v in df_v5b.columns if 'TS' in v]].notnull().any().any():
         df_v6 = ptb.therm_depth(df_v5b, site)
     else:
-        df_v6= df_v5b.copy()
+        df_v6 = df_v5b
+    del df_v5, df_v5b
 
     # removing empty rows:
     useful_var_list = [
@@ -248,26 +258,9 @@ for site, ID in zip(site_list.Name, site_list.ID):
         )
 
 
-        # formatting and saving to file
-        df_v6_formatted = df_v6.copy()
-        for col in [c for c in df_v6_formatted.columns if c not in ['latitude','longitude', 'elevation','timestamp']]:
-            df_v6_formatted[col] = df_v6_formatted[col].map(lambda x: \
-                                              '' if np.isnan(x) \
-                                                  else '0' if abs(x)<0.005 \
-                                                  else '1' if abs(x-1)<0.005 \
-                                                  else '%0.2f'%x)
-
-        df_v6_formatted['elevation'] = df_v6_formatted['elevation'].map(lambda x: \
-                                          '' if np.isnan(x) else '%0.2f'%x)
-        for col in ['latitude','longitude']:
-            df_v6_formatted[col] = df_v6_formatted[col].map(lambda x: \
-                                              '' if np.isnan(x) else '%0.6f'%x)
+        # formatting and saving to file (chunk by chunk, see ptb.write_l1_nead)
         print('writing hourly values')
-        nead.write(
-            df_v6_formatted.reset_index(),
-            header_obj,
-            "L1/hourly/" + site.replace(" ", "") + ".csv",
-        )
+        ptb.write_l1_nead(df_v6, header_obj, "L1/hourly/" + site.replace(" ", "") + ".csv")
 
         # daily average
         print('calculating daily averages')
@@ -286,30 +279,17 @@ for site, ID in zip(site_list.Name, site_list.ID):
             database_fields_data_types=database_fields_data_types,
         )
 
-        # formatting and saving to file
-        for col in [c for c in df_v7.columns if c not in ['latitude','longitude', 'elevation','timestamp']]:
-            df_v7[col] = df_v7[col].map(lambda x: \
-                                              '' if np.isnan(x) \
-                                                  else '0' if abs(x)<0.005 \
-                                                  else '1' if abs(x-1)<0.005 \
-                                                  else '%0.2f'%x)
-
-        df_v7['elevation'] = df_v7['elevation'].map(lambda x: \
-                                          '' if np.isnan(x) else '%0.2f'%x)
-        for col in ['latitude','longitude']:
-            df_v7[col] = df_v7[col].map(lambda x: '' if np.isnan(x) else '%0.6f'%x)
         print('writing daily averages')
-        nead.write(
-            df_v7.reset_index(),
-            header_obj,
-            "L1/daily/" + site.replace(" ", "") + "_daily.csv",
-        )
+        ptb.write_l1_nead(df_v7, header_obj, "L1/daily/" + site.replace(" ", "") + "_daily.csv")
 
     # memory: drop the figures and the large per-station objects before the next station. Without this every figure of
     # every station stays alive in pyplot (a few GB over the 22 stations) and the Spyder kernel keeps them after the run.
     plt.close("all")
-    for _v in ("df", "ds", "mask_c", "prov_fill", "c_all", "df_v7", "hourly_attrs", "daily_attrs", "header_obj"):
+    for _v in ("df", "ds", "mask_c", "prov_fill", "c_all", "df_v6", "df_v7", "df_logger", "logger_prov", "sw", "cr10x_hw",
+               "hourly_attrs", "daily_attrs", "header_obj", "uniq", "pv"):
         globals().pop(_v, None)
+    ptb.SOURCE_CR10X = ptb.SOURCE_CLEVEL = None      # per-station masks kept as module variables by the toolbox
+    liblogger.clear_c_files_cache()
     gc.collect()
 
 tocgen.processFile("out/Report.md", "out/report_with_toc.md")

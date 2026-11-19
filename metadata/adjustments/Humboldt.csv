@@ -47,9 +47,14 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2016-12-03T00:00:00+00:00, 2017-08-10T00:00:00+00:00, *, time_shift, 2943, 
 2017-08-10T00:00:00+00:00, 2017-10-04T00:00:00+00:00, *, time_shift, 5611, 
 2018-12-06T00:00:00+00:00, 2019-01-19T20:00:00+00:00, *, time_shift, 2954, 
-2019-12-10T00:00:00+00:00, 2020-08-10T00:00:00+00:00, *, time_shift, 2954, 
-2020-08-10T00:00:00+00:00, 2020-12-24T12:00:00+00:00, *, time_shift, 5604, 
-2021-12-01T00:00:00+00:00, 2022-02-23T06:00:00+00:00, *, time_shift, 2954,
+2019-12-10T00:00:00+00:00, 2020-08-10T00:00:00+00:00, *, time_shift, 2906, 2026-11: was 2954; the final L1 pressure lagged CARRA sp by 2 days from 2020-04 to 2020-12 (r 0.97-1.0 at +2 d against 0.4 at 0) - so 48 h less (the winter part - without usable pressure - assumed to share the offset of its logger run)
+2020-08-10T00:00:00+00:00, 2020-12-24T12:00:00+00:00, *, time_shift, 5556, 2026-11: was 5604; same residual 2 days as the row above (L1 pressure vs CARRA sp)
+2021-12-01T00:00:00+00:00, 2022-02-23T06:00:00+00:00, *, time_shift, 2786, 2026-11: was 2954; the shifted data (2022-04 to 2022-06-19) lagged CARRA sp by 7 days (r 0.94-0.96 at +7 d against 0.0-0.5 at 0) - so 168 h less
 # clock drift on 2023-06-30: 117 days 06:43:28
 2022-12-01T00:00:00+00:00, 2023-06-16T00:00:00+00:00, *, time_shift, 2815, 
 # 2021-08-14T00:00:00+00:00, , *, time_shift, -3360, 
+
+# 2026-11: residual +1 day in 2004 (final L1 pressure vs CARRA sp: r 0.995-0.996 at +1 d against 0.67-0.84 at 0, from the window of 2003-12-27, the same +1 day as the row of 2004-08-08 below which already
+# corrects it from there on). The data of these months are the C-level file's. t1 stops the hour before 2004-08-07 because the first row above has already moved the data of 2004-08-08 into 2004-08-07;
+# the 24 h of 2004-08-06 keep the old stamp (one day of misdated data and one lost, as at every other end of these rows).
+2004-01-01T00:00:00+00:00, 2004-08-06T23:00:00+00:00, *, time_shift, -24, residual clock offset of the C-level file found 2026-11 against CARRA sp

@@ -4,7 +4,7 @@ In Memory of Dr. Konrad (Koni) Steffen
 
 Author: B. Vandecrux
 Contact: bav@geus.dk
-Last update: 2023-09-01
+Last update: 2026-11-19 (2026 version of the processing; the files of this folder have to be regenerated with it, see "Status" below)
 
 # Citation
 
@@ -18,7 +18,7 @@ Vandecrux, B., Box, J. E., Ahlstrøm, A. P., Andersen, S. B., Bayou, N., Colgan,
 
 The Greenland Climate Network (GC-Net) is a set of Automatic Weather Stations (AWS) set up and managed by the late Prof. Dr. Konrad (Koni) Steffen on the Greenland Ice Sheet (GrIS). This first station, "Swiss Camp" or the "ETH-CU" camp, was initiated in 1990 by A. Ohmura et al. (1991, 1992) with K. Steffen taking over the site from 1995 and expending the network from that year to 31 stations at 30 sites in Greenland (Steffen et al., 1996, 2001). The GC-Net was supported by multiple NASA, NOAA, and NSF grants throughout the years, and then supported by WSL in the later years. These data were previously hosted by the Cooperative Institute for Research in Environmental Sciences (CIRES) in Boulder, Colorado.
 
-Provided in this dataset are the 25 two-level stations from 24 sites on the Greenland ice sheet and 3 experimental stations in Antarctica. The remaining 6 Greenland stations have a different design and will be added once quality checked. Although the GC-Net AWS transmitted their data near-real time through satellite communication, the present dataset was made from uncorrupted datalogger files, retrieved every 1-2 years during maintenance.
+Provided in this dataset are the 25 two-level stations from 24 sites on the Greenland ice sheet and 3 experimental stations in Antarctica. The remaining 6 Greenland stations have a different design and will be added once quality checked. Although the GC-Net AWS transmitted their data near-real time through satellite communication, the present dataset is made from the datalogger files retrieved every 1-2 years during maintenance (Level 0). In the 2026 version these logger files are the primary source; the older "C-level" files (the L1 data of the previous releases) only fill the gaps where no logger file exists, and the transmissions (L0) are used after the last logger record.
 
 Full dataset description publication will be forthcoming. The Geological Survey of Denmark and Greenland (GEUS) has undertaken the continuation of multiple GC-Net sites through the Programme for Monitoring of the Greenland Ice Sheet (PROMICE.dk).
 
@@ -47,6 +47,48 @@ Additionally, the L1 dataset contains the following derived variables:
 	- Calculated solar an azimuth angles
 	- Sensible and latent heat fluxes calculated after Steffen and Demaria (1996)
 	- Inter- or extrapolated latitude and longitude based on multi-year GPS measurements (only possible at Swiss Camp, Crawford Point 1, NASA-U, GITS, Tunu-N, DYE-2, JAR1, NASA-E, NASA-SE and Petermann-ELA)
+
+# Status of this folder
+
+The processing described below (2026 version) is documented in release_note_2026.md at the root of the processing repository. The L1 files have to be regenerated with it: until then the files of this folder are the ones of the previous version. The sections "Calibration" and "Known limitations" describe the state after the regeneration.
+
+# How the data are produced (2026 version)
+
+    - L0: the raw datalogger files (CR10X, CR1000, older CR27 files) as retrieved in the field, and the transmissions received after the last logger record.
+    - L0M: every logger file is read through its own description file (<file>.toml: columns, calibration factors, periods to ignore, year of the records), calibrated to physical units and stacked, one file per station. No filtering is done there and nothing from the C-level files is added. The file each value comes from is recorded (L0M/provenance).
+    - L1: gaps of the logger record are filled with the C-level files (Jason's file, then the per-station file, never mixed value by value; heights only before the first CR1000 record). Then the adjustments of the measurement (sensor swaps, clock errors, instrument heights, a few calibration corrections: metadata/adjustments), the flags of known bad periods (metadata/flags) and the filters (limits, frozen values, spikes) are applied, the derived variables are calculated and the hourly and daily files are written (L1/hourly, L1/daily).
+    - A raw file without a description file is not read. Corrections of C-level values are in metadata/c_level_corrections.csv.
+
+# Time stamps, units, flags
+
+    - UTC; the time stamp is the end of the averaging interval (timestamp_meaning = end in the header). A repeated time stamp in a cumulative logger download keeps the most recent file.
+    - 30 clock corrections (a day, hours or longer) were made with the reanalysis CARRA (surface pressure for the day, shortwave radiation for the hour; adjustments with the function time_shift, at 10 stations). A residual error of up to a day remains possible where a logger run has no usable pressure or sunlight signal.
+    - Relative humidity is given with respect to water everywhere and rejected above 105 %. C-level humidity with respect to ice is converted when it fills a gap. RH1/2_wrt_ice_or_water give the form of the raw value.
+    - A variable ending in _adj_flag is 1 where an adjustment changed the value (heights, pressure, radiation). Daily values need 18 valid hours.
+    - Limits that are enforced include TA3 and TA4 >= -39.5 degC (the probes stop at -39.8 degC), RH 20-105 %, a pressure window per station, and frozen-value filters.
+
+# Calibration: what is documented and what is not
+
+The complete list, station by station, is in metadata/calibration_overview.md of the processing repository (written by tools/calibration_overview.py from the description files and the adjustment tables). The reference tables are in metadata/calibration factors (shortwave factors SWin and SWref, net-radiometer factors, pressure offset, and the LI-COR factor 0.934 of the reflected-shortwave sensor, documented for 2014-2019).
+
+Documented (equal to the tables): incoming shortwave (200 W/m2 per unit at most stations, 62 South Dome, 71.43 NASA-E), outgoing shortwave (the table value times 0.934: 186.8 at the 200-class stations, 71.918 Swiss Camp and NASA-U, 66.08 NASA-E, 67.985 South Dome), the net-radiometer factors and the pressure offset (+400 hPa written by the programs; +600 DYE-2, +300 NEEM), at Swiss Camp, Crawford Point 1, NASA-U, GITS, Humboldt, Summit, Tunu-N, DYE-2, JAR1, Saddle, South Dome, NASA-E, NASA-SE, Petermann ELA and NEEM for most of the logger files. The factor 0.934 is also applied to the years before 2014, where it is not documented (the previous release equals it in the later years). The net-radiometer factors of single files (and a few single-year shortwave factors) were fitted to the C-level overlap and differ from the tables.
+
+Not documented, estimated from the data (each is an estimate of the order of 5-10 % in the radiation, not a sensor calibration; the evidence is in metadata/calibration_overview.md, section E):
+    - NASA-U: incoming shortwave x1.15 from 2018-05-22 (new radiometers installed, scale not recorded); outgoing shortwave x2.762 (scale 198.64) from 2003 and a scale of 182 in 1997-99, without which the summer albedo is 0.30.
+    - Petermann Glacier 2002-2006: 73.5 for both shortwave sensors (the logger scales and the C-level file gave values 2.3 times those of CARRA).
+    - Crawford Point 1: incoming shortwave x1.139 (2005 to 2010-05-09) and x1.105 (after); Swiss Camp: outgoing shortwave x1.055 (1995-97) and x0.926 (from 2012-05-10). They keep the April-May albedo of dry snow at its value of the best documented years (Crawford Point 1 0.83 in 1995-2004, Swiss Camp 0.81 in 1998-2012; the dry-snow stations of the network are at 0.82-0.86 in spring). The albedo of these two stations is therefore a result of this choice and cannot be used to detect a trend.
+    - Crawford Point 1 and Swiss Camp: the two shortwave channels are swapped from 2012 (not reported, found with the albedo); the 0.934 moves with the sensor.
+    - LAR1 (Antarctica): outgoing shortwave x1.285 from 2011-11-15 (albedo 0.90 to 0.70 at a service with unchanged incoming radiation; no independent reference).
+    - Stations without any table (Aurora, CP2, JAR2, JAR3, NGRIP, Petermann Glacier, KAR, Swiss Camp 10 m): the factors are those of the logger program headers or of the C-level files.
+    - Pressure: Crawford Point 1 (1999-2010) and JAR3 (from 2002) read about half of the true amplitude (corrected by a fit to CARRA); Summit from 2016-05-22 (a CS106 sensor read with CS105 constants); NASA-U offsets (issue 46).
+    - Independent checks used: CARRA surface shortwave radiation (not assimilated), CARRA surface pressure (assimilated: it dates but does not validate), neighbouring stations and the previous release.
+
+# Known limitations
+
+    - Some station-years remain inconsistent with the dry-snow albedo or with CARRA and are not corrected: Swiss Camp spring 2019, Crawford Point 1 summers after 2005 (albedo about 0.79 after the adjustment), NASA-U 1995-2001, Swiss Camp 10 m since 2014.
+    - Humidity in 1999-2008 is 3-10 % higher than in the previous release at several stations (the C-level values carry a temperature-dependent offset that the logger values do not have).
+    - The net radiation of LAR2 and LAR3 has the wrong sign.
+    - Open questions are listed in section 8 of release_note_2026.md.
 
 Important links:
 

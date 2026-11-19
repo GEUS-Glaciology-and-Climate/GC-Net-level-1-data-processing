@@ -43,3 +43,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2005-05-26T07:00:00+00:00,2010-08-06T23:05:00+00:00,HW2,add,0.39,Shift to match photgrammetry!!
 2010-08-16T19:00:00+00:00,,HW1,add,-0.4,Shift to match photgrammetry!!
 2010-08-16T19:00:00+00:00,,HW2,add,0.3,Shift to match photgrammetry!!
+
+# 2026-11: clock one day early in the logger files 1997_SUM96_97.DAT and the first run of 1998_SUM_97-8.DAT (final L1 pressure vs CARRA sp: r 0.986-0.994 at -1 d against 0.78-0.86 at 0, 1996-05 to 1997-11; the run starting
+# 1997-12-04 14:00 is on time).
+1996-05-13T00:00:00+00:00, 1997-12-03T13:00:00+00:00, *, time_shift, 24, clock one day early - found 2026-11 against CARRA sp

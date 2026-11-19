@@ -90,7 +90,8 @@ def write_nead(data_frame, nead_config, output_path):
             float_format="%.2f",
         )
 
-    ds = nead.read(nead_output)
+    # (the file used to be read back here, only as a check: it parsed the whole file again into pandas + xarray copies,
+    # a few seconds and several 100 MB per station, and the result was discarded)
 
 
 # get list of values from nead config [FIELDS] section

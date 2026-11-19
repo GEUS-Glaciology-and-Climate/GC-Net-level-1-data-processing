@@ -10,10 +10,9 @@ row_to = 8356
 start_year = 2002
 
 [calibration.ISWR]
-scale_pos = 186.45
-scale_neg = 186.45
+scale = 73.5
 add = 0
-source = "implied by C-level (1 runs); no station calibration in the repository"
+source = "73.5 for ISWR and OSWR (same factor for the pair): the logger value x 0.394 of the former 186.45 / 188.95 / 187.5 / 186.8, which are 2.25 x too high: ISWR / CARRA ssrd (independent) = 2.0-2.5 in 2002-2006 with those scales and 0.89-0.98 with 73.5 (V11 holds 73.5 in 2002 only and 2.3 x CARRA in 2003-2006). The OSWR of the C-level file is x0.346 in 2002 and x0.97 after, neither supported: NR = a ISWR - b OSWR over 2003-2005 gives b/a = 1.03-1.18, i.e. the two pyranometers share their factor, and albedo then is 0.84-0.95 in April-May and 0.58-0.70 in June-August (ablation area). No document gives the Petermann Glacier pyranometer factors (T_calib_pet.dat of 2003 is not in the repository)"
 
 [calibration.NR]
 scale_pos = 9.3
@@ -22,8 +21,7 @@ add = 0
 source = "differs: C-level factor over 1655 h in 2002-2003 (documented 1.0) / differs: C-level factor over 3377 h in 2002-2003 (documented 1.0)"
 
 [calibration.OSWR]
-scale_pos = 188.95
-scale_neg = 188.95
+scale = 73.5
 add = 0
-source = "implied by C-level (1 runs); no station calibration in the repository"
+source = "73.5 for ISWR and OSWR (same factor for the pair): the logger value x 0.394 of the former 186.45 / 188.95 / 187.5 / 186.8, which are 2.25 x too high: ISWR / CARRA ssrd (independent) = 2.0-2.5 in 2002-2006 with those scales and 0.89-0.98 with 73.5 (V11 holds 73.5 in 2002 only and 2.3 x CARRA in 2003-2006). The OSWR of the C-level file is x0.346 in 2002 and x0.97 after, neither supported: NR = a ISWR - b OSWR over 2003-2005 gives b/a = 1.03-1.18, i.e. the two pyranometers share their factor, and albedo then is 0.84-0.95 in April-May and 0.58-0.70 in June-August (ablation area). No document gives the Petermann Glacier pyranometer factors (T_calib_pet.dat of 2003 is not in the repository)"
 

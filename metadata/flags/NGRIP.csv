@@ -95,3 +95,7 @@ t0,t1,variable,flag,comment,URL_graphic
 2010-03-15T22:00:00+00:00,2010-03-16T22:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2010-03-21T20:00:00+00:00,2010-04-17T09:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2010-04-19T15:00:00+00:00,2010-04-20T15:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+
+# 2026-11: ISWR of NGRIP in the last winter/spring of the record. ISWR/CARRA ssrd is 0.92-1.0 in 2009 until the end of August and 0.17-0.5 from 2010-02 to 2010-05-02 (0.63-0.88 after),
+# with an OSWR/CARRA of 0.75-0.95 over the same days, i.e. an albedo above 1: the ISWR sensor is covered (rime / snow). The albedo of 2010 (1.18 in the comparison with V11) came from this.
+2010-02-10T00:00:00+00:00,2010-05-02T23:00:00+00:00,ISWR,NAN,ISWR sensor covered: 0.17-0.5 of CARRA ssrd while OSWR is 0.75-0.95 of it (albedo > 1),

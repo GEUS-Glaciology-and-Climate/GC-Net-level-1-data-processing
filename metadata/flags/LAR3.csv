@@ -2,3 +2,5 @@ t0,t1,variable,flag,comment,URL_graphic
  , ,RH2, NAN, no good values (bav),
 
 ,2009-08-10T16:00:00+00:00,HW1,NAN,Manually flagged by bav,
+# 2026-11: pressure constant to +-0.3 hPa (std 0.29) for 55 days while LAR1 and LAR2 vary by several hPa
+2009-10-09T00:00:00+00:00,2009-12-04T00:00:00+00:00,P,NAN,near-constant pressure (std 0.29 hPa over 1315 h; neighbours vary) (release comparison 2026-11),
