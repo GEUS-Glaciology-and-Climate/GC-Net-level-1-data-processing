@@ -1,0 +1,4 @@
+t0,t1,variable,flag,comment,URL_graphic
+# 2026-11-19: held value (3.47 m for five hours) just before the HW1 drop of 2010-05-02 and the ramp of HW2 (1.7 to 4.5 m in eight hours) after the return of 2010-12-09
+2010-05-02T11:00:00+00:00,2010-05-02T16:00:00+00:00,HW1,NAN,held value before the sensor was lowered (2026-11-19),
+2010-12-09T00:00:00+00:00,2010-12-09T09:00:00+00:00,HW2,NAN,ramp from 1.7 to 4.5 m in eight hours after the return of HW1 (2026-11-19),

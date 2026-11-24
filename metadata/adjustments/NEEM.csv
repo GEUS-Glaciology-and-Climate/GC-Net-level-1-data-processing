@@ -32,3 +32,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 2022-04-01T00:00:00+00:00, , DW1, rotate, -185, bav
 2009-05-01T00:00:00+00:00, , RH1, swap_with_RH2, 0, bav
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2015-10-26T10:00:00+00:00,,HS1,add,0.28,step removed in HS (boom moved) of HS1: -0.28 m (-0.28 m relative to the other sensor and the climatology) over a gap of 0.5 d
+# hs_steps.py end

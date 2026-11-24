@@ -36,7 +36,7 @@ L0dirs = np.array(sorted(f for f in os.listdir(path) if "-" in f))
 
 # To rebuild only some stations (after editing their sidecars), list their L0 folders here; None = all stations
 ONLY = None
-ONLY = ["03-NASA-U", "04-GITS", "12-NASA-E", "14-NGRIP", "21-Petermann Glacier"]
+# ONLY = ["03-NASA-U", "04-GITS", "12-NASA-E", "14-NGRIP", "21-Petermann Glacier"]
 if ONLY:
     L0dirs = np.array([d for d in L0dirs if d in ONLY])
 

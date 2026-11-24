@@ -24,3 +24,10 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # 2026-11: clock one day early in the logger file 2000_AWSJR200.DAT and in the first run of 2002_AWSJR202.DAT (final L1 pressure vs CARRA sp: r 0.998-0.999 at -1 d against 0.73-0.80 at 0, 1999-06 to 2000-05; every
 # run after 2000-05-26 20:00 is on time). The shifted tail overwrites the first 19 h of the next run (2000-05-27 01:00 to 20:00), which are lost.
 1999-06-02T03:00:00+00:00, 2000-05-26T20:00:00+00:00, *, time_shift, 24, clock one day early - found 2026-11 against CARRA sp
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2011-10-31T18:00:00+00:00,,HS2,add,0.25,step removed in HS (boom moved) of HS2: -0.25 m (-0.25 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2012-07-13T18:00:00+00:00,,HS2,add,0.26,step removed in HS (boom moved) of HS2: -0.26 m (-0.26 m relative to the other sensor and the climatology) over a gap of 0.2 d
+# hs_steps.py end

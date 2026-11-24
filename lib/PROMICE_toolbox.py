@@ -1205,6 +1205,36 @@ def fill_gap_HW(df1, df2, var_target="HW1", var_sec="HW2", note=''):
     return df1[var_target].values
 
 
+HS_SPIKE_M = 0.3          # hourly HS further than this from its own 25 h running median is a spike
+HS_OFFSET_WINDOW_H = 7 * 24
+HS_MAX_GAP_DAYS = 30      # HS_combined is only interpolated over gaps up to this length in the L1 files
+
+
+def despike_hs(s, thr=HS_SPIKE_M, win=25):
+    """Removes isolated hourly values of a surface-height series that are more than `thr` m from the running median of the
+    surrounding `win` hours. A real step (sensor raised, snowfall) survives: after the step the median follows the new level."""
+    med = s.rolling(win, center=True, min_periods=5).median()
+    return s.where(((s - med).abs() <= thr) | med.isna())
+
+
+def combine_hs(hs1, hs2, window=HS_OFFSET_WINDOW_H):
+    """Mean of the two surface-height sensors. HS2 is brought onto HS1 with the offset of the surrounding week (centred running
+    median of HS1-HS2, held at the last/next overlap where one sensor is missing) and not with the mean offset of the whole record
+    as before: the offset of the two sensors drifts by up to 1 m over the years at several stations (Summit, JAR1, Swiss Camp,
+    NASA-SE), so a constant offset made HS_combined jump by half of the drift every time one sensor dropped out."""
+    off = (hs1 - hs2).rolling(window, center=True, min_periods=24).median().ffill().bfill()
+    return pd.concat([hs1, hs2 + off], axis=1).mean(axis=1)
+
+
+def interp_short_gaps(s, max_hours):
+    """Linear interpolation of the gaps of a series that are at most max_hours long; longer gaps stay empty."""
+    out = s.interpolate(limit_area="inside")
+    isna = s.isna()
+    run = (isna != isna.shift()).cumsum()
+    gap_len = isna.groupby(run).transform("sum")
+    return out.where(~(isna & (gap_len > max_hours)))
+
+
 def augment_data(df_in, latitude, longitude, elevation, site):
     # Interpolate small gaps in available variables
     # and add variables to the dataset:
@@ -1296,6 +1326,8 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             df[var_HS].plot(label=var_HS)
             plt.legend()
             _savefig(fig, "figures/L1_data_treatment/" + site + "_"+var_HS+"_adjust_auto.png")
+            # the manual HS rows of metadata/adjustments (steps found by tools/hs_steps.py) also apply at these stations, on top of the automatic shifts
+            df = adjust_data(df, site, var_list=[var_HS], skip_time_shifts=True)
             # x = df[var_HS].index.values.astype(float)/10**9/3600/24
             # y = df[var_HS].values
         else:
@@ -1326,11 +1358,11 @@ def augment_data(df_in, latitude, longitude, elevation, site):
             df.loc[df[var]<0, var] = np.nan
 
     # HS summary:
+    for v in ("HS1", "HS2"):
+        if v in df.columns:
+            df[v] = despike_hs(df[v])
     if 'HS2' in df.columns:
-        df[['HS1','HS2']].plot()
-        tmp = df[ ["HS1", "HS2"]].copy()
-        tmp.HS2 = tmp.HS2- (tmp.HS2-tmp.HS1).mean()
-        df['HS_combined'] = tmp[["HS1", "HS2"]].mean(axis=1)
+        df['HS_combined'] = combine_hs(df["HS1"], df["HS2"])
 
     # plotting gap-filling process
     fig,ax = plt.subplots(2,1, figsize=(15,8))
@@ -1819,6 +1851,9 @@ def therm_depth(df_in, site,min_diff_to_depth=1.5,kind="linear"):
     ax[1].set_ylabel("Subsurface temperature ($^o$C)")
     fig.suptitle(site)
     _savefig(fig, "figures/string_processing/" + site + ".png", dpi=90)
+    # the depths above use HS_combined interpolated over every gap; the L1 file only keeps the interpolation over short gaps
+    # (a straight line over several years, e.g. GITS 2002-2010, is not a measurement)
+    df_v6["HS_combined"] = interp_short_gaps(surface_height, HS_MAX_GAP_DAYS * 24).values
     return df_v6
 
 
@@ -1993,6 +2028,7 @@ def filter_zero_gradient(df_out):
     var_list = [
         "VW1", "VW2", "DW1", "DW2", "TA1", "TA1", "TA2",
         "TA3", "TA4", "P", "ISWR", "OSWR", "NR", "RH1", "RH2",
+        "HW1", "HW2",
     ]
     for var in var_list:
         if var not in df_out.columns:
@@ -2003,7 +2039,11 @@ def filter_zero_gradient(df_out):
         length_frozen = 6
         not_in_dark_season = False
         if var in ["HW1", "HW2"]:
-            length_frozen = 5 * 24
+            # 2026-11-19: the sensor heights were never in var_list (so this setting did nothing). A sonic ranger does not repeat the
+            # same value to 1 cm for two weeks (the temperature correction alone moves it): runs of 14 days or more are a held value
+            # (KULU 9 months, GITS 2001 4 months, LAR1 2010 4 months, NASA-SE HW2 2019, both sensors equal in the same hours).
+            # Shorter runs exist at the 0.01 m resolution of the C-level files in quiet periods and are kept.
+            length_frozen = 14 * 24
         if var in ["ISWR", "OSWR"]:
             thresh = 1
             length_frozen = 24

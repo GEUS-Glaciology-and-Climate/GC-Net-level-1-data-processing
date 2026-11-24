@@ -58,3 +58,8 @@ t0,t1,variable,flag,comment,URL_graphic
 2011-06-02T00:00:00+00:00,2011-10-22T02:00:00+00:00,P,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2012-03-15T13:00:00+00:00,2012-03-17T20:00:00+00:00,P,NAN,in the logger file but absent from the C-level file; 98% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2012-03-18T04:00:00+00:00,2012-05-25T12:00:00+00:00,P,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+
+# hw_corrections.py begin
+2003-05-25T00:00:00+00:00,2003-07-09T00:00:00+00:00,HW2,NAN,HW2 identical to HW1 hour by hour for 635 h (a copy) (2026-11-24),
+2007-03-24T00:00:00+00:00,2007-04-11T00:00:00+00:00,HW2,NAN,HW2 identical to HW1 hour by hour for 371 h (a copy) (2026-11-24),
+# hw_corrections.py end

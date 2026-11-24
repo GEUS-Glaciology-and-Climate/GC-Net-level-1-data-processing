@@ -63,3 +63,26 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1997-05-18T00:00:00+00:00,1999-06-18T00:00:00+00:00,TS8,max_filter,-1,
 1997-05-18T00:00:00+00:00,1999-06-18T00:00:00+00:00,TS9,max_filter,-1,
 1997-05-18T00:00:00+00:00,1999-06-18T00:00:00+00:00,TS10,max_filter,-1,
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2002-01-25T20:00:00+00:00,,HW2,add,-0.35,winter artefact removed in HW of HS2: -0.33 m (-0.35 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2003-04-26T16:00:00+00:00,,HS2,add,-0.45,step removed in HS (boom moved) of HS2: +0.30 m (+0.45 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2008-10-30T05:00:00+00:00,,HS2,add,-0.30,step removed in HS (boom moved) of HS2: +0.51 m (+0.30 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2009-05-01T00:00:00+00:00,,HS1,add,-0.80,step removed in HS (boom moved) of HS1: +0.50 m (+0.80 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2009-05-07T21:00:00+00:00,,HS1,add,0.57,step removed in HS (boom moved) of HS1: -0.86 m (-0.57 m relative to the other sensor and the climatology) over a gap of 0.2 d
+2010-12-10T00:00:00+00:00,,HS1,add,-0.48,step removed in HS (boom moved) of HS1: +0.50 m (+0.48 m relative to the other sensor and the climatology) over a gap of 4.5 d
+2011-01-13T00:00:00+00:00,,HW2,add,0.31,winter artefact removed in HW of HS2: +0.27 m (+0.31 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2013-08-13T22:00:00+00:00,,HS2,add,0.24,step removed in HS (boom moved) of HS2: -0.18 m (-0.24 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2013-08-14T13:00:00+00:00,,HS1,add,-0.27,step removed in HS (boom moved) of HS1: +0.15 m (+0.27 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2017-11-17T03:00:00+00:00,,HS2,add,-0.68,step removed in HS (boom moved) of HS2: +0.79 m (+0.68 m relative to the other sensor and the climatology) over a gap of 19.3 d
+# hs_steps.py end
+
+# hw_corrections.py begin
+# written by tools/hw_corrections.py (2026-11-24): corrections of the level of HW with the matching HS row that leaves HS unchanged
+2012-06-01T00:00:00+00:00,,HW1,add,+1.04,reports of 2013 to 2018 (2.68 / 1.40 / 1.37 / 1.82 / 1.18 m) are 1.02 to 1.09 m above the L1 HW1 which went down to 0.14 m (below the range of the sonic ranger); 2011 agreed to 0.02 m: the offset appears in the gap of 2011-07 to 2012-06
+2012-06-01T00:00:00+00:00,,HS1,add,+1.04,pair of the HW1 row above: HS = HW[first] - HW is kept as it was
+2012-06-01T00:00:00+00:00,,HW2,add,+1.35,report of 2018-05-05 (2.22 m) is 1.35 m above the L1 HW2 (2013: 1.70 m)
+2012-06-01T00:00:00+00:00,,HS2,add,+1.35,pair of the HW2 row above: HS = HW[first] - HW is kept as it was
+# hw_corrections.py end

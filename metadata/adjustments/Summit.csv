@@ -47,3 +47,16 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # 2026-11: clock one day early in the logger files 1997_SUM96_97.DAT and the first run of 1998_SUM_97-8.DAT (final L1 pressure vs CARRA sp: r 0.986-0.994 at -1 d against 0.78-0.86 at 0, 1996-05 to 1997-11; the run starting
 # 1997-12-04 14:00 is on time).
 1996-05-13T00:00:00+00:00, 1997-12-03T13:00:00+00:00, *, time_shift, 24, clock one day early - found 2026-11 against CARRA sp
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2005-05-04T20:00:00+00:00,,HS1,add,-0.37,step removed in HS (boom moved) of HS1: +0.37 m (+0.37 m relative to the other sensor and the climatology) over a gap of 0.0 d
+# hs_steps.py end
+
+# hw_corrections.py begin
+# written by tools/hw_corrections.py (2026-11-24): corrections of the level of HW with the matching HS row that leaves HS unchanged
+2005-05-04T20:00:00+00:00,2005-05-26T06:00:00+00:00,HW1,add,+0.37,the 'shift to match field notes' row of HW1 ends on 2005-05-04 19 UTC but the boom is raised on 2005-05-26: the extension removes an artefactual step of -0.36 m (report of 2005-05-26 before the visit W1 0.32)
+2005-05-04T20:00:00+00:00,2005-05-26T06:00:00+00:00,HS1,add,+0.37,pair of the HW1 row above: HS = HW[first] - HW is kept as it was
+2005-05-04T22:00:00+00:00,2005-05-26T06:00:00+00:00,HW2,add,+0.84,the 'shift to match field notes' row of HW2 ends on 2005-05-04 21 UTC but the boom is raised on 2005-05-26: the extension removes an artefactual step of -0.84 m (report of 2005-05-26 before the visit W2 1.55 = the level of April)
+# hw_corrections.py end

@@ -34,3 +34,7 @@ t0, t1, variable, flag,comment, URL_graphic
 2015-04-01T09:00:00+00:00,2015-04-21T04:00:00+00:00,VW1,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2015-04-22T12:00:00+00:00,2015-04-26T00:00:00+00:00,VW1,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2015-04-27T02:00:00+00:00,2015-04-30T23:00:00+00:00,VW1,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+
+# 2026-11-19: after the sensors were raised in May 2016 HW2 falls by 0.25 m between 2016-06-18 and 2016-07-04 while HW1 does not move (HS2 +0.25 m in two weeks, HS1 +0.01 m), then HW2 stays 0.3 m
+# below its value of early June; HS1-HS2 goes from -0.03 to -0.5 m and back to -0.1 m in October. HW2 is not trusted until its last value of 2016-08-23 (in the gap that follows).
+2016-06-18T00:00:00+00:00,2016-08-24T00:00:00+00:00,HW2,NAN,HW2 drifts by 0.25 m while HW1 is constant (2026-11-19),

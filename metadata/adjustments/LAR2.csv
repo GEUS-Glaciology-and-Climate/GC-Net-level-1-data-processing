@@ -9,3 +9,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # (RH reaches 100% at -25 C, the ice-saturation cap, 82% would be the cap wrt water). So the C-level hours are NOT listed in c_level_rh_convention.csv.
 ,,RH1,ice_to_water,0, issue #43
 ,,RH2,ice_to_water,0, issue #43
+
+# 2026-11-19: HW1 was lowered by 2.54 m between 2010-05-02 17:00 and 2010-12-09 00:00 (3.34 -> 0.82 m and 0.37 -> 3.09 m in a few hours) while HW2 stayed at 4.8 and 4.4 m.
+# HW1-HW2 is -1.44 m before, -4.0 m during and -1.4 m after; adding 2.54 m gives -1.46 m, so HS1 had a 2.5 m step up and down that the surface did not.
+2010-05-02T17:00:00+00:00,2010-12-09T00:00:00+00:00,HW1,add,2.54,HW1 sensor lowered by 2.54 m for seven months (HW2 unchanged); see comment above

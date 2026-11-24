@@ -920,7 +920,6 @@ fig.text(0.02, 0.5,
     rotation="vertical",
 )
 fig.savefig("figures/L1_overview/HS_overview_accum.png", bbox_inches="tight", dpi=300)
-fig.savefig("./HS_overview_accum.pdf", bbox_inches="tight")
 
 # plt.close('all')
 site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=(True))
@@ -983,7 +982,6 @@ fig.text(0.02, 0.5,
     rotation="vertical",
 )
 fig.savefig("figures/L1_overview/HS_overview_abl.png", bbox_inches="tight", dpi=300)
-fig.savefig("./HS_overview_abl.pdf", bbox_inches="tight")
 
 # %% Ablation JAR transect
 

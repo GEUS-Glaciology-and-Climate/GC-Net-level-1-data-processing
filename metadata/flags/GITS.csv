@@ -137,3 +137,6 @@ t0,t1,variable,flag,comment,URL_graphic
 2014-04-23T11:00:00+00:00,2014-04-25T00:00:00+00:00,VW2_max,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2014-04-25T20:00:00+00:00,2014-04-27T04:00:00+00:00,VW2_max,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2014-04-27T12:00:00+00:00,2014-05-21T12:00:00+00:00,VW2_max,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+
+# 2026-11-24: OSWR of the logger file 2007_gits000 reads 1.9 x ISWR (albedo above 1 in 88 % of the sunlit hours) from 2006-03-24 to 2006-04-24 13 UTC and 0.87 before and after; the C-level agrees with it only at some hours and has an unrelated shape
+2006-03-24T09:00:00+00:00,2006-04-24T13:00:00+00:00,OSWR,NAN,OSWR above ISWR (albedo 1.9 median) for one month in the logger file 2007_gits000 (2026-11-24),

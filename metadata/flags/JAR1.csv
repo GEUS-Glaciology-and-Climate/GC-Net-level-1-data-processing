@@ -63,3 +63,7 @@ t0,t1,variable,flag,comment,URL_graphic
 # TA3-TA4 is -0.2 degC before and after, +2..+25 degC from 2003-12 to 2004-12, then TA3 stuck near -19 degC while TA4 is missing (2005-01 to 2005-05-07)
 2003-12-01T00:00:00+00:00,2005-05-08T00:00:00+00:00,RH1,NAN,RH1 disagrees with RH2 by -27 to +35 % (recovered logger values; release comparison 2026-11),
 2003-12-01T00:00:00+00:00,2005-05-08T00:00:00+00:00,TA3,NAN,TA3 disagrees with TA4 by up to +25 degC then stuck near -19 degC (recovered logger values; release comparison 2026-11),
+
+# hw_corrections.py begin
+2010-02-27T00:00:00+00:00,2010-04-14T00:00:00+00:00,HW2,NAN,HW2 identical to HW1 hour by hour for 168 h (a copy) (2026-11-24),
+# hw_corrections.py end

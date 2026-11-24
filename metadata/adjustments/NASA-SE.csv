@@ -32,3 +32,13 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 2010-04-30T00:00:00+00:00, ,HW1,add,-0.8,
 2010-04-30T00:00:00+00:00, ,HW2,add,1.5,
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2018-12-27T19:00:00+00:00,,HW2,add,0.39,winter artefact removed in HW of HS2: +0.36 m (+0.39 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2019-01-01T07:00:00+00:00,,HW2,add,-0.28,winter artefact removed in HW of HS2: -0.26 m (-0.28 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2019-01-07T05:00:00+00:00,,HW2,add,0.22,winter artefact removed in HW of HS2: +0.20 m (+0.22 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2019-02-02T16:00:00+00:00,,HW2,add,-0.25,winter artefact removed in HW of HS2: -0.24 m (-0.25 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2015-01-16T01:00:00+00:00,,HW2,add,0.21,winter artefact removed in HW of HS2: +0.24 m (+0.21 m relative to the other sensor and the climatology) over a gap of 0.0 d
+# hs_steps.py end

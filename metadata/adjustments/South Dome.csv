@@ -53,3 +53,11 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 # time shifts
 # 1998-04-20T03:00:00, 1999-04-23T03:00:00, *, time_shift, -3, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/59
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2007-04-27T22:00:00+00:00,,HS1,add,-0.89,step removed in HS (boom moved) of HS1: +1.14 m (+0.89 m relative to the other sensor and the climatology) over a gap of 80.0 d
+2007-04-27T22:00:00+00:00,,HS2,add,-0.84,step removed in HS (boom moved) of HS2: +1.16 m (+0.84 m relative to the other sensor and the climatology) over a gap of 80.0 d
+2015-05-26T17:00:00+00:00,,HS2,add,-0.53,step removed in HS (boom moved) of HS2: +0.52 m (+0.53 m relative to the other sensor and the climatology) over a gap of 4.7 d
+# hs_steps.py end

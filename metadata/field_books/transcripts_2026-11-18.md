@@ -15,7 +15,7 @@ Source: `C:\Users\bav\OneDrive - GEUS\Code\PROMICE\GC-Net-historical-metadata\Fi
 | `2018 field book c.pdf` | 37 spreads | spreads 0-7 and 12-19 done; **spreads 8-11 and 20-36 not viewed** |
 | `2011-2012 Nicolas Bayou.pdf` | 15 | pages 1-8 done; **pages 9-15 not viewed** |
 | `2021 ... fieldbook notes and maintenance sheet.pdf` (CP1, Dye-2, NASA-SE, SDL, SDM) | 2-9 each | have an OCR layer of handwriting that is unusable; CP1 first lines checked (blank form fields only); **not read** |
-| all other PDFs (1997 Weber, 1999-2005 Box snow pits, 2003-04 Steffen, 2005 Box/Molotch/Huff x2, 2013-2017 field books, 2017 Heilig, 2022, 2023) | | **not read** |
+| all other PDFs (1997 Weber, 1999-2005 Box snow pits, 2003-04 Steffen, 2005 Box/Molotch/Huff x2, 2013-2017 field books, 2017 Heilig, 2023; the 2022 notes are done, see below) | | **not read** |
 | `Sensor documentation`: `cs500.pdf` (pages 1-6), `li-cor_190_200_manual.pdf` (text search only: it is the PAR quantum sensor manual) | | Kipp & Zonen NR Lite, NR2, REBS Q7 manuals not read |
 
 What the transcribed pages contain that matters for the processing is in `release_note_2026.md`, section 8 ("Field notebooks read so far"); the rest is geometry and snow pits.
@@ -64,6 +64,14 @@ p6 (South Dome AWS 5/27/2005, J.B., R.H. + [?]): clock accurate; replace 2 sonic
 ## 2011-2012 Bayou field book (pages 1-8)
 
 All pages are sensor-geometry sketches (S = sonic, W = wind) with distances in cm, written sideways: 5/8/2011 JAR1 "fixed", measurements of instruments (sonic to sonic 18 cm, wind to wind 121 cm, wind 2 to sonic 1 82 cm); 5/9 [?]/2011 JAR1: bring pegs for the satellite antennas, **fixed radiometers + TC**, excavated Jay's GPS station back in place; 5/10/2011 JAR2 back in place ~1600 local = 1900 GMT, S1-W2 80 cm, S1-S2 6 cm, S1-W1 122-38 = 84 cm; 5/16 Swiss Camp drilling (new people in camp, Gig, Alain); 5/21/2011 Swiss Camp AWS: S1-S2 6", S1-W2 18", W2-W1 41.5", snow density pit depth 148 cm, scoop 750 g [?]; Saddle: W1-W2 160, S1-W1 52, S1-S2 180, W2-S2 -32 cm; DYE-II snow pit (0-8 mm surface snow ... 59-70 3 mm+ ice grains) with sketch (1 m, 50, 92, 40); 5/30/2011 South Dome: W1-W2 113, S1-W2 [?], S1-S2 100, other values 26, 37, 34, 111, 110, 25, 10; 5/31/2011 NASA-? (Kanger / ...): W1-W2 143, S1-W2 67, S1-S2 130; 6/1/2011 NEEM -> GITS "could not land", Humboldt: S1-S2 35, W1-W2 123, S1 25, S2 26, W1 38, W2 38. The geometry would matter only for the HW offsets (`tools/hw_offsets.py`).
+
+## 2022 GEUS notes (5 pages, all read 2026-11-19; the file holds only DYE-2 and Humboldt, no NASA-E or Tunu-N page)
+
+**DYE-2 "CIRES station", 2022-06-16** (heights in cm above the snow): SR low 279 to the membrane; SR high 335 to the membrane; T high 341 to the bottom of the shield; upper boom 320; top box anemometer 350 (the upper wind sensor); boom radiation 355; lower boom 205; top box anemometer 230 (the lower wind sensor); bottom shield T 245-231 [?]; radiation boom 120 deg. Sketches: 13.5 (SR membrane to something) and 14.5 cm. Lower SR has a broken membrane; the radiation sensor has a broken dome and sits sideways. Pressure sensor PTB101B, humidity HMP45A.
+
+**Humboldt, "Old GC-Net Stat", 2022-06-19 12:08 LT** (cm): SR low 126; SR upper 159.5; T low 168 [?]; bottom of the logger box 83; WS low 152 (upper corner of the base) and 166 (WS axis); radiation sensor 170.5; T up 285.5; WS up 291 (WS axis); upper boom 156; lower boom 133.5. Net radiometer dome foggy and broken; no rotation, tilt. PTB 110, PTA 427A.
+
+What it shows (analysis of 2026-11-19, see release_note_2026.md section 5): at both stations the two sonic rangers (SR) are only 0.34 m (Humboldt) and 0.56 m (DYE-2) apart while the two wind sensors are 1.25 m (Humboldt: 166 and 291) and 1.20 m (DYE-2: 230 and 350) apart. The raw HW1 of the Humboldt logger (L0M) is 1.64 m in 2022-06 (SR upper 1.595, WS low axis 1.66) and 2.76 m in 2018-05 (report W1 2.70), so raw HW1 is the absolute height to 0.06 m at both dates; HW2 (SR low) is 0.33 m below it (1.26 in the book). The L1 HW1 is 0.27 m in 2022-06, i.e. 1.35 m below raw, because of the manual `HW1 add` rows of 2002/2003/2009-05-15 (-0.5, +1, -1.8) in `metadata/adjustments/Humboldt.csv`. The L1 DYE-2 spacing of 0.45 to 0.49 m from 2014 on is the SR spacing of the book (0.56 m), not an error.
 
 ## Is there more to recover from these images?
 

@@ -46,8 +46,10 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2017-05-10T00:00:00+00:00,,HW2,biweekly_upper_range_filter,0.2,Manually filtered by bav
 
 1990-01-01T16:00:00, 1990-09-26T14:00:00,HW1,swap_with_HW2,0,bav
-2010-05-09T22:00:00+00:00,2010-08-07T00:00:00+00:00,HW1,swap_with_HW2,0,bav
-2011-05-02T14:00:00+00:00, ,HW1,swap_with_HW2,0,bav
+# 2026-11-19: the swap now runs without interruption from the CR1000 start. Raw HW1 reads the upper sonic (3.6 m) and HW2 the lower one (1.55 m) from 2010-05-09 on.
+# The C-level hours between 2010-08-07 and 2011-05-02 have the same labelling (HW1 3.7 to 3.1 m and HW2 1.7 to 1.0 m): left unswapped they made HS1 and HS2 differ by 4.3 m
+# for nine months (HS_combined oscillating by 4 m). Swapped, HW1 continues the 1.65 m of 2010-08-07 and the raise of 2.9 m at the 2011-05-02 visit is the one of the HS rows.
+2010-05-09T22:00:00+00:00, ,HW1,swap_with_HW2,0,bav
 
 1990-01-01T16:00:00, 1990-09-26T14:00:00,HW2,biweekly_upper_range_filter,0.5,Manually filtered by bav
 
@@ -106,3 +108,20 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2004-06-09T00:00:00+00:00, 2004-12-29T00:00:00+00:00, *, time_shift, 24, Residual clock offset found and confirmed 2026-09-22 against CARRA reanalysis surface pressure (r=0.99-1.00 vs r<=0.86 unshifted); ISWR-based hour refinement showed no additional intra-day offset. See release_note_2026.md (section 4.2).
 2005-04-28T00:00:00+00:00, 2007-04-21T00:00:00+00:00, *, time_shift, -24, Residual clock offset found and confirmed 2026-09-22 against CARRA reanalysis surface pressure (r=0.95-1.00 vs unshifted day-scan cleanly favouring +1 day); ISWR-based hour refinement showed no additional intra-day offset. See release_note_2026.md (section 4.2).
 2008-06-12T00, 2009-04-27, *, time_shift, 24, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/63
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+1996-05-20T18:00:00+00:00,,HS1,add,0.31,step removed in HS (boom moved) of HS1: -0.26 m (-0.31 m relative to the other sensor and the climatology) over a gap of 0.0 d
+1997-04-11T18:00:00+00:00,,HS2,add,-0.31,step removed in HS (boom moved) of HS2: +0.31 m (+0.31 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2009-12-10T00:00:00+00:00,,HW2,add,0.30,winter artefact removed in HW of HS2: +0.30 m (+0.30 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2012-09-05T02:00:00+00:00,,HS2,add,0.20,step removed in HS (boom moved) of HS2: -0.16 m (-0.20 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2015-02-14T22:00:00+00:00,,HW1,add,-0.26,winter artefact removed in HW of HS1: -0.26 m (-0.26 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2005-05-03T08:00:00+00:00,,HS1,add,-0.41,step removed in HS (boom moved) of HS1: +0.33 m (+0.41 m relative to the other sensor and the climatology) over a gap of 1.8 d
+# hs_steps.py end
+
+# hw_corrections.py begin
+# written by tools/hw_corrections.py (2026-11-24): corrections of the level of HW with the matching HS row that leaves HS unchanged
+2001-12-31T14:00:00+00:00,2002-12-31T14:00:00+00:00,HW2,add,-1.06,the source changes from the C-level to the logger at 2001-12-31 14 UTC and HW2 - HW1 jumps from 1.20 to 2.22 m in mid winter (an artefact); report of 2002-05-08 W1 1.68 / W2 2.88 and photograph of 2002-05-24 give a spacing of 1.2 to 1.3 m
+2001-12-31T14:00:00+00:00,2002-12-31T14:00:00+00:00,HS2,add,-1.06,pair of the HW2 row above: HS = HW[first] - HW is kept as it was
+# hw_corrections.py end

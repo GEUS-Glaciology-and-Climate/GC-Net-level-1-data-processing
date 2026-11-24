@@ -159,3 +159,6 @@ t0,t1,variable,flag,comment,URL_graphic
 2019-01-09T06:00:00+00:00,2019-01-10T07:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2019-01-15T00:00:00+00:00,2019-02-14T09:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2019-04-08T10:00:00+00:00,2019-05-19T09:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+
+# 2026-11-19: HW2 after 2019-05-01 is a held 1.5 m (the logger reads 0 m: sensor dead), the C-level value was held
+2019-05-01T00:00:00+00:00, ,HW2,NAN,HW2 dead from 2019-05 (held 1.5 m in the C-level file) (2026-11-19),
