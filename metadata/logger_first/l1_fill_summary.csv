@@ -1666,231 +1666,6 @@ DYE-2,HS1,C-level (station file),61269
 DYE-2,HS1,C-level (Jason file),44093
 DYE-2,HS2,C-level (station file),59808
 DYE-2,HS2,C-level (Jason file),44094
-South Dome,ISWR,CR1000,103506
-South Dome,ISWR,2001_SDOME01.DAT,18598
-South Dome,ISWR,2009_s_dome_09.dat,13341
-South Dome,ISWR,2005_south-dome05a.dat,10578
-South Dome,ISWR,1999_AWSSDM99.DAT,8876
-South Dome,ISWR,1998_SDOM97-8.DAT,8573
-South Dome,ISWR,2009_11new.dat,7077
-South Dome,ISWR,C-level (Jason file),5021
-South Dome,ISWR,C-level (station file),4635
-South Dome,OSWR,CR1000,103510
-South Dome,OSWR,2001_SDOME01.DAT,18598
-South Dome,OSWR,2009_s_dome_09.dat,18558
-South Dome,OSWR,2005_south-dome05a.dat,11715
-South Dome,OSWR,2009_11new.dat,9615
-South Dome,OSWR,1999_AWSSDM99.DAT,8876
-South Dome,OSWR,1998_SDOM97-8.DAT,8573
-South Dome,OSWR,C-level (Jason file),5008
-South Dome,OSWR,C-level (station file),2173
-South Dome,NR,CR1000,103439
-South Dome,NR,2009_s_dome_09.dat,19940
-South Dome,NR,2001_SDOME01.DAT,18598
-South Dome,NR,2005_south-dome05a.dat,13004
-South Dome,NR,2009_11new.dat,10310
-South Dome,NR,1999_AWSSDM99.DAT,8876
-South Dome,NR,1998_SDOM97-8.DAT,8573
-South Dome,NR,C-level (Jason file),4807
-South Dome,NR,C-level (station file),62
-South Dome,TA1,CR1000,103423
-South Dome,TA1,2009_s_dome_09.dat,19939
-South Dome,TA1,2001_SDOME01.DAT,18598
-South Dome,TA1,2005_south-dome05a.dat,13003
-South Dome,TA1,2009_11new.dat,10309
-South Dome,TA1,1999_AWSSDM99.DAT,8871
-South Dome,TA1,1998_SDOM97-8.DAT,8573
-South Dome,TA1,C-level (Jason file),5025
-South Dome,TA1,C-level (station file),875
-South Dome,TA2,CR1000,98367
-South Dome,TA2,2009_s_dome_09.dat,19939
-South Dome,TA2,2001_SDOME01.DAT,18598
-South Dome,TA2,2005_south-dome05a.dat,13003
-South Dome,TA2,2009_11new.dat,10309
-South Dome,TA2,1999_AWSSDM99.DAT,8869
-South Dome,TA2,1998_SDOM97-8.DAT,8573
-South Dome,TA2,C-level (Jason file),5072
-South Dome,TA2,C-level (station file),2198
-South Dome,TA3,CR1000,104453
-South Dome,TA3,2009_s_dome_09.dat,19940
-South Dome,TA3,2001_SDOME01.DAT,18598
-South Dome,TA3,2005_south-dome05a.dat,13004
-South Dome,TA3,2009_11new.dat,10310
-South Dome,TA3,1999_AWSSDM99.DAT,8876
-South Dome,TA3,1998_SDOM97-8.DAT,8573
-South Dome,TA3,C-level (Jason file),4932
-South Dome,TA3,C-level (station file),761
-South Dome,TA4,CR1000,104453
-South Dome,TA4,2009_s_dome_09.dat,19940
-South Dome,TA4,2001_SDOME01.DAT,18598
-South Dome,TA4,2005_south-dome05a.dat,13004
-South Dome,TA4,2009_11new.dat,10310
-South Dome,TA4,1999_AWSSDM99.DAT,8876
-South Dome,TA4,1998_SDOM97-8.DAT,8573
-South Dome,TA4,C-level (Jason file),4923
-South Dome,TA4,C-level (station file),123
-South Dome,RH1,CR1000,104453
-South Dome,RH1,2009_s_dome_09.dat,19112
-South Dome,RH1,2001_SDOME01.DAT,18598
-South Dome,RH1,C-level (Jason file),13474
-South Dome,RH1,2005_south-dome05a.dat,12462
-South Dome,RH1,2009_11new.dat,9880
-South Dome,RH1,1999_AWSSDM99.DAT,8876
-South Dome,RH1,C-level (station file),2538
-South Dome,RH2,CR1000,104349
-South Dome,RH2,2009_s_dome_09.dat,19113
-South Dome,RH2,2001_SDOME01.DAT,18597
-South Dome,RH2,2005_south-dome05a.dat,12462
-South Dome,RH2,2009_11new.dat,9880
-South Dome,RH2,1999_AWSSDM99.DAT,8875
-South Dome,RH2,C-level (Jason file),5447
-South Dome,RH2,C-level (station file),2406
-South Dome,VW1,CR1000,104453
-South Dome,VW1,2009_s_dome_09.dat,19939
-South Dome,VW1,2001_SDOME01.DAT,18598
-South Dome,VW1,2005_south-dome05a.dat,13004
-South Dome,VW1,2009_11new.dat,10310
-South Dome,VW1,1999_AWSSDM99.DAT,8876
-South Dome,VW1,1998_SDOM97-8.DAT,8573
-South Dome,VW1,C-level (Jason file),4841
-South Dome,VW1,C-level (station file),63
-South Dome,VW2,CR1000,104453
-South Dome,VW2,2009_s_dome_09.dat,19940
-South Dome,VW2,2001_SDOME01.DAT,18598
-South Dome,VW2,2005_south-dome05a.dat,13004
-South Dome,VW2,2009_11new.dat,10310
-South Dome,VW2,1999_AWSSDM99.DAT,8876
-South Dome,VW2,1998_SDOM97-8.DAT,8573
-South Dome,VW2,C-level (Jason file),4839
-South Dome,VW2,C-level (station file),63
-South Dome,DW1,CR1000,104453
-South Dome,DW1,2009_s_dome_09.dat,19940
-South Dome,DW1,2001_SDOME01.DAT,18598
-South Dome,DW1,2005_south-dome05a.dat,13004
-South Dome,DW1,2009_11new.dat,10310
-South Dome,DW1,1999_AWSSDM99.DAT,8876
-South Dome,DW1,1998_SDOM97-8.DAT,8573
-South Dome,DW1,C-level (Jason file),4709
-South Dome,DW1,C-level (station file),63
-South Dome,DW2,CR1000,104441
-South Dome,DW2,2001_SDOME01.DAT,18598
-South Dome,DW2,1999_AWSSDM99.DAT,8876
-South Dome,DW2,1998_SDOM97-8.DAT,8573
-South Dome,DW2,C-level (Jason file),1956
-South Dome,DW2,C-level (station file),62
-South Dome,P,CR1000,104453
-South Dome,P,C-level (station file),43120
-South Dome,P,C-level (Jason file),32438
-South Dome,HW1,CR1000,71677
-South Dome,HW1,C-level (Jason file),41117
-South Dome,HW1,C-level (station file),25190
-South Dome,HW2,CR1000,103764
-South Dome,HW2,C-level (Jason file),41117
-South Dome,HW2,C-level (station file),25190
-South Dome,V,CR1000,104445
-South Dome,V,2009_s_dome_09.dat,19939
-South Dome,V,2001_SDOME01.DAT,18598
-South Dome,V,2005_south-dome05a.dat,13004
-South Dome,V,2009_11new.dat,10310
-South Dome,V,1999_AWSSDM99.DAT,8876
-South Dome,V,C-level (Jason file),4989
-South Dome,V,C-level (station file),63
-South Dome,TA5,CR1000,103499
-South Dome,TA5,C-level (station file),92
-South Dome,TS1,2009_s_dome_09.dat,19943
-South Dome,TS1,2001_SDOME01.DAT,18598
-South Dome,TS1,2005_south-dome05a.dat,13003
-South Dome,TS1,2009_11new.dat,10010
-South Dome,TS1,C-level (station file),8921
-South Dome,TS1,1999_AWSSDM99.DAT,7164
-South Dome,TS1,1998_SDOM97-8.DAT,7134
-South Dome,TS1,C-level (Jason file),3193
-South Dome,TS1,CR1000,1683
-South Dome,TS2,C-level (station file),31820
-South Dome,TS2,2009_s_dome_09.dat,19917
-South Dome,TS2,2001_SDOME01.DAT,18598
-South Dome,TS2,CR1000,14658
-South Dome,TS2,2005_south-dome05a.dat,13003
-South Dome,TS2,2009_11new.dat,10302
-South Dome,TS2,1999_AWSSDM99.DAT,8872
-South Dome,TS2,1998_SDOM97-8.DAT,8573
-South Dome,TS2,C-level (Jason file),56
-South Dome,TS3,CR1000,49641
-South Dome,TS3,C-level (station file),31235
-South Dome,TS3,2009_s_dome_09.dat,19938
-South Dome,TS3,2001_SDOME01.DAT,18598
-South Dome,TS3,2005_south-dome05a.dat,13003
-South Dome,TS3,2009_11new.dat,10304
-South Dome,TS3,1999_AWSSDM99.DAT,8873
-South Dome,TS3,1998_SDOM97-8.DAT,8573
-South Dome,TS3,C-level (Jason file),55
-South Dome,TS4,C-level (station file),28482
-South Dome,TS4,2009_s_dome_09.dat,19964
-South Dome,TS4,2001_SDOME01.DAT,18598
-South Dome,TS4,2005_south-dome05a.dat,13003
-South Dome,TS4,1999_AWSSDM99.DAT,8871
-South Dome,TS4,1998_SDOM97-8.DAT,8573
-South Dome,TS4,2009_11new.dat,8260
-South Dome,TS4,CR1000,5023
-South Dome,TS4,C-level (Jason file),57
-South Dome,TS5,2009_s_dome_09.dat,19950
-South Dome,TS5,2001_SDOME01.DAT,18598
-South Dome,TS5,2005_south-dome05a.dat,13003
-South Dome,TS5,2009_11new.dat,10012
-South Dome,TS5,1999_AWSSDM99.DAT,8872
-South Dome,TS5,1998_SDOM97-8.DAT,8573
-South Dome,TS5,C-level (station file),1108
-South Dome,TS5,CR1000,728
-South Dome,TS5,C-level (Jason file),56
-South Dome,TS6,2009_s_dome_09.dat,20070
-South Dome,TS6,2001_SDOME01.DAT,18598
-South Dome,TS6,2005_south-dome05a.dat,13003
-South Dome,TS6,1999_AWSSDM99.DAT,8874
-South Dome,TS6,1998_SDOM97-8.DAT,8573
-South Dome,TS6,2009_11new.dat,2810
-South Dome,TS6,C-level (station file),2004
-South Dome,TS6,CR1000,320
-South Dome,TS6,C-level (Jason file),54
-South Dome,TS7,2009_s_dome_09.dat,19952
-South Dome,TS7,2001_SDOME01.DAT,18598
-South Dome,TS7,CR1000,15739
-South Dome,TS7,C-level (station file),14002
-South Dome,TS7,2005_south-dome05a.dat,13003
-South Dome,TS7,2009_11new.dat,9497
-South Dome,TS7,1999_AWSSDM99.DAT,8873
-South Dome,TS7,1998_SDOM97-8.DAT,8573
-South Dome,TS7,C-level (Jason file),55
-South Dome,TS8,C-level (station file),33781
-South Dome,TS8,CR1000,21475
-South Dome,TS8,2009_s_dome_09.dat,19938
-South Dome,TS8,2001_SDOME01.DAT,18598
-South Dome,TS8,2005_south-dome05a.dat,13003
-South Dome,TS8,2009_11new.dat,10305
-South Dome,TS8,1999_AWSSDM99.DAT,8873
-South Dome,TS8,1998_SDOM97-8.DAT,8573
-South Dome,TS8,C-level (Jason file),55
-South Dome,TS9,CR1000,55993
-South Dome,TS9,C-level (station file),31734
-South Dome,TS9,2009_s_dome_09.dat,19974
-South Dome,TS9,2001_SDOME01.DAT,18598
-South Dome,TS9,2005_south-dome05a.dat,13003
-South Dome,TS9,1999_AWSSDM99.DAT,8873
-South Dome,TS9,2009_11new.dat,8644
-South Dome,TS9,1998_SDOM97-8.DAT,8573
-South Dome,TS9,C-level (Jason file),55
-South Dome,TS10,CR1000,59311
-South Dome,TS10,C-level (station file),28106
-South Dome,TS10,2009_s_dome_09.dat,19953
-South Dome,TS10,2001_SDOME01.DAT,18598
-South Dome,TS10,2005_south-dome05a.dat,13003
-South Dome,TS10,2009_11new.dat,9859
-South Dome,TS10,1999_AWSSDM99.DAT,8871
-South Dome,TS10,1998_SDOM97-8.DAT,8573
-South Dome,TS10,C-level (Jason file),57
-South Dome,HS1,C-level (Jason file),37331
-South Dome,HS1,C-level (station file),25190
-South Dome,HS2,C-level (Jason file),41109
-South Dome,HS2,C-level (station file),10060
 NASA-E,ISWR,CR1000,85908
 NASA-E,ISWR,2011_nasae1.dat,26057
 NASA-E,ISWR,2001_NASAE01.DAT,17996
@@ -5177,3 +4952,228 @@ EastGRIP,V,CR1000,79745
 EastGRIP,TA5,CR1000,79745
 EastGRIP,ISWR,C-level (station file),7
 EastGRIP,OSWR,C-level (station file),4
+South Dome,ISWR,CR1000,103506
+South Dome,ISWR,2001_SDOME01.DAT,18598
+South Dome,ISWR,2009_s_dome_09.dat,13341
+South Dome,ISWR,2005_south-dome05a.dat,10578
+South Dome,ISWR,1999_AWSSDM99.DAT,8876
+South Dome,ISWR,1998_SDOM97-8.DAT,8573
+South Dome,ISWR,2009_11new.dat,7077
+South Dome,ISWR,C-level (Jason file),5021
+South Dome,ISWR,C-level (station file),4635
+South Dome,OSWR,CR1000,103510
+South Dome,OSWR,2001_SDOME01.DAT,18598
+South Dome,OSWR,2009_s_dome_09.dat,18558
+South Dome,OSWR,2005_south-dome05a.dat,11715
+South Dome,OSWR,2009_11new.dat,9615
+South Dome,OSWR,1999_AWSSDM99.DAT,8876
+South Dome,OSWR,1998_SDOM97-8.DAT,8573
+South Dome,OSWR,C-level (Jason file),5008
+South Dome,OSWR,C-level (station file),2173
+South Dome,NR,CR1000,103439
+South Dome,NR,2009_s_dome_09.dat,19940
+South Dome,NR,2001_SDOME01.DAT,18598
+South Dome,NR,2005_south-dome05a.dat,13004
+South Dome,NR,2009_11new.dat,10310
+South Dome,NR,1999_AWSSDM99.DAT,8876
+South Dome,NR,1998_SDOM97-8.DAT,8573
+South Dome,NR,C-level (Jason file),4807
+South Dome,NR,C-level (station file),62
+South Dome,TA1,CR1000,103423
+South Dome,TA1,2009_s_dome_09.dat,19939
+South Dome,TA1,2001_SDOME01.DAT,18598
+South Dome,TA1,2005_south-dome05a.dat,13003
+South Dome,TA1,2009_11new.dat,10309
+South Dome,TA1,1999_AWSSDM99.DAT,8871
+South Dome,TA1,1998_SDOM97-8.DAT,8573
+South Dome,TA1,C-level (Jason file),5025
+South Dome,TA1,C-level (station file),875
+South Dome,TA2,CR1000,98367
+South Dome,TA2,2009_s_dome_09.dat,19939
+South Dome,TA2,2001_SDOME01.DAT,18598
+South Dome,TA2,2005_south-dome05a.dat,13003
+South Dome,TA2,2009_11new.dat,10309
+South Dome,TA2,1999_AWSSDM99.DAT,8869
+South Dome,TA2,1998_SDOM97-8.DAT,8573
+South Dome,TA2,C-level (Jason file),5072
+South Dome,TA2,C-level (station file),2198
+South Dome,TA3,CR1000,104453
+South Dome,TA3,2009_s_dome_09.dat,19940
+South Dome,TA3,2001_SDOME01.DAT,18598
+South Dome,TA3,2005_south-dome05a.dat,13004
+South Dome,TA3,2009_11new.dat,10310
+South Dome,TA3,1999_AWSSDM99.DAT,8876
+South Dome,TA3,1998_SDOM97-8.DAT,8573
+South Dome,TA3,C-level (Jason file),4932
+South Dome,TA3,C-level (station file),761
+South Dome,TA4,CR1000,104453
+South Dome,TA4,2009_s_dome_09.dat,19940
+South Dome,TA4,2001_SDOME01.DAT,18598
+South Dome,TA4,2005_south-dome05a.dat,13004
+South Dome,TA4,2009_11new.dat,10310
+South Dome,TA4,1999_AWSSDM99.DAT,8876
+South Dome,TA4,1998_SDOM97-8.DAT,8573
+South Dome,TA4,C-level (Jason file),4923
+South Dome,TA4,C-level (station file),123
+South Dome,RH1,CR1000,104453
+South Dome,RH1,2009_s_dome_09.dat,19112
+South Dome,RH1,2001_SDOME01.DAT,18598
+South Dome,RH1,C-level (Jason file),13474
+South Dome,RH1,2005_south-dome05a.dat,12462
+South Dome,RH1,2009_11new.dat,9880
+South Dome,RH1,1999_AWSSDM99.DAT,8876
+South Dome,RH1,C-level (station file),2538
+South Dome,RH2,CR1000,104349
+South Dome,RH2,2009_s_dome_09.dat,19113
+South Dome,RH2,2001_SDOME01.DAT,18597
+South Dome,RH2,2005_south-dome05a.dat,12462
+South Dome,RH2,2009_11new.dat,9880
+South Dome,RH2,1999_AWSSDM99.DAT,8875
+South Dome,RH2,C-level (Jason file),5447
+South Dome,RH2,C-level (station file),2406
+South Dome,VW1,CR1000,104453
+South Dome,VW1,2009_s_dome_09.dat,19939
+South Dome,VW1,2001_SDOME01.DAT,18598
+South Dome,VW1,2005_south-dome05a.dat,13004
+South Dome,VW1,2009_11new.dat,10310
+South Dome,VW1,1999_AWSSDM99.DAT,8876
+South Dome,VW1,1998_SDOM97-8.DAT,8573
+South Dome,VW1,C-level (Jason file),4841
+South Dome,VW1,C-level (station file),63
+South Dome,VW2,CR1000,104453
+South Dome,VW2,2009_s_dome_09.dat,19940
+South Dome,VW2,2001_SDOME01.DAT,18598
+South Dome,VW2,2005_south-dome05a.dat,13004
+South Dome,VW2,2009_11new.dat,10310
+South Dome,VW2,1999_AWSSDM99.DAT,8876
+South Dome,VW2,1998_SDOM97-8.DAT,8573
+South Dome,VW2,C-level (Jason file),4839
+South Dome,VW2,C-level (station file),63
+South Dome,DW1,CR1000,104453
+South Dome,DW1,2009_s_dome_09.dat,19940
+South Dome,DW1,2001_SDOME01.DAT,18598
+South Dome,DW1,2005_south-dome05a.dat,13004
+South Dome,DW1,2009_11new.dat,10310
+South Dome,DW1,1999_AWSSDM99.DAT,8876
+South Dome,DW1,1998_SDOM97-8.DAT,8573
+South Dome,DW1,C-level (Jason file),4709
+South Dome,DW1,C-level (station file),63
+South Dome,DW2,CR1000,104441
+South Dome,DW2,2001_SDOME01.DAT,18598
+South Dome,DW2,1999_AWSSDM99.DAT,8876
+South Dome,DW2,1998_SDOM97-8.DAT,8573
+South Dome,DW2,C-level (Jason file),1956
+South Dome,DW2,C-level (station file),62
+South Dome,P,CR1000,104453
+South Dome,P,C-level (station file),43120
+South Dome,P,C-level (Jason file),32438
+South Dome,HW1,CR1000,71677
+South Dome,HW1,C-level (Jason file),41117
+South Dome,HW1,C-level (station file),25190
+South Dome,HW2,CR1000,103764
+South Dome,HW2,C-level (Jason file),41117
+South Dome,HW2,C-level (station file),25190
+South Dome,V,CR1000,104445
+South Dome,V,2009_s_dome_09.dat,19939
+South Dome,V,2001_SDOME01.DAT,18598
+South Dome,V,2005_south-dome05a.dat,13004
+South Dome,V,2009_11new.dat,10310
+South Dome,V,1999_AWSSDM99.DAT,8876
+South Dome,V,C-level (Jason file),4989
+South Dome,V,C-level (station file),63
+South Dome,TA5,CR1000,103499
+South Dome,TA5,C-level (station file),92
+South Dome,TS1,2009_s_dome_09.dat,19943
+South Dome,TS1,2001_SDOME01.DAT,18598
+South Dome,TS1,2005_south-dome05a.dat,13003
+South Dome,TS1,2009_11new.dat,10010
+South Dome,TS1,C-level (station file),8921
+South Dome,TS1,1999_AWSSDM99.DAT,7164
+South Dome,TS1,1998_SDOM97-8.DAT,7134
+South Dome,TS1,C-level (Jason file),3193
+South Dome,TS1,CR1000,1683
+South Dome,TS2,C-level (station file),31820
+South Dome,TS2,2009_s_dome_09.dat,19917
+South Dome,TS2,2001_SDOME01.DAT,18598
+South Dome,TS2,CR1000,14658
+South Dome,TS2,2005_south-dome05a.dat,13003
+South Dome,TS2,2009_11new.dat,10302
+South Dome,TS2,1999_AWSSDM99.DAT,8872
+South Dome,TS2,1998_SDOM97-8.DAT,8573
+South Dome,TS2,C-level (Jason file),56
+South Dome,TS3,CR1000,49641
+South Dome,TS3,C-level (station file),31235
+South Dome,TS3,2009_s_dome_09.dat,19938
+South Dome,TS3,2001_SDOME01.DAT,18598
+South Dome,TS3,2005_south-dome05a.dat,13003
+South Dome,TS3,2009_11new.dat,10304
+South Dome,TS3,1999_AWSSDM99.DAT,8873
+South Dome,TS3,1998_SDOM97-8.DAT,8573
+South Dome,TS3,C-level (Jason file),55
+South Dome,TS4,C-level (station file),28482
+South Dome,TS4,2009_s_dome_09.dat,19964
+South Dome,TS4,2001_SDOME01.DAT,18598
+South Dome,TS4,2005_south-dome05a.dat,13003
+South Dome,TS4,1999_AWSSDM99.DAT,8871
+South Dome,TS4,1998_SDOM97-8.DAT,8573
+South Dome,TS4,2009_11new.dat,8260
+South Dome,TS4,CR1000,5023
+South Dome,TS4,C-level (Jason file),57
+South Dome,TS5,2009_s_dome_09.dat,19950
+South Dome,TS5,2001_SDOME01.DAT,18598
+South Dome,TS5,2005_south-dome05a.dat,13003
+South Dome,TS5,2009_11new.dat,10012
+South Dome,TS5,1999_AWSSDM99.DAT,8872
+South Dome,TS5,1998_SDOM97-8.DAT,8573
+South Dome,TS5,C-level (station file),1108
+South Dome,TS5,CR1000,728
+South Dome,TS5,C-level (Jason file),56
+South Dome,TS6,2009_s_dome_09.dat,20070
+South Dome,TS6,2001_SDOME01.DAT,18598
+South Dome,TS6,2005_south-dome05a.dat,13003
+South Dome,TS6,1999_AWSSDM99.DAT,8874
+South Dome,TS6,1998_SDOM97-8.DAT,8573
+South Dome,TS6,2009_11new.dat,2810
+South Dome,TS6,C-level (station file),2004
+South Dome,TS6,CR1000,320
+South Dome,TS6,C-level (Jason file),54
+South Dome,TS7,2009_s_dome_09.dat,19952
+South Dome,TS7,2001_SDOME01.DAT,18598
+South Dome,TS7,CR1000,15739
+South Dome,TS7,C-level (station file),14002
+South Dome,TS7,2005_south-dome05a.dat,13003
+South Dome,TS7,2009_11new.dat,9497
+South Dome,TS7,1999_AWSSDM99.DAT,8873
+South Dome,TS7,1998_SDOM97-8.DAT,8573
+South Dome,TS7,C-level (Jason file),55
+South Dome,TS8,C-level (station file),33781
+South Dome,TS8,CR1000,21475
+South Dome,TS8,2009_s_dome_09.dat,19938
+South Dome,TS8,2001_SDOME01.DAT,18598
+South Dome,TS8,2005_south-dome05a.dat,13003
+South Dome,TS8,2009_11new.dat,10305
+South Dome,TS8,1999_AWSSDM99.DAT,8873
+South Dome,TS8,1998_SDOM97-8.DAT,8573
+South Dome,TS8,C-level (Jason file),55
+South Dome,TS9,CR1000,55993
+South Dome,TS9,C-level (station file),31734
+South Dome,TS9,2009_s_dome_09.dat,19974
+South Dome,TS9,2001_SDOME01.DAT,18598
+South Dome,TS9,2005_south-dome05a.dat,13003
+South Dome,TS9,1999_AWSSDM99.DAT,8873
+South Dome,TS9,2009_11new.dat,8644
+South Dome,TS9,1998_SDOM97-8.DAT,8573
+South Dome,TS9,C-level (Jason file),55
+South Dome,TS10,CR1000,59311
+South Dome,TS10,C-level (station file),28106
+South Dome,TS10,2009_s_dome_09.dat,19953
+South Dome,TS10,2001_SDOME01.DAT,18598
+South Dome,TS10,2005_south-dome05a.dat,13003
+South Dome,TS10,2009_11new.dat,9859
+South Dome,TS10,1999_AWSSDM99.DAT,8871
+South Dome,TS10,1998_SDOM97-8.DAT,8573
+South Dome,TS10,C-level (Jason file),57
+South Dome,HS1,C-level (Jason file),37331
+South Dome,HS1,C-level (station file),25190
+South Dome,HS2,C-level (Jason file),41109
+South Dome,HS2,C-level (station file),10060
