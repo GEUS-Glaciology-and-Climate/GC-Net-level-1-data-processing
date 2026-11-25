@@ -4,7 +4,7 @@ Level 0 -> L0M: stacks the raw logger files of every station into one NEAD file 
 
 L0M contains logger data only: nothing from the C-level files (they fill the gaps at L1), no filtering and no convention
 conversion. Every raw file (CR1000 or CR10X, including Swiss Camp 10 m's year-embedded CR10X format) is read and
-calibrated through its own <file>.toml sidecar (liblogger.read_configured_files; tools/generate_logger_configs.py
+calibrated through its own <file>.toml configuration file (liblogger.read_configured_files; tools/generate_logger_configs.py
 writes these) - a file without one is simply skipped, so a new one only needs a .toml next to it, no code change.
 Two things are not yet on this path:
     Swiss Camp 10 m CR27 files                     libgcnet.load_old_logger_file (its own hardcoded parser)
@@ -34,7 +34,7 @@ backup_transmissions = path + "backup_transmissions_20230111/"
 # Get sorted list of all non-hidden sub-directories in L0 folder
 L0dirs = np.array(sorted(f for f in os.listdir(path) if "-" in f))
 
-# To rebuild only some stations (after editing their sidecars), list their L0 folders here; None = all stations
+# To rebuild only some stations (after editing their configuration files), list their L0 folders here; None = all stations
 ONLY = None
 ONLY = ["11-South Dome"]
 if ONLY:

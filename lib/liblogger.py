@@ -2,9 +2,9 @@
 """Logger-first helpers for the L0 -> L0M step.
 
   * reading any raw logger file (CR1000 or the historical, headerless CR10X format, including Swiss Camp 10 m's
-    year-embedded CR10X format) through its own <file>.toml sidecar (read_configured_files): logger type, column
+    year-embedded CR10X format) through its own <file>.toml configuration file (read_configured_files): logger type, column
     names, and the calibration to apply as soon as the file is read. tools/generate_logger_configs.py writes these
-    sidecars; a file with none is simply skipped.
+    configuration files; a file with none is simply skipped.
   * keeping track of which file every value came from, and plotting it
   * comparing the logger data with the C-level files
 
@@ -254,7 +254,7 @@ def _read_cr1000_configured(path, cfg):
 
 
 def list_configs(directory):
-    """(filename, parsed .toml dict) for every raw file in `directory` that has a matching <file>.toml sidecar
+    """(filename, parsed .toml dict) for every raw file in `directory` that has a matching <file>.toml configuration file
     (tools/generate_logger_configs.py writes these). A file without one is skipped - this is the one place that
     decides what counts as "configured"; read_configured_files and the diagnostic tools in tools/ both use it, so a
     file is either seen by all of them or by none."""
@@ -272,7 +272,7 @@ def list_configs(directory):
 
 
 def _apply_ignore_rows(df, cfg):
-    """Drop the rows of the periods listed in the sidecar's [[ignore_rows]] tables (start and end included, UTC when no zone is given),
+    """Drop the rows of the periods listed in the configuration file's [[ignore_rows]] tables (start and end included, UTC when no zone is given),
     for a file whose records are known to be wrong, e.g. dated before the installation of the station. Give a `reason` in the table:
 
         [[ignore_rows]]
@@ -289,7 +289,7 @@ def _apply_ignore_rows(df, cfg):
 
 
 def _apply_calibration_periods(df, cfg):
-    """Multiply columns by a factor inside a period, from the sidecar's [[calibration_period]] tables (applied after the
+    """Multiply columns by a factor inside a period, from the configuration file's [[calibration_period]] tables (applied after the
     [calibration.<var>] scale, UTC when no zone is given; the variable's _max/_min/_std columns follow it). For a factor that is a
     property of a sensor and not of a logger channel: when the sensors were exchanged between two channels from a date on (the
     `swap_with_OSWR` adjustments of Crawford Point 1 and Swiss Camp), the sensor factor moves with them:
@@ -335,7 +335,7 @@ def _swap_in_period(df, var_a, var_b, t0, t1):
 
 
 def _apply_swap_columns(df, cfg):
-    """Exchange the values of two columns inside a period, from the sidecar's [[swap_columns]] tables (UTC when no zone is given). For
+    """Exchange the values of two columns inside a period, from the configuration file's [[swap_columns]] tables (UTC when no zone is given). For
     two sensors that are read on each other's logger channel from a date on (the label HW1 is the upper sonic ranger, the field
     notes call it 2): the decoding gives every sensor its own name, so the L0M, the L1 and the comparisons with the C-level see the
     same sensors under the same names. The C-level files have the same table in metadata/c_level_swaps.csv.
@@ -354,7 +354,7 @@ def _apply_swap_columns(df, cfg):
 
 def apply_c_level_swaps(dfj, dfc, site, path="metadata/c_level_swaps.csv"):
     """Exchange the values of two columns of the C-level frames in the periods of metadata/c_level_swaps.csv (site, var_a, var_b, t0,
-    t1, reason; empty t1 = to the end of the record). The same exchange as the [[swap_columns]] of the logger sidecars, for the
+    t1, reason; empty t1 = to the end of the record). The same exchange as the [[swap_columns]] of the logger configuration files, for the
     C-level files that carry the heights where no logger file does. Returns (dfj, dfc)."""
     if not os.path.isfile(path):
         return dfj, dfc
@@ -370,7 +370,7 @@ def apply_c_level_swaps(dfj, dfc, site, path="metadata/c_level_swaps.csv"):
 
 
 def read_configured_files(directory, priority="latest_first", dedup=True):
-    """Every raw file in `directory` that has a matching <file>.toml sidecar, read, calibrated, and combined into
+    """Every raw file in `directory` that has a matching <file>.toml configuration file, read, calibrated, and combined into
     one (data, provenance) pair; (None, None) if none are configured yet.
     `priority`: 'latest_first' processes CR10X-style overlapping cumulative downloads with the most recent one
     winning where they overlap (matching the old read_station_cr10x); 'earliest_first' keeps the first file's value
@@ -450,7 +450,7 @@ def _merge_first_wins(items):
 
 # read_station_cr10x (the CR10X_file_registry.csv / CR10X_layouts.csv / CR10X_calibration*.csv - driven reader) was
 # removed 2026-09: superseded by read_configured_files, which reads the same information from each raw file's own
-# .toml sidecar instead (tools/generate_logger_configs.py wrote those sidecars from these CSVs, verified
+# .toml configuration file instead (tools/generate_logger_configs.py wrote those configuration files from these CSVs, verified
 # byte-identical against this function network-wide, before it and the CSVs were retired). A handful of tools built
 # during that migration (tools/cr10x_calibration_by_file.py, tools/logger_timing_check.py, tools/verify_run_dating.py,
 # tools/build_logger_first_report.py) still read those CSVs for their own analysis and need them regenerated
@@ -459,7 +459,7 @@ def _merge_first_wins(items):
 
 # read_swisscamp10m_cr10x (CR10X_all_station.ini - driven reader for Swiss Camp 10 m's year-embedded CR10X files) was
 # removed 2026-09: superseded by read_configured_files(dir, dedup=False), which reads the same station-wide
-# calibration from each file's own .toml sidecar (tools/generate_logger_configs.py's sc10m_configs wrote those from
+# calibration from each file's own .toml configuration file (tools/generate_logger_configs.py's sc10m_configs wrote those from
 # CR10X_all_station.ini) and, via iter_cr10x_segments's has_year branch, keeps every row with no deduplication -
 # matching this station's historical convention of never dropping a row, even a literal duplicate timestamp.
 # Verified against this function network-wide (dedup=False, same row count, same values) before removal, except for
@@ -622,7 +622,7 @@ def source_windows(prov):
 
 
 def prov_from_windows(windows, index, columns):
-    """inverse of source_windows: frame of source labels (index x columns) rebuilt from the sidecar table"""
+    """inverse of source_windows: frame of source labels (index x columns) rebuilt from the configuration file table"""
     p = pd.DataFrame(np.nan, index=index, columns=columns, dtype=object)
     for r in windows.itertuples():
         if r.variable in p.columns:
@@ -1073,7 +1073,7 @@ def c_level_heights(l0dir, first_cr1000=None, path="./L0/"):
 
 def apply_c_level_corrections(c_all, site, path="metadata/c_level_corrections.csv"):
     """Multiply the values of the C-level files by the factors of metadata/c_level_corrections.csv (site, variable, period).
-    For corrections of the C-level values only: the calibration of the logger files is in their sidecars."""
+    For corrections of the C-level values only: the calibration of the logger files is in their configuration files."""
     if c_all is None or not os.path.isfile(path):
         return c_all
     tab = pd.read_csv(path, comment="#", skipinitialspace=True)
@@ -1106,7 +1106,7 @@ def gapfill_from_c_level(df, l0dir, path="./L0/", logger_prov=None, first_cr1000
     prov = pd.DataFrame(np.nan, index=idx, columns=out.columns, dtype=object)
     have = out.notna()
     prov = prov.mask(have, "logger (L0M)")
-    if logger_prov is not None:      # the logger file every value comes from (L0M/provenance sidecar)
+    if logger_prov is not None:      # the logger file every value comes from (L0M/provenance configuration file)
         lp = logger_prov.reindex(index=idx, columns=out.columns)
         prov = prov.mask(have & lp.notna(), lp)
     h_all, h_prov = c_level_heights(l0dir, first_cr1000, path)

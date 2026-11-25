@@ -90,7 +90,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 ,1999-01-01T00:00:00+00:00,TA3,swap_with_TA4,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
 2006-01-01T00:00:00+00:00,2007-04-26T00:00:00+00:00,TA3,swap_with_TA4,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
 
-# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their sidecars (calibration.ISWR/OSWR in the <file>.toml),
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their configuration files (calibration.ISWR/OSWR in the <file>.toml),
 # those of the C-level files in metadata/c_level_corrections.csv.
 
 # 2026-11-19: ISWR scaled so that the spring (April-May) albedo of dry snow stays at its value of 1996-2004. No document explains the change: the albedo steps from 0.83 (1995-2004 springs
@@ -121,7 +121,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # hs_steps.py end
 
 # hw_corrections.py begin
-# written by tools/hw_corrections.py (2026-11-24): corrections of the level of HW with the matching HS row that leaves HS unchanged
+# written by tools/hw_corrections.py (2026-11-25): corrections of the level of HW with the matching HS row that leaves HS unchanged
 2001-12-31T14:00:00+00:00,2002-12-31T14:00:00+00:00,HW2,add,-1.06,the source changes from the C-level to the logger at 2001-12-31 14 UTC and HW2 - HW1 jumps from 1.20 to 2.22 m in mid winter (an artefact); report of 2002-05-08 W1 1.68 / W2 2.88 and photograph of 2002-05-24 give a spacing of 1.2 to 1.3 m
 2001-12-31T14:00:00+00:00,2002-12-31T14:00:00+00:00,HS2,add,-1.06,pair of the HW2 row above: HS = HW[first] - HW is kept as it was
 # hw_corrections.py end

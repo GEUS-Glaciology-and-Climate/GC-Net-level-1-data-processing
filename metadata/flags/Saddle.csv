@@ -106,7 +106,7 @@ t0,t1,variable,flag,comment,URL_graphic
 2014-03-11T22:00:00+00:00,2014-03-14T19:00:00+00:00,DW2,NAN,in the logger file but absent from the C-level file; 63% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2018-01-27T14:00:00+00:00,2018-01-29T17:00:00+00:00,DW2,NAN,in the logger file but absent from the C-level file; 67% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2018-03-01T11:00:00+00:00,2018-03-04T09:00:00+00:00,DW2,NAN,in the logger file but absent from the C-level file; 90% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
-2008-04-18T15:00:00+00:00,2008-05-03T18:00:00+00:00,HW1,NAN,in the logger file but absent from the C-level file; 80% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+2008-04-18T15:00:00+00:00,2008-05-03T18:00:00+00:00,HW2,NAN,(2026-11-25 moved from HW1 to HW2: the stuck sensor is the one now called HW2) in the logger file but absent from the C-level file; 80% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2016-03-10T04:00:00+00:00,2016-03-17T02:00:00+00:00,HW1,NAN,in the logger file but absent from the C-level file; 64% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2016-03-23T20:00:00+00:00,2016-03-30T22:00:00+00:00,HW1,NAN,in the logger file but absent from the C-level file; 74% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2016-04-08T09:00:00+00:00,2016-05-20T17:00:00+00:00,HW1,NAN,in the logger file but absent from the C-level file; 62% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),

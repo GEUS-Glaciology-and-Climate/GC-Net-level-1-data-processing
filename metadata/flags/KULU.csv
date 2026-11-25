@@ -6,5 +6,5 @@ t0,t1,variable,flag,comment,URL_graphic
 1999-10-01,2000-05-01,TA3 TA4, NAN, bad values (bav),
 
 # hw_corrections.py begin
-1999-07-01T00:00:00+00:00,2000-09-30T00:00:00+00:00,HW2,NAN,HW2 is a copy of HW1 (identical in 100 % of the hours in the logger files) (2026-11-24),
+1999-07-01T00:00:00+00:00,2000-09-30T00:00:00+00:00,HW2,NAN,HW2 is a copy of HW1 (identical in 100 % of the hours in the logger files) (2026-11-25),
 # hw_corrections.py end

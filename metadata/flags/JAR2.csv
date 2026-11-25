@@ -69,3 +69,8 @@ t0,t1,variable,flag,comment,URL_graphic
 2012-10-06T11:00:00+00:00,2012-10-11T21:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 92% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2012-10-28T05:00:00+00:00,2012-11-03T17:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 71% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2012-11-07T13:00:00+00:00,2012-11-17T08:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 98% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+
+# hw_corrections.py begin
+2001-08-30T00:00:00+00:00,2003-07-31T00:00:00+00:00,HW2,NAN,HW2 = HW1 - 0.06 m within 3 cm in every week (a copy); the report of 2004-05-25 has a spacing of 1.44 m (2026-11-25),
+2004-05-27T00:00:00+00:00,2005-03-31T00:00:00+00:00,HW2,NAN,HW2 = HW1 - 0.06 m within 3 cm in every week (a copy) (2026-11-25),
+# hw_corrections.py end

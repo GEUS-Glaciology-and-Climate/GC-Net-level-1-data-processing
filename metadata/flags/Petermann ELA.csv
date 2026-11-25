@@ -60,6 +60,10 @@ t0,t1,variable,flag,comment,URL_graphic
 2012-03-18T04:00:00+00:00,2012-05-25T12:00:00+00:00,P,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 
 # hw_corrections.py begin
-2003-05-25T00:00:00+00:00,2003-07-09T00:00:00+00:00,HW2,NAN,HW2 identical to HW1 hour by hour for 635 h (a copy) (2026-11-24),
-2007-03-24T00:00:00+00:00,2007-04-11T00:00:00+00:00,HW2,NAN,HW2 identical to HW1 hour by hour for 371 h (a copy) (2026-11-24),
+2003-05-25T00:00:00+00:00,2003-07-09T00:00:00+00:00,HW2,NAN,HW2 identical to HW1 hour by hour for 635 h (a copy) (2026-11-25),
+2007-03-24T00:00:00+00:00,2007-04-11T00:00:00+00:00,HW2,NAN,HW2 identical to HW1 hour by hour for 371 h (a copy) (2026-11-25),
+2003-08-06T00:00:00+00:00,2003-09-10T00:00:00+00:00,HW2,NAN,HW2 = HW1 within 3 cm in every week (a copy) (2026-11-25),
+2004-02-25T00:00:00+00:00,2004-05-19T00:00:00+00:00,HW2,NAN,HW2 = HW1 within 3 cm in every week (a copy) (2026-11-25),
+2005-09-14T00:00:00+00:00,2005-10-19T00:00:00+00:00,HW2,NAN,HW2 = HW1 within 3 cm in every week (a copy) (2026-11-25),
+2006-04-12T00:00:00+00:00,2006-05-03T00:00:00+00:00,HW2,NAN,HW2 = HW1 within 3 cm in every week (a copy) (2026-11-25),
 # hw_corrections.py end

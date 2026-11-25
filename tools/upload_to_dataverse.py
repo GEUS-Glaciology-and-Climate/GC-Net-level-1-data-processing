@@ -22,7 +22,7 @@ comparing the md5 of every local file with the one the server reports.
 Pre-flight checks (errors stop the upload): every hourly file has its daily file and the reverse, and the stations are those of
 GC-Net_location.csv; each file is a NEAD file with doi 10.22008/FK2/VVXGUT, a '# fields' line whose length equals the number of columns of the data,
 timestamps without gaps in the format, strictly increasing and without NaT; the ReadMe no longer says that the files have to be regenerated; the
-L1 files are newer than the metadata, the code and the L0 sidecars they were built from (warning otherwise); fields without description in
+L1 files are newer than the metadata, the code and the L0 configuration files they were built from (warning otherwise); fields without description in
 L1_variable_list.csv (warning).
 """
 import os
@@ -38,7 +38,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DOI = "doi:10.22008/FK2/VVXGUT"
 DOI_SHORT = "10.22008/FK2/VVXGUT"
 DEFAULT_SERVER = "https://dataverse.geus.dk"
-TOKEN_FILE = os.path.path("dataverse_token.txt")
+TOKEN_FILE = os.path.join(ROOT, "dataverse_token.txt")
 ROOT_FILES = ["GC-Net_location.csv", "L1_variable_list.csv", "_ReadMe_L1.txt"]
 
 

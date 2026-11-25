@@ -1,8 +1,8 @@
 # Sensors that are read on each other's channel in the C-level files, from t0 to t1 (empty t1 = to the end of the record): the values of var_a and var_b
 # are exchanged when the C-level files are read (liblogger.apply_c_level_swaps), so that the heights HW1/HW2 and HS1/HS2 carry the sensor of their name.
-# The logger files have the same exchange in their sidecars ([[swap_columns]] of <file>.toml). Columns: site, var_a, var_b, t0, t1, reason (no commas).
+# The logger files have the same exchange in their configuration files ([[swap_columns]] of <file>.toml). Columns: site, var_a, var_b, t0, t1, reason (no commas).
 site,var_a,var_b,t0,t1,reason
-South Dome,HW1,HW2,2006-07-20T22:00:00+00:00,,"HW1 is the upper sonic ranger from 2006-07-20 22 UTC (L1 HW2-HW1 = +1.11 m the hour before and -1.00 m the hour after while both booms rise by 1.0 to 1.1 m after the exchange; report 2011-05-30 W1 3.47 and W2 4.60); the CR1000 sidecars from 2009 carry the same exchange"
+South Dome,HW1,HW2,2006-07-20T22:00:00+00:00,,"HW1 is the upper sonic ranger from 2006-07-20 22 UTC (L1 HW2-HW1 = +1.11 m the hour before and -1.00 m the hour after while both booms rise by 1.0 to 1.1 m after the exchange; report 2011-05-30 W1 3.47 and W2 4.60); the CR1000 configuration files from 2009 carry the same exchange"
 South Dome,HS1,HS2,2006-07-20T22:00:00+00:00,,"same exchange for the surface heights of the C-level file"
 Saddle,HW1,HW2,2003-05-01T00:00:00+00:00,2010-04-29T00:00:00+00:00,"HW1 is the upper sonic ranger in the C-level file from the first record of 2003-05-10 to the first CR1000 hour (L1 HW1 - HW2 = +0.8 m in the C-level file; the report of 2003-05-01 has W1 1.03 and W2 2.07 and that of 2004-06-12 after the visit W1 2.64 and W2 3.49 while the C-level file has 1.10 and 1.95 then 2.57 and 3.33; both booms rise together at the visits of 2004-06-12 and 2005-05-26); the CR1000 files (2010-04-30 on) carry the normal labels (report 2011-05-10 W2 3.73 HW2 3.28)"
 Saddle,HS1,HS2,2003-05-01T00:00:00+00:00,2010-04-29T00:00:00+00:00,"same exchange for the surface heights of the C-level file"

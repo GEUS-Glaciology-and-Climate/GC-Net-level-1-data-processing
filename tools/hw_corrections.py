@@ -50,11 +50,20 @@ FLAGS = [
     ("Petermann ELA", "HW2", "2003-05-25T00:00:00+00:00", "2003-07-09T00:00:00+00:00", "HW2 identical to HW1 hour by hour for 635 h (a copy)"),
     ("Petermann ELA", "HW2", "2007-03-24T00:00:00+00:00", "2007-04-11T00:00:00+00:00", "HW2 identical to HW1 hour by hour for 371 h (a copy)"),
     ("JAR1", "HW2", "2010-02-27T00:00:00+00:00", "2010-04-14T00:00:00+00:00", "HW2 identical to HW1 hour by hour for 168 h (a copy)"),
+    # the same series copied with a constant offset: HW2 - HW1 stays within 3 cm for every week of the period (two real sonic rangers never do; DYE-2 and Saddle do not)
+    ("JAR1", "HW1", "2002-09-18T00:00:00+00:00", "2003-04-30T00:00:00+00:00", "HW1 = HW2 - 0.18 m within 3 cm in every week (a copy); the report of 2003-04-26 agrees with HW2 to 0.1 m and puts HW1 0.9 m lower"),
+    ("JAR2", "HW2", "2001-08-30T00:00:00+00:00", "2003-07-31T00:00:00+00:00", "HW2 = HW1 - 0.06 m within 3 cm in every week (a copy); the report of 2004-05-25 has a spacing of 1.44 m"),
+    ("JAR2", "HW2", "2004-05-27T00:00:00+00:00", "2005-03-31T00:00:00+00:00", "HW2 = HW1 - 0.06 m within 3 cm in every week (a copy)"),
+    ("Petermann ELA", "HW2", "2003-08-06T00:00:00+00:00", "2003-09-10T00:00:00+00:00", "HW2 = HW1 within 3 cm in every week (a copy)"),
+    ("Petermann ELA", "HW2", "2004-02-25T00:00:00+00:00", "2004-05-19T00:00:00+00:00", "HW2 = HW1 within 3 cm in every week (a copy)"),
+    ("Petermann ELA", "HW2", "2005-09-14T00:00:00+00:00", "2005-10-19T00:00:00+00:00", "HW2 = HW1 within 3 cm in every week (a copy)"),
+    ("Petermann ELA", "HW2", "2006-04-12T00:00:00+00:00", "2006-05-03T00:00:00+00:00", "HW2 = HW1 within 3 cm in every week (a copy)"),
+    ("Swiss Camp", "HW2", "2003-04-27T00:00:00+00:00", "2003-09-21T00:00:00+00:00", "HW2 = HW1 - 0.20 m within 3 cm in every week (a copy)"),
 ]
 
 
 def block_adj(rows):
-    out = [BEGIN, "# written by tools/hw_corrections.py (2026-11-24): corrections of the level of HW with the matching HS row that leaves HS unchanged"]
+    out = [BEGIN, "# written by tools/hw_corrections.py (2026-11-25): corrections of the level of HW with the matching HS row that leaves HS unchanged"]
     for site, var, t0, t1, d, pair, why in rows:
         out.append("%s,%s,%s,add,%+.2f,%s" % (t0, t1, var, d, why))
         if pair:
@@ -67,7 +76,7 @@ def block_adj(rows):
 def block_flags(rows):
     out = [BEGIN]
     for site, var, t0, t1, why in rows:
-        out.append("%s,%s,%s,NAN,%s (2026-11-24),"  % (t0, t1, var, why))
+        out.append("%s,%s,%s,NAN,%s (2026-11-25),"  % (t0, t1, var, why))
     out.append(END)
     return out
 

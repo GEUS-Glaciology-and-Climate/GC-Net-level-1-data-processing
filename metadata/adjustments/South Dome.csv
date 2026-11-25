@@ -3,7 +3,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1999-04-22T21:30:00+00:00,,HS1,add,1.55,
 2001-06-07T11:00:00+00:00,,HS1,add,3,
 2005-05-26T20:00:00+00:00,,HS1,add,6,Reported visit. SR1 height before/after (m): 0.0/-12.25
-# 2026-11-24: HW1 and HW2 are exchanged from 2006-07-20T22:00 at the reading of the files (sidecars of the CR1000 files and metadata/c_level_swaps.csv). HW1 now rises by 1.11 m and HW2 by 1.00 m at that hour (both booms lifted)
+# 2026-11-24: HW1 and HW2 are exchanged from 2006-07-20T22:00 at the reading of the files (configuration files of the CR1000 files and metadata/c_level_swaps.csv). HW1 now rises by 1.11 m and HW2 by 1.00 m at that hour (both booms lifted)
 # and the rows of the surface height after it follow the sensor: the rows that were written for HS1 (the sonic ranger that is now HW2) are HS2 rows and the other way round.
 2006-07-20T21:30:00+00:00,,HS1,add,1.11,After the exchange of HW1 and HW2 at 22 UTC: HW1 rises by 1.11 m (was +2.1 with the labels before the exchange). Manual shift suggested by bav.
 2007-04-23T01:00:00+00:00,,HS1,add,3.4,Not reported. Manual shift suggested by bav.
@@ -27,7 +27,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2017-05-22T15:00:00+00:00,,HS2,add,2.3,Not reported. Manual shift suggested by bav.
 2019-05-01T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
 
-# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their sidecars (calibration.ISWR/OSWR in the <file>.toml),
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their configuration files (calibration.ISWR/OSWR in the <file>.toml),
 # those of the C-level files in metadata/c_level_corrections.csv.
 
 # air temp correction on HW1 and HW2

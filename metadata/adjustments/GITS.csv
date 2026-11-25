@@ -44,7 +44,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 
 # RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.
 
-# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their sidecars (calibration.ISWR/OSWR in the <file>.toml),
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their configuration files (calibration.ISWR/OSWR in the <file>.toml),
 # those of the C-level files in metadata/c_level_corrections.csv.
 
 # time shift

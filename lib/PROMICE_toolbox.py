@@ -755,12 +755,12 @@ import pytz
 # CR1000 era (and transmissions) can still supply them directly, unaffected by any of this.
 SOURCE_CR10X = None
 SOURCE_CLEVEL = None      # same for the hours taken from a C-level file
-FIRST_CR1000 = None       # first hour of CR1000 logger data of the station (set by the L1 script from the sidecar); None if the station has none
+FIRST_CR1000 = None       # first hour of CR1000 logger data of the station (set by the L1 script from the configuration file); None if the station has none
 
 
 def load_source_mask(site_file_stem, index, columns, source_class="CR10X"):
     """bool frame (index x columns): True where the L0M value comes from `source_class` ('CR10X', 'CR1000' or 'C-level');
-    None if the sidecar file does not exist"""
+    None if the configuration file file does not exist"""
     f = "L0M/provenance/" + site_file_stem + "_source_windows.csv"
     if not os.path.isfile(f):
         return None
@@ -790,7 +790,7 @@ def _sonic_factor(df, var, t0=None, t1=None):
 def sonic_correct_cr10x_hw(df):
     """air-temperature correction of the sonic ranger distance for the hours taken from CR10X logger files.
     A no-op now that HW1/HW2/HS1/HS2 are always taken from C-level for the CR10X era (SOURCE_CR10X is forced False
-    for these columns in the L1 script) - kept for a station where that override could not run, e.g. no sidecar file."""
+    for these columns in the L1 script) - kept for a station where that override could not run, e.g. no configuration file file."""
     if SOURCE_CR10X is None:
         return df
     for var in ("HW1", "HW2"):
@@ -842,7 +842,7 @@ def convert_c_level_rh_to_water(df, mask_c, site, path="metadata/c_level_rh_conv
 
 def _clevel_only(var, t0, t1, df):
     """bool array over df.loc[t0:t1]: True where the legacy RH conversion applies: the value comes from a C-level file
-    (logger values, CR1000 as well as CR10X, are the raw measurement). Everywhere if no sidecar file exists."""
+    (logger values, CR1000 as well as CR10X, are the raw measurement). Everywhere if no configuration file file exists."""
     n = len(df.loc[t0:t1])
     if SOURCE_CLEVEL is None or var not in SOURCE_CLEVEL.columns:
         return np.ones(n, dtype=bool)

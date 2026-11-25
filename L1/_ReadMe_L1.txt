@@ -4,7 +4,7 @@ In Memory of Dr. Konrad (Koni) Steffen
 
 Author: B. Vandecrux
 Contact: bav@geus.dk
-Last update: 2026-11-24 (2026 version of the processing, see "Status" below)
+Last update: 2026-11-25 (2026 version of the processing, see "Status" below)
 
 # Citation
 
@@ -39,8 +39,8 @@ In the L1 dataset, these measurements are cleaned from sensor, station or logger
 
 Additionally, the L1 dataset contains the following derived variables:
 
-	- Surface height (corrected from the shifts in sonic sounder height)
-	- Instrument heights (derived from sonic sounder height and station geometry)
+	- Surface height HS1, HS2, HS_combined (continuous: the steps of the sonic sounder heights at boom lifts and reinstallations are removed; HS_combined is the mean of HS1 and HS2 and is interpolated over gaps of 30 days at most)
+	- Instrument heights HW1 and HW2 (heights of the two sonic sounders above the surface, with the steps of the boom lifts kept; they are not the heights of the temperature, humidity and wind sensors, which are 0.2 to 1.4 m from them)
 	- Inter- or extrapolated temperature, relative humidity and wind speed at respectively 2, 2, and 10 m above the surface
 	- Estimated depth of the subsurface temperature measurements (adjusted for snow accumulation, ice ablation and instrument replacement)
 	- Interpolated firn or ice temperature at 10 m below the surface
@@ -50,7 +50,7 @@ Additionally, the L1 dataset contains the following derived variables:
 
 # Status of this folder
 
-The processing described below (2026 version) is documented in release_note_2026.md at the root of the processing repository. The L1 files of this folder were generated with it (built 2026-11-19 to 2026-11-24). The sections "Calibration" and "Known limitations" describe their state.
+The processing described below (2026 version) is documented in release_note_2026.md at the root of the processing repository. The L1 files of this folder were generated with it (built 2026-11-24 to 2026-11-25). The sections "Calibration" and "Known limitations" describe their state.
 
 # How the data are produced (2026 version)
 
@@ -63,6 +63,7 @@ The processing described below (2026 version) is documented in release_note_2026
 
     - UTC; the time stamp is the end of the averaging interval (timestamp_meaning = end in the header). A repeated time stamp in a cumulative logger download keeps the most recent file.
     - 30 clock corrections (a day, hours or longer) were made with the reanalysis CARRA (surface pressure for the day, shortwave radiation for the hour; adjustments with the function time_shift, at 10 stations). A residual error of up to a day remains possible where a logger run has no usable pressure or sunlight signal.
+    - HW1 is meant to be the lower sonic sounder (at South Dome from 2006-07-20 and at Saddle 2003-2010 the two logger channels are exchanged to give this); periods with HW1 above HW2 that remain are listed in metadata/instrument_height_pair_anomalies.csv of the processing repository.
     - Relative humidity is given with respect to water everywhere and rejected above 105 %. C-level humidity with respect to ice is converted when it fills a gap. RH1/2_wrt_ice_or_water give the form of the raw value.
     - A variable ending in _adj_flag is 1 where an adjustment changed the value (heights, pressure, radiation). Daily values need 18 valid hours.
     - Limits that are enforced include TA3 and TA4 >= -39.5 degC (the probes stop at -39.8 degC), RH 20-105 %, a pressure window per station, and frozen-value filters.
@@ -88,7 +89,10 @@ Not documented, estimated from the data (each is an estimate of the order of 5-1
     - Some station-years remain inconsistent with the dry-snow albedo or with CARRA and are not corrected: Swiss Camp spring 2019, Crawford Point 1 summers after 2005 (albedo about 0.79 after the adjustment), NASA-U 1995-2001, Swiss Camp 10 m since 2014.
     - Humidity in 1999-2008 is 3-10 % higher than in the previous release at several stations (the C-level values carry a temperature-dependent offset that the logger values do not have).
     - The net radiation of LAR2 and LAR3 has the wrong sign.
-    - Open questions are listed in section 8 of release_note_2026.md.
+    - HW1 and HW2 are derived from sonic sounder readings that sit on a separate boom, plus the station geometry and the maintenance shifts. The offset between the sonic reading and the anemometer height is not applied in the same way at all stations (e.g. at DYE-2 HW equals the sonic reading, the anemometers being about 0.5 m higher). The surface height is not affected.
+    - In some periods HW1 is not the lower of the two levels or the distance between them is not that of the station (about 1.0-1.4 m): Crawford Point 1 2010-2012, NGRIP 2003, JAR1 2009-2010, JAR2 2005 and 2011, Petermann ELA 2013-2017, Swiss Camp 2002-2008 and 2021-2022. Where one height series is a copy of the other (JAR1 2002-03 and 2010, JAR2 2001-2005, Petermann ELA 2003 and 2007, Swiss Camp 2003, Petermann Glacier 2002-2006, KULU 1999-2000) it is removed.
+    - HS_combined has gaps wherever both sonic sounders are missing for more than 30 days (the previous release interpolated over every gap).
+    - Open questions are listed in section 8 of release_note_2026.md; the comparison with the previous release in its section 7.
 
 Important links:
 

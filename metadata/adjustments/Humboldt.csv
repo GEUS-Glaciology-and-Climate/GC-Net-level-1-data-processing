@@ -21,6 +21,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2003-05-22T00:00:00+00:00,,HW1,add,1,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW1,add,-1.8,Manually filtered by bav
 # 2026-11-24 switched off by tools/hw_corrections.py: its purpose was the -1.2 m step of HS1 in 2023, which came from the HW1 rows of 2002 to 2009 (corrected above); the raw HW1 is continuous through 2023 (1.52 in 2022-11 to 1.27 in 2023-03)
+# # 2026-11-24 switched off by tools/hw_corrections.py: its purpose was the -1.2 m step of HS1 in 2023, which came from the HW1 rows of 2002 to 2009 (corrected above); the raw HW1 is continuous through 2023 (1.52 in 2022-11 to 1.27 in 2023-03)
+# # 2026-11-24 switched off by tools/hw_corrections.py: its purpose was the -1.2 m step of HS1 in 2023, which came from the HW1 rows of 2002 to 2009 (corrected above); the raw HW1 is continuous through 2023 (1.52 in 2022-11 to 1.27 in 2023-03)
 # 2023-01-01T00:00:00+00:00,,HW1,add,-1.2,Not reported. Manual shift suggested by bav.
 
 2002-03-01T12:00:00+00:00,,HW2,add,0.4,Not reported. Manual shift suggested by bav.
@@ -34,7 +36,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
-# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their sidecars (calibration.ISWR/OSWR in the <file>.toml),
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their configuration files (calibration.ISWR/OSWR in the <file>.toml),
 # those of the C-level files in metadata/c_level_corrections.csv.
 
 # RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.
@@ -59,17 +61,16 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # corrects it from there on). The data of these months are the C-level file's. t1 stops the hour before 2004-08-07 because the first row above has already moved the data of 2004-08-08 into 2004-08-07;
 # the 24 h of 2004-08-06 keep the old stamp (one day of misdated data and one lost, as at every other end of these rows).
 2004-01-01T00:00:00+00:00, 2004-08-06T23:00:00+00:00, *, time_shift, -24, residual clock offset of the C-level file found 2026-11 against CARRA sp
-
-# hw_corrections.py begin
-# written by tools/hw_corrections.py (2026-11-24): corrections of the level of HW with the matching HS row that leaves HS unchanged
-2011-05-15T00:00:00+00:00,,HW1,add,+1.40,L1 HW1 was 1.46 / 1.34 / 1.40 m below the report of 2011-06-01 (3.06) / the report of 2018-05-24 (2.70) / the field book of 2022-06-19 (wind sensor axis 1.66) while the raw logger HW1 is within 0.12 m of all three: the manual row of 2009-05-15 (-1.8) put HW1 1.4 m too low
-2011-05-15T00:00:00+00:00,,HS1,add,+1.40,pair of the HW1 row above: HS = HW[first] - HW is kept as it was
-2011-05-15T00:00:00+00:00,,HW2,add,+1.36,L1 HW2 was 1.36 m below the report of 2011-06-01 (4.29) and the spacing to HW1 would be 0 after the correction of HW1 (field book 2022: wind sensors 1.25 m apart)
-2011-05-15T00:00:00+00:00,,HS2,add,+1.36,pair of the HW2 row above: HS = HW[first] - HW is kept as it was
-# hw_corrections.py end
-
 # hs_steps.py begin
 # written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
 # a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
 2020-11-01T19:00:00+00:00,,HS1,add,-1.85,step removed in HS (boom moved) of HS1: +1.87 m (+1.85 m relative to the other sensor and the climatology) over a gap of 20.2 d
 # hs_steps.py end
+
+# hw_corrections.py begin
+# written by tools/hw_corrections.py (2026-11-25): corrections of the level of HW with the matching HS row that leaves HS unchanged
+2011-05-15T00:00:00+00:00,,HW1,add,+1.40,L1 HW1 was 1.46 / 1.34 / 1.40 m below the report of 2011-06-01 (3.06) / the report of 2018-05-24 (2.70) / the field book of 2022-06-19 (wind sensor axis 1.66) while the raw logger HW1 is within 0.12 m of all three: the manual row of 2009-05-15 (-1.8) put HW1 1.4 m too low
+2011-05-15T00:00:00+00:00,,HS1,add,+1.40,pair of the HW1 row above: HS = HW[first] - HW is kept as it was
+2011-05-15T00:00:00+00:00,,HW2,add,+1.36,L1 HW2 was 1.36 m below the report of 2011-06-01 (4.29) and the spacing to HW1 would be 0 after the correction of HW1 (field book 2022: wind sensors 1.25 m apart)
+2011-05-15T00:00:00+00:00,,HS2,add,+1.36,pair of the HW2 row above: HS = HW[first] - HW is kept as it was
+# hw_corrections.py end

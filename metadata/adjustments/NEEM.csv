@@ -9,7 +9,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 20160523T00:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav.
 20080813T00:00:00+00:00,,HS2,add,1.8,Not reported. Manual shift suggested by bav.
 
-# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their sidecars (calibration.ISWR/OSWR in the <file>.toml),
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their configuration files (calibration.ISWR/OSWR in the <file>.toml),
 # those of the C-level files in metadata/c_level_corrections.csv.
 
 2009-05-30T23:00:00+00:00,,HW1,swap_with_HW2, ,

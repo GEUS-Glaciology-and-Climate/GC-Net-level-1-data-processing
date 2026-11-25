@@ -54,7 +54,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # site_list = site_list.loc[site_list.Name.values == 'Summit',:]
 # site_list = site_list[17:]
 ONLY = None
-ONLY = ["South Dome"]
+ONLY = ["Saddle", "JAR1", "JAR2", "Petermann ELA", "Swiss Camp", "Swiss Camp 10m"]
 if ONLY:
     site_list = site_list.loc[site_list.Name.isin(ONLY), :]
 
@@ -113,8 +113,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
     # logger data are found. The values taken from the C-level files are tracked (mask) because they carry the C-level
     # conventions (RH wrt ice, corrected HW) that the adjustments below only apply to them.
     Msg("## Gap filling with the C-level files at " + site)
-    sidecar = "L0M/provenance/" + L0dir + "_source_windows.csv"
-    sw = pd.read_csv(sidecar) if path.exists(sidecar) else None
+    prov_file = "L0M/provenance/" + L0dir + "_source_windows.csv"
+    sw = pd.read_csv(prov_file) if path.exists(prov_file) else None
     logger_prov = liblogger.prov_from_windows(sw, df.index, list(df.columns)) if (sw is not None and len(df) > 0) else None
     df_logger = df.copy()   # kept as the true raw logger data for the diagnostic tables, before the HW/HS override below
     # first hour of CR1000 data (None if the station has none): the C-level heights are used only before it, and the C-level

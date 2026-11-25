@@ -119,3 +119,7 @@ t0,t1,variable,flag,comment,URL_graphic
 2004-03-20T01:00:00+00:00,2004-03-22T11:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2011-08-30T19:00:00+00:00,2012-05-05T23:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
 2012-05-06T01:00:00+00:00,2012-05-11T19:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+
+# hw_corrections.py begin
+2003-04-27T00:00:00+00:00,2003-09-21T00:00:00+00:00,HW2,NAN,HW2 = HW1 - 0.20 m within 3 cm in every week (a copy) (2026-11-25),
+# hw_corrections.py end

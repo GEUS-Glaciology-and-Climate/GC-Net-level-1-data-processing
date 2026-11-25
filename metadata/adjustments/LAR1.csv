@@ -1,6 +1,6 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-# ISWR/OSWR calibration of LAR1: kept here, applied to the whole series. LAR1 has no logger file with a sidecar (its L0M is the legacy table,
-# raw sensor values), so there is no sidecar to carry it, and the C-level values are NOT multiplied a second time (not in c_level_corrections.csv).
+# ISWR/OSWR calibration of LAR1: kept here, applied to the whole series. LAR1 has no logger file with a configuration file (its L0M is the legacy table,
+# raw sensor values), so there is no configuration file to carry it, and the C-level values are NOT multiplied a second time (not in c_level_corrections.csv).
 , ,ISWR,multiply,2.688, calibration constant D. McGrath
 , ,OSWR,multiply,2.2756, calibration constant D. McGrath
 # 2026-11: step in the albedo at the 2011-11-14 service (last data 2011-11-14, next 2012-01-06; D. McGrath field notes: LAR1 serviced by Koni Steffen and Gino on that day): 0.90 (2009-09 to 2011-11, every month) then 0.70 (2012, every month, winter too).
@@ -9,7 +9,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2011-11-15T00:00:00+00:00,,OSWR,multiply,1.285,OSWR step at the 2011-11-14 service by K. Steffen and Gino (field notes McGrath; albedo 0.90 -> 0.70 with ISWR unchanged)
 
 # Realtive humidity back to water
-# RH wrt ice -> water, whole series (as on main): the L0M of this station is the legacy table (no logger sidecar), whose RH is wrt ice
+# RH wrt ice -> water, whole series (as on main): the L0M of this station is the legacy table (no logger configuration file), whose RH is wrt ice
 # (RH reaches 100% at -25 C, the ice-saturation cap, 82% would be the cap wrt water). So the C-level hours are NOT listed in c_level_rh_convention.csv.
 ,,RH1,ice_to_water,0, issue #43
 ,,RH2,ice_to_water,0, issue #43

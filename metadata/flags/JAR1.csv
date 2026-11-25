@@ -65,5 +65,6 @@ t0,t1,variable,flag,comment,URL_graphic
 2003-12-01T00:00:00+00:00,2005-05-08T00:00:00+00:00,TA3,NAN,TA3 disagrees with TA4 by up to +25 degC then stuck near -19 degC (recovered logger values; release comparison 2026-11),
 
 # hw_corrections.py begin
-2010-02-27T00:00:00+00:00,2010-04-14T00:00:00+00:00,HW2,NAN,HW2 identical to HW1 hour by hour for 168 h (a copy) (2026-11-24),
+2010-02-27T00:00:00+00:00,2010-04-14T00:00:00+00:00,HW2,NAN,HW2 identical to HW1 hour by hour for 168 h (a copy) (2026-11-25),
+2002-09-18T00:00:00+00:00,2003-04-30T00:00:00+00:00,HW1,NAN,HW1 = HW2 - 0.18 m within 3 cm in every week (a copy); the report of 2003-04-26 agrees with HW2 to 0.1 m and puts HW1 0.9 m lower (2026-11-25),
 # hw_corrections.py end

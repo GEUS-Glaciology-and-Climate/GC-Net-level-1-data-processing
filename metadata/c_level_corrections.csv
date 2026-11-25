@@ -1,9 +1,9 @@
 # Corrections of values of the C-level files (the legacy L1 data), applied when these fill a gap (liblogger.apply_c_level_corrections).
-# The calibration of the logger files is in their sidecars (<file>.toml) and never repeated here or in metadata/adjustments.
+# The calibration of the logger files is in their configuration files (<file>.toml) and never repeated here or in metadata/adjustments.
 # Columns: site, variable, t0 and t1 (empty = whole record), multiply (factor applied to the C-level values), reason.
 site,variable,t0,t1,multiply,reason
-NASA-U,OSWR,2003-01-01T00:00:00+00:00,2018-05-22T00:00:00+00:00,2.76205,"C-level OSWR is low by this factor from 2003 (summer albedo 0.30 instead of 0.84); the logger sidecars carry the same factor (issue #55)"
-Crawford Point 1,ISWR,2012-01-01T00:00:00+00:00,,0.934,"the C-level OSWR column carries the OSWR sensor factor 0.934 although the sensors are swapped from 2012 (swap_with_OSWR): the factor moves to the ISWR column, like the calibration_period of the logger sidecars"
+NASA-U,OSWR,2003-01-01T00:00:00+00:00,2018-05-22T00:00:00+00:00,2.76205,"C-level OSWR is low by this factor from 2003 (summer albedo 0.30 instead of 0.84); the logger configuration files carry the same factor (issue #55)"
+Crawford Point 1,ISWR,2012-01-01T00:00:00+00:00,,0.934,"the C-level OSWR column carries the OSWR sensor factor 0.934 although the sensors are swapped from 2012 (swap_with_OSWR): the factor moves to the ISWR column, like the calibration_period of the logger configuration files"
 Crawford Point 1,OSWR,2012-01-01T00:00:00+00:00,,1.0706638,"see above (1/0.934)"
-Swiss Camp,ISWR,2012-05-10T00:00:00+00:00,,0.934,"the C-level OSWR column carries the OSWR sensor factor 0.934 although the sensors are swapped from 2012-05-10 (swap_with_OSWR): the factor moves to the ISWR column, like the calibration_period of the logger sidecars"
+Swiss Camp,ISWR,2012-05-10T00:00:00+00:00,,0.934,"the C-level OSWR column carries the OSWR sensor factor 0.934 although the sensors are swapped from 2012-05-10 (swap_with_OSWR): the factor moves to the ISWR column, like the calibration_period of the logger configuration files"
 Swiss Camp,OSWR,2012-05-10T00:00:00+00:00,,1.0706638,"see above (1/0.934)"

@@ -9,20 +9,20 @@ and illustrated (`figures/L1_gapfill`), and only they receive the legacy C-level
 this folder holds the evidence behind it.
 
 ## Configuration
-Every raw logger file has a `<file>.toml` sidecar next to it (`L0/<station>/<logger> logger files/`): logger type, column names and the
-calibration of each column (`[calibration.<var>]`: `scale` or `scale_pos`/`scale_neg`, `add`, and where it came from). The sidecars are the single
+Every raw logger file has a `<file>.toml` configuration file next to it (`L0/<station>/<logger> logger files/`): logger type, column names and the
+calibration of each column (`[calibration.<var>]`: `scale` or `scale_pos`/`scale_neg`, `add`, and where it came from). The configuration files are the single
 place for decoding and calibration (pressure offset, radiation factors, thermistor factors ...); the station `L0/L0_ini/*_header.ini` files only list the
-output fields. A file without a sidecar is not read. Do not repeat a calibration as a manual adjustment: `metadata/adjustments` is for corrections of the
-measurement itself (sensor swaps, drift, installation heights). The former `CR10X_*.csv` registries were retired once the sidecars were verified against them.
+output fields. A file without a configuration file is not read. Do not repeat a calibration as a manual adjustment: `metadata/adjustments` is for corrections of the
+measurement itself (sensor swaps, drift, installation heights). The former `CR10X_*.csv` registries were retired once the configuration files were verified against them.
 `metadata/c_level_rh_convention.csv` lists the periods where the C-level files hold RH wrt ice (converted to wrt water when they fill a gap), and
 `metadata/c_level_corrections.csv` the factors that correct values of the C-level files (never those of the logger files).
-A sidecar can carry `[[ignore_rows]]` tables (`start`, `end`, `reason`): the rows of that period are dropped when the file is read, e.g. records dated
+A configuration file can carry `[[ignore_rows]]` tables (`start`, `end`, `reason`): the rows of that period are dropped when the file is read, e.g. records dated
 before the installation of the station or the tail of a logger that kept recording after its replacement took over.
-A sidecar can also carry `[[calibration_period]]` tables (`variable`, `start`, `end`, `multiply`, `reason`): a factor applied after the `[calibration.<var>]` scale
+A configuration file can also carry `[[calibration_period]]` tables (`variable`, `start`, `end`, `multiply`, `reason`): a factor applied after the `[calibration.<var>]` scale
 inside a period, for a factor that belongs to a sensor and not to a logger channel (Crawford Point 1 and Swiss Camp: the radiation sensors are swapped from 2012, see `swap_with_OSWR`).
-A sidecar can also carry `[[swap_columns]]` tables (`variables = ["HW1", "HW2"]`, `start`, `end`, `reason`): the two columns (and their `_max/_min/_std` columns) are exchanged inside the period, for two sensors that are read on each other's channel
-(South Dome from 2006-07-20 22 UTC: HW1 is the upper sonic ranger, the CR1000 sidecars from 2009 carry the table). The C-level files have the same exchange in `metadata/c_level_swaps.csv` (site, var_a, var_b, t0, t1, reason; applied in `liblogger._read_c_files`): South Dome from 2006-07-20 22 UTC, Saddle 2003-05-01 to 2010-04-29. The rows of `metadata/adjustments` and `flags` for the heights are written on the labels AFTER the exchange.
-Stations whose L0M is a legacy table without provenance (LAR1-3, KULU) have no sidecar: their calibration (LAR1/LAR2 McGrath constants) and `ice_to_water` rows stay in `metadata/adjustments`.
+A configuration file can also carry `[[swap_columns]]` tables (`variables = ["HW1", "HW2"]`, `start`, `end`, `reason`): the two columns (and their `_max/_min/_std` columns) are exchanged inside the period, for two sensors that are read on each other's channel
+(South Dome from 2006-07-20 22 UTC: HW1 is the upper sonic ranger, the CR1000 configuration files from 2009 carry the table). The C-level files have the same exchange in `metadata/c_level_swaps.csv` (site, var_a, var_b, t0, t1, reason; applied in `liblogger._read_c_files`): South Dome from 2006-07-20 22 UTC, Saddle 2003-05-01 to 2010-04-29. The rows of `metadata/adjustments` and `flags` for the heights are written on the labels AFTER the exchange.
+Stations whose L0M is a legacy table without provenance (LAR1-3, KULU) have no configuration file: their calibration (LAR1/LAR2 McGrath constants) and `ice_to_water` rows stay in `metadata/adjustments`.
 The Python utilities are in `lib/` (`from lib import liblogger`).
 
 ## Evidence tables (this folder)
@@ -74,7 +74,7 @@ before the last logger record. The RH/HW convention of transmission-sourced hour
 ## Other choices
 - The `_max`, `_min`, `_stdev` columns of the C-level files are not read (`libgcnet.read_c_file`): their labels are wrong (a `VW1_max` ranging from -81 to 34 is a temperature). Statistics columns in L0M come from the loggers only.
 - A logger file whose C-level comparison is poor (r < 0.9, e.g. Petermann Glacier 2002 where the C-level radiation is uncalibrated) keeps the station-level factor; the C-level factor is not copied.
-- L1 (`PROMICE_toolbox`): `SOURCE_CR10X` / `SOURCE_CLEVEL` masks come from `L0M/provenance`. HW1/HW2/HS1/HS2 of CR10X-sourced hours are dropped and refilled from the C-level files, so the existing HW adjustments (sonic correction, swaps, offsets) keep their meaning. C-level RH wrt ice is converted to wrt water when it fills a gap (`convert_c_level_rh_to_water`); no `ice_to_water` adjustment rows remain. Without the sidecar files the old behaviour is kept.
+- L1 (`PROMICE_toolbox`): `SOURCE_CR10X` / `SOURCE_CLEVEL` masks come from `L0M/provenance`. HW1/HW2/HS1/HS2 of CR10X-sourced hours are dropped and refilled from the C-level files, so the existing HW adjustments (sonic correction, swaps, offsets) keep their meaning. C-level RH wrt ice is converted to wrt water when it fills a gap (`convert_c_level_rh_to_water`); no `ice_to_water` adjustment rows remain. Without the configuration file files the old behaviour is kept.
 
 ## Report
 See `release_note_2026.md` at the root of the repository.
