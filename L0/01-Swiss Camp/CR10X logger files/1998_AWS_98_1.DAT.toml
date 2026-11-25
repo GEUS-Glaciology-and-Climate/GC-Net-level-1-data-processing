@@ -1,0 +1,50 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 11
+ncols = 41
+column_header = ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "TA1", "TA2", "TA3", "TA4", "_", "_", "_", "VW2", "DW1", "DW2", "P", "HW1", "HW2", "TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "_", "_", "_", "_", "V"]
+[[array.run]]
+row_from = 0
+row_to = 2107
+start_year = 1998
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "documented: C-level factor over 806 h in 1998-1998 (documented 200.0)"
+
+[calibration.NR]
+scale_pos = 80
+scale_neg = 80
+add = 0
+source = "CR1000 header (CR10X-era ISWR implied 199.4 agrees with header 200)"
+
+[calibration.OSWR]
+scale_pos = 77
+scale_neg = 77
+add = 0
+source = "CR1000 header (CR10X-era ISWR implied 199.4 agrees with header 200)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (15 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1.00048
+scale_neg = 1.00048
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 1.00048
+scale_neg = 1.00048
+add = 0
+source = "CR1000 header"
+
+# Radiation of this 1996-98 array-11 layout is not decoded: the ISWR (column 1) and NR (column 4) of the header above give values 2x too high and
+# a wrong NR (-112 W/m2 vs +19 in the C-level), and no raw column matches the C-level ISWR/OSWR better than r=0.93 (the 2000 files give r>0.996).
+# ISWR, OSWR and NR are left unset here, so that the C-level files (Jason) fill them at L1 as on the main branch. See release_note_2026.md.

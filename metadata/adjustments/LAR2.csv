@@ -1,7 +1,15 @@
 t0,t1,variable,adjust_function,adjust_value,comment
+# ISWR/OSWR calibration of LAR2: kept here, applied to the whole series. LAR2 has no logger file with a configuration file (its L0M is the legacy table,
+# raw sensor values), so there is no configuration file to carry it, and the C-level values are NOT multiplied a second time (not in c_level_corrections.csv).
 , ,ISWR,multiply,2.68, calibration constant D. McGrath
 , ,OSWR,multiply,2.88, calibration constant D. McGrath
 
 # Realtive humidity back to water
-,,RH1,ice_to_water,0, 
-,,RH2,ice_to_water,0, 
+# RH wrt ice -> water, whole series (as on main): the L0M of this station is the legacy table (no logger configuration file), whose RH is wrt ice
+# (RH reaches 100% at -25 C, the ice-saturation cap, 82% would be the cap wrt water). So the C-level hours are NOT listed in c_level_rh_convention.csv.
+,,RH1,ice_to_water,0, issue #43
+,,RH2,ice_to_water,0, issue #43
+
+# 2026-11-19: HW1 was lowered by 2.54 m between 2010-05-02 17:00 and 2010-12-09 00:00 (3.34 -> 0.82 m and 0.37 -> 3.09 m in a few hours) while HW2 stayed at 4.8 and 4.4 m.
+# HW1-HW2 is -1.44 m before, -4.0 m during and -1.4 m after; adding 2.54 m gives -1.46 m, so HS1 had a 2.5 m step up and down that the surface did not.
+2010-05-02T17:00:00+00:00,2010-12-09T00:00:00+00:00,HW1,add,2.54,HW1 sensor lowered by 2.54 m for seven months (HW2 unchanged); see comment above

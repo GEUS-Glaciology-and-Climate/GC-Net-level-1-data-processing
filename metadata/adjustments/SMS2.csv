@@ -10,3 +10,10 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2004-08-26T00:00:00+00:00,2005-05-15T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.4,Manually filtered by bav
 2005-09-01T00:00:00+00:00,2006-05-15T00:00:00+00:00,HW1,biweekly_upper_range_filter,0.4,Manually filtered by bav
 
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2003-09-26T00:00:00+00:00,,HS1,add,-0.45,step removed in HS (boom moved) of HS1: +0.45 m (+0.45 m relative to the other sensor and the climatology) over a gap of 0.8 d
+2003-11-21T09:00:00+00:00,,HW1,add,0.26,winter artefact removed in HW of HS1: +0.26 m (+0.26 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2005-10-12T23:00:00+00:00,,HS1,add,-0.43,step removed in HS (boom moved) of HS1: +0.43 m (+0.43 m relative to the other sensor and the climatology) over a gap of 0.0 d
+# hs_steps.py end

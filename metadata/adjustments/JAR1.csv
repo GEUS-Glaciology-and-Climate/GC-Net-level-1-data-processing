@@ -1,6 +1,6 @@
 t0,t1,variable,adjust_function,adjust_value,comment
-# calibration of OSWR with LiCor offset
-2009-05-06T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their configuration files (calibration.ISWR/OSWR in the <file>.toml),
+# those of the C-level files in metadata/c_level_corrections.csv.
 
 2018-02-01T00:00:00+00:00,2019-12-20T00:00:00+00:00,TA3,max_filter,9,Manually flagged by bav
 2013-02-01T00:00:00+00:00,2015-12-20T00:00:00+00:00,TA4,max_filter,9,Manually flagged by bav
@@ -25,3 +25,33 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # time adjustments
 2003-04-24, 2005-05-07, *, time_shift,  24, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/60
 2011-06-01T00:00:00+00:00, 2012-05-09T00:00:00+00:00, *, time_shift,  -745, 
+# RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.
+
+# pressure sensor swap in 2016-17: from 2017-01-13 the logger P is exactly 400 hPa below the C-level P (corr 1.000, same variability) and ~400 hPa below the barometric expectation
+# for 908 m a.s.l.; before 2016 the logger P is correct. The cumulative CR1000 downloads overlap, so this cannot be a per-file decoding offset. See release_note_2026.md.
+2017-01-13T00:00:00+00:00,,P,add,400,JAR1 pressure sensor swap: logger P read without the +400 hPa offset (agrees with C-level once added)
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2005-01-27T00:00:00+00:00,,HW1,add,0.31,winter artefact removed in HW of HS1: +0.39 m (+0.31 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2005-03-28T08:00:00+00:00,,HW1,add,0.23,winter artefact removed in HW of HS1: +0.21 m (+0.23 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2005-08-06T17:00:00+00:00,,HS2,add,-0.39,step removed in HS (boom moved) of HS2: +0.23 m (+0.39 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2006-05-13T23:00:00+00:00,,HS1,add,0.55,step removed in HS (boom moved) of HS1: -0.48 m (-0.55 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2006-12-22T10:00:00+00:00,,HW2,add,0.28,winter artefact removed in HW of HS2: +0.30 m (+0.28 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2008-07-08T00:00:00+00:00,,HS2,add,0.25,step removed in HS (boom moved) of HS2: -0.50 m (-0.25 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2009-07-20T16:00:00+00:00,,HS2,add,-0.49,step removed in HS (boom moved) of HS2: +0.25 m (+0.49 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2009-12-19T08:00:00+00:00,,HW1,add,-0.25,winter artefact removed in HW of HS1: -0.13 m (-0.25 m relative to the other sensor and the climatology) over a gap of 0.4 d
+2010-04-26T09:00:00+00:00,,HS2,add,-0.27,step removed in HS (boom moved) of HS2: +0.25 m (+0.27 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2012-07-28T17:00:00+00:00,,HS1,add,0.28,step removed in HS (boom moved) of HS1: -0.28 m (-0.28 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2015-08-08T14:00:00+00:00,,HS2,add,-0.26,step removed in HS (boom moved) of HS2: +0.23 m (+0.26 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2015-10-13T20:00:00+00:00,,HS2,add,0.41,step removed in HS (boom moved) of HS2: -0.30 m (-0.41 m relative to the other sensor and the climatology) over a gap of 1.2 d
+2015-11-24T12:00:00+00:00,,HS1,add,-0.45,step removed in HS (boom moved) of HS1: +0.46 m (+0.45 m relative to the other sensor and the climatology) over a gap of 3.7 d
+2016-02-26T21:00:00+00:00,,HW2,add,0.30,winter artefact removed in HW of HS2: +0.28 m (+0.30 m relative to the other sensor and the climatology) over a gap of 0.7 d
+2016-03-15T07:00:00+00:00,,HW2,add,0.35,winter artefact removed in HW of HS2: +0.35 m (+0.35 m relative to the other sensor and the climatology) over a gap of 0.3 d
+2016-03-20T06:00:00+00:00,,HW2,add,-0.29,winter artefact removed in HW of HS2: -0.20 m (-0.29 m relative to the other sensor and the climatology) over a gap of 0.8 d
+2016-04-05T02:00:00+00:00,,HS2,add,-0.29,step removed in HS (boom moved) of HS2: +0.23 m (+0.29 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2016-04-08T18:00:00+00:00,,HS2,add,0.27,step removed in HS (boom moved) of HS2: -0.25 m (-0.27 m relative to the other sensor and the climatology) over a gap of 0.2 d
+2005-01-31T20:00:00+00:00,,HW2,add,0.20,winter artefact removed in HW of HS2: +0.25 m (+0.20 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2012-05-13T16:00:00+00:00,,HS1,add,0.62,step removed in HS (boom moved) of HS1: -0.45 m (-0.62 m relative to the other sensor and the climatology) over a gap of 0.0 d
+# hs_steps.py end

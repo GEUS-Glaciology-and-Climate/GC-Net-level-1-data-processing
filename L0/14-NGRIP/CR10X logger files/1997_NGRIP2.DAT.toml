@@ -1,0 +1,44 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 141
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "DW2", "P", "HW1", "HW2"]
+[[array.run]]
+row_from = 0
+row_to = 454
+start_year = 1998
+
+[[array]]
+id = 142
+ncols = 17
+column_header = ["TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "_", "_", "VW2", "_"]
+[[array.run]]
+row_from = 0
+row_to = 454
+start_year = 1998
+
+[calibration.ISWR]
+scale_pos = 73.469
+scale_neg = 73.469
+add = 0
+source = "C-level (Jason file) factor over 217 h in 1997-98; the same as the 2003-2010 NGRIP files"
+
+[calibration.NR]
+scale_pos = 9.29
+scale_neg = 11.7
+add = 0
+source = "C-level (Jason file) factors over 217 h in 1997-98 (positive, negative values)"
+
+[calibration.OSWR]
+scale_pos = 71.429
+scale_neg = 71.429
+add = 0
+source = "C-level (Jason file) factor over 217 h in 1997-98"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "C-level (Jason file) minus the raw value is 400.0 hPa over 217 h; the programs write P minus 400"
+

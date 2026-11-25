@@ -1,0 +1,36 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 17
+ncols = 31
+column_header = ["OSWR", "ISWR", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "RH1", "RH2", "_", "_", "_", "_", "P", "HW1", "HW2", "_", "_"]
+[[array.run]]
+row_from = 0
+row_to = 286
+start_year = 2004
+note = "dated from the file name only (outside the C-level period)"
+
+[calibration.ISWR]
+scale_pos = 203.093
+scale_neg = 203.093
+add = 0
+source = "differs: C-level factor over 287 h in 2004-2004 (documented 1.0)"
+
+[calibration.NR]
+scale_pos = 80
+scale_neg = 64.39
+add = 0
+source = "implied by C-level (1 runs); no station calibration in the repository"
+
+[calibration.OSWR]
+scale_pos = 151.236
+scale_neg = 151.236
+add = 0
+source = "differs: C-level factor over 277 h in 2004-2004 (documented 1.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (5 runs); the programs write P minus 400"
+

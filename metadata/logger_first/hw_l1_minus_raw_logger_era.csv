@@ -1,0 +1,354 @@
+# L1 HW1/HW2 minus the raw logger HW (L0M, CR1000 era) by station and year: the median over the hours in which both exist (sonic temperature correction included, about -0.02 to -0.1 m).
+# L1_label_follows_raw: 'other channel' = the L1 label HW1 is closer to the raw channel HW2 (the CR1000 programs of GITS, Humboldt, NASA-E, NASA-SE, NASA-U, NEEM, Tunu-N, CP1 ... carry the upper sonic ranger on HW1 and the adjustments swap_with_HW2 relabel it).
+# Offsets beyond 0.12 m with the same or the other channel are not raw: they come from open-ended manual HW rows and from the HW rows written by tools/hs_steps.py (see hw_open_adds_into_logger_era.csv).
+# Written 2026-11-24 from the L1 of 2026-11-24 (before the rerun with the exchange of South Dome / Saddle). The field sheets of 2017, 2021 and 2023 side with the raw values.
+site,var,year,L1_label_follows_raw,L1_minus_raw_m,hours
+Swiss Camp 10m,HW1,2014,same channel,-0.02,5657
+Swiss Camp 10m,HW2,2014,same channel,8.98,5657
+Swiss Camp 10m,HW1,2015,other channel,-0.04,8567
+Swiss Camp 10m,HW2,2015,other channel,8.9,8682
+Swiss Camp 10m,HW1,2016,other channel,-0.03,8514
+Swiss Camp 10m,HW2,2016,same channel,8.93,8611
+Swiss Camp 10m,HW1,2017,other channel,-0.01,8370
+Swiss Camp 10m,HW2,2017,other channel,8.93,7598
+Swiss Camp 10m,HW1,2018,other channel,0.04,8147
+Swiss Camp 10m,HW2,2018,other channel,8.9,6986
+Swiss Camp 10m,HW1,2019,other channel,-0.01,2908
+Swiss Camp 10m,HW2,2019,other channel,8.87,2950
+Swiss Camp,HW1,2009,same channel,-0.5,1554
+Swiss Camp,HW2,2009,same channel,-0.1,3366
+Swiss Camp,HW1,2010,same channel,-0.51,5306
+Swiss Camp,HW2,2010,other channel,0.08,4138
+Swiss Camp,HW1,2011,same channel,-0.52,2449
+Swiss Camp,HW2,2011,same channel,0.26,1867
+Swiss Camp,HW1,2012,same channel,0.52,4345
+Swiss Camp,HW2,2012,other channel,1.57,4472
+Swiss Camp,HW1,2013,same channel,0.49,7934
+Swiss Camp,HW2,2013,other channel,1.52,7859
+Swiss Camp,HW1,2014,same channel,0.51,6710
+Swiss Camp,HW2,2014,other channel,1.51,7779
+Swiss Camp,HW1,2015,same channel,0.52,7233
+Swiss Camp,HW2,2015,other channel,1.53,7785
+Swiss Camp,HW1,2016,same channel,0.52,6195
+Swiss Camp,HW2,2016,other channel,1.52,7965
+Swiss Camp,HW1,2017,same channel,0.5,1789
+Swiss Camp,HW2,2017,other channel,1.5,7348
+Swiss Camp,HW1,2018,same channel,0.53,4617
+Swiss Camp,HW2,2018,other channel,1.55,5963
+Swiss Camp,HW1,2019,same channel,0.52,2350
+Swiss Camp,HW2,2019,other channel,1.51,1850
+Swiss Camp,HW1,2021,same channel,0.52,4466
+Swiss Camp,HW2,2021,other channel,1.53,1983
+Swiss Camp,HW1,2022,same channel,0.53,4402
+Swiss Camp,HW2,2022,other channel,0.65,4250
+Crawford Point 1,HW1,1995,same channel,-0.52,5340
+Crawford Point 1,HW2,1995,other channel,0.78,5340
+Crawford Point 1,HW1,1996,same channel,-0.16,8755
+Crawford Point 1,HW2,1996,same channel,-0.39,8756
+Crawford Point 1,HW1,1997,same channel,0.45,6610
+Crawford Point 1,HW2,1997,same channel,0.26,7364
+Crawford Point 1,HW1,1998,same channel,-0.77,1570
+Crawford Point 1,HW2,1998,other channel,0.36,1570
+Crawford Point 1,HW1,1999,same channel,-0.31,3519
+Crawford Point 1,HW2,1999,other channel,0.89,3519
+Crawford Point 1,HW1,2000,same channel,-0.28,8671
+Crawford Point 1,HW2,2000,other channel,0.93,8671
+Crawford Point 1,HW1,2001,same channel,-0.31,8584
+Crawford Point 1,HW2,2001,other channel,0.9,8584
+Crawford Point 1,HW1,2002,same channel,-0.32,3061
+Crawford Point 1,HW2,2002,other channel,0.86,3061
+Crawford Point 1,HW1,2003,same channel,0.04,3191
+Crawford Point 1,HW2,2003,other channel,1.04,3191
+Crawford Point 1,HW1,2008,other channel,-2.08,5679
+Crawford Point 1,HW2,2008,same channel,-0.02,5679
+Crawford Point 1,HW1,2009,other channel,-2.13,7626
+Crawford Point 1,HW2,2009,same channel,-0.05,7622
+Crawford Point 1,HW1,2010,same channel,-1.86,4352
+Crawford Point 1,HW2,2010,other channel,0.27,3355
+Crawford Point 1,HW1,2011,other channel,-0.09,5075
+Crawford Point 1,HW2,2011,other channel,0.2,2200
+Crawford Point 1,HW1,2012,other channel,-0.09,6325
+Crawford Point 1,HW2,2012,other channel,0.04,1500
+Crawford Point 1,HW1,2014,other channel,-0.04,3391
+Crawford Point 1,HW1,2015,other channel,-0.32,2601
+Crawford Point 1,HW1,2016,other channel,-0.27,3011
+Crawford Point 1,HW2,2016,other channel,0.26,3428
+Crawford Point 1,HW1,2017,other channel,-0.29,2197
+Crawford Point 1,HW2,2017,other channel,0.21,4606
+Crawford Point 1,HW2,2018,other channel,0.21,3615
+Crawford Point 1,HW1,2019,other channel,-0.28,3887
+Crawford Point 1,HW2,2019,other channel,0.24,4625
+Crawford Point 1,HW2,2020,other channel,0.23,2924
+NASA-U,HW1,2011,same channel,-0.86,4853
+NASA-U,HW2,2011,other channel,0.22,4902
+NASA-U,HW1,2012,same channel,-0.85,6762
+NASA-U,HW2,2012,other channel,0.24,7373
+NASA-U,HW1,2013,same channel,-0.86,3298
+NASA-U,HW2,2013,other channel,0.26,6650
+NASA-U,HW1,2014,same channel,-0.87,3253
+NASA-U,HW2,2014,other channel,0.29,5490
+NASA-U,HW1,2015,same channel,-0.86,4946
+NASA-U,HW2,2015,other channel,0.33,4221
+NASA-U,HW1,2016,same channel,-0.84,5433
+NASA-U,HW2,2016,other channel,0.31,1823
+NASA-U,HW2,2017,other channel,0.36,372
+NASA-U,HW1,2018,same channel,-0.88,3744
+NASA-U,HW2,2018,other channel,0.34,5059
+NASA-U,HW1,2019,same channel,-0.86,5728
+NASA-U,HW2,2019,other channel,0.31,6614
+NASA-U,HW1,2020,same channel,-0.85,6945
+NASA-U,HW2,2020,other channel,0.32,7141
+NASA-U,HW1,2021,same channel,-0.83,5600
+NASA-U,HW2,2021,other channel,0.33,7131
+NASA-U,HW1,2022,same channel,-0.81,3023
+NASA-U,HW2,2022,other channel,0.36,6456
+GITS,HW1,2010,other channel,0.09,4222
+GITS,HW2,2010,other channel,0.12,4600
+GITS,HW1,2011,other channel,0.05,5779
+GITS,HW2,2011,other channel,0.07,3465
+GITS,HW1,2012,other channel,-0.05,5023
+GITS,HW2,2012,other channel,-0.07,4609
+GITS,HW1,2013,other channel,-0.02,3500
+GITS,HW2,2013,other channel,-0.06,5388
+GITS,HW1,2014,other channel,-0.03,4577
+GITS,HW2,2014,other channel,-0.08,4929
+GITS,HW1,2015,other channel,-0.04,3533
+GITS,HW2,2015,other channel,-0.08,3009
+GITS,HW1,2016,other channel,-0.03,920
+GITS,HW2,2016,other channel,-0.08,1923
+GITS,HW1,2018,other channel,-0.01,664
+GITS,HW2,2018,other channel,-0.05,2764
+GITS,HW2,2019,other channel,-0.04,3136
+GITS,HW2,2020,other channel,-0.03,2595
+Humboldt,HW1,2011,same channel,0.02,4065
+Humboldt,HW2,2011,other channel,1.31,3646
+Humboldt,HW1,2012,same channel,0.03,4327
+Humboldt,HW2,2012,other channel,1.3,3252
+Humboldt,HW1,2013,same channel,-0.04,2419
+Humboldt,HW2,2013,other channel,1.25,4523
+Humboldt,HW1,2014,same channel,0.03,4511
+Humboldt,HW2,2014,other channel,1.31,3737
+Humboldt,HW1,2015,same channel,-0.03,4585
+Humboldt,HW2,2015,other channel,1.29,4435
+Humboldt,HW1,2016,same channel,-0.01,3924
+Humboldt,HW2,2016,other channel,1.32,3240
+Humboldt,HW1,2017,same channel,0.33,3173
+Humboldt,HW2,2017,other channel,1.63,3524
+Humboldt,HW1,2018,same channel,0.03,3067
+Humboldt,HW2,2018,other channel,1.35,4188
+Humboldt,HW1,2019,same channel,0.03,2992
+Humboldt,HW2,2019,other channel,1.35,3636
+Humboldt,HW1,2020,same channel,0.2,1705
+Humboldt,HW2,2020,other channel,1.52,1199
+Humboldt,HW1,2021,same channel,0.0,2291
+Humboldt,HW1,2022,same channel,0.05,3255
+Summit,HW1,2009,same channel,-0.47,4663
+Summit,HW2,2009,same channel,-0.12,4910
+Summit,HW1,2010,same channel,-0.48,7036
+Summit,HW2,2010,same channel,-0.06,7197
+Summit,HW1,2011,same channel,-0.61,6369
+Summit,HW2,2011,same channel,0.08,5837
+Summit,HW1,2012,same channel,-0.57,6473
+Summit,HW2,2012,same channel,0.11,6225
+Summit,HW1,2013,same channel,-0.56,7336
+Summit,HW2,2013,same channel,0.11,7128
+Summit,HW1,2014,same channel,-0.53,6889
+Summit,HW2,2014,same channel,0.14,6319
+Summit,HW1,2015,same channel,-0.51,7755
+Summit,HW2,2015,same channel,0.16,6917
+Summit,HW1,2016,same channel,-0.51,7167
+Summit,HW2,2016,same channel,0.16,6768
+Summit,HW1,2017,same channel,-0.53,5501
+Summit,HW2,2017,same channel,0.15,5910
+Summit,HW1,2018,same channel,-0.53,5168
+Summit,HW2,2018,same channel,0.16,3589
+Summit,HW1,2019,same channel,-0.51,4271
+Summit,HW2,2019,same channel,0.2,4175
+Summit,HW1,2020,same channel,-0.52,7434
+Summit,HW2,2020,same channel,0.19,5451
+Summit,HW1,2021,same channel,-0.49,7682
+Summit,HW2,2021,same channel,0.2,6202
+Summit,HW1,2022,same channel,-0.45,6786
+Summit,HW2,2022,same channel,0.25,4736
+Tunu-N,HW1,2013,same channel,-0.29,4508
+Tunu-N,HW2,2013,other channel,0.69,3541
+Tunu-N,HW1,2014,same channel,-0.29,7767
+Tunu-N,HW2,2014,other channel,0.69,4187
+Tunu-N,HW1,2015,other channel,-0.12,7493
+Tunu-N,HW2,2015,other channel,0.76,3251
+Tunu-N,HW1,2016,other channel,-0.11,7760
+Tunu-N,HW2,2016,other channel,0.72,4086
+Tunu-N,HW1,2017,other channel,-0.04,5743
+Tunu-N,HW2,2017,other channel,0.63,3942
+Tunu-N,HW1,2018,other channel,-0.12,5310
+Tunu-N,HW1,2019,other channel,-0.19,3100
+DYE-2,HW1,2009,same channel,-0.02,860
+DYE-2,HW2,2009,same channel,-0.03,1376
+DYE-2,HW1,2010,same channel,-0.06,5115
+DYE-2,HW1,2011,same channel,-0.16,6847
+DYE-2,HW1,2012,same channel,-0.12,7091
+DYE-2,HW1,2013,same channel,-0.13,7114
+DYE-2,HW1,2014,same channel,-0.12,7478
+DYE-2,HW2,2014,same channel,-0.09,4133
+DYE-2,HW1,2015,same channel,-0.15,2599
+DYE-2,HW2,2015,same channel,-0.12,7344
+DYE-2,HW2,2016,same channel,-0.07,5884
+DYE-2,HW2,2017,same channel,-0.11,3987
+DYE-2,HW1,2018,same channel,-0.08,4704
+DYE-2,HW2,2018,same channel,-0.17,3199
+DYE-2,HW1,2019,same channel,-0.09,7844
+DYE-2,HW2,2019,same channel,-0.08,4531
+DYE-2,HW1,2020,same channel,-0.08,7179
+DYE-2,HW2,2020,same channel,-0.09,7841
+DYE-2,HW1,2021,same channel,-0.06,3794
+DYE-2,HW2,2021,same channel,-0.1,7398
+DYE-2,HW1,2022,same channel,-0.06,4342
+DYE-2,HW2,2022,same channel,-0.07,5790
+DYE-2,HW1,2023,same channel,-0.07,2403
+JAR1,HW1,2009,other channel,0.43,4750
+JAR1,HW2,2009,same channel,0.43,4214
+JAR1,HW1,2010,other channel,0.22,4431
+JAR1,HW2,2010,same channel,0.44,2690
+JAR1,HW1,2011,other channel,0.96,960
+JAR1,HW2,2011,same channel,1.73,592
+JAR1,HW1,2012,same channel,0.29,4254
+JAR1,HW2,2012,same channel,0.45,3369
+JAR1,HW1,2014,same channel,0.3,2236
+JAR1,HW2,2014,same channel,0.49,2002
+JAR1,HW1,2015,same channel,0.27,4368
+JAR1,HW2,2015,same channel,0.46,1795
+JAR1,HW1,2016,same channel,0.2,2110
+JAR1,HW2,2016,same channel,0.82,3483
+JAR1,HW1,2017,same channel,0.29,2096
+JAR1,HW2,2017,same channel,0.8,4749
+JAR1,HW1,2018,same channel,0.25,3780
+JAR1,HW2,2018,same channel,0.77,3520
+JAR1,HW1,2019,same channel,0.22,1721
+JAR1,HW2,2019,same channel,0.73,1339
+Saddle,HW2,2010,same channel,-0.09,4900
+Saddle,HW2,2011,same channel,-0.14,7218
+Saddle,HW2,2012,same channel,-0.1,2873
+Saddle,HW2,2013,same channel,-0.05,4841
+Saddle,HW1,2014,same channel,0.58,2446
+Saddle,HW2,2014,same channel,-0.08,6958
+Saddle,HW2,2015,same channel,-0.16,5194
+Saddle,HW1,2016,same channel,0.59,3414
+Saddle,HW2,2016,same channel,-0.07,5742
+Saddle,HW1,2017,same channel,0.58,3322
+Saddle,HW2,2017,same channel,-0.07,8183
+Saddle,HW1,2018,same channel,0.56,4764
+Saddle,HW2,2018,same channel,-0.08,841
+Saddle,HW1,2019,same channel,0.58,5226
+Saddle,HW2,2019,same channel,-0.06,4686
+Saddle,HW2,2020,same channel,-0.12,3128
+Saddle,HW2,2021,other channel,0.06,2762
+South Dome,HW1,2009,other channel,-0.12,4886
+South Dome,HW2,2009,other channel,-0.1,5034
+South Dome,HW1,2010,other channel,-0.1,4898
+South Dome,HW2,2010,other channel,-0.1,658
+South Dome,HW1,2011,other channel,-0.15,2294
+South Dome,HW2,2011,other channel,-0.1,3942
+South Dome,HW2,2012,other channel,-0.09,6090
+South Dome,HW2,2013,other channel,-0.09,5107
+South Dome,HW1,2014,other channel,-0.08,4282
+South Dome,HW2,2014,other channel,-0.07,5480
+South Dome,HW1,2015,other channel,-0.14,6692
+South Dome,HW2,2015,other channel,-0.09,7452
+South Dome,HW1,2016,other channel,-0.12,7653
+South Dome,HW2,2016,other channel,-0.07,7460
+South Dome,HW1,2017,other channel,-0.11,4558
+South Dome,HW2,2017,other channel,-0.08,6278
+South Dome,HW2,2018,other channel,-0.07,3050
+South Dome,HW2,2019,other channel,-0.08,2185
+South Dome,HW2,2020,other channel,-0.1,2357
+NASA-E,HW1,2011,other channel,-0.04,2380
+NASA-E,HW2,2011,other channel,-0.15,4614
+NASA-E,HW2,2012,other channel,-0.15,7547
+NASA-E,HW2,2013,other channel,-0.12,5865
+NASA-E,HW2,2014,other channel,-0.11,6710
+NASA-E,HW1,2015,other channel,-0.06,2649
+NASA-E,HW2,2015,other channel,-0.14,7598
+NASA-E,HW2,2016,other channel,-0.18,7829
+NASA-E,HW2,2017,other channel,-0.15,7208
+NASA-E,HW2,2018,other channel,-0.08,4002
+NASA-E,HW2,2019,other channel,-0.09,4240
+NASA-E,HW2,2020,other channel,-0.09,4717
+NASA-E,HW1,2021,other channel,-0.04,2509
+NASA-E,HW2,2021,other channel,-0.09,3911
+NASA-E,HW1,2022,other channel,-0.03,1503
+NASA-E,HW2,2022,other channel,-0.1,1915
+NASA-SE,HW2,2009,same channel,-0.03,2558
+NASA-SE,HW2,2010,same channel,1.44,2709
+NASA-SE,HW1,2011,other channel,0.4,4489
+NASA-SE,HW2,2011,other channel,0.18,3075
+NASA-SE,HW1,2012,other channel,0.42,7553
+NASA-SE,HW2,2012,other channel,0.11,1402
+NASA-SE,HW1,2013,other channel,0.4,6894
+NASA-SE,HW1,2014,other channel,0.33,6007
+NASA-SE,HW2,2014,other channel,0.34,4852
+NASA-SE,HW1,2015,other channel,0.34,3186
+NASA-SE,HW2,2015,other channel,0.51,7145
+NASA-SE,HW1,2016,other channel,0.29,4816
+NASA-SE,HW2,2016,other channel,0.59,5144
+NASA-SE,HW1,2017,other channel,0.3,7039
+NASA-SE,HW2,2017,other channel,0.57,4839
+NASA-SE,HW1,2018,other channel,0.31,5167
+NASA-SE,HW2,2018,other channel,0.56,4422
+NASA-SE,HW1,2019,other channel,0.34,4861
+NASA-SE,HW2,2019,other channel,0.52,1545
+JAR2,HW1,2009,same channel,0.0,3709
+JAR2,HW1,2010,same channel,0.0,600
+JAR2,HW1,2011,same channel,1.2,2490
+JAR2,HW2,2011,other channel,0.74,3346
+JAR2,HW2,2012,same channel,0.08,2110
+Petermann ELA,HW1,2011,same channel,0.0,2541
+Petermann ELA,HW1,2012,same channel,-0.01,5343
+Petermann ELA,HW2,2012,same channel,0.0,5253
+Petermann ELA,HW1,2013,same channel,-0.02,7429
+Petermann ELA,HW2,2013,same channel,-0.03,8600
+Petermann ELA,HW1,2014,same channel,-0.02,5468
+Petermann ELA,HW2,2014,same channel,-0.03,8520
+Petermann ELA,HW2,2015,same channel,-0.06,5963
+Petermann ELA,HW1,2016,same channel,-0.04,3942
+Petermann ELA,HW2,2016,same channel,-0.04,3736
+Petermann ELA,HW1,2017,same channel,-0.07,5504
+Petermann ELA,HW2,2017,same channel,-0.02,2010
+Petermann ELA,HW1,2018,same channel,-0.11,1653
+NEEM,HW1,2009,other channel,-0.03,3753
+NEEM,HW2,2009,other channel,-0.07,3804
+NEEM,HW1,2010,other channel,-0.03,3849
+NEEM,HW2,2010,other channel,-0.09,3801
+NEEM,HW2,2011,other channel,-0.28,2192
+NEEM,HW1,2012,other channel,-0.08,4084
+NEEM,HW2,2012,other channel,-0.13,5413
+NEEM,HW1,2013,other channel,-0.08,6332
+NEEM,HW2,2013,other channel,-0.13,5213
+NEEM,HW1,2014,other channel,-0.05,7774
+NEEM,HW2,2014,other channel,-0.11,6573
+NEEM,HW1,2015,other channel,-0.02,4206
+NEEM,HW2,2015,other channel,-0.07,5513
+NEEM,HW1,2016,other channel,-0.05,4287
+NEEM,HW2,2016,other channel,-0.08,3186
+NEEM,HW1,2017,other channel,-0.04,2406
+NEEM,HW2,2017,other channel,-0.07,1254
+NEEM,HW1,2018,other channel,-0.04,3517
+NEEM,HW2,2018,other channel,-0.09,4677
+NEEM,HW1,2019,other channel,-0.02,2283
+NEEM,HW2,2019,other channel,-0.06,5145
+NEEM,HW2,2020,other channel,-0.07,6407
+NEEM,HW2,2021,other channel,-0.09,1637
+EastGRIP,HW1,2014,same channel,-0.03,4198
+EastGRIP,HW2,2014,same channel,1.16,4923
+EastGRIP,HW1,2015,same channel,-0.02,5851
+EastGRIP,HW2,2015,same channel,1.16,8112
+EastGRIP,HW1,2016,same channel,-0.07,5915
+EastGRIP,HW2,2016,same channel,1.15,5034
+EastGRIP,HW1,2017,same channel,-0.1,8258
+EastGRIP,HW2,2017,same channel,1.09,7326
+EastGRIP,HW1,2018,same channel,-0.08,8226
+EastGRIP,HW2,2018,same channel,1.11,8180
+EastGRIP,HW1,2019,same channel,-0.05,8535
+EastGRIP,HW2,2019,same channel,1.14,8396
+EastGRIP,HW1,2020,same channel,-0.03,7049
+EastGRIP,HW2,2020,same channel,1.16,7799
+EastGRIP,HW2,2021,same channel,1.17,1743

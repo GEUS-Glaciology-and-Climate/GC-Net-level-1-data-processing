@@ -10,3 +10,6 @@ t0,t1,variable,flag,comment,URL_graphic
 1997-08-12T00:00:00+00:00,1997-10-01T00:00:00+00:00,TS7,NAN,Manually flagged by bav,
 1997-08-12T00:00:00+00:00,1997-10-01T00:00:00+00:00,TS8,NAN,Manually flagged by bav,
 1997-08-12T00:00:00+00:00,1997-10-01T00:00:00+00:00,TS9,NAN,Manually flagged by bav,
+2001-04-13T00:00:00+00:00,2001-04-13T23:00:00+00:00,DW2,NAN,in the logger file but absent from the C-level file; 62% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+1999-02-23T16:00:00+00:00,1999-02-24T16:00:00+00:00,VW1,NAN,in the logger file but absent from the C-level file; 100% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),
+1999-02-23T15:00:00+00:00,1999-02-24T14:00:00+00:00,VW2,NAN,in the logger file but absent from the C-level file; 92% of the hours are flat runs (sensor stuck) (logger-first review 2026-09),

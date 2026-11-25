@@ -1,0 +1,55 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 12
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "DW2", "P", "HW1", "HW2"]
+[[array.run]]
+row_from = 0
+row_to = 16618
+start_year = 2001
+
+[[array]]
+id = 2
+ncols = 17
+column_header = ["TS10", "TS9", "TS8", "TS7", "TS6", "TS5", "TS4", "TS3", "TS2", "TS1", "TA3", "TA4", "VW2", "V"]
+[[array.run]]
+row_from = 0
+row_to = 16618
+start_year = 2001
+
+[calibration.ISWR]
+scale_pos = 71.429
+scale_neg = 71.429
+add = 0
+source = "documented: C-level factor over 7563 h in 2001-2003 (documented 71.4286)"
+
+[calibration.NR]
+scale_pos = 11.7
+scale_neg = 9.79
+add = 0
+source = "documented: C-level factor over 4087 h in 2001-2003 (documented 11.7) / documented: C-level factor over 1752 h in 2001-2003 (documented 9.79)"
+
+[calibration.OSWR]
+scale = 66.078912
+add = 0
+source = "documented 70.7483 x 0.934 (LiCor), as in the 2013+ CR1000 files; was fitted to the C-level file (61-63). V11 = this value hour by hour (new/V11 OSWR 0.94 in 2004-2007), albedo 0.84 as after 2010"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (3 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 0.99802
+scale_neg = 0.99802
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 0.99802
+scale_neg = 0.99802
+add = 0
+source = "CR1000 header"
+

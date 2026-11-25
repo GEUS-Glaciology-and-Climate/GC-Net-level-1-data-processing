@@ -1,0 +1,48 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 9
+ncols = 27
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "TA3", "TA4", "_", "_", "VW1", "VW2", "DW1", "DW2", "P", "HW2", "_", "_", "_", "_", "_", "_", "_", "_", "_"]
+[[array.run]]
+row_from = 0
+row_to = 16945
+start_year = 1996
+# 2026-11: was 1997. Daily pressure matches CARRA sp one year earlier (r 0.94 / 1.00); the run then starts right after the installation (1996-06-19).
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "documented: C-level factor over 7449 h in 1997-1999 (documented 200.0)"
+
+[calibration.NR]
+scale_pos = 9.29
+scale_neg = 11.53
+add = 0
+source = "CR1000 header (CR10X-era ISWR implied 196.5 agrees with header 200)"
+
+[calibration.OSWR]
+scale_pos = 186.8
+scale_neg = 186.8
+add = 0
+source = "differs: C-level factor over 7147 h in 1997-1999 (documented 200.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (1 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1.00029
+scale_neg = 1.00029
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 1.00029
+scale_neg = 1.00029
+add = 0
+source = "CR1000 header"
+

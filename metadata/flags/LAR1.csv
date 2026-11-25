@@ -1,2 +1,4 @@
 t0,t1,variable,flag,comment,URL_graphic
 
+# 2026-11: pressure constant to +-0.4 hPa (std 0.36) for 51 days while LAR2 and LAR3 vary by several hPa
+2009-03-31T00:00:00+00:00,2009-05-22T00:00:00+00:00,P,NAN,near-constant pressure (std 0.36 hPa over 1218 h; neighbours vary) (release comparison 2026-11),

@@ -1,0 +1,55 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 5
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "_", "_", "VW1", "VW2", "_", "P", "HW1", "HW2", "TS10"]
+[[array.run]]
+row_from = 0
+row_to = 10535
+start_year = 2006
+
+[[array]]
+id = 52
+ncols = 17
+column_header = ["_", "TS2", "TS3", "TS5", "_", "TS6", "TS7", "TS8", "TS9", "TS1", "TA3", "TA4", "DW1", "_"]
+[[array.run]]
+row_from = 0
+row_to = 10535
+start_year = 2006
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "differs: C-level factor over 4880 h in 2006-2007 (documented 77.0)"
+
+[calibration.NR]
+scale_pos = 8.062
+scale_neg = 9.021
+add = 0
+source = "differs: C-level factor over 1088 h in 2006-2007 (documented 9.35) / differs: C-level factor over 1775 h in 2006-2007 (documented 11.66)"
+
+[calibration.OSWR]
+scale = 186.8
+add = 0
+source = "documented 200 x 0.934 (LiCor), as the 1996-2002 files; was fitted to the C-level file (174-178). V11 = this value in 2006-07 (new/V11 OSWR 0.95)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (8 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "implied by C-level"
+
+[calibration.TA4]
+scale_pos = 0.99995
+scale_neg = 0.99995
+add = 0
+source = "implied by C-level"
+

@@ -17,8 +17,8 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
-# calibration of OSWR with LiCor offset
-2011-06-02T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their configuration files (calibration.ISWR/OSWR in the <file>.toml),
+# those of the C-level files in metadata/c_level_corrections.csv.
 
 2011-06-02T00:00:00+00:00,,HW1,swap_with_HW2,,
 
@@ -36,7 +36,14 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2011-06-02T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2011-06-02T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
-1996-01-01T00:00:00+00:00,2011-06-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
-1996-01-01T00:00:00+00:00,2011-06-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
+# RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.
 
 2019-05-22T00:00:00+00:00, , DW2, swap_with_DW1, 0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/96
+
+# 2026-11: clock of the logger file 2011_nasae1.dat. From the service of 2006-05-03 (first hour of this file's data in L0M) until 2008-11, the ISWR lags the
+# CARRA ssrd by 4 h in the monthly lag scan, where every other period of the station (and V11) lags by 2 h (the offset of the scan convention): the stamps are 2 h
+# too late, so the data are moved 2 h earlier (val = -2). Checked in 2006-05..2007-09 (r 0.93-0.99 at the best lag; 2006-04 is on the +2 h lag). The
+# 2008-03-23 to 2008-11 part has too little sunlit data to check, it is assumed to share the clock of the rest of the file (the 934 h of 2008_NASA_e_08.dat in
+# between, in the polar night, are left as they are).
+2006-05-03T17:00:00+00:00,2008-02-13T17:00:00+00:00,*,time_shift,-2,logger clock 2 h late in 2011_nasae1.dat (ISWR vs CARRA ssrd lag scan 2026-11)
+2008-03-23T16:00:00+00:00,2008-11-19T11:00:00+00:00,*,time_shift,-2,same file and clock as above (not checkable: little sunlit data)

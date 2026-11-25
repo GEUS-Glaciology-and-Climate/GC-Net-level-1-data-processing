@@ -1,0 +1,46 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 16
+ncols = 31
+column_header = ["ISWR", "OSWR", "NR", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "TA1", "TA2", "TA3", "_", "RH1", "_", "_", "VW2", "DW1", "DW2", "P", "_", "HW1", "_", "V"]
+[[array.run]]
+row_from = 0
+row_to = 18045
+start_year = 1999
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "differs: C-level factor over 8328 h in 1999-2001 (documented 1.0)"
+
+[calibration.NR]
+scale_pos = 9.51
+scale_neg = 10.957
+add = 0
+source = "differs: C-level factor over 1434 h in 1999-2001 (documented 1.0) / differs: C-level factor over 6007 h in 1999-2001 (documented 1.0)"
+
+[calibration.OSWR]
+scale_pos = 182
+scale_neg = 182
+add = 0
+source = "differs: C-level factor over 8183 h in 1999-2001 (documented 1.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (1 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "implied by C-level"
+
+
+[[ignore_rows]]
+start = "1900-01-01 00:00:00"
+end = "1999-05-18 23:00:00"
+reason = "records dated before the installation of the station (1999-05-19, location table)"

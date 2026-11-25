@@ -1,7 +1,9 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 
 # Realtive humidity back to water
-,,RH1,ice_to_water,0, 
-,,RH2,ice_to_water,0, 
+# RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.
 
 ,,TA3,min_filter,-20, 
+
+# 2026-11: clock one day early in both logger files (2000_aurora.dat, 2001_aurora.dat; final L1 pressure vs CARRA sp: r 0.94-0.96 at -1 d against 0.72-0.84 at 0 in every quarter of the record).
+2000-06-25T10:00:00+00:00, 2001-05-06T00:00:00+00:00, *, time_shift, 24, clock one day early - found 2026-11 against CARRA sp

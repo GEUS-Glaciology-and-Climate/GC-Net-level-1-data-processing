@@ -14,12 +14,15 @@ This repository contains scripts used to clean, adjust and interpolate GC-Net da
 - [Overview of the L1 data availability](out/L1_overview/data_availability.png)
 - [Overview of the L1 air temperature](out/L1_air_temperature_overview_toc.md)
 - Overview of the surface height data for the [accumulation sites](figures/L1_overview/HS_overview_accum.png) and for the [ablation sites](figures/L1_overview/HS_overview_abl.png)
+- [Release note 2026](release_note_2026.md)
 - [Report of the data treatment](out/report_with_toc.md)
 - [Air temperature diagnostic](out/L1_air_temperature_diagnostic_toc.md)
 - [Instrument height assessment](out/L1_intrument_heights_toc.md)
 
 ## Dataset and processing overview
-[![image](https://user-images.githubusercontent.com/35140661/211565684-4101ca83-4440-4610-b9a5-621eda120ed5.png)](https://docs.google.com/presentation/d/1p9Z7g7ZOYZ3aiXRJMUF1gz6hb4260d0f4XUG64YiP4Y/edit?usp=sharing)
+![Dataset and processing overview](figures/overview/processing_overview.png)
+
+The scripts `GC-Net-level-0-data-processing.py` and `GC-Net-level-1-data-processing.py` are run from the repository root; the utilities they import are in [lib/](lib), and what changed in the 2026 reprocessing is in the [release note](release_note_2026.md).
 
 ## Usage
 

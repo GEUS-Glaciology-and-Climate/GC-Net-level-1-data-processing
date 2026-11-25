@@ -37,7 +37,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # 'GITS', 'Humboldt', 'Summit', 'Tunu-N', 'DYE2', 'JAR1', 'Saddle',
 # 'South Dome', 'NASA-E', 'CP2', 'NGRIP', 'NASA-SE', 'KAR', 'JAR 2',
 # 'KULU', 'Petermann ELA', 'NEEM', 'E-GRIP'
-site_list = site_list.loc[site_list.Name.values == 'Summit',:]
+# site_list = site_list.loc[site_list.Name.values == 'Summit',:]
 
 for site, ID in zip(site_list.Name, site_list.ID):
     print("# " + str(ID) + " " + site)
@@ -105,14 +105,14 @@ for site, ID in zip(site_list.Name, site_list.ID):
     )
 
     fig = plt.figure(figsize=(20, 6))
-    ax = plt.subplot(1,2,1) 
+    ax = plt.subplot(1,2,1)
 
     sym_size = 10
 
     plt.plot(np.nan,np.nan,'w',label='adjusted from sonic rangers:')
     df["HW1"].plot(ax=ax, c="C0", label="HW1")
     df["HW2"].plot(ax=ax, c="C1", label="HW2")
-    
+
     # Plotting observed instrument heights
     if obs_df[useful_columns].notnull().sum().sum() > 0:
         plt.plot(np.nan,np.nan,'w',label='from field reports:')
@@ -152,6 +152,20 @@ for site, ID in zip(site_list.Name, site_list.ID):
             markeredgecolor='k',
             label="HW2 after maintenance",
         )
+
+    # reported values that do not agree with the L1 (tools/check_instrument_height_references.py): ringed in red
+    try:
+        chk = pd.read_csv("metadata/instrument_height_reference_check.csv")
+        chk = chk.loc[chk.site == site, :]
+        chk["date"] = pd.to_datetime(chk["date"], utc=True)
+        first = True
+        for _, r in chk.iterrows():
+            plt.plot(r["date"], r["reported_m"], ">" if "before" in r["value"] else "<", markersize=sym_size + 5,
+                     markerfacecolor="none", markeredgecolor="r", markeredgewidth=1.5,
+                     label="reported value not in line with L1 (see metadata/instrument_height_reference_check.csv)" if first else None)
+            first = False
+    except Exception as e:
+        print("No reference check available:", e)
 
     scale = 0.45/0.277
     if site == 'Tunu-N':
@@ -202,11 +216,8 @@ for site, ID in zip(site_list.Name, site_list.ID):
         bbox_inches="tight",
         dpi=250,
     )
-    plt.savefig(
-        "./" + site.replace(" ", "") + "_height_comparison.pdf", format='pdf',
-        bbox_inches="tight",
-    )
-    
+    plt.close()
+
     print(
         "![](../figures/L1_overview/instrument_height_assessment/"
         + site.replace(" ", "")

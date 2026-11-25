@@ -1,0 +1,81 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 12
+ncols = 17
+column_header = ["ISWR", "OSWR", "_", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "_", "_", "P", "HW1", "HW2"]
+[[array.run]]
+row_from = 0
+row_to = 26060
+start_year = 2005
+[[array.run]]
+row_from = 26061
+row_to = 52121
+start_year = 2005
+
+[[array]]
+id = 12
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "_", "_", "P", "HW1", "HW2"]
+[[array.run]]
+row_from = 52122
+row_to = 66615
+start_year = 2005
+
+[[array]]
+id = 2
+ncols = 17
+column_header = ["TS10", "TS9", "_", "TS7", "TS6", "TS5", "TS4", "TS3", "TS2", "TS1", "TA3", "TA4", "VW2", "_"]
+[[array.run]]
+row_from = 0
+row_to = 26040
+start_year = 2005
+[[array.run]]
+row_from = 26041
+row_to = 52081
+start_year = 2005
+
+[[array]]
+id = 2
+ncols = 17
+column_header = ["TS10", "TS9", "_", "TS7", "TS6", "TS5", "TS4", "TS3", "TS2", "TS1", "TA3", "TA4", "VW2", "V"]
+[[array.run]]
+row_from = 52082
+row_to = 66560
+start_year = 2005
+
+[calibration.ISWR]
+scale_pos = 71.429
+scale_neg = 71.429
+add = 0
+source = "documented: C-level factor over 8575 h in 2005-2008 (documented 71.4286)"
+
+[calibration.NR]
+scale_pos = 11.327
+scale_neg = 9.79
+add = 0
+source = "differs: C-level factor over 3597 h in 2005-2007 (documented 11.7) / documented: C-level factor over 1307 h in 2006-2007 (documented 9.79)"
+
+[calibration.OSWR]
+scale = 66.078912
+add = 0
+source = "documented 70.7483 x 0.934 (LiCor), as in the 2013+ CR1000 files; was fitted to the C-level file (61-63). V11 = this value hour by hour (new/V11 OSWR 0.94 in 2004-2007), albedo 0.84 as after 2010"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (3 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 0.99802
+scale_neg = 0.99802
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 0.99802
+scale_neg = 0.99802
+add = 0
+source = "CR1000 header"
+

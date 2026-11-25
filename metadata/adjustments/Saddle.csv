@@ -3,8 +3,6 @@ t0,t1,variable,adjust_function,adjust_value,comment
 19990416T16:00:00+00:00,,HS1,add,2.1,manual shift by bav
 20010605T16:00:00+00:00,,HS1,add,2.6,manual shift by bav
 20020607T16:00:00+00:00,,HS1,add,0.5,manual shift by bav
-20040612T13:00:00+00:00,,HS1,add,2.5,manual shift by bav
-20080428T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
 20100107T16:00:00+00:00,,HS1,add,4,manual shift by bav
 20140521T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
 20180424T16:00:00+00:00,,HS1,add,1.5,manual shift by bav
@@ -12,22 +10,27 @@ t0,t1,variable,adjust_function,adjust_value,comment
 19990416T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
 20010605T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
 2001-12-25T01:00:00+00:00,,HS2,add,-1,manual shift by bav
-20040612T08:00:00+00:00,,HS2,add,5,manual shift by bav
 #2004-06-12T08:00:00+00:00,2004-10-14T13:00:00+00:00,HS2,add,2.5,manual shift by bav
 20100107T16:00:00+00:00,,HS2,add,4,manual shift by bav
 20140524T16:00:00+00:00,,HS2,add,4,manual shift by bav
 20180301T16:00:00+00:00,,HS2,add,2,manual shift by bav
 
-2004-06-12T08:00:00+00:00,2004-10-14T13:00:00+00:00,HW2,add,2.5,manual shift by bav
-2005-01-30T16:00:00+00:00,2005-03-28T15:00:00+00:00,HW2,add,2.5,manual shift by bav
 
-2005-05-26T17:00:00+00:00,2007-05-27T17:00:00+00:00,HW1,add,-2.5,manual shift by bav
 
 1990-01-01T00:00:00+00:00,1999-01-01T00:00:00+00:00,TA1,swap_with_TA2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
 2000-06-01T00:00:00+00:00,,TA1,swap_with_TA2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/24
 
-# calibration of OSWR with LiCor offset
-2010-04-30T00:00:00+00:00,,OSWR,multiply,0.934, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/89
+# 2026-11-25: HW1 and HW2 are exchanged in the C-level file 2003-05-01 to 2010-04-29 (metadata/c_level_swaps.csv). In the raw C-level series the lower sensor (HW1) reads 2.6 m too high 2004-10-14 to 2005-01-30 and 2005-03-28 to 2005-05-14 and the upper sensor (HW2) 2.6 m too low 2007-05-27 to 2008-05-03 (spacing -1.8 m instead of +0.8 m; no visit); both booms are raised by about 2.6 m at the visits of 2004-06-12 and 2005-05-26 (HW keeps these steps, HS rows remove them)
+2004-10-14T13:00:00+00:00,2005-01-30T16:00:00+00:00,HW1,add,-2.6,lower sensor reads 2.6 m high (spacing -1.8 m instead of +0.8 m; no visit)
+2005-03-28T16:00:00+00:00,2005-05-14T13:00:00+00:00,HW1,add,-2.6,lower sensor reads 2.6 m high (spacing -1.8 m instead of +0.8 m; no visit)
+2007-05-27T15:00:00+00:00,2008-05-03T18:00:00+00:00,HW2,add,2.6,upper sensor reads 2.6 m low (spacing -1.8 m instead of +0.8 m; no visit; the value returns on 2008-05-03)
+2004-06-12T09:00:00+00:00,,HS1,add,2.77,boom raised at the visit of 2004-06-12: HW1 keeps the step and HS is continuous
+2005-05-26T20:00:00+00:00,,HS1,add,2.29,boom raised at the visit of 2005-05-26: HW1 keeps the step and HS is continuous
+2004-06-12T13:00:00+00:00,,HS2,add,2.65,boom raised at the visit of 2004-06-12: HW2 keeps the step and HS is continuous
+2005-05-26T20:00:00+00:00,,HS2,add,2.61,boom raised at the visit of 2005-05-26: HW2 keeps the step and HS is continuous
+
+# ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their configuration files (calibration.ISWR/OSWR in the <file>.toml),
+# those of the C-level files in metadata/c_level_corrections.csv.
 
 # air temp correction on HW1 and HW2
 2009-05-15T00:00:00+00:00,,HW1,air_temp_sonic_correction,0,
@@ -43,5 +46,11 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2009-05-15T00:00:00+00:00,,HW1,hampel_filter,2,Manually filtered by bav
 2009-05-15T00:00:00+00:00,,HW2,hampel_filter,2,Manually filtered by bav
 
-1996-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
-1996-01-01T00:00:00+00:00,2010-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
+# RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2001-12-25T01:00:00+00:00,,HW1,add,0.38,winter artefact removed in HW of HS1: +0.28 m (+0.38 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2003-12-11T11:00:00+00:00,,HW2,add,0.25,winter artefact removed in HW of the sonic ranger that is HW2 since the exchange of 2026-11-24 (was HS1): +0.24 m (+0.25 m relative to the other sensor and the climatology) over a gap of 0.0 d
+# hs_steps.py end

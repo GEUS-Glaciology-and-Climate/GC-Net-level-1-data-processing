@@ -1,0 +1,35 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 17
+ncols = 31
+column_header = ["OSWR", "ISWR", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "RH1", "RH2", "_", "_", "_", "_", "P", "HW1", "HW2", "_", "_"]
+[[array.run]]
+row_from = 0
+row_to = 911
+start_year = 2004
+
+[calibration.ISWR]
+scale_pos = 203.093
+scale_neg = 203.093
+add = 0
+source = "as 2004_111.dat (same layout); C-level C/raw over 2004-05 to 2004-06: ISWR 208, OSWR 152"
+
+[calibration.NR]
+scale_pos = 80
+scale_neg = 64.39
+add = 0
+source = "as 2004_111.dat (same layout); C-level C/raw over 2004-05 to 2004-06: ISWR 208, OSWR 152"
+
+[calibration.OSWR]
+scale_pos = 151.236
+scale_neg = 151.236
+add = 0
+source = "as 2004_111.dat (same layout); C-level C/raw over 2004-05 to 2004-06: ISWR 208, OSWR 152"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "as 2004_111.dat (same layout); C-level C/raw over 2004-05 to 2004-06: ISWR 208, OSWR 152"
+

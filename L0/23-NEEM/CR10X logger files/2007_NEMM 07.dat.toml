@@ -1,0 +1,45 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 222
+ncols = 17
+column_header = ["ISWR", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "_", "P", "HW1", "HW2"]
+[[array.run]]
+row_from = 0
+row_to = 3805
+start_year = 2006
+
+[[array]]
+id = 222
+ncols = 17
+column_header = ["_", "OSWR", "NR", "TA1", "TA2", "RH1", "RH2", "VW1", "VW2", "DW1", "_", "P", "HW1", "HW2"]
+[[array.run]]
+row_from = 3806
+row_to = 4093
+start_year = 2007
+note = "dated from the file name only (outside the C-level period)"
+
+[calibration.ISWR]
+scale_pos = 200
+scale_neg = 200
+add = 0
+source = "documented: C-level factor over 3292 h in 2006-2006 (documented 200.0)"
+
+[calibration.NR]
+scale_pos = 80
+scale_neg = 80
+add = 0
+source = "documented: C-level factor over 2858 h in 2006-2006 (documented 80.0) / documented: C-level factor over 327 h in 2006-2006 (documented 80.0)"
+
+[calibration.OSWR]
+scale_pos = 186.8
+scale_neg = 186.8
+add = 0
+source = "differs: C-level factor over 3272 h in 2006-2006 (documented 200.0)"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 300
+source = "implied by C-level (8 runs); the programs write P minus 400"
+

@@ -1,5 +1,14 @@
 t0,t1,variable,adjust_function,adjust_value,comment
 
 # Realtive humidity back to water
-,,RH1,ice_to_water,0, 
-,,RH2,ice_to_water,0, 
+# RH wrt ice -> water, whole series (as on main): the L0M of this station is the legacy table (no logger configuration file), whose RH is wrt ice
+# (RH reaches 100% at -25 C, the ice-saturation cap, 82% would be the cap wrt water). So the C-level hours are NOT listed in c_level_rh_convention.csv.
+,,RH1,ice_to_water,0, issue #43
+,,RH2,ice_to_water,0, issue #43
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2011-08-11T18:00:00+00:00,,HS2,add,-1.59,step removed in HS (boom moved) of HS2: +1.78 m (+1.59 m relative to the other sensor and the climatology) over a gap of 99.9 d
+2011-08-12T16:00:00+00:00,,HS2,add,1.58,step removed in HS (boom moved) of HS2: -1.56 m (-1.58 m relative to the other sensor and the climatology) over a gap of 0.0 d
+# hs_steps.py end

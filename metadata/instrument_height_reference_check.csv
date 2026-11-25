@@ -1,0 +1,68 @@
+site,date,value,reported_m,L1_m,diff_m,verdict,comment
+CP2,1998-05-30,W2 after,3.15,2.5,0.65,differs,L1 +1.0 m for HW1 as reported (+1.09); the L1 is 0.2-0.4 m below the report
+CP2,1999-05-28,W1 before,0.62,0.1,0.52,common_offset,L1 HW1 before is in the blind zone (0.1-0.5 m)
+CP2,1999-05-28,W1 after,1.73,1.1,0.63,common_offset,L1 HW1 before is in the blind zone (0.1-0.5 m)
+CP2,2000-06-03,W2 before,1.62,1.18,0.44,differs,L1 HW2 jumps +1.65 m as reported (+1.64) but HW1 does not move (1.5 before and after) while the report has 0.44 to 2.10: L1 HW1 before the visit is wrong; all four CP2 reports are 0.3-0.4 m above L1 HW2
+CP2,2000-06-03,W1 after,2.1,1.54,0.56,common_offset,L1 HW2 jumps +1.65 m as reported (+1.64) but HW1 does not move (1.5 before and after) while the report has 0.44 to 2.10: L1 HW1 before the visit is wrong; all four CP2 reports are 0.3-0.4 m above L1 HW2
+Crawford Point 1,1998-05-30,W1 before,0.47,1.36,-0.89,spacing,before 0.47 / 1.16 has a spacing of 0.69 m (1.2 m at all other dates); the L1 step is on 1998-06-09 (10 days after the report date and the photo of 1998-05-31) and is a decrease while the report is an increase
+Crawford Point 1,1998-05-30,W2 before,1.16,2.36,-1.2,spacing,before 0.47 / 1.16 has a spacing of 0.69 m (1.2 m at all other dates); the L1 step is on 1998-06-09 (10 days after the report date and the photo of 1998-05-31) and is a decrease while the report is an increase
+Crawford Point 1,2002-05-08,W2 before,2.88,4.04,-1.16,differs,W1 agrees but W2 (2.88) is 1.16 m below the L1 (4.04): the L1 spacing is 2.26 m against 1.20 reported: HW2 of the L1 is 1.16 m too high from 2001-12 to 2002-11 (see the continuity rows of the adjustments)
+Crawford Point 1,2002-05-08,W2 after,2.88,4.04,-1.16,differs,W1 agrees but W2 (2.88) is 1.16 m below the L1 (4.04): the L1 spacing is 2.26 m against 1.20 reported: HW2 of the L1 is 1.16 m too high from 2001-12 to 2002-11 (see the continuity rows of the adjustments)
+Crawford Point 1,2005-05-02,W1 after,0.58,3.55,-2.97,differs,the after values 0.58 / 1.78 are the level before the raise of 2005-05-03 (L1 0.89 / 1.89 before and 3.55 / 5.57 after): the report is dated the day before the visit
+Crawford Point 1,2005-05-02,W2 after,1.78,5.57,-3.79,differs,the after values 0.58 / 1.78 are the level before the raise of 2005-05-03 (L1 0.89 / 1.89 before and 3.55 / 5.57 after): the report is dated the day before the visit
+Crawford Point 1,2012-05-01,W1 after,2.53,3.14,-0.61,differs,W1 after 2.53 against 3.14 in the L1 (flat): +0.6 offset; W2 after 3.72 has no L1 (HW2 is gone from 2012-03)
+DYE-2,2000-05-12,W1 after,0.26,2.63,-2.37,copy,after = before: the L1 shows a raise of 2.4 m on the day (both sensors): the after was not measured
+DYE-2,2000-05-12,W2 after,1.4,3.77,-2.37,copy,after = before: the L1 shows a raise of 2.4 m on the day (both sensors): the after was not measured
+DYE-2,2004-06-13,W2 after,3.84,3.43,0.41,common_offset,both sensors 0.3-0.4 m above the L1 after the visit; spacing 1.12 reported against 0.99 in the L1
+Humboldt,2011-06-01,W1 after,3.06,1.6,1.46,common_offset,the report after 3.06 / 4.29 equals the L1 of 2003 (3.10 / 4.25); the L1 is 1.6 / 2.9 and flat for 6 weeks: report copied from 2003 or the raise is not in the L1
+Humboldt,2011-06-01,W2 after,4.29,2.93,1.36,common_offset,the report after 3.06 / 4.29 equals the L1 of 2003 (3.10 / 4.25); the L1 is 1.6 / 2.9 and flat for 6 weeks: report copied from 2003 or the raise is not in the L1
+Humboldt,2018-05-24,W1 before,2.7,1.36,1.34,differs,L1 flat at 1.36 / 2.75 and report 2.70 for W1 (+1.34 as in 2011); the logger clock is 254 d off at this visit
+JAR1,2003-04-26,W1 before,2.75,3.6,-0.85,differs,HW2 agrees (+0.1) but HW1 of the L1 is 0.9 m above the report before and after: L1 spacing 0.18 m against 1.20 reported (HW1 too high from 2002-09 to 2003-04)
+JAR1,2003-04-26,W1 after,1.64,2.59,-0.95,differs,HW2 agrees (+0.1) but HW1 of the L1 is 0.9 m above the report before and after: L1 spacing 0.18 m against 1.20 reported (HW1 too high from 2002-09 to 2003-04)
+JAR1,2005-05-08,W1 before,2.03,0.78,1.25,differs,L1 before the visit: HW1 0.94 / HW2 2.65 (spacing 1.7 m); after 0.44 / 1.7 (1.2 m): the sensors were not moved by the same amount or one level before is wrong; the reported W1 before 2.03 does not fit either
+JAR1,2011-05-08,W2 after,1.76,1.26,0.5,differs,ablation site: L1 HW is flat for a month after the visit but jumps by 0.5 m on 2011-06-15; HW2 1.76 reported against 1.26 in the L1 (spacing 0.34 m in the L1 against 1.21 reported)
+JAR1,2012-05-09,W1 after,1.07,0.48,0.59,differs,L1 HW1 / HW2 0.48 / 1.59 against 1.07 / 2.45 reported (+0.6 / +0.9) with the L1 rising 0.3 m per week by melt from 2012-05-17 on: the level at the visit is not in the L1 (gap)
+JAR1,2012-05-09,W2 after,2.45,1.59,0.86,differs,L1 HW1 / HW2 0.48 / 1.59 against 1.07 / 2.45 reported (+0.6 / +0.9) with the L1 rising 0.3 m per week by melt from 2012-05-17 on: the level at the visit is not in the L1 (gap)
+JAR2,2004-05-25,W2 after,3.49,2.16,1.33,differs,HW2 of the L1 is within 0.1 m of HW1 (spacing -0.06 m from 2001-08 to 2005-04) while the report has a spacing of 1.44 m: L1 HW2 is a copy of HW1 or its offset is wrong
+JAR2,2011-06-21,W1 after,0.29,2.09,-1.8,differs,"L1 HW1 and HW2 are 1.2 and 1.2 m (identical) on the report date, then rise by melt: spacing 0 in the L1 against 1.22 reported; the sensors are also swapped in the L1 from 2011-05-31"
+JAR2,2011-06-21,W2 after,1.51,1.95,-0.44,differs,"L1 HW1 and HW2 are 1.2 and 1.2 m (identical) on the report date, then rise by melt: spacing 0 in the L1 against 1.22 reported; the sensors are also swapped in the L1 from 2011-05-31"
+NASA-E,2001-06-08,W1 after,2.23,3.01,-0.78,spacing,W2 after = W2 before and W2a-W1a = -0.23: the after values are not usable; the L1 shows a raise of 2.4 m and agrees with the 2003 report
+NASA-E,2001-06-08,W2 after,2.0,4.42,-2.42,copy,W2 after = W2 before and W2a-W1a = -0.23: the after values are not usable; the L1 shows a raise of 2.4 m and agrees with the 2003 report
+NASA-E,2011-06-02,W1 after,2.37,1.66,0.71,differs,L1 HW1 -0.1 m and HW2 +0.7 m at the visit with spacing 0.9 before and 1.8 after against 1.4 reported: the sensors were not moved together or one level is wrong
+NASA-E,2022-05-27,W1 before,1.22,0.61,0.61,spacing,both sensors are 0.6 m above the L1 and the L1 is flat for 6 weeks: constant offset of the report (other reference) or of the L1
+NASA-E,2022-05-27,W2 before,2.2,1.55,0.65,spacing,both sensors are 0.6 m above the L1 and the L1 is flat for 6 weeks: constant offset of the report (other reference) or of the L1
+NASA-SE,1999-04-21,W2 before,3.14,3.86,-0.72,spacing,before = after in the report but the L1 HW2 drops 0.75 m on the day (3.86 to 3.09) and HW1 does not: HW2 was lowered at this visit
+NASA-SE,2001-06-06,W1 before,1.28,4.11,-2.83,common_offset,before = after (1.28 / 2.49): the L1 has 4.11 / 5.33 with the same spacing (1.22) and no step around the date; the report is 2.83 m below the L1 for both sensors: stale report or offset L1
+NASA-SE,2001-06-06,W2 before,2.49,5.33,-2.84,common_offset,before = after (1.28 / 2.49): the L1 has 4.11 / 5.33 with the same spacing (1.22) and no step around the date; the report is 2.83 m below the L1 for both sensors: stale report or offset L1
+NASA-SE,2001-06-06,W1 after,1.28,4.11,-2.83,common_offset,before = after (1.28 / 2.49): the L1 has 4.11 / 5.33 with the same spacing (1.22) and no step around the date; the report is 2.83 m below the L1 for both sensors: stale report or offset L1
+NASA-SE,2001-06-06,W2 after,2.49,5.33,-2.84,common_offset,before = after (1.28 / 2.49): the L1 has 4.11 / 5.33 with the same spacing (1.22) and no step around the date; the report is 2.83 m below the L1 for both sensors: stale report or offset L1
+NASA-SE,2003-05-10,W1 after,0.0,5.29,-5.29,copy,after = before (0.0 / 1.25): the L1 shows the boom raised by 5.2 m on the date; the after was not measured. The before values (boom on the snow) agree with the L1
+NASA-SE,2003-05-10,W2 after,1.25,6.46,-5.21,copy,after = before (0.0 / 1.25): the L1 shows the boom raised by 5.2 m on the date; the after was not measured. The before values (boom on the snow) agree with the L1
+NASA-SE,2004-06-11,W1 before,1.78,4.19,-2.41,common_offset,before 1.78 / 2.98 is 2.4 m below the L1 (4.19 / 5.18) with no step in the L1 for 45 days: not credible (accumulation would be 3.5 m in a year); the after values agree
+NASA-SE,2004-06-11,W2 before,2.98,5.18,-2.2,common_offset,before 1.78 / 2.98 is 2.4 m below the L1 (4.19 / 5.18) with no step in the L1 for 45 days: not credible (accumulation would be 3.5 m in a year); the after values agree
+NASA-U,1999-05-13,W1 after,3.15,2.1,1.05,differs,before 0.50 / 1.80: the L1 has no HW1 before the visit; the after values are 0.75-1.05 m above the L1 after
+NASA-U,1999-05-13,W2 after,4.45,3.8,0.65,differs,before 0.50 / 1.80: the L1 has no HW1 before the visit; the after values are 0.75-1.05 m above the L1 after
+NASA-U,2011-06-01,W1 after,1.33,1.92,-0.59,common_offset,both sensors 0.6-0.7 m below the L1 with no step in the L1: the after values are the level before a lowering or the report is offset
+NASA-U,2011-06-01,W2 after,2.73,3.46,-0.73,common_offset,both sensors 0.6-0.7 m below the L1 with no step in the L1: the after values are the level before a lowering or the report is offset
+Petermann Glacier,2003-05-06,W1 before,1.85,1.02,0.83,differs,L1 HW1 = HW2 (identical series): one sensor is duplicated in the L1; the report has 1.85 / 3.09 before and 0.77 after
+Petermann Glacier,2003-05-06,W2 before,3.09,1.02,2.07,differs,L1 HW1 = HW2 (identical series): one sensor is duplicated in the L1; the report has 1.85 / 3.09 before and 0.77 after
+Petermann Glacier,2004-05-09,W2 before,3.28,2.29,0.99,differs,L1 HW1 = HW2 (identical series)
+Saddle,2003-05-01,W1 after,1.03,1.97,-0.94,differs,after maintenance 1.03 / 2.07: the L1 has HW1 > HW2 (1.97 / 1.1) from 2003-04 to 2004-05: HW1 and HW2 are swapped in the L1
+Saddle,2003-05-01,W2 after,2.07,1.13,0.94,differs,after maintenance 1.03 / 2.07: the L1 has HW1 > HW2 (1.97 / 1.1) from 2003-04 to 2004-05: HW1 and HW2 are swapped in the L1
+Saddle,2004-06-12,W1 after,2.64,3.54,-0.9,spacing,L1 HW2 is in the blind zone (0.1 m) before the visit and jumps by 5.2 m; spacing after 1.8 m in the L1 against 0.85 m reported: HW2 of the L1 is probably too high or the report is wrong
+Saddle,2004-06-12,W2 after,3.49,5.35,-1.86,spacing,L1 HW2 is in the blind zone (0.1 m) before the visit and jumps by 5.2 m; spacing after 1.8 m in the L1 against 0.85 m reported: HW2 of the L1 is probably too high or the report is wrong
+Saddle,2011-05-10,W2 after,3.73,3.28,0.45,spacing,W2 after 3.73 against 3.28 in the L1 (+0.45) while W1 after 2.13 has no L1 (HW1 missing): report spacing 1.60 m is too large for the station (1.2 m)
+South Dome,2001-05-05,W2 before,1.06,1.59,-0.53,spacing,W2 1.06 is probably 1.66 (typo): the spacing to W1 would be 0.48 m while the station spacing is 1.05-1.1 m and the L1 has 1.59
+South Dome,2001-05-05,W2 after,1.06,1.59,-0.53,spacing,W2 1.06 is probably 1.66 (typo): the spacing to W1 would be 0.48 m while the station spacing is 1.05-1.1 m and the L1 has 1.59
+South Dome,2011-05-30,W1 after,3.47,4.81,-1.34,differs,the report says HW1 < HW2 but the L1 has HW1 > HW2 (4.8 / 3.9): HW1 and HW2 are swapped in the L1 (see instrument_height_pair_anomalies.csv)
+South Dome,2011-05-30,W2 after,4.6,3.88,0.72,differs,the report says HW1 < HW2 but the L1 has HW1 > HW2 (4.8 / 3.9): HW1 and HW2 are swapped in the L1 (see instrument_height_pair_anomalies.csv)
+Summit,2001-06-10,W2 after,2.88,3.58,-0.7,spacing,W2 after 2.88 is a typo: the spacing to W1 after (2.80) would be 0.08 m; the L1 has 2.55 / 3.6 after the raise
+Summit,2005-05-26,W2 before,1.55,0.63,0.92,differs,L1 HW2 drops by 0.9 m on 2005-05-05 and HW1 sits in the blind zone (0.05 m); the reported 1.55 m is the level of April: the step of L1 HW2 is an artefact
+Swiss Camp 10m,2013-05-26,W1 before,1.24,2.0,-0.76,differs,reported by K. Steffen: W1 1.24 m and the lower arm underside 0.94 m above the snow; the L1 has 2.0 m (+0.76)
+Swiss Camp,2013-05-15,W1 before,2.68,1.65,1.03,spacing,the reports of 2013-2018 are +1.0 (+1.0 to +1.1 for 2015-2018) above the L1 HW1 and 1.0-1.7 above HW2: either the L1 HW is 1 m too low since 2012-2013 (HW1 down to 0.14 m is below the range of the sonic ranger) or the reports use another reference; 2011 agrees to 0.05 m
+Swiss Camp,2013-05-15,W2 before,4.08,2.38,1.7,spacing,the reports of 2013-2018 are +1.0 (+1.0 to +1.1 for 2015-2018) above the L1 HW1 and 1.0-1.7 above HW2: either the L1 HW is 1 m too low since 2012-2013 (HW1 down to 0.14 m is below the range of the sonic ranger) or the reports use another reference; 2011 agrees to 0.05 m
+Swiss Camp,2014-05-07,W1 before,2.93,0.12,2.81,differs,see 2013-05-15
+Swiss Camp,2014-05-07,W1 after,0.89,0.42,0.47,differs,see 2013-05-15
+Swiss Camp,2015-05-13,W1 before,1.4,0.31,1.09,differs,see 2013-05-15
+Swiss Camp,2016-05-15,W1 before,1.37,0.35,1.02,differs,see 2013-05-15
+Swiss Camp,2017-05-14,W1 before,1.82,0.77,1.05,differs,see 2013-05-15

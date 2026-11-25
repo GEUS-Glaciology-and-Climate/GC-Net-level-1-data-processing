@@ -1,0 +1,47 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 17
+ncols = 31
+column_header = ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "TA1", "TA2", "TA3", "TA4", "RH1", "RH2", "_", "_", "_", "_", "P", "HW1", "_", "_", "V"]
+[[array.run]]
+row_from = 0
+row_to = 16981
+start_year = 2000
+
+[calibration.ISWR]
+scale_pos = 199
+scale_neg = 199
+add = 0
+source = "implied by C-level (2 runs); no station calibration in the repository"
+
+[calibration.NR]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "implied by C-level (2 runs); no station calibration in the repository"
+
+[calibration.OSWR]
+scale_pos = 199.32
+scale_neg = 199.32
+add = 0
+source = "implied by C-level (2 runs); no station calibration in the repository"
+
+[calibration.P]
+scale_pos = 1
+scale_neg = 1
+add = 400
+source = "implied by C-level (2 runs); the programs write P minus 400"
+
+[calibration.TA3]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "implied by C-level"
+
+[calibration.TA4]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "implied by C-level"
+

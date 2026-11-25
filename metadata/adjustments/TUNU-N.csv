@@ -38,5 +38,4 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2015-05-22T00:00:00+00:00,,HW2,add,-0.4,Manually filtered by bav
 2018-05-22T00:00:00+00:00,,HW2,add,-0.3,Manually filtered by bav
 
-1996-01-01T00:00:00+00:00,2011-01-01T00:00:00+00:00,RH1,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
-1996-01-01T00:00:00+00:00,2011-01-01T00:00:00+00:00,RH2,ice_to_water,0, https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/43
+# RH of the C-level files with respect to ice is converted to RH wrt water when it is used to fill a gap (metadata/c_level_rh_convention.csv); no manual ice_to_water row is needed here.

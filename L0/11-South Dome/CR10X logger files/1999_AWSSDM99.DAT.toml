@@ -1,0 +1,41 @@
+logger_type = "CR10X"
+
+[[array]]
+id = 6
+ncols = 31
+column_header = ["ISWR", "OSWR", "NR", "TS1", "TS2", "TS3", "TS4", "TS5", "TS6", "TS7", "TS8", "TS9", "TS10", "TA1", "TA2", "TA3", "TA4", "RH1", "RH2", "VW1", "VW2", "DW1", "DW2", "_", "HW1", "HW2", "_", "V"]
+[[array.run]]
+row_from = 0
+row_to = 8875
+start_year = 1998
+
+[calibration.ISWR]
+scale_pos = 62
+scale_neg = 62
+add = 0
+source = "documented: C-level factor over 4023 h in 1998-1999 (documented 62.0)"
+
+[calibration.NR]
+scale_pos = 9.29
+scale_neg = 11.7
+add = 0
+source = "documented: C-level factor over 744 h in 1998-1999 (documented 9.29) / documented: C-level factor over 2360 h in 1998-1999 (documented 11.7)"
+
+[calibration.OSWR]
+scale_pos = 67.985
+scale_neg = 67.985
+add = 0
+source = "differs: C-level factor over 3897 h in 1998-1999 (documented 72.7891)"
+
+[calibration.TA3]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "CR1000 header"
+
+[calibration.TA4]
+scale_pos = 1
+scale_neg = 1
+add = 0
+source = "CR1000 header"
+
