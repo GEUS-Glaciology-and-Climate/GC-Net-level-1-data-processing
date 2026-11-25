@@ -67,3 +67,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2011-05-15T00:00:00+00:00,,HW2,add,+1.36,L1 HW2 was 1.36 m below the report of 2011-06-01 (4.29) and the spacing to HW1 would be 0 after the correction of HW1 (field book 2022: wind sensors 1.25 m apart)
 2011-05-15T00:00:00+00:00,,HS2,add,+1.36,pair of the HW2 row above: HS = HW[first] - HW is kept as it was
 # hw_corrections.py end
+
+# hs_steps.py begin
+# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
+# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
+2020-11-01T19:00:00+00:00,,HS1,add,-1.85,step removed in HS (boom moved) of HS1: +1.87 m (+1.85 m relative to the other sensor and the climatology) over a gap of 20.2 d
+# hs_steps.py end

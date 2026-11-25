@@ -20,6 +20,8 @@ A sidecar can carry `[[ignore_rows]]` tables (`start`, `end`, `reason`): the row
 before the installation of the station or the tail of a logger that kept recording after its replacement took over.
 A sidecar can also carry `[[calibration_period]]` tables (`variable`, `start`, `end`, `multiply`, `reason`): a factor applied after the `[calibration.<var>]` scale
 inside a period, for a factor that belongs to a sensor and not to a logger channel (Crawford Point 1 and Swiss Camp: the radiation sensors are swapped from 2012, see `swap_with_OSWR`).
+A sidecar can also carry `[[swap_columns]]` tables (`variables = ["HW1", "HW2"]`, `start`, `end`, `reason`): the two columns (and their `_max/_min/_std` columns) are exchanged inside the period, for two sensors that are read on each other's channel
+(South Dome from 2006-07-20 22 UTC: HW1 is the upper sonic ranger, the CR1000 sidecars from 2009 carry the table). The C-level files have the same exchange in `metadata/c_level_swaps.csv` (site, var_a, var_b, t0, t1, reason; applied in `liblogger._read_c_files`): South Dome from 2006-07-20 22 UTC, Saddle 2003-05-01 to 2010-04-29. The rows of `metadata/adjustments` and `flags` for the heights are written on the labels AFTER the exchange.
 Stations whose L0M is a legacy table without provenance (LAR1-3, KULU) have no sidecar: their calibration (LAR1/LAR2 McGrath constants) and `ice_to_water` rows stay in `metadata/adjustments`.
 The Python utilities are in `lib/` (`from lib import liblogger`).
 

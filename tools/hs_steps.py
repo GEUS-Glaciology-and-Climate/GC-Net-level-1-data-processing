@@ -274,15 +274,22 @@ def write_rows(t):
                  "# written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),",
                  "# a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild."]
         lines += kept
+        have = {tuple(l.split(",")[:5]) for l in kept}      # a row of the block (same time, variable and value) is never written twice:
+        n_new = 0                                            # the tool is run on an L1 that may not have been rebuilt since the last --write
         for _, r in g.sort_values("t_next").iterrows():
-            lines.append("%s,,%s,add,%.2f,%s of %s: %+.2f m (%+.2f m relative to the other sensor and the climatology) over a gap of %.1f d" % (
+            line = "%s,,%s,add,%.2f,%s of %s: %+.2f m (%+.2f m relative to the other sensor and the climatology) over a gap of %.1f d" % (
                 r.t_next.strftime("%Y-%m-%dT%H:%M:%S+00:00"), r.variable, r.value,
                 "step removed in HS (boom moved)" if r.target == "HS" else "winter artefact removed in HW",
-                r.sensor, r.step, r.excess, r.gap_d))
+                r.sensor, r.step, r.excess, r.gap_d)
+            if tuple(line.split(",")[:5]) in have:
+                continue
+            have.add(tuple(line.split(",")[:5]))
+            lines.append(line)
+            n_new += 1
         lines.append(END)
         s = s.rstrip("\n") + "\n\n" + "\n".join(lines) + "\n"
         write_bytes(p, s.replace("\n", eol).encode("utf-8"))
-        print("rows written:", p, len(g))
+        print("rows written:", p, n_new, "(%d proposed, the others are already in the block)" % len(g))
 
 
 if __name__ == "__main__":

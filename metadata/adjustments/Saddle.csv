@@ -3,8 +3,9 @@ t0,t1,variable,adjust_function,adjust_value,comment
 19990416T16:00:00+00:00,,HS1,add,2.1,manual shift by bav
 20010605T16:00:00+00:00,,HS1,add,2.6,manual shift by bav
 20020607T16:00:00+00:00,,HS1,add,0.5,manual shift by bav
-20040612T13:00:00+00:00,,HS1,add,2.5,manual shift by bav
-20080428T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
+2004-06-12T08:00:00+00:00,,HS1,add,5,manual shift by bav (row of the former HS2: the sonic ranger that is HW1 since the exchange of 2026-11-24)
+2008-04-28T16:00:00+00:00,,HS2,add,2.5,manual shift by bav (row of the former HS1: the sonic ranger that is HW2 since the exchange of 2026-11-24)
+2004-06-12T13:00:00+00:00,,HS2,add,2.5,manual shift by bav (row of the former HS1: the sonic ranger that is HW2 since the exchange of 2026-11-24)
 20100107T16:00:00+00:00,,HS1,add,4,manual shift by bav
 20140521T16:00:00+00:00,,HS1,add,2.5,manual shift by bav
 20180424T16:00:00+00:00,,HS1,add,1.5,manual shift by bav
@@ -12,16 +13,16 @@ t0,t1,variable,adjust_function,adjust_value,comment
 19990416T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
 20010605T16:00:00+00:00,,HS2,add,2.5,manual shift by bav
 2001-12-25T01:00:00+00:00,,HS2,add,-1,manual shift by bav
-20040612T08:00:00+00:00,,HS2,add,5,manual shift by bav
 #2004-06-12T08:00:00+00:00,2004-10-14T13:00:00+00:00,HS2,add,2.5,manual shift by bav
 20100107T16:00:00+00:00,,HS2,add,4,manual shift by bav
 20140524T16:00:00+00:00,,HS2,add,4,manual shift by bav
 20180301T16:00:00+00:00,,HS2,add,2,manual shift by bav
 
-2004-06-12T08:00:00+00:00,2004-10-14T13:00:00+00:00,HW2,add,2.5,manual shift by bav
-2005-01-30T16:00:00+00:00,2005-03-28T15:00:00+00:00,HW2,add,2.5,manual shift by bav
+# 2026-11-24: HW1 and HW2 are exchanged in the C-level file from 2003-05-01 to 2010-04-29 (metadata/c_level_swaps.csv): the rows written for the labels before the exchange follow the sonic ranger
+2004-06-12T08:00:00+00:00,2004-10-14T12:00:00+00:00,HW1,add,2.5,manual shift by bav (row of the former HW2; end moved from 13 to 12 UTC: the raw jump is at 13 UTC and the hour was a 2.5 m spike)
+2005-01-30T17:00:00+00:00,2005-03-28T15:00:00+00:00,HW1,add,2.5,manual shift by bav (row of the former HW2; start moved from 16 to 17 UTC: the raw drop is at 17 UTC and the hour was a 2.5 m spike)
 
-2005-05-26T17:00:00+00:00,2007-05-27T17:00:00+00:00,HW1,add,-2.5,manual shift by bav
+2005-05-26T17:00:00+00:00,2007-05-27T14:00:00+00:00,HW2,add,-2.5,manual shift by bav (row of the former HW1; end moved from 17 to 14 UTC: the raw jump is at 15 UTC and 3 hours were a 2.5 m spike)
 
 1990-01-01T00:00:00+00:00,1999-01-01T00:00:00+00:00,TA1,swap_with_TA2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/111
 2000-06-01T00:00:00+00:00,,TA1,swap_with_TA2,0,https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/issues/24
@@ -49,5 +50,5 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
 # a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
 2001-12-25T01:00:00+00:00,,HW1,add,0.38,winter artefact removed in HW of HS1: +0.28 m (+0.38 m relative to the other sensor and the climatology) over a gap of 0.0 d
-2003-12-11T11:00:00+00:00,,HW1,add,0.25,winter artefact removed in HW of HS1: +0.24 m (+0.25 m relative to the other sensor and the climatology) over a gap of 0.0 d
+2003-12-11T11:00:00+00:00,,HW2,add,0.25,winter artefact removed in HW of the sonic ranger that is HW2 since the exchange of 2026-11-24 (was HS1): +0.24 m (+0.25 m relative to the other sensor and the climatology) over a gap of 0.0 d
 # hs_steps.py end

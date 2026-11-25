@@ -3,12 +3,14 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1999-04-22T21:30:00+00:00,,HS1,add,1.55,
 2001-06-07T11:00:00+00:00,,HS1,add,3,
 2005-05-26T20:00:00+00:00,,HS1,add,6,Reported visit. SR1 height before/after (m): 0.0/-12.25
-2006-07-20T21:30:00+00:00,,HS1,add,2.1,Not reported. Manual shift suggested by bav.
+# 2026-11-24: HW1 and HW2 are exchanged from 2006-07-20T22:00 at the reading of the files (sidecars of the CR1000 files and metadata/c_level_swaps.csv). HW1 now rises by 1.11 m and HW2 by 1.00 m at that hour (both booms lifted)
+# and the rows of the surface height after it follow the sensor: the rows that were written for HS1 (the sonic ranger that is now HW2) are HS2 rows and the other way round.
+2006-07-20T21:30:00+00:00,,HS1,add,1.11,After the exchange of HW1 and HW2 at 22 UTC: HW1 rises by 1.11 m (was +2.1 with the labels before the exchange). Manual shift suggested by bav.
 2007-04-23T01:00:00+00:00,,HS1,add,3.4,Not reported. Manual shift suggested by bav.
-2009-05-15T22:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
+2009-05-15T22:00:00+00:00,,HS1,add,1.5,Not reported. Manual shift suggested by bav (row of the former HS2).
 2011-05-28T18:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav.
-2013-05-19T20:00:00+00:00,,HS1,add,2.6,Not reported. Manual shift suggested by bav.
-2015-05-25T20:00:00+00:00,,HS1,add,2.5,Not reported. Manual shift suggested by bav.
+2013-05-19T18:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav (row of the former HS2).
+2015-05-23T00:00:00+00:00,,HS1,add,3,Not reported. Manual shift suggested by bav (row of the former HS2).
 2017-05-22T15:00:00+00:00,,HS1,add,2.3,Not reported. Manual shift suggested by bav.
 2019-05-01T00:00:00+00:00,,HS1,add,2,Not reported. Manual shift suggested by bav.
 
@@ -16,11 +18,12 @@ t0,t1,variable,adjust_function,adjust_value,comment
 1999-04-22T21:30:00+00:00,,HS2,add,1.55,
 2001-06-07T11:00:00+00:00,,HS2,add,3,
 2005-05-26T20:00:00+00:00,,HS2,add,6,Reported visit. SR1 height before/after (m): 0.0/-12.25
+2006-07-20T21:30:00+00:00,,HS2,add,1.00,After the exchange of HW1 and HW2 at 22 UTC: HW2 rises by 1.00 m (no row before the exchange)
 2007-04-23T01:00:00+00:00,,HS2,add,3.4,Not reported. Manual shift suggested by bav.
-2009-05-15T22:00:00+00:00,,HS2,add,1.5,Not reported. Manual shift suggested by bav.
+2009-05-15T22:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav (row of the former HS1).
 2011-05-28T18:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
-2013-05-19T18:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
-2015-05-23T00:00:00+00:00,,HS2,add,3,Not reported. Manual shift suggested by bav.
+2013-05-19T20:00:00+00:00,,HS2,add,2.6,Not reported. Manual shift suggested by bav (row of the former HS1).
+2015-05-25T20:00:00+00:00,,HS2,add,2.5,Not reported. Manual shift suggested by bav (row of the former HS1).
 2017-05-22T15:00:00+00:00,,HS2,add,2.3,Not reported. Manual shift suggested by bav.
 2019-05-01T00:00:00+00:00,,HS2,add,2,Not reported. Manual shift suggested by bav.
 
@@ -57,7 +60,7 @@ t0,t1,variable,adjust_function,adjust_value,comment
 # hs_steps.py begin
 # written by tools/hs_steps.py: steps of the surface height (HS) removed; a boom moved at a visit is removed in HS (HW keeps it),
 # a step of HW in November to March within a day is an artefact of the C-level processing and is removed in HW. Rerun the tool after a rebuild.
-2007-04-27T22:00:00+00:00,,HS1,add,-0.89,step removed in HS (boom moved) of HS1: +1.14 m (+0.89 m relative to the other sensor and the climatology) over a gap of 80.0 d
-2007-04-27T22:00:00+00:00,,HS2,add,-0.84,step removed in HS (boom moved) of HS2: +1.16 m (+0.84 m relative to the other sensor and the climatology) over a gap of 80.0 d
-2015-05-26T17:00:00+00:00,,HS2,add,-0.53,step removed in HS (boom moved) of HS2: +0.52 m (+0.53 m relative to the other sensor and the climatology) over a gap of 4.7 d
+2007-04-27T22:00:00+00:00,,HS1,add,-0.84,step removed in HS (boom moved) of the sonic ranger that is HS1 since the exchange of 2006-07-20: +1.16 m (+0.84 m relative to the other sensor and the climatology) over a gap of 80.0 d
+2007-04-27T22:00:00+00:00,,HS2,add,-0.89,step removed in HS (boom moved) of the sonic ranger that is HS2 since the exchange of 2006-07-20: +1.14 m (+0.89 m relative to the other sensor and the climatology) over a gap of 80.0 d
+2015-05-26T17:00:00+00:00,,HS1,add,-0.53,step removed in HS (boom moved) of the sonic ranger that is HS1 since the exchange of 2006-07-20: +0.52 m (+0.53 m relative to the other sensor and the climatology) over a gap of 4.7 d
 # hs_steps.py end

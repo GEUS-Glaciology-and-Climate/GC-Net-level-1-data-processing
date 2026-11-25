@@ -33,3 +33,8 @@ add = 0
 scale = 1
 add = 400
 
+[[swap_columns]]
+variables = ["HW1", "HW2"]
+start = "2006-07-20 22:00:00"
+end = "2100-01-01 00:00:00"
+reason = "South Dome: from 2006-07-20 22 UTC the two sonic rangers are read on each other's channel, HW1 is the upper one (HW1 above HW2 by 1.0 m in the logger and in the C-level file; the report of 2011-05-30 has W1 3.47 and W2 4.60, the L1 labels gave 4.81 and 3.86 before the swap and 3.86 and 4.81 after); same table for the C-level file in metadata/c_level_swaps.csv"

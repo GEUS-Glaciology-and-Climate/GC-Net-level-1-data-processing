@@ -312,6 +312,63 @@ def _apply_calibration_periods(df, cfg):
     return df
 
 
+def _utc(t):
+    t = pd.Timestamp(t)
+    return t.tz_localize("UTC") if t.tzinfo is None else t.tz_convert("UTC")
+
+
+def _swap_in_period(df, var_a, var_b, t0, t1):
+    """exchange the values of two columns (and of their _max/_min/_std/_stdev columns) from t0 to t1, both included"""
+    m = (df.index >= t0) & (df.index <= t1)
+    if not m.any():
+        return df
+    for s in ("", "_max", "_min", "_std", "_stdev"):
+        a, b = var_a + s, var_b + s
+        if a not in df.columns and b not in df.columns:
+            continue
+        for c in (a, b):
+            if c not in df.columns:
+                df[c] = np.nan
+        va, vb = df.loc[m, a].to_numpy().copy(), df.loc[m, b].to_numpy().copy()
+        df.loc[m, a], df.loc[m, b] = vb, va
+    return df
+
+
+def _apply_swap_columns(df, cfg):
+    """Exchange the values of two columns inside a period, from the sidecar's [[swap_columns]] tables (UTC when no zone is given). For
+    two sensors that are read on each other's logger channel from a date on (the label HW1 is the upper sonic ranger, the field
+    notes call it 2): the decoding gives every sensor its own name, so the L0M, the L1 and the comparisons with the C-level see the
+    same sensors under the same names. The C-level files have the same table in metadata/c_level_swaps.csv.
+
+        [[swap_columns]]
+        variables = ["HW1", "HW2"]
+        start = "2006-07-20 22:00:00"
+        end = "2100-01-01 00:00:00"
+        reason = "the sonic rangers are read on each other's channel (HW1 is the upper one)"
+    """
+    for w in cfg.get("swap_columns", []):
+        a, b = w["variables"]
+        df = _swap_in_period(df, a, b, _utc(w["start"]), _utc(w["end"]))
+    return df
+
+
+def apply_c_level_swaps(dfj, dfc, site, path="metadata/c_level_swaps.csv"):
+    """Exchange the values of two columns of the C-level frames in the periods of metadata/c_level_swaps.csv (site, var_a, var_b, t0,
+    t1, reason; empty t1 = to the end of the record). The same exchange as the [[swap_columns]] of the logger sidecars, for the
+    C-level files that carry the heights where no logger file does. Returns (dfj, dfc)."""
+    if not os.path.isfile(path):
+        return dfj, dfc
+    tab = pd.read_csv(path, comment="#", skipinitialspace=True)
+    for r in tab.loc[tab.site == site, :].itertuples():
+        for d in (dfj, dfc):
+            if d is None or len(d) == 0:
+                continue
+            t0 = _utc(r.t0) if isinstance(r.t0, str) and r.t0.strip() else d.index.min()
+            t1 = _utc(r.t1) if isinstance(r.t1, str) and r.t1.strip() else d.index.max()
+            _swap_in_period(d, r.var_a, r.var_b, t0, t1)
+    return dfj, dfc
+
+
 def read_configured_files(directory, priority="latest_first", dedup=True):
     """Every raw file in `directory` that has a matching <file>.toml sidecar, read, calibrated, and combined into
     one (data, provenance) pair; (None, None) if none are configured yet.
@@ -325,11 +382,11 @@ def read_configured_files(directory, priority="latest_first", dedup=True):
     for f, cfg in list_configs(directory):
         path = os.path.join(directory, f)
         if cfg["logger_type"] == "CR1000":
-            df = _apply_calibration_periods(_apply_ignore_rows(_read_cr1000_configured(path, cfg), cfg), cfg)
+            df = _apply_swap_columns(_apply_calibration_periods(_apply_ignore_rows(_read_cr1000_configured(path, cfg), cfg), cfg), cfg)
             items.append((f, f, df))    # yearly files sort well enough by name; ties keep directory listing order
         else:
             for y, df in _read_cr10x_configured(path, cfg):
-                items.append((y, f, _apply_calibration_periods(_apply_ignore_rows(df, cfg), cfg)))
+                items.append((y, f, _apply_swap_columns(_apply_calibration_periods(_apply_ignore_rows(df, cfg), cfg), cfg)))
     if not items:
         return None, None
     if dedup:
@@ -895,7 +952,8 @@ def _read_c_files(l0dir, path="./L0/"):
     if key not in _C_FILES_CACHE:
         _C_FILES_CACHE.clear()
         _C_FILES_CACHE[key] = _read_c_files_from_disk(l0dir, path)
-    return tuple(None if d is None else d.copy() for d in _C_FILES_CACHE[key])
+    dfj, dfc = tuple(None if d is None else d.copy() for d in _C_FILES_CACHE[key])
+    return apply_c_level_swaps(dfj, dfc, str(l0dir)[3:])      # sensors read on each other's channel: metadata/c_level_swaps.csv
 
 
 def clear_c_files_cache():
