@@ -54,7 +54,7 @@ site_list = pd.read_csv("L1/GC-Net_location.csv", header=0, skipinitialspace=Tru
 # site_list = site_list.loc[site_list.Name.values == 'Summit',:]
 # site_list = site_list[17:]
 ONLY = None
-ONLY = ["Saddle", "JAR1", "JAR2", "Petermann ELA", "Swiss Camp", "Swiss Camp 10m"]
+# ONLY = ["Saddle", "JAR1", "JAR2", "Petermann ELA", "Swiss Camp", "Swiss Camp 10m"]
 if ONLY:
     site_list = site_list.loc[site_list.Name.isin(ONLY), :]
 

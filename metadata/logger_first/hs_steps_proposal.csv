@@ -14,10 +14,7 @@ JAR1,HS2,2012-11-26 22:00:00+00:00,2014-05-06 21:00:00+00:00,525.96,-2.32,-0.67,
 JAR1,HS2,2014-08-17 14:00:00+00:00,2015-05-07 17:00:00+00:00,263.12,-1.07,0.61,-1.68,-1.16,False,ablation site: the gap contains the melt season,HS,HS2,1.68,1
 JAR1,HS2,2016-08-12 00:00:00+00:00,2016-08-25 04:00:00+00:00,13.17,-1.19,-0.16,-1.03,,False,ablation site: the gap contains the melt season,HS,HS2,1.03,1
 JAR2,HS2,2005-04-04 01:00:00+00:00,2005-05-14 06:00:00+00:00,40.21,-1.68,-0.06,-1.39,-0.29,False,ablation site: the gap contains the melt season,HS,HS2,1.39,1
-JAR2,HS2,2005-04-04 01:00:00+00:00,2005-05-14 06:00:00+00:00,40.21,-1.68,-0.06,-1.39,-0.29,False,ablation site: the gap contains the melt season,HS,HS2,1.39,2
 JAR2,HS2,2006-05-08 00:00:00+00:00,2007-02-27 00:00:00+00:00,295.0,-0.3,-3.24,1.87,-2.17,False,ablation site: the gap contains the melt season,HS,HS2,-1.87,1
-JAR2,HS2,2006-05-08 00:00:00+00:00,2007-02-27 00:00:00+00:00,295.0,-0.3,-3.24,1.87,-2.17,False,ablation site: the gap contains the melt season,HS,HS2,-1.87,2
-JAR2,HS2,2007-12-06 22:00:00+00:00,2008-03-15 14:00:00+00:00,99.67,-0.92,0.13,-0.9,-0.02,True,,HS,HS2,0.9,1
 SMS2,HS1,2003-12-01 22:00:00+00:00,2004-05-27 17:00:00+00:00,177.79,-1.46,0.48,-1.94,,False,ablation site: the gap contains the melt season,HS,HS1,1.94,1
 SMS2,HS1,2005-01-30 00:00:00+00:00,2005-05-12 23:00:00+00:00,102.96,-0.57,0.46,-1.03,,False,ablation site: the gap contains the melt season,HS,HS1,1.03,1
 SMS3,HS1,2003-12-04 23:00:00+00:00,2004-05-27 06:00:00+00:00,174.29,-1.45,-0.09,-1.36,,False,ablation site: the gap contains the melt season,HS,HS1,1.36,1
