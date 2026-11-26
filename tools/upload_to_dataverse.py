@@ -38,7 +38,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DOI = "doi:10.22008/FK2/VVXGUT"
 DOI_SHORT = "10.22008/FK2/VVXGUT"
 DEFAULT_SERVER = "https://dataverse.geus.dk"
-TOKEN_FILE = os.path.join(ROOT, "dataverse_token.txt")
+TOKEN_FILE = os.path.join(ROOT, "tools/dataverse_token.txt")
 ROOT_FILES = ["GC-Net_location.csv", "L1_variable_list.csv", "_ReadMe_L1.txt"]
 
 
