@@ -1,610 +1,4 @@
 site,variable,source,hours
-Swiss Camp,ISWR,CR1000,97347
-Swiss Camp,ISWR,C-level (Jason file),36838
-Swiss Camp,ISWR,2004_SC.dat,14483
-Swiss Camp,ISWR,C-level (station file),8945
-Swiss Camp,ISWR,2000_AWSSWC00.DAT,8352
-Swiss Camp,ISWR,2002_eth_01_02.dat,8203
-Swiss Camp,ISWR,2001_SWC2001.DAT,7874
-Swiss Camp,ISWR,2005_ETH1.DAT,3200
-Swiss Camp,ISWR,2004_scnew..DAT,2032
-Swiss Camp,ISWR,2005_ETH Summer 05.DAT,1856
-Swiss Camp,ISWR,1999_CH_AW006.DAT,994
-Swiss Camp,ISWR,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,ISWR,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,ISWR,2000_ETH_AWS.DAT,404
-Swiss Camp,ISWR,2007_sc aws.dat,353
-Swiss Camp,ISWR,2005_ETH3.DAT,207
-Swiss Camp,ISWR,1999_CH_AWS.DAT,134
-Swiss Camp,ISWR,2007_sc.dat,132
-Swiss Camp,ISWR,2000_SWC2000.DAT,10
-Swiss Camp,ISWR,2006_SWC.dat,1
-Swiss Camp,OSWR,CR1000,97347
-Swiss Camp,OSWR,C-level (Jason file),37127
-Swiss Camp,OSWR,2004_SC.dat,14483
-Swiss Camp,OSWR,C-level (station file),8943
-Swiss Camp,OSWR,2000_AWSSWC00.DAT,8351
-Swiss Camp,OSWR,2002_eth_01_02.dat,8203
-Swiss Camp,OSWR,2001_SWC2001.DAT,7874
-Swiss Camp,OSWR,2005_ETH1.DAT,3200
-Swiss Camp,OSWR,2004_scnew..DAT,2032
-Swiss Camp,OSWR,2005_ETH Summer 05.DAT,1856
-Swiss Camp,OSWR,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,OSWR,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,OSWR,2000_ETH_AWS.DAT,404
-Swiss Camp,OSWR,2007_sc aws.dat,353
-Swiss Camp,OSWR,2005_ETH3.DAT,207
-Swiss Camp,OSWR,2007_sc.dat,132
-Swiss Camp,OSWR,2000_SWC2000.DAT,10
-Swiss Camp,OSWR,2006_SWC.dat,1
-Swiss Camp,NR,CR1000,97347
-Swiss Camp,NR,C-level (Jason file),37507
-Swiss Camp,NR,2004_SC.dat,14483
-Swiss Camp,NR,C-level (station file),11988
-Swiss Camp,NR,2000_AWSSWC00.DAT,8351
-Swiss Camp,NR,2002_eth_01_02.dat,8203
-Swiss Camp,NR,2001_SWC2001.DAT,7874
-Swiss Camp,NR,2004_scnew..DAT,2030
-Swiss Camp,NR,2005_ETH Summer 05.DAT,1803
-Swiss Camp,NR,1999_CH_AW006.DAT,993
-Swiss Camp,NR,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,NR,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,NR,2000_ETH_AWS.DAT,404
-Swiss Camp,NR,2007_sc aws.dat,353
-Swiss Camp,NR,2005_ETH3.DAT,207
-Swiss Camp,NR,1999_CH_AWS.DAT,134
-Swiss Camp,NR,2007_sc.dat,129
-Swiss Camp,NR,2000_SWC2000.DAT,10
-Swiss Camp,NR,2000_swis99_0.dat,1
-Swiss Camp,NR,2006_SWC.dat,1
-Swiss Camp,TA1,CR1000,97270
-Swiss Camp,TA1,2004_SC.dat,14483
-Swiss Camp,TA1,C-level (station file),9610
-Swiss Camp,TA1,1997_AWS_ETH.DAT,8239
-Swiss Camp,TA1,2002_eth_01_02.dat,8203
-Swiss Camp,TA1,2000_AWSSWC00.DAT,8155
-Swiss Camp,TA1,2001_SWC2001.DAT,7873
-Swiss Camp,TA1,1998_AWS_97_8.DAT,6518
-Swiss Camp,TA1,2005_ETH1.DAT,3197
-Swiss Camp,TA1,1998_AWS_98_1.DAT,2106
-Swiss Camp,TA1,2004_scnew..DAT,2028
-Swiss Camp,TA1,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TA1,C-level (Jason file),1166
-Swiss Camp,TA1,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TA1,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TA1,1999_CH_AW006.DAT,455
-Swiss Camp,TA1,2000_ETH_AWS.DAT,404
-Swiss Camp,TA1,2007_sc aws.dat,353
-Swiss Camp,TA1,1998_SWIS_10M.DAT,335
-Swiss Camp,TA1,2005_ETH3.DAT,207
-Swiss Camp,TA1,2007_sc.dat,121
-Swiss Camp,TA1,1999_CH_AWS.DAT,109
-Swiss Camp,TA1,2000_SWC2000.DAT,10
-Swiss Camp,TA1,1998_AWS_98.DAT,1
-Swiss Camp,TA1,2006_SWC.dat,1
-Swiss Camp,TA2,CR1000,97284
-Swiss Camp,TA2,2004_SC.dat,14483
-Swiss Camp,TA2,C-level (Jason file),13278
-Swiss Camp,TA2,C-level (station file),9605
-Swiss Camp,TA2,1997_AWS_ETH.DAT,8239
-Swiss Camp,TA2,2002_eth_01_02.dat,8203
-Swiss Camp,TA2,2000_AWSSWC00.DAT,8155
-Swiss Camp,TA2,2001_SWC2001.DAT,7873
-Swiss Camp,TA2,1998_AWS_97_8.DAT,6518
-Swiss Camp,TA2,2005_ETH1.DAT,3197
-Swiss Camp,TA2,1998_AWS_98_1.DAT,2106
-Swiss Camp,TA2,2004_scnew..DAT,2028
-Swiss Camp,TA2,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TA2,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TA2,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TA2,1999_CH_AW006.DAT,455
-Swiss Camp,TA2,2000_ETH_AWS.DAT,404
-Swiss Camp,TA2,2007_sc aws.dat,353
-Swiss Camp,TA2,1998_SWIS_10M.DAT,335
-Swiss Camp,TA2,2005_ETH3.DAT,207
-Swiss Camp,TA2,2007_sc.dat,121
-Swiss Camp,TA2,1999_CH_AWS.DAT,109
-Swiss Camp,TA2,2000_SWC2000.DAT,10
-Swiss Camp,TA2,1998_AWS_98.DAT,1
-Swiss Camp,TA2,2006_SWC.dat,1
-Swiss Camp,TA3,CR1000,97347
-Swiss Camp,TA3,2004_SC.dat,14483
-Swiss Camp,TA3,C-level (station file),9541
-Swiss Camp,TA3,2000_AWSSWC00.DAT,8352
-Swiss Camp,TA3,C-level (Jason file),8316
-Swiss Camp,TA3,1997_AWS_ETH.DAT,8242
-Swiss Camp,TA3,2002_eth_01_02.dat,8203
-Swiss Camp,TA3,2001_SWC2001.DAT,7874
-Swiss Camp,TA3,1998_AWS_97_8.DAT,6518
-Swiss Camp,TA3,2005_ETH1.DAT,3201
-Swiss Camp,TA3,1998_AWS_98_1.DAT,2108
-Swiss Camp,TA3,2004_scnew..DAT,1866
-Swiss Camp,TA3,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TA3,1999_CH_AW006.DAT,994
-Swiss Camp,TA3,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TA3,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TA3,2000_ETH_AWS.DAT,404
-Swiss Camp,TA3,2007_sc aws.dat,353
-Swiss Camp,TA3,1998_SWIS_10M.DAT,335
-Swiss Camp,TA3,2005_ETH3.DAT,207
-Swiss Camp,TA3,2007_sc.dat,140
-Swiss Camp,TA3,1999_CH_AWS.DAT,134
-Swiss Camp,TA3,2000_SWC2000.DAT,10
-Swiss Camp,TA3,2006_SWC.dat,2
-Swiss Camp,TA3,1998_AWS_98.DAT,1
-Swiss Camp,TA4,CR1000,97347
-Swiss Camp,TA4,2004_SC.dat,14483
-Swiss Camp,TA4,C-level (station file),9542
-Swiss Camp,TA4,2000_AWSSWC00.DAT,8352
-Swiss Camp,TA4,C-level (Jason file),8320
-Swiss Camp,TA4,1997_AWS_ETH.DAT,8240
-Swiss Camp,TA4,2002_eth_01_02.dat,8203
-Swiss Camp,TA4,2001_SWC2001.DAT,7874
-Swiss Camp,TA4,1998_AWS_97_8.DAT,6518
-Swiss Camp,TA4,2005_ETH1.DAT,3201
-Swiss Camp,TA4,1998_AWS_98_1.DAT,2108
-Swiss Camp,TA4,2004_scnew..DAT,1865
-Swiss Camp,TA4,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TA4,1999_CH_AW006.DAT,994
-Swiss Camp,TA4,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TA4,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TA4,2000_ETH_AWS.DAT,404
-Swiss Camp,TA4,2007_sc aws.dat,353
-Swiss Camp,TA4,1998_SWIS_10M.DAT,335
-Swiss Camp,TA4,2005_ETH3.DAT,207
-Swiss Camp,TA4,2007_sc.dat,142
-Swiss Camp,TA4,1999_CH_AWS.DAT,134
-Swiss Camp,TA4,2000_SWC2000.DAT,10
-Swiss Camp,TA4,2006_SWC.dat,2
-Swiss Camp,TA4,1998_AWS_98.DAT,1
-Swiss Camp,RH1,CR1000,97347
-Swiss Camp,RH1,C-level (Jason file),26605
-Swiss Camp,RH1,2004_SC.dat,14483
-Swiss Camp,RH1,C-level (station file),9632
-Swiss Camp,RH1,2000_AWSSWC00.DAT,8352
-Swiss Camp,RH1,2002_eth_01_02.dat,8203
-Swiss Camp,RH1,2001_SWC2001.DAT,7874
-Swiss Camp,RH1,2005_ETH1.DAT,3201
-Swiss Camp,RH1,2004_scnew..DAT,2032
-Swiss Camp,RH1,2005_ETH Summer 05.DAT,1856
-Swiss Camp,RH1,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,RH1,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,RH1,2000_ETH_AWS.DAT,404
-Swiss Camp,RH1,2007_sc aws.dat,353
-Swiss Camp,RH1,2005_ETH3.DAT,207
-Swiss Camp,RH1,2007_sc.dat,153
-Swiss Camp,RH1,2000_SWC2000.DAT,10
-Swiss Camp,RH1,2006_SWC.dat,2
-Swiss Camp,RH2,CR1000,97347
-Swiss Camp,RH2,C-level (Jason file),26624
-Swiss Camp,RH2,2004_SC.dat,14483
-Swiss Camp,RH2,C-level (station file),9632
-Swiss Camp,RH2,2000_AWSSWC00.DAT,8352
-Swiss Camp,RH2,2002_eth_01_02.dat,8203
-Swiss Camp,RH2,2001_SWC2001.DAT,7874
-Swiss Camp,RH2,2005_ETH1.DAT,3201
-Swiss Camp,RH2,2004_scnew..DAT,2031
-Swiss Camp,RH2,2005_ETH Summer 05.DAT,1856
-Swiss Camp,RH2,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,RH2,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,RH2,2000_ETH_AWS.DAT,404
-Swiss Camp,RH2,2007_sc aws.dat,353
-Swiss Camp,RH2,2005_ETH3.DAT,207
-Swiss Camp,RH2,2007_sc.dat,158
-Swiss Camp,RH2,2000_SWC2000.DAT,10
-Swiss Camp,RH2,2006_SWC.dat,2
-Swiss Camp,VW1,CR1000,97347
-Swiss Camp,VW1,C-level (Jason file),28820
-Swiss Camp,VW1,2004_SC.dat,14483
-Swiss Camp,VW1,C-level (station file),8928
-Swiss Camp,VW1,2000_AWSSWC00.DAT,8352
-Swiss Camp,VW1,1997_AWS_ETH.DAT,8242
-Swiss Camp,VW1,2002_eth_01_02.dat,8203
-Swiss Camp,VW1,2001_SWC2001.DAT,7874
-Swiss Camp,VW1,2005_ETH1.DAT,3201
-Swiss Camp,VW1,2004_scnew..DAT,2032
-Swiss Camp,VW1,2005_ETH Summer 05.DAT,1856
-Swiss Camp,VW1,1999_CH_AW006.DAT,994
-Swiss Camp,VW1,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,VW1,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,VW1,2000_ETH_AWS.DAT,404
-Swiss Camp,VW1,2007_sc aws.dat,353
-Swiss Camp,VW1,1998_SWIS_10M.DAT,335
-Swiss Camp,VW1,2005_ETH3.DAT,207
-Swiss Camp,VW1,2007_sc.dat,165
-Swiss Camp,VW1,1999_CH_AWS.DAT,134
-Swiss Camp,VW1,2000_SWC2000.DAT,10
-Swiss Camp,VW1,2006_SWC.dat,2
-Swiss Camp,VW2,CR1000,97347
-Swiss Camp,VW2,C-level (Jason file),20383
-Swiss Camp,VW2,2004_SC.dat,14483
-Swiss Camp,VW2,C-level (station file),8927
-Swiss Camp,VW2,2000_AWSSWC00.DAT,8352
-Swiss Camp,VW2,1997_AWS_ETH.DAT,8242
-Swiss Camp,VW2,2002_eth_01_02.dat,8203
-Swiss Camp,VW2,2001_SWC2001.DAT,7874
-Swiss Camp,VW2,1998_AWS_97_8.DAT,6518
-Swiss Camp,VW2,2005_ETH1.DAT,3201
-Swiss Camp,VW2,1998_AWS_98_1.DAT,2108
-Swiss Camp,VW2,2004_scnew..DAT,2032
-Swiss Camp,VW2,2005_ETH Summer 05.DAT,1856
-Swiss Camp,VW2,1999_CH_AW006.DAT,994
-Swiss Camp,VW2,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,VW2,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,VW2,2000_ETH_AWS.DAT,404
-Swiss Camp,VW2,2007_sc aws.dat,353
-Swiss Camp,VW2,1998_SWIS_10M.DAT,335
-Swiss Camp,VW2,2005_ETH3.DAT,207
-Swiss Camp,VW2,2007_sc.dat,165
-Swiss Camp,VW2,1999_CH_AWS.DAT,134
-Swiss Camp,VW2,2000_SWC2000.DAT,10
-Swiss Camp,VW2,2006_SWC.dat,2
-Swiss Camp,VW2,1998_AWS_98.DAT,1
-Swiss Camp,DW1,CR1000,97347
-Swiss Camp,DW1,2004_SC.dat,14483
-Swiss Camp,DW1,C-level (station file),12701
-Swiss Camp,DW1,2001_SWC2001.DAT,8539
-Swiss Camp,DW1,2000_AWSSWC00.DAT,8352
-Swiss Camp,DW1,1997_AWS_ETH.DAT,8242
-Swiss Camp,DW1,2002_eth_01_02.dat,8203
-Swiss Camp,DW1,C-level (Jason file),7519
-Swiss Camp,DW1,1998_AWS_97_8.DAT,6518
-Swiss Camp,DW1,1998_AWS_98_1.DAT,2108
-Swiss Camp,DW1,2004_scnew..DAT,2031
-Swiss Camp,DW1,2005_ETH Summer 05.DAT,1856
-Swiss Camp,DW1,1999_CH_AW006.DAT,994
-Swiss Camp,DW1,2001_SWISSAWS.DAT,390
-Swiss Camp,DW1,2007_sc aws.dat,353
-Swiss Camp,DW1,1998_SWIS_10M.DAT,335
-Swiss Camp,DW1,2005_ETH3.DAT,208
-Swiss Camp,DW1,1999_CH_AWS.DAT,134
-Swiss Camp,DW1,2007_sc.dat,117
-Swiss Camp,DW1,2000_SWC2000.DAT,105
-Swiss Camp,DW1,2002_ETH.DAT,22
-Swiss Camp,DW1,2006_SWC.dat,2
-Swiss Camp,DW1,1998_AWS_98.DAT,1
-Swiss Camp,DW2,CR1000,97347
-Swiss Camp,DW2,C-level (Jason file),20270
-Swiss Camp,DW2,2004_SC.dat,14483
-Swiss Camp,DW2,C-level (station file),12640
-Swiss Camp,DW2,2001_SWC2001.DAT,8539
-Swiss Camp,DW2,2000_AWSSWC00.DAT,8352
-Swiss Camp,DW2,1997_AWS_ETH.DAT,8242
-Swiss Camp,DW2,2002_eth_01_02.dat,8203
-Swiss Camp,DW2,1998_AWS_97_8.DAT,6518
-Swiss Camp,DW2,1998_AWS_98_1.DAT,2108
-Swiss Camp,DW2,2004_scnew..DAT,2030
-Swiss Camp,DW2,2005_ETH Summer 05.DAT,1856
-Swiss Camp,DW2,1999_CH_AW006.DAT,994
-Swiss Camp,DW2,2001_SWISSAWS.DAT,390
-Swiss Camp,DW2,2007_sc aws.dat,353
-Swiss Camp,DW2,1998_SWIS_10M.DAT,335
-Swiss Camp,DW2,2005_ETH3.DAT,208
-Swiss Camp,DW2,2007_sc.dat,163
-Swiss Camp,DW2,1999_CH_AWS.DAT,134
-Swiss Camp,DW2,2000_SWC2000.DAT,105
-Swiss Camp,DW2,2002_ETH.DAT,22
-Swiss Camp,DW2,2006_SWC.dat,2
-Swiss Camp,DW2,1998_AWS_98.DAT,1
-Swiss Camp,P,CR1000,97027
-Swiss Camp,P,C-level (station file),20703
-Swiss Camp,P,C-level (Jason file),12208
-Swiss Camp,P,2003_eth_02_03.dat,8445
-Swiss Camp,P,2002_eth_01_02.dat,8203
-Swiss Camp,P,2001_SWC2001.DAT,7874
-Swiss Camp,P,1998_AWS_97_8.DAT,6518
-Swiss Camp,P,1998_AWS_98_1.DAT,2108
-Swiss Camp,P,2005_ETH Summer 05.DAT,1856
-Swiss Camp,P,1999_CH_AW006.DAT,994
-Swiss Camp,P,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,P,2000_ETH_AWS.DAT,404
-Swiss Camp,P,2007_sc aws.dat,353
-Swiss Camp,P,1998_SWIS_10M.DAT,335
-Swiss Camp,P,2005_ETH3.DAT,208
-Swiss Camp,P,2007_sc.dat,165
-Swiss Camp,P,1999_CH_AWS.DAT,134
-Swiss Camp,P,2000_SWC2000.DAT,10
-Swiss Camp,P,2006_SWC.dat,2
-Swiss Camp,P,1998_AWS_98.DAT,1
-Swiss Camp,HW1,CR1000,83459
-Swiss Camp,HW1,C-level (Jason file),61961
-Swiss Camp,HW1,C-level (station file),30003
-Swiss Camp,HW2,CR1000,91181
-Swiss Camp,HW2,C-level (Jason file),61961
-Swiss Camp,HW2,C-level (station file),29996
-Swiss Camp,V,CR1000,97347
-Swiss Camp,V,C-level (station file),8911
-Swiss Camp,V,2003_eth_02_03.dat,8445
-Swiss Camp,V,2000_AWSSWC00.DAT,8353
-Swiss Camp,V,1997_AWS_ETH.DAT,8242
-Swiss Camp,V,2001_SWC2001.DAT,8231
-Swiss Camp,V,2002_eth_01_02.dat,8203
-Swiss Camp,V,1998_AWS_97_8.DAT,6518
-Swiss Camp,V,2005_ETH1.DAT,3201
-Swiss Camp,V,1998_AWS_98_1.DAT,2108
-Swiss Camp,V,2005_ETH Summer 05.DAT,1856
-Swiss Camp,V,1999_CH_AW006.DAT,994
-Swiss Camp,V,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,V,C-level (Jason file),408
-Swiss Camp,V,2000_ETH_AWS.DAT,404
-Swiss Camp,V,2001_SWISSAWS.DAT,390
-Swiss Camp,V,2007_sc aws.dat,353
-Swiss Camp,V,1998_SWIS_10M.DAT,335
-Swiss Camp,V,2005_ETH3.DAT,207
-Swiss Camp,V,2007_sc.dat,165
-Swiss Camp,V,1999_CH_AWS.DAT,134
-Swiss Camp,V,2002_ETH.DAT,22
-Swiss Camp,V,2006_SWC.dat,2
-Swiss Camp,V,1998_AWS_98.DAT,1
-Swiss Camp,TA5,CR1000,97347
-Swiss Camp,TA5,2004_SC.dat,22254
-Swiss Camp,TA5,C-level (station file),8892
-Swiss Camp,TA5,2005_ETH1.DAT,3197
-Swiss Camp,TA5,2004_scnew..DAT,2032
-Swiss Camp,TA5,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TA5,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TA5,2007_sc aws.dat,353
-Swiss Camp,TA5,2005_ETH3.DAT,207
-Swiss Camp,TA5,2007_sc.dat,120
-Swiss Camp,TA5,2006_SWC.dat,1
-Swiss Camp,TS1,CR1000,26208
-Swiss Camp,TS1,2004_SC.dat,14483
-Swiss Camp,TS1,C-level (station file),9863
-Swiss Camp,TS1,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS1,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS1,2002_eth_01_02.dat,8203
-Swiss Camp,TS1,2001_SWC2001.DAT,7874
-Swiss Camp,TS1,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS1,2005_ETH1.DAT,3197
-Swiss Camp,TS1,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS1,2004_scnew..DAT,2029
-Swiss Camp,TS1,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS1,1999_CH_AW006.DAT,994
-Swiss Camp,TS1,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TS1,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS1,2000_ETH_AWS.DAT,404
-Swiss Camp,TS1,2007_sc aws.dat,353
-Swiss Camp,TS1,1998_SWIS_10M.DAT,335
-Swiss Camp,TS1,2005_ETH3.DAT,207
-Swiss Camp,TS1,1999_CH_AWS.DAT,134
-Swiss Camp,TS1,2007_sc.dat,122
-Swiss Camp,TS1,C-level (Jason file),16
-Swiss Camp,TS1,2000_SWC2000.DAT,10
-Swiss Camp,TS1,1998_AWS_98.DAT,1
-Swiss Camp,TS1,2006_SWC.dat,1
-Swiss Camp,TS2,CR1000,43608
-Swiss Camp,TS2,2004_SC.dat,14483
-Swiss Camp,TS2,C-level (station file),9860
-Swiss Camp,TS2,2001_SWC2001.DAT,8539
-Swiss Camp,TS2,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS2,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS2,2002_eth_01_02.dat,8203
-Swiss Camp,TS2,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS2,2005_ETH1.DAT,3199
-Swiss Camp,TS2,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS2,2004_scnew..DAT,2030
-Swiss Camp,TS2,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS2,1999_CH_AW006.DAT,994
-Swiss Camp,TS2,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS2,2001_SWISSAWS.DAT,390
-Swiss Camp,TS2,2007_sc aws.dat,353
-Swiss Camp,TS2,1998_SWIS_10M.DAT,335
-Swiss Camp,TS2,2005_ETH3.DAT,207
-Swiss Camp,TS2,1999_CH_AWS.DAT,134
-Swiss Camp,TS2,2007_sc.dat,123
-Swiss Camp,TS2,2000_SWC2000.DAT,105
-Swiss Camp,TS2,2002_ETH.DAT,22
-Swiss Camp,TS2,C-level (Jason file),16
-Swiss Camp,TS2,1998_AWS_98.DAT,1
-Swiss Camp,TS2,2006_SWC.dat,1
-Swiss Camp,TS3,CR1000,26203
-Swiss Camp,TS3,2004_SC.dat,14483
-Swiss Camp,TS3,C-level (station file),9860
-Swiss Camp,TS3,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS3,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS3,2002_eth_01_02.dat,8203
-Swiss Camp,TS3,2001_SWC2001.DAT,7874
-Swiss Camp,TS3,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS3,2005_ETH1.DAT,3199
-Swiss Camp,TS3,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS3,2004_scnew..DAT,2030
-Swiss Camp,TS3,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS3,1999_CH_AW006.DAT,994
-Swiss Camp,TS3,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TS3,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS3,2000_ETH_AWS.DAT,404
-Swiss Camp,TS3,2007_sc aws.dat,353
-Swiss Camp,TS3,1998_SWIS_10M.DAT,335
-Swiss Camp,TS3,2005_ETH3.DAT,207
-Swiss Camp,TS3,1999_CH_AWS.DAT,134
-Swiss Camp,TS3,2007_sc.dat,123
-Swiss Camp,TS3,C-level (Jason file),16
-Swiss Camp,TS3,2000_SWC2000.DAT,10
-Swiss Camp,TS3,1998_AWS_98.DAT,1
-Swiss Camp,TS3,2006_SWC.dat,1
-Swiss Camp,TS4,CR1000,89078
-Swiss Camp,TS4,2004_SC.dat,14483
-Swiss Camp,TS4,C-level (station file),10530
-Swiss Camp,TS4,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS4,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS4,2002_eth_01_02.dat,8203
-Swiss Camp,TS4,2001_SWC2001.DAT,7874
-Swiss Camp,TS4,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS4,2005_ETH1.DAT,3199
-Swiss Camp,TS4,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS4,2004_scnew..DAT,2030
-Swiss Camp,TS4,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS4,1999_CH_AW006.DAT,994
-Swiss Camp,TS4,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TS4,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS4,2000_ETH_AWS.DAT,404
-Swiss Camp,TS4,2007_sc aws.dat,353
-Swiss Camp,TS4,1998_SWIS_10M.DAT,335
-Swiss Camp,TS4,2005_ETH3.DAT,207
-Swiss Camp,TS4,1999_CH_AWS.DAT,134
-Swiss Camp,TS4,2007_sc.dat,123
-Swiss Camp,TS4,C-level (Jason file),16
-Swiss Camp,TS4,2000_SWC2000.DAT,10
-Swiss Camp,TS4,1998_AWS_98.DAT,1
-Swiss Camp,TS4,2006_SWC.dat,1
-Swiss Camp,TS5,CR1000,67245
-Swiss Camp,TS5,C-level (station file),14712
-Swiss Camp,TS5,2004_SC.dat,14483
-Swiss Camp,TS5,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS5,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS5,2002_eth_01_02.dat,8203
-Swiss Camp,TS5,2001_SWC2001.DAT,7874
-Swiss Camp,TS5,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS5,2005_ETH1.DAT,3199
-Swiss Camp,TS5,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS5,2004_scnew..DAT,2028
-Swiss Camp,TS5,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS5,1999_CH_AW006.DAT,994
-Swiss Camp,TS5,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TS5,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS5,2000_ETH_AWS.DAT,404
-Swiss Camp,TS5,2007_sc aws.dat,353
-Swiss Camp,TS5,1998_SWIS_10M.DAT,335
-Swiss Camp,TS5,2005_ETH3.DAT,207
-Swiss Camp,TS5,1999_CH_AWS.DAT,134
-Swiss Camp,TS5,2007_sc.dat,123
-Swiss Camp,TS5,C-level (Jason file),16
-Swiss Camp,TS5,2000_SWC2000.DAT,10
-Swiss Camp,TS5,1998_AWS_98.DAT,1
-Swiss Camp,TS5,2006_SWC.dat,1
-Swiss Camp,TS6,CR1000,91445
-Swiss Camp,TS6,2004_SC.dat,14483
-Swiss Camp,TS6,C-level (station file),9937
-Swiss Camp,TS6,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS6,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS6,2002_eth_01_02.dat,8203
-Swiss Camp,TS6,2001_SWC2001.DAT,7874
-Swiss Camp,TS6,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS6,2005_ETH1.DAT,3199
-Swiss Camp,TS6,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS6,2004_scnew..DAT,2028
-Swiss Camp,TS6,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS6,1999_CH_AW006.DAT,994
-Swiss Camp,TS6,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TS6,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS6,2000_ETH_AWS.DAT,404
-Swiss Camp,TS6,2007_sc aws.dat,353
-Swiss Camp,TS6,1998_SWIS_10M.DAT,335
-Swiss Camp,TS6,2005_ETH3.DAT,207
-Swiss Camp,TS6,1999_CH_AWS.DAT,134
-Swiss Camp,TS6,2007_sc.dat,121
-Swiss Camp,TS6,C-level (Jason file),16
-Swiss Camp,TS6,2000_SWC2000.DAT,10
-Swiss Camp,TS6,1998_AWS_98.DAT,1
-Swiss Camp,TS6,2006_SWC.dat,1
-Swiss Camp,TS7,CR1000,76533
-Swiss Camp,TS7,C-level (station file),14956
-Swiss Camp,TS7,2004_SC.dat,14483
-Swiss Camp,TS7,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS7,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS7,2002_eth_01_02.dat,8203
-Swiss Camp,TS7,2001_SWC2001.DAT,7874
-Swiss Camp,TS7,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS7,2005_ETH1.DAT,3200
-Swiss Camp,TS7,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS7,2004_scnew..DAT,2029
-Swiss Camp,TS7,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS7,1999_CH_AW006.DAT,994
-Swiss Camp,TS7,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TS7,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS7,2000_ETH_AWS.DAT,404
-Swiss Camp,TS7,2007_sc aws.dat,353
-Swiss Camp,TS7,1998_SWIS_10M.DAT,335
-Swiss Camp,TS7,2005_ETH3.DAT,207
-Swiss Camp,TS7,1999_CH_AWS.DAT,134
-Swiss Camp,TS7,2007_sc.dat,121
-Swiss Camp,TS7,C-level (Jason file),16
-Swiss Camp,TS7,2000_SWC2000.DAT,10
-Swiss Camp,TS7,1998_AWS_98.DAT,1
-Swiss Camp,TS7,2006_SWC.dat,1
-Swiss Camp,TS8,CR1000,80053
-Swiss Camp,TS8,2004_SC.dat,14483
-Swiss Camp,TS8,C-level (station file),9771
-Swiss Camp,TS8,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS8,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS8,2002_eth_01_02.dat,8203
-Swiss Camp,TS8,2001_SWC2001.DAT,7874
-Swiss Camp,TS8,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS8,2005_ETH1.DAT,3199
-Swiss Camp,TS8,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS8,2004_scnew..DAT,2029
-Swiss Camp,TS8,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS8,1999_CH_AW006.DAT,994
-Swiss Camp,TS8,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TS8,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS8,2000_ETH_AWS.DAT,404
-Swiss Camp,TS8,2007_sc aws.dat,353
-Swiss Camp,TS8,1998_SWIS_10M.DAT,335
-Swiss Camp,TS8,2005_ETH3.DAT,207
-Swiss Camp,TS8,1999_CH_AWS.DAT,134
-Swiss Camp,TS8,2007_sc.dat,121
-Swiss Camp,TS8,C-level (Jason file),16
-Swiss Camp,TS8,2000_SWC2000.DAT,10
-Swiss Camp,TS8,1998_AWS_98.DAT,1
-Swiss Camp,TS8,2006_SWC.dat,1
-Swiss Camp,TS9,CR1000,72023
-Swiss Camp,TS9,2004_SC.dat,14483
-Swiss Camp,TS9,C-level (station file),13682
-Swiss Camp,TS9,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS9,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS9,2002_eth_01_02.dat,8203
-Swiss Camp,TS9,2001_SWC2001.DAT,7874
-Swiss Camp,TS9,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS9,2005_ETH1.DAT,3199
-Swiss Camp,TS9,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS9,2004_scnew..DAT,2028
-Swiss Camp,TS9,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS9,1999_CH_AW006.DAT,994
-Swiss Camp,TS9,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TS9,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS9,2000_ETH_AWS.DAT,404
-Swiss Camp,TS9,2007_sc aws.dat,353
-Swiss Camp,TS9,1998_SWIS_10M.DAT,335
-Swiss Camp,TS9,2005_ETH3.DAT,207
-Swiss Camp,TS9,1999_CH_AWS.DAT,134
-Swiss Camp,TS9,2007_sc.dat,120
-Swiss Camp,TS9,C-level (Jason file),16
-Swiss Camp,TS9,2000_SWC2000.DAT,10
-Swiss Camp,TS9,1998_AWS_98.DAT,1
-Swiss Camp,TS9,2006_SWC.dat,1
-Swiss Camp,TS10,CR1000,97327
-Swiss Camp,TS10,2004_SC.dat,13061
-Swiss Camp,TS10,2000_AWSSWC00.DAT,8352
-Swiss Camp,TS10,1997_AWS_ETH.DAT,8242
-Swiss Camp,TS10,2002_eth_01_02.dat,8203
-Swiss Camp,TS10,2001_SWC2001.DAT,7874
-Swiss Camp,TS10,1998_AWS_97_8.DAT,6518
-Swiss Camp,TS10,C-level (station file),3853
-Swiss Camp,TS10,2005_ETH1.DAT,3199
-Swiss Camp,TS10,1998_AWS_98_1.DAT,2108
-Swiss Camp,TS10,2004_scnew..DAT,2028
-Swiss Camp,TS10,2005_ETH Summer 05.DAT,1856
-Swiss Camp,TS10,1999_CH_AW006.DAT,994
-Swiss Camp,TS10,2002_snow temp may 1 to July 17 2001.dat,768
-Swiss Camp,TS10,2005_CR10X_2_final_storage_1.dat,642
-Swiss Camp,TS10,2000_ETH_AWS.DAT,404
-Swiss Camp,TS10,2007_sc aws.dat,353
-Swiss Camp,TS10,1998_SWIS_10M.DAT,335
-Swiss Camp,TS10,2005_ETH3.DAT,207
-Swiss Camp,TS10,1999_CH_AWS.DAT,134
-Swiss Camp,TS10,2007_sc.dat,121
-Swiss Camp,TS10,C-level (Jason file),16
-Swiss Camp,TS10,2000_SWC2000.DAT,10
-Swiss Camp,TS10,1998_AWS_98.DAT,1
-Swiss Camp,TS10,2006_SWC.dat,1
-Swiss Camp,IUVR,CR1000,34912
-Swiss Camp,ILWR,CR1000,47555
-Swiss Camp,Tsurf1,CR1000,95345
-Swiss Camp,Tsurf2,CR1000,97110
-Swiss Camp,HS1,C-level (Jason file),46914
-Swiss Camp,HS1,C-level (station file),24218
-Swiss Camp,HS2,C-level (Jason file),39647
-Swiss Camp,HS2,C-level (station file),29785
 Crawford Point 1,ISWR,CR1000,33751
 Crawford Point 1,ISWR,C-level (station file),25532
 Crawford Point 1,ISWR,C-level (Jason file),10610
@@ -3507,299 +2901,6 @@ DYE-2,HS1,C-level (station file),61269
 DYE-2,HS1,C-level (Jason file),44093
 DYE-2,HS2,C-level (station file),59808
 DYE-2,HS2,C-level (Jason file),44094
-Saddle,ISWR,CR1000,97285
-Saddle,ISWR,2009_Saddle 09.dat,34827
-Saddle,ISWR,2000_AWSSDL00.DAT,9456
-Saddle,ISWR,2001_SADDLE01.DAT,9310
-Saddle,ISWR,2005_saddle-a.dat,8985
-Saddle,ISWR,1999_AWSSDL99.DAT,8715
-Saddle,ISWR,1998_SAD_97-8.DAT,8679
-Saddle,ISWR,2008_saddle 08.dat,8458
-Saddle,ISWR,2002_SADDLE.DAT,8325
-Saddle,ISWR,transmission (station folder),269
-Saddle,ISWR,C-level (station file),7
-Saddle,ISWR,C-level (Jason file),2
-Saddle,OSWR,CR1000,97290
-Saddle,OSWR,2009_Saddle 09.dat,34827
-Saddle,OSWR,2000_AWSSDL00.DAT,9456
-Saddle,OSWR,2001_SADDLE01.DAT,9310
-Saddle,OSWR,2005_saddle-a.dat,8985
-Saddle,OSWR,1999_AWSSDL99.DAT,8715
-Saddle,OSWR,1998_SAD_97-8.DAT,8679
-Saddle,OSWR,2008_saddle 08.dat,8458
-Saddle,OSWR,2002_SADDLE.DAT,8325
-Saddle,OSWR,transmission (station folder),268
-Saddle,OSWR,C-level (station file),3
-Saddle,OSWR,C-level (Jason file),2
-Saddle,NR,CR1000,96996
-Saddle,NR,2009_Saddle 09.dat,34824
-Saddle,NR,2000_AWSSDL00.DAT,9456
-Saddle,NR,2001_SADDLE01.DAT,9310
-Saddle,NR,C-level (station file),8857
-Saddle,NR,1999_AWSSDL99.DAT,8715
-Saddle,NR,1998_SAD_97-8.DAT,8679
-Saddle,NR,2002_SADDLE.DAT,8325
-Saddle,NR,2008_saddle 08.dat,7993
-Saddle,NR,transmission (station folder),269
-Saddle,NR,C-level (Jason file),2
-Saddle,TA1,CR1000,66753
-Saddle,TA1,2009_Saddle 09.dat,34820
-Saddle,TA1,2000_AWSSDL00.DAT,9453
-Saddle,TA1,2001_SADDLE01.DAT,9310
-Saddle,TA1,2005_saddle-a.dat,8985
-Saddle,TA1,1999_AWSSDL99.DAT,8715
-Saddle,TA1,1998_SAD_97-8.DAT,8647
-Saddle,TA1,2008_saddle 08.dat,8438
-Saddle,TA1,2002_SADDLE.DAT,8320
-Saddle,TA1,C-level (station file),5315
-Saddle,TA1,transmission (station folder),944
-Saddle,TA1,C-level (Jason file),8
-Saddle,TA2,CR1000,97265
-Saddle,TA2,2009_Saddle 09.dat,34820
-Saddle,TA2,2000_AWSSDL00.DAT,9453
-Saddle,TA2,2001_SADDLE01.DAT,9310
-Saddle,TA2,2005_saddle-a.dat,8985
-Saddle,TA2,1999_AWSSDL99.DAT,8715
-Saddle,TA2,1998_SAD_97-8.DAT,8647
-Saddle,TA2,2008_saddle 08.dat,8438
-Saddle,TA2,2002_SADDLE.DAT,8320
-Saddle,TA2,transmission (station folder),941
-Saddle,TA2,C-level (station file),56
-Saddle,TA2,C-level (Jason file),42
-Saddle,TA3,CR1000,97291
-Saddle,TA3,2009_Saddle 09.dat,34827
-Saddle,TA3,2000_AWSSDL00.DAT,9456
-Saddle,TA3,2001_SADDLE01.DAT,9310
-Saddle,TA3,2005_saddle-a.dat,8985
-Saddle,TA3,1999_AWSSDL99.DAT,8715
-Saddle,TA3,1998_SAD_97-8.DAT,8679
-Saddle,TA3,2008_saddle 08.dat,8458
-Saddle,TA3,2002_SADDLE.DAT,8325
-Saddle,TA3,transmission (station folder),312
-Saddle,TA3,C-level (Jason file),3
-Saddle,TA3,C-level (station file),2
-Saddle,TA4,CR1000,97291
-Saddle,TA4,2009_Saddle 09.dat,34827
-Saddle,TA4,2000_AWSSDL00.DAT,9456
-Saddle,TA4,2001_SADDLE01.DAT,9310
-Saddle,TA4,2005_saddle-a.dat,8985
-Saddle,TA4,1999_AWSSDL99.DAT,8715
-Saddle,TA4,1998_SAD_97-8.DAT,8679
-Saddle,TA4,2008_saddle 08.dat,8458
-Saddle,TA4,2002_SADDLE.DAT,8325
-Saddle,TA4,transmission (station folder),927
-Saddle,TA4,C-level (Jason file),3
-Saddle,TA4,C-level (station file),2
-Saddle,RH1,CR1000,97291
-Saddle,RH1,2009_Saddle 09.dat,34827
-Saddle,RH1,2000_AWSSDL00.DAT,9456
-Saddle,RH1,2001_SADDLE01.DAT,9310
-Saddle,RH1,2005_saddle-a.dat,8985
-Saddle,RH1,1999_AWSSDL99.DAT,8715
-Saddle,RH1,C-level (Jason file),8682
-Saddle,RH1,2008_saddle 08.dat,8458
-Saddle,RH1,2002_SADDLE.DAT,8325
-Saddle,RH1,transmission (station folder),156
-Saddle,RH1,C-level (station file),2
-Saddle,RH2,CR1000,97291
-Saddle,RH2,2009_Saddle 09.dat,34827
-Saddle,RH2,2000_AWSSDL00.DAT,9456
-Saddle,RH2,2001_SADDLE01.DAT,9310
-Saddle,RH2,2005_saddle-a.dat,8985
-Saddle,RH2,1999_AWSSDL99.DAT,8715
-Saddle,RH2,C-level (Jason file),8682
-Saddle,RH2,2008_saddle 08.dat,8458
-Saddle,RH2,2002_SADDLE.DAT,8325
-Saddle,RH2,transmission (station folder),116
-Saddle,RH2,C-level (station file),2
-Saddle,VW1,CR1000,97291
-Saddle,VW1,2009_Saddle 09.dat,34827
-Saddle,VW1,2000_AWSSDL00.DAT,9456
-Saddle,VW1,2001_SADDLE01.DAT,9310
-Saddle,VW1,2005_saddle-a.dat,8985
-Saddle,VW1,1999_AWSSDL99.DAT,8715
-Saddle,VW1,1998_SAD_97-8.DAT,8679
-Saddle,VW1,2008_saddle 08.dat,8458
-Saddle,VW1,2002_SADDLE.DAT,8325
-Saddle,VW1,transmission (station folder),175
-Saddle,VW1,C-level (Jason file),3
-Saddle,VW2,CR1000,97291
-Saddle,VW2,2009_Saddle 09.dat,34827
-Saddle,VW2,2000_AWSSDL00.DAT,9456
-Saddle,VW2,2001_SADDLE01.DAT,9310
-Saddle,VW2,2005_saddle-a.dat,8985
-Saddle,VW2,1999_AWSSDL99.DAT,8715
-Saddle,VW2,1998_SAD_97-8.DAT,8679
-Saddle,VW2,2008_saddle 08.dat,8458
-Saddle,VW2,2002_SADDLE.DAT,8325
-Saddle,VW2,transmission (station folder),327
-Saddle,VW2,C-level (Jason file),3
-Saddle,DW1,CR1000,97291
-Saddle,DW1,2009_Saddle 09.dat,34827
-Saddle,DW1,2000_AWSSDL00.DAT,9456
-Saddle,DW1,2001_SADDLE01.DAT,9310
-Saddle,DW1,2005_saddle-a.dat,8985
-Saddle,DW1,1999_AWSSDL99.DAT,8715
-Saddle,DW1,1998_SAD_97-8.DAT,8679
-Saddle,DW1,2008_saddle 08.dat,8458
-Saddle,DW1,2002_SADDLE.DAT,8325
-Saddle,DW1,transmission (station folder),957
-Saddle,DW2,CR1000,97291
-Saddle,DW2,2009_Saddle 09.dat,34827
-Saddle,DW2,2000_AWSSDL00.DAT,9456
-Saddle,DW2,2001_SADDLE01.DAT,9310
-Saddle,DW2,2005_saddle-a.dat,8985
-Saddle,DW2,1999_AWSSDL99.DAT,8715
-Saddle,DW2,2008_saddle 08.dat,8458
-Saddle,DW2,2002_SADDLE.DAT,8325
-Saddle,DW2,C-level (Jason file),7223
-Saddle,DW2,transmission (station folder),957
-Saddle,P,CR1000,97291
-Saddle,P,2009_Saddle 09.dat,34827
-Saddle,P,2000_AWSSDL00.DAT,9456
-Saddle,P,2001_SADDLE01.DAT,9310
-Saddle,P,2005_saddle-a.dat,8985
-Saddle,P,1999_AWSSDL99.DAT,8715
-Saddle,P,2008_saddle 08.dat,8458
-Saddle,P,2002_SADDLE.DAT,8325
-Saddle,P,transmission (station folder),940
-Saddle,P,C-level (station file),2
-Saddle,P,C-level (Jason file),1
-Saddle,HW1,CR1000,61301
-Saddle,HW1,C-level (station file),55723
-Saddle,HW1,C-level (Jason file),41020
-Saddle,HW2,CR1000,82244
-Saddle,HW2,C-level (station file),55314
-Saddle,HW2,C-level (Jason file),41020
-Saddle,V,CR1000,97291
-Saddle,V,2009_Saddle 09.dat,34827
-Saddle,V,2000_AWSSDL00.DAT,9456
-Saddle,V,2001_SADDLE01.DAT,9310
-Saddle,V,2005_saddle-a.dat,8985
-Saddle,V,1999_AWSSDL99.DAT,8715
-Saddle,V,1998_SAD_97-8.DAT,8679
-Saddle,V,2008_saddle 08.dat,8458
-Saddle,V,2002_SADDLE.DAT,8325
-Saddle,V,transmission (station folder),950
-Saddle,V,C-level (Jason file),3
-Saddle,TA5,CR1000,97290
-Saddle,TA5,2000_AWSSDL00.DAT,9456
-Saddle,TA5,1999_AWSSDL99.DAT,8715
-Saddle,TA5,transmission (station folder),265
-Saddle,TS1,CR1000,45352
-Saddle,TS1,2009_Saddle 09.dat,34824
-Saddle,TS1,C-level (station file),17029
-Saddle,TS1,2000_AWSSDL00.DAT,9453
-Saddle,TS1,2001_SADDLE01.DAT,9310
-Saddle,TS1,2005_saddle-a.dat,8985
-Saddle,TS1,1999_AWSSDL99.DAT,8714
-Saddle,TS1,1998_SAD_97-8.DAT,8647
-Saddle,TS1,2008_saddle 08.dat,8437
-Saddle,TS1,2002_SADDLE.DAT,8314
-Saddle,TS1,C-level (Jason file),46
-Saddle,TS2,CR1000,71904
-Saddle,TS2,2009_Saddle 09.dat,34822
-Saddle,TS2,2000_AWSSDL00.DAT,9453
-Saddle,TS2,2001_SADDLE01.DAT,9310
-Saddle,TS2,2005_saddle-a.dat,8985
-Saddle,TS2,1999_AWSSDL99.DAT,8715
-Saddle,TS2,1998_SAD_97-8.DAT,8647
-Saddle,TS2,2008_saddle 08.dat,8437
-Saddle,TS2,2002_SADDLE.DAT,8318
-Saddle,TS2,C-level (station file),6157
-Saddle,TS2,C-level (Jason file),43
-Saddle,TS3,CR1000,76176
-Saddle,TS3,2009_Saddle 09.dat,34822
-Saddle,TS3,2000_AWSSDL00.DAT,9453
-Saddle,TS3,2001_SADDLE01.DAT,9310
-Saddle,TS3,2005_saddle-a.dat,8985
-Saddle,TS3,1999_AWSSDL99.DAT,8715
-Saddle,TS3,1998_SAD_97-8.DAT,8647
-Saddle,TS3,2008_saddle 08.dat,8435
-Saddle,TS3,2002_SADDLE.DAT,8318
-Saddle,TS3,C-level (station file),6947
-Saddle,TS3,C-level (Jason file),42
-Saddle,TS4,CR1000,37039
-Saddle,TS4,2009_Saddle 09.dat,34823
-Saddle,TS4,C-level (station file),10470
-Saddle,TS4,2000_AWSSDL00.DAT,9453
-Saddle,TS4,2001_SADDLE01.DAT,9310
-Saddle,TS4,2005_saddle-a.dat,8985
-Saddle,TS4,1999_AWSSDL99.DAT,8715
-Saddle,TS4,1998_SAD_97-8.DAT,8647
-Saddle,TS4,2008_saddle 08.dat,8438
-Saddle,TS4,2002_SADDLE.DAT,8320
-Saddle,TS4,C-level (Jason file),41
-Saddle,TS5,2009_Saddle 09.dat,34825
-Saddle,TS5,CR1000,24710
-Saddle,TS5,C-level (station file),13944
-Saddle,TS5,2000_AWSSDL00.DAT,9453
-Saddle,TS5,2001_SADDLE01.DAT,9310
-Saddle,TS5,2005_saddle-a.dat,8985
-Saddle,TS5,1999_AWSSDL99.DAT,8715
-Saddle,TS5,1998_SAD_97-8.DAT,8647
-Saddle,TS5,2008_saddle 08.dat,8438
-Saddle,TS5,2002_SADDLE.DAT,8320
-Saddle,TS5,C-level (Jason file),41
-Saddle,TS6,2009_Saddle 09.dat,34824
-Saddle,TS6,CR1000,16240
-Saddle,TS6,C-level (station file),9696
-Saddle,TS6,2000_AWSSDL00.DAT,9453
-Saddle,TS6,2001_SADDLE01.DAT,9310
-Saddle,TS6,2005_saddle-a.dat,8985
-Saddle,TS6,1999_AWSSDL99.DAT,8715
-Saddle,TS6,1998_SAD_97-8.DAT,8647
-Saddle,TS6,2008_saddle 08.dat,8438
-Saddle,TS6,2002_SADDLE.DAT,8320
-Saddle,TS6,C-level (Jason file),41
-Saddle,TS7,CR1000,48635
-Saddle,TS7,2009_Saddle 09.dat,34823
-Saddle,TS7,C-level (station file),12063
-Saddle,TS7,2000_AWSSDL00.DAT,9453
-Saddle,TS7,2001_SADDLE01.DAT,9310
-Saddle,TS7,2005_saddle-a.dat,8985
-Saddle,TS7,1999_AWSSDL99.DAT,8715
-Saddle,TS7,1998_SAD_97-8.DAT,8647
-Saddle,TS7,2008_saddle 08.dat,8438
-Saddle,TS7,2002_SADDLE.DAT,8320
-Saddle,TS7,C-level (Jason file),41
-Saddle,TS8,CR1000,62786
-Saddle,TS8,2009_Saddle 09.dat,34824
-Saddle,TS8,C-level (station file),11607
-Saddle,TS8,2000_AWSSDL00.DAT,9453
-Saddle,TS8,2001_SADDLE01.DAT,9310
-Saddle,TS8,2005_saddle-a.dat,8985
-Saddle,TS8,1999_AWSSDL99.DAT,8715
-Saddle,TS8,1998_SAD_97-8.DAT,8647
-Saddle,TS8,2008_saddle 08.dat,8438
-Saddle,TS8,2002_SADDLE.DAT,8320
-Saddle,TS8,C-level (Jason file),41
-Saddle,TS9,CR1000,51454
-Saddle,TS9,C-level (station file),17088
-Saddle,TS9,2009_Saddle 09.dat,11635
-Saddle,TS9,2000_AWSSDL00.DAT,9453
-Saddle,TS9,2001_SADDLE01.DAT,9310
-Saddle,TS9,2005_saddle-a.dat,8985
-Saddle,TS9,1999_AWSSDL99.DAT,8715
-Saddle,TS9,1998_SAD_97-8.DAT,8647
-Saddle,TS9,2008_saddle 08.dat,8437
-Saddle,TS9,2002_SADDLE.DAT,8320
-Saddle,TS9,C-level (Jason file),41
-Saddle,TS10,2009_Saddle 09.dat,34822
-Saddle,TS10,CR1000,34571
-Saddle,TS10,C-level (station file),19798
-Saddle,TS10,2000_AWSSDL00.DAT,9453
-Saddle,TS10,2001_SADDLE01.DAT,9310
-Saddle,TS10,2005_saddle-a.dat,8985
-Saddle,TS10,1999_AWSSDL99.DAT,8715
-Saddle,TS10,2008_saddle 08.dat,8438
-Saddle,TS10,2002_SADDLE.DAT,8320
-Saddle,TS10,1998_SAD_97-8.DAT,7503
-Saddle,TS10,C-level (Jason file),1183
-Saddle,HS1,C-level (station file),52001
-Saddle,HS1,C-level (Jason file),37245
-Saddle,HS2,C-level (station file),47506
-Saddle,HS2,C-level (Jason file),41012
 South Dome,ISWR,CR1000,103506
 South Dome,ISWR,2001_SDOME01.DAT,18598
 South Dome,ISWR,2009_s_dome_09.dat,13341
@@ -5177,3 +4278,902 @@ LAR3,HW1,logger (L0M),14057
 LAR3,HW1,C-level (station file),13
 LAR3,HW2,logger (L0M),14030
 LAR3,HW2,C-level (station file),40
+Saddle,ISWR,CR1000,97285
+Saddle,ISWR,2009_Saddle 09.dat,34827
+Saddle,ISWR,2000_AWSSDL00.DAT,9456
+Saddle,ISWR,2001_SADDLE01.DAT,9310
+Saddle,ISWR,2005_saddle-a.dat,8985
+Saddle,ISWR,1999_AWSSDL99.DAT,8715
+Saddle,ISWR,1998_SAD_97-8.DAT,8679
+Saddle,ISWR,2008_saddle 08.dat,8458
+Saddle,ISWR,2002_SADDLE.DAT,8325
+Saddle,ISWR,transmission (station folder),269
+Saddle,ISWR,C-level (station file),7
+Saddle,ISWR,C-level (Jason file),2
+Saddle,OSWR,CR1000,97290
+Saddle,OSWR,2009_Saddle 09.dat,34827
+Saddle,OSWR,2000_AWSSDL00.DAT,9456
+Saddle,OSWR,2001_SADDLE01.DAT,9310
+Saddle,OSWR,2005_saddle-a.dat,8985
+Saddle,OSWR,1999_AWSSDL99.DAT,8715
+Saddle,OSWR,1998_SAD_97-8.DAT,8679
+Saddle,OSWR,2008_saddle 08.dat,8458
+Saddle,OSWR,2002_SADDLE.DAT,8325
+Saddle,OSWR,transmission (station folder),268
+Saddle,OSWR,C-level (station file),3
+Saddle,OSWR,C-level (Jason file),2
+Saddle,NR,CR1000,96996
+Saddle,NR,2009_Saddle 09.dat,34824
+Saddle,NR,2000_AWSSDL00.DAT,9456
+Saddle,NR,2001_SADDLE01.DAT,9310
+Saddle,NR,C-level (station file),8857
+Saddle,NR,1999_AWSSDL99.DAT,8715
+Saddle,NR,1998_SAD_97-8.DAT,8679
+Saddle,NR,2002_SADDLE.DAT,8325
+Saddle,NR,2008_saddle 08.dat,7993
+Saddle,NR,transmission (station folder),269
+Saddle,NR,C-level (Jason file),2
+Saddle,TA1,CR1000,66753
+Saddle,TA1,2009_Saddle 09.dat,34820
+Saddle,TA1,2000_AWSSDL00.DAT,9453
+Saddle,TA1,2001_SADDLE01.DAT,9310
+Saddle,TA1,2005_saddle-a.dat,8985
+Saddle,TA1,1999_AWSSDL99.DAT,8715
+Saddle,TA1,1998_SAD_97-8.DAT,8647
+Saddle,TA1,2008_saddle 08.dat,8438
+Saddle,TA1,2002_SADDLE.DAT,8320
+Saddle,TA1,C-level (station file),5315
+Saddle,TA1,transmission (station folder),944
+Saddle,TA1,C-level (Jason file),8
+Saddle,TA2,CR1000,97265
+Saddle,TA2,2009_Saddle 09.dat,34820
+Saddle,TA2,2000_AWSSDL00.DAT,9453
+Saddle,TA2,2001_SADDLE01.DAT,9310
+Saddle,TA2,2005_saddle-a.dat,8985
+Saddle,TA2,1999_AWSSDL99.DAT,8715
+Saddle,TA2,1998_SAD_97-8.DAT,8647
+Saddle,TA2,2008_saddle 08.dat,8438
+Saddle,TA2,2002_SADDLE.DAT,8320
+Saddle,TA2,transmission (station folder),941
+Saddle,TA2,C-level (station file),56
+Saddle,TA2,C-level (Jason file),42
+Saddle,TA3,CR1000,97291
+Saddle,TA3,2009_Saddle 09.dat,34827
+Saddle,TA3,2000_AWSSDL00.DAT,9456
+Saddle,TA3,2001_SADDLE01.DAT,9310
+Saddle,TA3,2005_saddle-a.dat,8985
+Saddle,TA3,1999_AWSSDL99.DAT,8715
+Saddle,TA3,1998_SAD_97-8.DAT,8679
+Saddle,TA3,2008_saddle 08.dat,8458
+Saddle,TA3,2002_SADDLE.DAT,8325
+Saddle,TA3,transmission (station folder),312
+Saddle,TA3,C-level (Jason file),3
+Saddle,TA3,C-level (station file),2
+Saddle,TA4,CR1000,97291
+Saddle,TA4,2009_Saddle 09.dat,34827
+Saddle,TA4,2000_AWSSDL00.DAT,9456
+Saddle,TA4,2001_SADDLE01.DAT,9310
+Saddle,TA4,2005_saddle-a.dat,8985
+Saddle,TA4,1999_AWSSDL99.DAT,8715
+Saddle,TA4,1998_SAD_97-8.DAT,8679
+Saddle,TA4,2008_saddle 08.dat,8458
+Saddle,TA4,2002_SADDLE.DAT,8325
+Saddle,TA4,transmission (station folder),927
+Saddle,TA4,C-level (Jason file),3
+Saddle,TA4,C-level (station file),2
+Saddle,RH1,CR1000,97291
+Saddle,RH1,2009_Saddle 09.dat,34827
+Saddle,RH1,2000_AWSSDL00.DAT,9456
+Saddle,RH1,2001_SADDLE01.DAT,9310
+Saddle,RH1,2005_saddle-a.dat,8985
+Saddle,RH1,1999_AWSSDL99.DAT,8715
+Saddle,RH1,C-level (Jason file),8682
+Saddle,RH1,2008_saddle 08.dat,8458
+Saddle,RH1,2002_SADDLE.DAT,8325
+Saddle,RH1,transmission (station folder),156
+Saddle,RH1,C-level (station file),2
+Saddle,RH2,CR1000,97291
+Saddle,RH2,2009_Saddle 09.dat,34827
+Saddle,RH2,2000_AWSSDL00.DAT,9456
+Saddle,RH2,2001_SADDLE01.DAT,9310
+Saddle,RH2,2005_saddle-a.dat,8985
+Saddle,RH2,1999_AWSSDL99.DAT,8715
+Saddle,RH2,C-level (Jason file),8682
+Saddle,RH2,2008_saddle 08.dat,8458
+Saddle,RH2,2002_SADDLE.DAT,8325
+Saddle,RH2,transmission (station folder),116
+Saddle,RH2,C-level (station file),2
+Saddle,VW1,CR1000,97291
+Saddle,VW1,2009_Saddle 09.dat,34827
+Saddle,VW1,2000_AWSSDL00.DAT,9456
+Saddle,VW1,2001_SADDLE01.DAT,9310
+Saddle,VW1,2005_saddle-a.dat,8985
+Saddle,VW1,1999_AWSSDL99.DAT,8715
+Saddle,VW1,1998_SAD_97-8.DAT,8679
+Saddle,VW1,2008_saddle 08.dat,8458
+Saddle,VW1,2002_SADDLE.DAT,8325
+Saddle,VW1,transmission (station folder),175
+Saddle,VW1,C-level (Jason file),3
+Saddle,VW2,CR1000,97291
+Saddle,VW2,2009_Saddle 09.dat,34827
+Saddle,VW2,2000_AWSSDL00.DAT,9456
+Saddle,VW2,2001_SADDLE01.DAT,9310
+Saddle,VW2,2005_saddle-a.dat,8985
+Saddle,VW2,1999_AWSSDL99.DAT,8715
+Saddle,VW2,1998_SAD_97-8.DAT,8679
+Saddle,VW2,2008_saddle 08.dat,8458
+Saddle,VW2,2002_SADDLE.DAT,8325
+Saddle,VW2,transmission (station folder),327
+Saddle,VW2,C-level (Jason file),3
+Saddle,DW1,CR1000,97291
+Saddle,DW1,2009_Saddle 09.dat,34827
+Saddle,DW1,2000_AWSSDL00.DAT,9456
+Saddle,DW1,2001_SADDLE01.DAT,9310
+Saddle,DW1,2005_saddle-a.dat,8985
+Saddle,DW1,1999_AWSSDL99.DAT,8715
+Saddle,DW1,1998_SAD_97-8.DAT,8679
+Saddle,DW1,2008_saddle 08.dat,8458
+Saddle,DW1,2002_SADDLE.DAT,8325
+Saddle,DW1,transmission (station folder),957
+Saddle,DW2,CR1000,97291
+Saddle,DW2,2009_Saddle 09.dat,34827
+Saddle,DW2,2000_AWSSDL00.DAT,9456
+Saddle,DW2,2001_SADDLE01.DAT,9310
+Saddle,DW2,2005_saddle-a.dat,8985
+Saddle,DW2,1999_AWSSDL99.DAT,8715
+Saddle,DW2,2008_saddle 08.dat,8458
+Saddle,DW2,2002_SADDLE.DAT,8325
+Saddle,DW2,C-level (Jason file),7223
+Saddle,DW2,transmission (station folder),957
+Saddle,P,CR1000,97291
+Saddle,P,2009_Saddle 09.dat,34827
+Saddle,P,2000_AWSSDL00.DAT,9456
+Saddle,P,2001_SADDLE01.DAT,9310
+Saddle,P,2005_saddle-a.dat,8985
+Saddle,P,1999_AWSSDL99.DAT,8715
+Saddle,P,2008_saddle 08.dat,8458
+Saddle,P,2002_SADDLE.DAT,8325
+Saddle,P,transmission (station folder),940
+Saddle,P,C-level (station file),2
+Saddle,P,C-level (Jason file),1
+Saddle,HW1,CR1000,61301
+Saddle,HW1,C-level (station file),55723
+Saddle,HW1,C-level (Jason file),41020
+Saddle,HW2,CR1000,82244
+Saddle,HW2,C-level (station file),55314
+Saddle,HW2,C-level (Jason file),41020
+Saddle,V,CR1000,97291
+Saddle,V,2009_Saddle 09.dat,34827
+Saddle,V,2000_AWSSDL00.DAT,9456
+Saddle,V,2001_SADDLE01.DAT,9310
+Saddle,V,2005_saddle-a.dat,8985
+Saddle,V,1999_AWSSDL99.DAT,8715
+Saddle,V,1998_SAD_97-8.DAT,8679
+Saddle,V,2008_saddle 08.dat,8458
+Saddle,V,2002_SADDLE.DAT,8325
+Saddle,V,transmission (station folder),950
+Saddle,V,C-level (Jason file),3
+Saddle,TA5,CR1000,97290
+Saddle,TA5,2000_AWSSDL00.DAT,9456
+Saddle,TA5,1999_AWSSDL99.DAT,8715
+Saddle,TA5,transmission (station folder),265
+Saddle,TS1,CR1000,45352
+Saddle,TS1,2009_Saddle 09.dat,34824
+Saddle,TS1,C-level (station file),17029
+Saddle,TS1,2000_AWSSDL00.DAT,9453
+Saddle,TS1,2001_SADDLE01.DAT,9310
+Saddle,TS1,2005_saddle-a.dat,8985
+Saddle,TS1,1999_AWSSDL99.DAT,8714
+Saddle,TS1,1998_SAD_97-8.DAT,8647
+Saddle,TS1,2008_saddle 08.dat,8437
+Saddle,TS1,2002_SADDLE.DAT,8314
+Saddle,TS1,C-level (Jason file),46
+Saddle,TS2,CR1000,71904
+Saddle,TS2,2009_Saddle 09.dat,34822
+Saddle,TS2,2000_AWSSDL00.DAT,9453
+Saddle,TS2,2001_SADDLE01.DAT,9310
+Saddle,TS2,2005_saddle-a.dat,8985
+Saddle,TS2,1999_AWSSDL99.DAT,8715
+Saddle,TS2,1998_SAD_97-8.DAT,8647
+Saddle,TS2,2008_saddle 08.dat,8437
+Saddle,TS2,2002_SADDLE.DAT,8318
+Saddle,TS2,C-level (station file),6157
+Saddle,TS2,C-level (Jason file),43
+Saddle,TS3,CR1000,76176
+Saddle,TS3,2009_Saddle 09.dat,34822
+Saddle,TS3,2000_AWSSDL00.DAT,9453
+Saddle,TS3,2001_SADDLE01.DAT,9310
+Saddle,TS3,2005_saddle-a.dat,8985
+Saddle,TS3,1999_AWSSDL99.DAT,8715
+Saddle,TS3,1998_SAD_97-8.DAT,8647
+Saddle,TS3,2008_saddle 08.dat,8435
+Saddle,TS3,2002_SADDLE.DAT,8318
+Saddle,TS3,C-level (station file),6947
+Saddle,TS3,C-level (Jason file),42
+Saddle,TS4,CR1000,37039
+Saddle,TS4,2009_Saddle 09.dat,34823
+Saddle,TS4,C-level (station file),10470
+Saddle,TS4,2000_AWSSDL00.DAT,9453
+Saddle,TS4,2001_SADDLE01.DAT,9310
+Saddle,TS4,2005_saddle-a.dat,8985
+Saddle,TS4,1999_AWSSDL99.DAT,8715
+Saddle,TS4,1998_SAD_97-8.DAT,8647
+Saddle,TS4,2008_saddle 08.dat,8438
+Saddle,TS4,2002_SADDLE.DAT,8320
+Saddle,TS4,C-level (Jason file),41
+Saddle,TS5,2009_Saddle 09.dat,34825
+Saddle,TS5,CR1000,24710
+Saddle,TS5,C-level (station file),13944
+Saddle,TS5,2000_AWSSDL00.DAT,9453
+Saddle,TS5,2001_SADDLE01.DAT,9310
+Saddle,TS5,2005_saddle-a.dat,8985
+Saddle,TS5,1999_AWSSDL99.DAT,8715
+Saddle,TS5,1998_SAD_97-8.DAT,8647
+Saddle,TS5,2008_saddle 08.dat,8438
+Saddle,TS5,2002_SADDLE.DAT,8320
+Saddle,TS5,C-level (Jason file),41
+Saddle,TS6,2009_Saddle 09.dat,34824
+Saddle,TS6,CR1000,16240
+Saddle,TS6,C-level (station file),9696
+Saddle,TS6,2000_AWSSDL00.DAT,9453
+Saddle,TS6,2001_SADDLE01.DAT,9310
+Saddle,TS6,2005_saddle-a.dat,8985
+Saddle,TS6,1999_AWSSDL99.DAT,8715
+Saddle,TS6,1998_SAD_97-8.DAT,8647
+Saddle,TS6,2008_saddle 08.dat,8438
+Saddle,TS6,2002_SADDLE.DAT,8320
+Saddle,TS6,C-level (Jason file),41
+Saddle,TS7,CR1000,48635
+Saddle,TS7,2009_Saddle 09.dat,34823
+Saddle,TS7,C-level (station file),12063
+Saddle,TS7,2000_AWSSDL00.DAT,9453
+Saddle,TS7,2001_SADDLE01.DAT,9310
+Saddle,TS7,2005_saddle-a.dat,8985
+Saddle,TS7,1999_AWSSDL99.DAT,8715
+Saddle,TS7,1998_SAD_97-8.DAT,8647
+Saddle,TS7,2008_saddle 08.dat,8438
+Saddle,TS7,2002_SADDLE.DAT,8320
+Saddle,TS7,C-level (Jason file),41
+Saddle,TS8,CR1000,62786
+Saddle,TS8,2009_Saddle 09.dat,34824
+Saddle,TS8,C-level (station file),11607
+Saddle,TS8,2000_AWSSDL00.DAT,9453
+Saddle,TS8,2001_SADDLE01.DAT,9310
+Saddle,TS8,2005_saddle-a.dat,8985
+Saddle,TS8,1999_AWSSDL99.DAT,8715
+Saddle,TS8,1998_SAD_97-8.DAT,8647
+Saddle,TS8,2008_saddle 08.dat,8438
+Saddle,TS8,2002_SADDLE.DAT,8320
+Saddle,TS8,C-level (Jason file),41
+Saddle,TS9,CR1000,51454
+Saddle,TS9,C-level (station file),17088
+Saddle,TS9,2009_Saddle 09.dat,11635
+Saddle,TS9,2000_AWSSDL00.DAT,9453
+Saddle,TS9,2001_SADDLE01.DAT,9310
+Saddle,TS9,2005_saddle-a.dat,8985
+Saddle,TS9,1999_AWSSDL99.DAT,8715
+Saddle,TS9,1998_SAD_97-8.DAT,8647
+Saddle,TS9,2008_saddle 08.dat,8437
+Saddle,TS9,2002_SADDLE.DAT,8320
+Saddle,TS9,C-level (Jason file),41
+Saddle,TS10,2009_Saddle 09.dat,34822
+Saddle,TS10,CR1000,34571
+Saddle,TS10,C-level (station file),19798
+Saddle,TS10,2000_AWSSDL00.DAT,9453
+Saddle,TS10,2001_SADDLE01.DAT,9310
+Saddle,TS10,2005_saddle-a.dat,8985
+Saddle,TS10,1999_AWSSDL99.DAT,8715
+Saddle,TS10,2008_saddle 08.dat,8438
+Saddle,TS10,2002_SADDLE.DAT,8320
+Saddle,TS10,1998_SAD_97-8.DAT,7503
+Saddle,TS10,C-level (Jason file),1183
+Saddle,HS1,C-level (station file),52001
+Saddle,HS1,C-level (Jason file),37245
+Saddle,HS2,C-level (station file),47506
+Saddle,HS2,C-level (Jason file),41012
+Swiss Camp,ISWR,CR1000,97347
+Swiss Camp,ISWR,C-level (Jason file),36838
+Swiss Camp,ISWR,2004_SC.dat,14483
+Swiss Camp,ISWR,C-level (station file),8945
+Swiss Camp,ISWR,2000_AWSSWC00.DAT,8352
+Swiss Camp,ISWR,2002_eth_01_02.dat,8203
+Swiss Camp,ISWR,2001_SWC2001.DAT,7874
+Swiss Camp,ISWR,2005_ETH1.DAT,3200
+Swiss Camp,ISWR,2004_scnew..DAT,2032
+Swiss Camp,ISWR,2005_ETH Summer 05.DAT,1856
+Swiss Camp,ISWR,1999_CH_AW006.DAT,994
+Swiss Camp,ISWR,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,ISWR,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,ISWR,2000_ETH_AWS.DAT,404
+Swiss Camp,ISWR,2007_sc aws.dat,353
+Swiss Camp,ISWR,2005_ETH3.DAT,207
+Swiss Camp,ISWR,1999_CH_AWS.DAT,134
+Swiss Camp,ISWR,2007_sc.dat,132
+Swiss Camp,ISWR,2000_SWC2000.DAT,10
+Swiss Camp,ISWR,2006_SWC.dat,1
+Swiss Camp,OSWR,CR1000,97347
+Swiss Camp,OSWR,C-level (Jason file),37127
+Swiss Camp,OSWR,2004_SC.dat,14483
+Swiss Camp,OSWR,C-level (station file),8943
+Swiss Camp,OSWR,2000_AWSSWC00.DAT,8351
+Swiss Camp,OSWR,2002_eth_01_02.dat,8203
+Swiss Camp,OSWR,2001_SWC2001.DAT,7874
+Swiss Camp,OSWR,2005_ETH1.DAT,3200
+Swiss Camp,OSWR,2004_scnew..DAT,2032
+Swiss Camp,OSWR,2005_ETH Summer 05.DAT,1856
+Swiss Camp,OSWR,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,OSWR,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,OSWR,2000_ETH_AWS.DAT,404
+Swiss Camp,OSWR,2007_sc aws.dat,353
+Swiss Camp,OSWR,2005_ETH3.DAT,207
+Swiss Camp,OSWR,2007_sc.dat,132
+Swiss Camp,OSWR,2000_SWC2000.DAT,10
+Swiss Camp,OSWR,2006_SWC.dat,1
+Swiss Camp,NR,CR1000,97347
+Swiss Camp,NR,C-level (Jason file),37507
+Swiss Camp,NR,2004_SC.dat,14483
+Swiss Camp,NR,C-level (station file),11988
+Swiss Camp,NR,2000_AWSSWC00.DAT,8351
+Swiss Camp,NR,2002_eth_01_02.dat,8203
+Swiss Camp,NR,2001_SWC2001.DAT,7874
+Swiss Camp,NR,2004_scnew..DAT,2030
+Swiss Camp,NR,2005_ETH Summer 05.DAT,1803
+Swiss Camp,NR,1999_CH_AW006.DAT,993
+Swiss Camp,NR,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,NR,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,NR,2000_ETH_AWS.DAT,404
+Swiss Camp,NR,2007_sc aws.dat,353
+Swiss Camp,NR,2005_ETH3.DAT,207
+Swiss Camp,NR,1999_CH_AWS.DAT,134
+Swiss Camp,NR,2007_sc.dat,129
+Swiss Camp,NR,2000_SWC2000.DAT,10
+Swiss Camp,NR,2000_swis99_0.dat,1
+Swiss Camp,NR,2006_SWC.dat,1
+Swiss Camp,TA1,CR1000,97270
+Swiss Camp,TA1,2004_SC.dat,14483
+Swiss Camp,TA1,C-level (station file),9610
+Swiss Camp,TA1,1997_AWS_ETH.DAT,8239
+Swiss Camp,TA1,2002_eth_01_02.dat,8203
+Swiss Camp,TA1,2000_AWSSWC00.DAT,8155
+Swiss Camp,TA1,2001_SWC2001.DAT,7873
+Swiss Camp,TA1,1998_AWS_97_8.DAT,6518
+Swiss Camp,TA1,2005_ETH1.DAT,3197
+Swiss Camp,TA1,1998_AWS_98_1.DAT,2106
+Swiss Camp,TA1,2004_scnew..DAT,2028
+Swiss Camp,TA1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA1,C-level (Jason file),1166
+Swiss Camp,TA1,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TA1,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA1,1999_CH_AW006.DAT,455
+Swiss Camp,TA1,2000_ETH_AWS.DAT,404
+Swiss Camp,TA1,2007_sc aws.dat,353
+Swiss Camp,TA1,1998_SWIS_10M.DAT,335
+Swiss Camp,TA1,2005_ETH3.DAT,207
+Swiss Camp,TA1,2007_sc.dat,121
+Swiss Camp,TA1,1999_CH_AWS.DAT,109
+Swiss Camp,TA1,2000_SWC2000.DAT,10
+Swiss Camp,TA1,1998_AWS_98.DAT,1
+Swiss Camp,TA1,2006_SWC.dat,1
+Swiss Camp,TA2,CR1000,97284
+Swiss Camp,TA2,2004_SC.dat,14483
+Swiss Camp,TA2,C-level (Jason file),13278
+Swiss Camp,TA2,C-level (station file),9605
+Swiss Camp,TA2,1997_AWS_ETH.DAT,8239
+Swiss Camp,TA2,2002_eth_01_02.dat,8203
+Swiss Camp,TA2,2000_AWSSWC00.DAT,8155
+Swiss Camp,TA2,2001_SWC2001.DAT,7873
+Swiss Camp,TA2,1998_AWS_97_8.DAT,6518
+Swiss Camp,TA2,2005_ETH1.DAT,3197
+Swiss Camp,TA2,1998_AWS_98_1.DAT,2106
+Swiss Camp,TA2,2004_scnew..DAT,2028
+Swiss Camp,TA2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA2,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TA2,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA2,1999_CH_AW006.DAT,455
+Swiss Camp,TA2,2000_ETH_AWS.DAT,404
+Swiss Camp,TA2,2007_sc aws.dat,353
+Swiss Camp,TA2,1998_SWIS_10M.DAT,335
+Swiss Camp,TA2,2005_ETH3.DAT,207
+Swiss Camp,TA2,2007_sc.dat,121
+Swiss Camp,TA2,1999_CH_AWS.DAT,109
+Swiss Camp,TA2,2000_SWC2000.DAT,10
+Swiss Camp,TA2,1998_AWS_98.DAT,1
+Swiss Camp,TA2,2006_SWC.dat,1
+Swiss Camp,TA3,CR1000,97347
+Swiss Camp,TA3,2004_SC.dat,14483
+Swiss Camp,TA3,C-level (station file),9541
+Swiss Camp,TA3,2000_AWSSWC00.DAT,8352
+Swiss Camp,TA3,C-level (Jason file),8316
+Swiss Camp,TA3,1997_AWS_ETH.DAT,8242
+Swiss Camp,TA3,2002_eth_01_02.dat,8203
+Swiss Camp,TA3,2001_SWC2001.DAT,7874
+Swiss Camp,TA3,1998_AWS_97_8.DAT,6518
+Swiss Camp,TA3,2005_ETH1.DAT,3201
+Swiss Camp,TA3,1998_AWS_98_1.DAT,2108
+Swiss Camp,TA3,2004_scnew..DAT,1866
+Swiss Camp,TA3,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA3,1999_CH_AW006.DAT,994
+Swiss Camp,TA3,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TA3,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA3,2000_ETH_AWS.DAT,404
+Swiss Camp,TA3,2007_sc aws.dat,353
+Swiss Camp,TA3,1998_SWIS_10M.DAT,335
+Swiss Camp,TA3,2005_ETH3.DAT,207
+Swiss Camp,TA3,2007_sc.dat,140
+Swiss Camp,TA3,1999_CH_AWS.DAT,134
+Swiss Camp,TA3,2000_SWC2000.DAT,10
+Swiss Camp,TA3,2006_SWC.dat,2
+Swiss Camp,TA3,1998_AWS_98.DAT,1
+Swiss Camp,TA4,CR1000,97347
+Swiss Camp,TA4,2004_SC.dat,14483
+Swiss Camp,TA4,C-level (station file),9542
+Swiss Camp,TA4,2000_AWSSWC00.DAT,8352
+Swiss Camp,TA4,C-level (Jason file),8320
+Swiss Camp,TA4,1997_AWS_ETH.DAT,8240
+Swiss Camp,TA4,2002_eth_01_02.dat,8203
+Swiss Camp,TA4,2001_SWC2001.DAT,7874
+Swiss Camp,TA4,1998_AWS_97_8.DAT,6518
+Swiss Camp,TA4,2005_ETH1.DAT,3201
+Swiss Camp,TA4,1998_AWS_98_1.DAT,2108
+Swiss Camp,TA4,2004_scnew..DAT,1865
+Swiss Camp,TA4,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA4,1999_CH_AW006.DAT,994
+Swiss Camp,TA4,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TA4,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA4,2000_ETH_AWS.DAT,404
+Swiss Camp,TA4,2007_sc aws.dat,353
+Swiss Camp,TA4,1998_SWIS_10M.DAT,335
+Swiss Camp,TA4,2005_ETH3.DAT,207
+Swiss Camp,TA4,2007_sc.dat,142
+Swiss Camp,TA4,1999_CH_AWS.DAT,134
+Swiss Camp,TA4,2000_SWC2000.DAT,10
+Swiss Camp,TA4,2006_SWC.dat,2
+Swiss Camp,TA4,1998_AWS_98.DAT,1
+Swiss Camp,RH1,CR1000,97347
+Swiss Camp,RH1,C-level (Jason file),26605
+Swiss Camp,RH1,2004_SC.dat,14483
+Swiss Camp,RH1,C-level (station file),9632
+Swiss Camp,RH1,2000_AWSSWC00.DAT,8352
+Swiss Camp,RH1,2002_eth_01_02.dat,8203
+Swiss Camp,RH1,2001_SWC2001.DAT,7874
+Swiss Camp,RH1,2005_ETH1.DAT,3201
+Swiss Camp,RH1,2004_scnew..DAT,2032
+Swiss Camp,RH1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,RH1,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,RH1,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,RH1,2000_ETH_AWS.DAT,404
+Swiss Camp,RH1,2007_sc aws.dat,353
+Swiss Camp,RH1,2005_ETH3.DAT,207
+Swiss Camp,RH1,2007_sc.dat,153
+Swiss Camp,RH1,2000_SWC2000.DAT,10
+Swiss Camp,RH1,2006_SWC.dat,2
+Swiss Camp,RH2,CR1000,97347
+Swiss Camp,RH2,C-level (Jason file),26624
+Swiss Camp,RH2,2004_SC.dat,14483
+Swiss Camp,RH2,C-level (station file),9632
+Swiss Camp,RH2,2000_AWSSWC00.DAT,8352
+Swiss Camp,RH2,2002_eth_01_02.dat,8203
+Swiss Camp,RH2,2001_SWC2001.DAT,7874
+Swiss Camp,RH2,2005_ETH1.DAT,3201
+Swiss Camp,RH2,2004_scnew..DAT,2031
+Swiss Camp,RH2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,RH2,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,RH2,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,RH2,2000_ETH_AWS.DAT,404
+Swiss Camp,RH2,2007_sc aws.dat,353
+Swiss Camp,RH2,2005_ETH3.DAT,207
+Swiss Camp,RH2,2007_sc.dat,158
+Swiss Camp,RH2,2000_SWC2000.DAT,10
+Swiss Camp,RH2,2006_SWC.dat,2
+Swiss Camp,VW1,CR1000,97347
+Swiss Camp,VW1,C-level (Jason file),28820
+Swiss Camp,VW1,2004_SC.dat,14483
+Swiss Camp,VW1,C-level (station file),8928
+Swiss Camp,VW1,2000_AWSSWC00.DAT,8352
+Swiss Camp,VW1,1997_AWS_ETH.DAT,8242
+Swiss Camp,VW1,2002_eth_01_02.dat,8203
+Swiss Camp,VW1,2001_SWC2001.DAT,7874
+Swiss Camp,VW1,2005_ETH1.DAT,3201
+Swiss Camp,VW1,2004_scnew..DAT,2032
+Swiss Camp,VW1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,VW1,1999_CH_AW006.DAT,994
+Swiss Camp,VW1,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,VW1,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,VW1,2000_ETH_AWS.DAT,404
+Swiss Camp,VW1,2007_sc aws.dat,353
+Swiss Camp,VW1,1998_SWIS_10M.DAT,335
+Swiss Camp,VW1,2005_ETH3.DAT,207
+Swiss Camp,VW1,2007_sc.dat,165
+Swiss Camp,VW1,1999_CH_AWS.DAT,134
+Swiss Camp,VW1,2000_SWC2000.DAT,10
+Swiss Camp,VW1,2006_SWC.dat,2
+Swiss Camp,VW2,CR1000,97347
+Swiss Camp,VW2,C-level (Jason file),20383
+Swiss Camp,VW2,2004_SC.dat,14483
+Swiss Camp,VW2,C-level (station file),8927
+Swiss Camp,VW2,2000_AWSSWC00.DAT,8352
+Swiss Camp,VW2,1997_AWS_ETH.DAT,8242
+Swiss Camp,VW2,2002_eth_01_02.dat,8203
+Swiss Camp,VW2,2001_SWC2001.DAT,7874
+Swiss Camp,VW2,1998_AWS_97_8.DAT,6518
+Swiss Camp,VW2,2005_ETH1.DAT,3201
+Swiss Camp,VW2,1998_AWS_98_1.DAT,2108
+Swiss Camp,VW2,2004_scnew..DAT,2032
+Swiss Camp,VW2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,VW2,1999_CH_AW006.DAT,994
+Swiss Camp,VW2,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,VW2,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,VW2,2000_ETH_AWS.DAT,404
+Swiss Camp,VW2,2007_sc aws.dat,353
+Swiss Camp,VW2,1998_SWIS_10M.DAT,335
+Swiss Camp,VW2,2005_ETH3.DAT,207
+Swiss Camp,VW2,2007_sc.dat,165
+Swiss Camp,VW2,1999_CH_AWS.DAT,134
+Swiss Camp,VW2,2000_SWC2000.DAT,10
+Swiss Camp,VW2,2006_SWC.dat,2
+Swiss Camp,VW2,1998_AWS_98.DAT,1
+Swiss Camp,DW1,CR1000,97347
+Swiss Camp,DW1,2004_SC.dat,14483
+Swiss Camp,DW1,C-level (station file),12701
+Swiss Camp,DW1,2001_SWC2001.DAT,8539
+Swiss Camp,DW1,2000_AWSSWC00.DAT,8352
+Swiss Camp,DW1,1997_AWS_ETH.DAT,8242
+Swiss Camp,DW1,2002_eth_01_02.dat,8203
+Swiss Camp,DW1,C-level (Jason file),7519
+Swiss Camp,DW1,1998_AWS_97_8.DAT,6518
+Swiss Camp,DW1,1998_AWS_98_1.DAT,2108
+Swiss Camp,DW1,2004_scnew..DAT,2031
+Swiss Camp,DW1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,DW1,1999_CH_AW006.DAT,994
+Swiss Camp,DW1,2001_SWISSAWS.DAT,390
+Swiss Camp,DW1,2007_sc aws.dat,353
+Swiss Camp,DW1,1998_SWIS_10M.DAT,335
+Swiss Camp,DW1,2005_ETH3.DAT,208
+Swiss Camp,DW1,1999_CH_AWS.DAT,134
+Swiss Camp,DW1,2007_sc.dat,117
+Swiss Camp,DW1,2000_SWC2000.DAT,105
+Swiss Camp,DW1,2002_ETH.DAT,22
+Swiss Camp,DW1,2006_SWC.dat,2
+Swiss Camp,DW1,1998_AWS_98.DAT,1
+Swiss Camp,DW2,CR1000,97347
+Swiss Camp,DW2,C-level (Jason file),20270
+Swiss Camp,DW2,2004_SC.dat,14483
+Swiss Camp,DW2,C-level (station file),12640
+Swiss Camp,DW2,2001_SWC2001.DAT,8539
+Swiss Camp,DW2,2000_AWSSWC00.DAT,8352
+Swiss Camp,DW2,1997_AWS_ETH.DAT,8242
+Swiss Camp,DW2,2002_eth_01_02.dat,8203
+Swiss Camp,DW2,1998_AWS_97_8.DAT,6518
+Swiss Camp,DW2,1998_AWS_98_1.DAT,2108
+Swiss Camp,DW2,2004_scnew..DAT,2030
+Swiss Camp,DW2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,DW2,1999_CH_AW006.DAT,994
+Swiss Camp,DW2,2001_SWISSAWS.DAT,390
+Swiss Camp,DW2,2007_sc aws.dat,353
+Swiss Camp,DW2,1998_SWIS_10M.DAT,335
+Swiss Camp,DW2,2005_ETH3.DAT,208
+Swiss Camp,DW2,2007_sc.dat,163
+Swiss Camp,DW2,1999_CH_AWS.DAT,134
+Swiss Camp,DW2,2000_SWC2000.DAT,105
+Swiss Camp,DW2,2002_ETH.DAT,22
+Swiss Camp,DW2,2006_SWC.dat,2
+Swiss Camp,DW2,1998_AWS_98.DAT,1
+Swiss Camp,P,CR1000,97027
+Swiss Camp,P,C-level (station file),20703
+Swiss Camp,P,C-level (Jason file),12208
+Swiss Camp,P,2003_eth_02_03.dat,8445
+Swiss Camp,P,2002_eth_01_02.dat,8203
+Swiss Camp,P,2001_SWC2001.DAT,7874
+Swiss Camp,P,1998_AWS_97_8.DAT,6518
+Swiss Camp,P,1998_AWS_98_1.DAT,2108
+Swiss Camp,P,2005_ETH Summer 05.DAT,1856
+Swiss Camp,P,1999_CH_AW006.DAT,994
+Swiss Camp,P,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,P,2000_ETH_AWS.DAT,404
+Swiss Camp,P,2007_sc aws.dat,353
+Swiss Camp,P,1998_SWIS_10M.DAT,335
+Swiss Camp,P,2005_ETH3.DAT,208
+Swiss Camp,P,2007_sc.dat,165
+Swiss Camp,P,1999_CH_AWS.DAT,134
+Swiss Camp,P,2000_SWC2000.DAT,10
+Swiss Camp,P,2006_SWC.dat,2
+Swiss Camp,P,1998_AWS_98.DAT,1
+Swiss Camp,HW1,CR1000,83459
+Swiss Camp,HW1,C-level (Jason file),61961
+Swiss Camp,HW1,C-level (station file),30003
+Swiss Camp,HW2,CR1000,91181
+Swiss Camp,HW2,C-level (Jason file),61961
+Swiss Camp,HW2,C-level (station file),29996
+Swiss Camp,V,CR1000,97347
+Swiss Camp,V,C-level (station file),8911
+Swiss Camp,V,2003_eth_02_03.dat,8445
+Swiss Camp,V,2000_AWSSWC00.DAT,8353
+Swiss Camp,V,1997_AWS_ETH.DAT,8242
+Swiss Camp,V,2001_SWC2001.DAT,8231
+Swiss Camp,V,2002_eth_01_02.dat,8203
+Swiss Camp,V,1998_AWS_97_8.DAT,6518
+Swiss Camp,V,2005_ETH1.DAT,3201
+Swiss Camp,V,1998_AWS_98_1.DAT,2108
+Swiss Camp,V,2005_ETH Summer 05.DAT,1856
+Swiss Camp,V,1999_CH_AW006.DAT,994
+Swiss Camp,V,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,V,C-level (Jason file),408
+Swiss Camp,V,2000_ETH_AWS.DAT,404
+Swiss Camp,V,2001_SWISSAWS.DAT,390
+Swiss Camp,V,2007_sc aws.dat,353
+Swiss Camp,V,1998_SWIS_10M.DAT,335
+Swiss Camp,V,2005_ETH3.DAT,207
+Swiss Camp,V,2007_sc.dat,165
+Swiss Camp,V,1999_CH_AWS.DAT,134
+Swiss Camp,V,2002_ETH.DAT,22
+Swiss Camp,V,2006_SWC.dat,2
+Swiss Camp,V,1998_AWS_98.DAT,1
+Swiss Camp,TA5,CR1000,97347
+Swiss Camp,TA5,2004_SC.dat,22254
+Swiss Camp,TA5,C-level (station file),8892
+Swiss Camp,TA5,2005_ETH1.DAT,3197
+Swiss Camp,TA5,2004_scnew..DAT,2032
+Swiss Camp,TA5,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TA5,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TA5,2007_sc aws.dat,353
+Swiss Camp,TA5,2005_ETH3.DAT,207
+Swiss Camp,TA5,2007_sc.dat,120
+Swiss Camp,TA5,2006_SWC.dat,1
+Swiss Camp,TS1,CR1000,26208
+Swiss Camp,TS1,2004_SC.dat,14483
+Swiss Camp,TS1,C-level (station file),9863
+Swiss Camp,TS1,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS1,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS1,2002_eth_01_02.dat,8203
+Swiss Camp,TS1,2001_SWC2001.DAT,7874
+Swiss Camp,TS1,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS1,2005_ETH1.DAT,3197
+Swiss Camp,TS1,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS1,2004_scnew..DAT,2029
+Swiss Camp,TS1,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS1,1999_CH_AW006.DAT,994
+Swiss Camp,TS1,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS1,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS1,2000_ETH_AWS.DAT,404
+Swiss Camp,TS1,2007_sc aws.dat,353
+Swiss Camp,TS1,1998_SWIS_10M.DAT,335
+Swiss Camp,TS1,2005_ETH3.DAT,207
+Swiss Camp,TS1,1999_CH_AWS.DAT,134
+Swiss Camp,TS1,2007_sc.dat,122
+Swiss Camp,TS1,C-level (Jason file),16
+Swiss Camp,TS1,2000_SWC2000.DAT,10
+Swiss Camp,TS1,1998_AWS_98.DAT,1
+Swiss Camp,TS1,2006_SWC.dat,1
+Swiss Camp,TS2,CR1000,43608
+Swiss Camp,TS2,2004_SC.dat,14483
+Swiss Camp,TS2,C-level (station file),9860
+Swiss Camp,TS2,2001_SWC2001.DAT,8539
+Swiss Camp,TS2,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS2,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS2,2002_eth_01_02.dat,8203
+Swiss Camp,TS2,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS2,2005_ETH1.DAT,3199
+Swiss Camp,TS2,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS2,2004_scnew..DAT,2030
+Swiss Camp,TS2,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS2,1999_CH_AW006.DAT,994
+Swiss Camp,TS2,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS2,2001_SWISSAWS.DAT,390
+Swiss Camp,TS2,2007_sc aws.dat,353
+Swiss Camp,TS2,1998_SWIS_10M.DAT,335
+Swiss Camp,TS2,2005_ETH3.DAT,207
+Swiss Camp,TS2,1999_CH_AWS.DAT,134
+Swiss Camp,TS2,2007_sc.dat,123
+Swiss Camp,TS2,2000_SWC2000.DAT,105
+Swiss Camp,TS2,2002_ETH.DAT,22
+Swiss Camp,TS2,C-level (Jason file),16
+Swiss Camp,TS2,1998_AWS_98.DAT,1
+Swiss Camp,TS2,2006_SWC.dat,1
+Swiss Camp,TS3,CR1000,26203
+Swiss Camp,TS3,2004_SC.dat,14483
+Swiss Camp,TS3,C-level (station file),9860
+Swiss Camp,TS3,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS3,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS3,2002_eth_01_02.dat,8203
+Swiss Camp,TS3,2001_SWC2001.DAT,7874
+Swiss Camp,TS3,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS3,2005_ETH1.DAT,3199
+Swiss Camp,TS3,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS3,2004_scnew..DAT,2030
+Swiss Camp,TS3,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS3,1999_CH_AW006.DAT,994
+Swiss Camp,TS3,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS3,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS3,2000_ETH_AWS.DAT,404
+Swiss Camp,TS3,2007_sc aws.dat,353
+Swiss Camp,TS3,1998_SWIS_10M.DAT,335
+Swiss Camp,TS3,2005_ETH3.DAT,207
+Swiss Camp,TS3,1999_CH_AWS.DAT,134
+Swiss Camp,TS3,2007_sc.dat,123
+Swiss Camp,TS3,C-level (Jason file),16
+Swiss Camp,TS3,2000_SWC2000.DAT,10
+Swiss Camp,TS3,1998_AWS_98.DAT,1
+Swiss Camp,TS3,2006_SWC.dat,1
+Swiss Camp,TS4,CR1000,89078
+Swiss Camp,TS4,2004_SC.dat,14483
+Swiss Camp,TS4,C-level (station file),10530
+Swiss Camp,TS4,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS4,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS4,2002_eth_01_02.dat,8203
+Swiss Camp,TS4,2001_SWC2001.DAT,7874
+Swiss Camp,TS4,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS4,2005_ETH1.DAT,3199
+Swiss Camp,TS4,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS4,2004_scnew..DAT,2030
+Swiss Camp,TS4,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS4,1999_CH_AW006.DAT,994
+Swiss Camp,TS4,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS4,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS4,2000_ETH_AWS.DAT,404
+Swiss Camp,TS4,2007_sc aws.dat,353
+Swiss Camp,TS4,1998_SWIS_10M.DAT,335
+Swiss Camp,TS4,2005_ETH3.DAT,207
+Swiss Camp,TS4,1999_CH_AWS.DAT,134
+Swiss Camp,TS4,2007_sc.dat,123
+Swiss Camp,TS4,C-level (Jason file),16
+Swiss Camp,TS4,2000_SWC2000.DAT,10
+Swiss Camp,TS4,1998_AWS_98.DAT,1
+Swiss Camp,TS4,2006_SWC.dat,1
+Swiss Camp,TS5,CR1000,67245
+Swiss Camp,TS5,C-level (station file),14712
+Swiss Camp,TS5,2004_SC.dat,14483
+Swiss Camp,TS5,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS5,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS5,2002_eth_01_02.dat,8203
+Swiss Camp,TS5,2001_SWC2001.DAT,7874
+Swiss Camp,TS5,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS5,2005_ETH1.DAT,3199
+Swiss Camp,TS5,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS5,2004_scnew..DAT,2028
+Swiss Camp,TS5,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS5,1999_CH_AW006.DAT,994
+Swiss Camp,TS5,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS5,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS5,2000_ETH_AWS.DAT,404
+Swiss Camp,TS5,2007_sc aws.dat,353
+Swiss Camp,TS5,1998_SWIS_10M.DAT,335
+Swiss Camp,TS5,2005_ETH3.DAT,207
+Swiss Camp,TS5,1999_CH_AWS.DAT,134
+Swiss Camp,TS5,2007_sc.dat,123
+Swiss Camp,TS5,C-level (Jason file),16
+Swiss Camp,TS5,2000_SWC2000.DAT,10
+Swiss Camp,TS5,1998_AWS_98.DAT,1
+Swiss Camp,TS5,2006_SWC.dat,1
+Swiss Camp,TS6,CR1000,91445
+Swiss Camp,TS6,2004_SC.dat,14483
+Swiss Camp,TS6,C-level (station file),9937
+Swiss Camp,TS6,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS6,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS6,2002_eth_01_02.dat,8203
+Swiss Camp,TS6,2001_SWC2001.DAT,7874
+Swiss Camp,TS6,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS6,2005_ETH1.DAT,3199
+Swiss Camp,TS6,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS6,2004_scnew..DAT,2028
+Swiss Camp,TS6,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS6,1999_CH_AW006.DAT,994
+Swiss Camp,TS6,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS6,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS6,2000_ETH_AWS.DAT,404
+Swiss Camp,TS6,2007_sc aws.dat,353
+Swiss Camp,TS6,1998_SWIS_10M.DAT,335
+Swiss Camp,TS6,2005_ETH3.DAT,207
+Swiss Camp,TS6,1999_CH_AWS.DAT,134
+Swiss Camp,TS6,2007_sc.dat,121
+Swiss Camp,TS6,C-level (Jason file),16
+Swiss Camp,TS6,2000_SWC2000.DAT,10
+Swiss Camp,TS6,1998_AWS_98.DAT,1
+Swiss Camp,TS6,2006_SWC.dat,1
+Swiss Camp,TS7,CR1000,76533
+Swiss Camp,TS7,C-level (station file),14956
+Swiss Camp,TS7,2004_SC.dat,14483
+Swiss Camp,TS7,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS7,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS7,2002_eth_01_02.dat,8203
+Swiss Camp,TS7,2001_SWC2001.DAT,7874
+Swiss Camp,TS7,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS7,2005_ETH1.DAT,3200
+Swiss Camp,TS7,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS7,2004_scnew..DAT,2029
+Swiss Camp,TS7,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS7,1999_CH_AW006.DAT,994
+Swiss Camp,TS7,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS7,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS7,2000_ETH_AWS.DAT,404
+Swiss Camp,TS7,2007_sc aws.dat,353
+Swiss Camp,TS7,1998_SWIS_10M.DAT,335
+Swiss Camp,TS7,2005_ETH3.DAT,207
+Swiss Camp,TS7,1999_CH_AWS.DAT,134
+Swiss Camp,TS7,2007_sc.dat,121
+Swiss Camp,TS7,C-level (Jason file),16
+Swiss Camp,TS7,2000_SWC2000.DAT,10
+Swiss Camp,TS7,1998_AWS_98.DAT,1
+Swiss Camp,TS7,2006_SWC.dat,1
+Swiss Camp,TS8,CR1000,80053
+Swiss Camp,TS8,2004_SC.dat,14483
+Swiss Camp,TS8,C-level (station file),9771
+Swiss Camp,TS8,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS8,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS8,2002_eth_01_02.dat,8203
+Swiss Camp,TS8,2001_SWC2001.DAT,7874
+Swiss Camp,TS8,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS8,2005_ETH1.DAT,3199
+Swiss Camp,TS8,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS8,2004_scnew..DAT,2029
+Swiss Camp,TS8,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS8,1999_CH_AW006.DAT,994
+Swiss Camp,TS8,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS8,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS8,2000_ETH_AWS.DAT,404
+Swiss Camp,TS8,2007_sc aws.dat,353
+Swiss Camp,TS8,1998_SWIS_10M.DAT,335
+Swiss Camp,TS8,2005_ETH3.DAT,207
+Swiss Camp,TS8,1999_CH_AWS.DAT,134
+Swiss Camp,TS8,2007_sc.dat,121
+Swiss Camp,TS8,C-level (Jason file),16
+Swiss Camp,TS8,2000_SWC2000.DAT,10
+Swiss Camp,TS8,1998_AWS_98.DAT,1
+Swiss Camp,TS8,2006_SWC.dat,1
+Swiss Camp,TS9,CR1000,72023
+Swiss Camp,TS9,2004_SC.dat,14483
+Swiss Camp,TS9,C-level (station file),13682
+Swiss Camp,TS9,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS9,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS9,2002_eth_01_02.dat,8203
+Swiss Camp,TS9,2001_SWC2001.DAT,7874
+Swiss Camp,TS9,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS9,2005_ETH1.DAT,3199
+Swiss Camp,TS9,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS9,2004_scnew..DAT,2028
+Swiss Camp,TS9,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS9,1999_CH_AW006.DAT,994
+Swiss Camp,TS9,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS9,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS9,2000_ETH_AWS.DAT,404
+Swiss Camp,TS9,2007_sc aws.dat,353
+Swiss Camp,TS9,1998_SWIS_10M.DAT,335
+Swiss Camp,TS9,2005_ETH3.DAT,207
+Swiss Camp,TS9,1999_CH_AWS.DAT,134
+Swiss Camp,TS9,2007_sc.dat,120
+Swiss Camp,TS9,C-level (Jason file),16
+Swiss Camp,TS9,2000_SWC2000.DAT,10
+Swiss Camp,TS9,1998_AWS_98.DAT,1
+Swiss Camp,TS9,2006_SWC.dat,1
+Swiss Camp,TS10,CR1000,97327
+Swiss Camp,TS10,2004_SC.dat,13061
+Swiss Camp,TS10,2000_AWSSWC00.DAT,8352
+Swiss Camp,TS10,1997_AWS_ETH.DAT,8242
+Swiss Camp,TS10,2002_eth_01_02.dat,8203
+Swiss Camp,TS10,2001_SWC2001.DAT,7874
+Swiss Camp,TS10,1998_AWS_97_8.DAT,6518
+Swiss Camp,TS10,C-level (station file),3853
+Swiss Camp,TS10,2005_ETH1.DAT,3199
+Swiss Camp,TS10,1998_AWS_98_1.DAT,2108
+Swiss Camp,TS10,2004_scnew..DAT,2028
+Swiss Camp,TS10,2005_ETH Summer 05.DAT,1856
+Swiss Camp,TS10,1999_CH_AW006.DAT,994
+Swiss Camp,TS10,2002_snow temp may 1 to July 17 2001.dat,768
+Swiss Camp,TS10,2005_CR10X_2_final_storage_1.dat,642
+Swiss Camp,TS10,2000_ETH_AWS.DAT,404
+Swiss Camp,TS10,2007_sc aws.dat,353
+Swiss Camp,TS10,1998_SWIS_10M.DAT,335
+Swiss Camp,TS10,2005_ETH3.DAT,207
+Swiss Camp,TS10,1999_CH_AWS.DAT,134
+Swiss Camp,TS10,2007_sc.dat,121
+Swiss Camp,TS10,C-level (Jason file),16
+Swiss Camp,TS10,2000_SWC2000.DAT,10
+Swiss Camp,TS10,1998_AWS_98.DAT,1
+Swiss Camp,TS10,2006_SWC.dat,1
+Swiss Camp,IUVR,CR1000,34912
+Swiss Camp,ILWR,CR1000,47555
+Swiss Camp,Tsurf1,CR1000,95345
+Swiss Camp,Tsurf2,CR1000,97110
+Swiss Camp,HS1,C-level (Jason file),46914
+Swiss Camp,HS1,C-level (station file),24218
+Swiss Camp,HS2,C-level (Jason file),39647
+Swiss Camp,HS2,C-level (station file),29785

@@ -19,8 +19,13 @@ SMS2,HS1,2003-12-01 22:00:00+00:00,2004-05-27 17:00:00+00:00,177.79,-1.46,0.48,-
 SMS2,HS1,2005-01-30 00:00:00+00:00,2005-05-12 23:00:00+00:00,102.96,-0.57,0.46,-1.03,,False,ablation site: the gap contains the melt season,HS,HS1,1.03,1
 SMS3,HS1,2003-12-04 23:00:00+00:00,2004-05-27 06:00:00+00:00,174.29,-1.45,-0.09,-1.36,,False,ablation site: the gap contains the melt season,HS,HS1,1.36,1
 SMS3,HS1,2005-07-13 02:00:00+00:00,2005-08-09 04:00:00+00:00,27.08,-2.77,-0.75,-2.02,,False,ablation site: the gap contains the melt season,HS,HS1,2.02,1
-SwissCamp,HS1,2007-06-23 12:00:00+00:00,2008-05-18 17:00:00+00:00,330.21,1.85,-0.15,2.0,1.75,False,ablation site: the gap contains the melt season,HS,HS1,-2.0,1
+SwissCamp,HS1,2009-04-30 23:00:00+00:00,2009-05-01 00:00:00+00:00,0.04,-0.31,0.0,-0.31,0.0,True,,HS,HS1,0.31,1
 SwissCamp,HS1,2011-07-27 01:00:00+00:00,2011-08-05 00:00:00+00:00,8.96,-0.64,-0.15,-0.5,,False,ablation site: the gap contains the melt season,HS,HS1,0.5,1
-SwissCamp,HS2,2007-06-23 09:00:00+00:00,2008-05-18 17:00:00+00:00,330.33,1.75,-0.23,1.98,1.85,False,ablation site: the gap contains the melt season,HS,HS2,-1.98,1
-SwissCamp,HS2,2011-02-08 17:00:00+00:00,2011-05-17 21:00:00+00:00,98.17,1.03,0.1,0.93,0.91,False,ablation site: the gap contains the melt season,HS,HS2,-0.93,1
+SwissCamp,HS1,2011-07-27 01:00:00+00:00,2011-08-05 00:00:00+00:00,8.96,-0.65,-0.15,-0.5,,False,ablation site: the gap contains the melt season,HS,HS1,0.5,2
+SwissCamp,HS2,2007-06-23 09:00:00+00:00,2008-05-18 17:00:00+00:00,330.33,1.75,-0.22,1.97,,False,ablation site: the gap contains the melt season,HS,HS2,-1.97,1
+SwissCamp,HS2,2007-06-23 09:00:00+00:00,2008-05-18 17:00:00+00:00,330.33,1.75,-0.21,1.96,,False,ablation site: the gap contains the melt season,HS,HS2,-1.96,2
+SwissCamp,HS2,2009-05-07 15:00:00+00:00,2009-05-07 21:00:00+00:00,0.25,-0.29,0.0,-0.29,,True,,HS,HS2,0.29,1
+SwissCamp,HS2,2011-02-08 17:00:00+00:00,2011-05-17 21:00:00+00:00,98.17,1.03,0.11,0.92,0.91,False,ablation site: the gap contains the melt season,HS,HS2,-0.92,1
+SwissCamp,HS2,2011-02-08 17:00:00+00:00,2011-05-17 21:00:00+00:00,98.17,1.03,0.12,0.91,0.91,False,ablation site: the gap contains the melt season,HS,HS2,-0.91,2
 SwissCamp,HS2,2014-05-07 13:00:00+00:00,2014-05-09 00:00:00+00:00,1.46,0.4,-0.0,0.4,,False,ablation site: the gap contains the melt season,HS,HS2,-0.4,1
+SwissCamp,HS2,2014-05-07 13:00:00+00:00,2014-05-09 00:00:00+00:00,1.46,0.4,-0.0,0.4,,False,ablation site: the gap contains the melt season,HS,HS2,-0.4,2

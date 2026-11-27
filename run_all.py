@@ -9,7 +9,7 @@ tip list:
     import pdb; pdb.set_trace()
     import matplotlib.pyplot as plt
 """
-%run GC-Net-level-0-data-processing.py
+# %run GC-Net-level-0-data-processing.py
 %run GC-Net-level-1-data-processing.py
 %run tools/hs_steps.py --write
 %run tools/compare_with_release.py

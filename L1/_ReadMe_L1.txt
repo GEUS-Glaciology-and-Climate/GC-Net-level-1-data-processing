@@ -4,7 +4,7 @@ In Memory of Dr. Konrad (Koni) Steffen
 
 Author: B. Vandecrux
 Contact: bav@geus.dk
-Last update: 2026-11-25 (2026 version of the processing, see "Status" below)
+Last update: 2026-11-27 (2026 version of the processing, see "Status" below)
 
 # Citation
 
@@ -50,7 +50,7 @@ Additionally, the L1 dataset contains the following derived variables:
 
 # Status of this folder
 
-The processing described below (2026 version) is documented in release_note_2026.md at the root of the processing repository. The L1 files of this folder were generated with it (built 2026-11-24 to 2026-11-25). The sections "Calibration" and "Known limitations" describe their state.
+The processing described below (2026 version) is documented in release_note_2026.md at the root of the processing repository. The L1 files of this folder were generated with it (built 2026-11-24 to 2026-11-27). The sections "Calibration" and "Known limitations" describe their state.
 
 # How the data are produced (2026 version)
 

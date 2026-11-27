@@ -29,6 +29,10 @@ t0,t1,variable,adjust_function,adjust_value,comment
 2004-06-12T13:00:00+00:00,,HS2,add,2.65,boom raised at the visit of 2004-06-12: HW2 keeps the step and HS is continuous
 2005-05-26T20:00:00+00:00,,HS2,add,2.61,boom raised at the visit of 2005-05-26: HW2 keeps the step and HS is continuous
 
+# 2026-11-26: the C-level series change datum where Jason's file ends and the station file starts (2001-12-25 01 UTC): HW2 -0.79 m and HW1 -0.22 m in one winter hour (spacing 1.17 m before and 0.60 m after, V11 and V12 alike); HW2 +0.79 m up to the gap of 2002-12-31 restores HW2 - HW1 to 1.0 m; HS is kept by the paired row
+2001-12-25T01:00:00+00:00,2002-12-31T23:00:00+00:00,HW2,add,0.79,datum step at the splice of Jason's file and the station file
+2001-12-25T01:00:00+00:00,2002-12-31T23:00:00+00:00,HS2,add,0.79,pair of the HW2 row above: HS is kept as it was
+
 # ISWR/OSWR calibration factors are not adjustments: those of the logger files are in their configuration files (calibration.ISWR/OSWR in the <file>.toml),
 # those of the C-level files in metadata/c_level_corrections.csv.
 

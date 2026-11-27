@@ -1,304 +1,4 @@
 site,variable,file,year,test,hours,ratio_c_over_logger,slope,r,median_c_minus_logger,median_abs_diff_same,median_abs_diff_ice,verdict,same_raw,r_same,same_sonic,other_raw,r_other,other_sonic,best,offset_c_minus_best,best_ts_column,share_equal
-Swiss Camp,ISWR,2000_AWSSWC00.DAT,1999,radiation,2355,1.0,0.9988,0.9978,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2000_AWSSWC00.DAT,2000,radiation,1337,1.0,1.0007,0.9981,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2000_ETH_AWS.DAT,2000,radiation,369,0.0,0.0,,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2001_SWC2001.DAT,2000,radiation,2362,1.0,0.9717,0.9643,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2001_SWC2001.DAT,2001,radiation,961,1.0,1.0003,0.9989,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2002_eth_01_02.dat,2001,radiation,1696,1.0,0.9957,0.9938,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2002_eth_01_02.dat,2002,radiation,1115,1.0,0.9988,0.9988,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2002_snow temp may 1 to July 17 2001.dat,2001,radiation,617,1.0,1.0002,0.9972,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2004_SC.dat,2002,radiation,2959,1.0,0.9985,0.9986,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2004_SC.dat,2003,radiation,3666,1.0,0.9974,0.9977,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2005_CR10X_2_final_storage_1.dat,2005,radiation,424,0.9919,0.9933,0.9777,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2005_ETH Summer 05.DAT,2005,radiation,1681,1.0,0.9985,0.9978,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2005_ETH1.DAT,2004,radiation,592,0.9804,0.9894,0.9776,,,,,,,,,,,,,,
-Swiss Camp,ISWR,2005_ETH1.DAT,2005,radiation,421,0.9689,0.9827,0.9481,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2009,radiation,2546,1.0,0.9994,0.999,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2010,radiation,4024,1.0,0.9978,0.9982,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2011,radiation,2939,1.0,0.9899,0.9932,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2012,radiation,3792,1.0001,1.2151,0.85,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2013,radiation,3947,1.0,1.1156,0.9598,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2014,radiation,3864,1.0,1.0025,0.9997,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2015,radiation,4027,1.0,0.9989,0.999,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2016,radiation,3392,1.0,0.9993,0.9992,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2017,radiation,4019,1.0,0.9999,0.9998,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2018,radiation,3972,1.0,0.9989,0.9992,,,,,,,,,,,,,,
-Swiss Camp,ISWR,CR1000,2019,radiation,1032,1.0,0.9967,0.9986,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2000_AWSSWC00.DAT,1999,radiation,2259,0.9743,0.9723,0.9988,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2000_AWSSWC00.DAT,2000,radiation,1308,0.9743,0.9738,0.9997,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2000_ETH_AWS.DAT,2000,radiation,353,0.0,0.0,,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2001_SWC2001.DAT,2000,radiation,2248,0.9743,0.9467,0.9632,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2001_SWC2001.DAT,2001,radiation,928,0.9743,0.9734,0.9994,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2002_eth_01_02.dat,2001,radiation,1622,0.9743,0.9698,0.9936,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2002_eth_01_02.dat,2002,radiation,1084,1.0,0.9987,0.9986,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2002_snow temp may 1 to July 17 2001.dat,2001,radiation,601,0.9743,0.9748,0.9983,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2004_SC.dat,2002,radiation,2815,1.0,0.9998,0.9999,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2004_SC.dat,2003,radiation,3458,1.0,0.9981,0.999,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2005_CR10X_2_final_storage_1.dat,2005,radiation,414,0.9846,0.9799,0.973,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2005_ETH Summer 05.DAT,2005,radiation,1589,1.0,0.9996,0.9997,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2005_ETH1.DAT,2004,radiation,564,0.9795,0.9727,0.9692,,,,,,,,,,,,,,
-Swiss Camp,OSWR,2005_ETH1.DAT,2005,radiation,414,0.9635,0.9689,0.9584,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2009,radiation,2461,1.0,0.9964,0.9974,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2010,radiation,3761,1.0,0.9952,0.9977,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2011,radiation,1594,1.0,0.9992,0.9991,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2012,radiation,2901,1.0,0.9898,0.9943,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2013,radiation,3993,1.0,0.984,0.9949,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2014,radiation,3986,1.0,0.9873,0.994,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2015,radiation,4072,1.0,0.9988,0.9989,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2016,radiation,3454,1.0,1.0001,0.9993,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2017,radiation,4054,1.0,0.9999,0.9996,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2018,radiation,4007,1.0,0.9991,0.9987,,,,,,,,,,,,,,
-Swiss Camp,OSWR,CR1000,2019,radiation,1011,1.0,0.9995,0.9996,,,,,,,,,,,,,,
-Swiss Camp,NR,2000_AWSSWC00.DAT,1999,NR>0,803,1.0,0.9934,0.9981,,,,,,,,,,,,,,
-Swiss Camp,NR,2000_AWSSWC00.DAT,2000,NR>0,141,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,2001_SWC2001.DAT,2000,NR>0,748,1.0,0.9995,0.9975,,,,,,,,,,,,,,
-Swiss Camp,NR,2002_eth_01_02.dat,2001,NR>0,622,1.0,0.994,0.9955,,,,,,,,,,,,,,
-Swiss Camp,NR,2002_snow temp may 1 to July 17 2001.dat,2001,NR>0,156,1.0,0.9899,0.9587,,,,,,,,,,,,,,
-Swiss Camp,NR,2004_SC.dat,2002,NR>0,1110,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,2004_SC.dat,2003,NR>0,1145,1.0,0.9983,0.9983,,,,,,,,,,,,,,
-Swiss Camp,NR,2005_CR10X_2_final_storage_1.dat,2005,NR>0,107,0.9807,0.9758,0.8272,,,,,,,,,,,,,,
-Swiss Camp,NR,2005_ETH Summer 05.DAT,2005,NR>0,599,1.0,0.9286,0.753,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2009,NR>0,514,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2010,NR>0,845,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2011,NR>0,415,1.0,0.9547,0.8898,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2012,NR>0,2307,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2013,NR>0,5032,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2014,NR>0,4595,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2015,NR>0,4965,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2016,NR>0,3905,1.0,0.9989,0.9989,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2017,NR>0,4769,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2018,NR>0,4629,1.0,0.9992,0.9993,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2019,NR>0,1832,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,1999_CH_AW006.DAT,1999,NR<0,521,0.8358,0.7106,0.2652,,,,,,,,,,,,,,
-Swiss Camp,NR,2000_AWSSWC00.DAT,1999,NR<0,2091,1.0,0.9893,0.9806,,,,,,,,,,,,,,
-Swiss Camp,NR,2000_AWSSWC00.DAT,2000,NR<0,1865,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,2001_SWC2001.DAT,2000,NR<0,2182,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,2001_SWC2001.DAT,2001,NR<0,1701,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,2002_eth_01_02.dat,2001,NR<0,1470,1.0,0.9866,0.922,,,,,,,,,,,,,,
-Swiss Camp,NR,2002_eth_01_02.dat,2002,NR<0,1973,1.0,0.999,0.9966,,,,,,,,,,,,,,
-Swiss Camp,NR,2002_snow temp may 1 to July 17 2001.dat,2001,NR<0,189,1.0,0.9776,0.937,,,,,,,,,,,,,,
-Swiss Camp,NR,2004_SC.dat,2002,NR<0,2721,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,2004_SC.dat,2003,NR<0,3088,1.0,0.9976,0.9947,,,,,,,,,,,,,,
-Swiss Camp,NR,2005_CR10X_2_final_storage_1.dat,2005,NR<0,250,0.9953,0.9947,0.8914,,,,,,,,,,,,,,
-Swiss Camp,NR,2005_ETH Summer 05.DAT,2005,NR<0,637,1.0,0.7396,0.826,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2009,NR<0,2767,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2010,NR<0,4588,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2011,NR<0,1574,1.0,0.9376,0.9313,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2012,NR<0,1104,1.0,0.9999,0.9989,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2013,NR<0,756,1.0,0.9951,0.9969,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2014,NR<0,838,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2015,NR<0,504,1.0,1.0,1.0,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2016,NR<0,740,1.0,1.0009,0.9985,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2017,NR<0,369,1.0,0.9898,0.9888,,,,,,,,,,,,,,
-Swiss Camp,NR,CR1000,2018,NR<0,426,1.0,0.996,0.9962,,,,,,,,,,,,,,
-Swiss Camp,P,1998_AWS_97_8.DAT,1997,pressure,5275,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,1998_AWS_97_8.DAT,1998,pressure,1243,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,1998_AWS_98_1.DAT,1998,pressure,2108,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,1998_SWIS_10M.DAT,1998,pressure,333,,,,0.02,,,,,,,,,,,,,
-Swiss Camp,P,1999_CH_AW006.DAT,1999,pressure,994,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,2000_ETH_AWS.DAT,2000,pressure,404,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,2001_SWC2001.DAT,2000,pressure,4993,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,2001_SWC2001.DAT,2001,pressure,2880,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,2002_eth_01_02.dat,2001,pressure,3849,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,2002_eth_01_02.dat,2002,pressure,2969,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,2002_snow temp may 1 to July 17 2001.dat,2001,pressure,765,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,2003_eth_02_03.dat,2002,pressure,5669,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,2003_eth_02_03.dat,2003,pressure,2776,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,2005_ETH Summer 05.DAT,2005,pressure,1856,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2009,pressure,4735,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2010,pressure,8760,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2011,pressure,8757,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2012,pressure,8784,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2013,pressure,8760,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2014,pressure,8732,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2015,pressure,8760,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2016,pressure,7936,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2017,pressure,8760,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2018,pressure,8760,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,P,CR1000,2019,pressure,2971,,,,0.0,,,,,,,,,,,,,
-Swiss Camp,RH1,2000_AWSSWC00.DAT,1999,RH ice/water,3351,,,,,9.16,1.34,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2000_AWSSWC00.DAT,2000,RH ice/water,3230,,,,,12.49,2.45,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2000_ETH_AWS.DAT,2000,RH ice/water,315,,,,,4.75,1.62,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2001_SWC2001.DAT,2000,RH ice/water,3191,,,,,7.22,1.9,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2001_SWC2001.DAT,2001,RH ice/water,2852,,,,,12.42,3.69,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2002_eth_01_02.dat,2001,RH ice/water,2005,,,,,7.66,1.67,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2002_eth_01_02.dat,2002,RH ice/water,2962,,,,,12.88,4.14,other,,,,,,,,,,
-Swiss Camp,RH1,2002_snow temp may 1 to July 17 2001.dat,2001,RH ice/water,698,,,,,4.7,2.13,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2004_SC.dat,2002,RH ice/water,3581,,,,,5.39,2.31,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2004_SC.dat,2003,RH ice/water,4337,,,,,6.72,2.57,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2005_CR10X_2_final_storage_1.dat,2005,RH ice/water,628,,,,,6.28,4.34,other,,,,,,,,,,
-Swiss Camp,RH1,2005_ETH Summer 05.DAT,2005,RH ice/water,486,,,,,6.28,3.1,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2005_ETH1.DAT,2004,RH ice/water,2290,,,,,6.35,3.39,wrt ice,,,,,,,,,,
-Swiss Camp,RH1,2005_ETH1.DAT,2005,RH ice/water,753,,,,,8.26,4.96,other,,,,,,,,,,
-Swiss Camp,RH1,CR1000,2009,RH ice/water,3683,,,,,1.16,6.25,same (wrt water),,,,,,,,,,
-Swiss Camp,RH1,CR1000,2010,RH ice/water,5819,,,,,1.36,7.15,same (wrt water),,,,,,,,,,
-Swiss Camp,RH1,CR1000,2011,RH ice/water,6718,,,,,3.93,5.62,same (wrt water),,,,,,,,,,
-Swiss Camp,RH1,CR1000,2012,RH ice/water,6280,,,,,4.42,4.89,other,,,,,,,,,,
-Swiss Camp,RH1,CR1000,2013,RH ice/water,7041,,,,,4.05,9.7,other,,,,,,,,,,
-Swiss Camp,RH1,CR1000,2014,RH ice/water,6686,,,,,7.11,8.88,other,,,,,,,,,,
-Swiss Camp,RH1,CR1000,2015,RH ice/water,7062,,,,,18.2,6.67,other,,,,,,,,,,
-Swiss Camp,RH1,CR1000,2016,RH ice/water,5832,,,,,13.49,6.17,other,,,,,,,,,,
-Swiss Camp,RH1,CR1000,2017,RH ice/water,6873,,,,,13.13,7.32,other,,,,,,,,,,
-Swiss Camp,RH1,CR1000,2018,RH ice/water,6985,,,,,14.59,5.8,other,,,,,,,,,,
-Swiss Camp,RH1,CR1000,2019,RH ice/water,2826,,,,,17.77,7.02,other,,,,,,,,,,
-Swiss Camp,RH2,2000_AWSSWC00.DAT,1999,RH ice/water,3343,,,,,5.41,5.08,other,,,,,,,,,,
-Swiss Camp,RH2,2000_AWSSWC00.DAT,2000,RH ice/water,3226,,,,,8.67,5.88,other,,,,,,,,,,
-Swiss Camp,RH2,2000_ETH_AWS.DAT,2000,RH ice/water,313,,,,,1.89,5.62,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,2001_SWC2001.DAT,2000,RH ice/water,3164,,,,,3.76,5.85,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,2001_SWC2001.DAT,2001,RH ice/water,2851,,,,,8.11,6.98,other,,,,,,,,,,
-Swiss Camp,RH2,2002_eth_01_02.dat,2001,RH ice/water,2000,,,,,4.03,4.32,other,,,,,,,,,,
-Swiss Camp,RH2,2002_eth_01_02.dat,2002,RH ice/water,2960,,,,,8.23,7.11,other,,,,,,,,,,
-Swiss Camp,RH2,2002_snow temp may 1 to July 17 2001.dat,2001,RH ice/water,699,,,,,2.44,6.22,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,2004_SC.dat,2002,RH ice/water,3572,,,,,1.74,7.0,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,2004_SC.dat,2003,RH ice/water,4167,,,,,2.97,5.6,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,2005_CR10X_2_final_storage_1.dat,2005,RH ice/water,626,,,,,3.14,8.76,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,2005_ETH Summer 05.DAT,2005,RH ice/water,483,,,,,2.73,1.07,wrt ice,,,,,,,,,,
-Swiss Camp,RH2,2005_ETH1.DAT,2004,RH ice/water,2289,,,,,3.17,6.09,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,2005_ETH1.DAT,2005,RH ice/water,748,,,,,3.79,10.1,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,CR1000,2009,RH ice/water,3667,,,,,3.06,7.86,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,CR1000,2010,RH ice/water,5806,,,,,2.68,9.03,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,CR1000,2011,RH ice/water,6724,,,,,3.23,4.95,same (wrt water),,,,,,,,,,
-Swiss Camp,RH2,CR1000,2012,RH ice/water,6264,,,,,5.2,4.45,other,,,,,,,,,,
-Swiss Camp,RH2,CR1000,2013,RH ice/water,7034,,,,,5.23,9.77,other,,,,,,,,,,
-Swiss Camp,RH2,CR1000,2014,RH ice/water,6692,,,,,6.56,10.57,other,,,,,,,,,,
-Swiss Camp,RH2,CR1000,2015,RH ice/water,7070,,,,,13.29,0.72,wrt ice,,,,,,,,,,
-Swiss Camp,RH2,CR1000,2016,RH ice/water,5833,,,,,9.85,0.74,wrt ice,,,,,,,,,,
-Swiss Camp,RH2,CR1000,2017,RH ice/water,6873,,,,,13.03,8.4,other,,,,,,,,,,
-Swiss Camp,RH2,CR1000,2018,RH ice/water,6967,,,,,15.13,10.89,other,,,,,,,,,,
-Swiss Camp,RH2,CR1000,2019,RH ice/water,2824,,,,,18.65,12.86,other,,,,,,,,,,
-Swiss Camp,HW1,1997_AWS_ETH.DAT,1996,HW correction/swap,4758,,,,,,,,0.049,0.956,0.024,0.06,0.939,0.033,same_sonic,-0.145,,
-Swiss Camp,HW1,1997_AWS_ETH.DAT,1997,HW correction/swap,3484,,,,,,,,0.032,0.933,0.012,0.035,0.918,0.013,same_sonic,-0.117,,
-Swiss Camp,HW1,1998_AWS_97_8.DAT,1997,HW correction/swap,5275,,,,,,,,0.021,0.99,0.012,0.023,0.933,0.012,other_sonic,-0.104,,
-Swiss Camp,HW1,1998_AWS_97_8.DAT,1998,HW correction/swap,1243,,,,,,,,0.021,0.731,0.006,0.026,0.837,0.006,other_sonic,-0.135,,
-Swiss Camp,HW1,1998_AWS_98_1.DAT,1998,HW correction/swap,2108,,,,,,,,0.031,0.91,0.015,0.029,0.949,0.014,other_sonic,-0.125,,
-Swiss Camp,HW1,1998_SWIS_10M.DAT,1998,HW correction/swap,335,,,,,,,,0.009,0.919,0.005,0.006,0.39,0.004,other_sonic,-0.103,,
-Swiss Camp,HW1,1999_CH_AW006.DAT,1999,HW correction/swap,994,,,,,,,,0.021,0.907,0.006,0.02,0.912,0.007,same_sonic,-0.528,,
-Swiss Camp,HW1,1999_CH_AWS.DAT,1999,HW correction/swap,134,,,,,,,,0.024,0.264,0.012,0.02,0.269,0.011,other_sonic,-0.625,,
-Swiss Camp,HW1,2000_AWSSWC00.DAT,1999,HW correction/swap,4976,,,,,,,,4.087,0.673,3.785,0.075,0.699,0.029,other_sonic,-0.649,,
-Swiss Camp,HW1,2000_AWSSWC00.DAT,2000,HW correction/swap,3376,,,,,,,,0.674,-0.076,0.609,0.042,0.572,0.018,other_sonic,-0.666,,
-Swiss Camp,HW1,2000_SWC2000.DAT,2000,HW correction/swap,105,,,,,,,,0.082,-0.18,0.066,0.041,-0.201,0.057,other_raw,-0.701,,
-Swiss Camp,HW1,2001_SWC2001.DAT,2000,HW correction/swap,5301,,,,,,,,4.112,0.423,3.932,,,,same_sonic,9.357,,
-Swiss Camp,HW1,2001_SWC2001.DAT,2001,HW correction/swap,3236,,,,,,,,0.81,-0.439,0.716,,,,same_sonic,14.914,,
-Swiss Camp,HW1,2001_SWISSAWS.DAT,2001,HW correction/swap,390,,,,,,,,0.162,-0.534,0.138,,,,same_sonic,11.74,,
-Swiss Camp,HW1,2002_eth_01_02.dat,2001,HW correction/swap,5110,,,,,,,,3.482,0.768,3.322,0.037,0.981,0.015,other_sonic,-1.541,,
-Swiss Camp,HW1,2002_eth_01_02.dat,2002,HW correction/swap,3091,,,,,,,,0.85,-0.747,0.697,0.21,-0.108,0.183,other_sonic,-0.091,,
-Swiss Camp,HW1,2004_SC.dat,2002,HW correction/swap,5669,,,,,,,,5.03,0.038,4.981,0.06,0.985,0.034,other_sonic,-0.07,,
-Swiss Camp,HW1,2004_SC.dat,2003,HW correction/swap,6338,,,,,,,,6.505,0.758,6.028,0.05,0.874,0.008,other_sonic,-0.463,,
-Swiss Camp,HW1,2005_CR10X_2_final_storage_1.dat,2005,HW correction/swap,641,,,,,,,,0.38,0.443,0.398,0.04,0.43,0.02,other_sonic,-0.874,,
-Swiss Camp,HW1,2005_ETH Summer 05.DAT,2005,HW correction/swap,1856,,,,,,,,0.625,0.902,0.627,0.03,0.975,0.03,other_raw,-0.88,,
-Swiss Camp,HW1,CR1000,2009,HW correction/swap,4737,,,,,,,,0.35,-0.137,0.35,0.06,0.758,0.005,other_sonic,-0.462,,
-Swiss Camp,HW1,CR1000,2010,HW correction/swap,8704,,,,,,,,0.09,0.777,0.007,0.33,0.648,0.37,same_sonic,-0.847,,
-Swiss Camp,HW1,CR1000,2011,HW correction/swap,3395,,,,,,,,1.215,0.385,1.29,1.125,-0.071,1.103,other_sonic,-2.8,,
-Swiss Camp,HW1,CR1000,2012,HW correction/swap,4811,,,,,,,,0.42,-0.025,0.451,0.38,-0.037,0.412,other_raw,-0.82,,
-Swiss Camp,HW1,CR1000,2013,HW correction/swap,8182,,,,,,,,0.0,0.996,0.038,0.02,0.862,0.042,same_raw,-0.85,,
-Swiss Camp,HW1,CR1000,2014,HW correction/swap,7545,,,,,,,,0.05,0.93,0.007,0.13,0.893,0.126,same_sonic,0.097,,
-Swiss Camp,HW1,CR1000,2015,HW correction/swap,7613,,,,,,,,0.02,0.963,0.003,0.04,0.938,0.044,same_sonic,0.1,,
-Swiss Camp,HW1,CR1000,2016,HW correction/swap,6221,,,,,,,,0.02,0.981,0.003,0.03,0.846,0.034,same_sonic,0.1,,
-Swiss Camp,HW1,CR1000,2017,HW correction/swap,2054,,,,,,,,0.02,0.985,0.003,0.04,0.885,0.034,same_sonic,0.1,,
-Swiss Camp,HW1,CR1000,2018,HW correction/swap,4887,,,,,,,,0.01,0.998,0.003,0.03,0.729,0.026,same_sonic,0.1,,
-Swiss Camp,HW1,CR1000,2019,HW correction/swap,2495,,,,,,,,0.01,0.991,0.003,0.04,0.833,0.019,same_sonic,0.101,,
-Swiss Camp,HW2,1997_AWS_ETH.DAT,1996,HW correction/swap,4758,,,,,,,,0.06,0.939,0.033,0.049,0.956,0.024,other_sonic,0.425,,
-Swiss Camp,HW2,1997_AWS_ETH.DAT,1997,HW correction/swap,3484,,,,,,,,0.035,0.918,0.013,0.032,0.933,0.012,other_sonic,0.453,,
-Swiss Camp,HW2,1998_AWS_97_8.DAT,1997,HW correction/swap,5275,,,,,,,,0.023,0.933,0.012,0.021,0.99,0.012,same_sonic,0.467,,
-Swiss Camp,HW2,1998_AWS_97_8.DAT,1998,HW correction/swap,1243,,,,,,,,0.026,0.837,0.006,0.021,0.731,0.006,same_sonic,0.435,,
-Swiss Camp,HW2,1998_AWS_98_1.DAT,1998,HW correction/swap,2108,,,,,,,,0.029,0.949,0.014,0.031,0.91,0.014,same_sonic,0.445,,
-Swiss Camp,HW2,1998_SWIS_10M.DAT,1998,HW correction/swap,335,,,,,,,,0.006,0.128,0.004,0.009,0.32,0.005,same_sonic,0.467,,
-Swiss Camp,HW2,1999_CH_AW006.DAT,1999,HW correction/swap,994,,,,,,,,0.02,0.912,0.007,0.021,0.907,0.006,other_sonic,0.672,,
-Swiss Camp,HW2,1999_CH_AWS.DAT,1999,HW correction/swap,133,,,,,,,,0.02,0.269,0.008,0.023,0.263,0.012,same_sonic,0.574,,
-Swiss Camp,HW2,2000_AWSSWC00.DAT,1999,HW correction/swap,4976,,,,,,,,0.075,0.699,0.03,4.086,0.673,3.781,same_sonic,0.551,,
-Swiss Camp,HW2,2000_AWSSWC00.DAT,2000,HW correction/swap,3376,,,,,,,,0.042,0.572,0.018,0.674,-0.076,0.611,same_sonic,0.534,,
-Swiss Camp,HW2,2000_SWC2000.DAT,2000,HW correction/swap,105,,,,,,,,0.041,-0.201,0.058,0.083,-0.18,0.069,same_raw,0.499,,
-Swiss Camp,HW2,2002_eth_01_02.dat,2001,HW correction/swap,5110,,,,,,,,0.037,0.981,0.016,3.483,0.768,3.321,same_sonic,-0.342,,
-Swiss Camp,HW2,2002_eth_01_02.dat,2002,HW correction/swap,3091,,,,,,,,0.04,0.357,0.004,0.83,-0.485,0.677,same_sonic,-0.002,,
-Swiss Camp,HW2,2004_SC.dat,2002,HW correction/swap,5669,,,,,,,,0.03,0.996,0.003,5.65,-0.028,5.562,same_sonic,-0.0,,
-Swiss Camp,HW2,2004_SC.dat,2003,HW correction/swap,6338,,,,,,,,0.07,0.971,0.011,7.07,0.411,6.68,same_sonic,-0.305,,
-Swiss Camp,HW2,2005_CR10X_2_final_storage_1.dat,2005,HW correction/swap,641,,,,,,,,0.02,0.703,0.004,0.38,0.493,0.424,same_sonic,-0.31,,
-Swiss Camp,HW2,2005_ETH Summer 05.DAT,2005,HW correction/swap,1856,,,,,,,,0.01,0.978,0.003,0.59,0.893,0.595,same_sonic,-0.31,,
-Swiss Camp,HW2,2005_ETH1.DAT,2004,HW correction/swap,2419,,,,,,,,0.04,0.969,0.005,,,,same_sonic,-0.31,,
-Swiss Camp,HW2,2005_ETH1.DAT,2005,HW correction/swap,778,,,,,,,,0.03,0.178,0.004,,,,same_sonic,-0.31,,
-Swiss Camp,HW2,CR1000,2009,HW correction/swap,3562,,,,,,,,0.04,0.92,0.003,0.35,-0.296,0.35,same_sonic,-0.31,,
-Swiss Camp,HW2,CR1000,2010,HW correction/swap,5582,,,,,,,,0.05,0.664,0.004,0.18,0.889,0.161,same_sonic,-0.309,,
-Swiss Camp,HW2,CR1000,2011,HW correction/swap,3145,,,,,,,,1.135,-0.042,1.146,0.506,0.477,0.559,other_raw,-2.624,,
-Swiss Camp,HW2,CR1000,2012,HW correction/swap,5187,,,,,,,,0.0,0.148,0.039,0.04,0.138,0.053,same_raw,-0.31,,
-Swiss Camp,HW2,CR1000,2013,HW correction/swap,8679,,,,,,,,0.0,0.873,0.039,0.02,0.99,0.046,same_raw,-0.31,,
-Swiss Camp,HW2,CR1000,2014,HW correction/swap,8684,,,,,,,,0.04,0.96,0.006,0.14,0.99,0.117,same_sonic,0.097,,
-Swiss Camp,HW2,CR1000,2015,HW correction/swap,8760,,,,,,,,0.02,0.901,0.003,0.06,0.952,0.045,same_sonic,0.1,,
-Swiss Camp,HW2,CR1000,2016,HW correction/swap,7936,,,,,,,,0.02,0.844,0.003,0.04,0.979,0.031,same_sonic,0.1,,
-Swiss Camp,HW2,CR1000,2017,HW correction/swap,8758,,,,,,,,0.02,0.791,0.003,0.88,0.079,0.836,same_sonic,0.1,,
-Swiss Camp,HW2,CR1000,2018,HW correction/swap,8759,,,,,,,,0.02,0.634,0.004,0.03,0.897,0.042,same_sonic,0.1,,
-Swiss Camp,HW2,CR1000,2019,HW correction/swap,2971,,,,,,,,0.03,0.807,0.007,0.03,0.88,0.012,same_sonic,0.104,,
-Swiss Camp,HW1,1997_AWS_ETH.DAT,1996,HW equals TS column,4758,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,1997_AWS_ETH.DAT,1997,HW equals TS column,3484,,,,,,,,,,,,,,,,TS1,0.0
-Swiss Camp,HW1,1998_AWS_97_8.DAT,1997,HW equals TS column,5275,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,1998_AWS_97_8.DAT,1998,HW equals TS column,1243,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,1998_AWS_98_1.DAT,1998,HW equals TS column,2108,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,1998_SWIS_10M.DAT,1998,HW equals TS column,335,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,1999_CH_AW006.DAT,1999,HW equals TS column,994,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,1999_CH_AWS.DAT,1999,HW equals TS column,134,,,,,,,,,,,,,,,,TS1,0.007
-Swiss Camp,HW1,2000_AWSSWC00.DAT,1999,HW equals TS column,4976,,,,,,,,,,,,,,,,TS10,0.012
-Swiss Camp,HW1,2000_AWSSWC00.DAT,2000,HW equals TS column,3376,,,,,,,,,,,,,,,,TS10,0.003
-Swiss Camp,HW1,2000_SWC2000.DAT,2000,HW equals TS column,105,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,2001_SWC2001.DAT,2000,HW equals TS column,5302,,,,,,,,,,,,,,,,TS10,0.004
-Swiss Camp,HW1,2001_SWC2001.DAT,2001,HW equals TS column,3236,,,,,,,,,,,,,,,,TS10,0.007
-Swiss Camp,HW1,2001_SWISSAWS.DAT,2001,HW equals TS column,390,,,,,,,,,,,,,,,,TS8,0.015
-Swiss Camp,HW1,2002_eth_01_02.dat,2001,HW equals TS column,5112,,,,,,,,,,,,,,,,TS1,0.001
-Swiss Camp,HW1,2002_eth_01_02.dat,2002,HW equals TS column,3091,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,2004_SC.dat,2002,HW equals TS column,5669,,,,,,,,,,,,,,,,TS10,0.005
-Swiss Camp,HW1,2004_SC.dat,2003,HW equals TS column,8760,,,,,,,,,,,,,,,,TS10,0.002
-Swiss Camp,HW1,2004_scnew..DAT,2004,HW equals TS column,1979,,,,,,,,,,,,,,,,TS10,0.002
-Swiss Camp,HW1,2005_CR10X_2_final_storage_1.dat,2005,HW equals TS column,642,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,2005_ETH Summer 05.DAT,2005,HW equals TS column,1856,,,,,,,,,,,,,,,,TS10,0.001
-Swiss Camp,HW1,2005_ETH3.DAT,2005,HW equals TS column,207,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,2007_sc aws.dat,2007,HW equals TS column,353,,,,,,,,,,,,,,,,TS4,0.011
-Swiss Camp,HW1,CR1000,2009,HW equals TS column,4886,,,,,,,,,,,,,,,,TS9,0.0
-Swiss Camp,HW1,CR1000,2010,HW equals TS column,8704,,,,,,,,,,,,,,,,TS10,0.001
-Swiss Camp,HW1,CR1000,2011,HW equals TS column,8046,,,,,,,,,,,,,,,,TS8,0.001
-Swiss Camp,HW1,CR1000,2012,HW equals TS column,8333,,,,,,,,,,,,,,,,TS10,0.001
-Swiss Camp,HW1,CR1000,2013,HW equals TS column,8182,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,CR1000,2014,HW equals TS column,7610,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,CR1000,2015,HW equals TS column,7613,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,CR1000,2016,HW equals TS column,6747,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,CR1000,2017,HW equals TS column,4955,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,CR1000,2018,HW equals TS column,6662,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,CR1000,2019,HW equals TS column,2495,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,CR1000,2021,HW equals TS column,4655,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW1,CR1000,2022,HW equals TS column,4571,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,1997_AWS_ETH.DAT,1996,HW equals TS column,4758,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,1997_AWS_ETH.DAT,1997,HW equals TS column,3484,,,,,,,,,,,,,,,,TS1,0.0
-Swiss Camp,HW2,1998_AWS_97_8.DAT,1997,HW equals TS column,5275,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,1998_AWS_97_8.DAT,1998,HW equals TS column,1243,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,1998_AWS_98_1.DAT,1998,HW equals TS column,2108,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,1998_SWIS_10M.DAT,1998,HW equals TS column,335,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,1999_CH_AW006.DAT,1999,HW equals TS column,994,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,1999_CH_AWS.DAT,1999,HW equals TS column,133,,,,,,,,,,,,,,,,TS1,0.008
-Swiss Camp,HW2,2000_AWSSWC00.DAT,1999,HW equals TS column,4976,,,,,,,,,,,,,,,,TS10,0.0
-Swiss Camp,HW2,2000_AWSSWC00.DAT,2000,HW equals TS column,3376,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2000_SWC2000.DAT,2000,HW equals TS column,105,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2002_eth_01_02.dat,2001,HW equals TS column,5112,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2002_eth_01_02.dat,2002,HW equals TS column,3091,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2004_SC.dat,2002,HW equals TS column,5669,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2004_SC.dat,2003,HW equals TS column,8760,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2004_scnew..DAT,2004,HW equals TS column,2026,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2005_CR10X_2_final_storage_1.dat,2005,HW equals TS column,642,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2005_ETH Summer 05.DAT,2005,HW equals TS column,1856,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2005_ETH1.DAT,2004,HW equals TS column,2420,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2005_ETH1.DAT,2005,HW equals TS column,781,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2005_ETH3.DAT,2005,HW equals TS column,207,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2007_sc aws.dat,2007,HW equals TS column,353,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,2007_sc.dat,2007,HW equals TS column,165,,,,,,,,,,,,,,,,TS9,0.008
-Swiss Camp,HW2,CR1000,2009,HW equals TS column,3698,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,CR1000,2010,HW equals TS column,5582,,,,,,,,,,,,,,,,TS9,0.0
-Swiss Camp,HW2,CR1000,2011,HW equals TS column,7595,,,,,,,,,,,,,,,,TS10,0.001
-Swiss Camp,HW2,CR1000,2012,HW equals TS column,8723,,,,,,,,,,,,,,,,TS10,0.0
-Swiss Camp,HW2,CR1000,2013,HW equals TS column,8679,,,,,,,,,,,,,,,,TS6,0.0
-Swiss Camp,HW2,CR1000,2014,HW equals TS column,8760,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,CR1000,2015,HW equals TS column,8760,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,CR1000,2016,HW equals TS column,8586,,,,,,,,,,,,,,,,TS4,0.0
-Swiss Camp,HW2,CR1000,2017,HW equals TS column,8758,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,CR1000,2018,HW equals TS column,8759,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,CR1000,2019,HW equals TS column,2971,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,CR1000,2021,HW equals TS column,5157,,,,,,,,,,,,,,,,,0.0
-Swiss Camp,HW2,CR1000,2022,HW equals TS column,5153,,,,,,,,,,,,,,,,,0.0
 Crawford Point 1,ISWR,1996_CRA95-96.DAT,1995,radiation,2698,0.9712,0.9799,0.9487,,,,,,,,,,,,,,
 Crawford Point 1,ISWR,1997_CR1.DAT,1997,radiation,622,1.0,0.9994,0.9996,,,,,,,,,,,,,,
 Crawford Point 1,ISWR,1997_CRA.DAT,1996,radiation,2772,1.0,0.9998,0.9991,,,,,,,,,,,,,,
@@ -2576,299 +2276,6 @@ DYE-2,HW2,CR1000,2020,HW equals TS column,8714,,,,,,,,,,,,,,,,TS2,0.001
 DYE-2,HW2,CR1000,2021,HW equals TS column,8689,,,,,,,,,,,,,,,,TS10,0.001
 DYE-2,HW2,CR1000,2022,HW equals TS column,8484,,,,,,,,,,,,,,,,TS7,0.0
 DYE-2,HW2,CR1000,2023,HW equals TS column,3575,,,,,,,,,,,,,,,,TS4,0.002
-Saddle,ISWR,1998_SAD_97-8.DAT,1997,radiation,3078,1.0,1.0016,0.998,,,,,,,,,,,,,,
-Saddle,ISWR,1998_SAD_97-8.DAT,1998,radiation,825,1.0,1.0011,0.9956,,,,,,,,,,,,,,
-Saddle,ISWR,1999_AWSSDL99.DAT,1998,radiation,3123,1.0,0.9997,0.998,,,,,,,,,,,,,,
-Saddle,ISWR,1999_AWSSDL99.DAT,1999,radiation,802,1.0,1.0001,0.9995,,,,,,,,,,,,,,
-Saddle,ISWR,2000_AWSSDL00.DAT,1999,radiation,3182,1.0,1.002,0.9967,,,,,,,,,,,,,,
-Saddle,ISWR,2000_AWSSDL00.DAT,2000,radiation,1254,1.0,1.0034,0.9934,,,,,,,,,,,,,,
-Saddle,ISWR,2001_SADDLE01.DAT,2000,radiation,2710,1.0,1.0029,0.9967,,,,,,,,,,,,,,
-Saddle,ISWR,2001_SADDLE01.DAT,2001,radiation,1655,1.0,1.0044,0.9868,,,,,,,,,,,,,,
-Saddle,ISWR,2002_SADDLE.DAT,2001,radiation,2127,1.0,0.9922,0.9914,,,,,,,,,,,,,,
-Saddle,ISWR,2002_SADDLE.DAT,2002,radiation,1345,1.0,1.0031,0.9965,,,,,,,,,,,,,,
-Saddle,ISWR,2005_saddle-a.dat,2003,radiation,2783,1.0,1.0014,0.9971,,,,,,,,,,,,,,
-Saddle,ISWR,2005_saddle-a.dat,2004,radiation,1357,1.0,1.0008,0.9996,,,,,,,,,,,,,,
-Saddle,ISWR,2008_saddle 08.dat,2004,radiation,2669,1.0,0.9989,0.9985,,,,,,,,,,,,,,
-Saddle,ISWR,2008_saddle 08.dat,2005,radiation,1321,1.0,1.0033,0.9952,,,,,,,,,,,,,,
-Saddle,ISWR,2009_Saddle 09.dat,2005,radiation,2842,1.0,1.0006,0.998,,,,,,,,,,,,,,
-Saddle,ISWR,2009_Saddle 09.dat,2006,radiation,3936,1.0,1.0022,0.9944,,,,,,,,,,,,,,
-Saddle,ISWR,2009_Saddle 09.dat,2007,radiation,3969,1.0,1.0005,0.997,,,,,,,,,,,,,,
-Saddle,ISWR,2009_Saddle 09.dat,2008,radiation,3973,1.0,1.002,0.9955,,,,,,,,,,,,,,
-Saddle,ISWR,2009_Saddle 09.dat,2009,radiation,964,1.0,1.0296,0.8968,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2010,radiation,2944,1.0,1.0003,0.9977,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2011,radiation,3968,1.0,1.003,0.996,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2012,radiation,3957,1.0,1.0021,0.9978,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2013,radiation,3968,1.0,1.0015,0.9982,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2014,radiation,3977,1.0,0.9986,0.9991,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2015,radiation,3782,1.0,0.9994,0.999,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2016,radiation,3953,1.0,1.0003,0.9989,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2017,radiation,3955,0.005,0.16,0.1211,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2018,radiation,3898,1.0,0.6512,0.6523,,,,,,,,,,,,,,
-Saddle,ISWR,CR1000,2019,radiation,1311,1.0,1.0001,0.9991,,,,,,,,,,,,,,
-Saddle,OSWR,1998_SAD_97-8.DAT,1997,radiation,3055,0.9743,0.9706,0.9972,,,,,,,,,,,,,,
-Saddle,OSWR,1998_SAD_97-8.DAT,1998,radiation,831,0.9743,0.9335,0.9837,,,,,,,,,,,,,,
-Saddle,OSWR,1999_AWSSDL99.DAT,1998,radiation,3128,0.9743,0.9684,0.996,,,,,,,,,,,,,,
-Saddle,OSWR,1999_AWSSDL99.DAT,1999,radiation,811,0.9743,0.9567,0.9929,,,,,,,,,,,,,,
-Saddle,OSWR,2000_AWSSDL00.DAT,1999,radiation,3168,0.9743,0.9698,0.997,,,,,,,,,,,,,,
-Saddle,OSWR,2000_AWSSDL00.DAT,2000,radiation,1253,0.9743,0.9719,0.999,,,,,,,,,,,,,,
-Saddle,OSWR,2001_SADDLE01.DAT,2000,radiation,2711,0.9743,0.9706,0.9975,,,,,,,,,,,,,,
-Saddle,OSWR,2001_SADDLE01.DAT,2001,radiation,1660,0.9743,0.9684,0.9961,,,,,,,,,,,,,,
-Saddle,OSWR,2002_SADDLE.DAT,2001,radiation,2105,0.9743,0.9608,0.9907,,,,,,,,,,,,,,
-Saddle,OSWR,2002_SADDLE.DAT,2002,radiation,1344,1.0,0.9868,0.9923,,,,,,,,,,,,,,
-Saddle,OSWR,2005_saddle-a.dat,2003,radiation,2759,1.0,0.9964,0.998,,,,,,,,,,,,,,
-Saddle,OSWR,2005_saddle-a.dat,2004,radiation,1348,1.0,0.9952,0.9976,,,,,,,,,,,,,,
-Saddle,OSWR,2008_saddle 08.dat,2004,radiation,2642,1.0,0.9937,0.9961,,,,,,,,,,,,,,
-Saddle,OSWR,2008_saddle 08.dat,2005,radiation,1315,1.0,0.9934,0.9967,,,,,,,,,,,,,,
-Saddle,OSWR,2009_Saddle 09.dat,2005,radiation,2824,1.0,0.9946,0.9966,,,,,,,,,,,,,,
-Saddle,OSWR,2009_Saddle 09.dat,2006,radiation,3933,1.0,0.9914,0.9949,,,,,,,,,,,,,,
-Saddle,OSWR,2009_Saddle 09.dat,2007,radiation,3950,1.0,0.9917,0.9942,,,,,,,,,,,,,,
-Saddle,OSWR,2009_Saddle 09.dat,2008,radiation,3940,1.0,0.9911,0.9947,,,,,,,,,,,,,,
-Saddle,OSWR,2009_Saddle 09.dat,2009,radiation,962,1.0,0.8751,0.9283,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2010,radiation,2918,1.0,0.9932,0.9957,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2011,radiation,3967,1.0,0.9902,0.9945,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2012,radiation,3919,1.0,0.9896,0.9929,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2013,radiation,3916,1.0,0.9856,0.9912,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2014,radiation,3923,1.0,0.997,0.9984,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2015,radiation,3778,1.0,0.9998,0.9998,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2016,radiation,3897,1.0,1.0,0.9999,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2017,radiation,3963,0.0054,0.1884,0.1618,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2018,radiation,3885,1.0,0.6182,0.5961,,,,,,,,,,,,,,
-Saddle,OSWR,CR1000,2019,radiation,1320,1.0,1.0003,0.9998,,,,,,,,,,,,,,
-Saddle,NR,1998_SAD_97-8.DAT,1997,NR>0,255,1.0,0.9915,0.9232,,,,,,,,,,,,,,
-Saddle,NR,1998_SAD_97-8.DAT,1998,NR>0,240,1.0,0.9985,0.9906,,,,,,,,,,,,,,
-Saddle,NR,1999_AWSSDL99.DAT,1998,NR>0,296,1.0,0.9927,0.9335,,,,,,,,,,,,,,
-Saddle,NR,2000_AWSSDL00.DAT,1999,NR>0,283,1.0,0.9925,0.9604,,,,,,,,,,,,,,
-Saddle,NR,2001_SADDLE01.DAT,2000,NR>0,299,1.0,1.0,1.0,,,,,,,,,,,,,,
-Saddle,NR,2002_SADDLE.DAT,2001,NR>0,175,1.0374,0.8716,0.4743,,,,,,,,,,,,,,
-Saddle,NR,2008_saddle 08.dat,2004,NR>0,212,1.0,0.4025,0.457,,,,,,,,,,,,,,
-Saddle,NR,2008_saddle 08.dat,2005,NR>0,131,1.0,0.5778,0.6157,,,,,,,,,,,,,,
-Saddle,NR,2009_Saddle 09.dat,2005,NR>0,177,1.0,0.9629,0.8119,,,,,,,,,,,,,,
-Saddle,NR,2009_Saddle 09.dat,2006,NR>0,160,1.0,0.9717,0.8669,,,,,,,,,,,,,,
-Saddle,NR,2009_Saddle 09.dat,2007,NR>0,354,1.0,0.9653,0.8642,,,,,,,,,,,,,,
-Saddle,NR,2009_Saddle 09.dat,2008,NR>0,112,1.0,0.9342,0.785,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2010,NR>0,250,1.0,0.9904,0.9504,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2011,NR>0,345,1.0,1.0,1.0,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2012,NR>0,779,1.0,0.9983,0.9937,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2013,NR>0,546,1.0,0.9738,0.8316,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2014,NR>0,262,1.0,0.914,0.7235,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2015,NR>0,289,1.0,0.9459,0.7681,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2016,NR>0,482,1.0,0.9865,0.9507,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2017,NR>0,584,0.1076,0.1267,0.212,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2018,NR>0,1225,1.0,0.4779,0.4994,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2019,NR>0,794,1.0,0.9902,0.9912,,,,,,,,,,,,,,
-Saddle,NR,1998_SAD_97-8.DAT,1997,NR<0,909,1.1091,0.6398,0.7226,,,,,,,,,,,,,,
-Saddle,NR,1998_SAD_97-8.DAT,1998,NR<0,200,1.1091,1.0799,0.9945,,,,,,,,,,,,,,
-Saddle,NR,1999_AWSSDL99.DAT,1998,NR<0,1226,1.0,0.6699,0.8027,,,,,,,,,,,,,,
-Saddle,NR,1999_AWSSDL99.DAT,1999,NR<0,293,1.0,0.9616,0.9946,,,,,,,,,,,,,,
-Saddle,NR,2000_AWSSDL00.DAT,1999,NR<0,1308,1.0,0.6964,0.7927,,,,,,,,,,,,,,
-Saddle,NR,2000_AWSSDL00.DAT,2000,NR<0,888,1.0,0.8228,0.8879,,,,,,,,,,,,,,
-Saddle,NR,2001_SADDLE01.DAT,2000,NR<0,1075,1.0,0.6879,0.7705,,,,,,,,,,,,,,
-Saddle,NR,2001_SADDLE01.DAT,2001,NR<0,1038,1.0,0.6758,0.8284,,,,,,,,,,,,,,
-Saddle,NR,2002_SADDLE.DAT,2001,NR<0,864,1.0,0.7107,0.8145,,,,,,,,,,,,,,
-Saddle,NR,2002_SADDLE.DAT,2002,NR<0,854,1.0,0.9915,0.9924,,,,,,,,,,,,,,
-Saddle,NR,2008_saddle 08.dat,2004,NR<0,1023,1.0,0.9487,0.9478,,,,,,,,,,,,,,
-Saddle,NR,2008_saddle 08.dat,2005,NR<0,338,1.0,0.3807,-0.0783,,,,,,,,,,,,,,
-Saddle,NR,2009_Saddle 09.dat,2005,NR<0,1249,1.0,0.9179,0.9368,,,,,,,,,,,,,,
-Saddle,NR,2009_Saddle 09.dat,2006,NR<0,2199,1.0,0.9902,0.9814,,,,,,,,,,,,,,
-Saddle,NR,2009_Saddle 09.dat,2007,NR<0,2027,1.0,0.9764,0.9573,,,,,,,,,,,,,,
-Saddle,NR,2009_Saddle 09.dat,2008,NR<0,1998,1.0,0.9916,0.9773,,,,,,,,,,,,,,
-Saddle,NR,2009_Saddle 09.dat,2009,NR<0,664,1.0,0.9961,0.9976,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2010,NR<0,1179,1.0,0.9686,0.9662,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2011,NR<0,1840,1.0,0.9855,0.9731,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2012,NR<0,1376,1.0,0.9768,0.98,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2013,NR<0,1580,1.0,0.9784,0.9742,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2014,NR<0,1609,1.0,1.0051,0.9715,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2015,NR<0,1412,1.0,0.9845,0.9734,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2016,NR<0,1058,1.0,0.8118,0.8794,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2017,NR<0,1169,0.0856,0.539,0.6778,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2018,NR<0,812,1.0,0.6612,0.7041,,,,,,,,,,,,,,
-Saddle,NR,CR1000,2019,NR<0,124,1.0,0.9764,0.9827,,,,,,,,,,,,,,
-Saddle,P,1999_AWSSDL99.DAT,1998,pressure,6201,,,,0.0,,,,,,,,,,,,,
-Saddle,P,1999_AWSSDL99.DAT,1999,pressure,2513,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2000_AWSSDL00.DAT,1999,pressure,6247,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2000_AWSSDL00.DAT,2000,pressure,3198,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2001_SADDLE01.DAT,2000,pressure,5575,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2001_SADDLE01.DAT,2001,pressure,3735,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2002_SADDLE.DAT,2001,pressure,4804,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2002_SADDLE.DAT,2002,pressure,3301,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2005_saddle-a.dat,2003,pressure,5645,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2005_saddle-a.dat,2004,pressure,3340,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2008_saddle 08.dat,2004,pressure,5442,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2008_saddle 08.dat,2005,pressure,3014,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2009_Saddle 09.dat,2005,pressure,5746,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2009_Saddle 09.dat,2006,pressure,8758,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2009_Saddle 09.dat,2007,pressure,8758,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2009_Saddle 09.dat,2008,pressure,8784,,,,0.0,,,,,,,,,,,,,
-Saddle,P,2009_Saddle 09.dat,2009,pressure,2780,,,,0.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2010,pressure,5882,,,,0.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2011,pressure,8760,,,,0.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2012,pressure,8784,,,,0.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2013,pressure,8759,,,,0.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2014,pressure,8759,,,,0.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2015,pressure,8542,,,,0.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2016,pressure,8784,,,,0.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2017,pressure,8760,,,,-400.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2018,pressure,8760,,,,0.0,,,,,,,,,,,,,
-Saddle,P,CR1000,2019,pressure,3309,,,,0.0,,,,,,,,,,,,,
-Saddle,RH1,1999_AWSSDL99.DAT,1998,RH ice/water,6064,,,,,5.77,1.74,wrt ice,,,,,,,,,,
-Saddle,RH1,1999_AWSSDL99.DAT,1999,RH ice/water,2513,,,,,17.88,1.26,wrt ice,,,,,,,,,,
-Saddle,RH1,2000_AWSSDL00.DAT,1999,RH ice/water,5928,,,,,6.48,1.71,wrt ice,,,,,,,,,,
-Saddle,RH1,2000_AWSSDL00.DAT,2000,RH ice/water,3206,,,,,15.29,0.8,wrt ice,,,,,,,,,,
-Saddle,RH1,2001_SADDLE01.DAT,2000,RH ice/water,5297,,,,,5.58,1.47,wrt ice,,,,,,,,,,
-Saddle,RH1,2001_SADDLE01.DAT,2001,RH ice/water,3726,,,,,11.5,1.09,wrt ice,,,,,,,,,,
-Saddle,RH1,2002_SADDLE.DAT,2001,RH ice/water,4641,,,,,4.2,1.55,wrt ice,,,,,,,,,,
-Saddle,RH1,2002_SADDLE.DAT,2002,RH ice/water,3300,,,,,13.37,2.8,wrt ice,,,,,,,,,,
-Saddle,RH1,2005_saddle-a.dat,2003,RH ice/water,5414,,,,,1.89,5.53,same (wrt water),,,,,,,,,,
-Saddle,RH1,2005_saddle-a.dat,2004,RH ice/water,3340,,,,,6.27,5.87,other,,,,,,,,,,
-Saddle,RH1,2008_saddle 08.dat,2004,RH ice/water,5165,,,,,2.04,5.01,same (wrt water),,,,,,,,,,
-Saddle,RH1,2008_saddle 08.dat,2005,RH ice/water,2994,,,,,2.65,6.03,same (wrt water),,,,,,,,,,
-Saddle,RH1,2009_Saddle 09.dat,2005,RH ice/water,5531,,,,,4.03,2.1,wrt ice,,,,,,,,,,
-Saddle,RH1,2009_Saddle 09.dat,2006,RH ice/water,8516,,,,,5.37,2.11,wrt ice,,,,,,,,,,
-Saddle,RH1,2009_Saddle 09.dat,2007,RH ice/water,8305,,,,,5.68,2.14,wrt ice,,,,,,,,,,
-Saddle,RH1,2009_Saddle 09.dat,2008,RH ice/water,8652,,,,,4.62,2.26,wrt ice,,,,,,,,,,
-Saddle,RH1,2009_Saddle 09.dat,2009,RH ice/water,2780,,,,,11.55,2.54,wrt ice,,,,,,,,,,
-Saddle,RH1,CR1000,2010,RH ice/water,192,,,,,6.65,3.76,wrt ice,,,,,,,,,,
-Saddle,RH1,CR1000,2011,RH ice/water,787,,,,,17.29,2.62,wrt ice,,,,,,,,,,
-Saddle,RH1,CR1000,2012,RH ice/water,6161,,,,,4.82,3.61,wrt ice,,,,,,,,,,
-Saddle,RH1,CR1000,2013,RH ice/water,2338,,,,,5.67,2.82,wrt ice,,,,,,,,,,
-Saddle,RH1,CR1000,2014,RH ice/water,3812,,,,,19.16,15.71,other,,,,,,,,,,
-Saddle,RH1,CR1000,2015,RH ice/water,5289,,,,,27.24,18.41,other,,,,,,,,,,
-Saddle,RH1,CR1000,2016,RH ice/water,7590,,,,,20.05,18.43,other,,,,,,,,,,
-Saddle,RH1,CR1000,2017,RH ice/water,8610,,,,,6.3,7.66,other,,,,,,,,,,
-Saddle,RH1,CR1000,2018,RH ice/water,8522,,,,,12.06,9.22,other,,,,,,,,,,
-Saddle,RH1,CR1000,2019,RH ice/water,3309,,,,,26.56,20.72,other,,,,,,,,,,
-Saddle,RH2,1999_AWSSDL99.DAT,1998,RH ice/water,6034,,,,,7.57,1.84,wrt ice,,,,,,,,,,
-Saddle,RH2,1999_AWSSDL99.DAT,1999,RH ice/water,2513,,,,,18.69,2.3,wrt ice,,,,,,,,,,
-Saddle,RH2,2000_AWSSDL00.DAT,1999,RH ice/water,5926,,,,,7.64,2.17,wrt ice,,,,,,,,,,
-Saddle,RH2,2000_AWSSDL00.DAT,2000,RH ice/water,3206,,,,,16.16,0.73,wrt ice,,,,,,,,,,
-Saddle,RH2,2001_SADDLE01.DAT,2000,RH ice/water,5283,,,,,6.54,1.41,wrt ice,,,,,,,,,,
-Saddle,RH2,2001_SADDLE01.DAT,2001,RH ice/water,3723,,,,,11.57,1.46,wrt ice,,,,,,,,,,
-Saddle,RH2,2002_SADDLE.DAT,2001,RH ice/water,4636,,,,,4.94,1.81,wrt ice,,,,,,,,,,
-Saddle,RH2,2002_SADDLE.DAT,2002,RH ice/water,3300,,,,,12.87,3.46,wrt ice,,,,,,,,,,
-Saddle,RH2,2005_saddle-a.dat,2003,RH ice/water,5410,,,,,2.66,5.69,same (wrt water),,,,,,,,,,
-Saddle,RH2,2005_saddle-a.dat,2004,RH ice/water,3340,,,,,4.69,6.08,other,,,,,,,,,,
-Saddle,RH2,2008_saddle 08.dat,2004,RH ice/water,5172,,,,,2.79,5.31,same (wrt water),,,,,,,,,,
-Saddle,RH2,2008_saddle 08.dat,2005,RH ice/water,2994,,,,,3.3,5.9,same (wrt water),,,,,,,,,,
-Saddle,RH2,2009_Saddle 09.dat,2005,RH ice/water,5533,,,,,5.79,3.13,wrt ice,,,,,,,,,,
-Saddle,RH2,2009_Saddle 09.dat,2006,RH ice/water,8510,,,,,7.21,3.51,wrt ice,,,,,,,,,,
-Saddle,RH2,2009_Saddle 09.dat,2007,RH ice/water,8306,,,,,8.03,3.15,wrt ice,,,,,,,,,,
-Saddle,RH2,2009_Saddle 09.dat,2008,RH ice/water,8637,,,,,8.44,2.81,wrt ice,,,,,,,,,,
-Saddle,RH2,2009_Saddle 09.dat,2009,RH ice/water,2780,,,,,7.03,2.43,wrt ice,,,,,,,,,,
-Saddle,RH2,CR1000,2010,RH ice/water,5428,,,,,14.82,7.93,other,,,,,,,,,,
-Saddle,RH2,CR1000,2011,RH ice/water,8581,,,,,15.06,7.93,other,,,,,,,,,,
-Saddle,RH2,CR1000,2012,RH ice/water,7855,,,,,14.93,4.62,other,,,,,,,,,,
-Saddle,RH2,CR1000,2013,RH ice/water,8535,,,,,14.19,4.49,other,,,,,,,,,,
-Saddle,RH2,CR1000,2014,RH ice/water,8492,,,,,15.02,16.84,other,,,,,,,,,,
-Saddle,RH2,CR1000,2015,RH ice/water,8353,,,,,26.57,30.92,other,,,,,,,,,,
-Saddle,RH2,CR1000,2016,RH ice/water,8413,,,,,22.06,33.3,other,,,,,,,,,,
-Saddle,RH2,CR1000,2017,RH ice/water,8585,,,,,21.92,11.71,other,,,,,,,,,,
-Saddle,RH2,CR1000,2018,RH ice/water,8490,,,,,17.06,22.38,other,,,,,,,,,,
-Saddle,RH2,CR1000,2019,RH ice/water,3307,,,,,29.5,35.88,other,,,,,,,,,,
-Saddle,HW1,1999_AWSSDL99.DAT,1998,HW correction/swap,6202,,,,,,,,0.013,0.938,0.011,0.032,0.784,0.01,other_sonic,-0.247,,
-Saddle,HW1,1999_AWSSDL99.DAT,1999,HW correction/swap,2513,,,,,,,,0.037,-0.388,0.037,0.074,-0.473,0.073,same_sonic,0.589,,
-Saddle,HW1,2000_AWSSDL00.DAT,1999,HW correction/swap,6247,,,,,,,,0.034,0.843,0.007,0.055,0.305,0.007,same_sonic,0.505,,
-Saddle,HW1,2000_AWSSDL00.DAT,2000,HW correction/swap,3209,,,,,,,,0.198,-0.047,0.195,0.057,0.902,0.009,other_sonic,-0.958,,
-Saddle,HW1,2001_SADDLE01.DAT,2000,HW correction/swap,5575,,,,,,,,0.025,0.951,0.018,0.029,0.566,0.017,other_sonic,-0.966,,
-Saddle,HW1,2001_SADDLE01.DAT,2001,HW correction/swap,3735,,,,,,,,0.131,0.501,0.122,0.03,0.932,0.003,other_sonic,-0.971,,
-Saddle,HW1,2002_SADDLE.DAT,2001,HW correction/swap,5023,,,,,,,,0.029,0.309,0.014,0.038,0.51,0.013,other_sonic,-0.733,,
-Saddle,HW1,2002_SADDLE.DAT,2002,HW correction/swap,3301,,,,,,,,0.02,0.172,0.003,0.06,0.747,0.023,same_sonic,0.52,,
-Saddle,HW1,2005_saddle-a.dat,2003,HW correction/swap,5645,,,,,,,,0.03,0.668,0.027,0.01,0.197,0.004,other_sonic,-0.32,,
-Saddle,HW1,2005_saddle-a.dat,2004,HW correction/swap,3340,,,,,,,,0.03,0.042,0.027,0.01,0.175,0.004,other_sonic,-0.321,,
-Saddle,HW1,2008_saddle 08.dat,2004,HW correction/swap,5430,,,,,,,,0.089,0.497,0.047,0.72,-0.242,0.698,same_sonic,-0.234,,
-Saddle,HW1,2008_saddle 08.dat,2005,HW correction/swap,3014,,,,,,,,0.845,-0.31,0.724,0.26,-0.375,0.29,other_raw,3.28,,
-Saddle,HW1,2009_Saddle 09.dat,2005,HW correction/swap,5743,,,,,,,,0.08,0.427,0.022,0.07,0.557,0.004,other_sonic,-0.319,,
-Saddle,HW1,2009_Saddle 09.dat,2006,HW correction/swap,8756,,,,,,,,0.06,0.171,0.023,0.06,0.38,0.003,other_sonic,-0.321,,
-Saddle,HW1,2009_Saddle 09.dat,2007,HW correction/swap,8749,,,,,,,,0.47,0.427,0.47,0.06,0.4,0.003,other_sonic,-0.32,,
-Saddle,HW1,2009_Saddle 09.dat,2008,HW correction/swap,8750,,,,,,,,0.615,-0.427,0.596,0.03,0.429,0.004,other_sonic,-0.319,,
-Saddle,HW1,2009_Saddle 09.dat,2009,HW correction/swap,2780,,,,,,,,0.02,0.179,0.009,0.02,0.146,0.003,other_sonic,-0.32,,
-Saddle,HW1,CR1000,2014,HW correction/swap,3209,,,,,,,,0.04,0.178,0.013,0.05,0.001,0.082,same_sonic,0.103,,
-Saddle,HW1,CR1000,2015,HW correction/swap,3490,,,,,,,,0.425,0.511,0.341,0.24,0.258,0.256,other_raw,-1.4,,
-Saddle,HW1,CR1000,2016,HW correction/swap,5406,,,,,,,,0.01,0.947,0.003,0.03,0.727,0.033,same_sonic,0.1,,
-Saddle,HW1,CR1000,2017,HW correction/swap,8732,,,,,,,,0.03,0.48,0.007,0.11,0.686,0.077,same_sonic,0.101,,
-Saddle,HW1,CR1000,2018,HW correction/swap,6152,,,,,,,,0.03,0.99,0.004,0.02,0.501,0.004,other_sonic,-0.9,,
-Saddle,HW1,CR1000,2019,HW correction/swap,3288,,,,,,,,0.02,0.777,0.003,,,,same_sonic,0.1,,
-Saddle,HW2,1998_SAD_97-8.DAT,1997,HW correction/swap,6122,,,,,,,,0.036,0.973,0.008,,,,same_sonic,0.541,,
-Saddle,HW2,1998_SAD_97-8.DAT,1998,HW correction/swap,2556,,,,,,,,0.042,0.916,0.016,,,,same_sonic,0.585,,
-Saddle,HW2,1999_AWSSDL99.DAT,1998,HW correction/swap,6202,,,,,,,,0.032,0.784,0.01,0.013,0.938,0.011,same_sonic,0.523,,
-Saddle,HW2,1999_AWSSDL99.DAT,1999,HW correction/swap,2513,,,,,,,,0.074,-0.473,0.073,0.037,-0.388,0.037,other_sonic,1.359,,
-Saddle,HW2,2000_AWSSDL00.DAT,1999,HW correction/swap,6247,,,,,,,,0.055,0.318,0.008,0.034,0.837,0.007,other_sonic,1.686,,
-Saddle,HW2,2000_AWSSDL00.DAT,2000,HW correction/swap,3209,,,,,,,,0.057,0.902,0.008,0.198,-0.047,0.197,same_sonic,0.223,,
-Saddle,HW2,2001_SADDLE01.DAT,2000,HW correction/swap,5575,,,,,,,,0.029,0.566,0.017,0.025,0.951,0.018,same_sonic,0.215,,
-Saddle,HW2,2001_SADDLE01.DAT,2001,HW correction/swap,3735,,,,,,,,0.03,0.932,0.003,0.131,0.501,0.122,same_sonic,0.21,,
-Saddle,HW2,2002_SADDLE.DAT,2001,HW correction/swap,5023,,,,,,,,0.038,0.488,0.013,0.029,0.151,0.014,same_sonic,0.438,,
-Saddle,HW2,2002_SADDLE.DAT,2002,HW correction/swap,3301,,,,,,,,0.05,0.78,0.003,0.02,0.162,0.024,same_sonic,-0.319,,
-Saddle,HW2,2006_Saddle.dat,2003,HW correction/swap,5645,,,,,,,,0.03,0.164,0.029,0.01,0.676,0.004,other_sonic,0.521,,
-Saddle,HW2,2006_Saddle.dat,2004,HW correction/swap,8769,,,,,,,,0.27,0.252,0.277,0.03,0.923,0.004,other_sonic,0.521,,
-Saddle,HW2,2006_Saddle.dat,2005,HW correction/swap,3014,,,,,,,,0.28,-0.029,0.28,0.16,-0.19,0.127,other_sonic,0.521,,
-Saddle,HW2,2009_Saddle 09.dat,2005,HW correction/swap,5743,,,,,,,,0.07,0.813,0.022,0.07,0.582,0.003,other_sonic,0.521,,
-Saddle,HW2,2009_Saddle 09.dat,2006,HW correction/swap,8758,,,,,,,,0.08,0.366,0.019,0.06,0.149,0.004,other_sonic,0.522,,
-Saddle,HW2,2009_Saddle 09.dat,2007,HW correction/swap,8756,,,,,,,,0.16,0.317,0.012,0.15,0.969,0.057,same_sonic,-2.113,,
-Saddle,HW2,2009_Saddle 09.dat,2008,HW correction/swap,8368,,,,,,,,0.09,0.027,0.092,0.04,0.976,0.006,other_sonic,0.518,,
-Saddle,HW2,2009_Saddle 09.dat,2009,HW correction/swap,2780,,,,,,,,0.02,0.114,0.008,0.02,0.161,0.003,other_sonic,0.522,,
-Saddle,HW2,CR1000,2010,HW correction/swap,5860,,,,,,,,0.0,0.023,0.089,,,,same_raw,-0.32,,
-Saddle,HW2,CR1000,2011,HW correction/swap,8395,,,,,,,,0.0,0.452,0.065,,,,same_raw,-0.32,,
-Saddle,HW2,CR1000,2012,HW correction/swap,3769,,,,,,,,0.0,0.722,0.049,,,,same_raw,-0.32,,
-Saddle,HW2,CR1000,2013,HW correction/swap,5346,,,,,,,,0.0,0.782,0.024,,,,same_raw,-0.32,,
-Saddle,HW2,CR1000,2014,HW correction/swap,8472,,,,,,,,0.23,0.867,0.282,0.13,0.427,0.084,other_sonic,1.614,,
-Saddle,HW2,CR1000,2015,HW correction/swap,8171,,,,,,,,0.15,0.702,0.012,0.81,0.733,0.783,same_sonic,0.106,,
-Saddle,HW2,CR1000,2016,HW correction/swap,8399,,,,,,,,0.39,-0.218,0.412,0.62,-0.189,0.606,same_raw,0.05,,
-Saddle,HW2,CR1000,2017,HW correction/swap,8728,,,,,,,,0.03,0.918,0.003,0.06,0.466,0.051,same_sonic,0.1,,
-Saddle,HW2,CR1000,2018,HW correction/swap,972,,,,,,,,0.02,0.501,0.004,0.06,-0.168,0.061,same_sonic,0.102,,
-Saddle,HW1,1999_AWSSDL99.DAT,1998,HW equals TS column,6202,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,1999_AWSSDL99.DAT,1999,HW equals TS column,2513,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2000_AWSSDL00.DAT,1999,HW equals TS column,6247,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2000_AWSSDL00.DAT,2000,HW equals TS column,3209,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2001_SADDLE01.DAT,2000,HW equals TS column,5575,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2001_SADDLE01.DAT,2001,HW equals TS column,3735,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2002_SADDLE.DAT,2001,HW equals TS column,5023,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2002_SADDLE.DAT,2002,HW equals TS column,3301,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2005_saddle-a.dat,2003,HW equals TS column,5645,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2005_saddle-a.dat,2004,HW equals TS column,3340,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2008_saddle 08.dat,2004,HW equals TS column,5442,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2008_saddle 08.dat,2005,HW equals TS column,3014,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2009_Saddle 09.dat,2005,HW equals TS column,5745,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2009_Saddle 09.dat,2006,HW equals TS column,8757,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2009_Saddle 09.dat,2007,HW equals TS column,8749,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2009_Saddle 09.dat,2008,HW equals TS column,8750,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,2009_Saddle 09.dat,2009,HW equals TS column,2780,,,,,,,,,,,,,,,,,0.0
-Saddle,HW1,CR1000,2014,HW equals TS column,5266,,,,,,,,,,,,,,,,TS10,0.001
-Saddle,HW1,CR1000,2015,HW equals TS column,8477,,,,,,,,,,,,,,,,TS3,0.0
-Saddle,HW1,CR1000,2016,HW equals TS column,8677,,,,,,,,,,,,,,,,TS5,0.001
-Saddle,HW1,CR1000,2017,HW equals TS column,8732,,,,,,,,,,,,,,,,TS10,0.0
-Saddle,HW1,CR1000,2018,HW equals TS column,8754,,,,,,,,,,,,,,,,TS5,0.0
-Saddle,HW1,CR1000,2019,HW equals TS column,8723,,,,,,,,,,,,,,,,TS2,0.0
-Saddle,HW1,CR1000,2020,HW equals TS column,8750,,,,,,,,,,,,,,,,TS7,0.001
-Saddle,HW1,CR1000,2021,HW equals TS column,3922,,,,,,,,,,,,,,,,TS8,0.0
-Saddle,HW2,1998_SAD_97-8.DAT,1997,HW equals TS column,6122,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,1998_SAD_97-8.DAT,1998,HW equals TS column,2556,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,1999_AWSSDL99.DAT,1998,HW equals TS column,6202,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,1999_AWSSDL99.DAT,1999,HW equals TS column,2513,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2000_AWSSDL00.DAT,1999,HW equals TS column,6247,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2000_AWSSDL00.DAT,2000,HW equals TS column,3209,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2001_SADDLE01.DAT,2000,HW equals TS column,5575,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2001_SADDLE01.DAT,2001,HW equals TS column,3735,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2002_SADDLE.DAT,2001,HW equals TS column,5023,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2002_SADDLE.DAT,2002,HW equals TS column,3301,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2006_Saddle.dat,2003,HW equals TS column,5645,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2006_Saddle.dat,2004,HW equals TS column,8782,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2006_Saddle.dat,2005,HW equals TS column,3014,,,,,,,,,,,,,,,,TS2,0.0
-Saddle,HW2,2009_Saddle 09.dat,2005,HW equals TS column,5745,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2009_Saddle 09.dat,2006,HW equals TS column,8759,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2009_Saddle 09.dat,2007,HW equals TS column,8756,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2009_Saddle 09.dat,2008,HW equals TS column,8776,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,2009_Saddle 09.dat,2009,HW equals TS column,2780,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,CR1000,2010,HW equals TS column,5860,,,,,,,,,,,,,,,,TS2,0.0
-Saddle,HW2,CR1000,2011,HW equals TS column,8395,,,,,,,,,,,,,,,,TS5,0.0
-Saddle,HW2,CR1000,2012,HW equals TS column,8522,,,,,,,,,,,,,,,,TS4,0.001
-Saddle,HW2,CR1000,2013,HW equals TS column,8488,,,,,,,,,,,,,,,,TS8,0.0
-Saddle,HW2,CR1000,2014,HW equals TS column,8475,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,CR1000,2015,HW equals TS column,8171,,,,,,,,,,,,,,,,TS3,0.0
-Saddle,HW2,CR1000,2016,HW equals TS column,8746,,,,,,,,,,,,,,,,TS5,0.001
-Saddle,HW2,CR1000,2017,HW equals TS column,8728,,,,,,,,,,,,,,,,TS6,0.0
-Saddle,HW2,CR1000,2018,HW equals TS column,972,,,,,,,,,,,,,,,,,0.0
-Saddle,HW2,CR1000,2019,HW equals TS column,4961,,,,,,,,,,,,,,,,TS2,0.001
-Saddle,HW2,CR1000,2020,HW equals TS column,7535,,,,,,,,,,,,,,,,TS4,0.001
-Saddle,HW2,CR1000,2021,HW equals TS column,3391,,,,,,,,,,,,,,,,,0.0
 South Dome,ISWR,1998_SDOM97-8.DAT,1997,radiation,2991,1.0,1.0004,0.9987,,,,,,,,,,,,,,
 South Dome,ISWR,1998_SDOM97-8.DAT,1998,radiation,907,1.0,0.9985,0.999,,,,,,,,,,,,,,
 South Dome,ISWR,1999_AWSSDM99.DAT,1998,radiation,3052,1.0,0.9858,0.9856,,,,,,,,,,,,,,
@@ -4309,3 +3716,596 @@ LAR3,HW1,logger,2011,HW correction/swap,5082,,,,,,,,0.0,1.0,0.041,0.02,0.992,0.0
 LAR3,HW2,logger,2009,HW correction/swap,3441,,,,,,,,0.16,-0.166,0.138,0.15,-0.259,0.122,other_sonic,-2.011,,
 LAR3,HW2,logger,2010,HW correction/swap,5528,,,,,,,,0.625,-0.144,0.614,0.59,-0.377,0.564,other_sonic,-1.447,,
 LAR3,HW2,logger,2011,HW correction/swap,5061,,,,,,,,0.0,1.0,0.062,0.02,0.992,0.045,same_raw,0.25,,
+Saddle,ISWR,1998_SAD_97-8.DAT,1997,radiation,3078,1.0,1.0016,0.998,,,,,,,,,,,,,,
+Saddle,ISWR,1998_SAD_97-8.DAT,1998,radiation,825,1.0,1.0011,0.9956,,,,,,,,,,,,,,
+Saddle,ISWR,1999_AWSSDL99.DAT,1998,radiation,3123,1.0,0.9997,0.998,,,,,,,,,,,,,,
+Saddle,ISWR,1999_AWSSDL99.DAT,1999,radiation,802,1.0,1.0001,0.9995,,,,,,,,,,,,,,
+Saddle,ISWR,2000_AWSSDL00.DAT,1999,radiation,3182,1.0,1.002,0.9967,,,,,,,,,,,,,,
+Saddle,ISWR,2000_AWSSDL00.DAT,2000,radiation,1254,1.0,1.0034,0.9934,,,,,,,,,,,,,,
+Saddle,ISWR,2001_SADDLE01.DAT,2000,radiation,2710,1.0,1.0029,0.9967,,,,,,,,,,,,,,
+Saddle,ISWR,2001_SADDLE01.DAT,2001,radiation,1655,1.0,1.0044,0.9868,,,,,,,,,,,,,,
+Saddle,ISWR,2002_SADDLE.DAT,2001,radiation,2127,1.0,0.9922,0.9914,,,,,,,,,,,,,,
+Saddle,ISWR,2002_SADDLE.DAT,2002,radiation,1345,1.0,1.0031,0.9965,,,,,,,,,,,,,,
+Saddle,ISWR,2005_saddle-a.dat,2003,radiation,2783,1.0,1.0014,0.9971,,,,,,,,,,,,,,
+Saddle,ISWR,2005_saddle-a.dat,2004,radiation,1357,1.0,1.0008,0.9996,,,,,,,,,,,,,,
+Saddle,ISWR,2008_saddle 08.dat,2004,radiation,2669,1.0,0.9989,0.9985,,,,,,,,,,,,,,
+Saddle,ISWR,2008_saddle 08.dat,2005,radiation,1321,1.0,1.0033,0.9952,,,,,,,,,,,,,,
+Saddle,ISWR,2009_Saddle 09.dat,2005,radiation,2842,1.0,1.0006,0.998,,,,,,,,,,,,,,
+Saddle,ISWR,2009_Saddle 09.dat,2006,radiation,3936,1.0,1.0022,0.9944,,,,,,,,,,,,,,
+Saddle,ISWR,2009_Saddle 09.dat,2007,radiation,3969,1.0,1.0005,0.997,,,,,,,,,,,,,,
+Saddle,ISWR,2009_Saddle 09.dat,2008,radiation,3973,1.0,1.002,0.9955,,,,,,,,,,,,,,
+Saddle,ISWR,2009_Saddle 09.dat,2009,radiation,964,1.0,1.0296,0.8968,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2010,radiation,2944,1.0,1.0003,0.9977,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2011,radiation,3968,1.0,1.003,0.996,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2012,radiation,3957,1.0,1.0021,0.9978,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2013,radiation,3968,1.0,1.0015,0.9982,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2014,radiation,3977,1.0,0.9986,0.9991,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2015,radiation,3782,1.0,0.9994,0.999,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2016,radiation,3953,1.0,1.0003,0.9989,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2017,radiation,3955,0.005,0.16,0.1211,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2018,radiation,3898,1.0,0.6512,0.6523,,,,,,,,,,,,,,
+Saddle,ISWR,CR1000,2019,radiation,1311,1.0,1.0001,0.9991,,,,,,,,,,,,,,
+Saddle,OSWR,1998_SAD_97-8.DAT,1997,radiation,3055,0.9743,0.9706,0.9972,,,,,,,,,,,,,,
+Saddle,OSWR,1998_SAD_97-8.DAT,1998,radiation,831,0.9743,0.9335,0.9837,,,,,,,,,,,,,,
+Saddle,OSWR,1999_AWSSDL99.DAT,1998,radiation,3128,0.9743,0.9684,0.996,,,,,,,,,,,,,,
+Saddle,OSWR,1999_AWSSDL99.DAT,1999,radiation,811,0.9743,0.9567,0.9929,,,,,,,,,,,,,,
+Saddle,OSWR,2000_AWSSDL00.DAT,1999,radiation,3168,0.9743,0.9698,0.997,,,,,,,,,,,,,,
+Saddle,OSWR,2000_AWSSDL00.DAT,2000,radiation,1253,0.9743,0.9719,0.999,,,,,,,,,,,,,,
+Saddle,OSWR,2001_SADDLE01.DAT,2000,radiation,2711,0.9743,0.9706,0.9975,,,,,,,,,,,,,,
+Saddle,OSWR,2001_SADDLE01.DAT,2001,radiation,1660,0.9743,0.9684,0.9961,,,,,,,,,,,,,,
+Saddle,OSWR,2002_SADDLE.DAT,2001,radiation,2105,0.9743,0.9608,0.9907,,,,,,,,,,,,,,
+Saddle,OSWR,2002_SADDLE.DAT,2002,radiation,1344,1.0,0.9868,0.9923,,,,,,,,,,,,,,
+Saddle,OSWR,2005_saddle-a.dat,2003,radiation,2759,1.0,0.9964,0.998,,,,,,,,,,,,,,
+Saddle,OSWR,2005_saddle-a.dat,2004,radiation,1348,1.0,0.9952,0.9976,,,,,,,,,,,,,,
+Saddle,OSWR,2008_saddle 08.dat,2004,radiation,2642,1.0,0.9937,0.9961,,,,,,,,,,,,,,
+Saddle,OSWR,2008_saddle 08.dat,2005,radiation,1315,1.0,0.9934,0.9967,,,,,,,,,,,,,,
+Saddle,OSWR,2009_Saddle 09.dat,2005,radiation,2824,1.0,0.9946,0.9966,,,,,,,,,,,,,,
+Saddle,OSWR,2009_Saddle 09.dat,2006,radiation,3933,1.0,0.9914,0.9949,,,,,,,,,,,,,,
+Saddle,OSWR,2009_Saddle 09.dat,2007,radiation,3950,1.0,0.9917,0.9942,,,,,,,,,,,,,,
+Saddle,OSWR,2009_Saddle 09.dat,2008,radiation,3940,1.0,0.9911,0.9947,,,,,,,,,,,,,,
+Saddle,OSWR,2009_Saddle 09.dat,2009,radiation,962,1.0,0.8751,0.9283,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2010,radiation,2918,1.0,0.9932,0.9957,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2011,radiation,3967,1.0,0.9902,0.9945,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2012,radiation,3919,1.0,0.9896,0.9929,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2013,radiation,3916,1.0,0.9856,0.9912,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2014,radiation,3923,1.0,0.997,0.9984,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2015,radiation,3778,1.0,0.9998,0.9998,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2016,radiation,3897,1.0,1.0,0.9999,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2017,radiation,3963,0.0054,0.1884,0.1618,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2018,radiation,3885,1.0,0.6182,0.5961,,,,,,,,,,,,,,
+Saddle,OSWR,CR1000,2019,radiation,1320,1.0,1.0003,0.9998,,,,,,,,,,,,,,
+Saddle,NR,1998_SAD_97-8.DAT,1997,NR>0,255,1.0,0.9915,0.9232,,,,,,,,,,,,,,
+Saddle,NR,1998_SAD_97-8.DAT,1998,NR>0,240,1.0,0.9985,0.9906,,,,,,,,,,,,,,
+Saddle,NR,1999_AWSSDL99.DAT,1998,NR>0,296,1.0,0.9927,0.9335,,,,,,,,,,,,,,
+Saddle,NR,2000_AWSSDL00.DAT,1999,NR>0,283,1.0,0.9925,0.9604,,,,,,,,,,,,,,
+Saddle,NR,2001_SADDLE01.DAT,2000,NR>0,299,1.0,1.0,1.0,,,,,,,,,,,,,,
+Saddle,NR,2002_SADDLE.DAT,2001,NR>0,175,1.0374,0.8716,0.4743,,,,,,,,,,,,,,
+Saddle,NR,2008_saddle 08.dat,2004,NR>0,212,1.0,0.4025,0.457,,,,,,,,,,,,,,
+Saddle,NR,2008_saddle 08.dat,2005,NR>0,131,1.0,0.5778,0.6157,,,,,,,,,,,,,,
+Saddle,NR,2009_Saddle 09.dat,2005,NR>0,177,1.0,0.9629,0.8119,,,,,,,,,,,,,,
+Saddle,NR,2009_Saddle 09.dat,2006,NR>0,160,1.0,0.9717,0.8669,,,,,,,,,,,,,,
+Saddle,NR,2009_Saddle 09.dat,2007,NR>0,354,1.0,0.9653,0.8642,,,,,,,,,,,,,,
+Saddle,NR,2009_Saddle 09.dat,2008,NR>0,112,1.0,0.9342,0.785,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2010,NR>0,250,1.0,0.9904,0.9504,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2011,NR>0,345,1.0,1.0,1.0,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2012,NR>0,779,1.0,0.9983,0.9937,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2013,NR>0,546,1.0,0.9738,0.8316,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2014,NR>0,262,1.0,0.914,0.7235,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2015,NR>0,289,1.0,0.9459,0.7681,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2016,NR>0,482,1.0,0.9865,0.9507,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2017,NR>0,584,0.1076,0.1267,0.212,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2018,NR>0,1225,1.0,0.4779,0.4994,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2019,NR>0,794,1.0,0.9902,0.9912,,,,,,,,,,,,,,
+Saddle,NR,1998_SAD_97-8.DAT,1997,NR<0,909,1.1091,0.6398,0.7226,,,,,,,,,,,,,,
+Saddle,NR,1998_SAD_97-8.DAT,1998,NR<0,200,1.1091,1.0799,0.9945,,,,,,,,,,,,,,
+Saddle,NR,1999_AWSSDL99.DAT,1998,NR<0,1226,1.0,0.6699,0.8027,,,,,,,,,,,,,,
+Saddle,NR,1999_AWSSDL99.DAT,1999,NR<0,293,1.0,0.9616,0.9946,,,,,,,,,,,,,,
+Saddle,NR,2000_AWSSDL00.DAT,1999,NR<0,1308,1.0,0.6964,0.7927,,,,,,,,,,,,,,
+Saddle,NR,2000_AWSSDL00.DAT,2000,NR<0,888,1.0,0.8228,0.8879,,,,,,,,,,,,,,
+Saddle,NR,2001_SADDLE01.DAT,2000,NR<0,1075,1.0,0.6879,0.7705,,,,,,,,,,,,,,
+Saddle,NR,2001_SADDLE01.DAT,2001,NR<0,1038,1.0,0.6758,0.8284,,,,,,,,,,,,,,
+Saddle,NR,2002_SADDLE.DAT,2001,NR<0,864,1.0,0.7107,0.8145,,,,,,,,,,,,,,
+Saddle,NR,2002_SADDLE.DAT,2002,NR<0,854,1.0,0.9915,0.9924,,,,,,,,,,,,,,
+Saddle,NR,2008_saddle 08.dat,2004,NR<0,1023,1.0,0.9487,0.9478,,,,,,,,,,,,,,
+Saddle,NR,2008_saddle 08.dat,2005,NR<0,338,1.0,0.3807,-0.0783,,,,,,,,,,,,,,
+Saddle,NR,2009_Saddle 09.dat,2005,NR<0,1249,1.0,0.9179,0.9368,,,,,,,,,,,,,,
+Saddle,NR,2009_Saddle 09.dat,2006,NR<0,2199,1.0,0.9902,0.9814,,,,,,,,,,,,,,
+Saddle,NR,2009_Saddle 09.dat,2007,NR<0,2027,1.0,0.9764,0.9573,,,,,,,,,,,,,,
+Saddle,NR,2009_Saddle 09.dat,2008,NR<0,1998,1.0,0.9916,0.9773,,,,,,,,,,,,,,
+Saddle,NR,2009_Saddle 09.dat,2009,NR<0,664,1.0,0.9961,0.9976,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2010,NR<0,1179,1.0,0.9686,0.9662,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2011,NR<0,1840,1.0,0.9855,0.9731,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2012,NR<0,1376,1.0,0.9768,0.98,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2013,NR<0,1580,1.0,0.9784,0.9742,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2014,NR<0,1609,1.0,1.0051,0.9715,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2015,NR<0,1412,1.0,0.9845,0.9734,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2016,NR<0,1058,1.0,0.8118,0.8794,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2017,NR<0,1169,0.0856,0.539,0.6778,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2018,NR<0,812,1.0,0.6612,0.7041,,,,,,,,,,,,,,
+Saddle,NR,CR1000,2019,NR<0,124,1.0,0.9764,0.9827,,,,,,,,,,,,,,
+Saddle,P,1999_AWSSDL99.DAT,1998,pressure,6201,,,,0.0,,,,,,,,,,,,,
+Saddle,P,1999_AWSSDL99.DAT,1999,pressure,2513,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2000_AWSSDL00.DAT,1999,pressure,6247,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2000_AWSSDL00.DAT,2000,pressure,3198,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2001_SADDLE01.DAT,2000,pressure,5575,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2001_SADDLE01.DAT,2001,pressure,3735,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2002_SADDLE.DAT,2001,pressure,4804,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2002_SADDLE.DAT,2002,pressure,3301,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2005_saddle-a.dat,2003,pressure,5645,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2005_saddle-a.dat,2004,pressure,3340,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2008_saddle 08.dat,2004,pressure,5442,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2008_saddle 08.dat,2005,pressure,3014,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2009_Saddle 09.dat,2005,pressure,5746,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2009_Saddle 09.dat,2006,pressure,8758,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2009_Saddle 09.dat,2007,pressure,8758,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2009_Saddle 09.dat,2008,pressure,8784,,,,0.0,,,,,,,,,,,,,
+Saddle,P,2009_Saddle 09.dat,2009,pressure,2780,,,,0.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2010,pressure,5882,,,,0.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2011,pressure,8760,,,,0.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2012,pressure,8784,,,,0.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2013,pressure,8759,,,,0.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2014,pressure,8759,,,,0.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2015,pressure,8542,,,,0.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2016,pressure,8784,,,,0.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2017,pressure,8760,,,,-400.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2018,pressure,8760,,,,0.0,,,,,,,,,,,,,
+Saddle,P,CR1000,2019,pressure,3309,,,,0.0,,,,,,,,,,,,,
+Saddle,RH1,1999_AWSSDL99.DAT,1998,RH ice/water,6064,,,,,5.77,1.74,wrt ice,,,,,,,,,,
+Saddle,RH1,1999_AWSSDL99.DAT,1999,RH ice/water,2513,,,,,17.88,1.26,wrt ice,,,,,,,,,,
+Saddle,RH1,2000_AWSSDL00.DAT,1999,RH ice/water,5928,,,,,6.48,1.71,wrt ice,,,,,,,,,,
+Saddle,RH1,2000_AWSSDL00.DAT,2000,RH ice/water,3206,,,,,15.29,0.8,wrt ice,,,,,,,,,,
+Saddle,RH1,2001_SADDLE01.DAT,2000,RH ice/water,5297,,,,,5.58,1.47,wrt ice,,,,,,,,,,
+Saddle,RH1,2001_SADDLE01.DAT,2001,RH ice/water,3726,,,,,11.5,1.09,wrt ice,,,,,,,,,,
+Saddle,RH1,2002_SADDLE.DAT,2001,RH ice/water,4641,,,,,4.2,1.55,wrt ice,,,,,,,,,,
+Saddle,RH1,2002_SADDLE.DAT,2002,RH ice/water,3300,,,,,13.37,2.8,wrt ice,,,,,,,,,,
+Saddle,RH1,2005_saddle-a.dat,2003,RH ice/water,5414,,,,,1.89,5.53,same (wrt water),,,,,,,,,,
+Saddle,RH1,2005_saddle-a.dat,2004,RH ice/water,3340,,,,,6.27,5.87,other,,,,,,,,,,
+Saddle,RH1,2008_saddle 08.dat,2004,RH ice/water,5165,,,,,2.04,5.01,same (wrt water),,,,,,,,,,
+Saddle,RH1,2008_saddle 08.dat,2005,RH ice/water,2994,,,,,2.65,6.03,same (wrt water),,,,,,,,,,
+Saddle,RH1,2009_Saddle 09.dat,2005,RH ice/water,5531,,,,,4.03,2.1,wrt ice,,,,,,,,,,
+Saddle,RH1,2009_Saddle 09.dat,2006,RH ice/water,8516,,,,,5.37,2.11,wrt ice,,,,,,,,,,
+Saddle,RH1,2009_Saddle 09.dat,2007,RH ice/water,8305,,,,,5.68,2.14,wrt ice,,,,,,,,,,
+Saddle,RH1,2009_Saddle 09.dat,2008,RH ice/water,8652,,,,,4.62,2.26,wrt ice,,,,,,,,,,
+Saddle,RH1,2009_Saddle 09.dat,2009,RH ice/water,2780,,,,,11.55,2.54,wrt ice,,,,,,,,,,
+Saddle,RH1,CR1000,2010,RH ice/water,192,,,,,6.65,3.76,wrt ice,,,,,,,,,,
+Saddle,RH1,CR1000,2011,RH ice/water,787,,,,,17.29,2.62,wrt ice,,,,,,,,,,
+Saddle,RH1,CR1000,2012,RH ice/water,6161,,,,,4.82,3.61,wrt ice,,,,,,,,,,
+Saddle,RH1,CR1000,2013,RH ice/water,2338,,,,,5.67,2.82,wrt ice,,,,,,,,,,
+Saddle,RH1,CR1000,2014,RH ice/water,3812,,,,,19.16,15.71,other,,,,,,,,,,
+Saddle,RH1,CR1000,2015,RH ice/water,5289,,,,,27.24,18.41,other,,,,,,,,,,
+Saddle,RH1,CR1000,2016,RH ice/water,7590,,,,,20.05,18.43,other,,,,,,,,,,
+Saddle,RH1,CR1000,2017,RH ice/water,8610,,,,,6.3,7.66,other,,,,,,,,,,
+Saddle,RH1,CR1000,2018,RH ice/water,8522,,,,,12.06,9.22,other,,,,,,,,,,
+Saddle,RH1,CR1000,2019,RH ice/water,3309,,,,,26.56,20.72,other,,,,,,,,,,
+Saddle,RH2,1999_AWSSDL99.DAT,1998,RH ice/water,6034,,,,,7.57,1.84,wrt ice,,,,,,,,,,
+Saddle,RH2,1999_AWSSDL99.DAT,1999,RH ice/water,2513,,,,,18.69,2.3,wrt ice,,,,,,,,,,
+Saddle,RH2,2000_AWSSDL00.DAT,1999,RH ice/water,5926,,,,,7.64,2.17,wrt ice,,,,,,,,,,
+Saddle,RH2,2000_AWSSDL00.DAT,2000,RH ice/water,3206,,,,,16.16,0.73,wrt ice,,,,,,,,,,
+Saddle,RH2,2001_SADDLE01.DAT,2000,RH ice/water,5283,,,,,6.54,1.41,wrt ice,,,,,,,,,,
+Saddle,RH2,2001_SADDLE01.DAT,2001,RH ice/water,3723,,,,,11.57,1.46,wrt ice,,,,,,,,,,
+Saddle,RH2,2002_SADDLE.DAT,2001,RH ice/water,4636,,,,,4.94,1.81,wrt ice,,,,,,,,,,
+Saddle,RH2,2002_SADDLE.DAT,2002,RH ice/water,3300,,,,,12.87,3.46,wrt ice,,,,,,,,,,
+Saddle,RH2,2005_saddle-a.dat,2003,RH ice/water,5410,,,,,2.66,5.69,same (wrt water),,,,,,,,,,
+Saddle,RH2,2005_saddle-a.dat,2004,RH ice/water,3340,,,,,4.69,6.08,other,,,,,,,,,,
+Saddle,RH2,2008_saddle 08.dat,2004,RH ice/water,5172,,,,,2.79,5.31,same (wrt water),,,,,,,,,,
+Saddle,RH2,2008_saddle 08.dat,2005,RH ice/water,2994,,,,,3.3,5.9,same (wrt water),,,,,,,,,,
+Saddle,RH2,2009_Saddle 09.dat,2005,RH ice/water,5533,,,,,5.79,3.13,wrt ice,,,,,,,,,,
+Saddle,RH2,2009_Saddle 09.dat,2006,RH ice/water,8510,,,,,7.21,3.51,wrt ice,,,,,,,,,,
+Saddle,RH2,2009_Saddle 09.dat,2007,RH ice/water,8306,,,,,8.03,3.15,wrt ice,,,,,,,,,,
+Saddle,RH2,2009_Saddle 09.dat,2008,RH ice/water,8637,,,,,8.44,2.81,wrt ice,,,,,,,,,,
+Saddle,RH2,2009_Saddle 09.dat,2009,RH ice/water,2780,,,,,7.03,2.43,wrt ice,,,,,,,,,,
+Saddle,RH2,CR1000,2010,RH ice/water,5428,,,,,14.82,7.93,other,,,,,,,,,,
+Saddle,RH2,CR1000,2011,RH ice/water,8581,,,,,15.06,7.93,other,,,,,,,,,,
+Saddle,RH2,CR1000,2012,RH ice/water,7855,,,,,14.93,4.62,other,,,,,,,,,,
+Saddle,RH2,CR1000,2013,RH ice/water,8535,,,,,14.19,4.49,other,,,,,,,,,,
+Saddle,RH2,CR1000,2014,RH ice/water,8492,,,,,15.02,16.84,other,,,,,,,,,,
+Saddle,RH2,CR1000,2015,RH ice/water,8353,,,,,26.57,30.92,other,,,,,,,,,,
+Saddle,RH2,CR1000,2016,RH ice/water,8413,,,,,22.06,33.3,other,,,,,,,,,,
+Saddle,RH2,CR1000,2017,RH ice/water,8585,,,,,21.92,11.71,other,,,,,,,,,,
+Saddle,RH2,CR1000,2018,RH ice/water,8490,,,,,17.06,22.38,other,,,,,,,,,,
+Saddle,RH2,CR1000,2019,RH ice/water,3307,,,,,29.5,35.88,other,,,,,,,,,,
+Saddle,HW1,1999_AWSSDL99.DAT,1998,HW correction/swap,6202,,,,,,,,0.013,0.938,0.011,0.032,0.784,0.01,other_sonic,-0.247,,
+Saddle,HW1,1999_AWSSDL99.DAT,1999,HW correction/swap,2513,,,,,,,,0.037,-0.388,0.037,0.074,-0.473,0.073,same_sonic,0.589,,
+Saddle,HW1,2000_AWSSDL00.DAT,1999,HW correction/swap,6247,,,,,,,,0.034,0.843,0.007,0.055,0.305,0.007,same_sonic,0.505,,
+Saddle,HW1,2000_AWSSDL00.DAT,2000,HW correction/swap,3209,,,,,,,,0.198,-0.047,0.195,0.057,0.902,0.009,other_sonic,-0.958,,
+Saddle,HW1,2001_SADDLE01.DAT,2000,HW correction/swap,5575,,,,,,,,0.025,0.951,0.018,0.029,0.566,0.017,other_sonic,-0.966,,
+Saddle,HW1,2001_SADDLE01.DAT,2001,HW correction/swap,3735,,,,,,,,0.131,0.501,0.122,0.03,0.932,0.003,other_sonic,-0.971,,
+Saddle,HW1,2002_SADDLE.DAT,2001,HW correction/swap,5023,,,,,,,,0.029,0.309,0.014,0.038,0.51,0.013,other_sonic,-0.733,,
+Saddle,HW1,2002_SADDLE.DAT,2002,HW correction/swap,3301,,,,,,,,0.02,0.172,0.003,0.06,0.747,0.023,same_sonic,0.52,,
+Saddle,HW1,2005_saddle-a.dat,2003,HW correction/swap,5645,,,,,,,,0.03,0.668,0.027,0.01,0.197,0.004,other_sonic,-0.32,,
+Saddle,HW1,2005_saddle-a.dat,2004,HW correction/swap,3340,,,,,,,,0.03,0.042,0.027,0.01,0.175,0.004,other_sonic,-0.321,,
+Saddle,HW1,2008_saddle 08.dat,2004,HW correction/swap,5430,,,,,,,,0.089,0.497,0.047,0.72,-0.242,0.698,same_sonic,-0.234,,
+Saddle,HW1,2008_saddle 08.dat,2005,HW correction/swap,3014,,,,,,,,0.845,-0.31,0.724,0.26,-0.375,0.29,other_raw,3.28,,
+Saddle,HW1,2009_Saddle 09.dat,2005,HW correction/swap,5743,,,,,,,,0.08,0.427,0.022,0.07,0.557,0.004,other_sonic,-0.319,,
+Saddle,HW1,2009_Saddle 09.dat,2006,HW correction/swap,8756,,,,,,,,0.06,0.171,0.023,0.06,0.38,0.003,other_sonic,-0.321,,
+Saddle,HW1,2009_Saddle 09.dat,2007,HW correction/swap,8749,,,,,,,,0.47,0.427,0.47,0.06,0.4,0.003,other_sonic,-0.32,,
+Saddle,HW1,2009_Saddle 09.dat,2008,HW correction/swap,8750,,,,,,,,0.615,-0.427,0.596,0.03,0.429,0.004,other_sonic,-0.319,,
+Saddle,HW1,2009_Saddle 09.dat,2009,HW correction/swap,2780,,,,,,,,0.02,0.179,0.009,0.02,0.146,0.003,other_sonic,-0.32,,
+Saddle,HW1,CR1000,2014,HW correction/swap,3209,,,,,,,,0.04,0.178,0.013,0.05,0.001,0.082,same_sonic,0.103,,
+Saddle,HW1,CR1000,2015,HW correction/swap,3490,,,,,,,,0.425,0.511,0.341,0.24,0.258,0.256,other_raw,-1.4,,
+Saddle,HW1,CR1000,2016,HW correction/swap,5406,,,,,,,,0.01,0.947,0.003,0.03,0.727,0.033,same_sonic,0.1,,
+Saddle,HW1,CR1000,2017,HW correction/swap,8732,,,,,,,,0.03,0.48,0.007,0.11,0.686,0.077,same_sonic,0.101,,
+Saddle,HW1,CR1000,2018,HW correction/swap,6152,,,,,,,,0.03,0.99,0.004,0.02,0.501,0.004,other_sonic,-0.9,,
+Saddle,HW1,CR1000,2019,HW correction/swap,3288,,,,,,,,0.02,0.777,0.003,,,,same_sonic,0.1,,
+Saddle,HW2,1998_SAD_97-8.DAT,1997,HW correction/swap,6122,,,,,,,,0.036,0.973,0.008,,,,same_sonic,0.541,,
+Saddle,HW2,1998_SAD_97-8.DAT,1998,HW correction/swap,2556,,,,,,,,0.042,0.916,0.016,,,,same_sonic,0.585,,
+Saddle,HW2,1999_AWSSDL99.DAT,1998,HW correction/swap,6202,,,,,,,,0.032,0.784,0.01,0.013,0.938,0.011,same_sonic,0.523,,
+Saddle,HW2,1999_AWSSDL99.DAT,1999,HW correction/swap,2513,,,,,,,,0.074,-0.473,0.073,0.037,-0.388,0.037,other_sonic,1.359,,
+Saddle,HW2,2000_AWSSDL00.DAT,1999,HW correction/swap,6247,,,,,,,,0.055,0.318,0.008,0.034,0.837,0.007,other_sonic,1.686,,
+Saddle,HW2,2000_AWSSDL00.DAT,2000,HW correction/swap,3209,,,,,,,,0.057,0.902,0.008,0.198,-0.047,0.197,same_sonic,0.223,,
+Saddle,HW2,2001_SADDLE01.DAT,2000,HW correction/swap,5575,,,,,,,,0.029,0.566,0.017,0.025,0.951,0.018,same_sonic,0.215,,
+Saddle,HW2,2001_SADDLE01.DAT,2001,HW correction/swap,3735,,,,,,,,0.03,0.932,0.003,0.131,0.501,0.122,same_sonic,0.21,,
+Saddle,HW2,2002_SADDLE.DAT,2001,HW correction/swap,5023,,,,,,,,0.038,0.488,0.013,0.029,0.151,0.014,same_sonic,0.438,,
+Saddle,HW2,2002_SADDLE.DAT,2002,HW correction/swap,3301,,,,,,,,0.05,0.78,0.003,0.02,0.162,0.024,same_sonic,-0.319,,
+Saddle,HW2,2006_Saddle.dat,2003,HW correction/swap,5645,,,,,,,,0.03,0.164,0.029,0.01,0.676,0.004,other_sonic,0.521,,
+Saddle,HW2,2006_Saddle.dat,2004,HW correction/swap,8769,,,,,,,,0.27,0.252,0.277,0.03,0.923,0.004,other_sonic,0.521,,
+Saddle,HW2,2006_Saddle.dat,2005,HW correction/swap,3014,,,,,,,,0.28,-0.029,0.28,0.16,-0.19,0.127,other_sonic,0.521,,
+Saddle,HW2,2009_Saddle 09.dat,2005,HW correction/swap,5743,,,,,,,,0.07,0.813,0.022,0.07,0.582,0.003,other_sonic,0.521,,
+Saddle,HW2,2009_Saddle 09.dat,2006,HW correction/swap,8758,,,,,,,,0.08,0.366,0.019,0.06,0.149,0.004,other_sonic,0.522,,
+Saddle,HW2,2009_Saddle 09.dat,2007,HW correction/swap,8756,,,,,,,,0.16,0.317,0.012,0.15,0.969,0.057,same_sonic,-2.113,,
+Saddle,HW2,2009_Saddle 09.dat,2008,HW correction/swap,8368,,,,,,,,0.09,0.027,0.092,0.04,0.976,0.006,other_sonic,0.518,,
+Saddle,HW2,2009_Saddle 09.dat,2009,HW correction/swap,2780,,,,,,,,0.02,0.114,0.008,0.02,0.161,0.003,other_sonic,0.522,,
+Saddle,HW2,CR1000,2010,HW correction/swap,5860,,,,,,,,0.0,0.023,0.089,,,,same_raw,-0.32,,
+Saddle,HW2,CR1000,2011,HW correction/swap,8395,,,,,,,,0.0,0.452,0.065,,,,same_raw,-0.32,,
+Saddle,HW2,CR1000,2012,HW correction/swap,3769,,,,,,,,0.0,0.722,0.049,,,,same_raw,-0.32,,
+Saddle,HW2,CR1000,2013,HW correction/swap,5346,,,,,,,,0.0,0.782,0.024,,,,same_raw,-0.32,,
+Saddle,HW2,CR1000,2014,HW correction/swap,8472,,,,,,,,0.23,0.867,0.282,0.13,0.427,0.084,other_sonic,1.614,,
+Saddle,HW2,CR1000,2015,HW correction/swap,8171,,,,,,,,0.15,0.702,0.012,0.81,0.733,0.783,same_sonic,0.106,,
+Saddle,HW2,CR1000,2016,HW correction/swap,8399,,,,,,,,0.39,-0.218,0.412,0.62,-0.189,0.606,same_raw,0.05,,
+Saddle,HW2,CR1000,2017,HW correction/swap,8728,,,,,,,,0.03,0.918,0.003,0.06,0.466,0.051,same_sonic,0.1,,
+Saddle,HW2,CR1000,2018,HW correction/swap,972,,,,,,,,0.02,0.501,0.004,0.06,-0.168,0.061,same_sonic,0.102,,
+Saddle,HW1,1999_AWSSDL99.DAT,1998,HW equals TS column,6202,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,1999_AWSSDL99.DAT,1999,HW equals TS column,2513,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2000_AWSSDL00.DAT,1999,HW equals TS column,6247,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2000_AWSSDL00.DAT,2000,HW equals TS column,3209,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2001_SADDLE01.DAT,2000,HW equals TS column,5575,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2001_SADDLE01.DAT,2001,HW equals TS column,3735,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2002_SADDLE.DAT,2001,HW equals TS column,5023,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2002_SADDLE.DAT,2002,HW equals TS column,3301,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2005_saddle-a.dat,2003,HW equals TS column,5645,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2005_saddle-a.dat,2004,HW equals TS column,3340,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2008_saddle 08.dat,2004,HW equals TS column,5442,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2008_saddle 08.dat,2005,HW equals TS column,3014,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2009_Saddle 09.dat,2005,HW equals TS column,5745,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2009_Saddle 09.dat,2006,HW equals TS column,8757,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2009_Saddle 09.dat,2007,HW equals TS column,8749,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2009_Saddle 09.dat,2008,HW equals TS column,8750,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,2009_Saddle 09.dat,2009,HW equals TS column,2780,,,,,,,,,,,,,,,,,0.0
+Saddle,HW1,CR1000,2014,HW equals TS column,5266,,,,,,,,,,,,,,,,TS10,0.001
+Saddle,HW1,CR1000,2015,HW equals TS column,8477,,,,,,,,,,,,,,,,TS3,0.0
+Saddle,HW1,CR1000,2016,HW equals TS column,8677,,,,,,,,,,,,,,,,TS5,0.001
+Saddle,HW1,CR1000,2017,HW equals TS column,8732,,,,,,,,,,,,,,,,TS10,0.0
+Saddle,HW1,CR1000,2018,HW equals TS column,8754,,,,,,,,,,,,,,,,TS5,0.0
+Saddle,HW1,CR1000,2019,HW equals TS column,8723,,,,,,,,,,,,,,,,TS2,0.0
+Saddle,HW1,CR1000,2020,HW equals TS column,8750,,,,,,,,,,,,,,,,TS7,0.001
+Saddle,HW1,CR1000,2021,HW equals TS column,3922,,,,,,,,,,,,,,,,TS8,0.0
+Saddle,HW2,1998_SAD_97-8.DAT,1997,HW equals TS column,6122,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,1998_SAD_97-8.DAT,1998,HW equals TS column,2556,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,1999_AWSSDL99.DAT,1998,HW equals TS column,6202,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,1999_AWSSDL99.DAT,1999,HW equals TS column,2513,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2000_AWSSDL00.DAT,1999,HW equals TS column,6247,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2000_AWSSDL00.DAT,2000,HW equals TS column,3209,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2001_SADDLE01.DAT,2000,HW equals TS column,5575,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2001_SADDLE01.DAT,2001,HW equals TS column,3735,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2002_SADDLE.DAT,2001,HW equals TS column,5023,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2002_SADDLE.DAT,2002,HW equals TS column,3301,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2006_Saddle.dat,2003,HW equals TS column,5645,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2006_Saddle.dat,2004,HW equals TS column,8782,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2006_Saddle.dat,2005,HW equals TS column,3014,,,,,,,,,,,,,,,,TS2,0.0
+Saddle,HW2,2009_Saddle 09.dat,2005,HW equals TS column,5745,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2009_Saddle 09.dat,2006,HW equals TS column,8759,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2009_Saddle 09.dat,2007,HW equals TS column,8756,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2009_Saddle 09.dat,2008,HW equals TS column,8776,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,2009_Saddle 09.dat,2009,HW equals TS column,2780,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,CR1000,2010,HW equals TS column,5860,,,,,,,,,,,,,,,,TS2,0.0
+Saddle,HW2,CR1000,2011,HW equals TS column,8395,,,,,,,,,,,,,,,,TS5,0.0
+Saddle,HW2,CR1000,2012,HW equals TS column,8522,,,,,,,,,,,,,,,,TS4,0.001
+Saddle,HW2,CR1000,2013,HW equals TS column,8488,,,,,,,,,,,,,,,,TS8,0.0
+Saddle,HW2,CR1000,2014,HW equals TS column,8475,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,CR1000,2015,HW equals TS column,8171,,,,,,,,,,,,,,,,TS3,0.0
+Saddle,HW2,CR1000,2016,HW equals TS column,8746,,,,,,,,,,,,,,,,TS5,0.001
+Saddle,HW2,CR1000,2017,HW equals TS column,8728,,,,,,,,,,,,,,,,TS6,0.0
+Saddle,HW2,CR1000,2018,HW equals TS column,972,,,,,,,,,,,,,,,,,0.0
+Saddle,HW2,CR1000,2019,HW equals TS column,4961,,,,,,,,,,,,,,,,TS2,0.001
+Saddle,HW2,CR1000,2020,HW equals TS column,7535,,,,,,,,,,,,,,,,TS4,0.001
+Saddle,HW2,CR1000,2021,HW equals TS column,3391,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,ISWR,2000_AWSSWC00.DAT,1999,radiation,2355,1.0,0.9988,0.9978,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2000_AWSSWC00.DAT,2000,radiation,1337,1.0,1.0007,0.9981,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2000_ETH_AWS.DAT,2000,radiation,369,0.0,0.0,,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2001_SWC2001.DAT,2000,radiation,2362,1.0,0.9717,0.9643,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2001_SWC2001.DAT,2001,radiation,961,1.0,1.0003,0.9989,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2002_eth_01_02.dat,2001,radiation,1696,1.0,0.9957,0.9938,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2002_eth_01_02.dat,2002,radiation,1115,1.0,0.9988,0.9988,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2002_snow temp may 1 to July 17 2001.dat,2001,radiation,617,1.0,1.0002,0.9972,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2004_SC.dat,2002,radiation,2959,1.0,0.9985,0.9986,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2004_SC.dat,2003,radiation,3666,1.0,0.9974,0.9977,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2005_CR10X_2_final_storage_1.dat,2005,radiation,424,0.9919,0.9933,0.9777,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2005_ETH Summer 05.DAT,2005,radiation,1681,1.0,0.9985,0.9978,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2005_ETH1.DAT,2004,radiation,592,0.9804,0.9894,0.9776,,,,,,,,,,,,,,
+Swiss Camp,ISWR,2005_ETH1.DAT,2005,radiation,421,0.9689,0.9827,0.9481,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2009,radiation,2546,1.0,0.9994,0.999,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2010,radiation,4024,1.0,0.9978,0.9982,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2011,radiation,2939,1.0,0.9899,0.9932,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2012,radiation,3792,1.0001,1.2151,0.85,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2013,radiation,3947,1.0,1.1156,0.9598,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2014,radiation,3864,1.0,1.0025,0.9997,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2015,radiation,4027,1.0,0.9989,0.999,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2016,radiation,3392,1.0,0.9993,0.9992,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2017,radiation,4019,1.0,0.9999,0.9998,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2018,radiation,3972,1.0,0.9989,0.9992,,,,,,,,,,,,,,
+Swiss Camp,ISWR,CR1000,2019,radiation,1032,1.0,0.9967,0.9986,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2000_AWSSWC00.DAT,1999,radiation,2259,0.9743,0.9723,0.9988,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2000_AWSSWC00.DAT,2000,radiation,1308,0.9743,0.9738,0.9997,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2000_ETH_AWS.DAT,2000,radiation,353,0.0,0.0,,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2001_SWC2001.DAT,2000,radiation,2248,0.9743,0.9467,0.9632,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2001_SWC2001.DAT,2001,radiation,928,0.9743,0.9734,0.9994,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2002_eth_01_02.dat,2001,radiation,1622,0.9743,0.9698,0.9936,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2002_eth_01_02.dat,2002,radiation,1084,1.0,0.9987,0.9986,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2002_snow temp may 1 to July 17 2001.dat,2001,radiation,601,0.9743,0.9748,0.9983,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2004_SC.dat,2002,radiation,2815,1.0,0.9998,0.9999,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2004_SC.dat,2003,radiation,3458,1.0,0.9981,0.999,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2005_CR10X_2_final_storage_1.dat,2005,radiation,414,0.9846,0.9799,0.973,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2005_ETH Summer 05.DAT,2005,radiation,1589,1.0,0.9996,0.9997,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2005_ETH1.DAT,2004,radiation,564,0.9795,0.9727,0.9692,,,,,,,,,,,,,,
+Swiss Camp,OSWR,2005_ETH1.DAT,2005,radiation,414,0.9635,0.9689,0.9584,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2009,radiation,2461,1.0,0.9964,0.9974,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2010,radiation,3761,1.0,0.9952,0.9977,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2011,radiation,1594,1.0,0.9992,0.9991,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2012,radiation,2901,1.0,0.9898,0.9943,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2013,radiation,3993,1.0,0.984,0.9949,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2014,radiation,3986,1.0,0.9873,0.994,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2015,radiation,4072,1.0,0.9988,0.9989,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2016,radiation,3454,1.0,1.0001,0.9993,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2017,radiation,4054,1.0,0.9999,0.9996,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2018,radiation,4007,1.0,0.9991,0.9987,,,,,,,,,,,,,,
+Swiss Camp,OSWR,CR1000,2019,radiation,1011,1.0,0.9995,0.9996,,,,,,,,,,,,,,
+Swiss Camp,NR,2000_AWSSWC00.DAT,1999,NR>0,803,1.0,0.9934,0.9981,,,,,,,,,,,,,,
+Swiss Camp,NR,2000_AWSSWC00.DAT,2000,NR>0,141,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,2001_SWC2001.DAT,2000,NR>0,748,1.0,0.9995,0.9975,,,,,,,,,,,,,,
+Swiss Camp,NR,2002_eth_01_02.dat,2001,NR>0,622,1.0,0.994,0.9955,,,,,,,,,,,,,,
+Swiss Camp,NR,2002_snow temp may 1 to July 17 2001.dat,2001,NR>0,156,1.0,0.9899,0.9587,,,,,,,,,,,,,,
+Swiss Camp,NR,2004_SC.dat,2002,NR>0,1110,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,2004_SC.dat,2003,NR>0,1145,1.0,0.9983,0.9983,,,,,,,,,,,,,,
+Swiss Camp,NR,2005_CR10X_2_final_storage_1.dat,2005,NR>0,107,0.9807,0.9758,0.8272,,,,,,,,,,,,,,
+Swiss Camp,NR,2005_ETH Summer 05.DAT,2005,NR>0,599,1.0,0.9286,0.753,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2009,NR>0,514,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2010,NR>0,845,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2011,NR>0,415,1.0,0.9547,0.8898,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2012,NR>0,2307,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2013,NR>0,5032,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2014,NR>0,4595,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2015,NR>0,4965,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2016,NR>0,3905,1.0,0.9989,0.9989,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2017,NR>0,4769,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2018,NR>0,4629,1.0,0.9992,0.9993,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2019,NR>0,1832,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,1999_CH_AW006.DAT,1999,NR<0,521,0.8358,0.7106,0.2652,,,,,,,,,,,,,,
+Swiss Camp,NR,2000_AWSSWC00.DAT,1999,NR<0,2091,1.0,0.9893,0.9806,,,,,,,,,,,,,,
+Swiss Camp,NR,2000_AWSSWC00.DAT,2000,NR<0,1865,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,2001_SWC2001.DAT,2000,NR<0,2182,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,2001_SWC2001.DAT,2001,NR<0,1701,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,2002_eth_01_02.dat,2001,NR<0,1470,1.0,0.9866,0.922,,,,,,,,,,,,,,
+Swiss Camp,NR,2002_eth_01_02.dat,2002,NR<0,1973,1.0,0.999,0.9966,,,,,,,,,,,,,,
+Swiss Camp,NR,2002_snow temp may 1 to July 17 2001.dat,2001,NR<0,189,1.0,0.9776,0.937,,,,,,,,,,,,,,
+Swiss Camp,NR,2004_SC.dat,2002,NR<0,2721,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,2004_SC.dat,2003,NR<0,3088,1.0,0.9976,0.9947,,,,,,,,,,,,,,
+Swiss Camp,NR,2005_CR10X_2_final_storage_1.dat,2005,NR<0,250,0.9953,0.9947,0.8914,,,,,,,,,,,,,,
+Swiss Camp,NR,2005_ETH Summer 05.DAT,2005,NR<0,637,1.0,0.7396,0.826,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2009,NR<0,2767,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2010,NR<0,4588,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2011,NR<0,1574,1.0,0.9376,0.9313,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2012,NR<0,1104,1.0,0.9999,0.9989,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2013,NR<0,756,1.0,0.9951,0.9969,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2014,NR<0,838,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2015,NR<0,504,1.0,1.0,1.0,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2016,NR<0,740,1.0,1.0009,0.9985,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2017,NR<0,369,1.0,0.9898,0.9888,,,,,,,,,,,,,,
+Swiss Camp,NR,CR1000,2018,NR<0,426,1.0,0.996,0.9962,,,,,,,,,,,,,,
+Swiss Camp,P,1998_AWS_97_8.DAT,1997,pressure,5275,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,1998_AWS_97_8.DAT,1998,pressure,1243,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,1998_AWS_98_1.DAT,1998,pressure,2108,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,1998_SWIS_10M.DAT,1998,pressure,333,,,,0.02,,,,,,,,,,,,,
+Swiss Camp,P,1999_CH_AW006.DAT,1999,pressure,994,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,2000_ETH_AWS.DAT,2000,pressure,404,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,2001_SWC2001.DAT,2000,pressure,4993,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,2001_SWC2001.DAT,2001,pressure,2880,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,2002_eth_01_02.dat,2001,pressure,3849,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,2002_eth_01_02.dat,2002,pressure,2969,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,2002_snow temp may 1 to July 17 2001.dat,2001,pressure,765,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,2003_eth_02_03.dat,2002,pressure,5669,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,2003_eth_02_03.dat,2003,pressure,2776,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,2005_ETH Summer 05.DAT,2005,pressure,1856,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2009,pressure,4735,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2010,pressure,8760,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2011,pressure,8757,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2012,pressure,8784,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2013,pressure,8760,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2014,pressure,8732,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2015,pressure,8760,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2016,pressure,7936,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2017,pressure,8760,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2018,pressure,8760,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,P,CR1000,2019,pressure,2971,,,,0.0,,,,,,,,,,,,,
+Swiss Camp,RH1,2000_AWSSWC00.DAT,1999,RH ice/water,3351,,,,,9.16,1.34,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2000_AWSSWC00.DAT,2000,RH ice/water,3230,,,,,12.49,2.45,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2000_ETH_AWS.DAT,2000,RH ice/water,315,,,,,4.75,1.62,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2001_SWC2001.DAT,2000,RH ice/water,3191,,,,,7.22,1.9,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2001_SWC2001.DAT,2001,RH ice/water,2852,,,,,12.42,3.69,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2002_eth_01_02.dat,2001,RH ice/water,2005,,,,,7.66,1.67,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2002_eth_01_02.dat,2002,RH ice/water,2962,,,,,12.88,4.14,other,,,,,,,,,,
+Swiss Camp,RH1,2002_snow temp may 1 to July 17 2001.dat,2001,RH ice/water,698,,,,,4.7,2.13,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2004_SC.dat,2002,RH ice/water,3581,,,,,5.39,2.31,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2004_SC.dat,2003,RH ice/water,4337,,,,,6.72,2.57,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2005_CR10X_2_final_storage_1.dat,2005,RH ice/water,628,,,,,6.28,4.34,other,,,,,,,,,,
+Swiss Camp,RH1,2005_ETH Summer 05.DAT,2005,RH ice/water,486,,,,,6.28,3.1,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2005_ETH1.DAT,2004,RH ice/water,2290,,,,,6.35,3.39,wrt ice,,,,,,,,,,
+Swiss Camp,RH1,2005_ETH1.DAT,2005,RH ice/water,753,,,,,8.26,4.96,other,,,,,,,,,,
+Swiss Camp,RH1,CR1000,2009,RH ice/water,3683,,,,,1.16,6.25,same (wrt water),,,,,,,,,,
+Swiss Camp,RH1,CR1000,2010,RH ice/water,5819,,,,,1.36,7.15,same (wrt water),,,,,,,,,,
+Swiss Camp,RH1,CR1000,2011,RH ice/water,6718,,,,,3.93,5.62,same (wrt water),,,,,,,,,,
+Swiss Camp,RH1,CR1000,2012,RH ice/water,6280,,,,,4.42,4.89,other,,,,,,,,,,
+Swiss Camp,RH1,CR1000,2013,RH ice/water,7041,,,,,4.05,9.7,other,,,,,,,,,,
+Swiss Camp,RH1,CR1000,2014,RH ice/water,6686,,,,,7.11,8.88,other,,,,,,,,,,
+Swiss Camp,RH1,CR1000,2015,RH ice/water,7062,,,,,18.2,6.67,other,,,,,,,,,,
+Swiss Camp,RH1,CR1000,2016,RH ice/water,5832,,,,,13.49,6.17,other,,,,,,,,,,
+Swiss Camp,RH1,CR1000,2017,RH ice/water,6873,,,,,13.13,7.32,other,,,,,,,,,,
+Swiss Camp,RH1,CR1000,2018,RH ice/water,6985,,,,,14.59,5.8,other,,,,,,,,,,
+Swiss Camp,RH1,CR1000,2019,RH ice/water,2826,,,,,17.77,7.02,other,,,,,,,,,,
+Swiss Camp,RH2,2000_AWSSWC00.DAT,1999,RH ice/water,3343,,,,,5.41,5.08,other,,,,,,,,,,
+Swiss Camp,RH2,2000_AWSSWC00.DAT,2000,RH ice/water,3226,,,,,8.67,5.88,other,,,,,,,,,,
+Swiss Camp,RH2,2000_ETH_AWS.DAT,2000,RH ice/water,313,,,,,1.89,5.62,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,2001_SWC2001.DAT,2000,RH ice/water,3164,,,,,3.76,5.85,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,2001_SWC2001.DAT,2001,RH ice/water,2851,,,,,8.11,6.98,other,,,,,,,,,,
+Swiss Camp,RH2,2002_eth_01_02.dat,2001,RH ice/water,2000,,,,,4.03,4.32,other,,,,,,,,,,
+Swiss Camp,RH2,2002_eth_01_02.dat,2002,RH ice/water,2960,,,,,8.23,7.11,other,,,,,,,,,,
+Swiss Camp,RH2,2002_snow temp may 1 to July 17 2001.dat,2001,RH ice/water,699,,,,,2.44,6.22,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,2004_SC.dat,2002,RH ice/water,3572,,,,,1.74,7.0,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,2004_SC.dat,2003,RH ice/water,4167,,,,,2.97,5.6,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,2005_CR10X_2_final_storage_1.dat,2005,RH ice/water,626,,,,,3.14,8.76,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,2005_ETH Summer 05.DAT,2005,RH ice/water,483,,,,,2.73,1.07,wrt ice,,,,,,,,,,
+Swiss Camp,RH2,2005_ETH1.DAT,2004,RH ice/water,2289,,,,,3.17,6.09,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,2005_ETH1.DAT,2005,RH ice/water,748,,,,,3.79,10.1,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,CR1000,2009,RH ice/water,3667,,,,,3.06,7.86,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,CR1000,2010,RH ice/water,5806,,,,,2.68,9.03,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,CR1000,2011,RH ice/water,6724,,,,,3.23,4.95,same (wrt water),,,,,,,,,,
+Swiss Camp,RH2,CR1000,2012,RH ice/water,6264,,,,,5.2,4.45,other,,,,,,,,,,
+Swiss Camp,RH2,CR1000,2013,RH ice/water,7034,,,,,5.23,9.77,other,,,,,,,,,,
+Swiss Camp,RH2,CR1000,2014,RH ice/water,6692,,,,,6.56,10.57,other,,,,,,,,,,
+Swiss Camp,RH2,CR1000,2015,RH ice/water,7070,,,,,13.29,0.72,wrt ice,,,,,,,,,,
+Swiss Camp,RH2,CR1000,2016,RH ice/water,5833,,,,,9.85,0.74,wrt ice,,,,,,,,,,
+Swiss Camp,RH2,CR1000,2017,RH ice/water,6873,,,,,13.03,8.4,other,,,,,,,,,,
+Swiss Camp,RH2,CR1000,2018,RH ice/water,6967,,,,,15.13,10.89,other,,,,,,,,,,
+Swiss Camp,RH2,CR1000,2019,RH ice/water,2824,,,,,18.65,12.86,other,,,,,,,,,,
+Swiss Camp,HW1,1997_AWS_ETH.DAT,1996,HW correction/swap,4758,,,,,,,,0.049,0.956,0.024,0.06,0.939,0.033,same_sonic,-0.145,,
+Swiss Camp,HW1,1997_AWS_ETH.DAT,1997,HW correction/swap,3484,,,,,,,,0.032,0.933,0.012,0.035,0.918,0.013,same_sonic,-0.117,,
+Swiss Camp,HW1,1998_AWS_97_8.DAT,1997,HW correction/swap,5275,,,,,,,,0.021,0.99,0.012,0.023,0.933,0.012,other_sonic,-0.104,,
+Swiss Camp,HW1,1998_AWS_97_8.DAT,1998,HW correction/swap,1243,,,,,,,,0.021,0.731,0.006,0.026,0.837,0.006,other_sonic,-0.135,,
+Swiss Camp,HW1,1998_AWS_98_1.DAT,1998,HW correction/swap,2108,,,,,,,,0.031,0.91,0.015,0.029,0.949,0.014,other_sonic,-0.125,,
+Swiss Camp,HW1,1998_SWIS_10M.DAT,1998,HW correction/swap,335,,,,,,,,0.009,0.919,0.005,0.006,0.39,0.004,other_sonic,-0.103,,
+Swiss Camp,HW1,1999_CH_AW006.DAT,1999,HW correction/swap,994,,,,,,,,0.021,0.907,0.006,0.02,0.912,0.007,same_sonic,-0.528,,
+Swiss Camp,HW1,1999_CH_AWS.DAT,1999,HW correction/swap,134,,,,,,,,0.024,0.264,0.012,0.02,0.269,0.011,other_sonic,-0.625,,
+Swiss Camp,HW1,2000_AWSSWC00.DAT,1999,HW correction/swap,4976,,,,,,,,4.087,0.673,3.785,0.075,0.699,0.029,other_sonic,-0.649,,
+Swiss Camp,HW1,2000_AWSSWC00.DAT,2000,HW correction/swap,3376,,,,,,,,0.674,-0.076,0.609,0.042,0.572,0.018,other_sonic,-0.666,,
+Swiss Camp,HW1,2000_SWC2000.DAT,2000,HW correction/swap,105,,,,,,,,0.082,-0.18,0.066,0.041,-0.201,0.057,other_raw,-0.701,,
+Swiss Camp,HW1,2001_SWC2001.DAT,2000,HW correction/swap,5301,,,,,,,,4.112,0.423,3.932,,,,same_sonic,9.357,,
+Swiss Camp,HW1,2001_SWC2001.DAT,2001,HW correction/swap,3236,,,,,,,,0.81,-0.439,0.716,,,,same_sonic,14.914,,
+Swiss Camp,HW1,2001_SWISSAWS.DAT,2001,HW correction/swap,390,,,,,,,,0.162,-0.534,0.138,,,,same_sonic,11.74,,
+Swiss Camp,HW1,2002_eth_01_02.dat,2001,HW correction/swap,5110,,,,,,,,3.482,0.768,3.322,0.037,0.981,0.015,other_sonic,-1.541,,
+Swiss Camp,HW1,2002_eth_01_02.dat,2002,HW correction/swap,3091,,,,,,,,0.85,-0.747,0.697,0.21,-0.108,0.183,other_sonic,-0.091,,
+Swiss Camp,HW1,2004_SC.dat,2002,HW correction/swap,5669,,,,,,,,5.03,0.038,4.981,0.06,0.985,0.034,other_sonic,-0.07,,
+Swiss Camp,HW1,2004_SC.dat,2003,HW correction/swap,6338,,,,,,,,6.505,0.758,6.028,0.05,0.874,0.008,other_sonic,-0.463,,
+Swiss Camp,HW1,2005_CR10X_2_final_storage_1.dat,2005,HW correction/swap,641,,,,,,,,0.38,0.443,0.398,0.04,0.43,0.02,other_sonic,-0.874,,
+Swiss Camp,HW1,2005_ETH Summer 05.DAT,2005,HW correction/swap,1856,,,,,,,,0.625,0.902,0.627,0.03,0.975,0.03,other_raw,-0.88,,
+Swiss Camp,HW1,CR1000,2009,HW correction/swap,4737,,,,,,,,0.35,-0.137,0.35,0.06,0.758,0.005,other_sonic,-0.462,,
+Swiss Camp,HW1,CR1000,2010,HW correction/swap,8704,,,,,,,,0.09,0.777,0.007,0.33,0.648,0.37,same_sonic,-0.847,,
+Swiss Camp,HW1,CR1000,2011,HW correction/swap,3395,,,,,,,,1.215,0.385,1.29,1.125,-0.071,1.103,other_sonic,-2.8,,
+Swiss Camp,HW1,CR1000,2012,HW correction/swap,4811,,,,,,,,0.42,-0.025,0.451,0.38,-0.037,0.412,other_raw,-0.82,,
+Swiss Camp,HW1,CR1000,2013,HW correction/swap,8182,,,,,,,,0.0,0.996,0.038,0.02,0.862,0.042,same_raw,-0.85,,
+Swiss Camp,HW1,CR1000,2014,HW correction/swap,7545,,,,,,,,0.05,0.93,0.007,0.13,0.893,0.126,same_sonic,0.097,,
+Swiss Camp,HW1,CR1000,2015,HW correction/swap,7613,,,,,,,,0.02,0.963,0.003,0.04,0.938,0.044,same_sonic,0.1,,
+Swiss Camp,HW1,CR1000,2016,HW correction/swap,6221,,,,,,,,0.02,0.981,0.003,0.03,0.846,0.034,same_sonic,0.1,,
+Swiss Camp,HW1,CR1000,2017,HW correction/swap,2054,,,,,,,,0.02,0.985,0.003,0.04,0.885,0.034,same_sonic,0.1,,
+Swiss Camp,HW1,CR1000,2018,HW correction/swap,4887,,,,,,,,0.01,0.998,0.003,0.03,0.729,0.026,same_sonic,0.1,,
+Swiss Camp,HW1,CR1000,2019,HW correction/swap,2495,,,,,,,,0.01,0.991,0.003,0.04,0.833,0.019,same_sonic,0.101,,
+Swiss Camp,HW2,1997_AWS_ETH.DAT,1996,HW correction/swap,4758,,,,,,,,0.06,0.939,0.033,0.049,0.956,0.024,other_sonic,0.425,,
+Swiss Camp,HW2,1997_AWS_ETH.DAT,1997,HW correction/swap,3484,,,,,,,,0.035,0.918,0.013,0.032,0.933,0.012,other_sonic,0.453,,
+Swiss Camp,HW2,1998_AWS_97_8.DAT,1997,HW correction/swap,5275,,,,,,,,0.023,0.933,0.012,0.021,0.99,0.012,same_sonic,0.467,,
+Swiss Camp,HW2,1998_AWS_97_8.DAT,1998,HW correction/swap,1243,,,,,,,,0.026,0.837,0.006,0.021,0.731,0.006,same_sonic,0.435,,
+Swiss Camp,HW2,1998_AWS_98_1.DAT,1998,HW correction/swap,2108,,,,,,,,0.029,0.949,0.014,0.031,0.91,0.014,same_sonic,0.445,,
+Swiss Camp,HW2,1998_SWIS_10M.DAT,1998,HW correction/swap,335,,,,,,,,0.006,0.128,0.004,0.009,0.32,0.005,same_sonic,0.467,,
+Swiss Camp,HW2,1999_CH_AW006.DAT,1999,HW correction/swap,994,,,,,,,,0.02,0.912,0.007,0.021,0.907,0.006,other_sonic,0.672,,
+Swiss Camp,HW2,1999_CH_AWS.DAT,1999,HW correction/swap,133,,,,,,,,0.02,0.269,0.008,0.023,0.263,0.012,same_sonic,0.574,,
+Swiss Camp,HW2,2000_AWSSWC00.DAT,1999,HW correction/swap,4976,,,,,,,,0.075,0.699,0.03,4.086,0.673,3.781,same_sonic,0.551,,
+Swiss Camp,HW2,2000_AWSSWC00.DAT,2000,HW correction/swap,3376,,,,,,,,0.042,0.572,0.018,0.674,-0.076,0.611,same_sonic,0.534,,
+Swiss Camp,HW2,2000_SWC2000.DAT,2000,HW correction/swap,105,,,,,,,,0.041,-0.201,0.058,0.083,-0.18,0.069,same_raw,0.499,,
+Swiss Camp,HW2,2002_eth_01_02.dat,2001,HW correction/swap,5110,,,,,,,,0.037,0.981,0.016,3.483,0.768,3.321,same_sonic,-0.342,,
+Swiss Camp,HW2,2002_eth_01_02.dat,2002,HW correction/swap,3091,,,,,,,,0.04,0.357,0.004,0.83,-0.485,0.677,same_sonic,-0.002,,
+Swiss Camp,HW2,2004_SC.dat,2002,HW correction/swap,5669,,,,,,,,0.03,0.996,0.003,5.65,-0.028,5.562,same_sonic,-0.0,,
+Swiss Camp,HW2,2004_SC.dat,2003,HW correction/swap,6338,,,,,,,,0.07,0.971,0.011,7.07,0.411,6.68,same_sonic,-0.305,,
+Swiss Camp,HW2,2005_CR10X_2_final_storage_1.dat,2005,HW correction/swap,641,,,,,,,,0.02,0.703,0.004,0.38,0.493,0.424,same_sonic,-0.31,,
+Swiss Camp,HW2,2005_ETH Summer 05.DAT,2005,HW correction/swap,1856,,,,,,,,0.01,0.978,0.003,0.59,0.893,0.595,same_sonic,-0.31,,
+Swiss Camp,HW2,2005_ETH1.DAT,2004,HW correction/swap,2419,,,,,,,,0.04,0.969,0.005,,,,same_sonic,-0.31,,
+Swiss Camp,HW2,2005_ETH1.DAT,2005,HW correction/swap,778,,,,,,,,0.03,0.178,0.004,,,,same_sonic,-0.31,,
+Swiss Camp,HW2,CR1000,2009,HW correction/swap,3562,,,,,,,,0.04,0.92,0.003,0.35,-0.296,0.35,same_sonic,-0.31,,
+Swiss Camp,HW2,CR1000,2010,HW correction/swap,5582,,,,,,,,0.05,0.664,0.004,0.18,0.889,0.161,same_sonic,-0.309,,
+Swiss Camp,HW2,CR1000,2011,HW correction/swap,3145,,,,,,,,1.135,-0.042,1.146,0.506,0.477,0.559,other_raw,-2.624,,
+Swiss Camp,HW2,CR1000,2012,HW correction/swap,5187,,,,,,,,0.0,0.148,0.039,0.04,0.138,0.053,same_raw,-0.31,,
+Swiss Camp,HW2,CR1000,2013,HW correction/swap,8679,,,,,,,,0.0,0.873,0.039,0.02,0.99,0.046,same_raw,-0.31,,
+Swiss Camp,HW2,CR1000,2014,HW correction/swap,8684,,,,,,,,0.04,0.96,0.006,0.14,0.99,0.117,same_sonic,0.097,,
+Swiss Camp,HW2,CR1000,2015,HW correction/swap,8760,,,,,,,,0.02,0.901,0.003,0.06,0.952,0.045,same_sonic,0.1,,
+Swiss Camp,HW2,CR1000,2016,HW correction/swap,7936,,,,,,,,0.02,0.844,0.003,0.04,0.979,0.031,same_sonic,0.1,,
+Swiss Camp,HW2,CR1000,2017,HW correction/swap,8758,,,,,,,,0.02,0.791,0.003,0.88,0.079,0.836,same_sonic,0.1,,
+Swiss Camp,HW2,CR1000,2018,HW correction/swap,8759,,,,,,,,0.02,0.634,0.004,0.03,0.897,0.042,same_sonic,0.1,,
+Swiss Camp,HW2,CR1000,2019,HW correction/swap,2971,,,,,,,,0.03,0.807,0.007,0.03,0.88,0.012,same_sonic,0.104,,
+Swiss Camp,HW1,1997_AWS_ETH.DAT,1996,HW equals TS column,4758,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,1997_AWS_ETH.DAT,1997,HW equals TS column,3484,,,,,,,,,,,,,,,,TS1,0.0
+Swiss Camp,HW1,1998_AWS_97_8.DAT,1997,HW equals TS column,5275,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,1998_AWS_97_8.DAT,1998,HW equals TS column,1243,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,1998_AWS_98_1.DAT,1998,HW equals TS column,2108,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,1998_SWIS_10M.DAT,1998,HW equals TS column,335,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,1999_CH_AW006.DAT,1999,HW equals TS column,994,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,1999_CH_AWS.DAT,1999,HW equals TS column,134,,,,,,,,,,,,,,,,TS1,0.007
+Swiss Camp,HW1,2000_AWSSWC00.DAT,1999,HW equals TS column,4976,,,,,,,,,,,,,,,,TS10,0.012
+Swiss Camp,HW1,2000_AWSSWC00.DAT,2000,HW equals TS column,3376,,,,,,,,,,,,,,,,TS10,0.003
+Swiss Camp,HW1,2000_SWC2000.DAT,2000,HW equals TS column,105,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,2001_SWC2001.DAT,2000,HW equals TS column,5302,,,,,,,,,,,,,,,,TS10,0.004
+Swiss Camp,HW1,2001_SWC2001.DAT,2001,HW equals TS column,3236,,,,,,,,,,,,,,,,TS10,0.007
+Swiss Camp,HW1,2001_SWISSAWS.DAT,2001,HW equals TS column,390,,,,,,,,,,,,,,,,TS8,0.015
+Swiss Camp,HW1,2002_eth_01_02.dat,2001,HW equals TS column,5112,,,,,,,,,,,,,,,,TS1,0.001
+Swiss Camp,HW1,2002_eth_01_02.dat,2002,HW equals TS column,3091,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,2004_SC.dat,2002,HW equals TS column,5669,,,,,,,,,,,,,,,,TS10,0.005
+Swiss Camp,HW1,2004_SC.dat,2003,HW equals TS column,8760,,,,,,,,,,,,,,,,TS10,0.002
+Swiss Camp,HW1,2004_scnew..DAT,2004,HW equals TS column,1979,,,,,,,,,,,,,,,,TS10,0.002
+Swiss Camp,HW1,2005_CR10X_2_final_storage_1.dat,2005,HW equals TS column,642,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,2005_ETH Summer 05.DAT,2005,HW equals TS column,1856,,,,,,,,,,,,,,,,TS10,0.001
+Swiss Camp,HW1,2005_ETH3.DAT,2005,HW equals TS column,207,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,2007_sc aws.dat,2007,HW equals TS column,353,,,,,,,,,,,,,,,,TS4,0.011
+Swiss Camp,HW1,CR1000,2009,HW equals TS column,4886,,,,,,,,,,,,,,,,TS9,0.0
+Swiss Camp,HW1,CR1000,2010,HW equals TS column,8704,,,,,,,,,,,,,,,,TS10,0.001
+Swiss Camp,HW1,CR1000,2011,HW equals TS column,8046,,,,,,,,,,,,,,,,TS8,0.001
+Swiss Camp,HW1,CR1000,2012,HW equals TS column,8333,,,,,,,,,,,,,,,,TS10,0.001
+Swiss Camp,HW1,CR1000,2013,HW equals TS column,8182,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,CR1000,2014,HW equals TS column,7610,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,CR1000,2015,HW equals TS column,7613,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,CR1000,2016,HW equals TS column,6747,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,CR1000,2017,HW equals TS column,4955,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,CR1000,2018,HW equals TS column,6662,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,CR1000,2019,HW equals TS column,2495,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,CR1000,2021,HW equals TS column,4655,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW1,CR1000,2022,HW equals TS column,4571,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,1997_AWS_ETH.DAT,1996,HW equals TS column,4758,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,1997_AWS_ETH.DAT,1997,HW equals TS column,3484,,,,,,,,,,,,,,,,TS1,0.0
+Swiss Camp,HW2,1998_AWS_97_8.DAT,1997,HW equals TS column,5275,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,1998_AWS_97_8.DAT,1998,HW equals TS column,1243,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,1998_AWS_98_1.DAT,1998,HW equals TS column,2108,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,1998_SWIS_10M.DAT,1998,HW equals TS column,335,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,1999_CH_AW006.DAT,1999,HW equals TS column,994,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,1999_CH_AWS.DAT,1999,HW equals TS column,133,,,,,,,,,,,,,,,,TS1,0.008
+Swiss Camp,HW2,2000_AWSSWC00.DAT,1999,HW equals TS column,4976,,,,,,,,,,,,,,,,TS10,0.0
+Swiss Camp,HW2,2000_AWSSWC00.DAT,2000,HW equals TS column,3376,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2000_SWC2000.DAT,2000,HW equals TS column,105,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2002_eth_01_02.dat,2001,HW equals TS column,5112,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2002_eth_01_02.dat,2002,HW equals TS column,3091,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2004_SC.dat,2002,HW equals TS column,5669,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2004_SC.dat,2003,HW equals TS column,8760,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2004_scnew..DAT,2004,HW equals TS column,2026,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2005_CR10X_2_final_storage_1.dat,2005,HW equals TS column,642,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2005_ETH Summer 05.DAT,2005,HW equals TS column,1856,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2005_ETH1.DAT,2004,HW equals TS column,2420,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2005_ETH1.DAT,2005,HW equals TS column,781,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2005_ETH3.DAT,2005,HW equals TS column,207,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2007_sc aws.dat,2007,HW equals TS column,353,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,2007_sc.dat,2007,HW equals TS column,165,,,,,,,,,,,,,,,,TS9,0.008
+Swiss Camp,HW2,CR1000,2009,HW equals TS column,3698,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,CR1000,2010,HW equals TS column,5582,,,,,,,,,,,,,,,,TS9,0.0
+Swiss Camp,HW2,CR1000,2011,HW equals TS column,7595,,,,,,,,,,,,,,,,TS10,0.001
+Swiss Camp,HW2,CR1000,2012,HW equals TS column,8723,,,,,,,,,,,,,,,,TS10,0.0
+Swiss Camp,HW2,CR1000,2013,HW equals TS column,8679,,,,,,,,,,,,,,,,TS6,0.0
+Swiss Camp,HW2,CR1000,2014,HW equals TS column,8760,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,CR1000,2015,HW equals TS column,8760,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,CR1000,2016,HW equals TS column,8586,,,,,,,,,,,,,,,,TS4,0.0
+Swiss Camp,HW2,CR1000,2017,HW equals TS column,8758,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,CR1000,2018,HW equals TS column,8759,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,CR1000,2019,HW equals TS column,2971,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,CR1000,2021,HW equals TS column,5157,,,,,,,,,,,,,,,,,0.0
+Swiss Camp,HW2,CR1000,2022,HW equals TS column,5153,,,,,,,,,,,,,,,,,0.0
